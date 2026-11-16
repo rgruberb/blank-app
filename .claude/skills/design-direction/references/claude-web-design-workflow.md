@@ -37,4 +37,15 @@ Movimento (Dff1kjUiR4o):
 
 ## O que se vê no resultado mostrado (Dd9nhiOyrZU)
 
-Site "Relay" dark gerado com essa abordagem: hero com feixes de luz verde/lime fluindo, headline "The handoffs run *themselves.*" (serif itálico na 2ª linha), CTA pill lime, cards de vidro com diagrama de workflow; seção com gráfico de barras 3D isométrico (barra destacada em lime); seção "A *Tuesday*, seen from Relay." com heatmap/tabela e anel de progresso 76%; pricing em 3 colunas ($29 / $89 / $290) com o plano do meio destacado (badge + botão lime) e slider no topo. Útil como referência de **consistência do acento ao longo de várias seções**.
+Site "Relay" dark gerado com essa abordagem, seção por seção:
+- Hero: feixes de luz verde/lime fluindo, headline "The handoffs run *themselves.*", CTA pill lime, cards de vidro com diagrama de workflow.
+- "Most of a process is *glue*." — texto curto + painel lateral sobre fundo de streams.
+- "Approvals where people already are" — mock de app de mensagens com botão lime; gráfico de barras 3D isométrico (barra destacada em lime).
+- Transição: um tile/ícone lime que cresce e preenche a tela (o acento vira transição de seção).
+- "*Boring* in the ways that matter." — cards de features com ícone lime.
+- "A *Tuesday*, seen from Relay." — heatmap/tabela + anel de progresso lime.
+- "Numbers we did *not* have to explain away" — métricas grandes (56,703 / 9 / 73%) com medidor em barras lime.
+- "You pay for runs, not *for seats*." — slider de volume + pricing $29 / $89 / $290, plano do meio destacado (badge + botão lime).
+- CTA final: card de fundo lime "Pick the task you *hate* most." + footer.
+
+Padrão: **todo título de seção usa uma palavra em serif itálico** e o lime aparece 1–2 vezes por seção (CTA, dado-chave). Útil como referência de **consistência do acento e da tipografia ao longo de várias seções**.

@@ -9,18 +9,21 @@ O reel DfSIP2iBuFI mostra **a mesma landing page ("Relay" — headline "The hand
 | # | Camada | O que muda na tela | Resultado dito |
 |---|---|---|---|
 | 0 | Zero design | Fundo cinza claro `#CBCBCB`-ish, wireframe, botões pretos padrão | "a landing page with zero design" |
+| 0→1 | Transição | "Now add black": a mesma página escurece primeiro (cinza escuro), depois preto puro | — |
 | 1 | **Identidade**: cor + tipografia | Fundo preto, **um acento acid lime `#C7F44F`** (CTA pill, badge do logo), headline sans + **segunda linha em serif itálico** ("*themselves.*"), labels em **mono** | "Now it has a personality" |
 | 2 | **Profundidade**: luz + vidro | Um feixe/onda de luz verde-lime atrás de cards em **frosted glass** (painéis translúcidos com blur) | "Now it looks expensive" |
 | 3 | **Movimento** | O stream de luz flui; o workflow "roda" (nós do diagrama animam) | "Now people stop scrolling" |
+
+Os últimos frames mostram que as mesmas camadas continuam nas outras seções ("Most of a process is *glue*.", painel com barra de progresso lime): o sistema de camadas é aplicado ao site inteiro, não só ao hero.
 
 Ordem prática: **identidade → profundidade → movimento**. Não pule para movimento sem identidade definida.
 
 Tipografia da camada 1 (visto no card "Acid Lime" do reel): trio `Aa` sans / `Aa` serif itálico / `Aa` mono. Uso: sans no headline, serif itálico em 1 palavra/linha de ênfase, mono em labels/eyebrows/metadados.
 
 DfVlIwHISSv reforça com "every site here is just three layers": **2 cores base + 1 elemento de destaque**, onde o terceiro "layer" pode ser:
-- uma cor (black + electric blue + **neon green**),
-- **luz** (deep purple + soft teal + luz atrás de uma esfera 3D iridescente: "now it's a movie"),
-- **um objeto/cena** (sky blue + grass green + uma TV antiga num campo, com pôr do sol em sunset peach: "now it's a memory").
+- uma cor (black + electric blue + **neon green `#63F24B`** no CTA e em faíscas do orbe),
+- **luz** (deep purple + soft teal + **Aurora Light `#66ACC5`** como brilho atrás do blob 3D iridescente: "Add the light behind it… now it's a movie"),
+- **um objeto/cena** (sky blue + grass green + **uma TV antiga** num campo; depois "let the sun go down": céu em **sunset peach `#DC9F8D`** e tela da TV acesa: "now it's a memory").
 
 Visual desses sites: hero full-bleed com objeto 3D central (orbe de vidro azul com ícone; blob iridescente roxo/verde; TV CRT em gramado com céu), headline curto (ex.: "Motion instead of chrome", "Turn data into decisions", "*Tape doesn't last.*" em script/itálico), nav mínima, 1 CTA.
 
@@ -28,7 +31,7 @@ Visual desses sites: hero full-bleed com objeto 3D central (orbe de vidro azul c
 
 > "Same words, different layout. Space, alignment and a calm rhythm say you're careful. Trust is built before anyone reads a word. A page that looks cared for gets believed."
 
-O reel compara duas telas mobile escuras (fundo `#09090B`) com o mesmo conteúdo: "Your invoices, handled." + subtítulo + CTA "Get started" + lista de 3 itens (linhas com pílulas de status) + tab bar (Send / Track / Get paid).
+O reel abre com "Which page looks safe?" e "Same words. Only the layout changed." e compara duas telas mobile escuras (fundo `#09090B`) com o mesmo conteúdo: "Your invoices, handled." + subtítulo + CTA "Get started" + lista de 3 itens (linhas com pílulas de status) + tab bar (Send / Track / Get paid).
 
 Versão "insegura" (esquerda):
 - headline grande espremido, margens apertadas;
@@ -39,7 +42,10 @@ Versão "insegura" (esquerda):
 Versão "segura" (direita), construída em 3 passos mostrados na tela — **"Space." → "Space. Alignment." → "Space. Alignment. Calm."**:
 - **Espaço**: margens laterais generosas, mais ar entre headline, subtítulo, CTA e lista;
 - **Alinhamento**: tudo numa única coluna/borda esquerda; lista dentro de um card com linhas de altura igual e pílulas de status alinhadas à direita;
+- Nos frames de "Space. Alignment." aparece um **grid de colunas sobreposto** à tela segura (linhas verticais finas), e em "Calm." **faixas horizontais** marcando o espaçamento entre blocos — ou seja, o espaço vem de grid + escala vertical consistente, não de "olhômetro".
 - **Ritmo calmo**: um único CTA primário (pílula branca), headline menor e de peso médio, hierarquia clara, ruído removido (nav reduzida a logo + "Sign in").
+
+Fechamento: a versão segura sozinha com "Cared for gets believed."; logo glide (script branco com um ponto azul como único acento).
 
 Regras práticas:
 1. Um CTA primário por tela/seção; secundário vira link ou some.
