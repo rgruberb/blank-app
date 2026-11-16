@@ -80,3 +80,10 @@ Links enviados entre 9 e 16/11/2026. Os reels processados tiveram o vídeo baixa
 | [@rational_edge](https://www.instagram.com/rational_edge) | perfil | ⏳ perfil inteiro — escolher posts específicos |
 | [@theglidestudio](https://www.instagram.com/theglidestudio) | perfil | ⏳ perfil inteiro — 3 reels já em `ui-motion`/`design-direction` |
 | [Facebook](https://www.facebook.com/share/v/1cLd9NchWN/) | vídeo | ⏳ facebook.com não liberado |
+
+## Outras fontes
+
+| Fonte | Status |
+|---|---|
+| [YouTube: Claude Design 2 HOUR COURSE — Nate Herk](https://youtu.be/ovabeVoWrA0) | ✅ transcrição completa → `design-direction/references/claude-design-course.md` |
+| Nota pessoal (09/11): "Transição de telas, scroll para comportamento dinâmico dos componentes para dar 'vida' a eles. Avaliar onde faz sentido" | ✅ diretriz → `ui-motion/references/scroll-and-screen-transitions.md` |
