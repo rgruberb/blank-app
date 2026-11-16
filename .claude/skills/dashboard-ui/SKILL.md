@@ -23,7 +23,8 @@ o índice com autor, URL e quando abrir cada uma está em `references/visual-ind
      badges de contagem à direita, card de usuário no rodapé (saúde, smart home, orçamento, sidebar V5).
 2. **Header de página = título grande + subtítulo de contexto + ações à direita** (filtros em pílula,
    período 7D/30D/90D em segmented control, CTA primário preenchido com a cor de destaque).
-   Saúde: "Overview" + "Good morning, Dana. 23 cases need attention today."
+   A home quase sempre é uma **saudação pelo nome** ("Good morning, Dana/Lin/Noa/Ines/Noor", "Good Afternoon, Sarah",
+   "Hello, ...") seguida de um resumo do dia ("23 cases need attention today").
 3. **Faixa de KPIs logo abaixo do header**, 3 a 6 itens: rótulo minúsculo em caps → número grande em peso
    regular/medium → delta em chip colorido (verde ▲, vermelho ▼, âmbar "overdue"). Varejo destaca o
    **KPI principal invertido** (card preto num tema claro) e põe sparkline em cada card.
@@ -31,21 +32,30 @@ o índice com autor, URL e quando abrir cada uma está em `references/visual-ind
    gauge ou lista. Depois uma linha de tabela/lista + card de insight (assistente de IA, na saúde).
 5. **Uma cor de destaque só**, aplicada a: item ativo, CTA, série principal do gráfico, chips positivos.
    Barras/séries secundárias em tons neutros do próprio fundo (barras cinza-escuro com a barra atual em mint).
-6. **Kanban é o layout dominante em apps de trabalho** (tasks, campanhas SaaS, pipeline de seguros):
+   Exceção consciente: KPI cards **tingidos cada um com um tom terroso** (seguros: teal, marrom, azul-acinzentado, ferrugem).
+6. **Kanban é o layout dominante em apps de trabalho** (tasks, campanha "Spring Launch" do varejo, pipeline de seguros):
    colunas com cabeçalho (ponto colorido + nome + contagem), cards com tag de projeto colorida, título,
    barra de progresso fina, avatar e data.
-7. **Movimento funcional, não decorativo**: troca de tema com `startViewTransition` + clip-path em círculo
+7. **Gráficos com "personalidade" sóbria**: gauge de ticks (saúde), barras de ticks empilhados estilo equalizador,
+   heatmap de coorte em triângulo (SaaS), funil em barras, anéis de atividade (tasks), dial de termostato e grade de
+   agenda (smart home). Sempre um destaque, o resto neutro.
+8. **Movimento funcional, não decorativo**: troca de tema com `startViewTransition` + clip-path em círculo
    a partir do botão; pílula ativa que desliza com borda dianteira rápida e traseira atrasada (GSAP);
-   barco que percorre a rota no stepper de cotação. Detalhes em `references/layout-patterns.md`.
+   **troca de página com o conteúdo desfocando e voltando** (SaaS, orçamento, smart home, V7/V8);
+   barco que percorre a rota no stepper; números que contam até o valor; entrada escalonada dos cards (saúde).
+   Detalhes em `references/layout-patterns.md`.
 
 ## Paleta: escuro vs claro
 - **Escuro neutro-quente** (saúde, tasks): fundo `#0b0c0e`, cards `#151618`–`#1b1c1e`, borda 1px `rgba(255,255,255,.06)`,
   destaque único (mint `~#2fb58f`, azul `#3b82f6` ou magenta `#d12777`). Texto secundário ~55% de opacidade.
-- **Escuro com glow ambiente** (SaaS azul `#0a1530`→`#1d3aa8`, seguros teal `#04161a` com ondas, orçamento verde musgo):
+- **Escuro com glow ambiente** (SaaS azul `#0a1530`→`#1d3aa8`, seguros teal `#04161a` com ondas e brilho âmbar,
+  orçamento verde musgo `#1c2a1e` com acento menta `#8af1b6`):
   um radial-gradient grande e desfocado atrás do conteúdo; cards translúcidos por cima.
-- **Claro monocromático** (varejo): fundo `#eceeed`, cards brancos sem borda forte, sombra mínima, tudo em
-  preto/cinza; a única cor são os deltas verdes. Seguros (tela de detalhe) usa claro com névoa teal `#e6f7f8`.
-- Ofereça os dois temas quando o painel for uso diário (varejo e seguros mostram dark + light do mesmo produto).
+- **Claro monocromático** (varejo): fundo `#eceeed`, cards brancos e cinza-claro `#e2e4e3`, cards-destaque pretos
+  `#111`, sombra mínima; a única cor são os deltas verdes. Seguros (detalhe) usa claro com névoa teal `#e6f7f8`.
+- **Glass neutro** (smart home): tudo em cinza grafite translúcido `#505251`, ativo em pílula branca; a cor vem das fotos.
+- Ofereça os dois temas quando o painel for uso diário (varejo e seguros mostram dark + light do mesmo produto,
+  com a troca animada).
 
 ## Receita de glassmorphism (série @code.xr + smart home)
 Funciona **só sobre um fundo com conteúdo** (foto de interior, ondas 3D, gradiente vivo). Sobre fundo liso vira cinza.
@@ -68,7 +78,8 @@ Versão completa (login com cantos chanfrados, botão neon, item ativo em pílul
 - Gráfico 100% saturado em todas as barras: as referências deixam o histórico neutro e destacam só o "agora".
 - Glass sobre fundo chapado, blur > 40px, texto pequeno sobre vidro claro sem contraste (WCAG AA).
 - Cards todos do mesmo tamanho num grid 3x3 — as referências usam grid assimétrico.
-- Animação em tudo; nas referências só se animam troca de tema, item ativo e o elemento-assunto (rota, gauge).
+- Animação em tudo; nas referências anima-se troca de tema, item ativo, troca de página e o elemento-assunto
+  (rota, gauge, contagem de números) — nunca loops decorativos permanentes.
 - Esquecer estados: vazio, carregando (skeleton), "nenhum resultado" (complemento).
 
 ## Workflow
@@ -84,14 +95,14 @@ Versão completa (login com cantos chanfrados, botão neon, item ativo em pílul
 
 ## Quando abrir as imagens
 Cada imagem custa contexto. Não abra todas: escolha 1–2 pela coluna "quando abrir" do índice.
-Atenção: a maioria das folhas tem **só o primeiro quadro preenchido** (canto superior esquerdo, ~240x426 px,
-UI pequena + snippet de código); o resto é preto. Para ver detalhes, recorte e amplie esse quadro
-(ex.: PIL `crop((0,130,240,270)).resize(...)`). Exceções com vários quadros úteis:
-`DfV39ohhwAC` (saúde, 6 quadros) e `Deoi1WhP83h` (tasks, 4 quadros).
+Cada folha tem 12 quadros em ordem cronológica (4 colunas x 3 linhas), cobrindo o vídeo inteiro: dá para ver
+várias telas do mesmo produto e os estados intermediários das animações. Nos reels de @_code_and_chill_ e @code.xr
+cada quadro traz a UI em cima e um snippet de código embaixo.
 
-Atalhos: dashboard escuro completo e bem hierarquizado → `DfV39ohhwAC`; claro minimalista com KPI invertido →
-`De12lc1vUmr`; kanban + settings → `Deoi1WhP83h`; glass sobre foto → `DfKPFDwz2aA` / `DfMH6YTTcwx`;
-login glass → `DeoGCPlzKOs`.
+Atalhos: dashboard escuro completo e bem hierarquizado → `DfV39ohhwAC`; claro minimalista com KPI invertido e
+troca de tema → `De12lc1vUmr`; home pessoal + kanban + settings → `Deoi1WhP83h`; funil/coorte → `DffBnb2vlUn`;
+fintech pessoal → `DfkNvnePItL`; IoT/mídia → `DfrqAX9v59S`; glass sobre foto → `DfKPFDwz2aA` / `DfHrMboTVDZ`;
+sidebar recolhível → `DfMH6YTTcwx`; login glass → `DeoGCPlzKOs`.
 
 ## Arquivos
 - `references/visual-index.md` — tabela das 11 referências (autor, URL, domínio, estilo, quando abrir).
