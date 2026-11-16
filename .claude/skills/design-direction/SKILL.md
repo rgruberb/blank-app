@@ -1,6 +1,6 @@
 ---
 name: design-direction
-description: Direção de arte para sites, landing pages e apps — escolhe paleta de 2 cores base + 1 acento (com catálogo de combinações e hex), empilha "camadas" visuais (identidade → profundidade → movimento), aplica layout que transmite confiança (espaço, alinhamento, ritmo calmo) e guia o workflow de usar o Claude para web design mostrando referências em vez de descrever com adjetivos, inclusive para adicionar movimento. Use quando o usuário pedir "escolhe uma paleta", "que cores usar no site", "deixa com cara premium/cara de startup", "o site está genérico/sem personalidade", "melhora a direção de arte", "parece pouco confiável", "como pedir pro Claude fazer um site bonito", "adiciona animação/movimento no site", ou antes de começar a UI de uma landing page nova.
+description: Direção de arte para sites, landing pages e apps — escolhe paleta de 2 cores base + 1 acento (com catálogo de combinações e hex), empilha "camadas" visuais (identidade → profundidade → movimento), aplica layout que transmite confiança (espaço, alinhamento, ritmo calmo) e guia o workflow de usar o Claude para web design mostrando referências em vez de descrever com adjetivos, inclusive para adicionar movimento. Use quando o usuário pedir "escolhe uma paleta", "que cores usar no site", "deixa com cara premium/cara de startup", "o site está genérico/sem personalidade", "melhora a direção de arte", "parece pouco confiável", "como pedir pro Claude fazer um site bonito", "adiciona animação/movimento no site", "Claude Design", "como usar o Claude Design", "design system no Claude Design", "pitch deck/landing/protótipo de app/vídeo de lançamento no Claude Design", "limite do Claude Design acabou", ou antes de começar a UI de uma landing page nova.
 ---
 
 # Design Direction
@@ -44,6 +44,7 @@ Destilado de 11 reels sobre direção de arte web (paletas 2+1, camadas, layout 
 | `references/color-palettes.md` | For escolher/propor paleta; precisar de hex; quiser os padrões base→acento (16 combinações citadas). |
 | `references/layers-and-trust-layout.md` | For montar camadas (identidade/profundidade/movimento), revisar layout por confiança, ou listar os 5 tipos de movimento. |
 | `references/claude-web-design-workflow.md` | For escrever prompts de web design, orientar o usuário a dar referências, ou planejar o processo com o Claude. |
+| `references/claude-design-course.md` | For usar o **Claude Design** (app da Anthropic): criar design system/brand, pitch deck, wireframe vs. high-fidelity de landing, protótipo de app mobile, vídeo de lançamento com HyperFrames, levar para Claude Code → GitHub → Vercel, ou economizar o limite de sessão do Design. |
 | `references/visual-index.md` | Precisar saber qual imagem mostra qual exemplo antes de abrir uma. |
 
 ## Imagens (`assets/visual-refs/*.jpg`)

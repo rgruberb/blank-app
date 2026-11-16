@@ -15,3 +15,7 @@ Cada `.jpg` é uma folha de contato 4x3 com frames do reel em ordem cronológica
 | `De9oszIIQ4V.jpg` | @itstundeanthony | https://www.instagram.com/reel/De9oszIIQ4V/ | **Fora do tema.** "Fact or Hype?" sobre o repo "Agent Reach" (agente lê Reddit/X); telas do Claude e GitHub | Não abrir para design. Nenhuma regra extraída |
 | `Dfm0NTiIfyd.jpg` | @itstundeanthony | https://www.instagram.com/reel/Dfm0NTiIfyd/ | **Fora do tema / hype.** "Day Trader skill" para Claude com paper trading; o próprio autor duvida ("suspicious") | Não abrir. Nenhuma regra extraída |
 | — (`Dff1kjUiR4o`, sem imagem) | @mobileeditingclub | https://www.instagram.com/reel/Dff1kjUiR4o/ | Só legenda: 5 tipos de movimento (headline reveal, micro-interactions, portfolio showcase, animated gallery, scroll reveal) e processo "um efeito por vez" | — (conteúdo em `layers-and-trust-layout.md` §3) |
+
+## Fontes sem imagem
+
+- Vídeo "Claude Design 2 HOUR COURSE (Beginner to Pro)" — Nate Herk (@nateherk), https://youtu.be/ovabeVoWrA0 (30/04/2026). Sem folha de contato; conteúdo (workflow completo do Claude Design: design system → deck → landing → app → vídeo → deploy, e dicas de limite) em `references/claude-design-course.md`.
