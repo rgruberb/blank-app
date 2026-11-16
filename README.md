@@ -32,4 +32,4 @@ O script instala: taste-skill, impeccable, gsap-skills (8), playwright-cli, tran
 
 ## Fontes
 
-Veja [docs/sources.md](docs/sources.md) para o status de cada link. As imagens em `visual-refs` são frames de conteúdo de terceiros, para referência pessoal. Mantenha a repo privada.
+Veja [docs/sources.md](docs/sources.md) para o status de cada link e o plano de próximas fontes. Os prompts para coletar as fontes pendentes com a extensão Claude in Chrome estão em [docs/chrome-prompts.md](docs/chrome-prompts.md). As imagens em `visual-refs` são frames de conteúdo de terceiros, para referência pessoal. Mantenha a repo privada.

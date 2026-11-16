@@ -87,3 +87,14 @@ Links enviados entre 9 e 16/11/2026. Os reels processados tiveram o vídeo baixa
 |---|---|
 | [YouTube: Claude Design 2 HOUR COURSE — Nate Herk](https://youtu.be/ovabeVoWrA0) | ✅ transcrição completa → `design-direction/references/claude-design-course.md` |
 | Nota pessoal (09/11): "Transição de telas, scroll para comportamento dinâmico dos componentes para dar 'vida' a eles. Avaliar onde faz sentido" | ✅ diretriz → `ui-motion/references/scroll-and-screen-transitions.md` |
+
+## Próximas fontes (plano: `docs/chrome-prompts.md`)
+
+| Rodada | Fontes | Skill alvo |
+|---|---|---|
+| 1 e 2 | 15 carrosséis + reel `DfkSCaRNfa0` (links pendentes acima) | várias |
+| 3A | @gg.designhub, @rational_edge, @theglidestudio, @motion_ui_interface, @designmotionhq, @_code_and_chill_, @code.xr, @niki.aroca (só posts novos) | design / UI / dashboards |
+| 3B | @gifux, @ramotion, @nick_buturishvili, @ranjithalingal, @uxdesignmastery, @ui.tips, @ultimateuiux, @christvizcarra, @uxmemo | `ui-motion`, `ux-patterns` |
+| 3C | @uidesignpatterns, @dailywebdesign, @interfacely, @twohabitsdesign, @ui.pixel, @spruzzo.ui | `design-direction`, `dashboard-ui` |
+| 4A | @tradionquant, @brianferoldi, @humphreytalks, @econoweek, @academiadevalor, @guiainvest, @boletinhos | `quant-investing` |
+| 4B | Descoberta: perfis sugeridos a partir de @tradionquant e @rational_edge, mais as hashtags #quanttrading #algotrading #backtesting #quantfinance #tradingsistematico | `quant-investing` |
