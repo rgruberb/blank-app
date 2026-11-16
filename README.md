@@ -1,19 +1,16 @@
-# 🎈 Blank app template
+# 🏠 Apê no Rio · Zona Sul
 
-A simple Streamlit app template for you to modify!
+App em Streamlit para organizar a busca de apartamento para alugar na Zona Sul do Rio.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+- **Filtros:** 1 ou 2 quartos, orçamento mensal **total** (aluguel + condomínio + IPTU + seguro incêndio), bairros da Zona Sul, vaga, pet, mobiliado e perto do metrô
+- **Buscar nos sites:** links já filtrados para QuintoAndar, ZAP, VivaReal e Google
+- **Meus apartamentos:** salve os anúncios, compare pelo custo total e por R$/m², e veja nos detalhes o custo destrinchado e quanto custa para entrar no imóvel
 
-### How to run it on your own machine
+Os dados ficam em `data/apartamentos.db` (SQLite local, fora do git).
 
-1. Install the requirements
+## Como rodar
 
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+```
+pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
