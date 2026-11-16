@@ -15,3 +15,8 @@ Os dados ficam em `data/apartamentos.db` (SQLite local, fora do git).
 pip install -r requirements.txt
 streamlit run streamlit_app.py
 ```
+
+## Versão para celular
+
+`artifact/ape-zona-sul.html` é a versão mobile, publicada como Artifact privado no claude.ai.
+Os apartamentos e os filtros ficam salvos no armazenamento do Artifact e sincronizam entre celular e computador.
