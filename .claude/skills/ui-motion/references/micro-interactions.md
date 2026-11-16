@@ -95,8 +95,12 @@ Os reels de @motion_ui_interface mostram cada interação a 1× e a ¼ de veloci
 - **Preview como prova**: thumbnail + tipo + tamanho, não só o nome.
 - **Fila independente**: cada arquivo tem seu progresso e seu retry; uma falha não bloqueia os outros 9.
 
-## 11. Tab bar líquida — DbfG6fuPE9y
-"A aba ativa não desliza — a barra derrete em volta dela": o indicador é uma "gota" que sobe acima da barra e pode ser arrastada; os encaixes são resolvidos por tangência para o líquido nunca vincar (HTML + CSS + JS). Use como inspiração para indicadores de aba com morph/metaball. (Sem valores numéricos.)
+## 11. Tab bar líquida "Meniscus" — DbfG6fuPE9y (@_code_and_chill_)
+"A aba ativa não desliza — a barra derrete em volta dela"; cada encaixe é resolvido por tangência para o líquido nunca vincar (HTML + CSS + JS). Nos frames:
+- A aba ativa vira uma **"gota" (bead) circular que sobe acima da barra**, ligada a ela por um menisco suave; o rótulo aparece sob a gota.
+- **Cada aba tem sua cor** (Home verde-limão, Messages laranja, Settings rosa) e um **glow difuso da mesma cor** sob a barra; o título grande da página troca junto (Home → Messages → Settings).
+- Dá para **tocar** numa aba ou **arrastar a gota** ao longo da barra ("Tap a tab — or drag the bead along the bar"); durante o arraste a gota troca de cor ao passar pelas abas.
+Use como referência de indicador de aba com morph/metaball. (Sem valores numéricos.)
 
-## 12. Dashboard com detalhe em spring — De1j52PFdpL
-Painel de medidores (linha, agulha, anel, ampulheta) em que o detalhe/tooltip **cresce com spring** ao passar o mouse. Exemplo de motion sutil em data-viz. (Sem valores; áudio irrelevante.)
+## 12. Dashboard "Instrumental" com detalhe em spring — De1j52PFdpL (@moxen.studio)
+Dashboard escuro de API ("Monitorea sin perder detalle"): medidores de linha, agulha (gauge), anel, ampulheta, histograma, com números ao vivo (1.112 → 1.195 req/s). Ao passar o mouse num gráfico aparece um tooltip; ao selecionar o painel "Peticiones por segundo" ele **cresce com spring** até ocupar um card maior, as barras ficam laranja, aparece um chip/tooltip laranja e o resto do dashboard **escurece**; depois volta ao grid. Exemplo de "foco" em data-viz: crescer + escurecer o resto (mesmo princípio do long press). (Sem valores; áudio irrelevante.)

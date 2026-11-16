@@ -2,9 +2,11 @@
 
 ## Quanto tempo deve durar — Dfvja0XCyIi (@theglidestudio)
 "Esta animação está um segundo longa demais." Velocidade é metade de como o motion é sentido.
+- Demo na tela: um site "Example" cujo botão Menu abre um menu fullscreen (Work, Services, About, Journal, Contact), com uma régua de 0–3 s marcando "time to open the menu".
 - **Lenta demais** → você espera o site "se exibir" (tela: menu abrindo em **2,4 s**).
-- **Rápida demais** → você nunca vê de onde as coisas vieram (tela: **0,1 s**).
-- **Regra** (tela): **Press 0,16 s · Reveal 0,7 s · Scene 1,2 s**. "Um press leva um piscar, um reveal menos de um segundo, uma cena completa pouco mais de um."
+- **Rápida demais** → você nunca vê de onde as coisas vieram (tela: **0,0–0,1 s**, o menu "pisca").
+- Comparação lado a lado no fim: Too slow **2,4 s** · Too fast **0,1 s** · Right **0,7 s**.
+- **Regra** (tela): **Press 0,16 s · Reveal 0,7 s · Scene 1,2 s** — press = o botão Menu reagindo; reveal = o menu abrindo; scene = a troca completa para a página "Work" (grid de cards). "Um press leva um piscar, um reveal menos de um segundo, uma cena completa pouco mais de um."
 - "Bom motion nunca é algo que você espera. Acaba exatamente quando você o percebe."
 
 Outras durações das fontes: card expand 350 ms; success 470 ms; add to cart 500 ms; bell 760 ms; download icon 1,2 s; ícones 300–600 ms; checkout line 400 ms; map pin 200 ms para pousar.
@@ -20,9 +22,10 @@ Interação contínua (arrastar, scroll, pull) **não tem duração**: segue o d
 
 ## Card → página (shared element) — DfwhC1riuuO (@theglidestudio)
 "Você toca num card. Para onde foi a página?" Um corte seco obriga a pessoa a se reencontrar.
-1. **O card vira a página**: a imagem do card cresce até ser o hero da página de detalhe (tela: o anel "Halo" do grid vira o topo da página de produto).
+Demo (loja de objetos — Orb, Halo, Column, Arc…): no "Tap. Cut." a página de produto simplesmente aparece (um retângulo tracejado marca onde o card estava). No "Don't cut. Carry." (slow motion) uma linha azul traça o caminho que o card percorre do grid até o topo da página.
+1. **O card vira a página**: a imagem do card cresce até ser o hero da página de detalhe (o anel "Halo", card escuro no grid, vira o hero escuro da página de produto com "Add to bag").
 2. **Voltar volta**: a página encolhe exatamente para a posição de origem no grid.
-3. **Menus começam no botão**: o menu nasce do botão hambúrguer que o abriu.
+3. **Menus começam no botão**: o menu (popover escuro com Shop, New in, Journal, About) nasce do botão hambúrguer no canto superior direito e o fundo escurece.
 "Nada simplesmente aparece. Tudo na tela veio de algum lugar."
 Implementação: View Transitions API (`view-transition-name` igual no card e no hero) ou FLIP — ver `css-recipes.md`. Duração alvo: um reveal (~350–700 ms).
 

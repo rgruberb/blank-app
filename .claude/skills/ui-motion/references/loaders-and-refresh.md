@@ -8,30 +8,32 @@
 Combinados: skeleton + atualização instantânea + progresso psicológico.
 
 ## 8 estilos de loader — DfvAY82DSvD (@ale.uiux)
-| # | Estilo | Quando usar |
-|---|---|---|
-| 01 | Spinner | esperas curtas, **< 3 s** (texto na tela) |
-| 02 | Typing dots | chat / resposta sendo escrita |
-| 03 | Progress bar | duração conhecida |
-| 04 | Skeleton screen | feeds — sem saltos de layout |
-| 05 | AI shimmer | respostas de IA ("Thinking…") |
-| 06 | Progress ring | duração conhecida, espaço compacto (tela mostra %) |
-| 07 | Pull to refresh | listas — conteúdo novo sob demanda |
-| 08 | Shape morph | splash/loader de marca |
+Legenda de cada slide (texto na tela) + o que o mockup mostra:
+
+| # | Estilo | Quando usar (tela) | O que o mockup mostra |
+|---|---|---|---|
+| 01 | Spinner | "short waits, under 3 s" | anel girando sozinho |
+| 02 | Typing dots | "chats and AI replies" | bolha "Are you coming?" + 3 pontos |
+| 03 | Progress bar | "uploads you can measure" | "video.mp4 · Uploading…" com % (21% → 100%) |
+| 04 | Skeleton screen | "feeds without layout jumps" | linhas/avatares cinza que viram a lista |
+| 05 | AI shimmer | "while the model thinks" | prompt "Plan my week" + texto "Thinking…" com brilho passando, depois a resposta |
+| 06 | Progress ring | "downloads and steps" | anel com % central ("Downloading 3 files"), termina num check |
+| 07 | Pull to refresh | "new content on demand" | ícone girando no topo, lista desce |
+| 08 | Shape morph | "a branded splash loader" | blob/quadrado arredondado que morfa ("Preparing your space") |
 
 Regra: escolha pelo que você **sabe** da espera — duração desconhecida e curta → spinner; conhecida → barra/anel com %; conteúdo estruturado → skeleton.
 
 ## 8 formas de atualizar uma página — DfwavjimeIa (@ale.uiux)
-| # | Padrão | Quando usar |
-|---|---|---|
-| 01 | Pull down | listas mobile; o indicador desliza junto |
-| 02 | Elastic pull | pull com elasticidade/resistência (ver 35% / rubber band) |
-| 03 | Release cue | sinal de "pode soltar" ao passar do limite |
-| 04 | New posts pill | pílula "novos posts" — o leitor nunca perde o lugar |
-| 05 | Live insert | feeds em tempo real, item entra no topo |
-| 06 | Auto-load | infinite scroll |
-| 07 | Load more | botão — o usuário mantém o controle |
-| 08 | Refresh button | dashboards e web apps |
+| # | Padrão | Legenda na tela | Quando usar |
+|---|---|---|---|
+| 01 | Pull down | "the indicator slides over" | listas mobile |
+| 02 | Elastic pull | "a playful, stretchy drop" | pull com gota elástica que estica (marca/brincadeira) |
+| 03 | Release cue | "tells users when to let go" | complementa o pull: avisa o ponto de soltar |
+| 04 | New posts pill | "never lose your place" | feeds longos: pílula no topo, o leitor não pula |
+| 05 | Live insert | "real-time feeds, no gesture" | itens novos entram sozinhos no topo |
+| 06 | Auto-load | "endless feeds, zero taps" | infinite scroll |
+| 07 | Load more | "users stay in control" | botão no fim da lista |
+| 08 | Refresh button | "dashboards and web apps" | ícone ↻ no canto; o mockup é um dashboard com KPIs (1,342 / €3.6k) e barras que se atualizam |
 
 ## Valores de pull-to-refresh (das outras fontes)
 - Resistência: dedo **100%** → lista **35%** (DfP6EoLBtgg).

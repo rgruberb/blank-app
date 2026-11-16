@@ -59,7 +59,7 @@ Curvas CSS equivalentes (complemento): ease-out `cubic-bezier(0.22, 1, 0.36, 1)`
 6. **Verifique no browser** a 1× e em câmera lenta (DevTools → Animations a 25%, como os reels mostram "¼ speed").
 
 ## Quando abrir cada reference
-- `references/micro-interactions.md` — catálogo completo (~45 interações: botões, listas, ícones, formulários, toasts, drag/upload, detalhes iOS) com valores e porquê. Abra ao implementar qualquer componente específico.
+- `references/micro-interactions.md` — catálogo completo (~45 interações: botões, listas, ícones, formulários, toasts, drag/upload, detalhes iOS, tab bar líquida, foco em dashboard) com valores e porquê. Abra ao implementar qualquer componente específico.
 - `references/loaders-and-refresh.md` — 8 loaders, 3 truques de percepção, 8 formas de atualizar página, regras de upload. Abra para estados de espera/feed.
 - `references/page-transitions-and-timing.md` — durações, easing vs spring, shared element card→página, menus, side menu, large title. Abra para navegação ou dúvidas de "quanto tempo".
 - `references/css-recipes.md` — snippets CSS/JS prontos (press, spring `linear()`, pull-to-refresh, stagger, rolling number, View Transitions, FLIP, toast stack, reduced-motion).
