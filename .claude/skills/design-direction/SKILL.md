@@ -1,0 +1,64 @@
+---
+name: design-direction
+description: Direção de arte para sites, landing pages e apps — escolhe paleta de 2 cores base + 1 acento (com catálogo de combinações e hex), empilha "camadas" visuais (identidade → profundidade → movimento), aplica layout que transmite confiança (espaço, alinhamento, ritmo calmo) e guia o workflow de usar o Claude para web design mostrando referências em vez de descrever com adjetivos, inclusive para adicionar movimento. Use quando o usuário pedir "escolhe uma paleta", "que cores usar no site", "deixa com cara premium/cara de startup", "o site está genérico/sem personalidade", "melhora a direção de arte", "parece pouco confiável", "como pedir pro Claude fazer um site bonito", "adiciona animação/movimento no site", ou antes de começar a UI de uma landing page nova.
+---
+
+# Design Direction
+
+Destilado de 11 reels sobre direção de arte web (paletas 2+1, camadas, layout de confiança, workflow com Claude). Use para **decidir** a direção antes de codar e para **corrigir** UIs genéricas.
+
+## Quando usar
+
+- Início de landing page/site/app sem direção visual definida.
+- UI "funciona mas é esquecível", "cara de template", "fria", "corporativa".
+- Página que precisa parecer segura (fintech, B2B, saúde, onboarding).
+- Pedido de movimento/animação num site existente.
+- Usuário descrevendo o visual só com adjetivos ("premium", "moderno", "clean").
+
+## Regras centrais
+
+1. **Use exatamente 2 cores base + 1 acento.** "The first two colors set the mood. The accent gives it personality." Não adicione uma 4ª cor de marca; "you don't need more colors, you need one that surprises people".
+2. **As bases se dão bem; o acento não.** Bases da mesma família ou neutro + cor; acento com matiz oposto/complementar e alta saturação (azul→laranja, violeta→lime/mint, rosa→amarelo, navy→hot pink).
+3. **O acento vai só no que deve ser clicado ou lembrado:** CTA primário, badge, 1 palavra de ênfase, indicador-chave. "A little", "a touch", "a hint" — nunca em fundos grandes.
+4. **Empilhe camadas sobre o mesmo layout, nesta ordem:** (1) identidade = cor + tipografia → "personality"; (2) profundidade = luz atrás de frosted glass → "looks expensive"; (3) movimento → "people stop scrolling". "Same layout in all four — the layers are what people remember."
+5. **Tipografia de identidade em trio:** sans no headline, serif itálico em 1 palavra/linha de ênfase ("The handoffs run *themselves.*"), mono em labels/metadados.
+6. **Confiança = espaço + alinhamento + ritmo calmo.** Mesmo texto, layout diferente muda a credibilidade: 1 CTA primário por tela, uma borda de alinhamento por coluna, margens generosas, nada de widgets competindo acima da dobra. "A page that looks cared for gets believed."
+7. **Mostre, não descreva.** Nunca peça "make it look premium". Dê referências reais (URL, screenshot, componente) e decisões concretas (hex, fontes, hierarquia). "Adjectives get you an interpretation. References get you the result."
+8. **Movimento: um efeito por vez**, sutil e legível, testado em desktop e mobile. Tipos: headline reveal, micro-interactions, portfolio showcase, animated gallery, scroll reveal.
+
+## Workflow
+
+1. **Contexto**: produto, público, mood desejado (1 frase) e se precisa transmitir confiança.
+2. **Referências**: peça 2–5 sites/imagens ao usuário. Se houver URL, rode `ext-extract-design` para extrair tokens reais. Sem referência, proponha 2–3 combinações do catálogo (`references/color-palettes.md`) e deixe o usuário escolher.
+3. **Defina a direção por escrito** (curto): `--base-1`, `--base-2`, `--accent` com hex; onde o acento aparece; trio tipográfico; o único CTA; qual é a "terceira camada" (cor, luz ou objeto/cena).
+4. **Layout primeiro, sem enfeite**: estrutura com espaço, alinhamento e 1 CTA (checklist em `references/layers-and-trust-layout.md` §2).
+5. **Camada 1 – identidade** (cores + tipografia). Valide.
+6. **Camada 2 – profundidade** (luz/glow, frosted glass, sombras). Valide.
+7. **Camada 3 – movimento**, um efeito por vez (implementação: `ui-motion`, `ext-gsap-scrolltrigger`, `ext-gsap-*`). Respeite `prefers-reduced-motion`.
+8. **Crítica final** com `ext-impeccable` (design system/critique) e `ext-taste-skill` (anti-slop); cheque contraste do acento (AA 4.5:1).
+
+## Referências — quando abrir
+
+| Arquivo | Abra quando |
+|---|---|
+| `references/color-palettes.md` | For escolher/propor paleta; precisar de hex; quiser os padrões base→acento (16 combinações citadas). |
+| `references/layers-and-trust-layout.md` | For montar camadas (identidade/profundidade/movimento), revisar layout por confiança, ou listar os 5 tipos de movimento. |
+| `references/claude-web-design-workflow.md` | For escrever prompts de web design, orientar o usuário a dar referências, ou planejar o processo com o Claude. |
+| `references/visual-index.md` | Precisar saber qual imagem mostra qual exemplo antes de abrir uma. |
+
+## Imagens (`assets/visual-refs/*.jpg`)
+
+Folhas de contato 4x3 dos reels. **Só abra quando precisar de exemplo visual concreto** (mostrar ao usuário, conferir composição) — custam contexto e os hex já estão nas references. Melhores apostas:
+- `Dfc-Q-0yy0W.jpg` — acento só no botão em landings SaaS (antes/depois).
+- `DfSIP2iBuFI.jpg` — mesma página nas 4 camadas.
+- `DfyFShTounu.jpg` — layout inseguro vs. seguro (mobile).
+- `DfVlIwHISSv.jpg` — terceira camada como luz/objeto 3D.
+
+`De9oszIIQ4V.jpg` e `Dfm0NTiIfyd.jpg` são fora do tema (hype de ferramentas de IA); não abra.
+
+## Skills complementares (já instaladas)
+
+- `ext-taste-skill` — direção anti-slop, evitar o visual genérico de IA.
+- `ext-impeccable` — design system, tokens e critique.
+- `ext-extract-design` — extrair cores/fontes/espaçamento de um site por URL (ótimo para o passo "mostrar, não descrever").
+- `ui-motion` e `ext-gsap-*` — implementar o movimento.
