@@ -40,7 +40,7 @@ o índice com autor, URL e quando abrir cada uma está em `references/visual-ind
 
 ## Paleta: escuro vs claro
 - **Escuro neutro-quente** (saúde, tasks): fundo `#0b0c0e`, cards `#151618`–`#1b1c1e`, borda 1px `rgba(255,255,255,.06)`,
-  destaque único (mint `#2fbf94`, azul `#3b82f6` ou magenta `#d12777`). Texto secundário ~55% de opacidade.
+  destaque único (mint `~#2fb58f`, azul `#3b82f6` ou magenta `#d12777`). Texto secundário ~55% de opacidade.
 - **Escuro com glow ambiente** (SaaS azul `#0a1530`→`#1d3aa8`, seguros teal `#04161a` com ondas, orçamento verde musgo):
   um radial-gradient grande e desfocado atrás do conteúdo; cards translúcidos por cima.
 - **Claro monocromático** (varejo): fundo `#eceeed`, cards brancos sem borda forte, sombra mínima, tudo em
