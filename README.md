@@ -28,6 +28,8 @@ Cada skill própria tem:
 ./scripts/install-external-skills.sh --global   # em ~/.claude/skills
 ```
 
+Nas sessões do Claude Code na nuvem, a instalação é **automática**: o gatilho `.claude/hooks/session-start.sh` (registrado em `.claude/settings.json`) roda o script ao abrir a sessão se alguma skill `ext-*` estiver faltando, e pula a instalação quando já está tudo instalado. No seu computador, rode o script manualmente.
+
 O script instala: taste-skill, impeccable, gsap-skills (8), playwright-cli, transitions.dev (3) e design-extract. React Bits é uma biblioteca de componentes, não uma skill; o script mostra como usar. As skills de terceiros não são copiadas para esta repo porque algumas licenças (transitions.dev, react-bits) não permitem redistribuição.
 
 ## Fontes
