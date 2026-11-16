@@ -1,174 +1,211 @@
 # Exemplos por domínio — o que cada referência faz e o que copiar
 
-Descrições feitas a partir das folhas de contato (resolução baixa; textos pequenos muitas vezes ilegíveis —
-quando um rótulo não pôde ser lido, isso está dito). Hex aproximados. Itens marcados "(complemento)" não
-aparecem na referência; são sugestões para completar o padrão.
+Descrições feitas a partir das folhas de contato (12 quadros por reel). Textos muito pequenos são citados só
+quando legíveis. Hex aproximados. Itens marcados "(complemento)" não aparecem na referência; são sugestões para
+completar o padrão.
 
 ---
 
 ## 1. Vendas de varejo — `De12lc1vUmr` (@_code_and_chill_)
-**Tema:** claro monocromático. Fundo `~#eceeed`, cards `~#f7f8f7`/branco, texto quase preto `~#111`,
-KPI destacado e rail em `~#0f1110`.
+**Tema:** claro monocromático com versão dark. Fundo `~#eceeed`, cards brancos `~#f7f8f7` e cinza `~#e2e4e3`,
+cards-destaque e rail `~#0f1110`, texto quase preto.
 
-**Layout**
-- Header de app: logo quadrado preto + nome da loja à esquerda; **top nav em pílulas** centralizada (6–8 itens,
-  alguns com contador; o ativo é pílula preta com texto branco); ícones à direita.
-- **Rail de ícones vertical flutuante** à esquerda: pílula preta alongada, ~7 ícones brancos, separada da borda.
-- Título "Analytics" grande; abaixo, segmented controls de período (pílulas pequenas, ativa branca) e, à direita,
-  um toggle (provavelmente comparação) + botão "Export".
-- Linha de **5 KPI cards** iguais em largura: rótulo pequeno, valor grande (`$37,163`, `532`, `$69.87`, `4.53%`,
-  `38.7%`), delta verde, sparkline fina embaixo. **O primeiro é invertido (preto)** — é o KPI-mestre.
-- Abaixo: gráfico de área/linha largo (~2/3) com o valor-mestre repetido em destaque, duas séries
-  (linha escura + área cinza clara, curvas suaves), legenda no canto superior direito.
-- Coluna direita (~1/3): breakdown com dois percentuais, **barra empilhada horizontal** preta/cinza e lista de
-  dois itens (bullet, nome, valor à direita, delta verde).
+**Estrutura comum:** logo quadrado preto + "Cellar Supply Co."; **top nav em pílulas** (Dashboard, Orders, Products,
+Customers, Messages com contador, Analytics, Automations — ativo em pílula preta); **rail de ícones vertical flutuante**
+(pílula preta) à esquerda; ícones à direita.
+
+**Telas**
+- **Dashboard:** título + tabs pequenas (Overview…) + "Export" em pílula preta. 4 KPI cards **com visuais diferentes
+  por métrica**: preto com mini-barras (`$48,322`), branco com linha (`$39,496`), cinza com anel de progresso
+  (`3,642`), cinza com barras (`4.8%`). Abaixo, card preto **"Sales performance" com gauge semicircular** (marcas
+  ao redor, valor "79%" ou "86%" crescendo) e card claro de receita com barras verticais cinza.
+- **Analytics:** segmented de período, 5 KPI cards com sparkline (o 1º preto, `$37,163`), gráfico de área largo com
+  tooltip, coluna de breakdown com barra empilhada e lista.
+- **Spring Launch (campanha):** header com descrição, avatares e indicador de progresso circular, CTA preto; kanban
+  de 4 colunas com cards de tarefa (tag, título, barra de progresso, avatar).
+- **Dark:** mesma tela em `~#0d0e0e`, cards `~#1a1b1b`, ativo vira pílula branca.
 
 **Animação:** troca de tema com `document.startViewTransition` + `clipPath: circle()` expandindo a partir do
-botão de tema, `duration: 620` (leitura aproximada), `pseudoElement: '::view-transition-new(root)'`.
+botão de tema (no quadro 10 o círculo preto cresce do canto inferior esquerdo), `duration: 620`,
+`pseudoElement: '::view-transition-new(root)'`. Na troca de página o conteúdo esmaece/desfoca e o novo entra.
 
-**Copiar:** KPI-mestre invertido; sparkline em todo KPI; disciplina de cor (só o verde dos deltas tem cor);
-rail flutuante + top nav em pílulas.
+**Copiar:** KPI-mestre invertido; cada KPI com o mini-gráfico que combina com a métrica; disciplina de cor
+(só o verde dos deltas tem cor); rail flutuante + top nav em pílulas.
 
 ---
 
 ## 2. Gestão de projetos em equipe — `Deoi1WhP83h` (@_code_and_chill_)
-**Tema:** escuro neutro. Fundo `~#141517`, superfícies `~#1b1c1e`–`#25262b`, bordas sutis, cantos ~16–20px;
-cards parecem levemente translúcidos (o próprio app oferece Glass "Clear/Tinted").
+**Tema:** escuro neutro. Fundo `~#141517`, superfícies `~#1b1c1e`–`#25262b`, bordas sutis, cantos ~16–20px; o próprio
+app oferece Glass "Clear/Tinted". Destaques: azul `~#3b82f6` (logo, CTA, Up next), magenta `~#e0337f` (accent
+escolhido, checks, CTA "Join"), anéis rosa/verde/azul.
 
-**Telas vistas**
-- **Tasks:** rail de ícones com logo azul no topo e avatar no rodapé; ilha superior central "Focus 24:56" (timer em pílula
-  preta, estilo dynamic island); toolbar de ícones à direita. Título "Tasks" + subtítulo "31 open across 5 projects"
-  (leitura aproximada). **Faixa de stats sem cards**: Open 31 · Due this week 11 · Overdue 0 · Done this week 26.
-  Filtros em pílulas (All projects, Mine only, Any priority) + campo de busca. Botões "Board"/"List" e CTA azul "New task".
-- **Kanban** In progress / In review / Done: cabeçalho com ponto colorido + contagem; cards com **tag de projeto**
-  (pílula com ponto: verde, azul, roxo, rosa) + tag de prioridade (laranja "High", vermelho "Urgent"), título,
-  **barra de progresso fina** na cor do projeto, data, comentários, avatar. Em "Done" aparece check azul.
-- **By project:** donut em segmentos separados (roxo, azul, verde, rosa, teal) com total central "333 finished";
-  legenda em lista: bullet, nome do projeto, contagem, percentual alinhado à direita.
-- **Focus:** "807 hours — about 63h a week" (número grande + unidade pequena).
-- **Settings:** sub-navegação em lista com ícones coloridos quadrados (Profile, Notifications, Appearance, Focus, Data);
-  seções em cards: Theme (Light/Dark/Auto segmented), Wallpaper (grade de miniaturas coloridas), Accent (6 swatches:
-  azul, roxo, magenta `~#d12777`, laranja, verde, cinza), Glass Clear/Tinted, **Reduce transparency** (toggle),
-  Focus (steppers 25 min / 5 min), Data (Export tasks as CSV, ação destrutiva em vermelho).
+**Telas**
+- **Home "Good morning, Lin":** subtítulo com data e "4 meetings and 6 tasks left today"; faixa de stats sem cards
+  (Done today 3/8 · Focus today 1.1h · Overdue 0); CTA "New task" + CTA magenta com horário da próxima reunião.
+  Cards: **Today** com 3 anéis concêntricos (Tasks 3/8, Focus 1.1h/2h, Meetings 1/4) e legenda vertical colorida;
+  **Up next** com o próximo evento num bloco azul (em 20 min, "Tide sync review", avatares, botão Join) e agenda
+  com barras coloridas à esquerda; **Focus** com timer circular âmbar "24:43" + Pause/End; **My tasks** com
+  checkbox circular, tag de projeto, prioridade (Urgent vermelho, High laranja), concluídas com check magenta;
+  **This week** "27" com barras rosa por dia.
+- **Ilha de foco no topo** (estilo dynamic island): pílula preta "Focus 24:56" que expande para card
+  "25-minute block · 24:58" com botões; toast "Focus started — notifications are held".
+- **Tasks:** faixa Open 31 · Due this week 11 · Overdue 0 · Done this week 26; filtros em pílula; Board/List;
+  kanban In progress / In review / Done com tags de projeto coloridas, prioridade, **barra de progresso fina**, avatar.
+- **By project:** donut segmentado "333 finished" + legenda tabular (Orbit 2.0 launch 78 23%, Tide mobile app 67 20%…);
+  "Focus 807 hours, about 63h a week".
+- **Settings:** perfil "Lin Zhao"; sub-nav com ícones quadrados coloridos; Notifications (toggles magenta); Appearance
+  (Theme Light/Dark/Auto, Wallpaper com 10 miniaturas nomeadas: Ash, Sand, Sage, Aurora, Smoke, Tide, Bloom, Ember,
+  Grove, Dusk; Accent com 6 swatches; Glass Clear/Tinted; **Reduce transparency**); Focus (Session 25 min / Break 5 min);
+  Data (Export tasks as CSV, ação destrutiva em vermelho).
 
-**Animação:** primeiro quadro mostra transição com forte motion blur entre listas.
+**Animação:** troca de tela com forte motion blur vertical; ilha que expande.
 
-**Copiar:** faixa de stats compacta sem caixa; anatomia do card de kanban; tela de Appearance com
-"Reduce transparency" (acessibilidade para glass); donut com legenda tabular.
+**Copiar:** home pessoal com anéis + "up next"; faixa de stats sem caixa; anatomia do card de kanban; Settings
+com "Reduce transparency"; ilha de estado no topo para um modo ativo (foco, gravação, sync).
 
 ---
 
 ## 3. Portal de corretora de seguros marítimos — `DfCWtPgPcfP` (@_code_and_chill_)
-**Tema:** par dark/light do mesmo produto ("Moorly"). Destaque teal `~#4fb1a2`.
-- Dark: fundo `~#04121a` com **ondas teal escuras** no terço inferior (ilustração de mar), colunas `~#062a2a`.
-- Light: fundo branco com **névoa teal/pêssego** (`~#e6f7f8`, toque quente no canto superior direito), cards `~#d8f3f6`.
+**Tema:** par dark/light ("Moorly"). Destaque teal `~#4fb1a2`.
+- Dark: fundo `~#04121a`, brilho âmbar difuso no topo direito (sol), **ondas teal escuras** embaixo.
+- Light: fundo branco com névoa teal `~#e6f7f8` e toque pêssego no canto superior direito; cards `~#d8f3f6`.
 
-**Layout**
-- Top nav em pílulas com ativo teal preenchido + badges numéricos; segunda linha de abas/breadcrumbs.
-- **Pipeline (dark):** kanban de ~6 colunas de estágio; cards com tipo de seguro, nome da empresa, valor (`$85,750`…),
-  avatar e ações. CTA teal "New submission" (aparente) no canto superior direito.
-- **Detalhe da conta (light):** título "Pell Harbor Ferry Co." + metadados; **stepper horizontal em forma de rota**
-  (nós circulares teal ligados por linha curva; etapa atual com marcador escuro); grid de campos (rótulo pequeno + valor)
-  no card principal; card lateral "Indicated premium $66,500" com lista chave/valor.
+**Telas**
+- **Home "Good morning, Noa":** subtítulo com resumo do dia; botões "Inbox" + CTA teal. **4 KPI cards tingidos**
+  (teal, marrom, azul-acinzentado, ferrugem — `14`, `$308.00`, `$1.75M`, `$34.3k` aprox.) com sparkline em cada.
+  Gráfico de área teal largo com tooltip + coluna "Waiting on you" (lista com ícone, título, subtítulo e chip de status).
+- **Pipeline:** busca + filtros em pílula, toggle; kanban de 6 estágios, cards com tipo (Hull, Cargo, P&I…),
+  empresa, valor (`$85,750`…), avatar e ações.
+- **Transição:** a tela vira mar — ondas teal sobem e cobrem tudo antes de revelar a próxima página.
+- **Detalhe "Pell Harbor Ferry Co."** (light): breadcrumbs + abas (Overview, Quote, Documents…); **stepper em forma
+  de rota** (nós teal ligados por linha; o barco/marcador escuro sobre a etapa atual); **cotador**: valor grande
+  (`$66,104` → `$66,500`) que muda ao arrastar um **slider** de limite; card "Indicated premium $66,500" com lista.
 
-**Animação (GSAP):** um barco percorre o path da rota até a próxima estação — `getPointAtLength`, rotação por
-`Math.atan2`, `strokeDashoffset` para revelar a linha, `ease: 'power3.inOut'`.
+**Animação (GSAP):** barco percorre o path da rota — `getPointAtLength`, rotação por `Math.atan2`,
+`stroke-dasharray` para revelar a linha percorrida, `duration` ~1.3s (leitura aproximada), `ease: 'power3.inOut'`, e no `onUpdate` reposiciona o barco.
 
-**Copiar:** metáfora do domínio aplicada a um componente funcional (o stepper vira rota marítima), sem poluir o resto;
-oferecer os dois temas com a mesma estrutura.
+**Copiar:** metáfora do domínio aplicada a componentes funcionais (stepper-rota, transição de ondas) e não espalhada
+em tudo; KPI cards tingidos com tons terrosos (alternativa a "todos iguais"); cotador com feedback imediato.
 
 ---
 
 ## 4. Analytics de receita SaaS — `DffBnb2vlUn` (@_code_and_chill_)
-**Tema:** dark azul profundo. Fundo `~#061a2a`→`#0b1640`, **glow radial azul `~#1d3aa8` e teal** atrás das colunas,
-colunas/cards `~#122670` translúcidos com borda azul clara sutil, CTA azul `~#4e6ad1`.
+**Tema:** dark azul profundo. Fundo `~#061a2a`→`#0b1640`, **glow radial azul `~#1d3aa8` e teal**, cards `~#122670`
+translúcidos com borda azul clara, CTA azul `~#4e6ad1`, série de destaque azul claro `~#6f8ff0` ou verde `~#5ee3a1`.
 
-**Layout:** rail de ícones à esquerda (ativo em quadrado azul claro), breadcrumbs + busca no topo, título "Campaigns",
-um seletor com cursor circular (ação sendo demonstrada), board de 4 colunas; cards com nome da campanha, descrição,
-**dois pares rótulo + barra de progresso** (teal e azul) com valor à direita, avatar.
+**Telas**
+- **Funnels:** coluna esquerda com lista de funis (nome, taxa, mini barra; selecionado destacado); painel principal com
+  abas, 5 KPIs de etapa e **funil em 5 barras verticais** — a 1ª cheia em gradiente azul, as seguintes cada vez mais
+  baixas dentro de "trilhos" vazios; tabela de conversão embaixo.
+- **Campaigns:** board de 4 colunas (cards com pares de barras de progresso teal/azul) e **detalhe** com funil em
+  barras verdes, valor `$10,292` à direita com lista, e barras finas espaçadas ao longo do tempo.
+- **Cohorts:** 4 KPI cards translúcidos e **heatmap de retenção em triângulo** (linhas = coortes, colunas = semanas),
+  intensidade de azul caindo da esquerda para a direita.
+- Entre páginas o conteúdo dissolve num desfoque azul e a pílula ativa do rail desliza.
 
-**Animação (GSAP `slidePill`):** a pílula ativa é recortada com `clip-path: inset()`; a borda na direção do movimento
-anda primeiro (`ease: 'power3.out'`, ~0.3s) e a traseira alcança depois (`'power3.inOut'`, ~0.5s) — efeito elástico
-(durações com leitura incerta).
+**Animação (GSAP `slidePill`):** pílula ativa recortada com `clip-path`; a borda na direção do movimento anda primeiro
+(~0.3s, `ease: 'power3.out'`) e a traseira alcança depois (~0.55s, `'power3.inOut'`) — durações de leitura aproximada.
 
-**Copiar:** luz ambiente atrás do conteúdo em vez de gradiente nos cards; barras de progresso duplas para
-"meta vs realizado" (complemento: rotular claramente qual barra é qual).
+**Copiar:** funil como barras dentro de trilhos; heatmap de coorte; luz ambiente atrás do conteúdo em vez de
+gradiente nos cards.
 
 ---
 
 ## 5. App de orçamento familiar — `DfkNvnePItL` (@_code_and_chill_)
-**Tema:** dark verde musgo (`~#162218` sidebar, conteúdo `~#374534` desfocado), ativo verde-menta `~#8af1b6`.
-Só um quadro, em plena transição: a **pílula ativa da sidebar está esticada** cobrindo dois itens (efeito do
-`slidePill` vertical) e o conteúdo está borrado. Rodapé da sidebar com bloco de saldo e card do usuário; topo com
-busca e botão verde circular.
+**Tema:** dark verde musgo. Sidebar `~#162218`, fundo com manchas verdes desfocadas `~#2c3a2c`, acento menta `~#8af1b6`
+(item ativo, CTA, barras, anel).
 
-**Copiar:** a animação de item ativo em navegação vertical. Layout em si não é legível o bastante para copiar.
+**Telas**
+- **Home "Good morning, Ines":** **cartão de crédito 3D verde** como hero (com sombra e leve perspectiva); saldo
+  `$24,627.72` grande com mini-KPIs e área; card de gastos com barras finas menta.
+- **Cards:** cartão grande + painel de configurações (limites em dois campos, 4 toggles menta, slider).
+- **Insights:** 4 KPIs translúcidos; barras verticais menta com sombra (gastos) + linha (tendência);
+  **barras horizontais por categoria** com valores à direita e **anel** de orçamento com valor central.
+- Sidebar: logo, itens com contadores, bloco de saldo ou plano no rodapé, usuário.
+
+**Animação:** mesma `slidePill` em vertical (a pílula menta estica cobrindo dois itens e depois encolhe no destino);
+o conteúdo desfoca entre páginas.
+
+**Copiar:** objeto do domínio como hero (o cartão); barras por categoria + anel para orçamento; pílula elástica vertical.
 
 ---
 
 ## 6. Smart home — `DfrqAX9v59S` (@_code_and_chill_)
-**Tema:** glass/frosted cinza grafite. Painéis `~#555756`, sidebar `~#414342`, item ativo em **pílula branca**
-`~#dfe1e0` com texto escuro. Sem cor de destaque — as fotos das câmeras dão a cor.
+**Tema:** glass/frosted cinza grafite. Painéis `~#555756`, sidebar `~#414342`, ativo em **pílula branca** `~#dfe1e0`.
+Sem cor de destaque — as fotos dão a cor.
 
-**Layout:** sidebar larga (logo circular + nome, grupos, ~10 itens, card no rodapé), barra de busca no topo e ícones;
-breadcrumb + título "Security" + subtítulo; botão branco em pílula à direita; abas; **grid de câmeras**: 1 grande
-(sala) + 2x2 menores (fachadas, interiores), com rótulo sobreposto no canto; abaixo, chips de filtro (ativo branco)
-e linha de dispositivos com miniaturas.
+**Telas**
+- **Home "Good morning, Noor":** linha de 5 tiles de status (cômodos/dispositivos); **câmera hero** (sala) com faixa de
+  miniaturas; tiles grandes `20` e `9:00`; **dial de termostato** circular (arco branco, `20.5°`) com +/-; chips de cena
+  na base (ativo branco).
+- **Security:** grid de câmeras 1 grande + 2x2 com rótulos sobrepostos; chips de filtro; lista de dispositivos.
+- **Climate:** dois cards de cômodo com dial (`21.5°`, `18.5°`) e segmented de modo (ativo branco); **grade de agenda
+  semanal** (7 linhas x ~24 horas; células brancas = aquecimento ligado) com botões de preset.
 
-**Copiar:** quando o conteúdo é mídia, deixe a UI neutra e acinzentada; grid "1 grande + 4 pequenos".
+**Animação:** `slidePill` com direção detectada (`Math.abs(to.t - prev.t) > Math.abs(to.l - prev.l)` → vertical), e as
+bordas do eixo cruzado também animam (~0.4s, `power2.inOut`); conteúdo some em desfoque cinza entre páginas.
+
+**Copiar:** UI neutra quando o conteúdo é mídia; dial para controle contínuo; grade de agenda como heatmap binário.
 
 ---
 
 ## 7. Plataforma de saúde, prior authorization — `DfV39ohhwAC` (@ui.iliasmiah000)
 **Tema:** dark neutro `~#0b0c0e`, cards `~#151618` com borda sutil e cantos ~16px, destaque **mint `~#2fb58f`**,
-âmbar para alertas de prazo, chips de status em azul-acinzentado / verde. Glow verde muito leve ao redor da moldura.
-Tipografia sans geométrica, números grandes em peso leve/regular.
+âmbar para prazos, chips de status azul-acinzentado / verde. Glow verde muito leve ao redor da moldura.
+Tipografia sans geométrica, números grandes em peso leve.
 
-**Layout (quadro completo no canto inferior direito da folha)**
-- Sidebar larga: logo "Veyra Health", card do usuário/organização, navegação (Overview ativo + itens com contadores),
-  grupo de filas/payers com pontos coloridos, rodapé com status.
+**Layout**
+- Sidebar larga: logo "Veyra Health", card do usuário, Overview ativo + itens com contadores, grupo de filas
+  com pontos coloridos, Settings.
 - Topo: busca com atalho, data/hora, ícones (notificação com badge), avatar.
-- Header: "Overview" + "Good morning, Dana. 23 cases need attention today." À direita: filtros ("All payers",
-  "Last 30 days") e CTA mint "New authorization" (aparente).
-- **KPI strip sem cards** (5): Active cases 386 · Pending payer 142 (chip âmbar "overdue") · Approved 1,127 ·
-  Denied 96 (chip vermelho) · Median turnaround 3.4 d — rótulo caps minúsculo com ícone, número grande, chip de delta.
-- Linha 2: **"Requests vs decisions"** (2/3) — mini-KPIs Submitted 1,318 / Decided 1,223 / Backlog change +95,
-  segmented 7D/30D/90D; no quadro 2 são **barras cinza-escuro com só a barra atual em mint**; no quadro 3 vira
-  **duas linhas suaves com faixa preenchida entre elas** e tooltip com marcador na coluna destacada.
-  **"On time decisions"** (1/3) — **gauge semicircular de ticks** (mint→âmbar no fim) com "92%" central e
-  "1,125 of 1,223 within clock"; ao lado, "6 h until the first clock lapses" e "4 cases lapse within 24 h".
-- Linha 3: **"Open pipeline"** (barras verticais mint, última em rosa/vermelho); tabela **"Needs attention"** com
-  abas (Due today / Overdue), colunas paciente/payer/status/clock, status em chip (Pending payer, Submitted,
-  Ready for review), prazo + avatar; **card "Veyra Assistant"**: orbe luminoso, texto "4 Sunvale cases lapse within
-  12 hours. Follow up by 2 PM", avatares, barra de progresso âmbar "First clock lapses in", CTA mint "Review 4 cases"
-  + "Dismiss".
+- Header: "Overview" + "Good morning, Dana. 23 cases need attention today." À direita: "All payers", "Last 30 days",
+  CTA mint "New authorization".
+- **KPI strip sem cards** (5): Active cases 386 · Pending payer 142 (chip âmbar) · Approved 1,127 · Denied 96 (chip
+  vermelho) · Median turnaround 3.4 d.
+- **"Requests vs decisions"** (2/3): Submitted 1,318 / Decided 1,223 / Backlog change +95; segmented 7D/30D/90D;
+  estado 1 = barras cinza-escuro com só a atual em mint; estado 2 = **duas linhas suaves com fita preenchida** e
+  coluna destacada com tooltip.
+- **"On time decisions"** (1/3): **gauge semicircular de ticks** (mint → âmbar) com "92%" e "1,125 of 1,223 within
+  clock"; ao lado "6 h until the first clock lapses", "4 cases lapse within 24 h".
+- **"Open pipeline":** **barras de ticks empilhados** (estilo equalizador) por estágio, mint, sobre trilhos de ticks cinza.
+- **"Needs attention":** abas Due today / Overdue; paciente, payer, status em chip (Pending payer, Submitted, Ready for
+  review), prazo + avatar; "Open queue".
+- **Card "Veyra Assistant":** orbe luminoso, "4 Sunvale cases lapse within 12 hours. Follow up by 2 PM", avatares + ID,
+  barra âmbar "First clock lapses in", CTA mint "Review 4 cases" + "Dismiss".
+
+**Animação:** entrada escalonada (sidebar → header → cards); linhas desenhando; ticks do gauge acendendo;
+barras de ticks subindo.
 
 **Ideia do autor (legenda):** "Sorted by clock, not by date, so the riskiest case is always on top."
 
-**Copiar:** saudação que já diz o que importa; KPIs sem caixa; gráfico com histórico neutro e "agora" destacado;
-gauge com contexto textual ao lado; card de IA com **uma recomendação concreta + CTA + dispensar**; ordenar por risco.
+**Copiar:** saudação com o que importa; KPIs sem caixa; histórico neutro e "agora" destacado; gauge com contexto ao
+lado; card de IA com uma recomendação concreta + CTA + dispensar; ordenar por risco.
 
 ---
 
 ## 8. Série glassmorphism — @code.xr
-Todos com snippet React: `motion.div whileHover={{ y: -5 }} className="glass-card p-6 rounded-2xl"`,
-título `text-sm text-white/60`, valor `text-2xl font-bold text-white`, delta `text-emerald-400` com `ArrowUpRight`
-(lucide-react). Stack declarada: React, CSS, Framer Motion.
+Snippet comum: `motion.div whileHover={{ y: -5 }} className="glass-card p-6 rounded-2xl"`, título
+`text-sm text-white/60`, valor `text-2xl font-bold text-white`, delta `text-emerald-400` com `ArrowUpRight`
+(lucide-react; também `ShoppingBag`, `Users`, `DollarSign`). Stack: React, CSS, Framer Motion.
 
-- **Login V3 — `DeoGCPlzKOs`:** fundo preto `~#05060b` com ondas 3D escuras e faixas de luz ciano. Card de vidro escuro
-  `~#25313d` translúcido com **cantos chanfrados em ciano** (moldura tipo HUD), título "Create **Account**" com a
-  segunda palavra em ciano/azul, campos Full Name / Email / Password + Confirm lado a lado (ícones à esquerda, olho à
-  direita), checkbox de termos, botão largo gradiente ciano `~#4cc3f5`→`#2d8bb6` com seta, divisor, Google / Apple,
-  link "Sign in".
-- **Dashboard V7 + CRM — `DfHrMboTVDZ`:** "Customer Intelligence" sobre foto de sala de estar (móvel de madeira,
-  TV, planta). Rail escuro vertical com ícones e tooltip, painéis âmbar/marrom translúcidos `~rgba(165,129,110,.5)`,
-  card de perfil com avatar azul `~#94a6fa`, mini gráfico de linha, botões em pílula branca, KPIs pequenos ("630",
-  "11.6%"), indicador circular "68%" com ponto verde, pílulas laranja `~#d59353` no topo.
-- **Dashboard V8 — `DfKPFDwz2aA`** (no vídeo aparece "V18"): sidebar glass com marca em serifa, "Leads" em serifa,
-  4 KPI cards escuros, tabela de leads (avatares coloridos, chips, barras). Coluna direita com 3 cards empilhados:
-  **azul sólido-translúcido `~#7488c7` com barras brancas** (3,241), bronze (`$2,450`, botão circular),
-  escuro com área (95,215). CTA azul `~#7098ed`.
+- **Login V3 — `DeoGCPlzKOs`:** fundo preto `~#05060b` com ondas 3D escuras e faixas ciano. Card de vidro escuro
+  `~#25313d` com **cantos superior-esquerdo e inferior-direito chanfrados** marcados por triângulos ciano. "Welcome
+  **Back**" (email, senha com olho, Remember me, Forgot?, botão "Sign in" ciano, Google/Apple, "Sign up") e
+  "Create **Account**" (Full name, email, senha + confirmar lado a lado, termos, "Create Account"). **Transição:**
+  campos somem → card vazio só com o logo (quadrado ciano dividido na diagonal) → anel de luz pulsa ao redor →
+  o card se reajusta à altura do outro formulário e os campos entram.
+- **Dashboard V7 + CRM — `DfHrMboTVDZ`:** sobre foto de sala (madeira, TV, planta). Rail vertical escuro com tooltip,
+  pílulas laranja `~#d59353` no topo. **Home:** 1º KPI em vidro âmbar, demais escuros (`$99,664`, `35`, `45,000`,
+  `$59,900`); **barras verticais como pilares de luz** (gradiente branco→transparente, selecionada em laranja com
+  rótulo), donut multicolor (laranja, azul, amarelo, verde), cards "98 orders", "17 ...". **Customer Intelligence:**
+  perfil com avatar azul `~#94a6fa`, linhas roxa/verde, gauge verde "94%", barras horizontais coloridas, tabela.
+  **Performance & Audit:** KPIs em linha. Páginas entram do desfoque.
+- **Dashboard V8 — `DfKPFDwz2aA`** (no vídeo aparece "V18"): começa só com a foto; os painéis surgem do desfoque.
+  Sidebar glass com marca e **títulos em serifa** ("Good Afternoon, Sarah", "Leads", "Reports", "Calendar"). Coluna
+  direita **fixa entre páginas** com 3 widgets: azul `~#7488c7` com barras brancas (`2,008`→`3,241`), bronze
+  (`$2,078`→`$2,450`), escuro com área (`68,048`→`95,215`) — os números contam ao trocar de página. Leads: 4 KPIs +
+  tabela com avatares coloridos; Reports: barras azul-claras + donut; Calendar: grade com eventos coloridos.
 - **Sidebar V5 — `DfMH6YTTcwx`:** detalhado em `glassmorphism.md`.
 
-**Copiar:** glass só sobre fotografia ou fundo rico; um card de cor sólida para ancorar o olhar; hover com
-elevação de 5px; serifa para títulos dá ar "premium" (V8).
+**Copiar:** glass só sobre fotografia ou fundo rico; um card de cor sólida para ancorar o olhar; hover com elevação
+de 5px; serifa para títulos dá ar "premium"; widgets persistentes entre páginas; transição de formulário pelo logo.

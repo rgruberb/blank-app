@@ -12,11 +12,17 @@ exceto as classes Tailwind citadas no snippet (`glass-card p-6 rounded-2xl`, `te
 2. **Duas famílias:**
    - *Dark tinted* (login, V8): superfície escura translúcida, alto contraste de texto branco.
    - *Warm/clear* (V7, V5, smart home): superfície clara/média translúcida, tinge com a foto.
-3. **Aresta de luz:** borda de 1px mais clara que a superfície em todos os cards; no login vira **moldura chanfrada
-   ciano** nos cantos.
+3. **Aresta de luz:** borda de 1px mais clara que a superfície em todos os cards; no login o card tem **os cantos
+   superior-esquerdo e inferior-direito cortados em diagonal**, cada um marcado por um triângulo ciano.
 4. **Raios grandes:** cards ~16–24px; sidebar V5 ~28–32px; item ativo e botões em pílula completa.
 5. **Um ancoradouro de cor sólida**: card azul na V8, pílulas laranja na V7, botão ciano no login.
 6. **Item ativo** = pílula com fundo branco ~15–20% + borda branca ~30% (V5) ou pílula branca opaca (smart home).
+
+7. **Entrada a partir do desfoque:** V7 e V8 começam com a foto limpa e os painéis aparecem "condensando" do blur;
+   a troca de página repete o efeito. Na V8 a coluna de widgets da direita fica fixa e só os números mudam.
+8. **Sidebar recolhível (V5):** rail de ~56px com ícones, tooltips de vidro ("Dashboard", "Projects") e badges em
+   ponto; um botão circular no topo expande para ~250px (tooltip "Collapse"). O hover é uma pílula com borda clara
+   que desliza entre os itens.
 
 ## Tokens
 ```css
@@ -104,14 +110,20 @@ Brand kit e pontos verde/vermelho/roxo + linha-guia), Reports, Settings, Night m
   border: 1px solid rgba(120, 200, 255, .18);
   border-radius: 18px;
 }
-/* cantos chanfrados ciano (moldura HUD) */
-.auth-card::before {
-  content:""; position:absolute; inset:-1px; border-radius: inherit; pointer-events:none;
-  background:
-    linear-gradient(135deg, var(--cyan) 0 2px, transparent 2px) top left / 48px 48px no-repeat,
-    linear-gradient(-45deg, var(--cyan) 0 2px, transparent 2px) bottom right / 48px 48px no-repeat;
-  opacity: .8;
+/* cantos superior-esquerdo e inferior-direito cortados em diagonal, como no V3 */
+.auth-card {
+  --cut: 44px;
+  clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)),
+                     calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
 }
+/* triângulos ciano nos cantos cortados (o original usa uma peça de vidro azul em cada corte) */
+.auth-card::before, .auth-card::after {
+  content:""; position:absolute; width: 56px; height: 56px; pointer-events:none;
+  background: linear-gradient(135deg, rgba(76,195,245,.55), rgba(45,139,182,.15));
+}
+.auth-card::before { top:0; left:0;     clip-path: polygon(0 0, 100% 0, 0 100%); }
+.auth-card::after  { bottom:0; right:0; clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+/* com clip-path a borda some: desenhe a aresta com um SVG ou um pseudo-elemento interno (complemento) */
 .auth-card h1 span { color: var(--cyan); }                 /* "Create <span>Account</span>" */
 .auth-input { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.10); border-radius: 10px; height: 44px; }
 .auth-input:focus-within { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(76,195,245,.18); }
@@ -121,7 +133,10 @@ Brand kit e pontos verde/vermelho/roxo + linha-guia), Reports, Settings, Night m
   box-shadow: 0 0 24px rgba(76,195,245,.45);               /* glow neon */
 }
 ```
-(O chanfro exato do original não é legível; o `::before` acima é uma aproximação — complemento.)
+**Troca Welcome Back ↔ Create Account (vista nos quadros):** campos somem → card vazio só com o logo (quadrado ciano
+dividido na diagonal) → anel de luz azul pulsa ao redor do logo → o card ajusta a altura → os campos do outro
+formulário entram. Com Framer Motion (complemento): `AnimatePresence mode="wait"` nos formulários + `layout` no card
++ um `motion.div` do logo com `scale`/`opacity` e um anel com `boxShadow` animado.
 
 ## Fundos
 - Foto real desfocada atrás de tudo (interior, paisagem) — preferível.
