@@ -1,4 +1,5 @@
 import pandas as pd
+import pydeck as pdk
 import streamlit as st
 
 import dados
@@ -33,7 +34,9 @@ st.caption(
     f"{len(bairros)} bairro(s)"
 )
 
-aba_lista, aba_novo, aba_busca = st.tabs(["📋 Meus apartamentos", "➕ Adicionar", "🌐 Buscar nos sites"])
+aba_lista, aba_mapa, aba_novo, aba_busca = st.tabs(
+    ["📋 Meus apartamentos", "🗺️ Mapa", "➕ Adicionar", "🌐 Buscar nos sites"]
+)
 
 
 def aplicar_filtros(df: pd.DataFrame) -> pd.Series:
@@ -219,3 +222,67 @@ with aba_busca:
         cols[0].markdown(f"**{b}**")
         for col, (site, url) in zip(cols[1:], links.items()):
             col.link_button(site, url, width="stretch")
+
+
+# ------------------------------------------------------------------ mapa
+with aba_mapa:
+    todos = dados.listar()
+    if not todos.empty:
+        todos["passa"] = aplicar_filtros(todos)
+        ativos = todos[todos["status"] != "Descartado"]
+    else:
+        ativos = todos
+
+    linhas = []
+    for nome, (lat, lon) in dados.COORDS_BAIRROS.items():
+        do_bairro = ativos[ativos["bairro"] == nome] if not ativos.empty else ativos
+        n_salvos = len(do_bairro)
+        n_ok = int(do_bairro["passa"].sum()) if n_salvos else 0
+        mediana = do_bairro["custo_total"].median() if n_salvos else None
+        escolhido = nome in bairros
+        linhas.append({
+            "nome": nome, "lat": lat, "lon": lon,
+            "raio": 170 + 70 * n_salvos,
+            "cor": [214, 69, 65, 120] if escolhido else [140, 140, 140, 60],
+            "dica": (f"<b>{nome}</b>" + ("" if escolhido else " (fora da busca)")
+                     + f"<br/>{n_salvos} salvo(s), {n_ok} dentro dos filtros"
+                     + (f"<br/>Total mediano: {brl(mediana)}/mês" if mediana else "")),
+        })
+    pontos_bairros = pd.DataFrame(linhas)
+    estacoes = pd.DataFrame(
+        [{"nome": n, "lat": la, "lon": lo, "dica": f"🚇 Estação {n}"}
+         for n, (la, lo) in dados.ESTACOES_METRO.items()]
+    )
+
+    mostrar_metro = st.toggle("Mostrar estações de metrô", value=True)
+    camadas = [
+        pdk.Layer("ScatterplotLayer", pontos_bairros, get_position="[lon, lat]",
+                  get_radius="raio", get_fill_color="cor", pickable=True,
+                  stroked=True, get_line_color=[255, 255, 255], line_width_min_pixels=1),
+    ]
+    if mostrar_metro:
+        camadas.append(pdk.Layer("ScatterplotLayer", estacoes, get_position="[lon, lat]",
+                                 get_radius=70, radius_min_pixels=4,
+                                 get_fill_color=[33, 102, 172, 230], pickable=True))
+
+    st.pydeck_chart(pdk.Deck(
+        layers=camadas,
+        initial_view_state=pdk.ViewState(latitude=-22.958, longitude=-43.212, zoom=12.1),
+        tooltip={"html": "{dica}"},
+        map_style="light",
+    ), height=560)
+    st.caption("🔴 bairros da sua busca · ⚪ outros bairros da Zona Sul · 🔵 estações de metrô. "
+               "O tamanho do círculo cresce com o número de apartamentos salvos (sem contar os descartados). "
+               "As posições são aproximadas (centro do bairro).")
+
+    if not ativos.empty:
+        resumo = (ativos.groupby("bairro")
+                  .agg(Salvos=("id", "count"), Dentro_dos_filtros=("passa", "sum"),
+                       Mais_barato=("custo_total", "min"), Mediana=("custo_total", "median"))
+                  .rename(columns={"Dentro_dos_filtros": "Dentro dos filtros",
+                                   "Mais_barato": "Mais barato/mês", "Mediana": "Mediana/mês"})
+                  .sort_values("Mediana/mês"))
+        st.dataframe(resumo, width="stretch", column_config={
+            "Mais barato/mês": st.column_config.NumberColumn(format="R$ %.0f"),
+            "Mediana/mês": st.column_config.NumberColumn(format="R$ %.0f"),
+        })

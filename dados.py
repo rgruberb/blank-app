@@ -30,6 +30,43 @@ BAIRROS_ZONA_SUL = {
     "Urca": "urca",
 }
 
+# Centro aproximado de cada bairro (lat, lon)
+COORDS_BAIRROS = {
+    "Botafogo": (-22.9519, -43.1840),
+    "Catete": (-22.9258, -43.1767),
+    "Copacabana": (-22.9711, -43.1863),
+    "Cosme Velho": (-22.9400, -43.1980),
+    "Flamengo": (-22.9330, -43.1750),
+    "Gávea": (-22.9775, -43.2280),
+    "Glória": (-22.9200, -43.1760),
+    "Humaitá": (-22.9550, -43.2000),
+    "Ipanema": (-22.9838, -43.2046),
+    "Jardim Botânico": (-22.9670, -43.2240),
+    "Lagoa": (-22.9665, -43.2045),
+    "Laranjeiras": (-22.9350, -43.1880),
+    "Leblon": (-22.9847, -43.2240),
+    "Leme": (-22.9630, -43.1690),
+    "São Conrado": (-22.9935, -43.2560),
+    "Urca": (-22.9500, -43.1650),
+}
+
+# Estações de metrô na Zona Sul (posição aproximada)
+ESTACOES_METRO = {
+    "Glória": (-22.9213, -43.1763),
+    "Catete": (-22.9263, -43.1767),
+    "Largo do Machado": (-22.9311, -43.1780),
+    "Flamengo": (-22.9379, -43.1782),
+    "Botafogo": (-22.9510, -43.1838),
+    "Cardeal Arcoverde": (-22.9644, -43.1803),
+    "Siqueira Campos": (-22.9675, -43.1867),
+    "Cantagalo": (-22.9764, -43.1938),
+    "General Osório": (-22.9846, -43.1977),
+    "Nossa Senhora da Paz": (-22.9840, -43.2066),
+    "Jardim de Alah": (-22.9838, -43.2156),
+    "Antero de Quental": (-22.9840, -43.2235),
+    "São Conrado": (-22.9925, -43.2545),
+}
+
 STATUS = ["Novo", "Visitar", "Visitado", "Proposta enviada", "Descartado"]
 
 COLUNAS = {
