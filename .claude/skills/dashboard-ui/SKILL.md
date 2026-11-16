@@ -109,3 +109,10 @@ sidebar recolhível → `DfMH6YTTcwx`; login glass → `DeoGCPlzKOs`.
 - `references/domain-examples.md` — descrição de cada dashboard e o que copiar dele.
 - `references/layout-patterns.md` — estruturas, KPI cards, gráficos, densidade, animações com código.
 - `references/glassmorphism.md` — receita CSS completa da série glass.
+
+## Skills externas (dependências)
+Esta skill pode delegar para: `ext-taste-skill`, `ext-impeccable`. Elas **não** fazem parte da repo; são instaladas por `scripts/install-external-skills.sh`.
+1. Antes de delegar, confira se a pasta existe em `.claude/skills/<nome>/` ou `~/.claude/skills/<nome>/`.
+2. Se faltar, **pergunte ao usuário** antes de instalar e, com o ok, rode `./scripts/install-external-skills.sh` (ou `--global`). Depois da instalação, o Claude Code normalmente já enxerga as skills novas; se alguma não aparecer, leia o `SKILL.md` instalado com Read e siga as instruções dele.
+3. Se o usuário não quiser instalar, siga sem elas usando as references desta skill.
+

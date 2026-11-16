@@ -33,7 +33,8 @@ done
 cat <<'MSG'
 
 React Bits (DavidHDev/react-bits) não é uma skill, é uma biblioteca de componentes.
-Use direto do site reactbits.dev ou via CLI, por exemplo:
-  npx shadcn@latest add https://reactbits.dev/r/<Componente>-TS-TW
+Instale componente por componente (guia: .claude/skills/ui-motion/references/react-bits.md):
+  npx shadcn@latest add @react-bits/<Componente>-TS-TW
+  npx jsrepo@latest add https://reactbits.dev/r/<Componente>-TS-TW
 Playwright CLI também precisa do binário:  npm install -g @playwright/cli
 MSG

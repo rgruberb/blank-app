@@ -91,3 +91,10 @@ São folhas de contato 4×3 com frames antes/depois. **Cada uma custa bastante c
 - `DfgcqeMBPCU`: a legenda é sobre dark patterns, mas o vídeo mostra micro-interações. As versões honestas são **(complemento)**.
 - A série de leis tem 4 partes; a parte 3 não está nas fontes.
 - O "kit" de performance e o plugin "UX Engine" mencionados nos reels não estão incluídos.
+
+## Skills externas (dependências)
+Esta skill pode delegar para: `ext-impeccable`, `ext-playwright-cli`. Elas **não** fazem parte da repo; são instaladas por `scripts/install-external-skills.sh`.
+1. Antes de delegar, confira se a pasta existe em `.claude/skills/<nome>/` ou `~/.claude/skills/<nome>/`.
+2. Se faltar, **pergunte ao usuário** antes de instalar e, com o ok, rode `./scripts/install-external-skills.sh` (ou `--global`). Depois da instalação, o Claude Code normalmente já enxerga as skills novas; se alguma não aparecer, leia o `SKILL.md` instalado com Read e siga as instruções dele.
+3. Se o usuário não quiser instalar, siga sem elas usando as references desta skill.
+

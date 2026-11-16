@@ -1,6 +1,6 @@
 ---
 name: ui-motion
-description: Projeta e implementa micro-interações e motion de UI com valores concretos tirados de referências (reels de motion design) — press/squish de botão (escala 95%), pull-to-refresh com resistência (lista anda 35% do dedo), números rolando, ícones que morfam entre estados, toasts, drag-and-drop e upload, 8 estilos de loader, 8 formas de atualizar uma página, transição card→página (shared element), durações ideais, curvas de easing e springs, e os detalhes "invisíveis" que fazem iPhone/apps premium parecerem caros. Use quando o pedido falar em "animar", "micro-interação", "deixar o app mais fluido/premium/caro", "feedback ao tocar", "spring", "easing", "quanto tempo deve durar a animação", "loader/skeleton/shimmer", "pull to refresh", "toast", "drag and drop", "transição de página", "animação no scroll", "scroll reveal", "parallax", "dar vida aos componentes", "ícone animado", "polish de motion" ou "por que o iPhone parece tão suave".
+description: Projeta e implementa micro-interações e motion de UI com valores concretos tirados de referências (reels de motion design) — press/squish de botão (escala 95%), pull-to-refresh com resistência (lista anda 35% do dedo), números rolando, ícones que morfam entre estados, toasts, drag-and-drop e upload, 8 estilos de loader, 8 formas de atualizar uma página, transição card→página (shared element), durações ideais, curvas de easing e springs, e os detalhes "invisíveis" que fazem iPhone/apps premium parecerem caros. Use quando o pedido falar em "animar", "micro-interação", "deixar o app mais fluido/premium/caro", "feedback ao tocar", "spring", "easing", "quanto tempo deve durar a animação", "loader/skeleton/shimmer", "pull to refresh", "toast", "drag and drop", "transição de página", "animação no scroll", "scroll reveal", "parallax", "dar vida aos componentes", "ícone animado", "polish de motion", "React Bits", "componente animado pronto" ou "por que o iPhone parece tão suave".
 ---
 
 # UI Motion
@@ -64,6 +64,7 @@ Curvas CSS equivalentes (complemento): ease-out `cubic-bezier(0.22, 1, 0.36, 1)`
 - `references/page-transitions-and-timing.md` — durações, easing vs spring, shared element card→página, menus, side menu, large title. Abra para navegação ou dúvidas de "quanto tempo".
 - `references/scroll-and-screen-transitions.md` — **diretriz do usuário**: scroll e transição de telas para dar vida aos componentes, *avaliando onde faz sentido*. Tem tabela onde sim/onde não, checklist de decisão e implementação (CSS `animation-timeline`, View Transitions, ScrollTrigger). Abra sempre que o pedido envolver scroll, reveal, parallax, header que encolhe ou troca de tela.
 - `references/css-recipes.md` — snippets CSS/JS prontos (press, spring `linear()`, pull-to-refresh, stagger, rolling number, View Transitions, FLIP, toast stack, reduced-motion).
+- `references/react-bits.md` — componentes React animados prontos (React Bits) mapeados para cada padrão desta skill, com comando de instalação, dependências e regras (ajustar valores, WebGL ≤ 1 por página). Abra quando o projeto for React/Next.js e o padrão já existir pronto.
 - `references/visual-index.md` — qual imagem mostra o quê.
 
 ## Imagens (`assets/visual-refs/*.jpg`)
@@ -73,3 +74,10 @@ Folhas de contato 4×3 dos reels. **Custam contexto: abra só quando precisar de
 - `ext-transitions-dev` / `ext-transitions-polish` — CSS transitions prontas e polish.
 - `ext-gsap-core`, `ext-gsap-scrolltrigger`, `ext-gsap-react` — timelines, scroll-linked (large title encolhendo, reveals), React.
 - `ext-playwright-cli` — abrir no browser, gravar/capturar e checar estados e `prefers-reduced-motion` (emulação).
+
+## Skills externas (dependências)
+Esta skill pode delegar para: `ext-transitions-dev`, `ext-transitions-polish`, `ext-gsap-core`, `ext-gsap-scrolltrigger`, `ext-gsap-react`, `ext-playwright-cli`. Elas **não** fazem parte da repo; são instaladas por `scripts/install-external-skills.sh`.
+1. Antes de delegar, confira se a pasta existe em `.claude/skills/<nome>/` ou `~/.claude/skills/<nome>/`.
+2. Se faltar, **pergunte ao usuário** antes de instalar e, com o ok, rode `./scripts/install-external-skills.sh` (ou `--global`). Depois da instalação, o Claude Code normalmente já enxerga as skills novas; se alguma não aparecer, leia o `SKILL.md` instalado com Read e siga as instruções dele.
+3. Se o usuário não quiser instalar, siga sem elas usando as references desta skill.
+
