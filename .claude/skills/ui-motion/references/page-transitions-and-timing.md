@@ -37,6 +37,7 @@ Implementação: View Transitions API (`view-transition-name` igual no card e no
 - **Side menu** (DfWjKQPhUbn): página encolhe para **86%** e desliza **150 px**; o menu fica embaixo — "push, don't cover".
 - **Large title** (DfWjKQPhUbn): **34 → 18 px** ligado ao scroll, encolhe para a top bar em vez de sumir.
 - **Dynamic Island** (Dflzxq5Bqfj): alertas crescem da pílula — morph, don't pop.
+- **Troca de tela em dashboard** (Code & Chill, rodada 6): pílula ativa desliza na sidebar e o conteúdo troca com transição curta, sem tela em branco (detalhes em `micro-interactions.md` §13).
 - **Interrupção** (De4B0UxPXIk): toda transição de painel/rota precisa poder reverter no meio (0 ms de espera vs 180 ms).
 
 ## Reduced motion (complemento)

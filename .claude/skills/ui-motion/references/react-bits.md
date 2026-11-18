@@ -1,4 +1,6 @@
-# React Bits: componentes animados prontos
+# React Bits e outras bibliotecas de componentes animados
+
+> Outras bibliotecas (Bencho, BoardUI, Transitions.dev, Beautiful UI, Skiper UI, Animata…), o teste vazio/carregando/erro/texto longo e curadorias de ícones e skills de motion estão no fim do arquivo.
 
 [React Bits](https://reactbits.dev) ([repo](https://github.com/DavidHDev/react-bits)) é uma biblioteca com cerca de 210 componentes React animados, divididos em 5 categorias: TextAnimations, Animations, Backgrounds, Components e Micro. **Não é uma skill.** Você instala componente por componente, e o código-fonte fica dentro do seu projeto, onde dá para editar.
 
@@ -63,3 +65,26 @@ Lista completa por categoria: os nomes ficam nas pastas `src/content/<Categoria>
    - medir o FPS com `ext-playwright-cli` ou com o DevTools.
 5. **Não misture libs de animação à toa.** Se o projeto já usa `motion`, prefira componentes em `motion`; se usa GSAP, use os que dependem de `gsap` e siga `ext-gsap-react`.
 6. **Prefira o componente da React Bits a escrever do zero** quando ele já faz o padrão. Escreva o seu (`css-recipes.md`) quando o projeto não for React ou quando precisar de controle fino dos valores.
+
+## Outras bibliotecas de componentes e curadorias (rodadas 1 e 5)
+Nomes e URLs vieram de posts de terceiros e **não foram instalados nem auditados** (licença, dependências, manutenção). Confira antes de adotar.
+
+**Por que usar uma biblioteca** (`DfkBGDyDgqS`, @griffinwooldridge1): "pare de fazer a IA desenhar cada UI do zero; dê a ela bons componentes". O resultado fica consistente e polido. Escolha pelo tipo de produto:
+
+| Biblioteca | Para quê (segundo o post) | O que os slides mostram |
+|---|---|---|
+| Bencho (bencho.dev) | Micro-interações lúdicas | Timer circular 25:00 com ticks e +5/play/reset, card 72 BPM, seletor "Playback speed" 0.5×–2× em pílulas |
+| BoardUI (boardui.com) | Dashboards densos e ferramentas de agente | Donut de anéis, input de agente com abas, barras "Earned so far" com Weekly/Monthly/Yearly, seletor de intervalo com presets |
+| Transitions.dev (transitions.dev) | Transições suaves entre estados | Chat estilo iMessage, "Token spend", timer "Focus time", agenda "Thursday". **É a mesma base das skills `ext-transitions-dev` / `ext-transitions-polish`**: use-as primeiro |
+| Beautiful UI (beautifului.dev) | Chat de agente, aprovações e workflows | Insights com variação colorida, tabela com tags, painel "Proposed menu cleanup" com diff vermelho/verde e "Apply 3 changes" |
+
+**Teste antes de adotar** (de um comentário no post, a regra mais útil): a biblioteca cobre os estados **vazio, carregando, erro e texto longo**? É aí que UI feita por IA quebra. **(complemento)** Monte uma página de teste com os 4 estados de cada componente escolhido (string de 80+ caracteres, lista vazia, skeleton, erro com retry) e confira também `prefers-reduced-motion`, foco por Tab e alvos ≥ 44 px (`ux-patterns`).
+
+**Curadorias de UI animada** (@noahelhadedy, rodada 5; todas React, copiar e colar):
+- `De_J0aOl9SJ`, 7 bibliotecas: **Skiper UI** (componentes incomuns para shadcn), **Kokonut UI** (cards e widgets polidos), **Cult UI** (blocos shadcn "com um twist", MIT), **SmoothUI** (micro-interações), **Animata** (150+ animações, MIT), **Eldora UI** (efeitos de landing), **Hover.dev** (botões e seções chamativos).
+- `Dfo__tSjk9k`, 7 componentes de motion grátis (designbookmark.com/motion): pull cord, goo menu, jelly slider, swipe deck, glass lens, parallax ticket e **hold to publish** (segurar para confirmar evita clique acidental em ação irreversível).
+- `Df1eAHODjT9`, 8 sets de ícones: Neat Icons (do próprio autor), Doo Icons, Majesticons (line/solid/duotone), Gravity UI, Pictogrammers (Material Design Icons), Humbleicons, Bootstrap Icons, Vectopus. Critérios do post: **mesma grade (24×24)**, estilos disponíveis, licença, arquivo Figma e volume. Para ícone animado, morph de `micro-interactions.md` §7.
+
+**Skills de motion para agentes** (`DfKaOBqjUr4`, @craftwork.design, "Design skills Part 2"): Craftwork (fontes, ícones e referências reais em vez de defaults; antes/depois de landing), Design Engineering de Emil Kowalski (easing, durações, springs, auditoria de animações), GSAP ScrollTrigger (já coberto por `ext-gsap-scrolltrigger`), Motion Design da LottieFiles (tabelas de duração e easing), Shader Dev, Three.js Scroll Worlds, Frontend Slides, Refactoring UI e Web Interface Guidelines da Vercel. Comandos e repositórios não verificados.
+
+Regras para todas **(complemento)**: as mesmas de React Bits acima (cada componente cumpre uma função, ajuste aos tokens, reduced-motion, 1 WebGL por página, não misture libs de animação) e a regra de **um momento animado por página** (`scroll-and-screen-transitions.md` §5). Visual: `DfkBGDyDgqS_1.jpg` (mosaico das 4) e `DfkBGDyDgqS_3.jpg` (Transitions.dev).

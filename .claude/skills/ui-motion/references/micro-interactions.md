@@ -96,6 +96,7 @@ Os reels de @motion_ui_interface mostram cada interação a 1× e a ¼ de veloci
 - **Retry inline**: se morre em 90%, retoma de onde parou ("Resuming from 90%"), arquivo continua carregado.
 - **Preview como prova**: thumbnail + tipo + tamanho, não só o nome.
 - **Fila independente**: cada arquivo tem seu progresso e seu retry; uma falha não bloqueia os outros 9.
+- **Tooltip de arraste com o resultado** (`Dfr4RMBlaPH`, @felvrabr, rodada 7): esticar uma reserva mostra "Drag to extend · 4 nights · 29 Dec → 2 Jan · $4,280" em tempo real. Regra de UX em `ux-patterns` (`components-checklists.md` §8). **(complemento)**: o tooltip segue o ponteiro 1:1 sem easing, o número troca sem animar a cada passo (só no drop use o número rolando) e a barra faz snap à célula com spring curto.
 
 ## 11. Tab bar líquida "Meniscus" — DbfG6fuPE9y (@_code_and_chill_)
 "A aba ativa não desliza — a barra derrete em volta dela"; cada encaixe é resolvido por tangência para o líquido nunca vincar (HTML + CSS + JS). Nos frames:
@@ -106,3 +107,8 @@ Use como referência de indicador de aba com morph/metaball. (Sem valores numér
 
 ## 12. Dashboard "Instrumental" com detalhe em spring — De1j52PFdpL (@moxen.studio)
 Dashboard escuro de API ("Monitorea sin perder detalle"): medidores de linha, agulha (gauge), anel, ampulheta, histograma, com números ao vivo (1.112 → 1.195 req/s). Ao passar o mouse num gráfico aparece um tooltip; ao selecionar o painel "Peticiones por segundo" ele **cresce com spring** até ocupar um card maior, as barras ficam laranja, aparece um chip/tooltip laranja e o resto do dashboard **escurece**; depois volta ao grid. Exemplo de "foco" em data-viz: crescer + escurecer o resto (mesmo princípio do long press). (Sem valores; áudio irrelevante.)
+
+## 13. Pílula de navegação que desliza — Code & Chill (@_code_and_chill_, Facebook, rodada 6)
+Reels de ~5 s em loop (dashboards "SaaS revenue analytics" e "Private credit loan management"): a **pílula do item ativo desliza** na sidebar até o item clicado e a tela troca com uma **transição curta**; 4 telas em ~5 s (Funnels → Campaigns → Cohorts; Property → Portfolio → Risk). O painel de código mostra `slidePill(pill, target)` com `gsap.to(…, { ease: 'power3.out' })` (leitura aproximada; duração não legível). Os KPIs fazem contagem entre frames.
+- Princípio: o indicador **viaja** de um item ao outro (mesma regra do "morph, não swap"); não some num e reaparece no outro.
+- **(complemento)** Valores: 250–350 ms com ease-out forte (`power3.out` ≈ `cubic-bezier(0.22, 1, 0.36, 1)`), interrompível (clique no meio parte da posição atual), só `transform` (translate/scale da pílula, medidos com FLIP). Troca de conteúdo ≤ 200–300 ms com fade + deslocamento curto; em `prefers-reduced-motion` a pílula pula direto. Pronto: `ext-transitions-dev` ("sliding tabs", "segmented control") ou `PillNav` em `react-bits.md`. Indicador líquido alternativo: §11.

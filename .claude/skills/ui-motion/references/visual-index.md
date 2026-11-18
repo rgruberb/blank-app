@@ -24,8 +24,11 @@ Cada `.jpg` é uma folha de contato 4×3 com frames do reel em ordem (esquerda�
 | DYpD5C7zwx6_1.jpg | @rish_designs (collab @ultimateuiux) | https://www.instagram.com/reel/DYpD5C7zwx6/ (13 s) | Print único, pequeno: seção escura "THE HERITAGE" (THE em outline, HERITAGE sólido), parágrafo curto e Porsche 3D de perfil, navbar mínima com 1 CTA | Scroll-storytelling: 1 palavra-título + 1 ângulo do produto por seção |
 | DYpD5C7zwx6_2.jpg | @rish_designs (collab @ultimateuiux) | https://www.instagram.com/reel/DYpD5C7zwx6/ (18 s) | Print único, pequeno: seção clara com asa traseira em close e "PERFECTION" encoberto pelo carro (texto atrás do objeto 3D) | Troca escuro/claro entre seções e oclusão de texto |
 | DXZUwW2jca__1.jpg | @roman.knox (repost @ultimateuiux) | https://www.instagram.com/p/DXZUwW2jca_/?img_index=2 | Print único: slide "1. Front-end design" do carrossel "Claude skills for designers": número grande, título em gradiente, 1 frase, caixa de comando, "Page 2/7" e "swipe" | Montar template de carrossel educativo |
+| Dff1uulGoxb_2.jpg | @mobileeditingclub (com @adrianabubori) | https://www.instagram.com/p/Dff1uulGoxb/?img_index=3 | Print único, pequeno: slide "/micro-interactions" — instrução no topo, mockup de site de cosméticos (lábios, "your own flush."), etiqueta tipo cursor "Interaction", título-comando grande e barra de progresso | Layout de carrossel educativo de motion por tipo de efeito |
+| DfkBGDyDgqS_1.jpg | @griffinwooldridge1 | https://www.instagram.com/p/DfkBGDyDgqS/?img_index=1 | Print único: capa "Top 4 UI Libraries" com mosaico dark de componentes (antes/depois com slider, clima, anéis, input de IA, agenda, playback speed, token spend, focus time, BPM) | Ver a estética das 4 bibliotecas antes de escolher uma |
+| DfkBGDyDgqS_3.jpg | @griffinwooldridge1 | https://www.instagram.com/p/DfkBGDyDgqS/?img_index=4 | Print único: slide Transitions.dev — chat Maya Chen, "Token spend 1.7M", "Focus time 25 min" magenta, agenda "Thursday" | Referência visual dos componentes do transitions.dev (base de `ext-transitions-dev`) |
 
-## Perfis avaliados (rodadas 3A, 3B e 3C, 18/11/2026)
+## Perfis avaliados (rodadas 1, 3A–3C, 5, 6 e 7, 18/11/2026)
 Notas 1–5 como fonte de **motion**. Nota com "*" é nossa (a rodada não deu nota). Inativo = sem post há mais de ~1 ano, 0 posts ou perfil inexistente.
 
 | Handle | Ativo? | Tipo | Nota | O que aproveitar nesta skill |
@@ -39,6 +42,13 @@ Notas 1–5 como fonte de **motion**. Nota com "*" é nossa (a rodada não deu n
 | @dailywebdesign | sim | Curadoria diária com reposts | 3 | Catálogo de 8 loaders (`loaders-and-refresh.md`) |
 | @uidesignpatterns | sim, raro | Curadoria de inspiração sem texto | 2 | Colagem de miniaturas que se reorganiza (motion como marca de portfólio) |
 | @ui.pixel | sim | Reposts de fluxos de app | 2 | Pouco motion; o que serve (fluxo de pedido) está em `ux-patterns` |
+| @noahelhadedy | sim | Curadoria de recursos com moldura fixa e gravação de tela; divulga o próprio produto (Neat Icons, Design Bookmark) | 4* | Regra "1 momento animado por página/tela" (`scroll-and-screen-transitions.md` §5); 7 libs de UI animada, 7 componentes de motion, 8 sets de ícones (`react-bits.md`); formato de carrossel |
+| @mobileeditingclub | sim | Carrosséis de workflow com IA (selo "AI content"); valor completo atrás de "comente" | 3* | 5 padrões de motion web e o fluxo "um efeito por vez, desktop e mobile" (`scroll-and-screen-transitions.md` §6); etiquetas de cursor no carrossel |
+| @griffinwooldridge1 | sim | Curadoria de bibliotecas de componentes | 3* | Bencho, BoardUI, Transitions.dev, Beautiful UI e o teste vazio/carregando/erro/texto longo (`react-bits.md`) |
+| @craftwork.design | sim | Marketplace de design; séries "Design skills" com promo no meio | 3* | Lista de skills de motion para agentes (Emil Kowalski, LottieFiles, GSAP) e o antes/depois "sem referências × com referências" |
+| @_code_and_chill_ | sim (82,1 mil no Instagram; também no Facebook) | Reels de 5 s de dashboards com o código da animação | 4* | Pílula de navegação que desliza (`micro-interactions.md` §13), cursor como demonstração (`motion-for-social-video.md` §6); tab bar "Meniscus" (§11) |
+| @felvrabr | sim | Estúdio de dashboards sobre foto aérea | 4 | Tooltip de arraste em tempo real (`micro-interactions.md` §10); regra em `ux-patterns` |
+| @code_and_chill | não (0 posts; não é o @_code_and_chill_) | — | 1 | Nada |
 | @gifux | não (0 posts) | — | 1 | Nada (o nome sugere GIFs de UI, mas a conta está vazia) |
 | @nick_buturishvili | não (último post 07/2024) | — | 1 | Nada novo |
 | @ranjithalingal | não (0 posts, conta pessoal) | — | 1 | Nada |
@@ -50,4 +60,4 @@ Notas 1–5 como fonte de **motion**. Nota com "*" é nossa (a rodada não deu n
 | @spruzzo.ui | não (perfil inexistente) | — | n/a | Nada |
 | @twohabitsdesign | não (último post 11/2022) | — | n/a | Nada novo |
 
-Prints de @theglidestudio e @motion_ui_interface desta rodada não estavam disponíveis em arquivo; os números estão transcritos nas references.
+Prints de @theglidestudio e @motion_ui_interface das rodadas 3A–3C não estavam disponíveis em arquivo; os números estão transcritos nas references. Da rodada 1 vieram `Dff1uulGoxb_2`, `DfkBGDyDgqS_1` e `DfkBGDyDgqS_3`; os prints das rodadas 5–7 não estavam em JPG.
