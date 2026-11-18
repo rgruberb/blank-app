@@ -226,7 +226,7 @@ direita do mapa (ativo em pílula do acento), e uma faixa inferior com 2 cards (
 Tipografia sans geométrica, números grandes em peso leve com unidade pequena ao lado ("0.77 index", "27 %", "47.4 MWh").
 Cards `~#182313`–`#2b3827` (Verdan), cantos ~16–20px, borda clara 1px.
 
-### 9a. Verdan Farm OS — `Dfui4V5BMbz` (agro; referência pedida para o protótipo gamificado)
+### 9a. Verdan Farm OS — `Dfui4V5BMbz` (agro; principal referência de progresso e gamificação)
 **Tema:** fundo de apresentação sálvia `~#7b8e72`; UI verde-oliva escuro `~#182313`/`#212d17`; acento **lima `~#c6e17a`–`#cee980`**;
 âmbar/laranja só para alerta ("Dry", "Low moisture").
 - **Mapa:** talhões com rótulo-pílula ("Field 01", "Field 02", "HQ"); o Field 03 é um **polígono preenchido em âmbar**

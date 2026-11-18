@@ -115,7 +115,7 @@ cada quadro traz a UI em cima e um snippet de código embaixo; nos de @felvrabr 
 Atalhos: dashboard escuro completo e bem hierarquizado → `DfV39ohhwAC`; claro minimalista com KPI invertido e
 troca de tema → `De12lc1vUmr`; home pessoal + kanban + settings → `Deoi1WhP83h`; funil/coorte → `DffBnb2vlUn`;
 fintech pessoal → `DfkNvnePItL`; IoT/mídia → `DfrqAX9v59S`; glass sobre foto → `DfKPFDwz2aA` / `DfHrMboTVDZ`;
-sidebar recolhível → `DfMH6YTTcwx`; login glass → `DeoGCPlzKOs`; **protótipo gamificado / mapa operacional com
+sidebar recolhível → `DfMH6YTTcwx`; login glass → `DeoGCPlzKOs`; **gamificação / mapa operacional com
 ação → estado → `Dfui4V5BMbz`** (variações `DfpCOjIB1Rb` solar, `Dfr9S5yhlvX` reservas com Gantt e meta de ocupação);
 campanhas de mídia → `DfXoXVFPBfd`; e-commerce → `Dfct0mNvg3f`; CRM de serviços quente → `DfeT74YvQaD`;
 glass claro sobre foto → `Dfj_FGsTAVB`.
