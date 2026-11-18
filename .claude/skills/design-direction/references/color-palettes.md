@@ -61,6 +61,58 @@ marca. Detalhes, tipografia e antes/depois de paleta em `branding-identity.md`.
   DfzgxEKlx8z: coral+laranja+lilás → azul único). "Cinco cores brigando parece confuso; duas ou três parecem
   confiantes" (@gg.designhub).
 
+## Proporção 60/30/10 (@gg.designhub, `De_FtT3k-tT`, rodada 1)
+
+Regra de sistema do carrossel "6 Design Cheat Codes" (print `De_FtT3k-tT_1.jpg`):
+- **60% dominante**: canvas neutro (branco, dark slate, cinza suave);
+- **30% secundária**: cards, superfícies, subtítulos, molduras;
+- **10% acento**: CTAs, estados interativos, destaques de dado.
+
+Takeaway do post: "se o design parece poluído, o acento de 10% está cobrindo 30% da tela". A proporção é de **área**,
+não de opacidade (dúvida respondida nos comentários).
+
+**Como casa com o 2+1:** base 1 ≈ 60%, base 2 ≈ 30%, acento ≈ 10%. É o mesmo modelo com número. A estimativa
+anterior desta skill (acento em ~5–10% da área, complemento) fica dentro dos 10%. **Divergência leve:** nos exemplos de
+@niki.aroca/@diego.a.does o acento ocupa bem menos que 10% (só o botão); trate 10% como **teto**, não como meta.
+
+## Paleta como rampa de 6 tons (@uiuxaadi, `DfEmKLLFEDi` e `DfUnwyQGCTA`, rodada 1)
+
+Carrosséis com o mesmo template: 6 cápsulas empilhadas, da mais escura à mais clara, hex dentro de cada uma, fundo
+escuro com brilho lateral no tom da paleta (prints `DfEmKLLFEDi_1.jpg`, `DfUnwyQGCTA_1.jpg`). A rampa já entrega
+**fundo → superfície → borda → texto secundário → texto/superfície clara** e, às vezes, **um acento no fim**.
+
+| Paleta (nome inferido pela cor, os slides não nomeiam) | Rampa (escuro → claro) | Último tom |
+|---|---|---|
+| Mocha Earth | `#1A120E` `#3A2418` `#6B4A2E` `#A88462` `#D5C4AE` | `#4A4A46` (neutro) |
+| Purple Haze | `#0E0B1D` `#2A1E4D` `#5A3B8C` `#8B7CC7` `#C9C2E3` | `#3A3A52` (neutro) |
+| Forest Glow | `#0F1F17` `#1E3A2E` `#3E5A3F` `#6B7F67` `#C7CBB8` | `#3D4337` (neutro) |
+| Arctic Blue | `#0B132B` `#1C2541` `#3A506B` `#5BC0DE` `#F4D6B0` | **`#D97706` (acento laranja)** |
+| Neon Pop | `#121212` `#1F2937` `#334155` `#64748B` `#F1F5F9` | **`#EC4899` (acento rosa)** |
+| Ocean Teal | `#0A0F14` `#0F3D3E` `#2E6F73` `#7FB3B8` `#EADCC8` | **`#C6601F` (acento laranja queimado)** |
+| Rose Blush | `#1A0F2E` `#3B1B4F` `#7A2E6F` `#D6598F` `#F4D7D4` | **`#FF6B6B` (acento coral)** |
+| Sunset Fusion | `#1A1A1F` `#2D2B55` `#6A5ACD` `#A678B9` `#F0D9B5` | **`#F4A62A` (acento âmbar)** |
+| Olive Luxe | `#0B0F0D` `#1F2A1F` `#3E5A3F` `#8CA98C` `#D9C7A3` | `#B08D57` (dourado) |
+| Monochrome | `#0B0B0B` `#1A1A1A` `#333333` `#6B6B6B` `#D9D9D9` `#FFFFFF` | — |
+| Violet | `#0B0720` `#25134D` `#6A2FC8` `#9D71E8` `#D1B8FF` `#F2E9FF` | — |
+| Aqua | `#05161A` `#072E33` `#0C7075` `#0F969C` `#6DA5C0` `#294D61` | — |
+| Forest | `#051F20` `#0B2B26` `#163832` `#235347` `#8EB69B` `#DAF1DE` | — |
+| Slate | `#06141B` `#11212D` `#253745` `#4A5C6A` `#9BA8AB` `#CCD0CF` | — |
+| Serenity (única clara; ordem invertida) | `#F7CBCA` `#DDD3D3` `#F1F7F7` `#D5E5E5` `#BDD7D8` `#5D6B6B` | — |
+
+**Hex errados ou incompletos (não copie sem conferir no conta-gotas):**
+- **Ruby** (`DfUnwyQGCTA`, slide 1): o 3º rótulo diz `#243A66` (azul-marinho), mas o swatch é **magenta**. Os outros:
+  `#800021` `#881144` `#C24366` `#FF69B4` `#FFE4D8`. Um comentário do próprio post aponta o erro.
+- A legenda de `DfUnwyQGCTA` promete 8 paletas e o carrossel tem 7 (**"Plum" não existe**).
+- Os slides não trazem nome; a correspondência nome ↔ slide de `DfEmKLLFEDi` foi inferida pela cor.
+- Nenhum dos dois posts mostra contraste WCAG nem estados (erro/sucesso). Um comentário lembra que, em produto, o que
+  decide a paleta é o contraste dos neutros e o comportamento nos estados.
+
+**Como usar com o 2+1 (complemento):** a rampa é a **escala tonal das bases** (tokens `--bg`, `--surface`, `--border`,
+`--text-2`, `--text-1`), não 6 cores de marca. Se a rampa traz acento no fim (Arctic Blue, Neon Pop, Ocean Teal, Rose
+Blush, Sunset Fusion), ele é o "+1". Rampas monocromáticas (Violet, Aqua, Forest, Slate, Monochrome) **precisam de um
+acento de fora** com matiz oposto, conforme a regra 2 da skill. Padrão que se repete: base fria (azul/teal/violeta) +
+acento quente (laranja/âmbar/coral), o mesmo do catálogo acima.
+
 ## Como aplicar no código (complemento)
 
 - Defina tokens: `--base-1`, `--base-2`, `--accent` (+ derivados de texto/borda/hover). Não crie um quarto token de marca.

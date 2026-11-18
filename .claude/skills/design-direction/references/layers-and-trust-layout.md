@@ -50,7 +50,7 @@ Fechamento: a versão segura sozinha com "Cared for gets believed."; logo glide 
 Regras práticas:
 1. Um CTA primário por tela/seção; secundário vira link ou some.
 2. Uma borda de alinhamento esquerda por coluna; nada "flutuando".
-3. Espaçamento em escala consistente (complemento: múltiplos de 4/8px; seções com 2–3x o espaço interno dos cards).
+3. Espaçamento em escala consistente: múltiplos de 8 px (8, 16, 24, 32, 48, 64; 4 px só em micro-elementos), regra confirmada por @gg.designhub (`De_FtT3k-tT`, rodada 1). Seções com 2–3x o espaço interno dos cards (complemento). Grid de 8 pt, escala tipográfica e medida de linha (45–75 caracteres) em detalhe: skill `ux-patterns`.
 4. Remova widgets que competem com o conteúdo acima da dobra (chat, banners) ou afaste-os.
 5. Headline curto e sem gritar; confiança vem da calma, não do tamanho.
 
@@ -66,3 +66,30 @@ Cinco tipos de movimento sugeridos para pedir ao Claude:
 Processo: entregue ao Claude **seus visuais, cores da marca e uma descrição clara do movimento**; **construa um efeito por vez**; revise **em desktop e mobile**.
 
 (complemento) Respeite `prefers-reduced-motion`; anime `transform`/`opacity`. Para implementação use as skills `ui-motion` e `ext-gsap-*` (ScrollTrigger para scroll reveal).
+
+Versão em carrossel do mesmo conteúdo (rodada 1): `Dff1uulGoxb` (@mobileeditingclub com @adrianabubori). Acrescenta
+só a forma: um slide por efeito com título-comando ("/headline-reveal", "/scroll-reveal"), o prompt escrito acima do
+mockup do navegador e fundos alternados creme `~#F4EEE6` / café `~#2E1F1C`. Valores de duração/easing ficam em `ui-motion`.
+
+## 4. Sombra tingida (camada de profundidade) — @gg.designhub, `De_FtT3k-tT` (rodada 1)
+
+Print `De_FtT3k-tT_3.jpg` ("Kill Pure Black Shadows"):
+- **Erro de iniciante:** `rgba(0,0,0,.25)`: fica "sujo e artificial".
+- **Regra:** pegue o **matiz do fundo/card**, baixe o brilho e use **opacidade baixa** (ex.: navy profundo para cards azuis).
+- **Fórmula:** **blur = 2× o Y-offset**. Exemplo do post: Y 8 px · blur 16 px · opacidade 8%.
+
+```css
+/* complemento: tokens a partir da regra; troque o HSL pelo matiz do seu fundo */
+:root {
+  --shadow-hue: 222 60% 18%;                                   /* navy escuro do tema azul */
+  --shadow-1: 0 4px 8px  hsl(var(--shadow-hue) / .08);         /* Y 4 · blur 8 */
+  --shadow-2: 0 8px 16px hsl(var(--shadow-hue) / .08);         /* Y 8 · blur 16 (o exemplo do post) */
+  --shadow-3: 0 16px 32px hsl(var(--shadow-hue) / .10);        /* elevação alta */
+}
+```
+
+Como encaixa nas camadas: a sombra tingida é a versão "clara" da camada 2 (profundidade). Em tema escuro, as referências
+desta skill usam luz/glow atrás de vidro em vez de sombra (§1); a sombra quase some sobre preto. **Divergência:** a
+receita glass da `dashboard-ui` usa `box-shadow: 0 8px 32px rgba(0,0,0,.35)` (preto, blur 4× o Y). Ela é para vidro
+escuro sobre foto, onde a sombra precisa separar o painel da imagem; a regra da @gg.designhub vale para superfícies
+claras e chapadas. Não misture as duas na mesma tela.

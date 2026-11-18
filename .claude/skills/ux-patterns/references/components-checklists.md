@@ -81,6 +81,8 @@ O áudio e os frames deste reel mostram "More smooth details, in slow-mo (part 6
 - **File drop**: o arquivo sobe a **110%**, a zona brilha e ele pousa a **55%**.
 - **Payment**: "Pay" vira check "Paid" e solta confetti de **18 peças, com pico em 460ms**, caindo com gravidade.
 
+**Tooltip de arraste com o resultado antes de soltar** (`Dfr4RMBlaPH`, @felvrabr, rodada 7, grade de reservas "Maren"): ao esticar uma reserva no calendário tipo Gantt aparece **"Drag to extend · 4 nights · 29 Dec → 2 Jan · $4,280"**. Barras com cor por estado (terracota = Booked, teal = New). Regra: durante qualquer arraste que muda valor (reserva, intervalo de datas, slider de preço), mostre em tempo real **o que vai acontecer** (quantidade, intervalo, total), não só a posição. **(complemento)**: o tooltip segue o ponteiro sem atraso (Doherty), usa dígitos tabulares, some no drop e o valor final aparece no card; com teclado, a mesma informação vai num `aria-live`. Motion do arraste em `ui-motion` (`micro-interactions.md` §10).
+
 ## 9. Tela de decisão: "desenhe para o momento" (`DXeeUP7FKGs`, @rish_designs via @ultimateuiux)
 App de trading "Markets" (lista de ativos + detalhe com candles). A tese da legenda, resumida: a tela não foi feita para *parecer* app de trading, e sim para o instante em que a pessoa decide comprar, vender ou esperar. Bom UX é tirar atrito entre intenção, decisão e ação, não somar features.
 1. **Responda na hora o que importa agora**: o que está se mexendo ("Today's Movers"), o preço e a variação. Nada de mostrar tudo.

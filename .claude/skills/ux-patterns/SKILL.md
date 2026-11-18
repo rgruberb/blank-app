@@ -1,11 +1,11 @@
 ---
 name: ux-patterns
-description: Padrões e checklists de UX com números concretos para revisar e corrigir interfaces: 18 leis de UX lado a lado (Fitts, Hick, Doherty, Proximity, Von Restorff, Goal gradient e outras), alvos de toque (44pt/48dp, web 24px), escala tipográfica 16×1,2^n com line-height e tracking, contraste, dark mode, botão primário, settings, paginação, chat, ⌘K, toolbar, tela de decisão, fluxo de pedido, dark patterns, "AI slop" e 31 itens de performance percebida. Use quando o usuário pedir "revisar UX", "auditar a tela", "melhorar botão", "botão parece barato", "tela de settings", "página de configurações", "paginação", "infinite scroll", "tela de chat", "command palette", "⌘K", "toolbar lotada", "dark pattern", "app parece feito por IA", "dashboard genérico", "app lento", "skeleton", "performance percebida", "alvo de toque", "touch target", "tamanho de fonte", "escala tipográfica", "line-height", "contraste", "dark mode", "tela de compra/decisão" ou "barra de progresso do pedido".
+description: Padrões e checklists de UX com números concretos para revisar e corrigir interfaces: 18 leis de UX (Fitts, Hick, Doherty, Proximity, Von Restorff, Goal gradient…), alvos de toque (44pt/48dp, web 24px), escala tipográfica (16×1,2^n ou Major Third 1,25) com line-height, tracking e medida, grade de espaçamento de 8px, contraste, dark mode, botão primário, settings, paginação, chat, ⌘K, toolbar, tela de decisão, fluxo de pedido, dark patterns, "AI slop" e 31 itens de performance percebida. Use quando o usuário pedir "revisar UX", "auditar a tela", "botão parece barato", "tela de settings", "paginação", "infinite scroll", "chat", "command palette", "⌘K", "toolbar lotada", "dark pattern", "app parece feito por IA", "app lento", "skeleton", "performance percebida", "alvo de toque", "touch target", "tamanho de fonte", "escala tipográfica", "Major Third", "line-height", "grid de 8", "espaçamento", "contraste", "dark mode", "tela de compra/decisão" ou "barra de progresso do pedido".
 ---
 
 # UX Patterns
 
-Regras de UX que dá para testar numa tela real, tiradas de 14 reels (@motion_ui_interface, @designmotionhq e @gustagoat.ai) e das rodadas 3A–3C de perfis (@designmotionhq, @motion_ui_interface, @theglidestudio, @rish_designs, @ui.pixel, @dailywebdesign). Os números são das demonstrações dos reels. Use-os como alvo padrão, não como lei física.
+Regras de UX que dá para testar numa tela real, tiradas de 14 reels (@motion_ui_interface, @designmotionhq e @gustagoat.ai), das rodadas 3A–3C de perfis (@designmotionhq, @motion_ui_interface, @theglidestudio, @rish_designs, @ui.pixel, @dailywebdesign) e das rodadas 1, 2 e 7 (@gg.designhub, @designmotionhq, @felvrabr, @shohan.designs). Os números são das demonstrações dos reels. Use-os como alvo padrão, não como lei física.
 
 ## Quando usar
 - Revisar ou criar um componente: botão, settings, lista paginada, chat, ⌘K, toolbar, dashboard.
@@ -38,7 +38,9 @@ Regras de UX que dá para testar numa tela real, tiradas de 14 reels (@motion_ui
 
 **Alvos e tipografia** (`references/typography-and-touch.md`)
 - Toque: **44pt** iOS, **48dp** Android; web piso **24px**, meta **44**. Cresça por padding (**20 + 12 + 12 = 44**), **~8px** entre alvos pequenos.
-- Fonte: **uma** escala, `16 × 1,2^n` (16, 19, 23, 28, 33, 40, 48). Line-height **1,5 / 1,2 / 1,1**; tracking **−0,02em** em títulos, **+0,06em** em caps; linha de **45–75** caracteres (`60ch`).
+- Fonte: **uma** escala por projeto: `16 × 1,2^n` (16, 19, 23, 28, 33, 40, 48) para produto denso **ou** Major Third `16 × 1,25^n` (12,8, 16, 20, 25, 31, 39, 49) para site/editorial (a divisão por tipo de produto é complemento). Line-height **1,5** no corpo caindo até **1,1** nos títulos grandes; tracking **−0,02em** em títulos, **+0,05–0,06em** em caps; linha de **45–75** caracteres (`50–60ch`).
+- Espaçamento: grade de **8** (8, 16, 24, 32, 48, 64), **4** só para micro; nada de 13 ou 27px.
+- Arraste que muda valor mostra o resultado antes de soltar ("Drag to extend · 4 nights", `components-checklists.md` §8).
 - Contraste: texto e placeholder **4,5:1**; texto grande (24px ou 19px bold), ícones e bordas **3:1**; scrim em texto sobre foto.
 - Dark mode: sem `#000` (ex.: `#0C1424`), texto a **87%**, accent clareado, elevação por luminosidade.
 
@@ -82,7 +84,7 @@ Regras de UX que dá para testar numa tela real, tiradas de 14 reels (@motion_ui
 |---|---|
 | `references/ux-laws.md` | Precisar da definição, falha e correção de qualquer uma das 18 leis, ou citar o número da demonstração |
 | `references/components-checklists.md` | For mexer em botão, settings, paginação, chat, ⌘K, toolbar, micro-interações (sheet, tooltip, toast, file drop, pagamento), tela de decisão (comprar/vender), fluxo de pedido ou home com estado vazio |
-| `references/typography-and-touch.md` | Precisar de alvo de toque, escala e tamanhos de fonte, line-height, tracking, medida de linha, contraste mínimo ou dark mode |
+| `references/typography-and-touch.md` | Precisar de alvo de toque, escala e tamanhos de fonte (1,2 vs 1,25), line-height, tracking, medida de linha, grade de espaçamento de 8, números em matriz de pontos, contraste mínimo ou dark mode |
 | `references/dark-patterns.md` | Houver fluxo de assinatura, preço, ads ou popups, ou o app "parecer feito por IA" (dashboard ou fonte) |
 | `references/perceived-performance.md` | O app parecer lento, ou ao revisar app de vibe coding antes de lançar |
 | `references/visual-index.md` | Antes de abrir qualquer imagem, para escolher qual |
@@ -94,6 +96,7 @@ São folhas de contato 4×3 com frames antes/depois. **Cada uma custa bastante c
 - Dashboard genérico: `Dc-4jNbtyJg`. Fonte: `DfPJo9UBJ7D`. Micro-interações: `DfgcqeMBPCU`.
 - Leis: `Dd25eCoBJGr`, `Dd4UtBDBsIS`, `Del7XTgsuwI`.
 - Tela de decisão (trading): `DXeeUP7FKGs_1` (print único, não folha 4×3).
+- Escala 1,25: `DfRucYFjrac_1` (escada), `DfRucYFjrac_2` (line-height), `De_FtT3k-tT_2` (Major Third 16→39). Prints únicos, pequenos.
 - Perfis avaliados (quem vale seguir, quem está inativo): fim do `visual-index.md`.
 
 ## Skills complementares
@@ -104,7 +107,7 @@ São folhas de contato 4×3 com frames antes/depois. **Cada uma custa bastante c
 ## Notas de fidelidade
 - `DfgcqeMBPCU`: a legenda é sobre dark patterns, mas o vídeo mostra micro-interações. As versões honestas são **(complemento)**.
 - A série de leis tem 4 partes; a parte 3 não está nas fontes.
-- Divergências registradas: escala 1,2 vs a hierarquia 40/24/18/14 de `DfPJo9UBJ7D` e o label de 17px (`typography-and-touch.md` §2); "um primário por tela" vs Buy/Sell de mesmo peso (§9); botão central da tab bar vs Serial position (§10).
+- Divergências registradas: escala 1,2 vs a hierarquia 40/24/18/14 de `DfPJo9UBJ7D` e o label de 17px (`typography-and-touch.md` §2); escala 1,2 (`DfjxqzkCrUI`) vs 1,25 do **mesmo autor** (`DfRucYFjrac`) e do @gg.designhub, com caps +0,06 vs +0,05em e medida 60ch vs 50ch (§2b); grade de 8 vs chat 18px e ícone a 10px (§6); "um primário por tela" vs Buy/Sell de mesmo peso (§9); botão central da tab bar vs Serial position (§10).
 - O "kit" de performance e o plugin "UX Engine" mencionados nos reels não estão incluídos.
 
 ## Skills externas (dependências)

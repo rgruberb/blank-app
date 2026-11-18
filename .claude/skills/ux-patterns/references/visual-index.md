@@ -20,13 +20,17 @@ Cada `.jpg` é uma folha de contato 4×3 com frames do reel em ordem cronológic
 | `Dc-4jNbtyJg.jpg` | @designmotionhq | https://www.instagram.com/reel/Dc-4jNbtyJg/ | Dashboard "AI-made" com 5 tells marcados (gradiente, tiles pastel, 4 cards iguais, sombra em tudo, "Welcome back, Jordan 👋") e versão corrigida ($48,250 grande, sparkline, "Revenue · Aug 1 to Aug 31") | Ao revisar um dashboard gerado por IA |
 | `Dfby7sPgMPU.jpg` | @gustagoat.ai | https://www.instagram.com/reel/Dfby7sPgMPU/ | Cards neon numerados X/31 com tag (API, REDE, FRONTEND, BANCO DE DADOS, BACKEND, MEDIÇÃO): duplicadas, CDN, Brotli, timeout, lazy, índices, SSR, virtualização, cache, RUM; barra de "lento" a "voando" | Raramente: a lista completa já está em `perceived-performance.md` |
 | `DXeeUP7FKGs_1.jpg` | @rish_designs (collab @ultimateuiux) | https://www.instagram.com/p/DXeeUP7FKGs/ | Print único (não é folha 4×3): app de trading "Markets" escuro com accent verde-limão: lista "Today's Movers" e "All Assets" com variação em pílula +/−, tab bar com aba ativa em pílula; detalhe "Figma INC" com candles, seletor 1D…ALL, card "AI Report" BEARISH e Sell/Buy do mesmo tamanho fixos no rodapé | Ao desenhar uma tela de decisão (comprar/vender, aceitar/recusar) ou um detalhe de ativo |
+| `DfRucYFjrac_1.jpg` | @designmotionhq | https://www.instagram.com/p/DfRucYFjrac/?img_index=2 | Print único (não folha 4×3), slide "RULE 01 / 04 — One ratio, every size": escada "Aa" 12,8 → 48,83px × 1,25 e o "ad hoc" 14/18/21/30/36 em vermelho | Para mostrar a escala 1,25 com degrau de label abaixo da base |
+| `DfRucYFjrac_2.jpg` | @designmotionhq | https://www.instagram.com/p/DfRucYFjrac/?img_index=3 | Print único, "RULE 02 — Line height shrinks with size": 16×1,5 / 20×1,4 / 31,25×1,25 / 48,83×1,1 e "Set it right. Set it tight." 73px vs 54px | Para explicar por que título não usa line-height de corpo |
+| `DfRucYFjrac_3.jpg` | @designmotionhq | https://www.instagram.com/p/DfRucYFjrac/?img_index=6 | Print único, "COPY THIS — One type spec": bloco `:root` com `--step--1…--step-5`, `--lh-0…--lh-5`, `--measure: 50ch` e tracking | Raramente: os tokens já estão em `typography-and-touch.md` §2b |
+| `De_FtT3k-tT_2.jpg` | @gg.designhub | https://www.instagram.com/p/De_FtT3k-tT/?img_index=4 | Print único, "Cheat Code #03 Fail-Safe Type Hierarchy": tabela 39/31/25/20/16px (× 1,25) sobre pedra entalhada, takeaway "Major Third (1.250)" | Para mostrar a escala 1,25 arredondada como hierarquia de site |
 
-## Perfis avaliados (rodadas 3A, 3B e 3C, 18/11/2026)
+## Perfis avaliados (rodadas 1, 2, 3A–3C e 7, 18/11/2026)
 Notas 1–5 como fonte de **UX/regras**. Nota com "*" é nossa (a rodada não deu nota). Inativo = sem post há mais de ~1 ano, 0 posts ou perfil inexistente.
 
 | Handle | Ativo? | Tipo | Nota | O que aproveitar nesta skill |
 |---|---|---|---|---|
-| @designmotionhq | sim | Regras de UI com números exatos (carrosséis "UI Geometry" e reels); vende o plugin "UX Engine" | 5* | Alvo de toque, escala tipográfica, contraste (`typography-and-touch.md`); já era fonte de botão, toolbar, fonte e dashboard |
+| @designmotionhq | sim | Regras de UI com números exatos (carrosséis "UI Geometry" e reels); vende o plugin "UX Engine" | 5* | Alvo de toque, escala tipográfica, contraste (`typography-and-touch.md`); já era fonte de botão, toolbar, fonte e dashboard. Rodada 2: escala **1,25** (`DfRucYFjrac`), que diverge da 1,2 que o mesmo perfil postou na 3A (§2b) |
 | @motion_ui_interface | sim | Reels de "6/10 fixes" com antes → depois numéricos | 4* | Dark mode (6 fixes) e hierarquia do app de clima (`typography-and-touch.md` §4–5); já era fonte das leis e checklists |
 | @theglidestudio | sim | Estúdio de motion; uma regra por reel | 3* | "Título primeiro" (Doherty na 1ª tela). Outros temas só pela legenda, não analisados: ícone de sino sem função clara, waitlist com um único trabalho |
 | @dailywebdesign | sim | Curadoria diária com reposts (créditos "By @…") | 3 | Antes/depois de home (`components-checklists.md` §11), catálogo de 8 loaders |
@@ -35,6 +39,10 @@ Notas 1–5 como fonte de **UX/regras**. Nota com "*" é nossa (a rodada não de
 | @rish_designs | sim (via collab) | Designer de produto (fintech, sites conceito) | 4* | Lição "desenhe para o momento de decisão" |
 | @ramotion | sim, posta a cada 1–3 meses | Agência; estudos de caso sem regras explícitas | 3 | Estados de interação observados: card selecionado = borda colorida + fundo mais claro; gráfico com cursor vertical, ponto de leitura e seletor de período; 404 e estados vazios desenhados no sistema; controles finos em chips. Marca/paleta ficam em `design-direction` |
 | @uidesignpatterns | sim, raro | Curadoria só de inspiração | 2 | Pouco para UX; 404 com foto em tela cheia e CTA contornado |
+| @gg.designhub | sim | Estúdio (GG Design Hub); carrosséis "cheat codes" de sistema com render 3D | 4* | Grade de 8 (4 para micro), escala Major Third 16→39, medida 45–75 e entrelinha 140–160% / 110–120% (`typography-and-touch.md` §2b e §6). 60/30/10 e sombra tingida ficam em `design-direction`. Capa promete 6 regras e entrega 5; "90%" sem fonte |
+| @felvrabr | sim | Estúdio de dashboards sobre foto aérea (fazenda, resort) | 4 | Tooltip de arraste "Drag to extend · 4 nights" (`components-checklists.md` §8); variação em pontos "▲ 6 pts" |
+| @shohan.designs | sim | Reposts de conceitos (Orbix Studio) com legenda curta | 3 | Números-herói em fonte de matriz de pontos (`typography-and-touch.md` §7); dashboards ficam em `dashboard-ui` |
+| @code_and_chill | não (0 posts; não é o @_code_and_chill_) | — | 1 | Nada |
 | @gifux | não (0 posts) | — | 1 | Nada |
 | @nick_buturishvili | não (último post 07/2024) | — | 1 | Nada novo |
 | @ranjithalingal | não (0 posts, conta pessoal) | — | 1 | Nada |
@@ -46,4 +54,4 @@ Notas 1–5 como fonte de **UX/regras**. Nota com "*" é nossa (a rodada não de
 | @spruzzo.ui | não (perfil inexistente) | — | n/a | Nada |
 | @twohabitsdesign | não (último post 11/2022) | — | n/a | Nada novo |
 
-Prints de @designmotionhq e @motion_ui_interface desta rodada não estavam disponíveis em arquivo; os números estão transcritos em `typography-and-touch.md`.
+Prints de @designmotionhq e @motion_ui_interface das rodadas 3A–3C não estavam disponíveis em arquivo; os números estão transcritos em `typography-and-touch.md`. Das rodadas 1 e 2 vieram os prints `DfRucYFjrac_1–3` e `De_FtT3k-tT_2` (tabela acima). O print de `DffCenmFASU` e `Dfr4RMBlaPH` (rodada 7) não estava disponível em JPG.

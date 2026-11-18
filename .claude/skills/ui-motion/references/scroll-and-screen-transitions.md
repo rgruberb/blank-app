@@ -58,3 +58,34 @@ Antes de colocar motion ligado a scroll ou a uma transição de tela, responda:
 - **Transição entre telas.** Use a View Transitions API (`document.startViewTransition`, com `view-transition-name` no card e no hero) ou FLIP. Os snippets estão em `css-recipes.md`.
 - **Pin, scrub e coreografia complexa:** use a skill `ext-gsap-scrolltrigger` (ScrollTrigger com `scrub`, `pin`, `toggleActions: "play none none none"` para animar uma vez) e `ext-gsap-react` em React.
 - **Verificação.** Use `ext-playwright-cli` para rolar a página e gravar screenshots ou vídeo do comportamento antes de dar como pronto.
+
+## 5. Um momento animado por página ou tela (rodada 5)
+Regra repetida em 2 posts do @noahelhadedy:
+- `De_J0aOl9SJ` (bibliotecas de UI animada): "escolha **um momento animado por página**. Hero **ou** CTA, não os dois. Menos movimento parece mais premium."
+- `Dfo__tSjk9k` (componentes de motion): "um momento lúdico por tela. **Se tudo mexe, nada é especial.**"
+
+Como aplicar **(complemento)**:
+- O "momento" é o efeito **expressivo** (reveal de hero, componente lúdico, fundo WebGL, tilt). Feedback funcional (press a 95%, hover, foco, sucesso, toast, skeleton) **não conta**: continua em todo lugar.
+- Na landing, escolha onde está a decisão: hero (primeira impressão) **ou** CTA (conversão). O resto entra com reveal curto e discreto, ou sem animação.
+- Em tela de app, no máximo 1 componente lúdico (ex.: hold to publish, pull cord) e só onde ele também comunica algo.
+- Bate com o "Von Restorff: um destaque, nunca três" de `ux-patterns` e com o "WebGL ≤ 1 por página" de `react-bits.md`.
+- **Tensão registrada:** o @mobileeditingclub (§6) lista 5 padrões para o mesmo site. Leia como cardápio: escolha 1 expressivo e trate os outros como micro-feedback discreto.
+
+## 6. Motion de site: 5 padrões e como pedir ao Claude (`Dff1uulGoxb`, @mobileeditingclub com @adrianabubori, rodada 1)
+Carrossel "How to animate Websites with Claude". Os 5 padrões cobrem o ciclo da página:
+
+| Padrão | O que a fonte pede | Papel no ciclo |
+|---|---|---|
+| `/headline-reveal` | Imagem do produto + headline + cores da marca; hero com **revelação suave da imagem e texto em sequência**, movimento sutil | Entrada |
+| `/micro-interactions` | **Leve deslocamento da imagem no hover**, resposta clara do botão ou transição suave entre detalhes do produto, **um efeito de cada vez** | Resposta |
+| `/portfolio-showcase` | Transições de imagem suaves e navegação simples entre projetos, trabalho em destaque e pouco texto | Navegação |
+| `/animated-gallery` | Imagens **reveladas uma após a outra**, movimento sutil, espaçamento consistente, layout limpo | Descoberta |
+| `/scroll-reveal` | Produto, imagens e texto entrando conforme o scroll, sequência clara, **próxima ação fácil de achar** | Progressão |
+
+Fluxo recomendado pela fonte:
+1. Dê ao Claude os **visuais**, as **cores da marca** e uma **descrição verbal do movimento** (o quê, em que ordem, com que intensidade).
+2. Construa e valide **um efeito por vez**.
+3. Teste no **desktop e no mobile**.
+4. Texto sempre legível; o movimento guia até a próxima ação.
+
+**(complemento)** Traduza "suave" e "sutil" para os tokens do `SKILL.md` antes de pedir: reveal ≤ 700 ms ease-out, stagger 70–100 ms na galeria, deslocamento de hover de poucos px, uma vez só no scroll. Visual do layout do carrossel: `Dff1uulGoxb_2.jpg`. O fluxo completo ficou atrás de "comente WEBSITE" e não foi visto.
