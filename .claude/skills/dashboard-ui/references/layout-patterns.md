@@ -79,6 +79,9 @@ Variações vistas:
 - **Grade 2x2 com chip de estado em palavra** ("Healthy", "Rising", "On track", "Clear") no canto direito do valor e
   mini-visual próprio embaixo (linha, pirulitos, gauge) — série @felvrabr.
 - **Mini-KPIs com ícone circular colorido** no canto, uma cor por categoria — e-commerce `Dfct0mNvg3f`, ad campaign.
+- **KPI de urgência cheio de cor** ("Overdue 2" coral) + 3 KPIs neutros (Today / Upcoming / Completed) — Ember V29
+  `DfrtgFyTmOM`: o acento marca o que pede ação, não o maior número.
+- **Card preto único** num tema claro com cartões menta — verificação `Dfz0mLAzsjg` (mesma lógica do KPI invertido).
 
 ## 3. Gráficos vistos e como foram estilizados
 | tipo | onde | estilo |
@@ -112,6 +115,16 @@ Variações vistas:
 | Barras horizontais por canal | ad campaign Reports | barras finas coloridas com valor à direita e total no topo ("Total 140,708") |
 | Área empilhada | e-commerce `Dfct0mNvg3f` | rosa/amarelo/azul opacos, curvas suaves |
 | Dial circular | glass V30 `Dfj_FGsTAVB` | anel azul com knob, valor em graus que anima (50° → 65°) |
+| Barras-pirulito com linha de meta | vendas `Dfjx6Stv3-d` | haste + ponto; acima da meta tracejada no acento (laranja), abaixo em cinza, a atual em branco |
+| Barra segmentada + cards | vendas Channels | 1 barra horizontal em 4 cores + 4 cards de valor alinhados embaixo |
+| Heatmap de quadrados arredondados | verificação `Dfz0mLAzsjg` | quadrados em tons de menta/cinza = volume por período, legenda Passed/Declined/Flagged |
+| Linha + área com comparação tracejada | verificação Reports | área clara no acento + linha preta tracejada "período anterior" |
+| Matriz de risco 5x5 | crédito privado `Dfo0F0Pvo4Y` | escala de um tom (terracota claro→escuro), número na célula, selecionada com contorno no acento |
+| Colunas em relevo | skeuomorfismo `DfuS2Jbzsjt` | colunas creme com sombra interna, a última no acento |
+| Gráfico de pontos como barra | RH `DYJwy9aCSYP` | altura = nº de pontos empilhados, pontos crescem de tamanho |
+| Candles + seletor de período | trading `DXeeUP7FKGs_1` | candles acento/vermelho sem grid; 1D·1W·1M·3M·1Y·ALL com ativo em pílula |
+| Linha com cursor vertical | Borea `DSIMwtvDluO_3` | linha laranja fina, cursor vertical + ponto de leitura, seletor de período no rodapé |
+| Rosca de score | Borea `DSIMwtvDluO_1` | segmentos com gaps em gradiente laranja→azul, score grande no centro |
 
 Regras que se repetem: histórico em neutro + destaque no "agora"; nenhum gráfico 3D; legendas como lista
 tabular; eixos mínimos. Para cores e marcas, use a skill `dataviz`.
@@ -275,3 +288,50 @@ Recent Messages; cliente = mesma coluna Overview em largura total, sem o mapa op
 .seg i { height:28px; border-radius:8px; background:rgba(255,255,255,.06); }
 .seg i.done { background: var(--accent, #c6e17a); transition: background .3s ease-out; }
 ```
+
+
+## 8. Design para o momento de decisão (apps de investimento/trading)
+
+Fonte: "Markets" de @rish_designs (`DXeeUP7FKGs_1`) e Borea AI da @ramotion (`DSIMwtvDluO_1–3`). Regras de UX gerais
+de tela de decisão e fluxo de compra estão em `ux-patterns`; aqui fica a parte visual.
+
+**Princípio:** a tela é desenhada para o instante em que a pessoa decide comprar, vender ou esperar. Ela responde de
+imediato *o que está se mexendo, o que acontece agora e para onde olhar*; mostra só sinais imediatos e contexto
+suficiente; o bloco de IA serve para **reduzir dúvida**. Tirar atrito vale mais que adicionar função.
+
+**Anatomia do card/linha de ticker**
+1. Logo do ativo (círculo/quadrado 32–40px).
+2. **Ticker em negrito** (AAPL) + **nome completo embaixo** em cinza (Apple Inc.) — ou ticker em pílula/chip (Borea).
+3. À direita: **preço** (tabular nums; complemento) + **variação com sinal e cor em pílula** (+1.24% verde, −1.24%
+   vermelho). Nunca só cor: sempre o sinal +/− também.
+4. Estado selecionado = borda no acento + fundo um pouco mais claro.
+5. Variante "mover" (horizontal, carrossel): card mais alto com nome, preço e pílula de variação.
+
+**Home de mercado:** busca no topo → abas de classe (Stocks / Crypto / ETFs) → **listas prontas** ("Today's Movers",
+"Top Traded", "Gainers / Losers" em duas colunas, "Trending") em vez de feed genérico → "All assets" em linhas.
+
+**Detalhe do ativo (de cima para baixo):** nome + tag de setor → preço grande + variação do período → gráfico (candles
+ou linha com cursor + ponto de leitura) → **seletor 1D · 1W · 1M · 3M · 1Y · ALL** → **card de IA** (selo de veredito
+BULLISH/BEARISH + 2–3 frases + "View full analysis →") → **Sell / Buy do mesmo tamanho, lado a lado, fixos no rodapé**
+(zona do polegar; Sell vermelho, Buy no acento).
+
+**Cor:** base quase preta + **um acento** (limão no Markets) para aba ativa, período ativo e CTA positivo; ou 2 cores
+de marca (azul + laranja no Borea) para score/seleção. **Verde/vermelho reservados à variação de preço** — não use o
+verde da variação como cor de marca (complemento: se a marca for verde, diferencie o tom do verde semântico).
+Preço em sans, dados auxiliares em mono.
+
+**Anti-padrões (complemento):** gráfico gigante sem preço legível; Buy maior que Sell (empurra decisão — ver dark
+patterns em `ux-patterns`); IA com parágrafo genérico sem veredito; ticker errado em mockup (o case Borea mostra "APPL").
+
+## 9. Fluxos de app de serviço/pedido (série @ui.pixel)
+
+Fonte: Qwash (`DX_bA4rCWf0`), WayLoo (`DVv7OOECewR`); descrições em `domain-examples.md` §21.
+- **Progresso do pedido em 4 etapas** com rótulos curtos (Picked → Washing → Out for delivery → Delivered): mesma
+  barra no card "Active order" da home **e** no detalhe do pedido, com chip de estado ("On Process") e mapa de rota.
+- **Rodapé fixo com total + 1 botão primário** nas telas de montagem (lista de preços com stepper − 0 +) e no
+  checkout ("Estimated Total $21" + "Schedule a collection"; "Pay now"). O valor do botão tem de bater com o total.
+- **Tab bar**: 5 abas com **botão central circular** para a ação principal (Qwash) ou **pílula flutuante** com aba ativa
+  no acento (WayLoo, Markets).
+- **Saudação em duas camadas**: nome em branco/preto + pergunta em cinza ("Hello, Denis! *You want to book something?*").
+- Gradiente/acento de marca só no cabeçalho, botões e aba ativa; corpo neutro com cards arredondados.
+- Para apresentar: pares de telas que contam o fluxo inteiro (oferta → home → serviço → detalhe → agendamento → revisão).

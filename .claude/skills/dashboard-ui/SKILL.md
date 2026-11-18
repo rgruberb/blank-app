@@ -1,12 +1,12 @@
 ---
 name: dashboard-ui
-description: Galeria de referências e padrões visuais para dashboards e web apps (vendas de varejo, e-commerce, kanban, seguros marítimos, analytics SaaS, campanhas de anúncio, CRM de estúdio, orçamento familiar, smart home, saúde, e "OS" operacionais sobre foto aérea — fazenda, usina solar, resort) e para a série glassmorphism (login, dashboards V7/V8/V30, sidebar V5), destilados de 18 reels com folhas de contato em assets/visual-refs, mais padrões de gamificação (progresso, metas, checklist, níveis, ranking) para painel de gestor e de cliente. Use ao "criar dashboard", "painel admin", "tela de analytics", "glassmorphism", "admin panel", "KPI cards", "sidebar de app", "kanban", "tela de login com vidro", "gamificação", "dashboard gamificado", "painel do gestor/cliente com metas" ou ao revisar a hierarquia, a paleta e a densidade de um painel existente.
+description: Galeria de referências e padrões visuais para dashboards e web apps (vendas de varejo, e-commerce, kanban, seguros marítimos, analytics SaaS, campanhas de anúncio, CRM de estúdio, orçamento familiar, smart home, saúde, verificação de identidade, crédito privado, apps de investimento/trading, fluxos de app de serviço com pedido em etapas, e "OS" operacionais sobre foto aérea — fazenda, usina solar, resort) e para a série glassmorphism (login, dashboards V7/V8/V30, sidebar V5), destilados de 18 reels com folhas de contato em assets/visual-refs e da rodada 3 de perfis (prints de trading e Borea AI), mais padrões de gamificação (progresso, metas, checklist, níveis, ranking) para painel de gestor e de cliente. Use ao "criar dashboard", "painel admin", "tela de analytics", "glassmorphism", "admin panel", "KPI cards", "sidebar de app", "kanban", "tela de login com vidro", "gamificação", "dashboard gamificado", "painel do gestor/cliente com metas", "app de investimento", "app de trading", "corretora", "carteira de ações", "card de ticker", "tela de compra/venda", "acompanhamento de pedido", "skeuomorfismo" ou ao revisar a hierarquia, a paleta e a densidade de um painel existente.
 ---
 
 # dashboard-ui
 
 Padrões de layout, KPI, gráficos, paleta e glassmorphism para dashboards, tirados de referências reais
-(@_code_and_chill_, @ui.iliasmiah000, @code.xr, @felvrabr). As imagens estão em `assets/visual-refs/<ID>.jpg`;
+(@_code_and_chill_, @ui.iliasmiah000, @code.xr, @felvrabr, e na rodada 3 @rish_designs, @ramotion, @ui.pixel). As imagens estão em `assets/visual-refs/<ID>.jpg`;
 o índice com autor, URL e quando abrir cada uma está em `references/visual-index.md`.
 
 ## Quando usar
@@ -15,6 +15,8 @@ o índice com autor, URL e quando abrir cada uma está em `references/visual-ind
 - Fazer cards, sidebar ou formulário de login em glassmorphism.
 - Prototipar um painel **gamificado** (progresso, metas, níveis, ranking) para gestor e/ou cliente —
   `references/layout-patterns.md` §7.
+- Montar **app de investimento/trading** (lista de ativos, detalhe com gráfico, Buy/Sell) — `references/layout-patterns.md` §8.
+- Montar fluxo de app de serviço com **pedido em etapas** e checkout — `layout-patterns.md` §9.
 - Revisar um painel que parece genérico ("AI slop"): KPIs sem hierarquia, gradiente roxo aleatório, cards iguais.
 
 ## Padrões recorrentes (o que as referências têm em comum)
@@ -54,6 +56,15 @@ o índice com autor, URL e quando abrir cada uma está em `references/visual-ind
 10. **Progresso como linguagem** (base para gamificação): gauges que enchem, anéis N/M, checklists segmentados,
     números que contam. Nenhuma referência tem pontos/badges/ranking explícitos — esses blocos estão em
     `layout-patterns.md` §7 marcados como complemento.
+11. **O acento marca o que pede ação ou bate a meta**, não o maior número: KPI "Overdue" cheio de coral contra 3 neutros
+    (Ember V29), barras acima da linha de meta tracejada em laranja e abaixo em cinza (vendas), célula de risco
+    selecionada só com contorno no acento. Período anterior = linha **tracejada** neutra, não uma 2ª cor.
+12. **Design para o momento de decisão** (investimento/trading): a tela responde de cara o que se mexe, o preço e para
+    onde olhar; card de ticker = logo + ticker em negrito + nome embaixo | preço + variação com **sinal e cor** em pílula;
+    detalhe com seletor 1D…ALL, card de IA com veredito curto e **Buy/Sell do mesmo tamanho fixos no rodapé**.
+    Verde/vermelho só para variação de preço. Detalhes em `layout-patterns.md` §8.
+13. **Fluxo de pedido em etapas**: progresso em 4 passos com rótulos curtos repetido na home e no detalhe; rodapé fixo
+    com total + 1 CTA (o valor do botão bate com o total); tab bar com a ação principal destacada. `layout-patterns.md` §9.
 
 ## Paleta: escuro vs claro
 - **Escuro neutro-quente** (saúde, tasks): fundo `#0b0c0e`, cards `#151618`–`#1b1c1e`, borda 1px `rgba(255,255,255,.06)`,
@@ -67,6 +78,11 @@ o índice com autor, URL e quando abrir cada uma está em `references/visual-ind
 - **Vinho/magenta com glows** (e-commerce `Dfct0mNvg3f`): sidebar magenta `#781840`, CTA rosa `#bf6888`, glows laranja e azul.
 - **Vidro escuro tingido pela foto** (@felvrabr): oliva + lima `#c6e17a`, ardósia + âmbar `#f0b048`, petróleo + menta `#6cf0c9`.
 - **Glass neutro** (smart home): tudo em cinza grafite translúcido `#505251`, ativo em pílula branca; a cor vem das fotos.
+- **Claro menta + preto** (verificação `Dfz0mLAzsjg`): cinza `#EDEFEE`, cards menta `#CFE5E0`, 1 card preto de quebra.
+- **Terracota + lima** (crédito privado `Dfo0F0Pvo4Y`): escala terracota `#B8664D`–`#D98A6C`, acento `#C8F23A` — fintech sem azul.
+- **Skeuomórfico creme** (`DfuS2Jbzsjt`): creme `#EFE7DC` em relevo, acento coral/laranja, marrom/preto de contraste.
+- **Branco + coral de urgência** (Ember V29 `DfrtgFyTmOM`): sidebar escura, coral `#F26B5E` só em atrasados/leads quentes.
+- **Trading dark + limão** (`DXeeUP7FKGs_1`): `#0B0B0D` + `#D4FF3A` em ativo/CTA positivo; vermelho `#E0352B` só para queda/Sell.
 - Ofereça os dois temas quando o painel for uso diário (varejo e seguros mostram dark + light do mesmo produto,
   com a troca animada).
 
@@ -94,6 +110,8 @@ Versão completa (login com cantos chanfrados, botão neon, item ativo em pílul
 - Animação em tudo; nas referências anima-se troca de tema, item ativo, troca de página e o elemento-assunto
   (rota, gauge, contagem de números) — nunca loops decorativos permanentes.
 - Esquecer estados: vazio, carregando (skeleton), "nenhum resultado" (complemento).
+- Em app financeiro: variação só por cor (sem +/−), Buy maior que Sell, card de IA com parágrafo genérico sem veredito,
+  ticker/total errado no mockup (os cases mostram "APPL" e botão "$43" com subtotal "$26").
 
 ## Workflow
 1. Defina domínio e a **pergunta principal** do painel (ex.: "quais casos vencem primeiro?" → ordenar por prazo, não por data, como na saúde).
@@ -118,13 +136,19 @@ fintech pessoal → `DfkNvnePItL`; IoT/mídia → `DfrqAX9v59S`; glass sobre fot
 sidebar recolhível → `DfMH6YTTcwx`; login glass → `DeoGCPlzKOs`; **gamificação / mapa operacional com
 ação → estado → `Dfui4V5BMbz`** (variações `DfpCOjIB1Rb` solar, `Dfr9S5yhlvX` reservas com Gantt e meta de ocupação);
 campanhas de mídia → `DfXoXVFPBfd`; e-commerce → `Dfct0mNvg3f`; CRM de serviços quente → `DfeT74YvQaD`;
-glass claro sobre foto → `Dfj_FGsTAVB`.
+glass claro sobre foto → `Dfj_FGsTAVB`; **app de trading / investimento → `DXeeUP7FKGs_1`** (Borea AI:
+`DSIMwtvDluO_1` score mobile, `_2` home web com Gainers/Losers, `_3` chip de ticker e gráfico com cursor).
+Os reels da rodada 3 sem imagem (vendas com meta, crédito privado, skeuomorfismo, Ember, fluxos @ui.pixel) estão só
+descritos em `domain-examples.md` §14–21.
 
 ## Arquivos
-- `references/visual-index.md` — tabela das 18 referências (autor, URL, domínio, estilo, quando abrir).
-- `references/domain-examples.md` — descrição de cada dashboard e o que copiar dele.
+- `references/visual-index.md` — tabela das 18 folhas + 4 prints da rodada 3 (autor, URL, domínio, estilo, quando abrir)
+  e **"Perfis avaliados"** (quais contas valem como fonte, nota 1–5, inclusive inativas/inexistentes).
+- `references/domain-examples.md` — descrição de cada dashboard e o que copiar dele (§14–21: rodada 3 — verificação,
+  vendas com meta, crédito privado, skeuomorfismo, sidebar curva, Ember coral, trading/Borea, fluxos de app @ui.pixel).
 - `references/layout-patterns.md` — estruturas, KPI cards, gráficos, densidade, animações com código e
-  §7 padrões de gamificação (gestor vs. cliente).
+  §7 padrões de gamificação (gestor vs. cliente), §8 momento de decisão / card de ticker (investimento), §9 fluxos de
+  pedido em etapas.
 - `references/glassmorphism.md` — receita CSS completa da série glass.
 
 ## Skills externas (dependências)

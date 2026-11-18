@@ -19,3 +19,42 @@ Cada `.jpg` é uma folha de contato 4x3 com frames do reel em ordem cronológica
 ## Fontes sem imagem
 
 - Vídeo "Claude Design 2 HOUR COURSE (Beginner to Pro)" — Nate Herk (@nateherk), https://youtu.be/ovabeVoWrA0 (30/04/2026). Sem folha de contato; conteúdo (workflow completo do Claude Design: design system → deck → landing → app → vídeo → deploy, e dicas de limite) em `references/claude-design-course.md`.
+
+## Prints soltos da rodada 3 (`<ID>_<n>.jpg`)
+
+Prints únicos de carrossel/reel (não folhas de contato). Conteúdo destilado em `branding-identity.md`.
+
+| Arquivo | Autor | URL | O que mostra | Quando abrir |
+|---|---|---|---|---|
+| `Dak9nkTFpYI_1.jpg` | @ramotion (case Source) | https://www.instagram.com/p/Dak9nkTFpYI/?img_index=3 | Paleta como pilha de "pastas" com abas: laranja, branco, preto, ciano, cinza-verde escuro e verde de marca; rótulo mono "GREEN #06B250 / R:6, G:178, B:80" | Mostrar como documentar a paleta de marca (hex + RGB) e a proporção 1 saturada + escuro + apoio |
+| `Dak9nkTFpYI_2.jpg` | @ramotion (Source) | https://www.instagram.com/p/Dak9nkTFpYI/?img_index=7 | "S" gigante em linhas verdes sobre preto; rótulos mono "FUNNEL DISPLAY – HEADLINES" / "INTER – BODY" | Par tipográfico display só em títulos + Inter no corpo |
+| `Dak9nkTFpYI_3.jpg` | @ramotion (Source) | https://www.instagram.com/p/Dak9nkTFpYI/?img_index=10 | Página de produto escura "Transform Any Data Format Anywhere", CTA laranja + link secundário, tag "// PRODUCT PAGES", card "// ICON" em halftone laranja, hachuras | Página de marca para devs: acento de apoio no CTA, linguagem técnica (mono, `//`, grid) |
+| `DVg6uh7AV25_2.jpg` | @ramotion (case Murf AI) | https://www.instagram.com/p/DVg6uh7AV25/?img_index=5 | Hero sobre gradiente laranja→magenta, título com palavras em gradiente, abas Studio/Dub/API/Translation, card escuro com CTA rosa | Gradiente de marca aplicado de forma consistente (fundo, título, CTA) |
+| `DYpD5C7zwx6_1.jpg` | @rish_designs (repost @ultimateuiux) | https://www.instagram.com/reel/DYpD5C7zwx6/ (13 s) | Seção escura "THE HERITAGE" (THE em outline, HERITAGE sólido), parágrafo curto e Porsche 3D de perfil; navbar mínima com 1 CTA vermelho | Scroll-storytelling: 1 palavra-título + 1 ângulo do produto; outline + sólido |
+| `DYpD5C7zwx6_2.jpg` | @rish_designs | https://www.instagram.com/reel/DYpD5C7zwx6/ (18 s) | Seção clara "PERFECTION" com a asa do carro na frente do título (oclusão) | Alternância escuro/claro entre seções; texto atrás do objeto 3D |
+
+## Perfis avaliados
+
+Avaliação das contas lidas nas rodadas 3A/3B/3C como fonte para **direção de arte, cor e branding** (leitura de
+18/11/2026). Nota 1–5 = utilidade para esta skill.
+
+| Handle | Ativo? | Tipo | Nota | O que aproveitar |
+|---|---|---|---|---|
+| @gg.designhub | sim (~94,5K) | estúdio de branding (carrosséis ✗/✓ e reels didáticos) | 4 | Marca julgada em 3 s (5 pontos de contato), 6 erros de logo, embalagem × preço, 2–3 cores. `branding-identity.md` §1–3 |
+| @ramotion | sim, posta a cada 1–3 meses (157K) | agência; estudos de caso de marca/produto | 3 | Sistemas completos: 1 saturada + escuro + 1–2 apoio, display + Inter, hex+RGB, ordem logo→telas. Sem regras explícitas. §5 |
+| @dailywebdesign | sim, várias vezes/semana (581K) | curadoria/repost (credita autor) | 3 | Antes/depois de paleta (@ui.abraham), combos base escura + fundo suave + acento quente (@pierredelcourr). Metade é só inspiração. §6 |
+| @theglidestudio | sim (~2,3K) | estúdio de motion para startups | 3 | Movimento do logo (calm/quick/friendly), layout de confiança (já em `layers-and-trust-layout.md`). Motion de UI fica em `ui-motion` |
+| @pierredelcourr | (via repost) | criador de combos de cor | 3 | Combos aplicados em mockups de marca; já tinha `Dfa860wIQn4` |
+| @ultimateuiux | sim, irregular (120K) | comunidade; ~70% meme | 2 | Só os reposts de @rish_designs (RWB Porsche, trading app) e o carrossel "Claude skills for designers" de @roman.knox (frontend-design, theme-factory, brand-guidelines, canvas-design; comandos não verificados) |
+| @rish_designs | (via repost) | designer de produto/web | 3 | Scroll-storytelling com 3D, outline + sólido, oclusão. §7 |
+| @uidesignpatterns | sim, raro (413K) | curadoria sem texto | 2 | Foto PB + 1 ponto de cor, serifa fina editorial, 404 como peça de marca. §7 |
+| @niki.aroca | sim, poucos posts (~61,7K) | conta pessoal de lifestyle | 1 | Posts novos sem design (dump de fotos). Os reels antigos de paleta (`DfIaULMIRC-`, `DfKxflroHj3`) continuam valendo |
+| @gifux | não: 0 posts | — | 1 | Nada |
+| @uxmemo | não: perfil não existe | — | — | Nada |
+| @interfacely | não: perfil não existe | — | — | Nada |
+| @spruzzo.ui | não: perfil não existe | — | — | Nada |
+| @twohabitsdesign | não: parado desde 22/11/2022 | — | — | Nada novo |
+| @uxdesignmastery | não: parado desde 05/2024 | — | 1 | Nada novo |
+| @ui.tips | não: parado desde 02/2023 | — | 1 | Nada novo |
+| @christvizcarra | não: parado desde 11/2024 | — | 1 | Nada novo |
+| @nick_buturishvili | não: parado desde 07/2024 | — | 1 | Nada novo |

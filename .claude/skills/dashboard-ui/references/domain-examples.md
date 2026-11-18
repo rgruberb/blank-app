@@ -372,3 +372,123 @@ pílula elástica com raio configurável (não só 999px).
 
 **Copiar:** área empilhada por canal/categoria; monograma pastel como placeholder de produto; barras de progresso de
 meta na coluna lateral; grid ↔ tabela no catálogo.
+
+---
+
+# Rodada 3 (perfis do Instagram, 18/11/2026)
+
+Seções 14–21 vêm de leitura por frames (reels de 5–6 s, texto pequeno) e de prints únicos. Só os itens com
+arquivo em `assets/visual-refs/` têm imagem; os demais são descrição apenas. Hex aproximados.
+
+## 14. Verificação de identidade "Vigilo" — `Dfz0mLAzsjg` (@_code_and_chill_, sem imagem)
+**Tema:** claro, fundo cinza `~#EDEFEE`, cartões **verde-menta `~#CFE5E0`** + **um cartão preto** como quebra; o resto
+neutro. "Good morning, Ines".
+- **Overview:** KPIs `94.5K` verificações, `40K`…; botão de estado "All checks passing"; **heatmap de quadrados
+  arredondados** (menta/cinza, legenda Passed / Declined / Flagged) para volume por período; card preto com lista.
+- **Reports:** linha suave sobre área menta + **linha preta tracejada "Compare with last period"**; card "Total checks 15,180".
+- **Protection:** card de visão geral com barras pretas + **lista de regras com toggle preto e botão "Review"**.
+**Copiar:** acento único + preto como segundo destaque; comparação com período anterior tracejada (não uma 2ª cor);
+regras/políticas como lista de toggles.
+
+## 15. Vendas de pequena empresa — `Dfjx6Stv3-d` (@_code_and_chill_, sem imagem)
+**Tema:** dark `~#1E1E21` + **laranja `~#FF6B35`** único; item ativo da sidebar em bloco laranja.
+- **Orders:** kanban New / Processing / Completed / Delivered; cards com ID, cliente, valor, selo de status.
+- **Sales:** **barras-pirulito (haste + ponto) com linha de meta tracejada** — acima da meta em laranja, abaixo em
+  cinza, a barra atual em branco; valor grande `£41,506` + 3 números menores; seletor de período.
+- **Channels:** **barra segmentada de 1 linha em 4 cores + 4 cards de valor** abaixo; linha de vendas; lista de canais
+  com barra de progresso.
+- Abre com o conteúdo vazio (loading) e os blocos entram.
+**Copiar:** a cor mostra **quem bate a meta**, sem eixo; partes do total em barra segmentada + cards.
+
+## 16. Gestão de crédito privado — `Dfo0F0Pvo4Y` (@_code_and_chill_, sem imagem)
+**Tema:** **terracota `~#B8664D`–`#D98A6C` + acento verde-limão `~#C8F23A`**, sidebar clara/oliva — fora do clichê azul
+de finanças.
+- **Imóvel "Casa Duna":** foto grande + miniaturas; gauge semicircular "63,8%" em limão; tabela curta.
+- **Risk:** **matriz de risco 5x5** em escala de um tom (claro → escuro) com números nas células, **célula selecionada
+  com contorno no acento**; abas Heatmap / Watchlist / Insights; painel "Top risk `$10.54m`" com 4 imóveis.
+- Snippet `slidePill` com clip-path, `duration: 0.35`, `ease: "power3.inOut"`.
+**Copiar:** heatmap de risco monocromático + seleção por contorno; paleta quente para fintech B2B.
+
+## 17. Skeuomorphism Dashboard — `DfuS2Jbzsjt` (@code.xr, sem imagem)
+**Tema:** **creme `~#EFE7DC` com relevo** (luz em cima, sombra embaixo), acento coral/laranja, marrom/preto e um
+verde-azulado escuro para contraste. Barra superior marrom com **pílula de comando/IA** ("Can you fund $250 to
+Jenny…") como ponto focal.
+- **Overview:** "Total balance `$527,495.35`" + Transfer / Request; cards de valor; barras pretas com **uma laranja**.
+- **Reports:** 4 KPIs, renda × despesa (renda com área laranja), donut por categoria + barras de progresso.
+- **Savings & Goals:** total poupado com barra laranja, **colunas em relevo** (última laranja), toggles "Auto-save",
+  **cartões de meta com anel** (74/64/63/66%) e card pontilhado "Add goal".
+- Entrada: blur → nítido (framer-motion), `StatCard` no código.
+**Copiar:** alternativa "tátil" ao glass para fintech pessoal; metas como anéis + card "Add goal" tracejado.
+
+## 18. Curved Sidebar — `Dfw4gEmz87N` (@code.xr, sem imagem)
+Cápsula vertical de vidro recolhida (avatar com ponto verde, 5 ícones, card com cristal, settings/sair) → expande em
+**painel com laterais côncavas** ("LUMEN"), perfil, seção MENU com **submenu aninhado** (Bookings → Upcoming /
+Calendar / History), cartão "NOTICE", rodapé. Vidro definido por **borda 1px ~30% branco**, sobre fundo listrado de
+alto contraste. Complementa `DfMH6YTTcwx` (sidebar V5).
+
+## 19. Ember Dashboard V29 — `DfrtgFyTmOM` (@code.xr, sem imagem)
+**Tema:** branco com sidebar escura estreita; **coral `~#F26B5E` só no que pede ação**.
+- **Overview:** "Good afternoon, Daniel"; card "Close the quarter stronger `$144K`" com slider; "Pipeline by stage
+  `$138K`"; card coral "Hot leads"; semana; "Follow-ups"; card escuro de cliente.
+- **Saved:** biblioteca de cards (alguns em gradiente coral→rosa) + painel "Collections".
+- **Tasks:** **"Overdue 2" em card coral cheio + Today / Upcoming / Completed brancos**; filtros-pílula; listas com
+  selos High/Medium.
+- `motion.div whileHover={{ y: -2 }}`.
+**Copiar:** **acento = urgência** (atrasado, lead quente), não decoração; mesmo shell para vários módulos.
+
+## 20. Apps de investimento / trading — "Markets" `DXeeUP7FKGs_1` (@rish_designs) e Borea AI `DSIMwtvDluO_1–3` (@ramotion)
+
+### 20a. Markets (iOS, dark `~#0B0B0D` + verde-limão `~#D4FF3A`)
+Legenda do autor (resumo): não foi feito para "parecer app de trading", e sim para **o momento em que a pessoa decide
+comprar, vender ou esperar**; a tela responde na hora o que está se mexendo e para onde olhar; mostra só sinais
+imediatos e contexto suficiente; o bloco de IA existe para **reduzir dúvida**, não para impressionar; UX boa é tirar
+atrito entre intenção, decisão e ação.
+- **Lista "MARKETS":** busca "Search stocks, crypto…"; abas Stocks / Crypto / ETFs / Kits (ativa sublinhada);
+  **"Today's Movers"** em cards horizontais (logo, nome, preço, pílula de variação); **"All Assets"** em linhas:
+  logo + **ticker em negrito + nome completo embaixo** à esquerda, **preço + variação com sinal e cor** à direita;
+  tab bar com a aba ativa em pílula limão.
+- **Detalhe do ativo:** nome + tag de setor ("Tech"), preço grande + variação "(Today)"; candles verde-limão/vermelho;
+  **seletor 1D · 1W · 1M · 3M · 1Y · ALL** (ativo em pílula limão); **card "AI Report"** com selo de veredito
+  ("BEARISH" vermelho) + 2–3 frases + "View Full Analysis →"; **Sell (vermelho) e Buy (limão, texto preto) do mesmo
+  tamanho, lado a lado, fixos no rodapé**.
+- Preço em sans, dados em mono.
+
+### 20b. Borea AI (dark quase preto, marca azul `~#3D5BF5` + laranja `~#F26B3A`)
+- **Mobile:** **rosca segmentada laranja→azul com score "74" no centro**, cards de métrica, linha laranja no rodapé.
+- **Web:** listas prontas em vez de feed — **"Top Traded Stocks"** (cards com logo; selecionado = fundo azul / borda),
+  faixa "Activate Daily Free Predictions" + Sign Up, **"Top Traded Index ETFs"** (cards de ticker com variação verde),
+  **"Top Daily Movers"** em duas colunas **Gainers (verde) / Losers (vermelho)**.
+- **Kit:** chip de ticker "VOO +0.07%" com nome do fundo embaixo; set de ícones; **gráfico de linha com cursor
+  vertical + ponto de leitura + seletor de período**.
+- Verde/vermelho são **só** variação de preço; as cores de marca ficam em score, seleção e gráficos.
+- Erro do case: ticker da Apple como "APPL" (correto AAPL) — revise dados de mockup.
+
+**Copiar (os dois):** ver `layout-patterns.md` §8 (momento de decisão e anatomia do card de ticker).
+
+## 21. Fluxos completos de app — @ui.pixel (reposts; sem imagem)
+
+### 21a. Lavanderia "Qwash" — `DX_bA4rCWf0` (design @oshioke.ui)
+Cabeçalho em gradiente roxo `~#4B3FA0 → #7B6FD6` e botões-pílula em gradiente; corpo branco com cards arredondados.
+Fluxo em 10 telas: **My Offer** (cupons) → **Profile** (anel "90% Complete", endereços, cartões salvos) → **Home**
+("Hi J.Snow", 2 cards de serviço com preço, **"Active Orders" com progresso em 4 etapas: Picked → Washing → Out for
+delivery → Delivered**, oferta) → **Explore Services** (grade 2x2 com ilustração, preço e selo verde de desconto) →
+**Services Overview** (abas, lista de preços com stepper − 0 +, **rodapé fixo "Delivery Fee $5 / Estimated Total $21"
++ "Schedule A Collection"**) → **Order Details** (chip "On Process", o mesmo stepper de 4 etapas, mapa com rota
+Pick-Up → Delivery, chat de suporte, "Cancel order") → **Collection & Delivery** (data/hora, frequência, endereço) →
+**Review Order** (checkout detalhado + "PAY NOW"). Tab bar de 5 abas com **botão central circular** para a ação principal.
+Atenção: o exemplo mostra subtotal $26 e botão "$43" — inconsistência, não copie.
+
+### 21b. Viagens "WayLoo" — `DVv7OOECewR` (design @webdesign.uiux)
+Preto + **laranja `~#FF6A1A` só em botões, selos e aba ativa**, brilho laranja difuso no fundo. Splash em malha de
+gradiente; home "Hello, Denis! *You want to book something?*" (2ª frase em cinza) com cards Plane / Train / House e
+selos de contagem; detalhe de carro com **cards de vidro escuro de borda fina** (consumo, aceleração, câmbio) e botão
+360°; login com social; **tab bar flutuante em pílula** com aba ativa laranja.
+
+### 21c. Dashboard de RH — `DYJwy9aCSYP` (design @webdesignssphere)
+Fundo azul-gelo `~#EAF1F7`, cards brancos/azul-claro muito arredondados, verde `~#8FD694` na aba ativa e verde-petróleo
+`~#2F6B73` num card de destaque. "Good morning Jhon"; card de pessoa (foto, cargo, "4+ years experience", ligar/e-mail);
+**"46,5 avg hours" com gráfico de pontos (altura = nº de pontos)**; donut de equipe; hiring com fotos + barras verdes;
+salários em lista. Fotos de pessoas humanizam o painel. Apresentado em 3 versões (plano, close inclinado, notebook).
+
+**Copiar (21):** progresso do pedido em 4 etapas **repetido** na home e no detalhe; rodapé fixo com total + 1 CTA;
+uma ação principal destacada na tab bar; acento só em ativo/CTA/selo.

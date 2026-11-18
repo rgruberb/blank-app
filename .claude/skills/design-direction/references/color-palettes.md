@@ -36,6 +36,17 @@ Hex = aproximado, amostrado dos swatches nos frames (vídeo comprimido; os rótu
 | Deep Purple `#572DB7` | Soft Teal `#42CA98` | Aurora Light `#66ACC5` — usado como **luz** (aurora azul-teal atrás do blob 3D), não como cor chapada | "cool" → "now it's a movie" | DfVlIwHISSv |
 | Sky Blue `#3D5DCA` | Grass Green `#2C6835` | Sunset Peach `#DC9F8D` — pôr do sol/brilho na tela da TV antiga (objeto + luz) | "now it's a memory" | DfVlIwHISSv |
 | Preto (dark UI) | cinza/branco do texto | Acid Lime `#C7F44F` | "now it has a personality" | DfSIP2iBuFI |
+| Midnight Navy `~#0B2A4A` | Soft Blue `~#BDE0F3` | Coral Orange `~#FF6B5E` — toques nos mockups de tênis/bolsa/boné | marca de tênis "Repalo" | DfmovsHjtmH (@pierredelcourr via @dailywebdesign) |
+| Deep Burgundy `~#7A1F2B` | Pale Pink/creme `~#F7E8D8` | Mustard `~#F2B01E` | restaurante "Woofers" | DfmovsHjtmH |
+| Neon Black `~#111111` | Powder Blue `~#B5D8F0` | Poppy Red `~#E5262D` | marca com Helvetica | DfmovsHjtmH |
+
+### Variante "sistema de marca" (@ramotion, rodada 3)
+
+Para identidade completa (não só uma landing), os cases da Ramotion usam **1 cor de marca saturada + preto/escuro +
+1–2 cores de apoio** (Source: green `#06B250` + `#0D0F0E` + laranja `#F7A21B` e ciano `#16B4F2`; Borea AI: azul
+`#3D5BF5` + quase preto + laranja `#F26B3A`). É o 2+1 com uma cor de apoio a mais reservada a ilustração/ícones;
+continua valendo "nunca mais de 3–4 cores de marca". Verde/vermelho de dado (preço, delta) são semânticos, não de
+marca. Detalhes, tipografia e antes/depois de paleta em `branding-identity.md`.
 
 ## Padrões que se repetem nas combinações
 
@@ -46,6 +57,9 @@ Hex = aproximado, amostrado dos swatches nos frames (vídeo comprimido; os rótu
 - Nos antes/depois, o reel às vezes mostra primeiro **só a base 1** (ex.: só Mandarin Orange, só Aqua Jade = site todo preto/laranja) → base 2 entra → acento por último: o acento é sempre o último toque.
 - **Acento quase sempre complementar ou oposto em temperatura** às bases (azul↔laranja, violeta↔lime/mint, rosa↔amarelo, verde↔rosa/pêssego).
 - Nenhum exemplo usa mais de 3 cores de marca (fora fotos/ilustração).
+- **Paleta mista → 1 cor** resolve mais que ajustar cada cor (antes/depois da home imobiliária, @dailywebdesign
+  DfzgxEKlx8z: coral+laranja+lilás → azul único). "Cinco cores brigando parece confuso; duas ou três parecem
+  confiantes" (@gg.designhub).
 
 ## Como aplicar no código (complemento)
 

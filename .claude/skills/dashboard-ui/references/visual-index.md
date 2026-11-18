@@ -26,3 +26,50 @@ Hex citados são aproximados (amostrados de JPEG comprimido).
 | `DfXoXVFPBfd.jpg` | @_code_and_chill_ | https://www.instagram.com/reel/DfXoXVFPBfd/ | Campanhas de anúncio de gravadora ("Ad Campaign Dashboard", marca ~"Amplo"; Overview, Reports, Campaigns) | dark quase preto + azul | Top nav em pílulas (ativa azul `~#7088e0`). **Overview "Good morning, Imogen":** gasto `£19,076.74`→`£23,094.80` contando, **anel multicolor (azul, verde, amarelo, vermelho) com orbe azul no centro**, área `75,365`, tabela de campanhas com pílulas, card com 3 números + barra azul. **Reports:** lista de relatórios à esquerda + "Total 140,708" em **barras horizontais coloridas** por canal. **Campaigns:** lista com aprovações pendentes (botões azuis) ↔ **board de 5 colunas**. Snippet `slidePill` (GSAP, clip-path) | Marketing/mídia paga; anel de distribuição de verba; reports por canal; list ↔ board |
 | `DfeT74YvQaD.jpg` | @_code_and_chill_ | https://www.instagram.com/reel/DfeT74YvQaD/ | CRM de estúdio de design de interiores (Overview, Pipeline, Schedule, Growth) | dark marrom-sépia quente | Tudo em tons de café `~#261e13`–`#4b3f2f`, ativo em **pílula creme** na top nav, rail de ícones à esquerda com item ativo em quadrado claro. **Overview:** `$41,849.73`→`$48,490.60` com linha, receita com linha + barras fantasma, listas. **Pipeline:** 4 colunas de cards de cliente com avatar e botão circular. **Schedule:** chips de pessoa + **agenda em colunas por dia** com blocos. **Growth:** 4 KPIs, barras creme e **anel de progresso** com %. Snippet `slidePill(... { radius = 12 })` com comentário "the leading edge runs ahead, the trailing edge catches up" | Paleta monocromática quente (alternativa ao preto/azul); CRM de serviços; agenda por pessoa |
 | `Dfct0mNvg3f.jpg` | @_code_and_chill_ | https://www.instagram.com/reel/Dfct0mNvg3f/ | Admin de e-commerce de velas (Overview, Products, Analytics) | dark vinho/magenta com glow laranja e azul | Sidebar larga magenta `~#781840` com grupos, badges e card de plano/anel no rodapé; CTA rosa `~#bf6888`. **Overview "Good morning, Noor":** `£9,318.40`, chips de filtro, **área empilhada rosa/amarelo/azul**, coluna direita com "23" + **3 barras de progresso coloridas** + lista + anel, faixa de 4 mini-KPIs com ícone colorido. **Products:** grade de cards com **monograma em pastel** (SF, FL, SC, WR, ST...) ↔ tabela. **Analytics:** 4 KPIs com ícone (rosa, amarelo, azul, laranja) + área empilhada larga. Snippet do `slidePill` cruzando eixos ("stretches like a strap") | E-commerce/loja; área empilhada por canal; placeholder de produto por monograma; grid ↔ tabela |
+
+## Prints únicos da rodada 3 (`<ID>_<n>.jpg`)
+
+Não são folhas de contato: cada arquivo é um slide/print. Descrição completa em `domain-examples.md` §20.
+
+| arquivo | autor | URL | domínio | estilo | o que mostra | quando abrir |
+|---|---|---|---|---|---|---|
+| `DXeeUP7FKGs_1.jpg` | @rish_designs (collab @ultimateuiux) | https://www.instagram.com/p/DXeeUP7FKGs/?img_index=1 | App de trading "Markets" (iOS) | dark `~#0B0B0D` + verde-limão `~#D4FF3A` | **Lista:** busca, abas Stocks/Crypto/ETFs/Kits, "Today's Movers" em cards, "All Assets" (logo + ticker + nome, preço + pílula de variação), tab bar com pílula limão. **Detalhe "Figma INC":** candles, seletor 1D…ALL, card "AI Report" com selo BEARISH, **Sell vermelho e Buy limão do mesmo tamanho no rodapé** | **Melhor referência para app de investimento** e "design para o momento de decisão"; anatomia do card de ticker |
+| `DSIMwtvDluO_1.jpg` | @ramotion (case Borea AI) | https://www.instagram.com/p/DSIMwtvDluO/?img_index=1 | Insights de investimento com IA (mobile) | dark + azul/laranja | Celular sobre rocha: rosca segmentada laranja→azul com score "74", cards de métrica, linha laranja | Score/indicador-resumo em rosca; dashboard mobile de investimento |
+| `DSIMwtvDluO_2.jpg` | @ramotion (Borea AI) | https://www.instagram.com/p/DSIMwtvDluO/?img_index=7 | Mesmo produto, web | dark em moldura com gradiente laranja→roxo→azul | "Top Traded Stocks" (AMD selecionado em azul), faixa "Activate Daily Free Predictions", "Top Traded Index ETFs" com variação verde, "Top Daily Movers" Gainers/Losers | Home de mercado em listas prontas; Gainers/Losers em duas colunas |
+| `DSIMwtvDluO_3.jpg` | @ramotion (Borea AI) | https://www.instagram.com/p/DSIMwtvDluO/?img_index=9 | Kit de UI | bento escuro | Botão-pílula em gradiente, card "Top Traded Index ETFs", chip "VOO +0.07%", ícone do app, set de ícones, linha com cursor vertical + ponto de leitura + seletor de período | Chip de ticker; gráfico de detalhe com cursor |
+
+Fontes da rodada 3 **sem imagem** (prints PNG não convertidos; use a descrição em `domain-examples.md`):
+`Dfz0mLAzsjg` (§14), `Dfjx6Stv3-d` (§15), `Dfo0F0Pvo4Y` (§16), `DfuS2Jbzsjt` (§17), `Dfw4gEmz87N` (§18),
+`DfrtgFyTmOM` (§19), `DX_bA4rCWf0`, `DVv7OOECewR`, `DYJwy9aCSYP` (§21).
+
+Prints soltos avaliados e **não copiados**: `De_J0aOl9SJ_2` e `Df1eAHODjT9_2` (@noahelhadedy) — carrossel "7 free
+libraries for animated UI": grade de componentes React animados (Kokonut UI: AI input, dial 21.0°, botões) e página de
+biblioteca de ícones em linha (humbleicons.com, categorias Medical / Data and analytics / UI). Úteis só como dica de
+fonte (motion → `ui-motion`; ícones de traço fino consistentes para dashboards (complemento)).
+
+## Perfis avaliados
+
+Contas lidas nas rodadas 3A/3B/3C avaliadas como fonte para **dashboards e telas de app** (leitura de 18/11/2026).
+Nota 1–5 = utilidade para esta skill.
+
+| Handle | Ativo? | Tipo | Nota | O que aproveitar |
+|---|---|---|---|---|
+| @_code_and_chill_ | sim (~81,5K) | templates de dashboard em código (reels 5–6 s com snippet) | 4 | Um acento só no dado que importa, pirulitos com meta, barra segmentada, heatmap de quadrados, matriz de risco, kanban de pedidos, `slidePill`. §14–16 + 10 reels antigos |
+| @code.xr | sim (~122K) | educador React; UI glass/skeuo com código | 4 | Skeuomorfismo creme, sidebar curva aninhada, coral = urgência; série glass. §17–19 + §8 antigos |
+| @rish_designs | (via repost @ultimateuiux) | designer de produto | 4 | App de trading "Markets": momento de decisão, card de ticker, AI Report, Buy/Sell iguais. §20a |
+| @ramotion | sim, raro (157K) | agência; cases de marca/produto | 3 | Borea AI: listas prontas, Gainers/Losers, chip de ticker, cursor no gráfico, 404 no sistema. §20b |
+| @ui.pixel | sim, irregular (88,2K) | curadoria de telas (repost) | 2 | Fluxos completos: progresso em 4 etapas, rodapé fixo com total, tab bar com ação central, RH com gráfico de pontos. Recentes são de hackathon/patrocínio. §21 |
+| @ultimateuiux | sim (120K) | comunidade; ~70% meme | 2 | Só os reposts de @rish_designs |
+| @dailywebdesign | sim (581K) | curadoria/repost | 2 | Para painéis: catálogo de 8 loaders (detalhes em `ui-motion`), antes/depois de home de app (paleta única, filtros-pílula com 1 ativo) |
+| @uidesignpatterns | sim, raro (413K) | curadoria sem texto | 1 | Pouco para dashboards (404, sites editoriais → `design-direction`) |
+| @felvrabr | (rodada anterior) | mockups de "OS" operacional | 4 | Já indexado acima (`Dfui4V5BMbz` etc.) |
+| @noahelhadedy | sim | dicas de bibliotecas de UI | 2 | Listas de bibliotecas de componentes animados e de ícones (prints soltos, não copiados) |
+| @gifux | não: 0 posts | — | 1 | Nada |
+| @interfacely | não: perfil não existe | — | — | Nada |
+| @spruzzo.ui | não: perfil não existe | — | — | Nada |
+| @uxmemo | não: perfil não existe | — | — | Nada |
+| @twohabitsdesign | não: parado desde 22/11/2022 | — | — | Nada novo |
+| @uxdesignmastery | não: parado desde 05/2024 | — | 1 | Nada novo |
+| @ui.tips | não: parado desde 02/2023 | — | 1 | Nada novo |
+| @nick_buturishvili | não: parado desde 07/2024 | — | 1 | Nada novo |
+| @christvizcarra | não: parado desde 11/2024 | — | 1 | Nada novo |

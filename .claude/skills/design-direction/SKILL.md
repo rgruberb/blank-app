@@ -1,11 +1,11 @@
 ---
 name: design-direction
-description: Direção de arte para sites, landing pages e apps — escolhe paleta de 2 cores base + 1 acento (com catálogo de combinações e hex), empilha "camadas" visuais (identidade → profundidade → movimento), aplica layout que transmite confiança (espaço, alinhamento, ritmo calmo) e guia o workflow de usar o Claude para web design mostrando referências em vez de descrever com adjetivos, inclusive para adicionar movimento. Use quando o usuário pedir "escolhe uma paleta", "que cores usar no site", "deixa com cara premium/cara de startup", "o site está genérico/sem personalidade", "melhora a direção de arte", "parece pouco confiável", "como pedir pro Claude fazer um site bonito", "adiciona animação/movimento no site", "Claude Design", "como usar o Claude Design", "design system no Claude Design", "pitch deck/landing/protótipo de app/vídeo de lançamento no Claude Design", "limite do Claude Design acabou", ou antes de começar a UI de uma landing page nova.
+description: Direção de arte e identidade visual para sites, landing pages, apps e marcas — escolhe paleta de 2 cores base + 1 acento (com catálogo de combinações e hex), empilha "camadas" visuais (identidade → profundidade → movimento), aplica layout que transmite confiança (espaço, alinhamento, ritmo calmo) e guia o workflow de usar o Claude para web design mostrando referências em vez de descrever com adjetivos, inclusive para adicionar movimento; cobre também branding (logo, embalagem que comunica preço, sistema de marca com paleta e par tipográfico, movimento do logo). Use quando o usuário pedir "escolhe uma paleta", "que cores usar no site", "deixa com cara premium/cara de startup", "o site está genérico/sem personalidade", "melhora a direção de arte", "parece pouco confiável", "como pedir pro Claude fazer um site bonito", "adiciona animação/movimento no site", "Claude Design", "como usar o Claude Design", "design system no Claude Design", "pitch deck/landing/protótipo de app/vídeo de lançamento no Claude Design", "limite do Claude Design acabou", "branding", "identidade visual", "criar marca/logo", "brand book", "embalagem/packaging", "o logo está ruim", "animar o logo", "parece barato/caro demais", ou antes de começar a UI de uma landing page nova.
 ---
 
 # Design Direction
 
-Destilado de 11 reels sobre direção de arte web (paletas 2+1, camadas, layout de confiança, workflow com Claude). Use para **decidir** a direção antes de codar e para **corrigir** UIs genéricas.
+Destilado de 11 reels sobre direção de arte web (paletas 2+1, camadas, layout de confiança, workflow com Claude) e da rodada 3 de perfis (branding, logo, embalagem, sistemas de marca da Ramotion, antes/depois de paleta). Use para **decidir** a direção antes de codar e para **corrigir** UIs genéricas.
 
 ## Quando usar
 
@@ -14,6 +14,7 @@ Destilado de 11 reels sobre direção de arte web (paletas 2+1, camadas, layout 
 - Página que precisa parecer segura (fintech, B2B, saúde, onboarding).
 - Pedido de movimento/animação num site existente.
 - Usuário descrevendo o visual só com adjetivos ("premium", "moderno", "clean").
+- Criar/revisar **identidade visual**: logo, paleta e tipografia de marca, embalagem, perfil social, brand book.
 
 ## Regras centrais
 
@@ -24,7 +25,11 @@ Destilado de 11 reels sobre direção de arte web (paletas 2+1, camadas, layout 
 5. **Tipografia de identidade em trio:** sans no headline, serif itálico em 1 palavra/linha de ênfase ("The handoffs run *themselves.*"), mono em labels/metadados.
 6. **Confiança = espaço + alinhamento + ritmo calmo.** Mesmo texto, layout diferente muda a credibilidade: 1 CTA primário por tela, uma borda de alinhamento por coluna, margens generosas, nada de widgets competindo acima da dobra. "A page that looks cared for gets believed."
 7. **Mostre, não descreva.** Nunca peça "make it look premium". Dê referências reais (URL, screenshot, componente) e decisões concretas (hex, fontes, hierarquia). "Adjectives get you an interpretation. References get you the result."
-8. **Movimento: um efeito por vez**, sutil e legível, testado em desktop e mobile. Tipos: headline reveal, micro-interactions, portfolio showcase, animated gallery, scroll reveal.
+8. **Marca é julgada em ~3 s, antes do produto**: fachada/site, logo, cores, perfil social e embalagem precisam contar a mesma história. 2–3 cores e consistência valem mais que parecer caro.
+9. **Sistema de marca = 1 cor saturada + escuro + 1–2 de apoio**, display larga **só em títulos** + Inter (sans neutra) no corpo; documente hex **e** RGB; 1 palavra do título na cor de marca (padrão dos 3 cases da Ramotion). É o 2+1 da regra 1 em escala de sistema: a cor de apoio extra fica para ícones/ilustração/páginas secundárias, nunca compete com o acento na mesma tela.
+10. **Logo**: 1 ideia, funciona pequeno (ícone de app) e em preto e branco chapado, sem depender de degradê/tendência. O movimento faz parte do logo: traço lento = calmo, encaixe rápido = ágil, crescer de um ponto = amigável.
+11. **Visual comunica preço**: budget = cores altas + ofertas; mid = azul/bege + selo de valor; premium = preto + dourado, serifa discreta, muito espaço. Defina preço/posicionamento antes; design desalinhado do valor perde vendas.
+12. **Movimento: um efeito por vez**, sutil e legível, testado em desktop e mobile. Tipos: headline reveal, micro-interactions, portfolio showcase, animated gallery, scroll reveal.
 
 ## Workflow
 
@@ -35,7 +40,8 @@ Destilado de 11 reels sobre direção de arte web (paletas 2+1, camadas, layout 
 5. **Camada 1 – identidade** (cores + tipografia). Valide.
 6. **Camada 2 – profundidade** (luz/glow, frosted glass, sombras). Valide.
 7. **Camada 3 – movimento**, um efeito por vez (implementação: `ui-motion`, `ext-gsap-scrolltrigger`, `ext-gsap-*`). Respeite `prefers-reduced-motion`.
-8. **Crítica final** com `ext-impeccable` (design system/critique) e `ext-taste-skill` (anti-slop); cheque contraste do acento (AA 4.5:1).
+8. **Se o pedido for marca/identidade**: siga o workflow de `references/branding-identity.md` §8 (pesquisa e faixa de preço → paleta → par tipográfico → logo testado pequeno e em P&B → 5 pontos de contato).
+9. **Crítica final** com `ext-impeccable` (design system/critique) e `ext-taste-skill` (anti-slop); cheque contraste do acento (AA 4.5:1).
 
 ## Referências — quando abrir
 
@@ -43,17 +49,21 @@ Destilado de 11 reels sobre direção de arte web (paletas 2+1, camadas, layout 
 |---|---|
 | `references/color-palettes.md` | For escolher/propor paleta; precisar de hex; quiser os padrões base→acento (16 combinações citadas). |
 | `references/layers-and-trust-layout.md` | For montar camadas (identidade/profundidade/movimento), revisar layout por confiança, ou listar os 5 tipos de movimento. |
+| `references/branding-identity.md` | For criar/revisar **marca**: logo (6 erros), embalagem × faixa de preço, os 5 pontos de contato julgados em 3 s, movimento do logo, sistemas de marca da Ramotion (paleta + par tipográfico + ordem do brand book), antes/depois de paleta e direção de arte de páginas de marca (scroll-storytelling 3D, foto PB com 1 cor, 404). |
 | `references/claude-web-design-workflow.md` | For escrever prompts de web design, orientar o usuário a dar referências, ou planejar o processo com o Claude. |
 | `references/claude-design-course.md` | For usar o **Claude Design** (app da Anthropic): criar design system/brand, pitch deck, wireframe vs. high-fidelity de landing, protótipo de app mobile, vídeo de lançamento com HyperFrames, levar para Claude Code → GitHub → Vercel, ou economizar o limite de sessão do Design. |
-| `references/visual-index.md` | Precisar saber qual imagem mostra qual exemplo antes de abrir uma. |
+| `references/visual-index.md` | Precisar saber qual imagem mostra qual exemplo antes de abrir uma; ou consultar a tabela **"Perfis avaliados"** (quais contas valem como fonte, inclusive as inativas). |
 
 ## Imagens (`assets/visual-refs/*.jpg`)
 
-Folhas de contato 4x3 dos reels. **Só abra quando precisar de exemplo visual concreto** (mostrar ao usuário, conferir composição) — custam contexto e os hex já estão nas references. Melhores apostas:
+Folhas de contato 4x3 dos reels (`<ID>.jpg`) e prints únicos da rodada 3 (`<ID>_<n>.jpg`). **Só abra quando precisar de exemplo visual concreto** (mostrar ao usuário, conferir composição) — custam contexto e os hex já estão nas references. Melhores apostas:
 - `Dfc-Q-0yy0W.jpg` — acento só no botão em landings SaaS (antes/depois).
 - `DfSIP2iBuFI.jpg` — mesma página nas 4 camadas.
 - `DfyFShTounu.jpg` — layout inseguro vs. seguro (mobile).
 - `DfVlIwHISSv.jpg` — terceira camada como luz/objeto 3D.
+
+- `Dak9nkTFpYI_1.jpg` / `_2.jpg` — paleta de marca documentada (hex+RGB) e par Funnel Display + Inter (Ramotion).
+- `DYpD5C7zwx6_1.jpg` — página de produto com 3D, título outline + sólido.
 
 `De9oszIIQ4V.jpg` e `Dfm0NTiIfyd.jpg` são fora do tema (hype de ferramentas de IA); não abra.
 
