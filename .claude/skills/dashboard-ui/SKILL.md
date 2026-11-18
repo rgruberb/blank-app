@@ -1,18 +1,20 @@
 ---
 name: dashboard-ui
-description: Galeria de referências e padrões visuais para dashboards e web apps (vendas de varejo, gestão de projetos/kanban, portal de seguros marítimos, analytics de receita SaaS, orçamento familiar, smart home, plataforma de saúde com prior authorization) e para a série glassmorphism (login, dashboards V7/V8, sidebar V5), destilados de 11 reels com folhas de contato em assets/visual-refs. Use ao "criar dashboard", "painel admin", "tela de analytics", "glassmorphism", "admin panel", "KPI cards", "sidebar de app", "kanban", "tela de login com vidro" ou ao revisar a hierarquia, a paleta e a densidade de um painel existente.
+description: Galeria de referências e padrões visuais para dashboards e web apps (vendas de varejo, e-commerce, kanban, seguros marítimos, analytics SaaS, campanhas de anúncio, CRM de estúdio, orçamento familiar, smart home, saúde, e "OS" operacionais sobre foto aérea — fazenda, usina solar, resort) e para a série glassmorphism (login, dashboards V7/V8/V30, sidebar V5), destilados de 18 reels com folhas de contato em assets/visual-refs, mais padrões de gamificação (progresso, metas, checklist, níveis, ranking) para painel de gestor e de cliente. Use ao "criar dashboard", "painel admin", "tela de analytics", "glassmorphism", "admin panel", "KPI cards", "sidebar de app", "kanban", "tela de login com vidro", "gamificação", "dashboard gamificado", "painel do gestor/cliente com metas" ou ao revisar a hierarquia, a paleta e a densidade de um painel existente.
 ---
 
 # dashboard-ui
 
 Padrões de layout, KPI, gráficos, paleta e glassmorphism para dashboards, tirados de referências reais
-(@_code_and_chill_, @ui.iliasmiah000, @code.xr). As imagens estão em `assets/visual-refs/<ID>.jpg`;
+(@_code_and_chill_, @ui.iliasmiah000, @code.xr, @felvrabr). As imagens estão em `assets/visual-refs/<ID>.jpg`;
 o índice com autor, URL e quando abrir cada uma está em `references/visual-index.md`.
 
 ## Quando usar
 - Montar do zero um dashboard, painel admin, tela de analytics, kanban ou portal B2B.
 - Escolher entre tema escuro, claro ou glass para um app de dados.
 - Fazer cards, sidebar ou formulário de login em glassmorphism.
+- Prototipar um painel **gamificado** (progresso, metas, níveis, ranking) para gestor e/ou cliente —
+  `references/layout-patterns.md` §7.
 - Revisar um painel que parece genérico ("AI slop"): KPIs sem hierarquia, gradiente roxo aleatório, cards iguais.
 
 ## Padrões recorrentes (o que as referências têm em comum)
@@ -44,6 +46,14 @@ o índice com autor, URL e quando abrir cada uma está em `references/visual-ind
    **troca de página com o conteúdo desfocando e voltando** (SaaS, orçamento, smart home, V7/V8);
    barco que percorre a rota no stepper; números que contam até o valor; entrada escalonada dos cards (saúde).
    Detalhes em `references/layout-patterns.md`.
+9. **Objeto do domínio como canvas operacional** (série @felvrabr: fazenda, usina, resort): foto aérea em tela cheia
+   com polígonos/pins que carregam estado, popover com 1 número + 1 CTA, e **a ação muda o estado no próprio objeto**
+   ("Start irrigation" → "✓ Irrigating · 40 min", talhão âmbar → verde). Coluna "Overview" de vidro escuro com KPIs 2x2,
+   chips de estado em palavra ("Healthy", "On track"), gauge "TODAY" e checklist segmentado "3/4". Mesmo layout,
+   acento trocado por domínio.
+10. **Progresso como linguagem** (base para gamificação): gauges que enchem, anéis N/M, checklists segmentados,
+    números que contam. Nenhuma referência tem pontos/badges/ranking explícitos — esses blocos estão em
+    `layout-patterns.md` §7 marcados como complemento.
 
 ## Paleta: escuro vs claro
 - **Escuro neutro-quente** (saúde, tasks): fundo `#0b0c0e`, cards `#151618`–`#1b1c1e`, borda 1px `rgba(255,255,255,.06)`,
@@ -53,6 +63,9 @@ o índice com autor, URL e quando abrir cada uma está em `references/visual-ind
   um radial-gradient grande e desfocado atrás do conteúdo; cards translúcidos por cima.
 - **Claro monocromático** (varejo): fundo `#eceeed`, cards brancos e cinza-claro `#e2e4e3`, cards-destaque pretos
   `#111`, sombra mínima; a única cor são os deltas verdes. Seguros (detalhe) usa claro com névoa teal `#e6f7f8`.
+- **Monocromático quente** (CRM de interiores `DfeT74YvQaD`): só tons de café/sépia `#261e13`–`#4b3f2f`, ativo em pílula creme.
+- **Vinho/magenta com glows** (e-commerce `Dfct0mNvg3f`): sidebar magenta `#781840`, CTA rosa `#bf6888`, glows laranja e azul.
+- **Vidro escuro tingido pela foto** (@felvrabr): oliva + lima `#c6e17a`, ardósia + âmbar `#f0b048`, petróleo + menta `#6cf0c9`.
 - **Glass neutro** (smart home): tudo em cinza grafite translúcido `#505251`, ativo em pílula branca; a cor vem das fotos.
 - Ofereça os dois temas quando o painel for uso diário (varejo e seguros mostram dark + light do mesmo produto,
   com a troca animada).
@@ -97,17 +110,21 @@ Versão completa (login com cantos chanfrados, botão neon, item ativo em pílul
 Cada imagem custa contexto. Não abra todas: escolha 1–2 pela coluna "quando abrir" do índice.
 Cada folha tem 12 quadros em ordem cronológica (4 colunas x 3 linhas), cobrindo o vídeo inteiro: dá para ver
 várias telas do mesmo produto e os estados intermediários das animações. Nos reels de @_code_and_chill_ e @code.xr
-cada quadro traz a UI em cima e um snippet de código embaixo.
+cada quadro traz a UI em cima e um snippet de código embaixo; nos de @felvrabr são close-ups da UI num tablet.
 
 Atalhos: dashboard escuro completo e bem hierarquizado → `DfV39ohhwAC`; claro minimalista com KPI invertido e
 troca de tema → `De12lc1vUmr`; home pessoal + kanban + settings → `Deoi1WhP83h`; funil/coorte → `DffBnb2vlUn`;
 fintech pessoal → `DfkNvnePItL`; IoT/mídia → `DfrqAX9v59S`; glass sobre foto → `DfKPFDwz2aA` / `DfHrMboTVDZ`;
-sidebar recolhível → `DfMH6YTTcwx`; login glass → `DeoGCPlzKOs`.
+sidebar recolhível → `DfMH6YTTcwx`; login glass → `DeoGCPlzKOs`; **protótipo gamificado / mapa operacional com
+ação → estado → `Dfui4V5BMbz`** (variações `DfpCOjIB1Rb` solar, `Dfr9S5yhlvX` reservas com Gantt e meta de ocupação);
+campanhas de mídia → `DfXoXVFPBfd`; e-commerce → `Dfct0mNvg3f`; CRM de serviços quente → `DfeT74YvQaD`;
+glass claro sobre foto → `Dfj_FGsTAVB`.
 
 ## Arquivos
-- `references/visual-index.md` — tabela das 11 referências (autor, URL, domínio, estilo, quando abrir).
+- `references/visual-index.md` — tabela das 18 referências (autor, URL, domínio, estilo, quando abrir).
 - `references/domain-examples.md` — descrição de cada dashboard e o que copiar dele.
-- `references/layout-patterns.md` — estruturas, KPI cards, gráficos, densidade, animações com código.
+- `references/layout-patterns.md` — estruturas, KPI cards, gráficos, densidade, animações com código e
+  §7 padrões de gamificação (gestor vs. cliente).
 - `references/glassmorphism.md` — receita CSS completa da série glass.
 
 ## Skills externas (dependências)

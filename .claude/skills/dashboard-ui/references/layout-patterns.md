@@ -1,6 +1,6 @@
 # Padrões de layout, KPI, gráficos e movimento
 
-Destilado das 11 referências (ver `visual-index.md`). Valores numéricos de espaçamento e raio são estimativas
+Destilado das 18 referências (ver `visual-index.md`). Valores numéricos de espaçamento e raio são estimativas
 visuais; os que não vêm das imagens estão marcados "(complemento)".
 
 ## 1. Esqueletos de página
@@ -38,6 +38,30 @@ visuais; os que não vêm das imagens estão marcados "(complemento)".
 Título da entidade + metadados → **stepper de etapas** horizontal → grid 3 colunas de campos (rótulo 11px cinza,
 valor 13–14px) → card lateral com o número que importa (prêmio `$66,500`) e lista chave/valor.
 
+### E. Mapa/foto aérea como canvas (série @felvrabr `Dfui4V5BMbz`, `DfpCOjIB1Rb`, `Dfr9S5yhlvX`)
+```
+┌───────────────────────────── foto aérea = mapa ─────────────────────────────┐
+│ ◆ Marca  [⌕ busca……]                                   🔔  (AP) Nome/cargo │
+│ ┌sidebar┐   ● pin "Field 01"        ┌popover──────┐   [NDVI]  ┌Overview───┐ │
+│ │ ▢ ... │   ▱ polígono "Dry"  ───── │ foto · chip │   Moist.  │ KPI │ KPI │ │
+│ │(pílula│                           │ 18%  [CTA]  │   Yield   │ KPI │gauge│ │
+│ └───────┘                           └─────────────┘   Pivots  │ plano 3/4 │ │
+│ ┌Mix (anéis)┐┌Forecast (12 barras, 1 destacada)──┐            │ mensagens │ │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+- Os objetos do domínio (talhão, bloco de painéis, vila) são **polígonos/pins clicáveis** sobre a foto; o estado
+  pinta o objeto (âmbar = problema, acento = ok/em ação).
+- Popover ancorado ao pin com foto, chip de estado, 1 número e **1 CTA cheio**; após a ação o CTA vira linha de estado.
+- Camadas do mapa como pílulas verticais à direita (ativa no acento).
+- Coluna "Overview" de vidro escuro à direita: grade 2x2 de KPIs → card de plano/ordem com responsável e checklist
+  segmentado → mensagens recentes.
+- Mesmo esqueleto, acento trocado por domínio: lima (agro), âmbar (solar), menta + coral (resort).
+
+### F. Gantt de reservas (resort `Dfr9S5yhlvX`)
+Dias em colunas, **hoje destacado como coluna mais clara**, uma linha por unidade (vila), barras arredondadas com
+nome + noites; nova reserva entra na cor do acento (menta) enquanto as existentes ficam em coral. Embaixo, grade de
+ocupação (heatmap de células) + área de receita por noite com tooltip. Bom para qualquer alocação recurso × tempo.
+
 ## 2. KPI cards — anatomia
 1. Rótulo: 11–12px, caps ou sentence case, cinza (60% opacidade), às vezes com ícone de 14px.
 2. Valor: 28–36px, peso regular/medium (saúde usa peso leve), tabular nums (complemento: `font-variant-numeric: tabular-nums`).
@@ -52,6 +76,9 @@ Variações vistas:
 - **KPIs sem caixa** em faixa, separados só por espaço — saúde e tasks. Menos ruído, mais densidade.
 - **Mini-KPIs dentro do card do gráfico** (Submitted / Decided / Backlog change) — saúde.
 - **Card de cor sólida** no meio de um layout glass (azul com barras brancas) — V8.
+- **Grade 2x2 com chip de estado em palavra** ("Healthy", "Rising", "On track", "Clear") no canto direito do valor e
+  mini-visual próprio embaixo (linha, pirulitos, gauge) — série @felvrabr.
+- **Mini-KPIs com ícone circular colorido** no canto, uma cor por categoria — e-commerce `Dfct0mNvg3f`, ad campaign.
 
 ## 3. Gráficos vistos e como foram estilizados
 | tipo | onde | estilo |
@@ -75,6 +102,16 @@ Variações vistas:
 | Pilares de luz | glass V7 | barras verticais em gradiente branco→transparente, selecionada em laranja com rótulo |
 | Dial de termostato | smart home | arco branco com knob, valor central, +/- nas laterais |
 | Grade de agenda (heatmap binário) | smart home Climate | 7 dias x 24 h, célula branca = ligado |
+| Barras de 12 meses em trilhos, 1 mês destacado | série @felvrabr (Harvest Forecast, Generation) | pílulas cinza-gradiente, o mês-alvo no acento com tooltip-pílula ("Mar · 4.2k t") |
+| Pirulitos com limite | @felvrabr (Pivots running, Crews on site) | hastes finas com bolinha, marcador "Max 4", o ativo no acento |
+| Anéis concêntricos de mix | @felvrabr (Crop Mix, Energy Mix) | 3 arcos (acento, tom médio, branco), total no centro, legenda com % |
+| Progresso segmentado N/M | @felvrabr ("Zones irrigated 3/4", "Pre-job checklist 3/4") | 4 células lado a lado que enchem uma a uma, % à direita |
+| Anel de ocupação "5/6 · 83%" | resort `Dfr9S5yhlvX` | anel menta com fração no centro, % ao lado, sobe até 100% |
+| Gantt | resort `Dfr9S5yhlvX` | barras coral, nova reserva em menta, coluna de hoje clara |
+| Anel multicolor com orbe | ad campaign `DfXoXVFPBfd` | 4 segmentos (azul, verde, amarelo, vermelho) + esfera azul brilhante no centro |
+| Barras horizontais por canal | ad campaign Reports | barras finas coloridas com valor à direita e total no topo ("Total 140,708") |
+| Área empilhada | e-commerce `Dfct0mNvg3f` | rosa/amarelo/azul opacos, curvas suaves |
+| Dial circular | glass V30 `Dfj_FGsTAVB` | anel azul com knob, valor em graus que anima (50° → 65°) |
 
 Regras que se repetem: histórico em neutro + destaque no "agora"; nenhum gráfico 3D; legendas como lista
 tabular; eixos mínimos. Para cores e marcas, use a skill `dataviz`.
@@ -82,6 +119,7 @@ tabular; eixos mínimos. Para cores e marcas, use a skill `dataviz`.
 ## 4. Densidade e heros de domínio
 - Heros que não são gráfico aparecem quando o objeto do domínio é visual: cartão de crédito 3D (orçamento),
   câmera da sala (smart home), stepper-rota com barco (seguros). Use no máximo um por tela.
+- **Foto aérea como mapa operacional** (fazenda, usina, resort — @felvrabr): o hero é clicável e carrega estado.
 
 - Operacional (saúde, tasks): denso — 5 KPIs + 2 gráficos + tabela + card de IA na primeira dobra, padding de card ~16–20px, gaps ~12–16px.
 - Executivo/vitrine (varejo, glass V7/V8): mais ar — padding ~24px, menos itens por linha.
@@ -152,6 +190,15 @@ círculo do `startViewTransition` também para a troca de tema.
   e os números contam até o novo valor.
 - Varejo: o gauge cresce (79% → 86%) e os KPIs mudam de valor ao trocar de tela.
 
+### Ação → estado no objeto (série @felvrabr)
+CTA cheio no popover ("Start irrigation", "Dispatch technician") → o botão é trocado por uma linha de estado
+("✓ Irrigating · 40 min", "Crew 3 · ETA 11:50") e o objeto no mapa muda de cor (âmbar → verde). Sem modal, sem toast.
+Complemento: `button` → `role="status"` com `aria-live="polite"`; crossfade ~200ms.
+
+### Pílula elástica, variantes novas
+- Raio configurável: `slidePill(pill, target, { radius = 12 })` → `inset(... round ${radius}px)` (CRM interiores `DfeT74YvQaD`).
+- Eixo cruzado também anima, ~0.45s (e-commerce `Dfct0mNvg3f`); top nav horizontal (ad campaign `DfXoXVFPBfd`).
+
 ### Ilha de estado (tasks)
 Pílula preta fixa no topo central ("Focus 24:56") que expande num card com detalhes e ações; um toast confirma
 o modo ("notifications are held"). Bom para um modo ativo global (foco, gravação, sync).
@@ -160,3 +207,71 @@ o modo ("notifications are held"). Bom para um modo ativo global (foco, gravaç�
 Framer Motion `whileHover={{ y: -5 }}`. Complemento: `transition={{ type: 'spring', stiffness: 300, damping: 24 }}`.
 
 Sempre respeite `prefers-reduced-motion` (complemento): sem clip-path animado, troca instantânea.
+
+## 7. Padrões de gamificação
+
+**Leitura honesta das referências:** nenhum dos 18 reels mostra gamificação explícita — **não há pontos/XP, níveis,
+badges, streaks, rankings/leaderboards nem tela de recompensa**. O que aparece, e muito bem resolvido, é a
+**camada de progresso e meta** sobre a qual a gamificação se constrói. Abaixo, primeiro o que se vê (com ID), depois
+como usar num painel de gestor e num de cliente. Tudo marcado "(complemento)" é sugestão, não está nas imagens.
+
+### 7.1 O que se vê
+| mecânica | como aparece | onde |
+|---|---|---|
+| **Progresso até a meta do dia** | gauge semicircular de ticks que enche e conta (33% → 92% "TODAY"; 33% → 91%) | `Dfui4V5BMbz` Crop health, `DfpCOjIB1Rb` Performance ratio |
+| **Checklist segmentado N/M** | barra em 4 células que enchem uma a uma, fração no rótulo ("Zones irrigated 3/4", "Pre-job checklist 3/4") e % à direita | `Dfui4V5BMbz`, `DfpCOjIB1Rb` |
+| **Meta que se completa** | anel "5/6 · 83%" → 95% → 100% enquanto uma reserva entra pelo chat | `Dfr9S5yhlvX` |
+| **Limite/capacidade visível** | pirulitos com marcador "Max 4" (pivôs ou equipes ativas) | `Dfui4V5BMbz`, `DfpCOjIB1Rb` |
+| **Comparação com alvo** | texto pequeno ao lado do valor no popover (18%, leitura "vs target") | `Dfui4V5BMbz`, `DfpCOjIB1Rb` |
+| **Estado em palavra, colorido** | chips "Healthy", "Rising", "On track", "Clear", "Low moisture", "Alert" | série @felvrabr |
+| **Feedback imediato da ação** | CTA → "✓ Irrigating · 40 min" e o polígono do talhão vira de âmbar para verde | `Dfui4V5BMbz` (também "Dispatch technician" → "Crew 3 · ETA 11:50") |
+| **Números que contam até o valor** | gasto £19,076 → £23,094; receita $41,849 → $48,490; MWh 47.4 → 48.6 | `DfXoXVFPBfd`, `DfeT74YvQaD`, `DfpCOjIB1Rb` |
+| **Destaque do "agora"** | um único mês aceso no acento com tooltip-pílula ("Mar · 4.2k t") | série @felvrabr |
+| **Progresso de metas/pacing (rótulos ilegíveis)** | 3 barras coloridas sob um número "23"; barra azul sob 3 números; anéis de % | `Dfct0mNvg3f`, `DfXoXVFPBfd`, `DfeT74YvQaD` Growth |
+| Já na skill | anéis concêntricos com valor/meta (Tasks 3/8, Focus 1.1h/2h), timer de foco, check magenta em tarefa | `Deoi1WhP83h` |
+
+### 7.2 Blocos de UI gamificada derivados (complemento, construídos sobre 7.1)
+- **Anel/gauge de meta** com fração e prazo: "3/4 zonas · fecha hoje". Ao chegar a 100%: o arco troca para a cor do
+  acento cheio e um check aparece (um pulso, ~400ms, uma vez só).
+- **Checklist segmentado como "trilha de missão"**: cada célula = uma etapa nomeada no hover; a célula ativa pulsa de leve.
+- **Nível/tier** derivado de uma métrica existente (ex.: NDVI médio → "Bronze/Prata/Ouro" ou "Nível 3 · Saudável"),
+  exibido como chip ao lado do KPI, nunca como tela separada.
+- **Streak**: fileira de 7 pontos (dias) acima do KPI, preenchidos no acento quando a meta do dia foi batida —
+  reaproveita a grade de células de `Dfr9S5yhlvX`/`DfrqAX9v59S`.
+- **Ranking**: lista tabular (posição · avatar · nome · barra horizontal · valor), como as barras por canal de
+  `DfXoXVFPBfd` Reports; destaque só para "você" ou para o 1º, o resto neutro.
+- **Badge/conquista**: ícone 3D pequeno (estilo dos produtos do V30 `Dfj_FGsTAVB`) dentro do card de mensagens
+  recentes ("Marcos concluiu 4/4 zonas"), em vez de modal de comemoração.
+- **Recompensa**: barra de pontos até o próximo benefício com o valor restante em texto ("faltam 120 pts para frete grátis").
+
+### 7.3 Painel do gestor vs. painel do cliente (complemento)
+| | **gestor** (opera, acompanha a equipe) | **cliente** (acompanha o próprio resultado) |
+|---|---|---|
+| pergunta | "quem/qual área está atrás da meta e o que faço agora?" | "como estou indo e o que falta para o próximo marco?" |
+| métrica de progresso | % da equipe/área no prazo (gauge "92% TODAY"), checklists por ordem de serviço | 1 meta pessoal grande (anel), marco seguinte com prazo |
+| ranking | sim, entre equipes/talhões/vendedores, com filtro e ordenação por risco (como a saúde `DfV39ohhwAC`) | evitar ranking contra outros clientes; no máximo "você vs. sua média" |
+| badges/níveis | atribuídos pelo gestor ou automáticos; visíveis como chips na lista da equipe | nível/tier do cliente como chip no header; conquistas em histórico |
+| streaks | por equipe (dias sem atraso), discreto | pessoal, visível no topo da home |
+| feedback de ação | ação no objeto → estado muda no mapa/lista (padrão Verdan) | marco atingido → anel completa + mensagem curta; nunca bloquear a tela |
+| densidade | operacional: mapa/lista + coluna de KPIs 2x2 + plano + mensagens | vitrine: poucos cards grandes, um hero de progresso, CTA único |
+| tom | chips de estado em palavra ("On track", "Atrasado"), âmbar para risco | linguagem positiva ("faltam 2 etapas"), sem vermelho para o próprio cliente |
+
+**Como montar a partir do Verdan `Dfui4V5BMbz`** (complemento): gestor = layout E inteiro (mapa + Overview), com o
+card de plano virando "missão" (responsável, checklist 3/4, prazo) e um card de ranking de talhões/equipes no lugar de
+Recent Messages; cliente = mesma coluna Overview em largura total, sem o mapa operacional, com o gauge como hero
+("Saúde da sua lavoura 92%"), streak de 7 dias, chip de nível e o mês destacado como "próximo marco".
+
+### 7.4 Regras e anti-padrões (complemento)
+- Gamifique **comportamento que o usuário controla** (concluir checklist, responder no prazo), não números que ele
+  não move (preço, clima).
+- Uma barra de progresso principal por tela; o resto em chips. Celebração = 1 animação curta, uma vez, com
+  `prefers-reduced-motion` respeitado.
+- Mostre o próximo passo junto do progresso ("3/4 · falta Zona 4 · Start irrigation"), como o popover faz com o CTA.
+- Sem dark patterns: nada de streak que "quebra" para pressionar compra, nem ranking público de clientes
+  (ver a skill `ux-patterns`).
+```css
+/* checklist segmentado "3/4" (complemento, a partir de Dfui4V5BMbz) */
+.seg { display:grid; grid-template-columns:repeat(var(--n,4),1fr); gap:6px; }
+.seg i { height:28px; border-radius:8px; background:rgba(255,255,255,.06); }
+.seg i.done { background: var(--accent, #c6e17a); transition: background .3s ease-out; }
+```

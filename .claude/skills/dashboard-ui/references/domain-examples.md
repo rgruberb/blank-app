@@ -1,6 +1,6 @@
 # Exemplos por domínio — o que cada referência faz e o que copiar
 
-Descrições feitas a partir das folhas de contato (12 quadros por reel). Textos muito pequenos são citados só
+Descrições feitas a partir das folhas de contato (12 quadros por reel; 18 reels). Textos muito pequenos são citados só
 quando legíveis. Hex aproximados. Itens marcados "(complemento)" não aparecem na referência; são sugestões para
 completar o padrão.
 
@@ -209,3 +209,166 @@ Snippet comum: `motion.div whileHover={{ y: -5 }} className="glass-card p-6 roun
 
 **Copiar:** glass só sobre fotografia ou fundo rico; um card de cor sólida para ancorar o olhar; hover com elevação
 de 5px; serifa para títulos dá ar "premium"; widgets persistentes entre páginas; transição de formulário pelo logo.
+
+---
+
+## 9. Série "OS" de operações sobre foto aérea — @felvrabr (`Dfui4V5BMbz`, `DfpCOjIB1Rb`, `Dfr9S5yhlvX`)
+Os três reels são **o mesmo template** com tema trocado por domínio (estúdio FELVRA; legenda genérica "Follow for more
+UI & UX", áudio só música — tudo abaixo vem das imagens). Estrutura comum, quadro a quadro:
+abertura com o mockup num tablet sobre fundo liso da cor do tema, nome da marca gigante em contorno atrás e
+"<Marca> <tipo> OS" no canto → zoom no produto → popover de um objeto do mapa → ação → painel "Overview" (rolagem) →
+close-ups desfocados/zoom em gráficos → mockup de novo → tela preta "FELVRA" ("Chame no direct · @felvrabr").
+
+**Esqueleto (comum aos três):** a **foto aérea ocupa a tela toda e é o próprio mapa**; por cima, em vidro escuro:
+logo + busca no topo esquerdo, sidebar flutuante curta (6 itens, ativo em pílula translúcida), coluna direita
+"<X> Overview" (sino com ponto + avatar com iniciais na cor do acento + nome + cargo), toggles de camada empilhados à
+direita do mapa (ativo em pílula do acento), e uma faixa inferior com 2 cards (anéis concêntricos + barras de 12 meses).
+Tipografia sans geométrica, números grandes em peso leve com unidade pequena ao lado ("0.77 index", "27 %", "47.4 MWh").
+Cards `~#182313`–`#2b3827` (Verdan), cantos ~16–20px, borda clara 1px.
+
+### 9a. Verdan Farm OS — `Dfui4V5BMbz` (agro; referência pedida para o protótipo gamificado)
+**Tema:** fundo de apresentação sálvia `~#7b8e72`; UI verde-oliva escuro `~#182313`/`#212d17`; acento **lima `~#c6e17a`–`#cee980`**;
+âmbar/laranja só para alerta ("Dry", "Low moisture").
+- **Mapa:** talhões com rótulo-pílula ("Field 01", "Field 02", "HQ"); o Field 03 é um **polígono preenchido em âmbar**
+  com etiqueta "Field 03 · Dry". Camadas: **NDVI** (ativa, lima) / Moisture / Yield / Pivots.
+- **Popover do talhão** (card escuro ancorado ao pin): foto do trigo, chip âmbar "Low moisture", "Field 03 · Wheat"
+  + metadados, valor **18%** com comparação à direita (texto pequeno, ilegível; parece "vs target"), linha de
+  NDVI/temperatura/data e **CTA lima cheio "Start irrigation"**.
+- **Feedback da ação (quadros 5 → 6):** o CTA é substituído por "✓ Irrigating · 40 min" com spinner, a etiqueta do
+  talhão deixa de ser "Dry" e **o polígono passa de âmbar para verde-claro translúcido**. Ação → estado visível no
+  próprio objeto, sem modal.
+- **Farm Overview (Ana P., Farm manager):** grade 2x2 de KPIs: **Avg. NDVI 0.77 index** (chip "Healthy", linha
+  crescente); **Pivots running 2** (chip "2 running", gráfico de **pirulitos** com marcador "Max 4", o ativo em lima);
+  **Soil moisture 27% → 31%** (chip "Rising", linha com ponto); **Crop health gauge semicircular de ticks
+  33% → 92% "TODAY"** (o número conta e o arco enche entre os quadros 7 e 8).
+- **Plano de irrigação "IR-0317 · Field 03 · Wheat · 40 min"** com avatar do agrônomo (Marcos Lima) e menu `⋮`;
+  abaixo **"Zones irrigated 3/4"** como **barra segmentada em 4 células** com % à direita (0% → enchendo).
+- **Recent Messages:** "Marcos Lima — Field 03 looked dry on this morning's walk" + "View all".
+- **Crop Mix:** anéis concêntricos (lima, verde médio, branco) com total "1,240" no centro e legenda Soybean 48% /
+  Corn 32% / Wheat 20%. **Harvest Forecast** ("Thousand tons per month, next 12", dropdown "Next 12 mo"): 12 barras em
+  pílula cinza-gradiente dentro de trilhos, **só Mar em lima com tooltip-pílula "Mar · 4.2k t"**.
+- **Animação aparente:** zoom/dolly da câmera do mockup, popover que entra sobre o pin, troca de estado do CTA,
+  gauge e números contando, close-ups com desfoque de profundidade (quadro 9).
+
+**Elementos de gamificação (o que há e o que não há):** não há pontos, níveis, badges, streaks nem ranking. O que
+existe é a **camada de progresso/meta** que serve de base para gamificar: gauge que enche até o "hoje" (92%),
+checklist segmentado "3/4" que completa célula a célula, comparação com meta no popover, chips de estado
+("Healthy", "Rising", "Low moisture"), limite visível ("Max 4") e **feedback imediato da ação no mapa** (âmbar → verde).
+Ver "Padrões de gamificação" em `layout-patterns.md`.
+
+### 9b. Helion Solar plant OS — `DfpCOjIB1Rb`
+**Tema:** apresentação cinza-azulado `~#878d9d`; UI ardósia `~#171b26`–`#20222f`; acento **âmbar `~#f0b048`**.
+- Mapa = foto dos painéis; camadas Block A / **Block B** (ativo) / Block C / Substation; o bloco B-12 aparece
+  contornado em grade âmbar com pin "B-12 · 312 kW".
+- Popover "Inverter B-12" (foto, chip "Alert", 312 kW, comparação ilegível) com CTA **"Dispatch technician"** →
+  vira **"Crew 3 · ETA 11:50"**.
+- **Plant Overview (Laura M., Site manager):** Generation today **47.4 → 48.6 MWh** "On track"; Crews on site **2 → 3**
+  "2 active" (pirulitos, "Max 4"); Irradiance **817 → 842 W/m²** "Clear"; **Performance ratio 33% → 91% TODAY**.
+  Work order "WO-2214 · Inverter B-12 · fan fault", Crew 3 Rafael Costa, **"Pre-job checklist 3/4"** segmentado.
+  Recent Messages: "Block D crew — Rows 1-20 washed, output up 3%".
+- Energy Mix (anéis, "6.4" no centro): Grid export 62% / Battery 26% / On-site use 12%. Generation "GWh per month,
+  last 12 months", **Jul em âmbar "1.42 GWh"**.
+
+### 9c. Maren (resort de vilas de praia) — `Dfr9S5yhlvX`
+**Tema:** verde-petróleo escuro `~#132622`–`#1c3132`; acento **menta `~#6cf0c9`**; reservas em **coral `~#c06860`**.
+- Sidebar (aparece no quadro 5): Overview, Villas, **Reservations** (ativo), Guests, Concierge, Revenue. Topo: período
+  "Dec 27 – Jan 3", sino, avatar "Lena K.".
+- Foto aérea do resort com pins ("Villa 04 · $1,070/night" em menta; "V06 · Booked" escuro), chip "29° · Calm sea",
+  filtros-pílula (All villas / Private pool / Garden) e popover de vila com "Check dates".
+- **Card de ocupação:** anel "5/6" + **83%** (texto "1 villa left") → **95%** → **100%** no fim — a meta se completa
+  à medida que a reserva entra.
+- **Reservations (Gantt):** dias no topo, **hoje "31" destacado em coluna mais clara**, barras coral com nome e noites;
+  hover/seleção mostra tooltip com datas e valor; legenda Booked/New + Filters + CTA menta "New booking".
+- **Ocupação:** "94%" + grade de células menta (calendário-heatmap). **Revenue per night `$5,350` New Year's Eve**: área
+  menta com pico e tooltip "31 Dec · $6,420".
+- **Chat do hóspede** (Elena Hartley): "Hi! Any villa left for New Year's? We're 4 people" → **chip de resposta
+  sugerida "Send booking · Villa 04"** → bolha menta "Villa 04 is yours: 29 Dec – 2 Jan, private pool" → "Perfect,
+  thank you!". Ao mesmo tempo **uma nova barra menta "E. Hartley · 4 nights · $4,280"** aparece no Gantt.
+
+**Copiar (série):** o objeto do domínio (fazenda, usina, resort) como canvas principal, não como foto decorativa;
+**ação no popover → estado muda no mapa e no painel** (fecha o ciclo); KPIs 2x2 com chip de estado em palavra
+("Healthy", "On track", "Clear"), não só seta; um card "plano/ordem de serviço" com responsável + checklist
+segmentado; barras de 12 meses com **um mês destacado e rotulado**; mesmo layout, acento por domínio.
+
+---
+
+## 10. Glassy Dashboard V30 — `Dfj_FGsTAVB` (@code.xr)
+**Tema:** glass **claro** cinza-mauve `~#585256`–`#7f7472` sobre foto de quarto (luminárias pendentes pretas, cama).
+Acento azul `~#4a8fe0`/`#6888a8` (a legenda promete "Premium Purple & White"; no vídeo o que se vê é azul e branco).
+- Abertura: só a foto e a moldura do app; os cards **condensam do desfoque** (quadros 1 → 3).
+- **Overview:** top tabs (Overview ativo + 3), rail de ícones à esquerda; card "Team" com **pilha de avatares
+  coloridos**; card com toggle azul e **dial circular** (anel azul com knob, valor **50° → 65°**); `$19.5k` → `$23.1k` com área
+  suave e rótulos de mês; mini-cards (barras finas "1.2M", `$4,8..`); barras verticais com **a atual em azul** e rótulo;
+  coluna direita com toggles, card de perfil com player (botão play branco).
+- **Reports:** 4 KPIs (`$8.67M`, 7.4%, 3.7%, ...) e **donut azul/branco que entra girando** do desfoque.
+- **Deals Pipeline:** 4 KPIs (`$342.7k`, `$74.7k`, 8%, `$8.9k`), abas, CTA branco em pílula, **kanban de 5 colunas**.
+- **Customers:** 4 KPIs + tabela com avatares de contorno colorido.
+- **Products:** grade de cards com **ícone 3D brilhante** (rosa, verde-limão, verde, azul, vermelho, ciano, roxo,
+  laranja), preço, **barra de estoque verde** e toggle azul de ativo.
+- Snippet: o mesmo `StatCard` da série (`motion.div whileHover={{ y: -5 }}`, `glass-card p-6 rounded-2xl`,
+  `text-emerald-400`, `ArrowUpRight`). Legenda: React, CSS3, "Smooth Hover Animations".
+
+**Copiar:** glass claro (não escuro) quando a foto é clara; ícone 3D colorido como placeholder de produto; dial
+que anima até o valor ao entrar; o mesmo esqueleto (KPIs + conteúdo) repetido em todas as páginas.
+
+---
+
+## 11. Ad campaign de gravadora — `DfXoXVFPBfd` (@_code_and_chill_)
+**Tema:** dark quase preto `~#131416`–`#15161b`, CTA/pílula ativa **azul `~#7088e0`**, cores de canal (azul, amarelo,
+verde, vermelho) só em gráficos. Marca no canto lida como "Amplo" (pequena, incerta). Áudio só música.
+- **Top nav em pílulas** (ativa preenchida azul) + ícones e CTA azul no topo direito; nada de sidebar.
+- **Overview "Good morning, Imogen":** subtítulo com 3 metadados; ações à direita (secundária + CTA azul). Card de
+  gasto: **`£19,076.74` → `£22,731.21` → `£23,094.80`** (conta ao entrar) com 3 mini-KPIs e um bloco com botão azul;
+  **anel segmentado multicolor (azul, verde, amarelo, vermelho) com orbe azul brilhante no centro** e legenda em
+  2 colunas — leitura: distribuição de verba por canal. Card largo com `75,365`, segmented de período e área azul que
+  sobe no fim. Embaixo: tabela de campanhas com ícone, plataformas em pílulas e status; card lateral com 3 números
+  em quadrados + **barra de progresso azul** (provável meta/pacing; rótulos ilegíveis).
+- **Reports:** lista de relatórios salvos à esquerda (com botão circular), abas/segmented, **"Total 140,708"** em
+  **barras horizontais coloridas** por canal (azul, amarelo, verde, vermelho, vazias) com valor à direita + tabela.
+- **Campaigns:** título + descrição + CTA; faixa de **aprovações pendentes** (2 linhas com botões azuis) acima da
+  tabela; toggle **List ↔ Board**: board de 5 colunas com cards que têm barra azul fina e avatares.
+- **Animação:** a pílula da top nav **estica entre itens** (quadros 4 e 8 mostram a pílula alongada) — snippet
+  `slidePill(pill, target)` com `gsap.to(..., { [lead]: ..., duration ~0.3, ease: 'power3.out' })` e trail
+  `~0.55, 'power3.inOut'`; o conteúdo some e volta entre páginas.
+
+**Copiar:** saudação + gasto que conta; anel de distribuição com orbe como "assinatura" visual; reports por canal em
+barras horizontais; faixa de aprovações pendentes acima da lista; toggle lista/board.
+
+---
+
+## 12. CRM de estúdio de design de interiores — `DfeT74YvQaD` (@_code_and_chill_)
+**Tema:** monocromático **marrom-sépia quente** (`~#261e13` fundo, cards `~#483c30`–`#4b3f2f`, texto creme), glow
+avermelhado no topo; ativo em **pílula creme** na top nav e quadrado claro no rail de ícones. Nenhuma cor saturada.
+- **Overview:** breadcrumb + título; card `$41,849.73` → `$48,490.60` (conta) com linha; card largo com
+  2 valores, segmented e linha + barras fantasma; listas embaixo (projetos/tarefas com ícone e valor), barra de
+  progresso fina.
+- **Pipeline:** abas + busca + filtros-pílula; **4 colunas** de cards de cliente (avatar, nome, subtítulo, valor e
+  botão circular de ação).
+- **Schedule:** chips de pessoa com avatar (filtro por designer) + **agenda em colunas por dia** com blocos de evento
+  e marcador do horário atual.
+- **Growth:** 4 KPIs, barras verticais creme e **anel de progresso** com % no centro (meta; rótulo ilegível).
+- **Snippet:** `slidePill(pill, target, { radius = 12 } = {})` com `clip-path: inset(... round ${radius}px)` e o comentário
+  "the leading edge runs ahead, the trailing edge catches up" (leitura aproximada); durações ~0.30 / ~0.55.
+
+**Copiar:** paleta de uma cor só em tons quentes para marcas de design/lifestyle; agenda filtrada por pessoa;
+pílula elástica com raio configurável (não só 999px).
+
+---
+
+## 13. Admin de e-commerce (velas) — `Dfct0mNvg3f` (@_code_and_chill_)
+**Tema:** dark vinho `~#1e0f12` com **sidebar magenta `~#781840`** (gradiente para preto), glows laranja e azul
+`~#342b48` nos cantos; CTA/pílulas **rosa `~#bf6888`**; categorias em rosa, amarelo, azul e laranja.
+- **Sidebar larga** com grupos rotulados, badges, sub-itens expansíveis (Products → 3 filhos) e **card no rodapé com
+  anel** (plano/uso; texto ilegível).
+- **Overview "Good morning, Noor":** `£9,318.40` com chips de filtro; **área empilhada rosa/amarelo/azul** larga;
+  coluna direita com **"23"** + **3 barras de progresso coloridas** (rosa, azul, amarelo) + lista com valores + **anel**
+  com texto; faixa de 4 mini-KPIs com ícone circular colorido no canto.
+- **Products:** abas + busca + filtros-pílula (ativo rosa) + toggle de visualização; **grade de cards com monograma em
+  fundo pastel** (SF, FL, SC, WR, ST, AD, NJ, GM — placeholders de produto) ↔ **tabela** com miniaturas e chips de status.
+- **Analytics:** 4 KPIs com ícone colorido (rosa, amarelo, azul, laranja) e **área empilhada** larga com faixa de
+  gradiente na base.
+- **Snippet:** variante do `slidePill` que anima as bordas do eixo cruzado ("stretches like a strap"),
+  `duration` ~0.30 / ~0.55 / ~0.45 (leitura aproximada).
+
+**Copiar:** área empilhada por canal/categoria; monograma pastel como placeholder de produto; barras de progresso de
+meta na coluna lateral; grid ↔ tabela no catálogo.

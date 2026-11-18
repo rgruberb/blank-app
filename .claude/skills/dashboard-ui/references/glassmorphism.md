@@ -1,6 +1,7 @@
 # Glassmorphism — receita
 
-Base: série @code.xr (Login V3 `DeoGCPlzKOs`, Dashboard V7 `DfHrMboTVDZ`, V8 `DfKPFDwz2aA`, Sidebar V5 `DfMH6YTTcwx`),
+Base: série @code.xr (Login V3 `DeoGCPlzKOs`, Dashboard V7 `DfHrMboTVDZ`, V8 `DfKPFDwz2aA`, Sidebar V5 `DfMH6YTTcwx`,
+V30 `Dfj_FGsTAVB`), série @felvrabr sobre foto aérea (`Dfui4V5BMbz`, `DfpCOjIB1Rb`, `Dfr9S5yhlvX`),
 smart home `DfrqAX9v59S` (frosted cinza) e a tela Settings de `Deoi1WhP83h` (opções Glass Clear/Tinted e
 Reduce transparency). Os valores CSS abaixo são uma tradução do que se vê; não vêm do código-fonte original,
 exceto as classes Tailwind citadas no snippet (`glass-card p-6 rounded-2xl`, `text-white/60`, `text-emerald-400`).
@@ -24,6 +25,14 @@ exceto as classes Tailwind citadas no snippet (`glass-card p-6 rounded-2xl`, `te
    ponto; um botão circular no topo expande para ~250px (tooltip "Collapse"). O hover é uma pílula com borda clara
    que desliza entre os itens.
 
+9. **Glass claro mauve (V30 `Dfj_FGsTAVB`):** sobre foto clara de quarto, os cards são cinza-mauve `~#585256`–`#7f7472`
+   quase opacos, texto branco, acento azul `~#4a8fe0` (a legenda diz "purple & white"; no vídeo é azul). Funciona
+   porque a foto é pouco contrastada; o contraste do texto fica no limite — reforce peso e tamanho.
+10. **Vidro escuro sobre foto aérea (@felvrabr):** painéis verde-oliva `~#182313` / ardósia `~#171b26` / petróleo
+    `~#132622` com alta opacidade (~80–85%) e blur forte, para que a foto saturada (lavoura, painéis solares, mar)
+    continue legível ao redor sem atrapalhar os números. A cor do tema é tirada da foto (verde da lavoura, azul dos
+    painéis, turquesa do mar) e o acento é o complementar quente ou neon (lima, âmbar, menta).
+
 ## Tokens
 ```css
 :root {
@@ -42,6 +51,11 @@ exceto as classes Tailwind citadas no snippet (`glass-card p-6 rounded-2xl`, `te
   --amber: #d59353;                           /* V7 */
   --blue-soft: #7488c7; --blue-cta: #7098ed;  /* V8 */
   --text-1: #fff; --text-2: rgba(255,255,255,.6); --pos: #34d399; /* emerald-400 */
+  /* @felvrabr — vidro escuro tingido pela foto (aprox.) */
+  --glass-olive: rgba(24, 35, 19, .82);  --lime:  #c6e17a;   /* Verdan */
+  --glass-slate: rgba(23, 27, 38, .82);  --amber: #f0b048;   /* Helion */
+  --glass-teal:  rgba(19, 38, 34, .82);  --mint:  #6cf0c9; --coral: #c06860; /* Maren */
+  --glass-mauve: rgba(96, 90, 92, .78);  --blue-v30: #4a8fe0;               /* V30 */
 }
 ```
 
