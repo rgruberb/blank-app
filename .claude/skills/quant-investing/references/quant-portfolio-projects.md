@@ -1,6 +1,6 @@
 # O que construir para entrar em finanças/quant sem experiência
 
-Fontes: @tradionquant — `DftZ6l2CC_e` (quant) e `DfoRErMChB-` (finanças/banking/PE). Itens "(complemento)" não vêm dos reels.
+Fontes: @tradionquant — `DftZ6l2CC_e` (quant) e `DfoRErMChB-` (finanças/banking/PE); @neuron.machinelearning `DfowdSMiPzc` (ML + estatística); @quantfinance.ai `DfztwFuxh4f` (toolkit de pairs) e `Dfr5It0xAzA` (conceitos); @daytrading `DfFnuSOkqi9` (ideias de estratégia). Itens "(complemento)" não vêm dos posts.
 
 > Conteúdo educacional, não recomendação de investimento.
 
@@ -20,6 +20,15 @@ Dados citados na legenda: Nvidia, Apple e Tesla desde 2021; Coca-Cola e PepsiCo 
 - Regrida uma na outra → **hedge ratio** (na tela: "for each Coca-Cola share, hold **0.25** PepsiCo shares").
 - Acompanhe o spread como **Z-score**. Quando esticar **2 desvios-padrão**, venda a cara e compre a barata; saia quando reverter. (Tela: z = **+2.27**, "Coca-Cola pricey" → bet against KO, buy PepsiCo.)
 - **Lição:** mean reversion — e que **relações podem quebrar**.
+- **Toolkit de 4 algoritmos** (@quantfinance.ai `DfztwFuxh4f`, par **simulado**, β verdadeiro 1,5, half-life 10 d, ajuste nos primeiros 750 d e trade nos 750 seguintes):
+  | Bloco | Para quê | Nota de produção (do post) | Resultado ilustrativo |
+  |---|---|---|---|
+  | **Engle-Granger** (OLS + ADF nos resíduos) | hedge ratio β e se o spread é estacionário | teste as duas direções; use valores críticos de EG (≈ −3,3 a 5%), não a tabela ADF comum | β̂ 1,52, ADF −4,7 |
+  | **Ornstein-Uhlenbeck** (AR(1) no spread) | velocidade de reversão θ = −ln φ e **half-life = ln 2 / θ** | descarte pares com half-life longa; estimativa ruidosa em amostra curta | half-life 11,5 d (verdadeira 10 d) |
+  | **Filtro de Kalman** | β que deriva no tempo (Q = drift, R = variância do spread) | calibre Q e R no treino; monitore as inovações | RMSE de β 0,04 vs OLS 0,05 |
+  | **Regra de z-score** | entra em \|z\| > 2 contra o desvio, sai perto de 0,5 | média/desvio rolantes; stop perto de \|z\| = 4; inclua custos e aluguel de ações | Sharpe 0,46 (Kalman) vs 0,23 (OLS estático) |
+  O próprio autor avisa: 1 caminho, sem custos, amostra pequena. (complemento) Com ~750 dias, o erro-padrão de um Sharpe anualizado é ≈ √(252/750) ≈ **0,58**: 0,46 vs 0,23 é indistinguível de ruído.
+- **Contraexemplo com dados reais** (@neuron.machinelearning `DfowdSMiPzc`): de 91 pares de 14 ações, 1 passou a 5% (esperado por acaso: 4,55) e quebrou após 2016 (z = +13,4). Corrija para múltiplos testes e valide fora da amostra (`backtest-pitfalls.md` §3).
 
 ### 3. Moving Average Crossover Backtest
 - Compre quando a média de **50 dias** cruza acima da de **200 dias**. É a estratégia mais simples — "and that's the point".
@@ -51,6 +60,21 @@ Dados citados: Form 8-K do FY2026 da Apple, histórico do S&P 500 desde 1988, lu
 ## Outras ideias de projeto vistas nas rodadas seguintes
 
 Só pelo resumo na grade (posts não abertos): @tradionquant `Df1IZS-CY_8` — 3 projetos quant com dados gratuitos (earnings, opções do SPY, S&P desde 1988); `Df3vKx3je7o` — 3 modelos financeiros com balanços reais (Netflix, LBO da Deckers, fusão Capital One + Discover).
+
+### Trilha ML + estatística (@neuron.machinelearning `DfowdSMiPzc`, dados reais até 2018)
+Cinco projetos curtos em NumPy/pandas/scikit-learn, cada um com um teste estatístico que diz se o padrão é real:
+1. **Volatilidade:** GARCH(1,1) por máxima verossimilhança + gradient boosting corrigindo; erro 0,500 (naive) → 0,477 (GARCH) → 0,453 (híbrido). Melhora de 5% sobre o GARCH (a legenda diz 9%, que é vs naive).
+2. **Pairs:** 91 pares, 1 achado = ruído (acima).
+3. **Regimes:** mistura gaussiana de 2 componentes em retorno e vol de 21 d, sem rótulos; marca 70% de 2008.
+4. **Fatores:** PCA por autovetores da covariância; PC1 = "o mercado" (42,7%, corr 0,988).
+5. **Direção:** random forest 53,0% vs "sempre sobe" 53,5%, p = 0,78 → sem edge (`backtest-pitfalls.md` §5).
+O valor para portfólio é o **placar ✓/✕ honesto**: mostrar os fracassos junto dos sucessos.
+
+### Ideias de estratégia para backtestar (@daytrading `DfFnuSOkqi9`, só descrição)
+Pairs divergence, compressão de volatilidade com rompimento, **post-earnings drift** (a ação segue na direção da surpresa por semanas), continuação de gap intraday, reversão por z-score, rotação por RSI (momentum relativo) e retorno fechamento→abertura (overnight vs intraday). O post não traz teste próprio e o único gráfico de resultado (rotação por RSI, 1992–2024) mostra a estratégia **abaixo do S&P**; a legenda lembra custos, slippage, overfitting e mudança de regime. Use como lista de hipóteses, cada uma passando pelo gate do `SKILL.md`.
+
+### Conceitos para estudar (grade de @quantfinance.ai `Dfr5It0xAzA`, conteúdo marcado "AI content")
+Paridade put-call (C − P = S − K·e^(−rT)), smile de volatilidade, árvore binomial, lema de Itô, regressão linear (β), componentes principais, filtro de Kalman, autocorrelação, lei dos grandes números, caudas gordas, cadeias de Markov, overfitting, max drawdown, information ratio (α ÷ tracking error) e market impact (ordens maiores movem o preço contra você). Serve como roteiro de estudo; as definições são de 1 linha, sem profundidade.
 
 ### 4. Placar de regras populares (formato "100 regras" de @tradionquant)
 - Escolha regras que circulam (buy the dip, esperar eleição, copiar o Congresso, alta taxa de acerto) e teste cada uma contra **comprar e segurar** com **todas as datas de início**, caixa remunerado e custo. Reporte "venceu X de N" e a diferença média (método em `validation-tests.md` §5).

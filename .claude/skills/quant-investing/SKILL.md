@@ -1,6 +1,6 @@
 ---
 name: quant-investing
-description: Análise quantitativa e validação de estratégias de trading/investimento — por que estratégias funcionam no backtest e falham ao vivo, testes de robustez em Python (Monte Carlo, walk-forward, sensibilidade), falácia da alta taxa de acerto (expectativa/payoff após custos), armadilhas de backtest (lookahead, custos zerados, splits embaralhados, viés de seleção com Deflated Sharpe), drawdown normal antes de desligar, avaliação de posts de influenciadores financeiros (premissas, custos, impostos, nº de testes, conflito de interesse) e projetos de portfólio para carreira quant. Use quando o usuário mencionar "backtest", "validar estratégia", "taxa de acerto"/"win rate", "Monte Carlo", "walk-forward", "overfitting", "drawdown", "expectativa", "deflated sharpe", "viés de seleção", "múltiplos testes", "lookahead", "slippage", "quando desligar a estratégia", "avaliar influenciador financeiro", "essa simulação está certa?", "carreira quant" ou currículo em finanças.
+description: Validação quantitativa de estratégias de trading/investimento — por que backtests falham ao vivo, testes de robustez em Python (Monte Carlo, walk-forward, sensibilidade), falácia da taxa de acerto após custos, armadilhas (lookahead, custos zerados, splits embaralhados, Deflated Sharpe, falsos positivos com Bonferroni/BH, baseline ingênua para ML), drawdown antes de desligar, avaliação de influenciadores financeiros e carreira quant (pairs trading, ML + estatística, repos como qlib/FinRL/vectorbt/quantstats). Use quando o usuário mencionar "backtest", "validar estratégia", "win rate", "Monte Carlo", "walk-forward", "overfitting", "drawdown", "deflated sharpe", "múltiplos testes", "falso positivo", "p-valor", "baseline", "machine learning em trading", "acurácia do modelo", "repos de quant", "pairs trading", "cointegração", "lookahead", "slippage", "quando desligar a estratégia", "avaliar influenciador financeiro", "essa simulação está certa?" ou "carreira quant".
 ---
 
 # Quant Investing — validação de estratégias e carreira quant
@@ -12,8 +12,9 @@ description: Análise quantitativa e validação de estratégias de trading/inve
 2. **A única pergunta da taxa de acerto:** *depois dos custos, o trade médio ganha dinheiro?* Win rate 90% pode perder sempre (9.999 de 10.000 traders simulados perderam).
 3. **Teste o que pode dar errado:** a sorte da sequência (Monte Carlo), dados não vistos (walk-forward), vizinhança dos parâmetros (sensibilidade).
 4. **Compare com buy and hold.** "Rules that beat holding: 0 of 2"; crossover 50/200 terminou $162.377 abaixo do buy and hold; "comprar na queda de 10%" venceu só 47,1% de 1.084 janelas de 10 anos.
-5. **O melhor de N tentativas parece bom por sorte.** 200 versões sem edge já dão Sharpe máximo ≈ 1,66; conte as tentativas e deflacione.
+5. **O melhor de N tentativas parece bom por sorte.** 200 versões sem edge já dão Sharpe máximo ≈ 1,66; 91 pares testados a 5% dão ~4,5 "cointegrados" por acaso. Conte as tentativas e deflacione/corrija.
 6. **Drawdown "normal" é maior do que parece.** Estratégia boa (Sharpe 1) passa 90% dos dias abaixo do pico; decida o critério de desligamento antes.
+7. **Compare com a baseline ingênua.** Random forest com 53,0% de acerto perde para "sempre sobe" (53,5%; p = 0,78). Teste contra a baseline, não contra 50%.
 
 ## Checklist antes de ir ao vivo (gate)
 Reprovou em um item → não vai ao vivo (ou volta para pesquisa).
@@ -27,6 +28,7 @@ Reprovou em um item → não vai ao vivo (ou volta para pesquisa).
 - [ ] **Walk-forward:** otimiza numa janela, testa na seguinte, várias janelas; OOS deve manter **uma parte sólida** do desempenho IS. Só funciona onde otimizou → "memory", não edge.
 - [ ] **Sensibilidade:** mexa cada parâmetro um pouco; precisa ser **platô** (vizinhos funcionam). **Pico solitário** = reprovado.
 - [ ] **Múltiplos testes:** nº de versões testadas registrado; **Deflated Sharpe ≥ 0,95** (Sharpe 1,8 de 200 versões → DSR 0,61; de 10 → 0,96). Melhoria só conta se passar em dados não vistos.
+- [ ] **Modelo de ML/previsão bate a baseline ingênua** (classe majoritária, persistência, B&H) com teste estatístico; p-valores de muitos testes corrigidos (Bonferroni ou Benjamini-Hochberg, complemento).
 - [ ] **Regra-vs-benchmark em todas as janelas:** "venceu X de N" + diferença média, caixa remunerado (T-bills/CDI), robustez da data de início. Um exemplo ou uma janela não basta.
 - [ ] **Critério de desligamento definido antes** e calibrado pela vol / DD p95 (com vol 10%, stop de −10% mata 64% das estratégias boas em 3 anos; −20% mata 5%).
 
@@ -69,6 +71,7 @@ Detalhes, código e critérios: `references/validation-tests.md` (testes, drawdo
    - Aviso educacional. Nunca prometa retorno nem recomende comprar/vender ativo.
 
 Se o usuário só tem win rate/“setup de 90%”: calcule `p*` com o payoff e custo dele e mostre a expectativa — essa é a resposta.
+Se é um modelo de ML com acurácia X%: compare com "sempre sobe"/persistência no mesmo período de teste (binomial ou McNemar) antes de qualquer outra coisa.
 
 ## Workflow: avaliar post, simulação ou influenciador financeiro
 1. Passe o checklist de `references/evaluating-sources.md`: fonte, período/amostra, benchmark, custos, caixa remunerado, impostos, inflação (real vs nominal), moeda, **nº de testes**, robustez, reprodutibilidade, consistência entre slides, **conflito de interesse/CTA** ("comente X", consultoria, curso, ferramenta, publi), simulação vs backtest.
@@ -86,11 +89,12 @@ Detalhes: `references/quant-portfolio-projects.md`.
 |---|---|
 | Rodar/explicar Monte Carlo, walk-forward, sensibilidade, higiene de backtest | `references/validation-tests.md` |
 | "Minha estratégia está no vermelho, desligo?", drawdown normal, testar regra em muitas janelas | `references/validation-tests.md` §4–5 |
-| Lookahead, custos/slippage/fills, bibliotecas Python e suas pegadinhas, TimeSeriesSplit, Deflated Sharpe, múltiplos testes, leaderboard | `references/backtest-pitfalls.md` |
+| Lookahead, custos/slippage/fills, bibliotecas Python e suas pegadinhas, repos open source (qlib, FinRL, ML4T, vectorbt, quantstats), TimeSeriesSplit, Deflated Sharpe, múltiplos testes, leaderboard | `references/backtest-pitfalls.md` §1–4 |
+| "Meu modelo acerta 53/55%", ML em trading, baseline ingênua, p-valor, falsos positivos/Bonferroni/BH | `references/backtest-pitfalls.md` §3 e §5 |
 | Avaliar post/reel/simulação de influenciador; premissas mínimas de simulação; rebalancear pelo aporte | `references/evaluating-sources.md` |
 | Quais perfis seguir / confiar, notas de rigor | `references/sources-ranking.md` |
 | "Minha estratégia acerta 80/90%", expectativa, payoff, custos | `references/win-rate-fallacy.md` |
-| Carreira, portfólio, currículo, "por onde começo em quant/finanças" | `references/quant-portfolio-projects.md` |
+| Carreira, portfólio, currículo, "por onde começo em quant/finanças", pairs trading (Engle-Granger, half-life OU, Kalman, z-score), projetos ML + estatística, conceitos para estudar | `references/quant-portfolio-projects.md` |
 | Precisa ver gráfico/número original ou citar a fonte | `references/visual-index.md` → imagem em `assets/visual-refs/` |
 | Imagem `DfuDLH7BUsx.jpg` | ilustrar os 3 testes de robustez (DD 5,9%→14,0%, platô vs pico) |
 | Imagem `DfVf0L-AIkP.jpg` | ilustrar 90% vs 35% e “fee eats almost half” |
@@ -99,4 +103,5 @@ Detalhes: `references/quant-portfolio-projects.md`.
 | Imagens `Dfj-RfohT0S_*.jpg` | drawdown normal e regra de desligamento |
 | Imagens `DfktYl-S6Uz_*.jpg` | custos (+184% → +121%) e DD p95 (−16% → −21%) |
 | Imagens `DfjCMULExt__*.jpg`, `DfV5v9TFUhf_*.jpg`, `DfdO2jkgZ-f_2.jpg` | "venceu X de N" vs buy and hold com dados reais |
+| Imagens `DfowdSMiPzc_*.jpg` | 91 pares → 4,5 falsos positivos; 53% vs "sempre sobe" 53,5% (p = 0,78); placar ✓/✕ |
 | Imagens `Dfj6KNVIPj8_3.jpg`, `Df1c5Bjvc_l_2.jpg` | rebalancear pelo aporte; simulação com premissas declaradas |

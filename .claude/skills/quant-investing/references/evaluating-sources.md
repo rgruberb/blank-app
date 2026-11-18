@@ -43,6 +43,7 @@ Para aceitar (ou refazer) uma projeção, exija: capital inicial; aporte (valor,
 | @humphreytalks `DfaR1gzBFD-` | Barista FIRE: US$ 1.000/mês fecha a lacuna | Lacuna = 50.000 − 24.000 = US$ 26.000/ano ≈ **US$ 2.167/mês**. Regra dos 4% sem fonte nem risco de sequência; mistura 8% (retorno) e 4% (saque) |
 | @brianferoldi (scorecards) | notas 1–5 e faixas de preço | Faixas diferentes em slides vizinhos; nota da legenda ≠ card; EPS −1.137,9% com margem líquida 67% (artefato de base negativa) |
 | @academiadevalor `DfVllE2AeAa` | S&P 500 subindo 10 anos: "nunca espere a máxima" | Viés de seleção de período, sem dividendos nem câmbio; não testa DCA vs aporte único (o teste de verdade é o de @tradionquant, `validation-tests.md` §5) |
+| @neuron.machinelearning `DfowdSMiPzc` | GARCH + ML "9% melhor que GARCH"; 53% vs 53,5%, p = 0,78 | Erro 0,477 → 0,453 = **5,0%** sobre o GARCH; 9,4% é vs naive (0,500). p = 0,780 ✓ (436/823); vs moeda p ≈ 0,09. "20 stocks" no slide vs 12–14 no código |
 | @tradionquant / @rational_edge | vários | Números conferidos batem (ex.: midterms 19+6=25; NANC +589/GOP −2.235; simulação de drawdown reproduzida em Python) |
 
 ## Ideias aproveitáveis mesmo de fontes medianas
