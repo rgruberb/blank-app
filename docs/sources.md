@@ -114,3 +114,13 @@ Links enviados entre 9 e 16/11/2026. Os reels processados tiveram o vídeo baixa
 | 5 | 9 carrosséis do lote de 16–18/11 | várias |
 | 6 | 4 vídeos do Facebook | várias |
 | 7 | @felvrabr, @shohan.designs, @code_and_chill | `dashboard-ui`, `design-direction` |
+
+## Status das rodadas (atualizado em 18/11/2026)
+
+| Rodada | Status | Arquivo |
+|---|---|---|
+| 1, 2 | ⏳ não recebidas | — |
+| 3A, 3B, 3C | ✅ recebidas e incorporadas às skills de design | `docs/achados/rodada-3A.md`, `rodada-3B.md`, `rodada-3C.md` |
+| 4A, 4B | ✅ recebidas e incorporadas à `quant-investing` | `docs/achados/rodada-4A.md`, `rodada-4B.md` |
+| 5 | ⏳ não recebida (vieram só 2 prints soltos: De_J0aOl9SJ_2, Df1eAHODjT9_2) | — |
+| 6, 7 | ⏳ não recebidas | — |
