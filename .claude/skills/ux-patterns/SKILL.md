@@ -1,17 +1,18 @@
 ---
 name: ux-patterns
-description: Padrões e checklists de UX com números concretos para revisar e corrigir interfaces. Cobre 18 leis de UX demonstradas lado a lado (Fitts, Hick, Chunking, Doherty, Proximity, Von Restorff, Goal gradient, Postel, Tesler, Closure, Figure-ground, Choice overload e outras), botão primário (6 decisões e 6 regras), telas de configurações (6 falhas), paginação e infinite scroll (6 erros), chat (6 decisões), command palette ⌘K, toolbar lotada, micro-interações, dark patterns e sua versão honesta, como tirar a cara de "AI slop" de dashboards e fontes default, e 31 itens de performance real e percebida (skeleton, streaming, optimistic UI etc.). Use quando o usuário pedir "revisar UX", "auditar a tela", "melhorar botão", "botão parece barato", "tela de settings", "página de configurações", "paginação", "infinite scroll", "tela de chat", "command palette", "⌘K", "toolbar lotada", "dark pattern", "app parece feito por IA", "dashboard genérico", "app lento", "skeleton" ou "performance percebida".
+description: Padrões e checklists de UX com números concretos para revisar e corrigir interfaces: 18 leis de UX lado a lado (Fitts, Hick, Doherty, Proximity, Von Restorff, Goal gradient e outras), alvos de toque (44pt/48dp, web 24px), escala tipográfica 16×1,2^n com line-height e tracking, contraste, dark mode, botão primário, settings, paginação, chat, ⌘K, toolbar, tela de decisão, fluxo de pedido, dark patterns, "AI slop" e 31 itens de performance percebida. Use quando o usuário pedir "revisar UX", "auditar a tela", "melhorar botão", "botão parece barato", "tela de settings", "página de configurações", "paginação", "infinite scroll", "tela de chat", "command palette", "⌘K", "toolbar lotada", "dark pattern", "app parece feito por IA", "dashboard genérico", "app lento", "skeleton", "performance percebida", "alvo de toque", "touch target", "tamanho de fonte", "escala tipográfica", "line-height", "contraste", "dark mode", "tela de compra/decisão" ou "barra de progresso do pedido".
 ---
 
 # UX Patterns
 
-Regras de UX que dá para testar numa tela real, tiradas de 14 reels (@motion_ui_interface, @designmotionhq e @gustagoat.ai). Os números são das demonstrações dos reels. Use-os como alvo padrão, não como lei física.
+Regras de UX que dá para testar numa tela real, tiradas de 14 reels (@motion_ui_interface, @designmotionhq e @gustagoat.ai) e das rodadas 3A–3C de perfis (@designmotionhq, @motion_ui_interface, @theglidestudio, @rish_designs, @ui.pixel, @dailywebdesign). Os números são das demonstrações dos reels. Use-os como alvo padrão, não como lei física.
 
 ## Quando usar
 - Revisar ou criar um componente: botão, settings, lista paginada, chat, ⌘K, toolbar, dashboard.
 - Justificar uma mudança de UX com uma lei nomeada e um número.
 - Auditar um app gerado por IA (aparência genérica, fonte default, lentidão).
 - Detectar padrões enganosos (trial, social proof falso, close falso).
+- Definir alvos de toque, tamanhos de fonte, line-height e contraste de um design system.
 
 ## Checklist central
 
@@ -19,7 +20,7 @@ Regras de UX que dá para testar numa tela real, tiradas de 14 reels (@motion_ui
 - Fitts: ação principal grande e perto (0.66s → 0.28s).
 - Hick e Choice overload: mostrar poucos itens e o resto em "More" (12 → 4 apps: 0.74s → 0.46s; geleias 3% → 30%).
 - Chunking: agrupar o que precisa ser lembrado (~4 chunks), por exemplo `415 555 0123`.
-- Doherty: feedback em até **400ms**, mesmo quando o trabalho é lento.
+- Doherty: feedback em até **400ms**, mesmo quando o trabalho é lento. Na primeira tela, **título primeiro**: 2 s em branco "parecem uma hora".
 - Proximity: label a **8px** do próprio campo e **24px** do próximo.
 - Von Restorff: **um** destaque, nunca três.
 - Tesler e Parkinson: o sistema preenche o que já sabe (31 → 16 teclas; 30 → 7).
@@ -34,6 +35,16 @@ Regras de UX que dá para testar numa tela real, tiradas de 14 reels (@motion_ui
 - Um primário por tela; Cancel como ghost. Pill: radius = altura ÷ 2; no máximo 1 ícone, a 10px do label.
 - Feedback em **100ms**, concluído em **300ms**. Loading mantém a largura e ignora o 2º clique.
 - Focus ring visível (nunca `outline: none`). Disabled diz o porquê.
+
+**Alvos e tipografia** (`references/typography-and-touch.md`)
+- Toque: **44pt** iOS, **48dp** Android; web piso **24px**, meta **44**. Cresça por padding (**20 + 12 + 12 = 44**), **~8px** entre alvos pequenos.
+- Fonte: **uma** escala, `16 × 1,2^n` (16, 19, 23, 28, 33, 40, 48). Line-height **1,5 / 1,2 / 1,1**; tracking **−0,02em** em títulos, **+0,06em** em caps; linha de **45–75** caracteres (`60ch`).
+- Contraste: texto e placeholder **4,5:1**; texto grande (24px ou 19px bold), ícones e bordas **3:1**; scrim em texto sobre foto.
+- Dark mode: sem `#000` (ex.: `#0C1424`), texto a **87%**, accent clareado, elevação por luminosidade.
+
+**Tela de decisão** (`components-checklists.md` §9): só sinais imediatos e contexto mínimo; as duas ações opostas com o mesmo peso no rodapé; tirar atrito, não somar features.
+
+**Fluxo de pedido** (§10): progresso em etapas nomeadas igual na home e no detalhe; rodapé fixo com total + primário; o valor do botão bate com o total.
 
 **Settings**: confirmar o save · escopo em cada linha (pessoal, workspace, todos) · busca e seções · uma linha de consequência · marcar o que não é default e oferecer reset · dizer quando vale (agora, próximo login, restart).
 
@@ -70,7 +81,8 @@ Regras de UX que dá para testar numa tela real, tiradas de 14 reels (@motion_ui
 | Arquivo | Abra quando |
 |---|---|
 | `references/ux-laws.md` | Precisar da definição, falha e correção de qualquer uma das 18 leis, ou citar o número da demonstração |
-| `references/components-checklists.md` | For mexer em botão, settings, paginação, chat, ⌘K, toolbar ou micro-interações (sheet, tooltip, toast, file drop, pagamento) |
+| `references/components-checklists.md` | For mexer em botão, settings, paginação, chat, ⌘K, toolbar, micro-interações (sheet, tooltip, toast, file drop, pagamento), tela de decisão (comprar/vender), fluxo de pedido ou home com estado vazio |
+| `references/typography-and-touch.md` | Precisar de alvo de toque, escala e tamanhos de fonte, line-height, tracking, medida de linha, contraste mínimo ou dark mode |
 | `references/dark-patterns.md` | Houver fluxo de assinatura, preço, ads ou popups, ou o app "parecer feito por IA" (dashboard ou fonte) |
 | `references/perceived-performance.md` | O app parecer lento, ou ao revisar app de vibe coding antes de lançar |
 | `references/visual-index.md` | Antes de abrir qualquer imagem, para escolher qual |
@@ -81,6 +93,8 @@ São folhas de contato 4×3 com frames antes/depois. **Cada uma custa bastante c
 - Settings: `DdRneVWhBSY`. Paginação: `DdtzWoMhLtW`. Chat: `DerGbJAhUTm`. ⌘K: `DeUr5-AhdvQ`. Toolbar: `DfreUkyBNQg`.
 - Dashboard genérico: `Dc-4jNbtyJg`. Fonte: `DfPJo9UBJ7D`. Micro-interações: `DfgcqeMBPCU`.
 - Leis: `Dd25eCoBJGr`, `Dd4UtBDBsIS`, `Del7XTgsuwI`.
+- Tela de decisão (trading): `DXeeUP7FKGs_1` (print único, não folha 4×3).
+- Perfis avaliados (quem vale seguir, quem está inativo): fim do `visual-index.md`.
 
 ## Skills complementares
 - `ext-impeccable`: audit, critique e polish de interface.
@@ -90,6 +104,7 @@ São folhas de contato 4×3 com frames antes/depois. **Cada uma custa bastante c
 ## Notas de fidelidade
 - `DfgcqeMBPCU`: a legenda é sobre dark patterns, mas o vídeo mostra micro-interações. As versões honestas são **(complemento)**.
 - A série de leis tem 4 partes; a parte 3 não está nas fontes.
+- Divergências registradas: escala 1,2 vs a hierarquia 40/24/18/14 de `DfPJo9UBJ7D` e o label de 17px (`typography-and-touch.md` §2); "um primário por tela" vs Buy/Sell de mesmo peso (§9); botão central da tab bar vs Serial position (§10).
 - O "kit" de performance e o plugin "UX Engine" mencionados nos reels não estão incluídos.
 
 ## Skills externas (dependências)

@@ -1,6 +1,6 @@
 ---
 name: ui-motion
-description: Projeta e implementa micro-interações e motion de UI com valores concretos tirados de referências (reels de motion design) — press/squish de botão (escala 95%), pull-to-refresh com resistência (lista anda 35% do dedo), números rolando, ícones que morfam entre estados, toasts, drag-and-drop e upload, 8 estilos de loader, 8 formas de atualizar uma página, transição card→página (shared element), durações ideais, curvas de easing e springs, e os detalhes "invisíveis" que fazem iPhone/apps premium parecerem caros. Use quando o pedido falar em "animar", "micro-interação", "deixar o app mais fluido/premium/caro", "feedback ao tocar", "spring", "easing", "quanto tempo deve durar a animação", "loader/skeleton/shimmer", "pull to refresh", "toast", "drag and drop", "transição de página", "animação no scroll", "scroll reveal", "parallax", "dar vida aos componentes", "ícone animado", "polish de motion", "React Bits", "componente animado pronto" ou "por que o iPhone parece tão suave".
+description: Projeta e implementa micro-interações e motion de UI com valores concretos de reels de motion design: press de botão (95%), pull-to-refresh com resistência (35%), números rolando, ícones que morfam, toasts, drag-and-drop/upload, 8 loaders, 8 formas de atualizar, transição card→página, durações, easing e springs, detalhes que fazem apps premium parecerem caros, e motion para redes: texto de reel (≤6 palavras, 1,2 s), logo animado (~1 s) e título primeiro. Use quando o pedido falar em "animar", "micro-interação", "app mais fluido/premium", "feedback ao tocar", "spring", "easing", "quanto tempo deve durar a animação", "loader/skeleton", "pull to refresh", "toast", "drag and drop", "transição de página", "animação no scroll", "scroll reveal", "parallax", "dar vida aos componentes", "componente animado pronto", "ícone animado", "polish de motion", "React Bits", "vídeo de produto", "reel", "texto no vídeo", "animar logo" ou "por que o iPhone parece tão suave".
 ---
 
 # UI Motion
@@ -12,6 +12,7 @@ Motion é metade de como uma interface "parece". Apps premium não são mais rá
 - Escolher duração, easing ou parâmetros de spring.
 - Transições entre telas/rotas, menus, modais.
 - "Polish pass" final de um app ou site.
+- Reels, vídeo de produto/demo de site, logo animado e carrossel educativo (`references/motion-for-social-video.md`).
 
 ## Regras centrais (com números das fontes)
 1. **Responda no touchdown, 0 ms.** Feedback no `pointerdown`, nunca no release (o "sem" do reel tinha 120 ms de atraso).
@@ -27,7 +28,9 @@ Motion é metade de como uma interface "parece". Apps premium não são mais rá
 11. **Nada aparece do nada.** Card vira a página e volta exatamente para onde estava; menus nascem do botão que os abriu.
 12. **Percepção > velocidade real.** Skeleton em vez de tela vazia, UI otimista (mostre sucesso já), barra de progresso que começa rápida e desacelera.
 13. **Respeite `prefers-reduced-motion`.** Troque deslocamentos/escala/bounce por fade curto (≤150 ms) ou corte; mantenha o feedback de estado (cor, ícone, texto). (complemento)
-14. Anime só `transform` e `opacity` sempre que possível; evite animar `width/height/top` em listas grandes. (complemento)
+14. **Título primeiro.** Nunca deixe a tela em branco: "2 s em branco parecem uma hora". O título aparece no primeiro paint e o resto entra em cascata (theglidestudio, Dfy7ig_B-FL).
+15. **Texto de reel: ≤ 6 palavras, grande, 1,2 s na tela**; se não dá para ler duas vezes, está rápido. **Logo: ~1 s**, e o tipo de movimento é a personalidade (linha lenta = calmo, encaixe rápido = rápido, crescer de um ponto = amigável) (theglidestudio, DfxpIbfP-SB, Dfzkwu3hSj5).
+16. Anime só `transform` e `opacity` sempre que possível; evite animar `width/height/top` em listas grandes. (complemento)
 
 ## Tokens de motion recomendados
 
@@ -47,6 +50,8 @@ Motion é metade de como uma interface "parece". Apps premium não são mais rá
 | spring "UI" | damping ratio 0.8 (~1.5% overshoot) | De4B0UxPXIk |
 | spring "stack/toast" | stiffness 180, damping 20 | DXRpZTTMr9a |
 | toast timeout | info 4 s · warning 7 s · erro até ack | DXRpZTTMr9a |
+| `--dur-reel-text` | 1,2 s por tela de texto (≤ 6 palavras) | DfxpIbfP-SB |
+| `--dur-logo` | ~1,0 s | Dfzkwu3hSj5 |
 
 Curvas CSS equivalentes (complemento): ease-out `cubic-bezier(0.22, 1, 0.36, 1)`; ease-in-out para flips `cubic-bezier(0.65, 0, 0.35, 1)`; spring com overshoot leve `cubic-bezier(0.34, 1.56, 0.64, 1)` ou `linear()` gerado (ver `references/css-recipes.md`).
 
@@ -63,16 +68,19 @@ Curvas CSS equivalentes (complemento): ease-out `cubic-bezier(0.22, 1, 0.36, 1)`
 - `references/loaders-and-refresh.md` — 8 loaders, 3 truques de percepção, 8 formas de atualizar página, regras de upload. Abra para estados de espera/feed.
 - `references/page-transitions-and-timing.md` — durações, easing vs spring, shared element card→página, menus, side menu, large title. Abra para navegação ou dúvidas de "quanto tempo".
 - `references/scroll-and-screen-transitions.md` — **diretriz do usuário**: scroll e transição de telas para dar vida aos componentes, *avaliando onde faz sentido*. Tem tabela onde sim/onde não, checklist de decisão e implementação (CSS `animation-timeline`, View Transitions, ScrollTrigger). Abra sempre que o pedido envolver scroll, reveal, parallax, header que encolhe ou troca de tela.
+- `references/motion-for-social-video.md` — texto de reel, logo animado, título primeiro em vídeo de site, scroll-storytelling (RWB Porsche), template de carrossel educativo, formato de reel de "fixes". Abra para qualquer motion de marketing/redes sociais.
 - `references/css-recipes.md` — snippets CSS/JS prontos (press, spring `linear()`, pull-to-refresh, stagger, rolling number, View Transitions, FLIP, toast stack, reduced-motion).
 - `references/react-bits.md` — componentes React animados prontos (React Bits) mapeados para cada padrão desta skill, com comando de instalação, dependências e regras (ajustar valores, WebGL ≤ 1 por página). Abra quando o projeto for React/Next.js e o padrão já existir pronto.
-- `references/visual-index.md` — qual imagem mostra o quê.
+- `references/visual-index.md` — qual imagem mostra o quê, e no fim a tabela **Perfis avaliados** (ativo?, nota, o que aproveitar).
 
 ## Imagens (`assets/visual-refs/*.jpg`)
-Folhas de contato 4×3 dos reels. **Custam contexto: abra só quando precisar de exemplo visual** (ex.: ver o formato da curva de uma interação, o layout de um toast stack, o antes/depois de um detalhe iOS). Consulte `references/visual-index.md` para escolher **uma** imagem.
+Folhas de contato 4×3 dos reels, mais 3 prints únicos (`<ID>_<n>.jpg`: scroll-storytelling e carrossel). **Custam contexto: abra só quando precisar de exemplo visual** (ex.: ver o formato da curva de uma interação, o layout de um toast stack, o antes/depois de um detalhe iOS). Consulte `references/visual-index.md` para escolher **uma** imagem.
 
 ## Skills complementares
 - `ext-transitions-dev` / `ext-transitions-polish` — CSS transitions prontas e polish.
 - `ext-gsap-core`, `ext-gsap-scrolltrigger`, `ext-gsap-react` — timelines, scroll-linked (large title encolhendo, reveals), React.
+- `design-direction` — personalidade de marca, paleta e logo estático antes de animar o logo.
+- `ux-patterns` — alvos de toque e escala tipográfica (os componentes que você anima precisam ter ≥ 44px de toque).
 - `ext-playwright-cli` — abrir no browser, gravar/capturar e checar estados e `prefers-reduced-motion` (emulação).
 
 ## Skills externas (dependências)

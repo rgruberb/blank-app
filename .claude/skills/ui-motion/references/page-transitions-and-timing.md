@@ -9,6 +9,10 @@
 - **Regra** (tela): **Press 0,16 s · Reveal 0,7 s · Scene 1,2 s** — press = o botão Menu reagindo; reveal = o menu abrindo; scene = a troca completa para a página "Work" (grid de cards). "Um press leva um piscar, um reveal menos de um segundo, uma cena completa pouco mais de um."
 - "Bom motion nunca é algo que você espera. Acaba exatamente quando você o percebe."
 
+**Primeira tela: título primeiro — Dfy7ig_B-FL (@theglidestudio, rodada 3A).** "Uma página em branco por dois segundos parece uma hora." Renderize o título (e o CTA) já no primeiro paint e deixe o resto entrar em cascata (no exemplo, os cartões do calendário). Para o reveal desse resto use `--dur-reveal` (~700 ms) e stagger de 70–100 ms. Reforça o skeleton e o progresso psicológico de `loaders-and-refresh.md`.
+
+**Texto de reel e logo** (mesmo estúdio): texto fica **1,2 s** na tela (= `--dur-scene`) e logo animado dura **~1 s**. Ver `motion-for-social-video.md`.
+
 Outras durações das fontes: card expand 350 ms; success 470 ms; add to cart 500 ms; bell 760 ms; download icon 1,2 s; ícones 300–600 ms; checkout line 400 ms; map pin 200 ms para pousar.
 Interação contínua (arrastar, scroll, pull) **não tem duração**: segue o dedo 1:1 (photo viewer) ou com resistência (35%), e só a soltura usa spring.
 

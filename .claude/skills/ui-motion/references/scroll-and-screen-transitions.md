@@ -15,7 +15,7 @@ O que vem dos reels está referenciado; o resto está marcado como **(complement
 | Seções de landing page entrando na tela | Reveal curto (≤ 700 ms, fade + deslocamento pequeno), uma vez só, com stagger de 70–100 ms entre filhos | Cascata guia o olho; nada surge do nada (ver regras de duração no `SKILL.md`) |
 | Números e KPIs que entram na viewport | Contagem até o valor (rolling number) quando o card aparece | O olho vê a mudança em vez de perdê-la (reel DfP6EoLBtgg) |
 | Toolbars/barras inferiores em leitura longa | Esconder ao rolar para baixo e mostrar ao rolar para cima **(complemento)** | Libera espaço de leitura sem esconder a navegação |
-| Storytelling/produto (hero, "como funciona") | Seção fixada (pin) com progresso ligado ao scroll (scrub) **(complemento)** | O scroll vira o controle de uma narrativa; só vale para conteúdo sequencial |
+| Storytelling/produto (hero, "como funciona") | Seção fixada (pin) com progresso ligado ao scroll (scrub) **(complemento)** | O scroll vira o controle de uma narrativa; só vale para conteúdo sequencial. Exemplo real: site conceito RWB Porsche (`DYpD5C7zwx6`, @rish_designs): 1 palavra-título gigante + 1 ângulo do carro 3D por seção, fundo alternando escuro/claro, texto atrás do objeto (detalhes em `motion-for-social-video.md` §4) |
 
 ## 2. Onde NÃO faz sentido **(complemento)**
 

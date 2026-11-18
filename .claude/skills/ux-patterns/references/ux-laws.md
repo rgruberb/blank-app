@@ -44,4 +44,9 @@ Os números foram tirados da legenda, da transcrição e dos frames. Todos são 
 
 ## Leis repetidas em outros reels
 - **Hick's law em toolbar** (`DfreUkyBNQg`, @designmotionhq): "decision time grows with every doubling of options". O gráfico em degraus mostra 1→2→4→8. Uma barra com 12 ícones parece lenta; mantenha 4. Detalhes em `components-checklists.md`.
-- **Fitts e tamanho de alvo**: veja os botões (44–48px) em `components-checklists.md`.
+- **Fitts e tamanho de alvo**: veja os botões (44–48px) em `components-checklists.md`. Regras numéricas completas (44pt iOS, 48dp Android, web 24px mín. e meta 44, padding 20 + 12 + 12, 8px entre alvos) em `typography-and-touch.md` §1 (`DfwojjrirKz`, @designmotionhq).
+- **Doherty na primeira tela** (`Dfy7ig_B-FL`, @theglidestudio): "uma página em branco por 2 s parece uma hora". Mostre o **título primeiro** e deixe o resto entrar depois; uma página que responde na hora parece uma empresa que responde. Reforça skeleton e SSR de `perceived-performance.md` (itens 01 e 20).
+- **Uniform connectedness em pedido** (`DX_bA4rCWf0`, @ui.pixel): barra de 4 etapas nomeadas repetida na home e no detalhe do pedido. Ver `components-checklists.md` §10.
+- **Serial position vs botão central da tab bar**: o padrão comum de botão circular no meio da tab bar (`DX_bA4rCWf0`) contradiz a regra "ação-chave no início ou no fim" da parte 2. Registro de divergência em `components-checklists.md` §10.
+- **Von Restorff com um accent só** (`DXeeUP7FKGs`, `DVv7OOECewR`, `DfzgxEKlx8z`): nas três fontes o accent fica reservado ao estado ativo e ao CTA; o resto é neutro.
+- **Hick no momento de decisão** (`DXeeUP7FKGs`, @rish_designs): só os sinais imediatos e contexto suficiente para agir. Ver `components-checklists.md` §9.

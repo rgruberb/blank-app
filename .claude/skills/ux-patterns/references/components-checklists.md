@@ -18,7 +18,7 @@ O exemplo é sempre "Add to cart". As seis decisões não envolvem a cor.
 
 ## 2. Botão: 6 regras (`DfemaTCBncA`, @designmotionhq)
 Partes do botão: shadow, fill, border, label e focus ring. Exemplo: "Create workspace".
-1. **Tap target ≥ 44px** mesmo que o visual seja menor. O frame mostra 32px visual e 44px de área de toque.
+1. **Tap target ≥ 44px** mesmo que o visual seja menor. O frame mostra 32px visual e 44px de área de toque. Reforçado por `DfwojjrirKz` (@designmotionhq): 44pt iOS / 48dp Android, web com piso de 24px e meta 44, área por padding (20 + 12 + 12) e ~8px entre alvos. Detalhes em `typography-and-touch.md` §1.
 2. **O label diz a ação**: "Create workspace", não "Submit".
 3. **Um primário por tela**. Cancel fica como ghost, para o olho saber onde pousar.
 4. **Loading**: mantenha a largura, troque o label por spinner e **ignore o segundo clique**. O frame mostra "Requests sent: 1".
@@ -80,3 +80,27 @@ O áudio e os frames deste reel mostram "More smooth details, in slow-mo (part 6
 - **Toast**: entra subindo **64px**; o anterior recua para **92%** e forma uma pilha.
 - **File drop**: o arquivo sobe a **110%**, a zona brilha e ele pousa a **55%**.
 - **Payment**: "Pay" vira check "Paid" e solta confetti de **18 peças, com pico em 460ms**, caindo com gravidade.
+
+## 9. Tela de decisão: "desenhe para o momento" (`DXeeUP7FKGs`, @rish_designs via @ultimateuiux)
+App de trading "Markets" (lista de ativos + detalhe com candles). A tese da legenda, resumida: a tela não foi feita para *parecer* app de trading, e sim para o instante em que a pessoa decide comprar, vender ou esperar. Bom UX é tirar atrito entre intenção, decisão e ação, não somar features.
+1. **Responda na hora o que importa agora**: o que está se mexendo ("Today's Movers"), o preço e a variação. Nada de mostrar tudo.
+2. **Sinais imediatos + contexto mínimo**: variação sempre com **sinal (+/−) e cor**, em pílula.
+3. **Camada de ajuda para reduzir dúvida, não para enfeitar**: card "AI Report" com veredito curto ("BEARISH"), 2–3 frases e link "View Full Analysis →".
+4. **As duas ações da decisão com o mesmo peso**, lado a lado, fixas no rodapé (zona do polegar): Sell vermelho e Buy no accent.
+5. **Um accent só** para estado ativo: aba, período (1D) e CTA positivo.
+- **Divergência registrada**: §2 diz "um primário por tela". Aqui há **dois** botões de mesmo peso. Leitura **(complemento)**: quando a decisão é entre duas ações opostas e igualmente legítimas (comprar/vender, aceitar/recusar uma oferta), ambas são primárias; a regra de um primário vale para ação principal vs secundária/cancelar. Ação destrutiva continua com cor de alerta.
+- Visual: `DXeeUP7FKGs_1.jpg`.
+
+## 10. Fluxo de pedido/serviço (`DX_bA4rCWf0`, @ui.pixel; design de @oshioke.ui, app de lavanderia)
+1. **Progresso do pedido em 4 etapas nomeadas** (Picked → Washing → Out for delivery → Delivered), **a mesma barra na home e no detalhe**. Liga com Uniform connectedness e Goal gradient (`ux-laws.md`).
+2. **Rodapé fixo com total + botão primário**: "Delivery Fee $5 / Estimated Total $21" + "Schedule A Collection". A pessoa vê o custo no momento de decidir.
+3. **Revisão antes de pagar**: itens, horários, endereço e subtotal, e o botão diz o valor ("PAY NOW $…"). Atenção: no exemplo o botão diz $43 e o subtotal $26. **Confira que o valor do botão bate com o total**.
+4. **Pedido ativo com status em selo** ("On Process") + mapa da rota + ação de cancelar visível.
+5. **Tab bar com botão central circular** para a ação principal. **Divergência**: Serial position (`ux-laws.md`, parte 2) manda a ação-chave para o início ou o fim, não para o meio. O botão central funciona porque é **visualmente distinto** (Von Restorff), não pela posição **(complemento)**.
+- Outra referência (`DVv7OOECewR`, @ui.pixel, app "WayLoo"): tab bar flutuante em pílula com a aba ativa no accent; o accent fica reservado a botões, selos e estado ativo.
+
+## 11. Home redesenhada: antes/depois (`DfzgxEKlx8z`, @dailywebdesign; por @ui.abraham, app imobiliário)
+- Paleta mista (coral, laranja, azul-lilás) → **um azul** com neutros.
+- **Não abra a home com estado vazio** ("No properties found" na primeira dobra). Mostre conteúdo útil: cartões com foto grande, preço, selo e nota.
+- Filtros em pílula com **um estado ativo cheio**, em vez de 4 cores de contorno.
+- Banner com ilustração e **um CTA claro** no lugar de bloco de gradiente com texto longo.

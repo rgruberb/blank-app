@@ -49,3 +49,7 @@ O "kit completo" (checklist, prompt de auditoria e de correção) é oferecido v
 1. Rode a lista como auditoria: marque cada item como OK, não se aplica ou falta, com evidência (arquivo e linha).
 2. Corrija primeiro o que o usuário sente: skeleton, streaming, optimistic e o espaço reservado contra layout shift.
 3. Verifique em celular e rede lenta (item 31). Complemento: throttling do DevTools ou `ext-playwright-cli`.
+
+## Reforços de outras fontes
+- **Título primeiro** (`Dfy7ig_B-FL`, @theglidestudio): 2 s de página em branco "parecem uma hora" e o visitante sai. Renderize o título e o CTA no primeiro paint (item 20) e deixe o resto entrar em cascata. Duração do reveal em `ui-motion` (`page-transitions-and-timing.md`).
+- **Catálogo de loaders** (`Dfw7678GcQ2`, @dailywebdesign, por @vamshi.work): spinner, skeleton, progress bar, pulsing dots, loader no botão, tela cheia, pull-to-refresh e infinite scroll. Skeleton para conteúdo estruturado, barra quando o progresso é conhecido, loader no botão para ação do usuário. Sem tempos no vídeo; a tabela com "quando usar" está em `ui-motion` → `loaders-and-refresh.md`.

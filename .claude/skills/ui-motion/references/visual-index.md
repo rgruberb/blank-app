@@ -21,3 +21,33 @@ Cada `.jpg` é uma folha de contato 4×3 com frames do reel em ordem (esquerda�
 | DfwhC1riuuO.jpg | @theglidestudio | https://www.instagram.com/reel/DfwhC1riuuO/ | Loja (Orb, Halo, Column, Arc): "Tap. Cut." com retângulo tracejado onde o card estava; "Don't cut. Carry." com trajetória azul do card até o hero; 1. card vira a página, 2. back volta ao grid, 3. menu popover nasce do hambúrguer e o fundo escurece | Shared element / transição card→página / menus |
 | DbfG6fuPE9y.jpg | @_code_and_chill_ | https://www.instagram.com/reel/DbfG6fuPE9y/ | Tab bar "Meniscus": a aba ativa vira gota que sobe da barra com menisco; cor e glow por aba (Home limão, Messages laranja, Settings rosa), título da página troca; gota arrastável ao longo da barra; painéis HTML/CSS/JS | Indicador de aba líquido/morph |
 | De1j52PFdpL.jpg | @moxen.studio | https://www.instagram.com/reel/De1j52PFdpL/ | Dashboard "Instrumental" (gauges de linha, agulha, anel, ampulheta, números ao vivo); tooltip no hover; painel "Peticiones por segundo" cresce com spring, barras laranja, resto escurece, volta ao grid; painéis de código | Motion de foco em dashboards/data-viz |
+| DYpD5C7zwx6_1.jpg | @rish_designs (collab @ultimateuiux) | https://www.instagram.com/reel/DYpD5C7zwx6/ (13 s) | Print único, pequeno: seção escura "THE HERITAGE" (THE em outline, HERITAGE sólido), parágrafo curto e Porsche 3D de perfil, navbar mínima com 1 CTA | Scroll-storytelling: 1 palavra-título + 1 ângulo do produto por seção |
+| DYpD5C7zwx6_2.jpg | @rish_designs (collab @ultimateuiux) | https://www.instagram.com/reel/DYpD5C7zwx6/ (18 s) | Print único, pequeno: seção clara com asa traseira em close e "PERFECTION" encoberto pelo carro (texto atrás do objeto 3D) | Troca escuro/claro entre seções e oclusão de texto |
+| DXZUwW2jca__1.jpg | @roman.knox (repost @ultimateuiux) | https://www.instagram.com/p/DXZUwW2jca_/?img_index=2 | Print único: slide "1. Front-end design" do carrossel "Claude skills for designers": número grande, título em gradiente, 1 frase, caixa de comando, "Page 2/7" e "swipe" | Montar template de carrossel educativo |
+
+## Perfis avaliados (rodadas 3A, 3B e 3C, 18/11/2026)
+Notas 1–5 como fonte de **motion**. Nota com "*" é nossa (a rodada não deu nota). Inativo = sem post há mais de ~1 ano, 0 posts ou perfil inexistente.
+
+| Handle | Ativo? | Tipo | Nota | O que aproveitar nesta skill |
+|---|---|---|---|---|
+| @theglidestudio | sim (~2,3 mil seguidores, 21 posts) | Estúdio de motion para sites e reels de startup; uma regra por reel | 5* | Durações press/reveal/cena (já na skill); texto de reel ≤ 6 palavras e 1,2 s; logo animado (calmo/rápido/amigável, ~1 s); título primeiro (`motion-for-social-video.md`) |
+| @motion_ui_interface | sim (~12,7 mil, 50 posts) | Reels de micro-interações e "6/10 fixes" com números | 5* | Fonte principal da skill; nesta rodada: cartão premium em 6 camadas com glare que segue a inclinação (`micro-interactions.md` §8); formato de reel de fixes |
+| @designmotionhq | sim | Regras de UI/UX com números; vende plugin "UX Engine" | 4* | Toasts, upload, skeleton (já na skill). Nesta rodada vieram toque, tipo e contraste, que ficam em `ux-patterns`; o reel "spinners fazem esperar, skeletons fazem antecipar" (`DfZczSUBFdg`) só foi visto pela legenda |
+| @rish_designs | sim (via collab) | Designer de produto; sites conceito e fintech | 4* | Scroll-storytelling do RWB Porsche (`DYpD5C7zwx6`) |
+| @ultimateuiux | sim | Comunidade, ~70% meme | 2 | Reposts do @rish_designs e o carrossel "Claude skills for designers" (template de carrossel) |
+| @ramotion | sim, posta a cada 1–3 meses | Agência; estudos de caso polidos sem regras | 3 | Uso de vídeo dentro do carrossel (tipo, construção de logo, rolagem de página) |
+| @dailywebdesign | sim | Curadoria diária com reposts | 3 | Catálogo de 8 loaders (`loaders-and-refresh.md`) |
+| @uidesignpatterns | sim, raro | Curadoria de inspiração sem texto | 2 | Colagem de miniaturas que se reorganiza (motion como marca de portfólio) |
+| @ui.pixel | sim | Reposts de fluxos de app | 2 | Pouco motion; o que serve (fluxo de pedido) está em `ux-patterns` |
+| @gifux | não (0 posts) | — | 1 | Nada (o nome sugere GIFs de UI, mas a conta está vazia) |
+| @nick_buturishvili | não (último post 07/2024) | — | 1 | Nada novo |
+| @ranjithalingal | não (0 posts, conta pessoal) | — | 1 | Nada |
+| @uxdesignmastery | não (último post 05/2024) | — | 1 | Nada novo |
+| @ui.tips | não (último post 02/2023) | — | 1 | Nada novo |
+| @christvizcarra | não (último post 11/2024) | — | 1 | Nada novo |
+| @uxmemo | não (perfil inexistente) | — | 1 | Nada |
+| @interfacely | não (perfil inexistente) | — | n/a | Nada |
+| @spruzzo.ui | não (perfil inexistente) | — | n/a | Nada |
+| @twohabitsdesign | não (último post 11/2022) | — | n/a | Nada novo |
+
+Prints de @theglidestudio e @motion_ui_interface desta rodada não estavam disponíveis em arquivo; os números estão transcritos nas references.

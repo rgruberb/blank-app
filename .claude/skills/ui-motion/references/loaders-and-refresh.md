@@ -21,6 +21,8 @@ Legenda de cada slide (texto na tela) + o que o mockup mostra:
 | 07 | Pull to refresh | "new content on demand" | ícone girando no topo, lista desce |
 | 08 | Shape morph | "a branded splash loader" | blob/quadrado arredondado que morfa ("Preparing your space") |
 
+**Reforço — Dfw7678GcQ2 (@dailywebdesign, por @vamshi.work, rodada 3C).** Outro catálogo de 8 tipos com parte diferente da lista acima: spinner, skeleton, progress bar, pulsing dots, **loader dentro do botão**, **tela cheia** (spinner sobre conteúdo esmaecido), pull-to-refresh e **infinite scroll** (spinner no fim da lista). Mesma lógica: skeleton para conteúdo, barra quando se sabe o progresso, loader no botão para ação do usuário. O vídeo não dá tempos. Não há conflito; as duas listas somam 12 estilos.
+
 Regra: escolha pelo que você **sabe** da espera — duração desconhecida e curta → spinner; conhecida → barra/anel com %; conteúdo estruturado → skeleton.
 
 ## 8 formas de atualizar uma página — DfwavjimeIa (@ale.uiux)

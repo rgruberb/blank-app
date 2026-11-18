@@ -81,6 +81,8 @@ Os reels de @motion_ui_interface mostram cada interação a 1× e a ¼ de veloci
 5. **Ícones casados com o texto**: traço **2,4 px** (o "errado" mostra 1 px ao lado de texto bold).
 6. **Dynamic Island**: alertas crescem da pílula — "morph, don't pop", **1 forma** que estica e assenta.
 
+**Cartão premium em 6 camadas — DfRkH5LIHgZ (@motion_ui_interface, rodada 3A)**. Mesma ideia de "várias decisões pequenas empilhadas": base com gradiente de **3 paradas** (escuro → mais escuro) · padrão de ondas a **8%** de opacidade · conteúdo de 4 elementos numa **só borda esquerda** · rim light de **1 px a 28% branco** · **glare a 18% branco que acompanha a inclinação** (a única camada em movimento) · **duas sombras, 8 px + 30 px**. Para o glare (complemento): ligue a posição de um gradiente radial ao `pointermove`/giroscópio com spring, limite a inclinação a poucos graus e desligue em `prefers-reduced-motion` (ver também `ext-transitions-dev`, "card hover tilt").
+
 ## 9. Toasts — DXRpZTTMr9a (5 regras)
 1. **Posição**: desktop canto inferior direito; mobile no topo; **nunca centralizado** (bloqueia o conteúdo).
 2. **Timing**: info **4 s**, warning **7 s**, erro **até o usuário reconhecer**. Timer fixo é bug. (Tela mostra barra de progresso de tempo dentro do toast.)
