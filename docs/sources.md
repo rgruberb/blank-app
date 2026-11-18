@@ -88,6 +88,19 @@ Links enviados entre 9 e 16/11/2026. Os reels processados tiveram o vídeo baixa
 | [YouTube: Claude Design 2 HOUR COURSE — Nate Herk](https://youtu.be/ovabeVoWrA0) | ✅ transcrição completa → `design-direction/references/claude-design-course.md` |
 | Nota pessoal (09/11): "Transição de telas, scroll para comportamento dinâmico dos componentes para dar 'vida' a eles. Avaliar onde faz sentido" | ✅ diretriz → `ui-motion/references/scroll-and-screen-transitions.md` |
 
+## Lote de 16–18/11/2026
+
+| Fonte | Status |
+|---|---|
+| Reels [Dfui4V5BMbz](https://www.instagram.com/reel/Dfui4V5BMbz/), [DfpCOjIB1Rb](https://www.instagram.com/reel/DfpCOjIB1Rb/), [Dfr9S5yhlvX](https://www.instagram.com/reel/Dfr9S5yhlvX/) (@felvrabr) | ✅ processados → `dashboard-ui` (Dfui4V5BMbz = referência do protótipo gamificado gestor/cliente) |
+| Reels [Dfj_FGsTAVB](https://www.instagram.com/reel/Dfj_FGsTAVB/) (@code.xr), [DfXoXVFPBfd](https://www.instagram.com/reel/DfXoXVFPBfd/), [DfeT74YvQaD](https://www.instagram.com/reel/DfeT74YvQaD/), [Dfct0mNvg3f](https://www.instagram.com/reel/Dfct0mNvg3f/) (@_code_and_chill_) | ✅ processados → `dashboard-ui` |
+| Reels DfVf0L-AIkP, DeoGCPlzKOs | ✅ já estavam processados |
+| 9 carrosséis (De7NqmHkbzU, DfFnuSOkqi9, Dfr5It0xAzA, DfztwFuxh4f, Dfr6X8qFPwC, De_J0aOl9SJ, Df1eAHODjT9, DfKaOBqjUr4, Dfo__tSjk9k) | ⏳ Rodada 5 |
+| 3 vídeos do Facebook (+ o link de 11/11) | ⏳ Rodada 6 |
+| Perfis @felvrabr, @shohan.designs, @code_and_chill | ⏳ Rodada 7 |
+| Perfil @quantstackai | ⏳ Rodada 4A |
+| Documento "CNPJ" encaminhado | ➖ ignorado (documento pessoal, fora do tema) |
+
 ## Próximas fontes (plano: `docs/chrome-prompts.md`)
 
 | Rodada | Fontes | Skill alvo |
@@ -96,5 +109,8 @@ Links enviados entre 9 e 16/11/2026. Os reels processados tiveram o vídeo baixa
 | 3A | @gg.designhub, @rational_edge, @theglidestudio, @motion_ui_interface, @designmotionhq, @_code_and_chill_, @code.xr, @niki.aroca (só posts novos) | design / UI / dashboards |
 | 3B | @gifux, @ramotion, @nick_buturishvili, @ranjithalingal, @uxdesignmastery, @ui.tips, @ultimateuiux, @christvizcarra, @uxmemo | `ui-motion`, `ux-patterns` |
 | 3C | @uidesignpatterns, @dailywebdesign, @interfacely, @twohabitsdesign, @ui.pixel, @spruzzo.ui | `design-direction`, `dashboard-ui` |
-| 4A | @tradionquant, @brianferoldi, @humphreytalks, @econoweek, @academiadevalor, @guiainvest, @boletinhos | `quant-investing` |
+| 4A | @quantstackai, @tradionquant, @brianferoldi, @humphreytalks, @econoweek, @academiadevalor, @guiainvest, @boletinhos | `quant-investing` |
 | 4B | Descoberta: perfis sugeridos a partir de @tradionquant e @rational_edge, mais as hashtags #quanttrading #algotrading #backtesting #quantfinance #tradingsistematico | `quant-investing` |
+| 5 | 9 carrosséis do lote de 16–18/11 | várias |
+| 6 | 4 vídeos do Facebook | várias |
+| 7 | @felvrabr, @shohan.designs, @code_and_chill | `dashboard-ui`, `design-direction` |
