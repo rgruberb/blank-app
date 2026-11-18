@@ -47,6 +47,31 @@ libraries for animated UI": grade de componentes React animados (Kokonut UI: AI 
 biblioteca de ícones em linha (humbleicons.com, categorias Medical / Data and analytics / UI). Úteis só como dica de
 fonte (motion → `ui-motion`; ícones de traço fino consistentes para dashboards (complemento)).
 
+## Prints da rodada 2 (`<ID>_<n>.jpg`, 18/11/2026)
+
+Prints únicos de carrossel (não folhas de contato). Descrição em `domain-examples.md` §22–26.
+
+| arquivo | autor | URL | domínio | estilo | o que mostra | quando abrir |
+|---|---|---|---|---|---|---|
+| `DfcdrhgFFMR_1.jpg` | @shohan.designs (Orbix Studio) | https://www.instagram.com/p/DfcdrhgFFMR/?img_index=2 | Fintech "Vaulto" | dark + laranja | Sidebar agrupada com badges, saldo grande + composição, CTA laranja único, cards de moeda granulados, gráfico com tooltip, atividade | **Melhor referência de dashboard fintech web** e ordem de leitura |
+| `DfcdrhgFFMR_2.jpg` | @shohan.designs | https://www.instagram.com/p/DfcdrhgFFMR/?img_index=3 | Vaulto (direita) | dark | Card tracejado "Add another currency", barras semanais com só Wed aceso, Sankey de moedas, heatmap de cashflow | Estado vazio que convida; Sankey; heatmap |
+| `DfcdrhgFFMR_3.jpg` | @shohan.designs | https://www.instagram.com/p/DfcdrhgFFMR/?img_index=4 | Vaulto | recorte 3D inclinado com desfoque | Gráfico de 2 linhas com tooltip e ponto laranja | Molde de apresentação (recorte em perspectiva) |
+| `DftsSH-jnfs_1.jpg` | @webdesignssphere | https://www.instagram.com/p/DftsSH-jnfs/?img_index=1 | Logística "Alpha." | dark + laranja, teal nos dados | 4 KPIs com delta, Income Tracker hachurado, heatmap teal, card de rastreio com timeline e ligar/mensagem, "Create New Request" no topo | Painel de sala de controle; status → ação |
+| `DfaQe-CiBfJ_1.jpg` | @uiuxcenter (design @rondesignlab) | https://www.instagram.com/p/DfaQe-CiBfJ/?img_index=2 | Score de crédito "CreditPros" | claro pastel + oliva/rosa-terroso | Score 730 +6 pts Excellent dentro de faixas com marcador, abas com badges, cards de crédito em gradiente | Score financeiro; tema claro com gradiente |
+| `DfaQe-CiBfJ_2.jpg` | @uiuxcenter | https://www.instagram.com/p/DfaQe-CiBfJ/?img_index=5 | CreditPros | vidro terroso | Grade mensal de pagamentos ✓ limão / ✕ cinza + "Make a Payment" | Histórico ✓/✕; base de streak |
+| `DfUvP_ulPC6_2.jpg` | @shohan.designs | https://www.instagram.com/p/DfUvP_ulPC6/?img_index=3 | Saúde "CareNest" | dark petróleo + teal, bege nos gráficos | KPIs com subtotal, gauge em gradiente, histograma bicolor, risco 12/24/72 com arco de traços "Ai Insight" | Painel clínico escuro; risco em faixas |
+| `Dfus5sWFAov_1.jpg` | @orbixdashboard | https://www.instagram.com/p/Dfus5sWFAov/?img_index=2 | Perfil de atleta "Deuce" | claro + verde-oliva único | Win rate, curva por piso, confrontos, tactic map, perfil, área no tempo, donut por piso | Dashboard de perfil (pessoa + números); forma do gráfico pela pergunta |
+| `DfUWa0jAed7_1.jpg` | @uiuxsharon | https://www.instagram.com/p/DfUWa0jAed7/?img_index=1 | Saúde "MediCore" | claro + azul | Hero com saudação + resumo do dia e corpo 3D, 4 KPIs com mini-barras, donut, tabela com chips | Saúde claro; **contraexemplo** de delta verde em alerta |
+
+Avaliados e **não copiados**: `DfaQe-CiBfJ_3`, `DfUvP_ulPC6_1`, `Dfus5sWFAov_2/_3`, `DftsSH-jnfs_2`, `DfUWa0jAed7_2`
+(redundantes com os acima); `DfRucYFjrac_*` (tipografia → `ux-patterns`); `DfowdSMiPzc_*` (quant → `quant-investing`).
+Rodada 1: `DfkBGDyDgqS_2` (BoardUI: donut de anéis, barras lima "$7,462 +14.8%", date range com presets) foi para
+`design-direction` como referência de biblioteca; vale como dica de date picker com presets (Today … All time).
+
+Fontes **sem print** (rodadas 5–7): Zentra `Dfr6X8qFPwC` (§22b), Code & Chill no Facebook (§27, cross-posts de
+`DffBnb2vlUn` e `Dfo0F0Pvo4Y`), Caféra `Df4Shdgmafx` e carrosséis Verdan/Maren (§28), fitness `DffCenmFASU` e
+finanças `DfmwyDclA0Q` (§29).
+
 ## Perfis avaliados
 
 Contas lidas nas rodadas 3A/3B/3C avaliadas como fonte para **dashboards e telas de app** (leitura de 18/11/2026).
@@ -54,7 +79,7 @@ Nota 1–5 = utilidade para esta skill.
 
 | Handle | Ativo? | Tipo | Nota | O que aproveitar |
 |---|---|---|---|---|
-| @_code_and_chill_ | sim (~81,5K) | templates de dashboard em código (reels 5–6 s com snippet) | 4 | Um acento só no dado que importa, pirulitos com meta, barra segmentada, heatmap de quadrados, matriz de risco, kanban de pedidos, `slidePill`. §14–16 + 10 reels antigos |
+| @_code_and_chill_ | sim (~82,1K, 139 posts; também no Facebook como "Code & Chill", 20K) | templates de dashboard em código (reels 5–6 s com snippet) | 4 | Um acento só no dado que importa, pirulitos com meta, barra segmentada, heatmap de quadrados, matriz de risco, kanban de pedidos, `slidePill`. §14–16 + 10 reels antigos |
 | @code.xr | sim (~122K) | educador React; UI glass/skeuo com código | 4 | Skeuomorfismo creme, sidebar curva aninhada, coral = urgência; série glass. §17–19 + §8 antigos |
 | @rish_designs | (via repost @ultimateuiux) | designer de produto | 4 | App de trading "Markets": momento de decisão, card de ticker, AI Report, Buy/Sell iguais. §20a |
 | @ramotion | sim, raro (157K) | agência; cases de marca/produto | 3 | Borea AI: listas prontas, Gainers/Losers, chip de ticker, cursor no gráfico, 404 no sistema. §20b |
@@ -62,7 +87,7 @@ Nota 1–5 = utilidade para esta skill.
 | @ultimateuiux | sim (120K) | comunidade; ~70% meme | 2 | Só os reposts de @rish_designs |
 | @dailywebdesign | sim (581K) | curadoria/repost | 2 | Para painéis: catálogo de 8 loaders (detalhes em `ui-motion`), antes/depois de home de app (paleta única, filtros-pílula com 1 ativo) |
 | @uidesignpatterns | sim, raro (413K) | curadoria sem texto | 1 | Pouco para dashboards (404, sites editoriais → `design-direction`) |
-| @felvrabr | (rodada anterior) | mockups de "OS" operacional | 4 | Já indexado acima (`Dfui4V5BMbz` etc.) |
+| @felvrabr | sim (39 posts, 4,5K; posta quase todo dia) | mockups de "OS" operacional | 4 | Reels indexados acima (`Dfui4V5BMbz` etc.). Rodada 7: carrosséis com 1 componente por slide — Caféra (café, verde + laranja) novo, Verdan e Maren em carrossel; Vinora e Helion só listados. Sem texto explicativo. §28 |
 | @noahelhadedy | sim | dicas de bibliotecas de UI | 2 | Listas de bibliotecas de componentes animados e de ícones (prints soltos, não copiados) |
 | @gifux | não: 0 posts | — | 1 | Nada |
 | @interfacely | não: perfil não existe | — | — | Nada |
@@ -73,3 +98,15 @@ Nota 1–5 = utilidade para esta skill.
 | @ui.tips | não: parado desde 02/2023 | — | 1 | Nada novo |
 | @nick_buturishvili | não: parado desde 07/2024 | — | 1 | Nada novo |
 | @christvizcarra | não: parado desde 11/2024 | — | 1 | Nada novo |
+
+### Perfis novos (rodadas 2, 5, 6 e 7, leitura de 18/11/2026)
+
+| Handle | Ativo? | Tipo | Nota | O que aproveitar |
+|---|---|---|---|---|
+| @shohan.designs | sim (1.532 posts, 26,4K; CEO do Orbix Studio) | conceitos de fintech, cripto, saúde, fitness em dark | 3 | Vaulto, Zentra, CareNest, fitness, finanças pessoais; legenda curta explica o layout. Mesmo molde de apresentação em todo post. §22, §29 |
+| @orbixdashboard | sim (conta de dashboards do Orbix Studio) | conceitos de dashboard | 3 | Deuce (perfil de atleta claro, 1 acento verde). Dados de exemplo quebrados. §24 |
+| @webdesignssphere | sim | estúdio; legendas longas com decisões de UX | 4 | Logística "Alpha.": melhor justificativa escrita (acento para tela aberta por horas, status → ação). Já tinha RH (§21c). §25 |
+| @uiuxcenter | sim | curadoria (credita autor, ex. @rondesignlab) | 3 | CreditPros: score com faixas, grade ✓/✕. §23 |
+| @uiuxsharon | sim | freelancer; mockups | 2 | MediCore: hero com resumo do dia; erros de dado, hashtags aleatórias, imita marca da Amazon. §26 |
+| Code & Chill (Facebook) | sim (20K) | mesma pessoa de @_code_and_chill_ | 2 | Só cross-posts dos reels do Instagram; nada novo além de divergências de leitura. §27 |
+| @code_and_chill (sem underline) | **não: 0 posts** | — | 1 | Não é @_code_and_chill_. Nada |

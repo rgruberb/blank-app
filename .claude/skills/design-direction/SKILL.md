@@ -1,11 +1,18 @@
 ---
 name: design-direction
-description: Direção de arte e identidade visual para sites, landing pages, apps e marcas — escolhe paleta de 2 cores base + 1 acento (com catálogo de combinações e hex), empilha "camadas" visuais (identidade → profundidade → movimento), aplica layout que transmite confiança (espaço, alinhamento, ritmo calmo) e guia o workflow de usar o Claude para web design mostrando referências em vez de descrever com adjetivos, inclusive para adicionar movimento; cobre também branding (logo, embalagem que comunica preço, sistema de marca com paleta e par tipográfico, movimento do logo), regras de sistema (proporção 60/30/10, rampa de 6 tons, sombra tingida), font pairing (12 pares display + corpo) e como dar à IA componentes/skills/ícones reais em vez de pedir UI do zero. Use quando o usuário pedir "escolhe uma paleta", "que cores usar no site", "deixa com cara premium/cara de startup", "o site está genérico/sem personalidade", "melhora a direção de arte", "parece pouco confiável", "como pedir pro Claude fazer um site bonito", "adiciona animação/movimento no site", "Claude Design", "como usar o Claude Design", "design system no Claude Design", "pitch deck/landing/protótipo de app/vídeo de lançamento no Claude Design", "limite do Claude Design acabou", "branding", "identidade visual", "criar marca/logo", "brand book", "embalagem/packaging", "o logo está ruim", "animar o logo", "parece barato/caro demais", "font pairing", "par de fontes", "combinação de fontes", "que fonte usar", "60/30/10", "proporção de cores", "rampa de cores", "escala de tons", "sombra", "sombra tingida", "box-shadow feio", "biblioteca de componentes para IA", "skills de design para Claude", "biblioteca de ícones", "apresentar o design em mockup", ou antes de começar a UI de uma landing page nova.
+description: Direção de arte e identidade visual para sites, landing pages, apps e marcas — paleta 2 cores base + 1 acento (catálogo com hex, 60/30/10, rampas de tons), camadas identidade → profundidade (luz, vidro, sombra tingida) → movimento, layout que transmite confiança, par tipográfico (12 pares), branding (logo, embalagem × preço, brand book) e workflow com o Claude e o Claude Design mostrando referências e componentes reais em vez de adjetivos. Use quando pedirem "escolhe uma paleta", "que cores usar", "60/30/10", "font pairing", "par de fontes", "sombra", "cara premium", "site genérico/sem personalidade", "parece pouco confiável", "como pedir pro Claude fazer um site bonito", "Claude Design", "branding", "identidade visual", "criar logo", "brand book", "embalagem", "parece barato", "biblioteca de componentes para IA" ou antes de começar a UI de uma landing page nova.
 ---
 
 # Design Direction
 
 Destilado de 11 reels sobre direção de arte web (paletas 2+1, camadas, layout de confiança, workflow com Claude) da rodada 3 de perfis (branding, logo, embalagem, sistemas de marca da Ramotion, antes/depois de paleta) e das rodadas 1 e 5 (rampas de paleta, 60/30/10 e sombra da @gg.designhub, font pairing, bibliotecas de componentes/skills/ícones para IA, apresentação em mockup). Use para **decidir** a direção antes de codar e para **corrigir** UIs genéricas.
+
+## Gatilhos adicionais
+Também use para: "cara de startup", "melhora a direção de arte", "adiciona animação/movimento no site" (direção; valores
+em `ui-motion`), "como usar o Claude Design", "design system / pitch deck / landing / protótipo de app / vídeo de
+lançamento no Claude Design", "limite do Claude Design acabou", "o logo está ruim", "animar o logo", "caro demais",
+"combinação de fontes", "que fonte usar", "proporção de cores", "rampa de cores", "escala de tons", "sombra tingida",
+"box-shadow feio", "skills de design para Claude", "biblioteca de ícones", "apresentar o design em mockup".
 
 ## Quando usar
 

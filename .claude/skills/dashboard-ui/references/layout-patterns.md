@@ -82,6 +82,13 @@ Variações vistas:
 - **KPI de urgência cheio de cor** ("Overdue 2" coral) + 3 KPIs neutros (Today / Upcoming / Completed) — Ember V29
   `DfrtgFyTmOM`: o acento marca o que pede ação, não o maior número.
 - **Card preto único** num tema claro com cartões menta — verificação `Dfz0mLAzsjg` (mesma lógica do KPI invertido).
+- **KPI com subtotal de contexto** embaixo do número ("86 Today · Old Patients: 12"; "Cash $7,000 · Crypto $5,420.22")
+  — CareNest `DfUvP_ulPC6`, Vaulto `DfcdrhgFFMR` (`domain-examples.md` §22).
+- **Score de confiança** = número grande + delta em pontos + palavra ("Excellent") + data de atualização, e o número
+  posicionado dentro de faixas coloridas com marcador — CreditPros `DfaQe-CiBfJ` (§23).
+- **Número de score em fonte de matriz de pontos** dentro de arco fino ("93%", "89%") — fitness `DffCenmFASU` (§29a).
+- **Cor do delta pelo sentido bom/ruim, não pelo sinal**: "Critical Alerts +6%" em verde (MediCore §26) e "−45%" de
+  distância sem leitura (logística §25) são os contraexemplos. (complemento) Defina por métrica se "subir" é bom.
 
 ## 3. Gráficos vistos e como foram estilizados
 | tipo | onde | estilo |
@@ -125,6 +132,19 @@ Variações vistas:
 | Candles + seletor de período | trading `DXeeUP7FKGs_1` | candles acento/vermelho sem grid; 1D·1W·1M·3M·1Y·ALL com ativo em pílula |
 | Linha com cursor vertical | Borea `DSIMwtvDluO_3` | linha laranja fina, cursor vertical + ponto de leitura, seletor de período no rodapé |
 | Rosca de score | Borea `DSIMwtvDluO_1` | segmentos com gaps em gradiente laranja→azul, score grande no centro |
+| Sankey de conversão | Vaulto `DfcdrhgFFMR_2` | nós por moeda, fluxos cinza, 1 nó em vermelho (destaque) |
+| Heatmap de quadradinhos (cashflow) | Vaulto `DfcdrhgFFMR_2` | grade cinza/branco, claro = mais movimento, sem eixo |
+| Barras semanais com 1 dia aceso | Vaulto `DfcdrhgFFMR_2` | trilhos cinza, só "Wed" em vermelho com gradiente |
+| 2 linhas + tooltip com ponto no acento | Vaulto `DfcdrhgFFMR_3`, Zentra `Dfr6X8qFPwC` | branca + vermelha (Vaulto) ou laranja + azul + 1 neutra sobre barras de volume (Zentra) |
+| Barras hachuradas + 1 cheia | logística `DftsSH-jnfs_1` | histórico em hachura diagonal cinza, barra atual teal com tooltip "$329" |
+| Faixas de score com marcador | CreditPros `DfaQe-CiBfJ_1` | 3 faixas pastel (rosa/amarelo/verde), marcos 300/630/690/730, triângulo preto na posição |
+| Grade mensal ✓/✕ | CreditPros `DfaQe-CiBfJ_2` | células por mês; ✓ em círculo limão, mês perdido ✕ cinza |
+| Gauge semicircular em gradiente | CareNest `DfUvP_ulPC6_2` | arco bege → teal com agulha |
+| Arco radial de traços (risco) | CareNest `DfUvP_ulPC6_2` | traços bege/laranja em leque + 3 contagens de risco acima |
+| Área com projeção tracejada | Deuce `Dfus5sWFAov` | área verde até o "hoje" (linha vertical tracejada), depois linha tracejada |
+| Radar de atributos / mapa de quadra | Deuce `Dfus5sWFAov` | radar verde de 5 eixos; quadra com zonas em % |
+| Barra de progresso por status | Zentra `Dfr6X8qFPwC` | uma barra por estado (Pending 80%, On Hold 30%…) com % e delta |
+| Barra segmentada com marcador + N/M | fitness `DffCenmFASU` | teal-claro → teal, marcador no ponto atual, "Exercises 8/12" ao lado |
 
 Regras que se repetem: histórico em neutro + destaque no "agora"; nenhum gráfico 3D; legendas como lista
 tabular; eixos mínimos. Para cores e marcas, use a skill `dataviz`.
@@ -223,7 +243,7 @@ Sempre respeite `prefers-reduced-motion` (complemento): sem clip-path animado, t
 
 ## 7. Padrões de gamificação
 
-**Leitura honesta das referências:** nenhum dos 18 reels mostra gamificação explícita — **não há pontos/XP, níveis,
+**Leitura honesta das referências:** nenhum dos 18 reels (nem os posts das rodadas 2–7) mostra gamificação explícita — **não há pontos/XP, níveis,
 badges, streaks, rankings/leaderboards nem tela de recompensa**. O que aparece, e muito bem resolvido, é a
 **camada de progresso e meta** sobre a qual a gamificação se constrói. Abaixo, primeiro o que se vê (com ID), depois
 como usar num painel de gestor e num de cliente. Tudo marcado "(complemento)" é sugestão, não está nas imagens.
@@ -242,6 +262,12 @@ como usar num painel de gestor e num de cliente. Tudo marcado "(complemento)" é
 | **Destaque do "agora"** | um único mês aceso no acento com tooltip-pílula ("Mar · 4.2k t") | série @felvrabr |
 | **Progresso de metas/pacing (rótulos ilegíveis)** | 3 barras coloridas sob um número "23"; barra azul sob 3 números; anéis de % | `Dfct0mNvg3f`, `DfXoXVFPBfd`, `DfeT74YvQaD` Growth |
 | Já na skill | anéis concêntricos com valor/meta (Tasks 3/8, Focus 1.1h/2h), timer de foco, check magenta em tarefa | `Deoi1WhP83h` |
+| **Score do dia + 1 ação** | "Today's Health Score 93%" + "Your Body Is Ready" + botão único "Start Workout" | `DffCenmFASU` (§29a) |
+| **Conquistas como mini-anéis** | "Nutrition Achievements": hidratação, fibra, vitaminas 9/12 em anéis pequenos | `DffCenmFASU` |
+| **Score com palavra** | anel lima "74% Excellent!" (finanças), "730 +6 pts Excellent" (crédito), "Nutrition Score 88 · Excellent" | `DfmwyDclA0Q`, `DfaQe-CiBfJ`, `DffCenmFASU` |
+| **Sequência de meses ✓/✕** | grade de pagamentos em dia, mês perdido em ✕ (base de streak) | `DfaQe-CiBfJ_2` |
+| **Onboarding com passos** | card "Finish Setup · 2 of 4 · Skip · Next" na sidebar | Zentra `Dfr6X8qFPwC` |
+| **Progresso da temporada** | "Season progress 68% TODAY" (gauge), "Rows picked 3/4 75%" | Caféra `Df4Shdgmafx` (§28a) |
 
 ### 7.2 Blocos de UI gamificada derivados (complemento, construídos sobre 7.1)
 - **Anel/gauge de meta** com fração e prazo: "3/4 zonas · fecha hoje". Ao chegar a 100%: o arco troca para a cor do
@@ -335,3 +361,34 @@ Fonte: Qwash (`DX_bA4rCWf0`), WayLoo (`DVv7OOECewR`); descrições em `domain-ex
 - **Saudação em duas camadas**: nome em branco/preto + pergunta em cinza ("Hello, Denis! *You want to book something?*").
 - Gradiente/acento de marca só no cabeçalho, botões e aba ativa; corpo neutro com cards arredondados.
 - Para apresentar: pares de telas que contam o fluxo inteiro (oferta → home → serviço → detalhe → agendamento → revisão).
+
+## 10. Dashboard fintech web e apps de score (rodadas 2, 5, 7)
+
+Fonte: Vaulto `DfcdrhgFFMR`, Zentra `Dfr6X8qFPwC`, finanças pessoais `DfmwyDclA0Q`, CreditPros `DfaQe-CiBfJ`,
+fitness `DffCenmFASU`; descrições em `domain-examples.md` §22–23 e §29. Complementa o §8 (app de trading).
+
+**Ordem de leitura do dashboard fintech web** (a legenda do Vaulto diz "peso visual para o que você lê primeiro"):
+1. Saldo total gigante + delta em chip → **composição do total logo abaixo** (Cash + Crypto).
+2. Ações: **1 CTA cheio no acento** ("Add Funds") + 2 secundárias em contorno (Send, Convert).
+3. Cards por ativo/moeda (com sparkline e delta) + **card tracejado "adicionar"** no fim da fileira.
+4. Gráfico principal com tooltip e seletor de período/dia.
+5. Lista de atividade ou tabela de transações; coluna lateral com **uma ação** (Convert) e **um monitor** (Watchlist).
+Sidebar com grupos em caps (GENERAL / TOOLS / INSIGHTS ou MAIN MENU / FINANCE OPS), badges de contagem, card de
+upgrade ou de onboarding no rodapé, barra de comando com atalho (⌘ Space, ⌘D "Ask AI").
+
+**Cor:** base quase preta + 1 acento de UI (laranja Vaulto, roxo Zentra, teal CareNest) + verde/vermelho só para
+variação. **As séries de gráfico podem ter cores próprias** (vermelho de gasto no Vaulto; laranja BTC + azul ETH no
+Zentra) desde que não usem o acento de UI em fundo grande. **Divergência com a regra 5 do SKILL.md ("uma cor de
+destaque só"):** o app de finanças `DfmwyDclA0Q` usa **dois acentos com papéis fixos** (azul = dinheiro/ação, lima =
+score/resultado). Aceite dois só se o papel de cada um for documentado e nunca trocar.
+
+**Score (crédito, saúde financeira, fitness):** número grande + delta + palavra + data; posição dentro de faixas;
+anel/arco fino; botão único com o próximo passo. A palavra ("Excellent", "Healthy") dá o veredito sem exigir leitura
+do gráfico. (complemento) Faixas com rótulo de texto, não só cor, para daltonismo.
+
+**Profundidade sem sombra pesada:** textura granulada sutil nos cards (Vaulto), vidro em gradiente terroso como drawer
+(CreditPros). Para sombras em tema claro, ver a regra de sombra tingida em `design-direction`
+(`layers-and-trust-layout.md` §4).
+
+**Apresentação** (todos os posts do Orbix Studio): tablet/celular nas mãos → UI plana em 2 metades → recorte 3D
+inclinado com desfoque → CTA. Detalhe em `design-direction` (`claude-web-design-workflow.md`).
