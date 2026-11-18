@@ -126,7 +126,7 @@ Essas três entraram no catálogo de `color-palettes.md`.
 
 1. Pesquisa (objetivos, público, posicionamento, valores) e **faixa de preço**.
 2. Paleta: 1 saturada de marca + escuro + 1–2 apoio (ou 2+1 clássico); nomeie e documente hex/RGB.
-3. Par tipográfico: display só em títulos + Inter (ou sans neutra) no corpo.
+3. Par tipográfico: display só em títulos + Inter (ou sans neutra) no corpo; 12 pares prontos por tom em `typography-pairing.md`.
 4. Logo: 1 ideia; testar pequeno e em P&B; escolher o movimento (calm/quick/friendly).
 5. Aplicar nos 5 pontos de contato (fachada/site, logo, cores, perfil social, embalagem) e conferir consistência.
 6. Desenhar 404/vazios no sistema; revisar dados reais dos mockups.

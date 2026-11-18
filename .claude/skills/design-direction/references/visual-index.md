@@ -33,6 +33,25 @@ Prints únicos de carrossel/reel (não folhas de contato). Conteúdo destilado e
 | `DYpD5C7zwx6_1.jpg` | @rish_designs (repost @ultimateuiux) | https://www.instagram.com/reel/DYpD5C7zwx6/ (13 s) | Seção escura "THE HERITAGE" (THE em outline, HERITAGE sólido), parágrafo curto e Porsche 3D de perfil; navbar mínima com 1 CTA vermelho | Scroll-storytelling: 1 palavra-título + 1 ângulo do produto; outline + sólido |
 | `DYpD5C7zwx6_2.jpg` | @rish_designs | https://www.instagram.com/reel/DYpD5C7zwx6/ (18 s) | Seção clara "PERFECTION" com a asa do carro na frente do título (oclusão) | Alternância escuro/claro entre seções; texto atrás do objeto 3D |
 
+## Prints da rodada 1 (`<ID>_<n>.jpg`, 18/11/2026)
+
+Prints únicos de carrossel. Conteúdo destilado em `color-palettes.md`, `layers-and-trust-layout.md` §4,
+`typography-pairing.md` e `claude-web-design-workflow.md`.
+
+| Arquivo | Autor | URL | O que mostra | Quando abrir |
+|---|---|---|---|---|
+| `De_FtT3k-tT_1.jpg` | @gg.designhub | https://www.instagram.com/p/De_FtT3k-tT/?img_index=3 | "The Perfect Palette Ratio": placas 3D branco 60% / lavanda 30% / roxo 10% + takeaway "se parece poluído, o acento está cobrindo 30%" | Explicar 60/30/10 ao usuário |
+| `De_FtT3k-tT_3.jpg` | @gg.designhub | https://www.instagram.com/p/De_FtT3k-tT/?img_index=5 | "Kill Pure Black Shadows": sombra preta `rgba(0,0,0,.25)` vs sombra tingida; fórmula Y 8 · Blur 16 · 8% | Mostrar a sombra tingida |
+| `DescJ2zTeSf_1.jpg` | @gfx.om | https://www.instagram.com/p/DescJ2zTeSf/ | Infográfico com os 12 pares de fontes renderizados + faixa "Quick Tips" | Escolher par tipográfico vendo as fontes |
+| `DfEmKLLFEDi_1.jpg` | @uiuxaadi | https://www.instagram.com/p/DfEmKLLFEDi/?img_index=1 | Template de rampa: 6 cápsulas Mocha Earth com hex e brilho âmbar lateral | Mostrar o formato "rampa de 6 tons" |
+| `DfUnwyQGCTA_1.jpg` | @uiuxaadi | https://www.instagram.com/p/DfUnwyQGCTA/?img_index=1 | Ruby: rampa magenta **com o rótulo `#243A66` errado** sobre swatch rosa | Lembrar de conferir hex de post |
+| `DfkBGDyDgqS_1.jpg` | @griffinwooldridge1 | https://www.instagram.com/p/DfkBGDyDgqS/?img_index=1 | "Top 4 UI Libraries": mosaico dark de componentes (clima, chat de IA, agenda, token spend, timer) | Referência de estética de biblioteca de componentes dark |
+
+Avaliados e **não copiados**: `DfEmKLLFEDi_2/_3`, `DfUnwyQGCTA_2/_3` (mesmo template de rampa), `De_FtT3k-tT_2`
+(escala tipográfica: fica com `ux-patterns`), `DescJ2zTeSf_2` (recorte do mesmo infográfico), `DfFBFpXDZLv_1–3`
+(@matheustilli, listas de nomes de skills; o conteúdo está em texto), `DfkBGDyDgqS_2/_3` (BoardUI/Transitions.dev, mais
+úteis como dashboard), `Dff1uulGoxb_1–3` (motion: `ui-motion`).
+
 ## Perfis avaliados
 
 Avaliação das contas lidas nas rodadas 3A/3B/3C como fonte para **direção de arte, cor e branding** (leitura de
@@ -40,7 +59,7 @@ Avaliação das contas lidas nas rodadas 3A/3B/3C como fonte para **direção de
 
 | Handle | Ativo? | Tipo | Nota | O que aproveitar |
 |---|---|---|---|---|
-| @gg.designhub | sim (~94,5K) | estúdio de branding (carrosséis ✗/✓ e reels didáticos) | 4 | Marca julgada em 3 s (5 pontos de contato), 6 erros de logo, embalagem × preço, 2–3 cores. `branding-identity.md` §1–3 |
+| @gg.designhub | sim (~94,5K) | estúdio de branding (carrosséis ✗/✓ e reels didáticos) | 4 | Marca julgada em 3 s (5 pontos de contato), 6 erros de logo, embalagem × preço, 2–3 cores. `branding-identity.md` §1–3. Rodada 1: "cheat codes" de sistema (60/30/10, sombra tingida blur = 2× Y ~8%, grid de 8, escala 1,25, linha 45–75 car.); capa promete 6 e entrega 5 |
 | @ramotion | sim, posta a cada 1–3 meses (157K) | agência; estudos de caso de marca/produto | 3 | Sistemas completos: 1 saturada + escuro + 1–2 apoio, display + Inter, hex+RGB, ordem logo→telas. Sem regras explícitas. §5 |
 | @dailywebdesign | sim, várias vezes/semana (581K) | curadoria/repost (credita autor) | 3 | Antes/depois de paleta (@ui.abraham), combos base escura + fundo suave + acento quente (@pierredelcourr). Metade é só inspiração. §6 |
 | @theglidestudio | sim (~2,3K) | estúdio de motion para startups | 3 | Movimento do logo (calm/quick/friendly), layout de confiança (já em `layers-and-trust-layout.md`). Motion de UI fica em `ui-motion` |
@@ -58,3 +77,18 @@ Avaliação das contas lidas nas rodadas 3A/3B/3C como fonte para **direção de
 | @ui.tips | não: parado desde 02/2023 | — | 1 | Nada novo |
 | @christvizcarra | não: parado desde 11/2024 | — | 1 | Nada novo |
 | @nick_buturishvili | não: parado desde 07/2024 | — | 1 | Nada novo |
+
+### Perfis novos (rodadas 1 e 5, leitura de 18/11/2026)
+
+| Handle | Ativo? | Tipo | Nota | O que aproveitar |
+|---|---|---|---|---|
+| @uiuxaadi | sim (selo "AI content" em parte dos posts) | carrosséis de paleta em rampa | 3 | Formato de rampa de 6 tons com acento no fim. **Hex com erro** (Ruby) e paleta prometida que falta (Plum): sempre conferir. `color-palettes.md` |
+| @gfx.om | sim (selo "AI content") | infográficos de tipografia | 3 | 12 pares display + corpo e 4 dicas. Um rótulo trocado, nome de fonte antigo (Muli). `typography-pairing.md` |
+| @griffinwooldridge1 | sim | dicas de bibliotecas de UI para IA | 3 | Bencho, BoardUI, Transitions.dev, Beautiful UI; teste dos 4 estados (vazio/carregando/erro/texto longo) |
+| @matheustilli | sim (~1,9 mil comentários no post) | índice de skills de design para Claude Code (PT-BR) | 2 | Organização em camadas e "inclua avaliação". Links só por comentário |
+| @mobileeditingclub | sim | workflow de motion com Claude | 3 | Mesmo conteúdo de `Dff1kjUiR4o` em carrossel (`Dff1uulGoxb`); valores de motion em `ui-motion` |
+| @craftwork.design | sim | marketplace + curadoria de skills de design | 3 | Antes/depois "sem referências × com referências"; capa com script + grotesca. Vende o próprio pack |
+| @noahelhadedy | sim | curadoria de recursos (UI animada, ícones, motion) | 2 | Listas de bibliotecas de ícones e de UI animada; 1 momento animado por página. Autopromoção no 1º item |
+| @shohan.designs | sim (1.532 posts, 26,4K) | conceitos de UI do Orbix Studio | 3 | Para esta skill: o molde de apresentação (device → plano → recorte 3D desfocado). Posts "5 fonts" só listados, não lidos. Dashboards: `dashboard-ui` |
+| @designmotionhq | sim | regras numéricas de tipografia | 4 | Conteúdo (escala, line-height, tracking, 50ch) ficou na skill `ux-patterns`; não duplicado aqui |
+| @aiwithknox | indisponível (link `DfkSCaRNfa0` redireciona para perfil fora do ar) | — | — | Nada |

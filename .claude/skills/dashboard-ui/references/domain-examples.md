@@ -492,3 +492,151 @@ salários em lista. Fotos de pessoas humanizam o painel. Apresentado em 3 versõ
 
 **Copiar (21):** progresso do pedido em 4 etapas **repetido** na home e no detalhe; rodapé fixo com total + 1 CTA;
 uma ação principal destacada na tab bar; acento só em ativo/CTA/selo.
+
+---
+
+# Rodadas 2, 5, 6 e 7 (Instagram e Facebook, 18/11/2026)
+
+Prints com arquivo em `assets/visual-refs/` estão marcados; o resto é só descrição. Hex aproximados, lidos de print.
+Os mockups desta leva têm **vários dados inconsistentes** (listados em cada item): revise números de exemplo antes de
+mostrar a cliente.
+
+## 22. Fintech web escuro do Orbix Studio (@shohan.designs)
+
+### 22a. Vaulto — `DfcdrhgFFMR` (prints `DfcdrhgFFMR_1.jpg` plano esquerdo, `_2` plano direito, `_3` recorte inclinado)
+Dark quase preto `~#0B0B0C`–`#141414`, **laranja `~#FF5A1F` só no CTA "Add Funds" e no ponto do tooltip**, vermelho
+`~#E0302A` como série de gasto, verde/vermelho nos deltas. Legenda: "visual weight given to the information you'd scan first".
+- Sidebar com grupos em caps cinza **GENERAL / TOOLS / INSIGHTS / OTHER**, badges ("3", "20$"), card "Upgrade to PRO" no rodapé.
+- **Total Balance `$12,420.22` + chip "+24%"**, logo abaixo a composição "Cash $7,000 · Crypto $5,420.22"; ações
+  "+ Add Funds" (pílula laranja cheia) / "Send" / "Convert" (contorno).
+- Cards de moeda com **textura granulada** sutil (ETH 78,351 +17%, EURO −18%, YEN) e **card tracejado "+ Add another
+  currency"** como estado vazio que convida à ação.
+- "Balance Spendings": 2 linhas (branca e vermelha) sobre grade escura, tooltip com ponto laranja, **seletor de dias
+  em pílulas numeradas**; barras semanais cinza com **só "Wed" em vermelho com gradiente**.
+- **Sankey de conversão de moedas** e **"Net Cashflow −$3564" em heatmap de quadradinhos** cinza/branco.
+- Barra "Search or type command" com atalho **⌘ Space** (produto de poder).
+**Divergência entre rodadas:** a rodada 7 leu "Apps/Reports", "+11%", "Dribix Studio −2300" e tooltip "Debt"; o print
+confirma a rodada 2 (TOOLS/INSIGHTS, +17%, Orbix Studio −2309, "Cash").
+
+### 22b. Zentra (cripto) — `Dfr6X8qFPwC` (rodada 5, sem print)
+Fundo `~#0E0E10`, cards `#17171A`; **roxo `#6D4AFF` só em item ativo e CTA**; linhas de gráfico laranja `#F7931A` (BTC)
+e azul `#4C8DF6` (market cap) + 1 neutra sobre barras de volume cinza; verde `#2ECC71` / vermelho `#FF4D4F` só em variação.
+- Sidebar MAIN MENU / FINANCE OPS, botão "Ask AI ⌘D", **card de onboarding "Finish Setup · 2 of 4 · Skip · Next"** com
+  ilustração 3D (progresso de configuração dentro da sidebar), toggle Dark Mode no rodapé.
+- Ordem: **faixa de 5 KPIs → "Market Trends" grande com tooltip multi-série → tabela de transações → coluna lateral com
+  ação (Convert, borda em gradiente laranja→azul, abas Buy/Sell/Swap/Convert) e monitoramento (Watchlist)**.
+- "Transaction Status" com **barra de progresso por estado** (Pending 80%, Completed 100%, On Hold 30%…).
+- Card "Registration" com QR e **mensagem de erro já escrita** ("If an error occurs scanning…").
+- Dados com números "didáticos" (π, e, √2, φ) como placeholder; KPIs de marketing (Traffic, CTR, CPA) num dashboard
+  cripto: não faz sentido, não copie.
+
+### 22c. CareNest (saúde) — `DfUvP_ulPC6` (print `DfUvP_ulPC6_2.jpg`)
+Mesmo sistema do Vaulto em outro setor: gradiente petróleo `~#0E1A1C → #12262A`, **acento teal `~#3FB8A8`** (aba ativa,
+filtro "Weekly", dia ativo) e **bege `~#D9A066` como 2ª cor só nos gráficos**.
+- "Welcome back, Cecillia!"; seletor de dias horizontal (dia ativo em pílula teal); cards de médico com foto, especialidade
+  e chip "Available".
+- Cada KPI com subtotal de contexto ("Total Patients 86 Today · Old Patients: 12"; "Total Rooms 124 · General Rooms: 36")
+  e mini-visual próprio (gauge semicircular, barras bicolores).
+- Histograma de barras finas com marcos rotulados; **risco em 3 faixas com contagem (12 alto / 24 moderado / 72 baixo)**
+  sobre arco radial de traços com "Ai Insight Today". Chips "Upcoming" azul / "Urgent" vermelho.
+
+## 23. Score de crédito "CreditPros" — `DfaQe-CiBfJ` (@uiuxcenter; design Jack R. / @rondesignlab; prints `DfaQe-CiBfJ_1.jpg`, `_2`)
+Claro com gradiente pastel (branco → pêssego `~#F3E3DA` → verde-claro), nav em pílulas (ativa preta), **ativo/✓ em
+verde-limão `~#D4F53C`**, cards de crédito em gradiente oliva `~#8A9A3A` e rosa-terroso `~#B5796A`, alerta laranja `~#FF5A1F`.
+- **Pacote mínimo de confiança do score:** número grande **730** + delta "+6 pts" + rótulo "Excellent" + "Updated 5 Days Ago".
+- Score **dentro de faixas coloridas (300 / 630 / 690 / 730) com marcador triangular** na posição atual.
+- Abas com contagem em badge ("Your Credits 12", "Inquiries 24", "Public Records 12").
+- **Histórico de pagamentos em grade mensal ✓/✕** (✓ em círculo limão, mês perdido em ✕ cinza) + "Make a Payment".
+- Painel de vidro em gradiente terroso como drawer de detalhe ("On time 63%" em anel, "$2,663 Left To Pay").
+**Problemas:** "24/38 Payments on Time" = 63% em dia, mostrado sem alerta; "12,340" e "$12.340" no mesmo produto.
+
+## 24. Perfil de atleta "Deuce" — `Dfus5sWFAov` (@orbixdashboard; print `Dfus5sWFAov_1.jpg`)
+Claro cinza `~#E6E6E6`, cards brancos em 3 colunas; **um verde-oliva `~#7A9A3A` amarra navegação, seleção, gráficos e o
+botão "Compare"** (a própria legenda diz isso). Perfil (foto, país, idade, mão, especialidade) ao lado dos números.
+- **Forma do gráfico pela pergunta:** área (win rate no tempo), donut (participação por piso), barras horizontais
+  (comparação), radar (atributos), mapa de quadra (espaço/tática).
+- **Linha tracejada depois do "hoje"** separa projeção de dado real. Resultados recentes com selo W (verde) / L (vermelho).
+- KPIs de temporada com delta "vs last season".
+**Dados quebrados:** "Age 5"; "Win Rate 543"; Grass 56% (8W/2L) no donut vs 80% nas barras. Usa atletas reais com
+estatística inventada.
+
+## 25. Logística "Alpha." — `DftsSH-jnfs` (@webdesignssphere; print `DftsSH-jnfs_1.jpg`)
+**A melhor justificativa de UX da leva** (legenda resumida):
+- dark + **um laranja** para alertas, botões e pontos de status, porque é **tela de sala de controle aberta por horas**;
+- **4 KPIs com variação vs mês anterior** respondem "como estamos?" antes de abrir relatório;
+- **card de rastreio com timeline + courier + botões ligar/mensagem** transforma status em algo que o despachante pode agir;
+- **heatmap** mostra pico e vale de uma vez, mais fácil que tabela;
+- "Visits by country" com filtro de região; tabela de atividades com ID, categoria, horário e status colorido;
+- **"+ Create New Request" fixo no topo** (ação mais comum ao alcance).
+Visual: "Hi Jelle, Good Evening!" (segunda parte em cinza), nav em pílulas, Income Tracker com **barras hachuradas e
+uma barra cheia teal-acinzentada `~#7FB5B5` com tooltip "$329"**, heatmap em tons de teal com legenda por faixa,
+banner promocional com foto de contêiner.
+**Falhas:** Delivered 3047 > Shipments 1200 sem período; Order ID repetido; "−45%" de distância sem dizer se é bom;
+rastreio em "London, UK" num conceito para Dubai.
+
+## 26. Saúde "MediCore" — `DfUWa0jAed7` (@uiuxsharon; print `DfUWa0jAed7_1.jpg`)
+Claro `~#F4F5F7` + **azul `~#3B82F6`** (aba ativa). Hero com saudação + **resumo do dia** ("You have 8 appointments today
+and 3 new patient reports"), 2 botões (preto + contorno) e ilustração 3D de corpo translúcido com tags de sinais vitais.
+KPI padrão: rótulo, número grande, delta verde, mini-barras. Donut com total no centro; tabela com chips de estado
+(Stable verde / Monitoring azul / Improving laranja); progresso de tratamento em barras horizontais por programa.
+**Problemas:** "Critical Alerts 9 (+6%)" **em verde** (alerta subindo não é bom: a cor do delta precisa seguir o
+sentido "bom/ruim", não o sinal); Adrian × Andrian; hashtags de futebol; slide final imita o sorriso da Amazon.
+
+## 27. Code & Chill no Facebook (rodada 6, sem print) — mesmos reels já indexados
+Os dois reels são cross-posts de reels do Instagram já descritos:
+- **"SaaS revenue analytics dashboard"** (`facebook.com/reel/1555972142999537`) = **`DffBnb2vlUn`** (§4): Funnels em 5
+  colunas (1ª azul `#2F6BFF` cheia), Campaigns em kanban Draft / Scheduled / Live / Done, barras `#2FD6A5`, Cohorts com
+  heatmap triangular `#1D3FA8 → #5B8CFF` (claro = maior retenção). Fundo `#0B1428`, cards `#101C36`. Snippet `slidePill`
+  com `ease: 'power3.out'` (leitura aproximada).
+- **"Private credit loan management dashboard"** (`facebook.com/share/r/1A3pMvMBW2/`) = **`Dfo0F0Pvo4Y`** (§16): Casa Duna →
+  Portfolio ("Total outstanding $14.18m" → "$14.97m") → Risk (grade terracota `#8A5A48`/`#A86B52`, célula com contorno
+  limão `#B8F03C`, lista de imóveis com miniatura). Ordem **ativo → portfólio → risco** (micro ao macro); números
+  oscilam entre frames (contagem viva).
+**Divergências com §16:** aqui o gauge do imóvel é **amarelo `#E8C547` "63,4%"** (lá: limão "63,8%"); a rodada 6 leu
+`power3.out`, a 3 leu `power3.inOut`. Fundo lido como marrom-oliva `#17140F` com vidro sobre foto (lá: terracota + sidebar
+clara). Ambos são leituras de frame: na dúvida, prefira §16.
+O link `1AE3r4BKt6` abre a página (20K seguidores), não um vídeo; o post mais recente era "Music listening app
+dashboard" e não foi analisado.
+
+## 28. Série "OS" da @felvrabr em carrossel (rodada 7, sem print) — complementa §9
+Os carrosséis mostram **um componente por slide** com título e uma frase no canto ("Every number at a glance", "Data
+that reads like a story", "Micro-interactions that feel native"). Úteis para estudar cada peça isolada.
+
+### 28a. Caféra Coffee Farm OS — `Df4Shdgmafx` (novo domínio: café)
+Foto aérea de cafezal verde-escuro `~#12301A`, **acento laranja `~#E8955A`** (verde + laranja, em vez de oliva + lima).
+- **Ripeness map:** talhão laranja com pino "Plot 03 · Ready" e cartão com foto das cerejas ("82% ripe · Brix 21.4 ·
+  Moisture 92%") + **CTA único "Start harvest"**: "One scan finds the ripe plot, one tap sends the crew".
+- **Harvest overview** (2x2): Ripe cherries 71% "On target" (área); Crews in field 3 "+1 sent" (pirulitos "Max 4");
+  Picked today 260 bags "Rising" (linha pontilhada); **Season progress 68% TODAY** (gauge).
+- Variety Mix em anéis (Catuaí 48 / Bourbon 32 / Mundo Novo 20, centro "412 HECTARES"); Harvest Forecast com junho no acento.
+- Sidebar de vidro com ponto laranja de notificação em "Ripeness"; "Harvest picker HV-0307 · Rows picked 3/4 75%".
+
+### 28b. Verdan (carrossel `DfuhN08lTWN`) e Maren (carrossel `Dfr4RMBlaPH`)
+Mesmos produtos dos reels `Dfui4V5BMbz` e `Dfr9S5yhlvX`. **Diferenças de número entre reel e carrossel** (o mockup muda
+entre versões): Verdan NDVI 0.78 (reel 0.77), "Pivots running 3 · +1 started" (reel 2); Maren ocupação "94% ▲ 6 pts" com
+**receita 2026 (teal) vs 2025 (cinza) na mesma curva** e linha pontilhada em 31 Dec, barras Booked terracota `~#C8664F` /
+New teal `~#4FD8C0` (§9c chama de coral/menta), tooltip de arraste "Drag to extend · 4 nights · $4,280".
+Também listados e **não lidos**: Vinora "Vineyard OS" (`Df11OjZFT5G`), Helion carrossel (`Dfo-Jx3FZ0L`) e landing pages
+de comida (Sem Frescura, Brutto) — estas são de `design-direction`.
+
+## 29. Apps mobile do Orbix Studio (@shohan.designs, rodada 7, sem print)
+
+### 29a. Fitness "Workout Readiness" — `DffCenmFASU`
+Preto + **teal único**, foto do corredor desfocada em teal. Home abre com **"Today's Health Score" + título "Your Body
+Is Ready" + botão único "Start Workout"**; **"93%" e "89%" em fonte de matriz de pontos** dentro de arco fino (score com
+identidade sem ilustração); "My Progress · Of the weekly plan completed". Treino: "Workout Progress 68%" em **barra
+segmentada com marcador + "Exercises 8/12" + "Workout Time 28:42"**. Nutrição: "Nutrition Score 88 · Excellent" em arco
+de pontos e **"Nutrition Achievements" em mini-anéis** (hidratação, fibra, vitaminas 9/12). Título grande bold + rótulos
+pequenos cinza.
+
+### 29b. Finanças pessoais — `DfmwyDclA0Q`
+"Good morning, Itachi"; "My Balance $50,764.00" + chip verde; **duas cores de acento com papéis fixos: azul `~#1E9BFF` =
+dinheiro/ação ("+ Add Money"), lima `~#C8F32B` = resultado/score** (anel "74% Excellent!"). Cashflow Daily/Weekly/Monthly
+com "This week / Last week / Change +$1,650"; Income/Outcome com delta. Copiloto "Lumen AI": frase com número ("12% lower
+than May"), cartão "Entertainment $1,300 · +18% over budget" e **atalhos prontos** ("Set a budget", "Save $500",
+"Find subscriptions").
+
+**Copiar (22–29):** um acento só para ação/estado (ou dois com papéis fixos e documentados); composição do total logo
+abaixo do número; KPI com subtotal de contexto; delta colorido pelo sentido bom/ruim; card tracejado de "adicionar";
+status → ação (rastreio com ligar/mensagem; "Start harvest"); score = número + delta + palavra + data; forma do gráfico
+pela pergunta; projeção tracejada depois do "hoje".

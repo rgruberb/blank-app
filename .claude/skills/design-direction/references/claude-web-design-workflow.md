@@ -49,3 +49,49 @@ Site "Relay" dark gerado com essa abordagem, seção por seção:
 - CTA final: card de fundo lime "Pick the task you *hate* most." + footer.
 
 Padrão: **todo título de seção usa uma palavra em serif itálico** e o lime aparece 1–2 vezes por seção (CTA, dado-chave). Útil como referência de **consistência do acento e da tipografia ao longo de várias seções**.
+
+## Dar à IA peças reais: componentes, skills, ícones (rodadas 1 e 5)
+
+Mesmo princípio do "mostrar, não descrever", aplicado a componentes. Resumo dos posts; os links reais não foram
+conferidos (vários dependem de "comente X").
+
+- **Bibliotecas de componentes em vez de UI do zero** (@griffinwooldridge1, `DfkBGDyDgqS`, print `DfkBGDyDgqS_1.jpg`):
+  "Stop making AI design from scratch". Escolha pelo tipo de produto: **Bencho** (micro-interações), **BoardUI**
+  (dashboards e ferramentas de agente), **Transitions.dev** (mudança de estado; já instalada aqui como
+  `ext-transitions-dev`), **Beautiful UI** (chat de agente, aprovações, workflows). Estética comum: fundo quase preto
+  `~#0B0B0C`, cards grafite `~#1C1C1E`, cantos 16–20 px.
+  **Teste antes de adotar** (vem de um comentário e vale como regra): a biblioteca cobre **estado vazio, carregando,
+  erro e texto longo**? É aí que UI feita por IA quebra. Peça esses 4 estados no prompt.
+- **Antes/depois com referências** (@craftwork.design, `DfKaOBqjUr4`, rodada 5, sem print): o mesmo brief ("Fieldnote",
+  app de notas por IA) vira página genérica sem referências e página com foto de fundo, objeto 3D que segue o cursor e
+  tipografia refinada com os arquivos (fontes, ícones, componentes) da Craftwork. É prova visual do princípio; o post
+  também vende o marketplace. Outras skills citadas no mesmo carrossel: Design Engineering (Emil Kowalski), GSAP
+  ScrollTrigger, LottieFiles motion-design, Refactoring UI (auditoria de hierarquia/espaço/profundidade com nota),
+  Web Interface Guidelines (Vercel). Motion fica com `ui-motion`.
+- **Mapa de skills de design para Claude Code** (@matheustilli, `DfFBFpXDZLv`, sem print copiado): 42 nomes em 6
+  camadas (construção visual → criação visual → produto/interação → direção/conteúdo → qualidade/avaliação). Lições:
+  inclua skills de **avaliação** (review, dívida de design, acessibilidade, dark patterns, performance), não só de
+  geração; **confira repositório, licença e último commit** antes de instalar (18 repositórios, um deles com 16 das 42).
+  Já cobertas aqui: `ext-impeccable`, `ext-taste-skill`, `ext-extract-design`, `ux-patterns` (dark patterns, AI slop).
+  O post é só índice de nomes: sem os links, procure cada repositório.
+- **Ícones** (@noahelhadedy, `Df1eAHODjT9`, rodada 5): 8 sets (Neat Icons, Doo Icons, Majesticons, Gravity UI,
+  Pictogrammers/Material Design Icons, Humbleicons, Bootstrap Icons, Vectopus). Critérios para escolher (complemento
+  a partir do post): **uma grade só (24×24)**, estilos disponíveis (line/solid/duotone), mesma espessura de traço em
+  todo o produto, licença (open source vs. pago) e arquivo Figma. O 1º item é o produto do próprio autor.
+- **Bibliotecas de UI animada** (@noahelhadedy, `De_J0aOl9SJ`): Skiper UI, Kokonut UI, Cult UI, SmoothUI, Animata,
+  Eldora UI, Hover.dev. Dica do post: **um momento animado por página (hero ou CTA, não os dois)**. Implementação: `ui-motion`.
+
+Prompt (complemento): "Use os componentes de [biblioteca] para cards, tabela e date picker. Para cada componente,
+mostre os estados vazio, carregando, erro e com texto longo (nome de 60 caracteres, número de 9 dígitos)."
+
+## Apresentar o design: mockup em device + recorte em perspectiva (rodadas 2 e 5)
+
+Molde que os posts do @shohan.designs / Orbix Studio repetem em todo carrossel (Zentra `Dfr6X8qFPwC`, Vaulto
+`DfcdrhgFFMR`, CareNest `DfUvP_ulPC6`): **(1)** tablet ou celular nas mãos sobre fundo cinza-claro `~#D8D8D8` com a
+tela inteira → **(2–3)** a UI plana em close, dividida em duas metades (panorama) → **(4)** **recorte em perspectiva 3D
+com desfoque forte nas bordas** (profundidade de campo) num gráfico ou tabela → **(5)** CTA de contato. Variação: o
+mesmo design em monitor inclinado ou MacBook com luz dramática (@uiuxcenter, @webdesignssphere). Dá 4–5 slides de um
+único design, mostra detalhe sem poluir. Prints de exemplo em `dashboard-ui/assets/visual-refs/` (`DfcdrhgFFMR_3.jpg`
+= recorte inclinado).
+Cuidados (complemento): revise os dados do mockup (vários cases têm números impossíveis); não imite marca alheia no
+slide de contato (MediCore copia o sorriso da Amazon).

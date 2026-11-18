@@ -1,11 +1,11 @@
 ---
 name: design-direction
-description: Direção de arte e identidade visual para sites, landing pages, apps e marcas — escolhe paleta de 2 cores base + 1 acento (com catálogo de combinações e hex), empilha "camadas" visuais (identidade → profundidade → movimento), aplica layout que transmite confiança (espaço, alinhamento, ritmo calmo) e guia o workflow de usar o Claude para web design mostrando referências em vez de descrever com adjetivos, inclusive para adicionar movimento; cobre também branding (logo, embalagem que comunica preço, sistema de marca com paleta e par tipográfico, movimento do logo). Use quando o usuário pedir "escolhe uma paleta", "que cores usar no site", "deixa com cara premium/cara de startup", "o site está genérico/sem personalidade", "melhora a direção de arte", "parece pouco confiável", "como pedir pro Claude fazer um site bonito", "adiciona animação/movimento no site", "Claude Design", "como usar o Claude Design", "design system no Claude Design", "pitch deck/landing/protótipo de app/vídeo de lançamento no Claude Design", "limite do Claude Design acabou", "branding", "identidade visual", "criar marca/logo", "brand book", "embalagem/packaging", "o logo está ruim", "animar o logo", "parece barato/caro demais", ou antes de começar a UI de uma landing page nova.
+description: Direção de arte e identidade visual para sites, landing pages, apps e marcas — escolhe paleta de 2 cores base + 1 acento (com catálogo de combinações e hex), empilha "camadas" visuais (identidade → profundidade → movimento), aplica layout que transmite confiança (espaço, alinhamento, ritmo calmo) e guia o workflow de usar o Claude para web design mostrando referências em vez de descrever com adjetivos, inclusive para adicionar movimento; cobre também branding (logo, embalagem que comunica preço, sistema de marca com paleta e par tipográfico, movimento do logo), regras de sistema (proporção 60/30/10, rampa de 6 tons, sombra tingida), font pairing (12 pares display + corpo) e como dar à IA componentes/skills/ícones reais em vez de pedir UI do zero. Use quando o usuário pedir "escolhe uma paleta", "que cores usar no site", "deixa com cara premium/cara de startup", "o site está genérico/sem personalidade", "melhora a direção de arte", "parece pouco confiável", "como pedir pro Claude fazer um site bonito", "adiciona animação/movimento no site", "Claude Design", "como usar o Claude Design", "design system no Claude Design", "pitch deck/landing/protótipo de app/vídeo de lançamento no Claude Design", "limite do Claude Design acabou", "branding", "identidade visual", "criar marca/logo", "brand book", "embalagem/packaging", "o logo está ruim", "animar o logo", "parece barato/caro demais", "font pairing", "par de fontes", "combinação de fontes", "que fonte usar", "60/30/10", "proporção de cores", "rampa de cores", "escala de tons", "sombra", "sombra tingida", "box-shadow feio", "biblioteca de componentes para IA", "skills de design para Claude", "biblioteca de ícones", "apresentar o design em mockup", ou antes de começar a UI de uma landing page nova.
 ---
 
 # Design Direction
 
-Destilado de 11 reels sobre direção de arte web (paletas 2+1, camadas, layout de confiança, workflow com Claude) e da rodada 3 de perfis (branding, logo, embalagem, sistemas de marca da Ramotion, antes/depois de paleta). Use para **decidir** a direção antes de codar e para **corrigir** UIs genéricas.
+Destilado de 11 reels sobre direção de arte web (paletas 2+1, camadas, layout de confiança, workflow com Claude) da rodada 3 de perfis (branding, logo, embalagem, sistemas de marca da Ramotion, antes/depois de paleta) e das rodadas 1 e 5 (rampas de paleta, 60/30/10 e sombra da @gg.designhub, font pairing, bibliotecas de componentes/skills/ícones para IA, apresentação em mockup). Use para **decidir** a direção antes de codar e para **corrigir** UIs genéricas.
 
 ## Quando usar
 
@@ -29,13 +29,18 @@ Destilado de 11 reels sobre direção de arte web (paletas 2+1, camadas, layout 
 9. **Sistema de marca = 1 cor saturada + escuro + 1–2 de apoio**, display larga **só em títulos** + Inter (sans neutra) no corpo; documente hex **e** RGB; 1 palavra do título na cor de marca (padrão dos 3 cases da Ramotion). É o 2+1 da regra 1 em escala de sistema: a cor de apoio extra fica para ícones/ilustração/páginas secundárias, nunca compete com o acento na mesma tela.
 10. **Logo**: 1 ideia, funciona pequeno (ícone de app) e em preto e branco chapado, sem depender de degradê/tendência. O movimento faz parte do logo: traço lento = calmo, encaixe rápido = ágil, crescer de um ponto = amigável.
 11. **Visual comunica preço**: budget = cores altas + ofertas; mid = azul/bege + selo de valor; premium = preto + dourado, serifa discreta, muito espaço. Defina preço/posicionamento antes; design desalinhado do valor perde vendas.
-12. **Movimento: um efeito por vez**, sutil e legível, testado em desktop e mobile. Tipos: headline reveal, micro-interactions, portfolio showcase, animated gallery, scroll reveal.
+12. **Movimento: um efeito por vez**, sutil e legível, testado em desktop e mobile. Tipos: headline reveal, micro-interactions, portfolio showcase, animated gallery, scroll reveal. Em página: **um momento animado** (hero ou CTA, não os dois). Valores: `ui-motion`.
+13. **60/30/10 por área**: base dominante ~60%, superfícies ~30%, acento ≤10% (CTA, estado interativo, dado-chave). É o 2+1 com número; 10% é teto, não meta. "Se parece poluído, o acento está cobrindo 30% da tela." (`color-palettes.md`)
+14. **Paleta de produto = rampa de tons + 1 acento**: 5–6 tons de uma base (fundo → superfície → borda → texto 2 → texto 1) e o acento de matiz oposto no fim. **Confira todo hex de post no conta-gotas** (@uiuxaadi tem rótulo errado).
+15. **Sombra tingida, nunca preta chapada**: matiz do fundo escurecido, opacidade ~8%, **blur = 2× o Y** (Y 8 · blur 16). Em tema escuro, profundidade vem de luz/glow atrás de vidro. (`layers-and-trust-layout.md` §4)
+16. **Par tipográfico: 2–3 famílias, contraste display × corpo, hierarquia por peso, o mesmo par em tudo.** O trio sans + serif itálico + mono já cabe nesse limite. 12 pares prontos em `references/typography-pairing.md`; escala/line-height/8 pt em `ux-patterns`.
+17. **Dê à IA peças reais** (biblioteca de componentes, ícones de uma grade só, skills de avaliação), não "desenhe do zero", e exija os 4 estados: **vazio, carregando, erro e texto longo**. (`claude-web-design-workflow.md`)
 
 ## Workflow
 
 1. **Contexto**: produto, público, mood desejado (1 frase) e se precisa transmitir confiança.
 2. **Referências**: peça 2–5 sites/imagens ao usuário. Se houver URL, rode `ext-extract-design` para extrair tokens reais. Sem referência, proponha 2–3 combinações do catálogo (`references/color-palettes.md`) e deixe o usuário escolher.
-3. **Defina a direção por escrito** (curto): `--base-1`, `--base-2`, `--accent` com hex; onde o acento aparece; trio tipográfico; o único CTA; qual é a "terceira camada" (cor, luz ou objeto/cena).
+3. **Defina a direção por escrito** (curto): `--base-1`, `--base-2`, `--accent` com hex (e a rampa de tons das bases); onde o acento aparece (≤10% da área); par/trio tipográfico (`typography-pairing.md`); sombra tingida ou glow; o único CTA; qual é a "terceira camada" (cor, luz ou objeto/cena).
 4. **Layout primeiro, sem enfeite**: estrutura com espaço, alinhamento e 1 CTA (checklist em `references/layers-and-trust-layout.md` §2).
 5. **Camada 1 – identidade** (cores + tipografia). Valide.
 6. **Camada 2 – profundidade** (luz/glow, frosted glass, sombras). Valide.
@@ -47,16 +52,17 @@ Destilado de 11 reels sobre direção de arte web (paletas 2+1, camadas, layout 
 
 | Arquivo | Abra quando |
 |---|---|
-| `references/color-palettes.md` | For escolher/propor paleta; precisar de hex; quiser os padrões base→acento (16 combinações citadas). |
-| `references/layers-and-trust-layout.md` | For montar camadas (identidade/profundidade/movimento), revisar layout por confiança, ou listar os 5 tipos de movimento. |
+| `references/color-palettes.md` | For escolher/propor paleta; precisar de hex; quiser os padrões base→acento (combinações citadas), a **proporção 60/30/10** ou as **rampas de 6 tons** de @uiuxaadi (com os hex errados marcados). |
+| `references/layers-and-trust-layout.md` | For montar camadas (identidade/profundidade/movimento), revisar layout por confiança, listar os 5 tipos de movimento, ou definir **sombra tingida** (§4). |
 | `references/branding-identity.md` | For criar/revisar **marca**: logo (6 erros), embalagem × faixa de preço, os 5 pontos de contato julgados em 3 s, movimento do logo, sistemas de marca da Ramotion (paleta + par tipográfico + ordem do brand book), antes/depois de paleta e direção de arte de páginas de marca (scroll-storytelling 3D, foto PB com 1 cor, 404). |
-| `references/claude-web-design-workflow.md` | For escrever prompts de web design, orientar o usuário a dar referências, ou planejar o processo com o Claude. |
+| `references/claude-web-design-workflow.md` | For escrever prompts de web design, orientar o usuário a dar referências, planejar o processo com o Claude, escolher **bibliotecas de componentes/skills/ícones para IA** (teste dos 4 estados) ou **apresentar o design em mockup** (device → plano → recorte 3D). |
 | `references/claude-design-course.md` | For usar o **Claude Design** (app da Anthropic): criar design system/brand, pitch deck, wireframe vs. high-fidelity de landing, protótipo de app mobile, vídeo de lançamento com HyperFrames, levar para Claude Code → GitHub → Vercel, ou economizar o limite de sessão do Design. |
+| `references/typography-pairing.md` | For escolher **par de fontes**: 12 pares display + corpo com tom de uso, 4 regras (2–3 famílias, contraste, pesos, consistência) e como o trio sans/serif/mono e o display + Inter da Ramotion se encaixam. |
 | `references/visual-index.md` | Precisar saber qual imagem mostra qual exemplo antes de abrir uma; ou consultar a tabela **"Perfis avaliados"** (quais contas valem como fonte, inclusive as inativas). |
 
 ## Imagens (`assets/visual-refs/*.jpg`)
 
-Folhas de contato 4x3 dos reels (`<ID>.jpg`) e prints únicos da rodada 3 (`<ID>_<n>.jpg`). **Só abra quando precisar de exemplo visual concreto** (mostrar ao usuário, conferir composição) — custam contexto e os hex já estão nas references. Melhores apostas:
+Folhas de contato 4x3 dos reels (`<ID>.jpg`) e prints únicos das rodadas 1 e 3 (`<ID>_<n>.jpg`). **Só abra quando precisar de exemplo visual concreto** (mostrar ao usuário, conferir composição) — custam contexto e os hex já estão nas references. Melhores apostas:
 - `Dfc-Q-0yy0W.jpg` — acento só no botão em landings SaaS (antes/depois).
 - `DfSIP2iBuFI.jpg` — mesma página nas 4 camadas.
 - `DfyFShTounu.jpg` — layout inseguro vs. seguro (mobile).
@@ -64,6 +70,10 @@ Folhas de contato 4x3 dos reels (`<ID>.jpg`) e prints únicos da rodada 3 (`<ID>
 
 - `Dak9nkTFpYI_1.jpg` / `_2.jpg` — paleta de marca documentada (hex+RGB) e par Funnel Display + Inter (Ramotion).
 - `DYpD5C7zwx6_1.jpg` — página de produto com 3D, título outline + sólido.
+- `De_FtT3k-tT_1.jpg` (60/30/10) e `De_FtT3k-tT_3.jpg` (sombra tingida) — @gg.designhub.
+- `DescJ2zTeSf_1.jpg` — os 12 pares de fontes renderizados (@gfx.om).
+- `DfEmKLLFEDi_1.jpg` / `DfUnwyQGCTA_1.jpg` — rampa de 6 tons; o segundo mostra o hex errado.
+- `DfkBGDyDgqS_1.jpg` — mosaico de bibliotecas de componentes dark para IA.
 
 `De9oszIIQ4V.jpg` e `Dfm0NTiIfyd.jpg` são fora do tema (hype de ferramentas de IA); não abra.
 
