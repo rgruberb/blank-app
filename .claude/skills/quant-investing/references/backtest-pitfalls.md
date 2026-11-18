@@ -37,7 +37,7 @@ Também descontinuados/pagos na data: backtrader (sem release desde abr/2023), m
 ### Repos de pesquisa/ML citados por @artillerytrades (`De7NqmHkbzU`, estrelas "as of Oct 2026" segundo o post)
 | Repo | O que faz | Cuidado |
 |---|---|---|
-| microsoft/**qlib** (MIT, ~49k★) | plataforma de pesquisa quant com IA: dados → modelos que preveem retorno → backtest → carteira (Microsoft Research) | (complemento) pipeline pronto não elimina lookahead/custos/múltiplos testes; confira os padrões de custo e o calendário dos dados |
+| microsoft/**qlib** (MIT, 49,4k★, 7,8k forks — conferido no slide 2) | plataforma de pesquisa quant com IA: dados → modelos que preveem retorno → backtest → carteira (Microsoft Research) | (complemento) pipeline pronto não elimina lookahead/custos/múltiplos testes; confira os padrões de custo e o calendário dos dados |
 | AI4Finance-Foundation/**FinRL** (MIT, ~16k★) | agentes de *reinforcement learning* que aprendem a operar por tentativa e erro | (complemento) RL em preços é muito propenso a overfit: exija walk-forward, custos e baseline |
 | stefan-jansen/**machine-learning-for-trading** (MIT segundo o post, ~21k★) | notebooks do livro *Machine Learning for Algorithmic Trading*: dados, fatores, modelos, backtests | material didático; bom ponto de partida para "ML em trading" |
 | polakowo/**vectorbt** (~9,5k★) | backtest vetorizado (NumPy/Numba), milhares de combinações de parâmetros de uma vez | recursos avançados só na edição PRO paga; custo padrão zero (tabela acima); **testar 1.000 settings = 1.000 testes** → deflacione (§3) |

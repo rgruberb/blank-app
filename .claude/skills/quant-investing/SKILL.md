@@ -105,3 +105,5 @@ Detalhes: `references/quant-portfolio-projects.md`.
 | Imagens `DfjCMULExt__*.jpg`, `DfV5v9TFUhf_*.jpg`, `DfdO2jkgZ-f_2.jpg` | "venceu X de N" vs buy and hold com dados reais |
 | Imagens `DfowdSMiPzc_*.jpg` | 91 pares → 4,5 falsos positivos; 53% vs "sempre sobe" 53,5% (p = 0,78); placar ✓/✕ |
 | Imagens `Dfj6KNVIPj8_3.jpg`, `Df1c5Bjvc_l_2.jpg` | rebalancear pelo aporte; simulação com premissas declaradas |
+| Imagens `DfztwFuxh4f_*.jpg`, `Dfr5It0xAzA_1.jpg` | toolkit de pairs (EG, OU, Kalman, z-score) com código; grade de 15 conceitos |
+| Imagens `DfFnuSOkqi9_*.jpg`, `De7NqmHkbzU_2.jpg` | post-earnings drift e RSI rotation abaixo do S&P; card do qlib (49,4k★, MIT) |
