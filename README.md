@@ -25,6 +25,8 @@ As skills estão em duas camadas:
 └── ext-*/              skills de terceiros (não versionadas; ver abaixo)
 ```
 
+**Prioridade:** quando uma regra das skills de terceiros conflita com a das skills do projeto, valem os valores das skills do projeto. As de terceiros servem para implementação (código, APIs, checkers). Os 3 conflitos conhecidos (quantidade de animação, durações, sombras) estão resolvidos na seção "Prioridade entre skills" das skills de plataforma, da `ui-motion` e da `design-direction`.
+
 **Por qual começar:** primeiro a de plataforma (`website-ui`, `desktop-app-ui` ou `mobile-app-ui`). Ela diz quais arquivos das skills de tema abrir.
 
 Cada skill de tema tem:

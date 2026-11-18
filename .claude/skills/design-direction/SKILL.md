@@ -84,6 +84,17 @@ Folhas de contato 4x3 dos reels (`<ID>.jpg`) e prints únicos das rodadas 1 e 3 
 
 `De9oszIIQ4V.jpg` e `Dfm0NTiIfyd.jpg` são fora do tema (hype de ferramentas de IA); não abra.
 
+## Prioridade entre skills (quando as regras conflitam)
+
+1. **Valores e decisões de design** (números, quantidade de animação, cor, sombra, tipografia) vêm das **skills do projeto**: `website-ui`, `desktop-app-ui`, `mobile-app-ui`, `design-direction`, `ui-motion`, `ux-patterns`, `dashboard-ui`.
+2. **Skills de terceiros** (`design-taste-frontend`, `impeccable`, `transitions-*`, `gsap-*`, `playwright-cli`, `extract-design`) servem para **implementação**: código pronto, APIs, checkers e verificação no browser. Use o código delas, mas com os valores do item 1.
+3. Se o checker ou a regra de uma skill de terceiros reprovar algo que segue o item 1, **siga o item 1** e diga ao usuário qual regra externa foi ignorada e por quê.
+4. Na plataforma, vale a skill da plataforma (`website-ui`, `desktop-app-ui` ou `mobile-app-ui`); nos temas, vale a skill de tema que ela indicar.
+
+| Conflito | Vale | Em vez de |
+|---|---|---|
+| **Sombras** | Seções e blocos se separam por **espaço ou mudança de fundo**, sem sombra (as duas fontes concordam). **Sombra tingida** (cor do fundo, blur = 2× Y, ~8%) **só em elementos que flutuam**: dropdown, popover, modal, card arrastável, toast | `design-taste-frontend` sem sombras em nada; e sombra preta genérica |
+
 ## Skills complementares (já instaladas)
 
 - `ext-taste-skill` — direção anti-slop, evitar o visual genérico de IA.
