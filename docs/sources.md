@@ -92,7 +92,7 @@ Links enviados entre 9 e 16/11/2026. Os reels processados tiveram o vídeo baixa
 
 | Fonte | Status |
 |---|---|
-| Reels [Dfui4V5BMbz](https://www.instagram.com/reel/Dfui4V5BMbz/), [DfpCOjIB1Rb](https://www.instagram.com/reel/DfpCOjIB1Rb/), [Dfr9S5yhlvX](https://www.instagram.com/reel/Dfr9S5yhlvX/) (@felvrabr) | ✅ processados → `dashboard-ui` (Dfui4V5BMbz = referência do protótipo gamificado gestor/cliente) |
+| Reels [Dfui4V5BMbz](https://www.instagram.com/reel/Dfui4V5BMbz/), [DfpCOjIB1Rb](https://www.instagram.com/reel/DfpCOjIB1Rb/), [Dfr9S5yhlvX](https://www.instagram.com/reel/Dfr9S5yhlvX/) (@felvrabr) | ✅ processados → `dashboard-ui` (Dfui4V5BMbz = principal referência de padrões de progresso e gamificação) |
 | Reels [Dfj_FGsTAVB](https://www.instagram.com/reel/Dfj_FGsTAVB/) (@code.xr), [DfXoXVFPBfd](https://www.instagram.com/reel/DfXoXVFPBfd/), [DfeT74YvQaD](https://www.instagram.com/reel/DfeT74YvQaD/), [Dfct0mNvg3f](https://www.instagram.com/reel/Dfct0mNvg3f/) (@_code_and_chill_) | ✅ processados → `dashboard-ui` |
 | Reels DfVf0L-AIkP, DeoGCPlzKOs | ✅ já estavam processados |
 | 9 carrosséis (De7NqmHkbzU, DfFnuSOkqi9, Dfr5It0xAzA, DfztwFuxh4f, Dfr6X8qFPwC, De_J0aOl9SJ, Df1eAHODjT9, DfKaOBqjUr4, Dfo__tSjk9k) | ⏳ Rodada 5 |
