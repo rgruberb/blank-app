@@ -48,6 +48,27 @@ Dados citados: Form 8-K do FY2026 da Apple, histórico do S&P 500 desde 1988, lu
 - Tela (semicondutores, tamanho = vendas anuais): NVIDIA **$216B**, TSMC **$123B**, Micron **$133B** (como rotulado), além de Broadcom, AMD, ASML, Intel, Qualcomm, Applied Materials, TI.
 - Por que importa: bancos atendem clientes **por setor** (tela: Tech, Healthcare, Banks & Insurers, Energy, Consumer, Industrials); quem conhece uma indústria "sounds like they belong in the room" — e é quem fica (Analyst → Associate → VP).
 
+## Outras ideias de projeto vistas nas rodadas seguintes
+
+Só pelo resumo na grade (posts não abertos): @tradionquant `Df1IZS-CY_8` — 3 projetos quant com dados gratuitos (earnings, opções do SPY, S&P desde 1988); `Df3vKx3je7o` — 3 modelos financeiros com balanços reais (Netflix, LBO da Deckers, fusão Capital One + Discover).
+
+### 4. Placar de regras populares (formato "100 regras" de @tradionquant)
+- Escolha regras que circulam (buy the dip, esperar eleição, copiar o Congresso, alta taxa de acerto) e teste cada uma contra **comprar e segurar** com **todas as datas de início**, caixa remunerado e custo. Reporte "venceu X de N" e a diferença média (método em `validation-tests.md` §5).
+- Dados gratuitos citados: Ken French Data Library (mercado dos EUA com dividendos, diário desde 1926; T-bills de 1 mês), Yahoo Finance (retorno total), Cboe.
+- (complemento) Publique o placar com o nº total de regras testadas: é a forma honesta de lidar com múltiplos testes (`backtest-pitfalls.md` §3).
+
+### 5. Checklist de robustez como biblioteca
+- (complemento) Empacote Monte Carlo reshuffle (p95 do DD), walk-forward, heatmap de sensibilidade e Deflated Sharpe num módulo reutilizável e aplique a uma estratégia sua; mostre o que **reprovou**.
+- Stack gratuita sugerida por @rational_edge (`DfFYu5XmREJ`): backtesting.py / vectorbt / bt / NautilusTrader, QuantStats, statsmodels (HAC), arch (SPA), TA-Lib, PyPortfolioOpt, scikit-learn (`TimeSeriesSplit`). Pegadinhas de cada uma: `backtest-pitfalls.md` §1.
+
+### Para o stock pitch / equity research: scorecard fundamentalista (método de @brianferoldi)
+Registrado só o **método**, sem avaliar nenhuma ação (os posts-fonte analisam empresas específicas; não reproduzimos notas nem recomendações).
+- Uma página por empresa: **fase** do negócio (Startup → Hipercrescimento → Alavancagem operacional → Retorno de capital → Declínio) + 7 fatores (negócio, moat, direção do moat, crescimento, gestão, risco, valuation) + sinais verdes/vermelhos + faixa de preço.
+- A fase escolhe a métrica: em cíclicas com lucro explodindo, P/L **trailing** engana → olhar o **forward** e dizer por quê; em hipercrescimento, comparar **P/S trailing vs forward** (cap. de mercado ÷ receita LTM vs ÷ receita estimada) e pôr ao lado de crescimento e pares. O forward depende inteiramente da estimativa de receita: se ela falha, o múltiplo real é maior.
+- Separe **qualidade do negócio** de **preço**: bom negócio ≠ bom investimento.
+- Olhe concentração de clientes, histórico de surpresas vs estimativas, dívida vs caixa e ROIC.
+- **Limites do método:** notas 1–5 são julgamento subjetivo, sem fonte dos dados nem backtest das notas; foram achadas inconsistências entre slides do mesmo post (faixas de preço diferentes, nota da legenda ≠ nota do card, sinais de template que contradizem a nota). (complemento) No seu pitch, cite a fonte de cada número, explique o método da faixa de preço e confira a consistência interna.
+
 ## Como o Claude usa isto
 - Pergunta de carreira → recomende a trilha (quant vs IB/PE), os 3 projetos, e o que cada um ensina.
 - Para quant, ofereça scaffolding em Python (pandas/numpy; (complemento) `statsmodels` para cointegração/regressão, `yfinance` ou CSV para dados).

@@ -52,6 +52,9 @@ Com custo `c`: `p* = (9W + c) / (10W)`. O reel diz que a taxa é "quase metade d
 3. Compare `p` observado com `p*` (breakeven com custos). A margem `p − p*` é o edge real; se é pequena, o erro amostral pode apagá-la. (complemento) Erro-padrão de `p` ≈ `sqrt(p(1−p)/n)`.
 4. Lucro de alguns traders/backtests numa população grande pode ser **sorte** (1.641 de 10.000 com E < 0). Um bom resultado isolado não prova edge — rode Monte Carlo (ver `validation-tests.md`).
 5. Compare sempre contra **segurar o ativo** (buy and hold).
+6. **Amostra pequena não prova taxa de acerto.** @rational_edge pergunta se "28 vitórias em 50 trades (56%) prova algo?" (`DfHUUPCBzhz`, só pelo título). (complemento) Erro-padrão ≈ √(0,56·0,44/50) ≈ **7 p.p.**; z contra 50% ≈ 0,85 → **não** significativo. Para separar 56% de 50% com z ≈ 2 são precisos ~270 trades (complemento). Compare sempre com `p*`, não com 50%.
+7. **Win rate baixo pode ser saudável.** Exemplo ilustrativo de @kwaant (`DfktYl-S6Uz`): win rate **44%**, profit factor **1,17**, Sharpe 0,97 em 2.097 trades. O que decide é `E` após custos, PF > 1 com margem e o nº de trades.
+8. **Cuidado com a definição.** QuantStats calcula "win rate" por **dias** positivos, não por trades (ver `backtest-pitfalls.md`).
 
 ## Reproduzir (complemento)
 

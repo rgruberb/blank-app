@@ -2,6 +2,7 @@
 
 Fonte principal: @rational_edge, reel `DfuDLH7BUsx` ("Why it works in the backtest and fails live: you never ran these").
 Complementos de @tradionquant `DftZ6l2CC_e` (higiene de backtest) e `DfVf0L-AIkP` (comparar contra buy and hold).
+Seções 4–5: @rational_edge `Dfj-RfohT0S` (drawdown normal / quando desligar) e @tradionquant `DfjCMULExt_`, `DfV5v9TFUhf`, `DfdO2jkgZ-f` (regra vs benchmark em muitas janelas). Lookahead, custos de execução, splits e múltiplos testes: `backtest-pitfalls.md`.
 Itens marcados "(complemento)" são conhecimento geral, não vêm dos reels.
 
 > Conteúdo educacional. Os números dos reels são de exemplos **simulados**, não recomendação de investimento.
@@ -79,6 +80,61 @@ O reel mostra uma função `walk_forward(prices, train=..., test=...)` com `for 
 
 ---
 
+## 4. Drawdown esperado e regra de desligamento (`Dfj-RfohT0S`)
+
+Pergunta: "a estratégia está no vermelho: quebrou ou é azar?" Simulação de **10.000 estratégias boas** (+10%/ano, vol 10%, **Sharpe 1**) e **10.000 mortas** (−2%/ano, mesma vol), 3 anos, retornos diários normais, sem custos, seed 99.
+
+| Pergunta | Resultado |
+|---|---|
+| Quanto tempo abaixo do pico é normal? | Boas passam **90% dos dias** abaixo da própria máxima; maior trecho típico sem nova máxima: **10,7 meses** |
+| Quão fundo é normal? | Desligar a **−10%** mata **64%** das boas (e 97% das mortas) em 3 anos; a **−20%** mata **5%** das boas e **52%** das mortas |
+| Quanto tempo para saber? | Após 6 meses, **19%** das boas parecem piores que uma morta típica; 1 ano: 11%; 3 anos: **1,8%** |
+
+**Conferência (Python, mesma configuração):** 90,4% dos dias abaixo do pico; −10% mata 63,7% das boas e 96,6% das mortas; −20% mata 4,7% e 51,6%. **Reproduz o post.** (Um frame do resumo em baixa resolução parece dizer "12%" e "2 anos"; a legenda e a simulação confirmam 52% e 3 anos.)
+
+**Regras:**
+- Defina o critério de desligamento (DD máximo, tempo sem nova máxima) **antes** de ir ao vivo e calibre-o pela **vol** da estratégia: o DD escala ~linearmente com a vol (vol 20% ⇒ DDs ~2x).
+- Regra mais apertada sempre mata mais **das duas** (boas e mortas); não existe corte que só elimine as ruins.
+- Com Sharpe 1, ficar ~10 meses lateral é normal. 6 meses de ao vivo não distinguem edge de azar; ~3 anos sim.
+- Limites declarados: caudas reais são mais gordas e edges decaem, então DDs reais podem ser piores.
+- (complemento) Use o p95 do DD do Monte Carlo (seção 1) como limite de desligamento, com folga, em vez de um número redondo.
+
+```python
+# (complemento) reproduzir
+import numpy as np
+rng = np.random.default_rng(99)
+r = rng.normal(0.10/252, 0.10/np.sqrt(252), (10_000, 756))
+eq = np.cumprod(1+r, 1); pk = np.maximum.accumulate(np.maximum(eq, 1), 1)
+dd = 1 - eq/pk
+print((eq < pk).mean(), (dd.max(1) >= .10).mean(), (dd.max(1) >= .20).mean())
+```
+
+---
+
+## 5. Regra vs benchmark em muitas janelas ("venceu X de N")
+
+Padrão dos testes de @tradionquant ("Testing 100 trading rules"), com dados reais:
+
+| Teste | Desenho | Resultado |
+|---|---|---|
+| Buy the dip (`DfjCMULExt_`) | Mercado dos EUA com dividendos (Ken French/CRSP, diário, 1926–2026). Conta A compra no dia 1; conta B fica em **T-bills** até o mercado fechar 10% abaixo da máxima, então compra e segura. Custo **0,10%** por compra, sem impostos. Novo início **todo fim de mês** de 1926 a 2016 (**1.084 inícios**), avaliação 10 anos depois | Esperar venceu só **47,1%** (2 empates). Exemplo out/2006→set/2026: US$ 84.606 vs 82.966 (−US$ 1.640) |
+| Esperar as midterms (`DfV5v9TFUhf`) | 25 eleições (1926–2022); compra no fim de setembro vs caixa em T-bills até a véspera; ambos avaliados 1 ano após o voto | Comprar em setembro teve mais **19 de 25** vezes; esperar custou ~US$ 13 por semana a cada US$ 10.000. Em 2026 esperar ganhou (7ª vez em 26): "ou sorte?" |
+| Copiar o Congresso (`DfdO2jkgZ-f`) | ETFs NANC e GOP vs SPY, US$ 10.000, 07/02/2023–05/11/2026, retorno total líquido de taxas | NANC +US$ 589, GOP −US$ 2.235 (−12%) vs SPY; vantagem do NANC encolheu de US$ 1.072 para 589 |
+
+**Regras de desenho de teste:**
+1. Teste contra a **alternativa simples investível** (comprar já / SPY / buy and hold), não contra zero.
+2. Caixa parado deve render (T-bills/CDI); custo de transação incluso.
+3. Use **todas as datas de início** possíveis (janelas rolantes, horizonte fixo), não um exemplo escolhido. Reporte "**venceu X de N**" **e** a diferença média.
+4. Faça **robustez da data/parâmetro** (ex.: qualquer data de 1/09 a 15/10 não muda a conclusão).
+5. **Isole a janela que difere** entre as estratégias (as ~6 semanas antes do voto) para explicar o resultado.
+6. Considere **defasagem de informação** (Congresso reporta até 45 dias depois).
+7. Uma janela única (3,7 anos) ou um acerto recente não valida a regra: sem teste de significância, pergunte "foi sorte?".
+8. Mantenha um **placar de regras testadas** ("Rules that beat holding: 0 of 2") e conte as tentativas (ver múltiplos testes em `backtest-pitfalls.md`).
+
+(complemento) Janelas rolantes mensais se sobrepõem (1.084 janelas de 10 anos não são 1.084 observações independentes; são ~9 blocos independentes). Não trate "47,1%" como proporção com erro-padrão binomial ingênuo.
+
+---
+
 ## Resumo do gate
 
 | Teste | Pergunta | Passa | Reprova |
@@ -88,3 +144,6 @@ O reel mostra uma função `walk_forward(prices, train=..., test=...)` com `for 
 | Monte Carlo | Qual DD a sequência pode gerar? | Risco dimensionado pelo p95 | Ordem plausível dobra o DD e você dimensionou pelo backtest |
 | Walk-forward | Funciona em dados não vistos? | OOS mantém boa parte do IS | Só funciona in-sample |
 | Sensibilidade | Vizinhos funcionam? | Platô | Pico solitário |
+| Múltiplos testes | Quantas versões tentou? Deflated Sharpe? | DSR ≥ 0,95 com N registrado | N desconhecido / DSR baixo |
+| Desligamento | Critério definido antes? | DD máx. calibrado pela vol/p95 | Desliga "no feeling" ou −10% com vol 10% |
+| Janelas | Venceu em quantas de N janelas? | Maioria + diferença média > 0 | Um exemplo escolhido / uma janela só |
