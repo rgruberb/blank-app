@@ -46,6 +46,18 @@ app desktop / web app. Caminhos relativos à pasta da skill (`desktop-app-ui/`),
 | `../dashboard-ui/assets/visual-refs/Dfus5sWFAov_1.jpg` | @orbixdashboard | Perfil "Deuce" claro + 1 verde-oliva: cards em 3 colunas, gráficos por pergunta | Grid de 3 colunas em tema claro; projeção tracejada |
 | `../dashboard-ui/assets/visual-refs/DfaQe-CiBfJ_1.jpg` | @uiuxcenter | CreditPros claro pastel: score em faixas, abas com badges, drawer de detalhe | Abas com contagem; drawer lateral |
 | `../dashboard-ui/assets/visual-refs/DfaQe-CiBfJ_2.jpg` | @uiuxcenter | CreditPros: grade mensal ✓/✕ + "Make a Payment" | Histórico em grade |
+| `../dashboard-ui/assets/visual-refs/Dfr6X8qFPwC_2.jpg` | @shohan.designs | Cripto Zentra (esquerda): sidebar com "Ask AI ⌘D" e card de onboarding "Finish Setup 2 of 4", KPIs, Market Trends multi-série com tooltip, tabela de transações | Onboarding dentro da sidebar; atalho de IA na sidebar |
+| `../dashboard-ui/assets/visual-refs/Dfr6X8qFPwC_3.jpg` | @shohan.designs | Zentra (direita): painel Convert com abas, Watchlist, Transaction Status em barras por estado, card de QR com erro escrito | Coluna lateral com 1 ação + 1 monitor |
+| `../dashboard-ui/assets/visual-refs/1A3pMvMBW2_1.jpg` | Code & Chill (Facebook) | Crédito privado "Casa Duna": sidebar larga com pílula limão, foto do ativo + miniaturas, gauge amarelo 63.4% | Página de detalhe de ativo com mídia |
+| `../dashboard-ui/assets/visual-refs/1A3pMvMBW2_2.jpg` | Code & Chill (Facebook) | Portfolio com KPIs em vidro e área "$14.18m"; **sidebar recolhida em rail** | Sidebar que recolhe ao trocar de seção |
+| `../dashboard-ui/assets/visual-refs/1A3pMvMBW2_3.jpg` | Code & Chill (Facebook) | Risk: matriz em terracota com célula selecionada por contorno limão + lista de imóveis | Seleção em grade por contorno; matriz de risco |
+| `../dashboard-ui/assets/visual-refs/Df4Shdgmafx_1.jpg` | @felvrabr | Caféra Coffee Farm OS: rail de ícones, mapa com toggles de camada, Harvest Overview 2x2, ordem de colheita 3/4, mensagens | Canvas operacional inteiro (verde + laranja) |
+| `../dashboard-ui/assets/visual-refs/Df4Shdgmafx_2.jpg` | @felvrabr | Caféra: cartão do talhão sobre o mapa com foto, "82% ripe" e CTA único "Start harvest" | Popover de objeto com 1 ação |
+| `../dashboard-ui/assets/visual-refs/Df4Shdgmafx_4.jpg` | @felvrabr | Caféra: 4 KPIs com chip e visual próprio, gauge "Season progress 68% TODAY" | Grade de KPIs 2x2; progresso de meta |
+| `../dashboard-ui/assets/visual-refs/DfuhN08lTWN_3.jpg` | @felvrabr | Verdan: sidebar de vidro flutuante sobre a foto aérea, item ativo em pílula clara, ponto de notificação | Sidebar flutuante sobre canvas |
+| `../dashboard-ui/assets/visual-refs/DfuhN08lTWN_5.jpg` | @felvrabr | Verdan: Crop Mix em anéis com total no centro e legenda grande | Composição em anéis legível |
+| `../dashboard-ui/assets/visual-refs/Dfr4RMBlaPH_3.jpg` | @felvrabr | Maren: Gantt de reservas com hoje destacado, **tooltip de arraste "Drag to extend · 4 nights · $4,280"**, filtros em pílula, chat | Arraste que mostra o resultado antes de soltar; Gantt |
+| `../dashboard-ui/assets/visual-refs/Dfr4RMBlaPH_4.jpg` | @felvrabr | Maren: ocupação 94% em calendário-heatmap e receita 2026 × 2025 na mesma curva | Comparação ano a ano; calendário como heatmap |
 
 ## C. Componentes e regras de UX (ux-patterns)
 
@@ -79,4 +91,6 @@ app desktop / web app. Caminhos relativos à pasta da skill (`desktop-app-ui/`),
 | `../design-direction/assets/visual-refs/DfkBGDyDgqS_1.jpg` | @griffinwooldridge1 | "Top 4 UI Libraries": mosaico dark de componentes (clima, chat de IA, agenda, token spend, timer) | Escolher biblioteca de componentes para o app |
 | `../design-direction/assets/visual-refs/De_FtT3k-tT_1.jpg` | @gg.designhub | 60/30/10 em placas 3D | Explicar proporção de cor de um painel (acento ≤ 10%) |
 
-**Total: 45 imagens** (dashboard-ui 28, ux-patterns 10, ui-motion 5, design-direction 2).
+**Total: 57 imagens** (dashboard-ui 40, ux-patterns 10, ui-motion 5, design-direction 2). Fora daqui: os prints
+mobile do @shohan.designs (`DffCenmFASU_*`, `DfmwyDclA0Q_*`) estão em `mobile-app-ui`; `DfcdrhgFFMR_2–_4` da rodada 7
+repetem `_1–_3` e `1CTThcky5H_*` repete `DffBnb2vlUn` (não copiados).

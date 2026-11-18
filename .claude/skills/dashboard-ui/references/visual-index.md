@@ -39,13 +39,13 @@ Não são folhas de contato: cada arquivo é um slide/print. Descrição complet
 | `DSIMwtvDluO_3.jpg` | @ramotion (Borea AI) | https://www.instagram.com/p/DSIMwtvDluO/?img_index=9 | Kit de UI | bento escuro | Botão-pílula em gradiente, card "Top Traded Index ETFs", chip "VOO +0.07%", ícone do app, set de ícones, linha com cursor vertical + ponto de leitura + seletor de período | Chip de ticker; gráfico de detalhe com cursor |
 
 Fontes da rodada 3 **sem imagem** (prints PNG não convertidos; use a descrição em `domain-examples.md`):
-`Dfz0mLAzsjg` (§14), `Dfjx6Stv3-d` (§15), `Dfo0F0Pvo4Y` (§16), `DfuS2Jbzsjt` (§17), `Dfw4gEmz87N` (§18),
+`Dfz0mLAzsjg` (§14), `Dfjx6Stv3-d` (§15), `Dfo0F0Pvo4Y` (§16; agora com os prints do cross-post `1A3pMvMBW2_1–_3`,
+abaixo), `DfuS2Jbzsjt` (§17), `Dfw4gEmz87N` (§18),
 `DfrtgFyTmOM` (§19), `DX_bA4rCWf0`, `DVv7OOECewR`, `DYJwy9aCSYP` (§21).
 
-Prints soltos avaliados e **não copiados**: `De_J0aOl9SJ_2` e `Df1eAHODjT9_2` (@noahelhadedy) — carrossel "7 free
-libraries for animated UI": grade de componentes React animados (Kokonut UI: AI input, dial 21.0°, botões) e página de
-biblioteca de ícones em linha (humbleicons.com, categorias Medical / Data and analytics / UI). Úteis só como dica de
-fonte (motion → `ui-motion`; ícones de traço fino consistentes para dashboards (complemento)).
+Prints do @noahelhadedy (`De_J0aOl9SJ_2` Kokonut UI, `Df1eAHODjT9_2` Humbleicons) não ficam aqui: estão em
+`ui-motion/assets/visual-refs/` e `design-direction/assets/visual-refs/` (ícones de traço fino consistentes servem a
+dashboards, complemento).
 
 ## Prints da rodada 2 (`<ID>_<n>.jpg`, 18/11/2026)
 
@@ -68,9 +68,36 @@ Avaliados e **não copiados**: `DfaQe-CiBfJ_3`, `DfUvP_ulPC6_1`, `Dfus5sWFAov_2/
 Rodada 1: `DfkBGDyDgqS_2` (BoardUI: donut de anéis, barras lima "$7,462 +14.8%", date range com presets) foi para
 `design-direction` como referência de biblioteca; vale como dica de date picker com presets (Today … All time).
 
-Fontes **sem print** (rodadas 5–7): Zentra `Dfr6X8qFPwC` (§22b), Code & Chill no Facebook (§27, cross-posts de
-`DffBnb2vlUn` e `Dfo0F0Pvo4Y`), Caféra `Df4Shdgmafx` e carrosséis Verdan/Maren (§28), fitness `DffCenmFASU` e
-finanças `DfmwyDclA0Q` (§29).
+## Prints das rodadas 5–7 (`<ID>_<n>.jpg`)
+
+Prints únicos de carrossel/reel. Descrição em `domain-examples.md` §16, §22b e §27–29. Os da @felvrabr e do
+Code & Chill são quadros pequenos (≈330–600 px): servem para ver layout, não para ler hex.
+
+| arquivo | autor | URL | domínio | estilo | o que mostra | quando abrir |
+|---|---|---|---|---|---|---|
+| `Dfr6X8qFPwC_2.jpg` | @shohan.designs (Orbix Studio) | https://www.instagram.com/p/Dfr6X8qFPwC/?img_index=2 | Cripto "Zentra" (metade esquerda) | dark + roxo, linhas laranja/azul | Sidebar MAIN MENU / FINANCE OPS com "Ask AI ⌘D", card de onboarding "Finish Setup 2 of 4 · Skip · Next", faixa de KPIs, Market Trends com 3 linhas sobre barras de volume e tooltip, tabela de transações em 2 colunas | Dashboard cripto web; onboarding dentro da sidebar |
+| `Dfr6X8qFPwC_3.jpg` | @shohan.designs | https://www.instagram.com/p/Dfr6X8qFPwC/?img_index=3 | Zentra (metade direita) | dark + roxo | Painel Convert (abas Buy/Sell/Swap/Convert, BTC → ETH, botão roxo), Watchlist com variação, Transaction Status em barras por estado com %, card de QR "Activate QR" com mensagem de erro escrita | Coluna lateral ação + monitor; progresso por estado |
+| `1A3pMvMBW2_1.jpg` | Code & Chill (Facebook; = `Dfo0F0Pvo4Y`) | https://www.facebook.com/share/r/1A3pMvMBW2/ | Crédito privado: imóvel "Casa Duna" | marrom-oliva + vidro, acento limão, gauge amarelo | Sidebar larga com pílula limão, foto grande do ativo + miniaturas, gauge semicircular amarelo 63.4%, botões "Record payment" | Página de ativo/detalhe com foto; §16 e §27 |
+| `1A3pMvMBW2_2.jpg` | Code & Chill (Facebook) | https://www.facebook.com/share/r/1A3pMvMBW2/ | Crédito privado: Portfolio | idem, sidebar recolhida em rail | KPIs em cards de vidro, área "$14.18m" com botão limão | Portfólio com número grande; sidebar que recolhe entre telas |
+| `1A3pMvMBW2_3.jpg` | Code & Chill (Facebook) | https://www.facebook.com/share/r/1A3pMvMBW2/ | Crédito privado: Risk | células terracota, seleção com contorno limão | Matriz de risco em um tom com célula selecionada por contorno + lista de imóveis com miniatura | Heatmap de risco monocromático; §16 |
+| `Df4Shdgmafx_1.jpg` | @felvrabr | https://www.instagram.com/p/Df4Shdgmafx/?img_index=1 | Café "Caféra Coffee Farm OS" (capa) | dark verde + laranja, sobre foto aérea | Tablet com o OS inteiro: rail de ícones, talhão com pino "Plot 03 · Harvesting", toggles Ripeness/Moisture/Yield/Crews, Harvest Overview 2x2, Harvest order 3/4 segmentado, Variety Mix, Forecast, mensagens | Canvas operacional verde + laranja; layout geral |
+| `Df4Shdgmafx_2.jpg` | @felvrabr | https://www.instagram.com/p/Df4Shdgmafx/?img_index=2 | Caféra: Ripeness map | idem | Talhão laranja "Plot 03 · Ready" + cartão com foto das cerejas, "82% ripe", Brix/Moisture e **CTA único "Start harvest"** | Dado → ação num cartão sobre o mapa |
+| `Df4Shdgmafx_4.jpg` | @felvrabr | https://www.instagram.com/p/Df4Shdgmafx/?img_index=4 | Caféra: Harvest overview | vidro escuro + laranja | 4 KPIs com chip (On target, +1 sent, Rising): área, pirulitos "Max 4", linha pontilhada, gauge "Season progress 68% TODAY" | KPI 2x2 cada um com visual próprio; gauge de progresso |
+| `DfuhN08lTWN_3.jpg` | @felvrabr | https://www.instagram.com/p/DfuhN08lTWN/?img_index=3 | Agro "Verdan": Field sidebar | vidro escuro sobre foto aérea, acento lima | Sidebar de vidro com Fields ativo em pílula clara e ponto lima em Health; pins "Field 01 · Soy", "Field 03 · Dry" âmbar | Sidebar flutuante sobre mapa/foto |
+| `DfuhN08lTWN_5.jpg` | @felvrabr | https://www.instagram.com/p/DfuhN08lTWN/?img_index=5 | Verdan: Crop Mix | vidro escuro + tons de verde | Anéis concêntricos com total "1,240 hectares" e legenda grande em % (48/32/20) | Composição em anéis com legenda legível |
+| `Dfr4RMBlaPH_3.jpg` | @felvrabr | https://www.instagram.com/p/Dfr4RMBlaPH/?img_index=3 | Resort "Maren": grade de reservas | dark petróleo, barras terracota/teal | Gantt villa × dia com hoje (31) destacado, barra nova teal com **tooltip "Drag to extend · 4 nights · 29 Dec → 2 Jan · $4,280"**, filtros em pílula, chat da hóspede | Gantt de reservas; tooltip de arraste com resultado |
+| `Dfr4RMBlaPH_4.jpg` | @felvrabr | https://www.instagram.com/p/Dfr4RMBlaPH/?img_index=4 | Maren: ocupação e receita | idem | Ocupação "94% ▲ 6 pts" em calendário de quadrados teal; "Revenue per night $6,420" com 2026 teal vs 2025 pontilhado | Comparar ano atual × anterior na mesma curva; calendário-heatmap |
+| `DffCenmFASU_1.jpg` | @shohan.designs | https://www.instagram.com/p/DffCenmFASU/?img_index=1 | App fitness (home) | preto + teal, foto desfocada | "Your Body Is Ready" + "Start Workout", 93% e 89% em fonte de matriz de pontos com arco fino, tab bar flutuante + botão teal | Score do dia + 1 ação em app mobile |
+| `DffCenmFASU_2.jpg` | @shohan.designs | https://www.instagram.com/p/DffCenmFASU/?img_index=2 | App fitness (treino) | idem | Card-hero "Upper Body Strength", "Workout Progress 68%" em barra com marcador, Exercises 8/12, Workout Time 28:42, lista de exercícios | Barra de progresso segmentada com N/M |
+| `DffCenmFASU_4.jpg` | @shohan.designs | https://www.instagram.com/p/DffCenmFASU/?img_index=4 | App fitness (3 telas) | idem | Home, treino e nutrição lado a lado (calorias 1,684, score 88, hidratação 2.3, conquistas em mini-anéis) | Visão do sistema mobile inteiro |
+| `DfmwyDclA0Q_2.jpg` | @shohan.designs | https://www.instagram.com/p/DfmwyDclA0Q/?img_index=2 | Finanças pessoais: Cashflow | dark + azul, botão lima | Daily/Weekly/Monthly, barras azuis com tooltip, This week/Last week/Change, Income/Outcome com delta, transações, tab bar flutuante | Cashflow mobile; **conferir a conta** (Change não fecha) |
+| `DfmwyDclA0Q_4.jpg` | @shohan.designs | https://www.instagram.com/p/DfmwyDclA0Q/?img_index=4 | Finanças pessoais (3 telas) | dark + azul (ação) e lima (score) | Home "My balance $50,764.00" + Add Money/Send Money + score 74% Excellent!, Cashflow e chat "Lumen AI" com atalhos | Dois acentos com papel fixo; copiloto de IA no app |
+
+Avaliados e **não copiados**: `DfcdrhgFFMR_2–_4` da rodada 7 (mesmos quadros de `DfcdrhgFFMR_1–_3`, resolução menor);
+`1CTThcky5H_1–_3` (Code & Chill no Facebook = `DffBnb2vlUn`, já na folha acima); `DfuhN08lTWN_4` (mesmo template de
+`Df4Shdgmafx_4`); `Dfr4RMBlaPH_2` (muito pequeno); `DfmwyDclA0Q_3` (no meio da transição). Os prints das curadorias do
+@noahelhadedy foram para `ui-motion` (`De_J0aOl9SJ_*`, `Dfo__tSjk9k_*`) e `design-direction` (`Df1eAHODjT9_*`); o
+`Dfr6X8qFPwC_1` (tablet nas mãos) para `design-direction`.
 
 ## Perfis avaliados
 

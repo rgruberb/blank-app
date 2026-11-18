@@ -23,6 +23,7 @@ references. Descrição completa de cada uma no `visual-index.md` da skill de or
 | `../design-direction/assets/visual-refs/Dak9nkTFpYI_3.jpg` | @ramotion (Source) | Página de produto escura para devs: CTA laranja + link secundário, mono `//`, halftone | Página de produto/SaaS técnico |
 | `../design-direction/assets/visual-refs/DYpD5C7zwx6_1.jpg` | @rish_designs | Seção escura "THE HERITAGE" (outline + sólido), Porsche 3D, navbar mínima com 1 CTA | Scroll-storytelling de produto, navbar mínima |
 | `../design-direction/assets/visual-refs/DYpD5C7zwx6_2.jpg` | @rish_designs | Seção clara "PERFECTION" com o carro na frente do título (oclusão) | Alternância escuro/claro entre seções |
+| `../design-direction/assets/visual-refs/DfKaOBqjUr4_2.jpg` | @craftwork.design | "Same brief, two pages": landing Fieldnote.ai feita sem referências × com fontes/ícones/fotos reais, lado a lado | Mostrar ao cliente/Claude por que referências reais mudam a landing |
 
 (`DYpD5C7zwx6_1/_2` também existem em `../ui-motion/assets/visual-refs/`; são o mesmo print.)
 
@@ -43,6 +44,9 @@ references. Descrição completa de cada uma no `visual-index.md` da skill de or
 | `../ui-motion/assets/visual-refs/Dfvja0XCyIi.jpg` | @theglidestudio | Site "Example" abrindo menu fullscreen com régua: 2,4 s lento, 0,1 s rápido, 0,7 s certo; Press 0,16 / Reveal 0,7 / Scene 1,2 s | Duração de menu e reveal em site |
 | `../ui-motion/assets/visual-refs/DfwhC1riuuO.jpg` | @theglidestudio | Loja (Orb, Halo…): "Tap. Cut." vs "Don't cut. Carry." card → página de produto; menu nascendo do hambúrguer | Transição vitrine → produto, menu da navbar |
 | `../ui-motion/assets/visual-refs/Dff1uulGoxb_2.jpg` | @mobileeditingclub | Slide "/micro-interactions" com mockup de site de cosméticos | Os 5 padrões de motion de site e como pedir ao Claude |
+| `../ui-motion/assets/visual-refs/De_J0aOl9SJ_1.jpg` | @noahelhadedy | Hero da Skiper UI: fumaça WebGL azul-ciano como único momento animado, título grande, comando + CTA | Hero com **um** momento animado (regra 1 por página) |
+| `../ui-motion/assets/visual-refs/De_J0aOl9SJ_3.jpg` | @noahelhadedy | Landing da Animata: "Ship faster. Look better.", 2 CTAs (roxo + contorno), bento de métricas | Hero de produto dev + bento de prova social |
+| `../ui-motion/assets/visual-refs/DfKaOBqjUr4_3.jpg` | @craftwork.design | Slide GSAP ScrollTrigger: site escuro com fita 3D em gradiente e headline "Effortlessly guiding your users from one section to another" | Site guiado por scroll (pin/scrub) |
 
 ## UX de site, loja e conteúdo (ux-patterns)
 
@@ -61,7 +65,7 @@ references. Descrição completa de cada uma no `visual-index.md` da skill de or
 | `../ux-patterns/assets/visual-refs/DfRucYFjrac_2.jpg` | @designmotionhq | Line-height caindo com o tamanho (1,5 → 1,1) | Headline com entrelinha de corpo "solta" |
 | `../ux-patterns/assets/visual-refs/Dfby7sPgMPU.jpg` | @gustagoat.ai | 31 itens de performance (WebP, CDN, Brotli, lazy, SSR…) | Raramente: a lista está em `perceived-performance.md` |
 
-**Total: 31 imagens** (16 de design-direction, 3 de ui-motion, 12 de ux-patterns). Nenhuma de `dashboard-ui`: o
+**Total: 35 imagens** (17 de design-direction, 6 de ui-motion, 12 de ux-patterns). Nenhuma de `dashboard-ui`: o
 `Dfct0mNvg3f` é admin de e-commerce (app, não loja) e fica com `desktop-app-ui`.
 
 ## Não abrir para site

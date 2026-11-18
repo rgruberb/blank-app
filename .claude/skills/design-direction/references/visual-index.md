@@ -52,6 +52,23 @@ Avaliados e **não copiados**: `DfEmKLLFEDi_2/_3`, `DfUnwyQGCTA_2/_3` (mesmo tem
 (@matheustilli, listas de nomes de skills; o conteúdo está em texto), `DfkBGDyDgqS_2/_3` (BoardUI/Transitions.dev, mais
 úteis como dashboard), `Dff1uulGoxb_1–3` (motion: `ui-motion`).
 
+## Prints da rodada 5 (`<ID>_<n>.jpg`)
+
+Prints únicos de carrossel. Conteúdo em `claude-web-design-workflow.md` (recursos, antes/depois, molde de apresentação)
+e `typography-pairing.md`.
+
+| Arquivo | Autor | URL | O que mostra | Quando abrir |
+|---|---|---|---|---|
+| `Dfr6X8qFPwC_1.jpg` | @shohan.designs (Orbix Studio) | https://www.instagram.com/p/Dfr6X8qFPwC/?img_index=1 | Dashboard cripto "Zentra" num tablet segurado pelas duas mãos sobre cinza-claro; pílula branca "Designed by Orbix Studio · Save for later" no topo | Slide 1 do **molde de apresentação** (device → plano → recorte 3D); `claude-web-design-workflow.md` |
+| `DfKaOBqjUr4_1.jpg` | @craftwork.design | https://www.instagram.com/p/DfKaOBqjUr4/?img_index=1 | Capa "Selected / **Design skills** / Part 2": foto atmosférica com textura de pontos, script fino + grotesca pesada, "Swipe to start" | Capa de carrossel com 3 camadas tipográficas (`typography-pairing.md`) |
+| `DfKaOBqjUr4_2.jpg` | @craftwork.design | https://www.instagram.com/p/DfKaOBqjUr4/?img_index=2 | "Same brief, two pages": landing Fieldnote.ai sem referências × com arquivos da Craftwork (foto, objeto 3D, tipo refinado) lado a lado | **Prova visual de "mostrar referências, não adjetivos"** ao pedir site ao Claude |
+| `Df1eAHODjT9_1.jpg` | @noahelhadedy | https://www.instagram.com/p/Df1eAHODjT9/?img_index=2 | Neat Icons: "Every icon your product needs." sobre grade densa de ícones (1.162 ícones, 4 estilos, uma grade) | Escolher set de ícones; ver consistência de grade |
+| `Df1eAHODjT9_2.jpg` | @noahelhadedy | https://www.instagram.com/p/Df1eAHODjT9/?img_index=4 | Humbleicons: cartão claro com 284 ícones de traço fino por categoria (Medical, Data and analytics, UI) e busca | Ícones neutros de traço único para produto/dashboard |
+| `Df1eAHODjT9_3.jpg` | @noahelhadedy | https://www.instagram.com/p/Df1eAHODjT9/?img_index=7 | Majesticons: hero roxo "Ship a consistent UI without redrawing a single icon", grade 24×24, seletor line/duotone/solid + traço + cor | Explicar estilos de ícone (line/solid/duotone) e grade 24×24 |
+
+Avaliados e não copiados aqui: `De_J0aOl9SJ_*`, `Dfo__tSjk9k_*` e `DfKaOBqjUr4_3` (UI animada e GSAP: estão em
+`ui-motion`); `Dfr6X8qFPwC_2/_3` (UI plana do Zentra: `dashboard-ui`).
+
 ## Perfis avaliados
 
 Avaliação das contas lidas nas rodadas 3A/3B/3C como fonte para **direção de arte, cor e branding** (leitura de

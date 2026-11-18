@@ -123,6 +123,6 @@ Links enviados entre 9 e 16/11/2026. Os reels processados tiveram o vídeo baixa
 | 2 | ✅ recebida | `docs/achados/rodada-2.md` |
 | 3A, 3B, 3C | ✅ recebidas e incorporadas | `docs/achados/rodada-3A.md`, `rodada-3B.md`, `rodada-3C.md` |
 | 4A, 4B | ✅ recebidas e incorporadas à `quant-investing` | `docs/achados/rodada-4A.md`, `rodada-4B.md` |
-| 5 | ✅ recebida (sem prints) | `docs/achados/rodada-5.md` |
+| 5 | ✅ recebida (prints recebidos depois, em zip separado) | `docs/achados/rodada-5.md` |
 | 6 | ✅ recebida (2 vídeos úteis; o link 2 abre a página, não um vídeo; o link de 11/11 foi excluído) | `docs/achados/rodada-6.md` |
-| 7 | ✅ recebida (@code_and_chill inativo e diferente de @_code_and_chill_) | `docs/achados/rodada-7.md` |
+| 7 | ✅ recebida com prints (@code_and_chill inativo e diferente de @_code_and_chill_) | `docs/achados/rodada-7.md` |

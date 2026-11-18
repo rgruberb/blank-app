@@ -54,4 +54,4 @@ Notas 1–5 como fonte de **UX/regras**. Nota com "*" é nossa (a rodada não de
 | @spruzzo.ui | não (perfil inexistente) | — | n/a | Nada |
 | @twohabitsdesign | não (último post 11/2022) | — | n/a | Nada novo |
 
-Prints de @designmotionhq e @motion_ui_interface das rodadas 3A–3C não estavam disponíveis em arquivo; os números estão transcritos em `typography-and-touch.md`. Das rodadas 1 e 2 vieram os prints `DfRucYFjrac_1–3` e `De_FtT3k-tT_2` (tabela acima). O print de `DffCenmFASU` e `Dfr4RMBlaPH` (rodada 7) não estava disponível em JPG.
+Prints de @designmotionhq e @motion_ui_interface das rodadas 3A–3C não estavam disponíveis em arquivo; os números estão transcritos em `typography-and-touch.md`. Das rodadas 1 e 2 vieram os prints `DfRucYFjrac_1–3` e `De_FtT3k-tT_2` (tabela acima). Os prints de `DffCenmFASU` (fonte de matriz de pontos) e `Dfr4RMBlaPH` (tooltip de arraste) da rodada 7 estão em `../../dashboard-ui/assets/visual-refs/` (`DffCenmFASU_1.jpg`, `Dfr4RMBlaPH_3.jpg`).

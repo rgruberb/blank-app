@@ -47,8 +47,14 @@ Os reels do @motion_ui_interface mostram **painéis de componente com o gráfico
 | `../../dashboard-ui/assets/visual-refs/DSIMwtvDluO_1.jpg` | @ramotion (case Borea AI) | Print: celular com **rosca segmentada e score "74"**, cards de métrica, linha laranja | Home de app de score/investimento |
 | `../../dashboard-ui/assets/visual-refs/DSIMwtvDluO_3.jpg` | @ramotion (Borea AI) | Print: kit bento — botão-pílula, **chip de ticker "VOO +0.07%"**, ícone do app, set de ícones, gráfico com cursor + seletor de período | Componentes de app financeiro; ícone de app |
 | `../../design-direction/assets/visual-refs/DfyFShTounu.jpg` | @theglidestudio | Duas **telas mobile** dark "Your invoices, handled.": insegura vs segura (grid, espaço, 1 CTA, **tab bar Send/Track/Get paid**) | Layout de confiança em tela de app (fintech, onboarding) |
+| `../../dashboard-ui/assets/visual-refs/DffCenmFASU_1.jpg` | @shohan.designs | Print: app fitness preto + teal, "Your Body Is Ready" + **1 botão "Start Workout"**, 93%/89% em fonte de matriz de pontos, **tab bar flutuante** em pílula + botão circular teal à parte | Home de app de score: número + 1 ação; tab bar flutuante com FAB |
+| `../../dashboard-ui/assets/visual-refs/DffCenmFASU_2.jpg` | @shohan.designs | Print: tela de treino com card-hero, "Workout Progress 68%" em barra com marcador, Exercises 8/12, tempo 28:42, lista com play | Progresso de tarefa/sessão em app (barra + N/M) |
+| `../../dashboard-ui/assets/visual-refs/DffCenmFASU_4.jpg` | @shohan.designs | Print: 3 celulares (home, treino, nutrição com conquistas em mini-anéis) | Ver o sistema inteiro do app; molde de apresentação em leque |
+| `../../dashboard-ui/assets/visual-refs/DfmwyDclA0Q_2.jpg` | @shohan.designs | Print: "Cashflow" com abas Daily/Weekly/Monthly, barras azuis + tooltip, This week/Last week/Change, Income/Outcome, transações, tab bar flutuante com pílula rotulada + botão lima | Tela de gráfico + lista no celular; **confira a conta** (Change não fecha) |
+| `../../dashboard-ui/assets/visual-refs/DfmwyDclA0Q_4.jpg` | @shohan.designs | Print: 3 celulares — home (saldo, "+ Add Money" azul, score 74% Excellent! lima), cashflow e chat "Lumen AI" com atalhos acima do campo | Finanças pessoais; 2 acentos com papel fixo; chat de IA com chips de sugestão |
+| `../../ui-motion/assets/visual-refs/Dfo__tSjk9k_2.jpg` | @noahelhadedy | Print: "Swipe deck" — card de produto em pilha (Kalypso $49, chips Figma/Framer) | Pilha de cards com swipe (o momento lúdico da tela) |
 
-**Total: 26 imagens mapeadas** (14 `ui-motion`, 9 `ux-patterns`, 2 `dashboard-ui`, 1 `design-direction`), mais a cópia
+**Total: 32 imagens mapeadas** (15 `ui-motion`, 9 `ux-patterns`, 7 `dashboard-ui`, 1 `design-direction`), mais a cópia
 de `DXeeUP7FKGs_1` em `dashboard-ui`.
 
 ## Atalhos por pergunta
@@ -56,7 +62,8 @@ de `DXeeUP7FKGs_1` em `dashboard-ui`.
 - Bottom sheet → `DfgcqeMBPCU`. Tab bar → `DbfG6fuPE9y` (expressiva) ou `DXeeUP7FKGs_1` (pílula simples).
 - Large title / long press → `DfWjKQPhUbn`. Login/OTP → `DfZkZZ4hkuV`. Formulário → `DfcwOHLh76I` ou `Dd25eCoBJGr`.
 - Loader/estado → `DfvAY82DSvD`. Refresh/feed → `DfwavjimeIa`. Toast → `DXRpZTTMr9a`.
-- Tela de decisão / Buy-Sell → `DXeeUP7FKGs_1`. Score → `DSIMwtvDluO_1`. Confiança → `DfyFShTounu`.
+- Tela de decisão / Buy-Sell → `DXeeUP7FKGs_1`. Score → `DSIMwtvDluO_1` ou `DffCenmFASU_1`. Confiança → `DfyFShTounu`.
+- App fitness → `DffCenmFASU_1`/`_4`. Finanças pessoais / chat de IA no app → `DfmwyDclA0Q_4`. Tab bar flutuante + FAB → `DffCenmFASU_1`.
 
 ## Avaliadas e não incluídas (não são mobile)
 - `../../ux-patterns/assets/visual-refs/DdRneVWhBSY.jpg` (settings): painéis em janela de desktop; as regras valem, o layout não.
@@ -65,7 +72,8 @@ de `DXeeUP7FKGs_1` em `dashboard-ui`.
 - `../../ui-motion/assets/visual-refs/Dfvja0XCyIi.jpg`, `DZ2Dp5wt0pJ.jpg`, `../../ux-patterns/assets/visual-refs/DfemaTCBncA.jpg`: site, upload e botão sem contexto mobile; números já transcritos.
 
 ## Fontes mobile sem imagem (só descrição)
-Fitness `DffCenmFASU` e finanças pessoais `DfmwyDclA0Q` (`dashboard-ui/references/domain-examples.md` §29), Qwash
+Qwash
 `DX_bA4rCWf0` e WayLoo `DVv7OOECewR` (§21), home imobiliária `DfzgxEKlx8z` (`ux-patterns/references/components-checklists.md` §11),
 alvo de toque `DfwojjrirKz`, dark mode `DfSa0GRh-gS` e app de clima `DfMN-fgIxOu` (`ux-patterns/references/typography-and-touch.md` §1, §4–5),
-componentes de motion `Dfo__tSjk9k` (hold to publish, swipe deck; `ui-motion/references/react-bits.md`).
+hold to publish (`Dfo__tSjk9k`, slide sem print; `ui-motion/references/react-bits.md`). Fitness `DffCenmFASU` e finanças
+`DfmwyDclA0Q` agora têm print (tabela acima); `DfmwyDclA0Q_3` (chat no meio da transição) não foi copiado.

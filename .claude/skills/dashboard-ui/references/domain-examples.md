@@ -400,7 +400,7 @@ regras/políticas como lista de toggles.
 - Abre com o conteúdo vazio (loading) e os blocos entram.
 **Copiar:** a cor mostra **quem bate a meta**, sem eixo; partes do total em barra segmentada + cards.
 
-## 16. Gestão de crédito privado — `Dfo0F0Pvo4Y` (@_code_and_chill_, sem imagem)
+## 16. Gestão de crédito privado — `Dfo0F0Pvo4Y` (@_code_and_chill_; prints do cross-post no Facebook `1A3pMvMBW2_1–_3`, ver §27)
 **Tema:** **terracota `~#B8664D`–`#D98A6C` + acento verde-limão `~#C8F23A`**, sidebar clara/oliva — fora do clichê azul
 de finanças.
 - **Imóvel "Casa Duna":** foto grande + miniaturas; gauge semicircular "63,8%" em limão; tabela curta.
@@ -516,19 +516,28 @@ Dark quase preto `~#0B0B0C`–`#141414`, **laranja `~#FF5A1F` só no CTA "Add Fu
 - **Sankey de conversão de moedas** e **"Net Cashflow −$3564" em heatmap de quadradinhos** cinza/branco.
 - Barra "Search or type command" com atalho **⌘ Space** (produto de poder).
 **Divergência entre rodadas:** a rodada 7 leu "Apps/Reports", "+11%", "Dribix Studio −2300" e tooltip "Debt"; o print
-confirma a rodada 2 (TOOLS/INSIGHTS, +17%, Orbix Studio −2309, "Cash").
+confirma a rodada 2 (TOOLS/INSIGHTS, +17%, Orbix Studio −2309, "Cash"). Os prints da rodada 7 (`DfcdrhgFFMR_2–_4`) são
+os mesmos quadros de `_1–_3` em resolução menor: não foram copiados.
 
-### 22b. Zentra (cripto) — `Dfr6X8qFPwC` (rodada 5, sem print)
-Fundo `~#0E0E10`, cards `#17171A`; **roxo `#6D4AFF` só em item ativo e CTA**; linhas de gráfico laranja `#F7931A` (BTC)
-e azul `#4C8DF6` (market cap) + 1 neutra sobre barras de volume cinza; verde `#2ECC71` / vermelho `#FF4D4F` só em variação.
+### 22b. Zentra (cripto) — `Dfr6X8qFPwC` (prints `Dfr6X8qFPwC_2.jpg` metade esquerda, `_3` metade direita; `_1` = tablet nas mãos, em `design-direction`)
+Fundo `~#0E0E10`, cards `#17171A`; **roxo `#6D4AFF` só em item ativo e CTA** (Overview, "Next", "Convert", "Activate QR");
+linhas de gráfico laranja `#F7931A` (BTC Price) e azul `#4C8DF6` (Market Cap) + 1 branca sobre barras de volume cinza,
+tooltip multi-série com data ("Aug 18"); verde `#2ECC71` / vermelho `#FF4D4F` só em variação. Legenda do post: "Orange and
+blue chart lines stand out against a dark dashboard… market trends up front, transaction rows below and a watchlist
+and conversion panel to the side".
 - Sidebar MAIN MENU / FINANCE OPS, botão "Ask AI ⌘D", **card de onboarding "Finish Setup · 2 of 4 · Skip · Next"** com
   ilustração 3D (progresso de configuração dentro da sidebar), toggle Dark Mode no rodapé.
-- Ordem: **faixa de 5 KPIs → "Market Trends" grande com tooltip multi-série → tabela de transações → coluna lateral com
-  ação (Convert, borda em gradiente laranja→azul, abas Buy/Sell/Swap/Convert) e monitoramento (Watchlist)**.
-- "Transaction Status" com **barra de progresso por estado** (Pending 80%, Completed 100%, On Hold 30%…).
-- Card "Registration" com QR e **mensagem de erro já escrita** ("If an error occurs scanning…").
-- Dados com números "didáticos" (π, e, √2, φ) como placeholder; KPIs de marketing (Traffic, CTR, CPA) num dashboard
-  cripto: não faz sentido, não copie.
+- Ordem: **faixa de 5 KPIs → "Market Trends" grande com tooltip multi-série → tabela de transações (Buying / Sell
+  Currency em 2 colunas) → coluna lateral com ação (Convert, abas Buy/Sell/Swap/Convert, BTC → ETH) e monitoramento
+  (Watchlist: Symbol / Last / Change / Change %)**. No print a borda do painel Convert é clara com brilho roxo; o
+  "gradiente laranja→azul" da leitura anterior não aparece.
+- "Transaction Status" com **barra de progresso por estado** (Pending Review 80%, Completed 100%, Not Started 0%, On Hold
+  30%, Delayed, In Progress), cada uma com delta colorido e menu "⋮".
+- Card "Registration with Zentra" com QR em pontos teal, botão roxo "Activate QR" e **mensagem de erro já escrita**
+  ("If an error occurs scanning…").
+- Dados com números "didáticos" como placeholder (pares 5.31415 ETH/BTC, 3.14159 LTC/ETH, 2.71828 BTC/USD, 1.41421,
+  1.61803, 0.57721: confirmado no print); KPIs de marketing (Traffic 982, ROI +15%, Conversions 473, CTR 2.5%, CPA $5.41)
+  num dashboard cripto: não faz sentido, não copie.
 
 ### 22c. CareNest (saúde) — `DfUvP_ulPC6` (print `DfUvP_ulPC6_2.jpg`)
 Mesmo sistema do Vaulto em outro setor: gradiente petróleo `~#0E1A1C → #12262A`, **acento teal `~#3FB8A8`** (aba ativa,
@@ -582,7 +591,11 @@ KPI padrão: rótulo, número grande, delta verde, mini-barras. Donut com total 
 **Problemas:** "Critical Alerts 9 (+6%)" **em verde** (alerta subindo não é bom: a cor do delta precisa seguir o
 sentido "bom/ruim", não o sinal); Adrian × Andrian; hashtags de futebol; slide final imita o sorriso da Amazon.
 
-## 27. Code & Chill no Facebook (rodada 6, sem print) — mesmos reels já indexados
+## 27. Code & Chill no Facebook (rodada 6) — mesmos reels já indexados
+Prints: `1A3pMvMBW2_1.jpg` (Casa Duna), `_2` (Portfolio), `_3` (Risk) — **as primeiras imagens do crédito privado** (§16
+não tinha). Os 3 quadros de `1CTThcky5H` (Funnels / Campaigns / Cohorts, com o editor `src/motion.ts` e
+`slidePill(pill: HTMLElement, target: HTMLElement)` embaixo) foram avaliados e **não copiados**: são versões de baixa
+resolução da folha `DffBnb2vlUn.jpg` (§4).
 Os dois reels são cross-posts de reels do Instagram já descritos:
 - **"SaaS revenue analytics dashboard"** (`facebook.com/reel/1555972142999537`) = **`DffBnb2vlUn`** (§4): Funnels em 5
   colunas (1ª azul `#2F6BFF` cheia), Campaigns em kanban Draft / Scheduled / Live / Done, barras `#2FD6A5`, Cohorts com
@@ -591,43 +604,68 @@ Os dois reels são cross-posts de reels do Instagram já descritos:
 - **"Private credit loan management dashboard"** (`facebook.com/share/r/1A3pMvMBW2/`) = **`Dfo0F0Pvo4Y`** (§16): Casa Duna →
   Portfolio ("Total outstanding $14.18m" → "$14.97m") → Risk (grade terracota `#8A5A48`/`#A86B52`, célula com contorno
   limão `#B8F03C`, lista de imóveis com miniatura). Ordem **ativo → portfólio → risco** (micro ao macro); números
-  oscilam entre frames (contagem viva).
+  oscilam entre frames (contagem viva). Os prints mostram ainda: título "Management Dashboard" em pêssego acima do vídeo
+  (sem editor de código nesses quadros); **sidebar larga com item ativo em pílula limão na Casa Duna, recolhida para rail
+  de ícones em Portfolio e Risk**; botão limão no topo e no "Record payment"; tira de miniaturas do imóvel embaixo da foto.
 **Divergências com §16:** aqui o gauge do imóvel é **amarelo `#E8C547` "63,4%"** (lá: limão "63,8%"); a rodada 6 leu
 `power3.out`, a 3 leu `power3.inOut`. Fundo lido como marrom-oliva `#17140F` com vidro sobre foto (lá: terracota + sidebar
-clara). Ambos são leituras de frame: na dúvida, prefira §16.
+clara). **O print `1A3pMvMBW2_1` confirma a rodada 6** (gauge amarelo "63.4%", fundo marrom-oliva, sidebar escura com
+pílula limão); a terracota fica só nas células da matriz de risco. O `ease` continua ilegível.
 O link `1AE3r4BKt6` abre a página (20K seguidores), não um vídeo; o post mais recente era "Music listening app
 dashboard" e não foi analisado.
 
-## 28. Série "OS" da @felvrabr em carrossel (rodada 7, sem print) — complementa §9
+## 28. Série "OS" da @felvrabr em carrossel (rodada 7) — complementa §9
+Prints: Caféra `Df4Shdgmafx_1` (capa), `_2` (Ripeness map), `_4` (Harvest overview); Verdan `DfuhN08lTWN_3` (sidebar),
+`_5` (Crop Mix); Maren `Dfr4RMBlaPH_3` (grade de reservas), `_4` (ocupação e receita). Não copiados: `DfuhN08lTWN_4`
+(Farm overview, mesmo template de `Df4Shdgmafx_4`) e `Dfr4RMBlaPH_2` (mapa das vilas, muito pequeno).
 Os carrosséis mostram **um componente por slide** com título e uma frase no canto ("Every number at a glance", "Data
 that reads like a story", "Micro-interactions that feel native"). Úteis para estudar cada peça isolada.
 
 ### 28a. Caféra Coffee Farm OS — `Df4Shdgmafx` (novo domínio: café)
 Foto aérea de cafezal verde-escuro `~#12301A`, **acento laranja `~#E8955A`** (verde + laranja, em vez de oliva + lima).
-- **Ripeness map:** talhão laranja com pino "Plot 03 · Ready" e cartão com foto das cerejas ("82% ripe · Brix 21.4 ·
-  Moisture 92%") + **CTA único "Start harvest"**: "One scan finds the ripe plot, one tap sends the crew".
+Capa: título gigante translúcido "CAFÉRA" atrás do tablet, "Dashboard concept" e "UI design · UI motion · Built to be trusted".
+- **Ripeness map:** talhão laranja com pino "Plot 03 · Ready" e cartão com foto das cerejas ("Ready to pick", "Plot 03 ·
+  Catuaí · 12.6 ha · 48 rows · Planted 2016", "82% ripe · Brix 21.4 · Moisture 92% · Peak") + **CTA único "Start
+  harvest"**: "One scan finds the ripe plot, one tap sends the crew". Na capa o mesmo pino já está em "Plot 03 ·
+  Harvesting" (o estado muda no objeto depois da ação).
 - **Harvest overview** (2x2): Ripe cherries 71% "On target" (área); Crews in field 3 "+1 sent" (pirulitos "Max 4");
   Picked today 260 bags "Rising" (linha pontilhada); **Season progress 68% TODAY** (gauge).
-- Variety Mix em anéis (Catuaí 48 / Bourbon 32 / Mundo Novo 20, centro "412 HECTARES"); Harvest Forecast com junho no acento.
-- Sidebar de vidro com ponto laranja de notificação em "Ripeness"; "Harvest picker HV-0307 · Rows picked 3/4 75%".
+- Variety Mix em anéis (Catuaí 48 / Bourbon 32 / Mundo Novo 20, centro "412 HECTARES"); Harvest Forecast "Next 12 mo"
+  com os meses de pico no acento; Recent Messages (Crew 2, agrônomo, estação meteorológica).
+- **Correção pelo print:** à esquerda há um **rail de ícones** (ativo em círculo laranja), não uma sidebar com ponto de
+  notificação; as camadas ficam em pílulas sobre o mapa (**Ripeness** ativa em laranja / Moisture / Yield / Crews). O
+  card é **"Harvest order HV-0307 · Plot 03 · Catuaí · Crew 2"** (não "picker") com agrônomo e "Rows picked 3/4 · 75%"
+  em barra segmentada laranja. Usuário no topo: "Helena R. · Farm manager".
 
 ### 28b. Verdan (carrossel `DfuhN08lTWN`) e Maren (carrossel `Dfr4RMBlaPH`)
-Mesmos produtos dos reels `Dfui4V5BMbz` e `Dfr9S5yhlvX`. **Diferenças de número entre reel e carrossel** (o mockup muda
-entre versões): Verdan NDVI 0.78 (reel 0.77), "Pivots running 3 · +1 started" (reel 2); Maren ocupação "94% ▲ 6 pts" com
-**receita 2026 (teal) vs 2025 (cinza) na mesma curva** e linha pontilhada em 31 Dec, barras Booked terracota `~#C8664F` /
-New teal `~#4FD8C0` (§9c chama de coral/menta), tooltip de arraste "Drag to extend · 4 nights · $4,280".
+Mesmos produtos dos reels `Dfui4V5BMbz` e `Dfr9S5yhlvX`. Verdan "Field sidebar" (print `_3`): painel de vidro sobre a
+foto com Overview / **Fields (ativo em pílula clara)** / Health (ponto lima) / Irrigation / Messages / Insights, legenda
+"Micro-interactions that feel native"; Crop Mix (`_5`) em anéis 1,240 hectares (Soybean 48 / Corn 32 / Wheat 20). Os
+slides da Maren têm rótulos em português ("Mapa das vilas", "Grade de reservas", "Ocupação e receita") e filtros em
+pílula All villas / Ocean front / Private pool / Garden.
+**Diferenças de número entre reel e carrossel** (o mockup muda
+entre versões): Verdan NDVI 0.78 (reel 0.77), "Pivots running 3 · +1 started" (reel 2), Soil moisture 31% "Rising",
+Crop health 92% TODAY; **Maren "Revenue per night $6,420 New Year's Eve" (reel $5,350)**; ocupação "94% ▲ 6 pts" como
+calendário de dezembro em quadrados teal (último dia aceso); **receita 2026 (teal) vs 2025 (cinza) na mesma curva** e
+linha pontilhada em 31 Dec, barras Booked terracota `~#C8664F` / New teal `~#4FD8C0` (§9c chama de coral/menta), tooltip
+de arraste "Drag to extend · 4 nights · 29 Dec → 2 Jan · $4,280" (confirmado no print) e chat da hóspede ao lado.
 Também listados e **não lidos**: Vinora "Vineyard OS" (`Df11OjZFT5G`), Helion carrossel (`Dfo-Jx3FZ0L`) e landing pages
 de comida (Sem Frescura, Brutto) — estas são de `design-direction`.
 
-## 29. Apps mobile do Orbix Studio (@shohan.designs, rodada 7, sem print)
+## 29. Apps mobile do Orbix Studio (@shohan.designs, rodada 7)
+Prints: fitness `DffCenmFASU_1` (home), `_2` (treino), `_4` (3 telas); finanças `DfmwyDclA0Q_2` (Cashflow), `_4` (3 telas).
+Não copiado: `DfmwyDclA0Q_3` (chat Lumen AI no meio da transição, metade fora do quadro). Molde de apresentação:
+celular sobre cinza-claro, moldura "Designed by Orbix Studio · Save for later".
 
 ### 29a. Fitness "Workout Readiness" — `DffCenmFASU`
 Preto + **teal único**, foto do corredor desfocada em teal. Home abre com **"Today's Health Score" + título "Your Body
 Is Ready" + botão único "Start Workout"**; **"93%" e "89%" em fonte de matriz de pontos** dentro de arco fino (score com
-identidade sem ilustração); "My Progress · Of the weekly plan completed". Treino: "Workout Progress 68%" em **barra
-segmentada com marcador + "Exercises 8/12" + "Workout Time 28:42"**. Nutrição: "Nutrition Score 88 · Excellent" em arco
-de pontos e **"Nutrition Achievements" em mini-anéis** (hidratação, fibra, vitaminas 9/12). Título grande bold + rótulos
-pequenos cinza.
+identidade sem ilustração); "My Progress · Of the weekly plan completed". Treino: card-hero "Upper Body Strength"
+(45 min · 400 kcal) e "Workout Progress 68%" em **barra segmentada com marcador + "Exercises 8/12" + "Workout Time
+28:42"**, lista de exercícios com play. Nutrição: "Today's calories 1,684", "Nutrition Score 88 · Excellent" em arco
+de pontos, hidratação "2.3" com barras verticais e **"Nutrition Achievements" em mini-anéis** (hidratação, fibra,
+vitaminas 9/12). Título grande bold + rótulos pequenos cinza. **Tab bar flutuante** em pílula escura com 3 ícones e,
+separado à direita, botão circular teal (ação principal), seletor "Today ▾" no topo.
 
 ### 29b. Finanças pessoais — `DfmwyDclA0Q`
 "Good morning, Itachi"; "My Balance $50,764.00" + chip verde; **duas cores de acento com papéis fixos: azul `~#1E9BFF` =
@@ -635,6 +673,12 @@ dinheiro/ação ("+ Add Money"), lima `~#C8F32B` = resultado/score** (anel "74% 
 com "This week / Last week / Change +$1,650"; Income/Outcome com delta. Copiloto "Lumen AI": frase com número ("12% lower
 than May"), cartão "Entertainment $1,300 · +18% over budget" e **atalhos prontos** ("Set a budget", "Save $500",
 "Find subscriptions").
+Pelo print: Cashflow em barras azuis com o dia de pico mais claro e tooltip "$3,000.00 · Oct 5"; "This week $12,450.00 /
+Last week $10,800.80 / Change $1,650.00" (**a conta não fecha: a diferença é $1,649.20**); Income $4,846.12 (+$97.8 vs mês
+anterior) / Outcome $1,148.80 em vermelho; transações Figma −$90, Photoshop −$32. Home: "+ Add Money" pílula azul cheia +
+"Send Money" contorno; card azul "Financial score 74% · Excellent!" com anel lima; "Expense $4,000.00" com barra.
+**Tab bar flutuante** com pílula ativa rotulada ("Home", "Analytics") e botão circular lima no meio. O chat cumprimenta
+"Anjuman" e a home "Itachi" (nome inconsistente no mockup).
 
 **Copiar (22–29):** um acento só para ação/estado (ou dois com papéis fixos e documentados); composição do total logo
 abaixo do número; KPI com subtotal de contexto; delta colorido pelo sentido bom/ruim; card tracejado de "adicionar";

@@ -45,7 +45,7 @@ Erros e cuidados do post: rótulo 5 não bate com o par; "Muli" foi renomeada; H
 | **Trio de identidade** | @thedzianis (`DfSIP2iBuFI`), Relay (`Dd9nhiOyrZU`) | sans no headline, **serif itálico em 1 palavra**, mono em labels | 3 famílias, dentro do limite de 2–3 |
 | **Display só em títulos + Inter** | @ramotion (`Dak9nkTFpYI_2`: Funnel Display + Inter) | 2 famílias, display larga | igual ao par 12 do post (display + Inter) |
 | **Display condensada + serif itálico** | @niki.aroca (`DfKxflroHj3`) | "CREATE *without* LIMITS" | a serif itálica faz a ênfase |
-| **Script + grotesca pesada** em capa | @craftwork.design (`DfKaOBqjUr4`, rodada 5) | "Selected / **Design skills** / Part 2" | 3 camadas tipográficas só na capa; não leve o script para o corpo |
+| **Script + grotesca pesada** em capa | @craftwork.design (`DfKaOBqjUr4`, rodada 5; print `DfKaOBqjUr4_1.jpg`) | "Selected / **Design skills** / Part 2" | 3 camadas tipográficas só na capa; não leve o script para o corpo |
 
 **Divergência registrada:** o post fala em 2–3 fontes e mostra só pares; o trio da skill (sans + serif + mono) usa as 3.
 Os dois cabem na regra se o mono ficar só em rótulos/metadados e a serif só em ênfase. Nenhuma fonte indica 4 famílias.

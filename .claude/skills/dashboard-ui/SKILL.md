@@ -167,8 +167,10 @@ glass claro sobre foto → `Dfj_FGsTAVB`; **app de trading / investimento → `D
 `DSIMwtvDluO_1` score mobile, `_2` home web com Gainers/Losers, `_3` chip de ticker e gráfico com cursor).
 **Fintech web → `DfcdrhgFFMR_1`/`_2`**; logística/status → ação → `DftsSH-jnfs_1`; score de crédito → `DfaQe-CiBfJ_1`/`_2`;
 saúde escura → `DfUvP_ulPC6_2`; perfil de atleta claro → `Dfus5sWFAov_1`; saúde clara → `DfUWa0jAed7_1`; recorte 3D de
-apresentação → `DfcdrhgFFMR_3`. Fitness, finanças pessoais, Zentra e Caféra só têm descrição (§22b, §28–29).
-Os reels da rodada 3 sem imagem (vendas com meta, crédito privado, skeuomorfismo, Ember, fluxos @ui.pixel) estão só
+apresentação → `DfcdrhgFFMR_3`. Cripto web → Zentra `Dfr6X8qFPwC_2`/`_3`; crédito privado → `1A3pMvMBW2_1–_3`;
+Caféra/Verdan/Maren em componentes isolados → `Df4Shdgmafx_1`/`_2`/`_4`, `DfuhN08lTWN_3`/`_5`, `Dfr4RMBlaPH_3`/`_4`;
+app fitness → `DffCenmFASU_1`/`_4`; finanças pessoais mobile → `DfmwyDclA0Q_2`/`_4` (§22b, §27–29).
+Os reels da rodada 3 sem imagem (vendas com meta, skeuomorfismo, Ember, fluxos @ui.pixel) estão só
 descritos em `domain-examples.md` §14–21.
 
 ## Arquivos
