@@ -34,6 +34,8 @@ Cada `.jpg` é uma folha de contato 4×3 com frames do reel em ordem (esquerda�
 | Dfo__tSjk9k_2.jpg | @noahelhadedy | https://www.instagram.com/p/Dfo__tSjk9k/?img_index=4 | Print único: "Swipe deck" — card "Kalypso · Portfolio kit · $49" com chips Figma/Framer em pilha escura | Pilha de cards com swipe |
 | Dfo__tSjk9k_3.jpg | @noahelhadedy | https://www.instagram.com/p/Dfo__tSjk9k/?img_index=7 | Print único: "Parallax ticket" — ingresso "Motion Night" inclinado em 3D com foto de nuvem | Tilt/parallax em card (1 por página) |
 | DfKaOBqjUr4_3.jpg | @craftwork.design | https://www.instagram.com/p/DfKaOBqjUr4/?img_index=4 | Print único: slide "GSAP ScrollTrigger — official guide to pinning, scrub and cleanup" com janela de navegador (fita 3D azul→rosa) e link manuscrito gsap.com/scroll | Template de slide de carrossel "1 recurso por slide"; referência visual de site guiado por scroll |
+| 9A_carbon-easing-curves_1.jpg | Carbon Design System (IBM, oficial) | https://www.carbondesignsystem.com/building-blocks/foundations/motion/overview | Print único: gráfico distância × tempo com as curvas **productive** (azul, sobe rápido) e **expressive** (rosa, mais lenta e suave), com os dois círculos de demonstração | Comparar a sensação productive × expressive ao escolher easing (`official-motion-guidelines.md` §3) |
+| 9D_motion-examples-swipe_1.jpg | motion.dev (Motion for React, oficial) | https://motion.dev/examples?platform=react&search=swipe | Print único: grade de 6 exemplos oficiais com swipe: swipe actions, gallery cards/stack, ice lollies, sheet modal, card stack | Achar exemplo pronto de swipe/sheet/card stack no Motion antes de escrever do zero (`official-motion-guidelines.md` §5) |
 
 ## Perfis avaliados (rodadas 1, 3A–3C, 5, 6 e 7, 18/11/2026)
 Notas 1–5 como fonte de **motion**. Nota com "*" é nossa (a rodada não deu nota). Inativo = sem post há mais de ~1 ano, 0 posts ou perfil inexistente.
@@ -68,3 +70,16 @@ Notas 1–5 como fonte de **motion**. Nota com "*" é nossa (a rodada não deu n
 | @twohabitsdesign | não (último post 11/2022) | — | n/a | Nada novo |
 
 Prints de @theglidestudio e @motion_ui_interface das rodadas 3A–3C não estavam disponíveis em arquivo; os números estão transcritos nas references. Da rodada 1 vieram `Dff1uulGoxb_2`, `DfkBGDyDgqS_1` e `DfkBGDyDgqS_3`; da rodada 5, `De_J0aOl9SJ_1–_3`, `Dfo__tSjk9k_1–_3` e `DfKaOBqjUr4_3` (tabela acima). Os ícones `Df1eAHODjT9_*` e a capa/antes-depois `DfKaOBqjUr4_1/_2` ficaram em `design-direction`; o Code & Chill do Facebook (rodada 6) repete `DffBnb2vlUn` de `dashboard-ui` e não foi copiado.
+
+## Fontes oficiais (rodadas 9A e 9D, 22–23/11/2026)
+Não são perfis: são guias oficiais lidos no navegador. Detalhes e comparação com os tokens em `official-motion-guidelines.md`.
+
+| Fonte | O que aproveitar | Limite |
+|---|---|---|
+| Apple HIG (Motion, Accessibility) | Princípios (propósito, opcional, breve, cancelável) e as 6 regras de Reduce Motion | **Não publica ms, curvas nem springs** |
+| Material 3 (Motion, M3 Expressive) | Springs (expressive/standard × fast/default/slow × spatial/effects) e a tabela web cubic-bezier + duração; legado 50–1000 ms | Stiffness/damping não extraídos; legado "não mantido" |
+| Carbon (IBM) | 70/110/150/240/400/700 ms; productive `0.2,0,0.38,0.9` e expressive `0.4,0.14,0.3,1`; micro 90–120 ms | Sem gestos/mobile |
+| Atlassian | Interações 50–150 ms, transições 150–400 ms, 4 curvas, regra de frequência (< 150 ms) | — |
+| Motion for React | React 18.2+; defaults; `reducedMotion` padrão `"never"` | Defaults ≠ tokens da skill |
+| GSAP / Lottie | Licença "Standard No Charge" (não MIT); curvas cubic-bezier no Lottie Creator | LottieFiles Motion System é pago |
+

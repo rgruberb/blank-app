@@ -39,7 +39,7 @@ O "kit completo" (checklist, prompt de auditoria e de correção) é oferecido v
 | 31 | Testar no celular e em rede lenta | — |
 
 ## Quais itens são de "percebida" e quais são de "real" (complemento: agrupamento editorial)
-- **Percebida, sentida na UI**: 01 skeleton, 13 streaming, 14 optimistic UI, 15 lazy loading, 23 virtualização, 26 re-render. Combine com Doherty (resposta < 400ms), feedback do botão em 100ms / fim em 300ms, ⌘K abrindo em 150ms e paginação com espaço reservado (`components-checklists.md`).
+- **Percebida, sentida na UI**: 01 skeleton, 13 streaming, 14 optimistic UI, 15 lazy loading, 23 virtualização, 26 re-render. Combine com Doherty (resposta < 400ms), latência do botão (resposta ≤ 100ms, estado final ≤ 300ms; animação pelos tokens de `ui-motion`), ⌘K abrindo em 150ms e paginação com espaço reservado (`components-checklists.md`).
 - **Rede e assets**: 02, 06, 09, 21, 22, 27, 29.
 - **API e backend**: 03, 04, 05, 07, 10, 12, 16, 19, 20, 25, 28.
 - **Banco**: 08, 17, 24.

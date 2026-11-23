@@ -2,7 +2,7 @@
 
 Mande uma rodada por vez no painel do Claude no Chrome, com o Instagram logado. Ao final de cada rodada a extensão gera o `rodada-<N>.md` com os achados e a lista de prints. Cole o resultado (e os prints, se baixou) na sessão das skills.
 
-Ordem: 1 → 2 → 3A → 3B → 3C → 4A → 4B → 5 → 6 → 7.
+Ordem: 1 → 2 → 3A → 3B → 3C → 4A → 4B → 5 → 6 → 7 → 8A → 8B.
 
 **Modelos:** use **Sonnet 5.5** como padrão (rápido e bom em ler slides) e **Opus 5.5** nas rodadas 4A e 4B, que pedem julgamento sobre rigor e conflito de interesse. Não use Haiku: ele pula slides e resume demais. Se uma resposta cortar no meio ou vier rasa, refaça só os links que falharam com o Opus 5.5. O modelo é escolhido no seletor da extensão.
 
@@ -431,4 +431,100 @@ AO FINAL DA RODADA, gere o arquivo `rodada-7.md`:
 3. Entrega:
    - Se você conseguir baixar arquivos, baixe o `rodada-7.md` e os prints.
    - Se não conseguir, entregue o conteúdo completo do `rodada-7.md` num ÚNICO bloco de código Markdown. Na seção "Prints", ponha uma linha por print: nome | link direto (em carrossel, use `?img_index=N`; em reel, o segundo do vídeo) | o que mostra e por que importa.
+```
+
+---
+
+## Rodada 8A: Novos links de design (18–21/11)
+
+**Modelo:** Sonnet 5.5
+
+```
+Abra cada link abaixo no Instagram, um por vez. Em carrosséis, avance por TODOS os slides; em reels, assista até o fim.
+
+FILTRO DE DESIGN (obrigatório): só analise posts sobre design de interface: UI, UX, motion, dashboards, apps, sites, design visual, tipografia, cor, componentes ou ferramentas de design. Se um link NÃO for de design (investimento, trading, finanças pessoais, lifestyle, humor, propaganda sem tela de produto), escreva só "FORA DO TEMA: <ID> — <assunto em 1 linha>" e passe para o próximo. Um app de cripto ou finanças conta como design SÓ se o post mostrar as telas e explicar decisões de interface.
+
+Para cada link de design, gere um bloco Markdown neste formato:
+
+### <ID do post> — @<autor>
+- Tipo: carrossel (N slides) | reel
+- Tema: design visual | UI/motion | UX | dashboard | investimentos | outro
+- Legenda: <texto completo da legenda>
+- Slide a slide: <para cada slide: todo o texto visível, números, cores (hex aproximado), fontes, layout e componentes mostrados>
+- Regras/lições práticas: <lista objetiva do que o post ensina>
+- Plataforma: website | app desktop/web app | app mobile | outro
+
+Links:
+https://www.instagram.com/reel/Df4ZOofhX_s/
+https://www.instagram.com/reel/Df4FMmPBbM5/
+https://www.instagram.com/reel/DfNKemOBLZx/
+https://www.instagram.com/reel/Df2Vqx0S48U/
+https://www.instagram.com/p/DfPzX1JlJHz/
+https://www.instagram.com/p/Dfg5mkYDluh/
+https://www.instagram.com/p/Df3y6C7jmyA/
+https://www.instagram.com/p/DfxHmxAjjkn/
+https://www.instagram.com/p/Df7XGzblNVX/
+https://www.instagram.com/p/Df7OIz4kpet/
+https://www.instagram.com/p/Df98Kn-EeH9/
+https://www.instagram.com/p/Df97ZX9liyl/
+https://www.instagram.com/p/DgAbYyRkZhC/
+https://www.instagram.com/p/DfSlTkciSbg/
+
+Não comente, não curta e não siga ninguém; apenas leia.
+
+AO FINAL DA RODADA, gere o arquivo `rodada-8A.md`:
+1. Conteúdo:
+   - no topo, um resumo de 5 a 10 linhas com os principais aprendizados da rodada;
+   - depois, TODOS os blocos e listas desta rodada;
+   - no fim, uma seção "Prints".
+2. Prints: tire print só dos slides ou frames com algo visual importante (layout, paleta, gráfico, antes/depois, curva de animação, tabela de números), no máximo 3 por post. Nomeie cada um como `<ID>_<n>.png`.
+3. Entrega:
+   - Se você conseguir baixar arquivos, baixe o `rodada-8A.md` e os prints.
+   - Se não conseguir, entregue o conteúdo completo do `rodada-8A.md` num ÚNICO bloco de código Markdown. Na seção "Prints", ponha uma linha por print: nome | link direto (em carrossel, use `?img_index=N`; em reel, o segundo do vídeo) | o que mostra e por que importa.
+```
+
+---
+
+## Rodada 8B: Novos perfis de design
+
+**Modelo:** Sonnet 5.5
+
+```
+Abra estes perfis do Instagram, um por vez. Pule os posts listados como "já analisados".
+
+1. https://www.instagram.com/ui.iliasmiah000/ (já analisados: DfV39ohhwAC, Df4ZOofhX_s, DfNKemOBLZx)
+2. https://www.instagram.com/juicelab.uiux/ (já analisados: Df7OIz4kpet)
+3. https://www.instagram.com/arounda.agency/ (já analisados: Df97ZX9liyl)
+4. https://www.instagram.com/orbixdashboard/ (já analisados: Dfus5sWFAov, DfPzX1JlJHz)
+5. https://www.instagram.com/viralapplaunch/ (já analisados: DfSlTkciSbg)
+
+FILTRO DE DESIGN (obrigatório): só analise posts sobre design de interface: UI, UX, motion, dashboards, apps, sites, design visual, tipografia, cor, componentes ou ferramentas de design. Se um link NÃO for de design (investimento, trading, finanças pessoais, lifestyle, humor, propaganda sem tela de produto), escreva só "FORA DO TEMA: <ID> — <assunto em 1 linha>" e passe para o próximo. Um app de cripto ou finanças conta como design SÓ se o post mostrar as telas e explicar decisões de interface.
+
+Para cada perfil:
+1. Verifique se existe e se está ativo: número de seguidores e data do último post. Se não existir ou não postar há mais de 6 meses, escreva só "INATIVO: <motivo>" e passe para o próximo.
+2. Escreva 2–3 linhas sobre o perfil: tema principal, estilo visual, tipo de conteúdo e qualidade (decisões de design explicadas com números vs. só inspiração). Diga se o perfil é majoritariamente de design; se não for, marque "PERFIL FORA DO TEMA" e não analise posts.
+3. Liste os 10 posts mais recentes ainda não analisados com: link, tipo (carrossel/reel), resumo de 1 linha e tema.
+4. Escolha os 3 posts de design mais úteis e analise cada um neste formato (em carrosséis, avance por TODOS os slides; em reels, assista até o fim):
+
+### <ID do post> — @<autor>
+- Tipo: carrossel (N slides) | reel
+- Tema: design visual | UI/motion | UX | dashboard | investimentos | outro
+- Legenda: <texto completo da legenda>
+- Slide a slide: <para cada slide: todo o texto visível, números, cores (hex aproximado), fontes, layout e componentes mostrados>
+- Regras/lições práticas: <lista objetiva do que o post ensina>
+- Plataforma: website | app desktop/web app | app mobile | outro
+
+No final, dê uma nota de 1 a 5 para cada perfil como fonte de aprendizado de UI/UX, com uma frase de justificativa.
+
+Não comente, não curta e não siga ninguém; apenas leia.
+
+AO FINAL DA RODADA, gere o arquivo `rodada-8B.md`:
+1. Conteúdo:
+   - no topo, um resumo de 5 a 10 linhas com os principais aprendizados da rodada;
+   - depois, TODOS os blocos e listas desta rodada;
+   - no fim, uma seção "Prints".
+2. Prints: tire print só dos slides ou frames com algo visual importante (layout, paleta, gráfico, antes/depois, curva de animação, tabela de números), no máximo 3 por post. Nomeie cada um como `<ID>_<n>.png`.
+3. Entrega:
+   - Se você conseguir baixar arquivos, baixe o `rodada-8B.md` e os prints.
+   - Se não conseguir, entregue o conteúdo completo do `rodada-8B.md` num ÚNICO bloco de código Markdown. Na seção "Prints", ponha uma linha por print: nome | link direto (em carrossel, use `?img_index=N`; em reel, o segundo do vídeo) | o que mostra e por que importa.
 ```

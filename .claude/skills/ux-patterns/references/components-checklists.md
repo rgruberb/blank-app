@@ -10,11 +10,11 @@ O exemplo é sempre "Add to cart". As seis decisões não envolvem a cor.
 | # | Decisão | Antes | Depois / regra |
 |---|---|---|---|
 | 1 | **Size** | 40px: o polegar erra, e padding fino parece descuido | **48px** de altura e **24px** de padding lateral. Mínimo **44px**, alvo 48 |
-| 2 | **Label** | 14px, peso medium, afunda no fill; "OK"/"Submit" | **17px semibold, sentence case** (sem CAPS). **Verbo + objeto** ("Add to cart"). O label diz o que acontece em seguida |
+| 2 | **Label** | 14px, peso medium, afunda no fill; "OK"/"Submit" | **Semibold, sentence case** (sem CAPS); a fonte usa 17px, que cai fora da escala 1,2: use 16 ou 19 (`typography-and-touch.md` §2). **Verbo + objeto** ("Add to cart"). O label diz o que acontece em seguida |
 | 3 | **Contrast** | Fill cinza chapado a **1.6:1** contra a página: sem borda, some | Fill com gradiente "satin", rim de 1px a **4:1**, label branco a **14:1**. Regra: **label ≥ 4.5:1, borda ≥ 3:1** |
 | 4 | **Depth** | Fill chapado parece impresso, não clicável | Recessed track, borda superior iluminada, sombra **8px abaixo, 24 de blur**. "Light from above, shadow falls down" |
 | 5 | **Detail** | Cantos vivos brigam com as letras redondas; label sem pista | Pill: **radius = altura ÷ 2** (24 para 48). **Um ícone** de 20px, a **10px** do label. Nunca 2 ícones |
-| 6 | **Motion** | Estático | Hover: luz percorre o rim em **200ms**. Press: afunda **1px**. Spinner → check "Added ✓". **Feedback em 100ms, concluído em 300ms** |
+| 6 | **Motion** | Estático | Hover: luz percorre o rim em **200ms**. Press: afunda **1px**. Spinner → check "Added ✓". **Latência** (prazo do sistema, não duração de animação): resposta visível em **≤ 100ms** e estado final ou spinner em **≤ 300ms**. A animação segue os tokens de `ui-motion` (feedback visual em 0 ms, press 160 ms) |
 
 ## 2. Botão: 6 regras (`DfemaTCBncA`, @designmotionhq)
 Partes do botão: shadow, fill, border, label e focus ring. Exemplo: "Create workspace".
@@ -106,3 +106,31 @@ App de trading "Markets" (lista de ativos + detalhe com candles). A tese da lege
 - **Não abra a home com estado vazio** ("No properties found" na primeira dobra). Mostre conteúdo útil: cartões com foto grande, preço, selo e nota.
 - Filtros em pílula com **um estado ativo cheio**, em vez de 4 cores de contorno.
 - Banner com ilustração e **um CTA claro** no lugar de bloco de gradiente com texto longo.
+
+## 12. Checklists de pesquisa NN/g (rodada 9B; detalhes e fontes em `nng-research.md`)
+**Onboarding**
+- [ ] Sem tour/deck instrucional se o app não precisa de dados para começar; prefira dica em contexto e empty state que ensina.
+- [ ] Se houver deck: "Skip" visível, poucos cards, 1 conceito por card; tema/cores fora do onboarding.
+
+**Navegação**
+- [ ] Tab bar mobile com **3–5 destinos** (NN/g: teto 4–5; vale `mobile-app-ui` §3), ícone + rótulo, sempre visível; sem "More".
+- [ ] Tabs internas: rótulo de 1–2 palavras, **≥ 2 indicadores de seleção**, um nível; no mobile, acordeão para conteúdo longo.
+
+**Empty state**
+- [ ] Diz o estado do sistema, ensina a função e oferece **um botão** para a 1ª tarefa. Nunca "Sem registros" durante o carregamento.
+
+**Formulário**
+- [ ] Coluna única; **rótulo fora do campo** (placeholder nunca é o rótulo); "(opcional)" marcado.
+- [ ] Validação inline **depois de concluir o campo** (blur), erro ao lado do campo com cor + ícone; sem tooltip de erro; ajuda extra após 3 erros.
+- [ ] Botão de enviar embaixo dos campos ou fixo no rodapé, nunca no topo.
+
+**Dashboard** (divergência com `dashboard-ui` em `nng-research.md` §6)
+- [ ] Valores em barras/linhas; pizza/donut/gauge só como moldura de **um** número com meta, com o número escrito.
+- [ ] Cor nunca é o único sinal (rótulo, forma, posição).
+
+**Confiança e permissões**
+- [ ] Valor entregue antes de pedir login, dados pessoais, pagamento ou conta conectada (5 níveis de compromisso).
+- [ ] Permissão pedida **no contexto**, com "para que você possa [benefício]" (+12% de aceite com motivo) e caminho de volta às configurações se negada.
+
+**Métricas**
+- [ ] App de consumo → HEART; ferramenta de trabalho/painel → **CASTLE** (carga cognitiva, recursos avançados, satisfação, eficiência, aprendizado, erros).

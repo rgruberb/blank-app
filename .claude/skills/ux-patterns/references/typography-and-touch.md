@@ -26,6 +26,17 @@ Tokens da fonte (resumidos):
 
 Checklist de auditoria **(complemento)**: medir `getBoundingClientRect()` de todo `button, a, [role=button], input[type=checkbox]` com Playwright; reprovar < 24px na web e < 44px em app/mobile; checar distância entre centros de ícones vizinhos (≥ tamanho do alvo + 8px).
 
+### 1b. Fontes oficiais e NN/g (rodadas 9A e 9B)
+| Fonte | Alvo padrão | Mínimo | Espaço entre alvos |
+|---|---|---|---|
+| **Apple HIG** (Accessibility) | **44 × 44 pt** (iOS/iPadOS/watchOS) · macOS 28 × 28 | **28 × 28 pt** (macOS 20 × 20) | ~**12 pt** de padding em elementos com bezel; ~**24 pt** sem bezel |
+| **Material 3** | **48 × 48 dp** (≈ 9 mm; recomendado 7–10 mm); ícone 24 dp com padding até 48 | ponteiro (mouse) 44 × 44 dp | **≥ 8 dp** |
+| **NN/g** (`touch-target-size`) | **1 × 1 cm** físico; ação primária/em movimento ~**2 × 2 cm** | — | ~2 mm, mas alvo grande primeiro |
+
+- **Bate** com §1 (44pt/48dp, ~8px entre alvos). Novo: o **mínimo absoluto da Apple é 28pt** (para controle secundário em espaço apertado), não 44; 44 continua o padrão desta skill **(complemento)**: use 28 só em controle não primário e nunca abaixo do piso web de 24px.
+- 1 cm físico ≈ 38–48 CSS px conforme a densidade da tela, ou seja, 44px já atende **(complemento)**. 1 dp ≈ 1 CSS px também é inferência da rodada, não da fonte.
+- Detalhes do NN/g (view–tap asymmetry, mapas, idosos) em `nng-research.md` §3.
+
 ---
 
 ## 2. Escala tipográfica (`DfjxqzkCrUI`, @designmotionhq, carrossel de 8 folhas)
@@ -42,7 +53,7 @@ Tokens da fonte (resumidos): `--text-0: 16px` … `--text-6: 48px`; `body` 16/1,
 
 **Divergências com o que já está na skill (registrar, não apagar):**
 - `DfPJo9UBJ7D` (`dark-patterns.md` §C) usa a hierarquia **40/24/18/14**. Só 40 cai na escala 1,2; 24, 18 e 14 não. As duas fontes concordam em "1 família, poucos pesos, hierarquia por tamanho"; divergem nos valores. Escolha **uma** escala por projeto e não misture.
-- Botão primário com label **17px** (`Ddy5RJOha1U`) e ⌘K com input **26px / detalhes 14px** (`DeUr5-AhdvQ`) também ficam fora da escala 1,2. **(complemento)**: em componentes, arredonde para o degrau vizinho (17 → 16 ou 19; 26 → 28) se o projeto adotar a escala; se seguir a escala nativa iOS (17pt corpo), mantenha a nativa e não misture as duas.
+- Botão primário com label **17px** (`Ddy5RJOha1U`) e ⌘K com input **26px / detalhes 14px** (`DeUr5-AhdvQ`) também ficam fora da escala 1,2. **(complemento)**: em componentes, arredonde para o degrau vizinho (17 → 16 ou 19; 26 → 28) se o projeto adotar a escala; app web/PWA usa a mesma escala do produto (1,2, corpo 16) para manter um só sistema; o corpo 17pt é referência do nativo iOS. Não misture as duas.
 
 ### 2b. Escala 1,25 (Major Third): duas fontes novas, rodadas 1 e 2
 **`DfRucYFjrac` (@designmotionhq, carrossel de 8 folhas, rodada 2).** O **mesmo autor** do `DfjxqzkCrUI` (razão 1,2), agora com outra razão. Gancho: "Type that looks designed is mostly four numbers."
@@ -68,6 +79,14 @@ Conferência da rodada: as contas batem. Erro menor do slide: a última razão "
 | Medida | 45–75 car., `60ch` | `50ch` ≈ 66–71 car., teto ~75 | 45–75 car. |
 
 Leitura: o mesmo perfil publicou as duas razões, então nenhuma é "a regra" dele. Todas concordam em **uma razão só, line-height caindo com o tamanho, tracking negativo em título e teto de ~75 caracteres**. **(complemento)** Como escolher: **1,2** para produto denso (dashboard, app, muitos níveis em tela pequena: saltos menores); **1,25** para site, landing e conteúdo editorial (mais contraste entre níveis). Escolha **uma** por projeto e registre nos tokens. O tracking caps de 0,05 ou 0,06em é diferença de ajuste fino: comece em 0,05em e ajuste a olho. Na escala 1,25, os componentes de §2 também ficam fora (17px do botão → 16 ou 20; 26px do ⌘K → 25).
+
+**Regra da skill para medida:** token `--measure: 50ch` como teto (≈ 66–71 caracteres na fonte de `DfRucYFjrac`; `ch` muda com a fonte, então conte). A regra vale em **caracteres**: **45–75** no texto corrido e **45–60** em formulários. `60ch` passa de 75 caracteres em muitas fontes.
+
+### 2c. Escalas oficiais: Apple e Material 3 (rodada 9A)
+- **Apple HIG (iOS/iPadOS)**: corpo padrão **17 pt**, mínimo **11 pt** (macOS 13/10; watchOS 16/12; visionOS 17/12). Texto deve poder crescer **200%**. Evitar pesos **Ultralight, Thin e Light**; preferir Regular, Medium, Semibold, Bold; fonte fina pede tamanho maior. Tracking do SF Pro varia por tamanho (17 pt −26/1000 em; 28 pt +14; 11 pt +6). Tabela capturada só no tamanho "xSmall" de Dynamic Type (Large Title 31, Body 14), **não** no padrão "Large": não use como escala.
+- **Material 3**: escala **Major Second (1,125)** com base **14**, 30 estilos (15 baseline + 15 emphasized), Roboto, web em `rem` (16px = 1rem). Linha de texto **40–60 caracteres**. Line-height cresce ~7% em CJK/árabe e ~30% em birmanês/telugu.
+
+**DIVERGÊNCIA registrada (não apagar):** Material usa **1,125 base 14**; esta skill usa **1,2** (produto denso) ou **1,25** (site), base **16** (§2 e §2b). Apple não publica razão: usa estilos nomeados com corpo 17. **(complemento)** Mantenha 1,2/1,25 base 16 por padrão; adote 1,125/14 só se o projeto seguir o Material à risca (app Android/Material You). O corpo 17pt da Apple já foi tratado em §2 (label 17px do botão: escala nativa iOS não se mistura com a modular). O mínimo de **11pt** (Apple) vale como piso para caption/legenda; na web, não use texto de leitura abaixo de 12px **(complemento)**. Medida: Material 40–60 car. × skill 45–75: a interseção é **45–60 caracteres**. Atenção: `50ch` ≈ 66–71 caracteres na fonte de §2b, então fica dentro de 45–75 mas **acima** dos 40–60 do Material; conte caracteres na sua fonte em vez de confiar no `ch`.
 
 ---
 
@@ -118,10 +137,11 @@ App fitness: "93%" (Workout Quality), "89%" (progresso semanal), "68%" (treino) 
 ---
 
 ## Checklist rápido (copie para a auditoria)
-- [ ] Todo alvo ≥ 44pt/48dp (app) ou ≥ 24px com meta 44 (web); área cresce por padding; ≥ 8px entre alvos pequenos.
+- [ ] Todo alvo ≥ 44pt/48dp (app) ou ≥ 24px com meta 44 (web); área cresce por padding; ≥ 8px entre alvos pequenos. Mínimo Apple 28pt só em controle secundário; ação primária mobile maior (~2 cm, NN/g).
+- [ ] Texto ≥ 11pt (Apple) e nunca em peso Thin/Light/Ultralight em tamanho pequeno; texto escala até 200%.
 - [ ] Tamanhos de fonte vêm de **uma** escala (16 × 1,2^n **ou** 16 × 1,25^n, nunca as duas); nenhum tamanho "solto".
 - [ ] Espaçamentos em múltiplos de 8 (4 só em micro); exceções justificadas.
 - [ ] Line-height 1,5 no corpo caindo até 1,1 nos títulos grandes; tracking −0,02em em títulos grandes e +0,05–0,06em em caps.
-- [ ] Parágrafos com `max-width` entre `50ch` e `60ch` (conte: 45–75 caracteres).
+- [ ] Parágrafos com `max-width: var(--measure)` (`50ch`) e contagem real de 45–75 caracteres (45–60 em formulários).
 - [ ] Contraste: 4,5:1 texto e placeholder, 3:1 texto grande, ícones e bordas; scrim em texto sobre foto.
 - [ ] Dark mode: sem #000, texto ~87%, accent clareado, elevação por luminosidade.

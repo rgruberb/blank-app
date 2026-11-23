@@ -118,3 +118,15 @@ acento quente (laranja/âmbar/coral), o mesmo do catálogo acima.
 - Defina tokens: `--base-1`, `--base-2`, `--accent` (+ derivados de texto/borda/hover). Não crie um quarto token de marca.
 - Use `--accent` apenas em: CTA primário, estado ativo/foco, 1 destaque tipográfico por seção, indicadores de dado-chave.
 - Cheque contraste do texto sobre o acento (WCAG AA 4.5:1 para texto normal). Acentos neon/lime/mint pedem texto escuro; racing red/hot pink/burnt orange/electric blue normalmente aceitam texto branco.
+
+## Validar contraste dos tokens (Coolors, rodada 9C; print `9C_coolors_contrast-checker_1.jpg`)
+
+- Ferramenta: https://coolors.co/contrast-checker (texto × fundo → razão + nota por tamanho). O print mostra
+  `#112A46` sobre `#ACC8E5` = **8,42** ("Very good").
+- Limiares que a página descreve (WCAG): **AA = 4,5:1** texto normal e **3:1** texto grande (≥ 18 pt ou negrito);
+  **AAA = 7:1** normal e **4,5:1** grande.
+- Uso nesta skill (complemento): rode o par **texto sobre acento** (CTA), **texto-2 sobre superfície** e **borda de
+  campo sobre fundo** (3:1, regra de @designmotionhq em `ux-patterns`) nos temas claro **e** escuro.
+- Limite: o gerador de paletas do Coolors entrega cores bonitas, não **papéis** (fundo/superfície/texto/acento); mapeie
+  cada hex para um token antes de exportar e confira o Tailwind exportado à mão.
+

@@ -176,7 +176,8 @@ function toast(type, msg) {
 ## 10. Drag para reordenar (lift 105%, outros 200 ms)
 ```css
 .row { transition: transform var(--dur-reorder) var(--ease-out); }
-.row.dragging { transform: scale(var(--lift-scale)); box-shadow: 0 12px 32px rgb(0 0 0 / .25); transition: none; z-index: 1; }
+.row.dragging { transform: scale(var(--lift-scale)); box-shadow: 0 16px 32px hsl(var(--shadow-hue, 222 60% 18%) / .10); transition: none; z-index: 1; }
+/* sombra tingida (matiz do fundo, blur = 2× Y), não preta: design-direction → layers-and-trust-layout.md §4 */
 ```
 
 ## 11. Interrupção
@@ -184,3 +185,24 @@ Prefira `transition` (CSS reverte a partir do valor atual) a `@keyframes` para e
 
 ## 12. Cantos contínuos (squircle)
 `border-radius` é arco circular. Aproximação: `corner-shape: squircle` (onde suportado) ou `clip-path`/máscara SVG de superellipse. Cantos concêntricos: `inner-radius = outer-radius - padding` (36 − 12 = 24).
+
+## 13. Reduce Motion de verdade (regras Apple + Motion for React)
+Regras da Apple HIG (Accessibility) e da doc do Motion; detalhes em `official-motion-guidelines.md` §1.1 e §5.
+
+**Motion for React: obrigatório.** `MotionConfig reducedMotion` tem padrão `"never"` (ignora a preferência do sistema). Envolva a raiz:
+```jsx
+import { MotionConfig } from "motion/react";   // exige React 18.2+
+export function App({ children }) {
+  return <MotionConfig reducedMotion="user">{children}</MotionConfig>;  // desliga transform/layout, mantém opacity e cor
+}
+```
+Onde precisar de lógica própria (complemento):
+```jsx
+const reduce = useReducedMotion();
+const enter = reduce ? { opacity: 1 } : { opacity: 1, y: 0 };                 // x/y/z → fade
+const spring = reduce ? { type: "spring", bounce: 0 }                           // spring mais firme, sem bounce
+                      : { type: "spring", visualDuration: 0.35, bounce: 0.15 };
+// sem filter: blur() animado, sem scale de profundidade, sem autoplay/parallax
+```
+**CSS:** além do §0, nada de `filter: blur()` animado, `translateZ`/`perspective` ou zoom de fundo dentro de `prefers-reduced-motion: reduce`; drag/swipe continua 1:1 com o dedo, mas sem inércia nem rubber band (complemento).
+**GSAP:** `gsap.matchMedia().add("(prefers-reduced-motion: reduce)", () => { /* fades */ })` (ver `ext-gsap-core`).

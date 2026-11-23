@@ -76,6 +76,10 @@ position).
   cancela; seleção por checkbox com barra de ações em massa.
 - **Estados**: skeleton das linhas na carga, "nenhum resultado" com o filtro que causou e botão de limpar, erro com
   retry na própria tabela.
+- **NN/g Data Tables (9B, `data-tables`)**: projete para as 4 tarefas (achar, comparar, ver/editar linha, agir); 1ª
+  coluna com identificador legível; cabeçalho e 1ª coluna fixos; colunas ocultas/reordenadas com estado visível;
+  **edição em painel lateral não modal** (o modal esconde as linhas vizinhas); lote com "selecionar todos" + barra
+  contextual. Tabela no celular (`mobile-tables`) não foi lida — use lista/cards com a coluna-chave.
 
 ## 4. Formulários longos
 
@@ -87,6 +91,10 @@ position).
 - Página de detalhe: título da entidade + metadados → stepper → grid de 3 colunas (rótulo 11px cinza, valor
   13–14px) → card lateral com o número que importa (`layout-patterns.md` §1D).
 - Botão: verbo + objeto, **um** primário, loading que mantém a largura e ignora o 2º clique, disabled diz o porquê.
+- **NN/g (9B)**: estrutura (grupos, ordem lógica, **coluna única**, divulgação progressiva), transparência (tempo
+  estimado, salvar progresso, "(opcional)"), clareza (linguagem simples, exemplo de formato, largura do campo coerente),
+  suporte (**sem placeholder como rótulo**, erro **depois** de concluir o campo e ao lado dele, cor + ícone, ajuda
+  extra após **3 erros**; resumo no topo nunca sozinho; erro nunca em tooltip).
 - **(complemento)**: em desktop, 1 coluna para dados sequenciais e 2 colunas só para pares curtos (cidade/UF);
   largura de campo proporcional ao conteúdo esperado; `max-width` ~640–720px para o bloco; barra de ações fixa no
   rodapé ou no topo em telas longas; `⌘/Ctrl+Enter` envia, `⌘/Ctrl+S` salva; aviso ao sair com alterações não salvas;
@@ -120,6 +128,9 @@ position).
 resto, `De1j52PFdpL`).
 - Lista à esquerda, detalhe no centro ou à direita; a seleção da lista fica marcada e sobrevive ao refresh (URL).
 - Foco num gráfico/painel: cresce com spring e o resto escurece; volta ao grid (`De1j52PFdpL`).
+- **Material 3 list-detail (9A)**: o layout canônico de 2 painéis (lista + detalhe, com rail) é recomendado a partir
+  de **expanded (≥ 840)**; em compact/medium vira 1 painel com navegação lista → detalhe. Extra-large (≥ 1600) aceita
+  3 painéis (lista + detalhe + inspector).
 - **(complemento)**: divisores arrastáveis com largura mínima por painel (lista ≥ 240px, detalhe ≥ 480px), duplo
   clique no divisor volta ao padrão, tamanhos salvos; painéis recolhíveis por atalho; setas ↑↓ trocam o item da lista
   sem sair do detalhe.
@@ -162,6 +173,9 @@ Vaulto (card de onboarding no rodapé da sidebar, `layout-patterns.md` §10), ho
 - Card de onboarding ou upgrade no rodapé da sidebar, não modal bloqueante.
 - Home com saudação + **resumo acionável** ("23 cases need attention today"), não "Welcome back 👋" genérico
   (`dark-patterns.md` §B).
+- **NN/g (9B)**: onboarding instrucional raramente ajuda; prefira **empty state** que diz o estado do sistema, ensina
+  a função e oferece o botão da 1ª tarefa (ou dados de demonstração); "Sem registros" exibido durante a carga é pior
+  que vazio. Não peça integrações/contas conectadas antes de a pessoa ver valor (níveis de compromisso).
 - **(complemento)**: dados de exemplo em vez de tela vazia; dicas contextuais ancoradas no elemento, dispensáveis e
   que não voltam; apresentar ⌘K e 2–3 atalhos depois da primeira tarefa concluída, não antes.
 

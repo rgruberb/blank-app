@@ -148,6 +148,8 @@ Variações vistas:
 
 Regras que se repetem: histórico em neutro + destaque no "agora"; nenhum gráfico 3D; legendas como lista
 tabular; eixos mínimos. Para cores e marcas, use a skill `dataviz`.
+**Ressalva (rodada 9B):** a tabela acima registra o que as referências fazem, não o que é mais legível. Antes de copiar
+um gauge, donut ou anel, passe pelo critério do §11 (arco só para 1 número com meta; comparar → barras; tendência → linha).
 
 ## 4. Densidade e heros de domínio
 - Heros que não são gráfico aparecem quando o objeto do domínio é visual: cartão de crédito 3D (orçamento),
@@ -287,7 +289,7 @@ como usar num painel de gestor e num de cliente. Tudo marcado "(complemento)" é
 | | **gestor** (opera, acompanha a equipe) | **cliente** (acompanha o próprio resultado) |
 |---|---|---|
 | pergunta | "quem/qual área está atrás da meta e o que faço agora?" | "como estou indo e o que falta para o próximo marco?" |
-| métrica de progresso | % da equipe/área no prazo (gauge "92% TODAY"), checklists por ordem de serviço | 1 meta pessoal grande (anel), marco seguinte com prazo |
+| métrica de progresso | % da equipe/área no prazo em barras horizontais (painel operacional: sem gauge, §11), checklists por ordem de serviço | 1 meta pessoal grande (anel), marco seguinte com prazo |
 | ranking | sim, entre equipes/talhões/vendedores, com filtro e ordenação por risco (como a saúde `DfV39ohhwAC`) | evitar ranking contra outros clientes; no máximo "você vs. sua média" |
 | badges/níveis | atribuídos pelo gestor ou automáticos; visíveis como chips na lista da equipe | nível/tier do cliente como chip no header; conquistas em histórico |
 | streaks | por equipe (dias sem atraso), discreto | pessoal, visível no topo da home |
@@ -303,6 +305,7 @@ Recent Messages; cliente = mesma coluna Overview em largura total, sem o mapa op
 ### 7.4 Regras e anti-padrões (complemento)
 - Gamifique **comportamento que o usuário controla** (concluir checklist, responder no prazo), não números que ele
   não move (preço, clima).
+- Gauge/anel de meta sempre com o número e a meta em texto; ranking e comparação entre equipes em **barras**, nunca em anéis (§11).
 - Uma barra de progresso principal por tela; o resto em chips. Celebração = 1 animação curta, uma vez, com
   `prefers-reduced-motion` respeitado.
 - Mostre o próximo passo junto do progresso ("3/4 · falta Zona 4 · Start irrigation"), como o popover faz com o CTA.
@@ -392,3 +395,39 @@ do gráfico. (complemento) Faixas com rótulo de texto, não só cor, para dalto
 
 **Apresentação** (todos os posts do Orbix Studio): tablet/celular nas mãos → UI plana em 2 metades → recorte 3D
 inclinado com desfoque → CTA. Detalhe em `design-direction` (`claude-web-design-workflow.md`).
+
+## 11. Escolha de gráfico: divergência NN/g × skill (rodada 9B)
+
+**A divergência.** As referências desta skill (rodadas 2–7) usam muito gauge, donut, anel concêntrico e rosca de score:
+é a linguagem de progresso/gamificação (§7) e de apps de score (§10). O NN/g ("Dashboards: Making Charts and Graphs
+Easier to Understand", https://www.nngroup.com/articles/dashboards-preattentive/, 2017) recomenda o contrário para
+**leitura rápida**: valores por **comprimento (barras)** e **posição 2D (linhas, dispersão)**; evitar pizza, donut,
+gauge, treemap e 3D; cor para **categoria, não magnitude**, e nunca como único sinal (até ~4,5% da população tem
+daltonismo: ~8% dos homens, ~0,5% das mulheres). Print: `9B_dashboards_linha-e-barras_1.jpg` (linha semanal + barras
+horizontais de uso).
+
+**Por que as duas coisas convivem:** o olho compara comprimentos alinhados bem e ângulos/arcos mal. Um anel com **um**
+número e **uma** meta não pede comparação, pede "quanto falta" — aí o arco funciona como moldura do número. O problema
+é usar arco/fatia para **comparar** (categorias, períodos, equipes).
+
+**Critério** (a linha do gauge/anel vale só fora de painel operacional de uso diário, que fica em barras/linhas; padrão 17):
+| Pergunta do card | Use | Não use |
+|---|---|---|
+| "Quanto falta para a meta?" (1 número, 1 meta: progresso, score, ocupação, % do dia) | gauge/anel **com o valor numérico ao lado ou no centro** + meta/fração em texto ("5/6 · 83%", "730 · Excellent") | anel sem número; anel com 3+ séries para comparar |
+| Comparar categorias (canais, equipes, projetos, clientes) | **barras** horizontais ordenadas, valor no fim da barra | pizza, donut, anéis concêntricos, treemap |
+| Tendência no tempo | **linha** ou área (período anterior tracejado neutro) / barras por período | gauge "deste mês", donut por mês |
+| Composição de um total (2–4 partes) | barra empilhada única + rótulos com % | donut com legenda distante |
+| Status / alerta | palavra + ícone + cor ("Atrasado ⚠", "On track ✓") | só ponto colorido |
+
+**Regras:**
+- **Cor nunca é o único sinal**: todo delta leva sinal (+/−) ou seta; todo status leva palavra ou ícone; séries têm
+  rótulo direto ou padrão (tracejado, hachura — como as barras hachuradas de `DftsSH-jnfs_1`).
+- No máximo **1 gauge/anel por card e 1–2 por tela**; o resto do painel em barras/linhas. Em painel **operacional**
+  (decisão imediata, uso diário) **sem gauge/anel**: barras/linhas; em painel de **cliente/vitrine** um anel-hero de meta é aceitável.
+- Anéis concêntricos de "mix" (Crop Mix, Energy Mix, "By project") (complemento): troque por barra empilhada ou
+  barras horizontais quando o usuário precisar comparar as partes; mantenha o anel só se a leitura for "total + 1 destaque".
+- Escala de cor sequencial (heatmap, matriz de risco) só com o **número dentro da célula** ou legenda de faixas.
+- Teste em escala de cinza (complemento): se o card perde o sentido, falta forma/texto.
+- Divergência registrada, não resolvida por gosto: quando o usuário pedir "dashboard gamificado", siga §7 **com** este
+  critério; quando pedir "painel de análise/gestão", comece por barras e linhas.
+

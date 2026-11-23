@@ -3,7 +3,8 @@
 Fontes: infográfico "Font Pairing" de @gfx.om (`DescJ2zTeSf`, imagem única, 19/10/2026, selo "AI content"; print
 `DescJ2zTeSf_1.jpg`), somado ao que a skill já tinha: trio de identidade (@thedzianis, `layers-and-trust-layout.md` §1)
 e display + Inter dos sistemas da Ramotion (`branding-identity.md` §5). **Escala tipográfica, line-height, tracking e
-medida de linha não ficam aqui**: estão na skill `ux-patterns` (`../ux-patterns/references/typography-and-touch.md`).
+medida de linha não ficam aqui**: estão na skill `ux-patterns` (`../../ux-patterns/references/typography-and-touch.md`;
+medida: token `--measure: 50ch`, 45–75 caracteres e 45–60 em formulários).
 
 ## 1. Regras (as 4 "Quick Tips" do post, mais o que se repete nas outras fontes)
 
@@ -59,3 +60,16 @@ Os dois cabem na regra se o mono ficar só em rótulos/metadados e a serif só e
    longo, número grande (tabular) e texto de botão.
 5. Em brand book, documente: nome da família, pesos usados, onde cada uma entra (como os rótulos mono da Ramotion:
    "FUNNEL DISPLAY – HEADLINES / INTER – BODY").
+
+## 5. Onde buscar fontes (Typewolf, rodada 9C; print `9C_typewolf_google-fonts_1.jpg`)
+
+- https://www.typewolf.com/google-fonts — "The 40 Best Free Fonts Available on Google Fonts" (atualizado 12/01/2026):
+  todas open source e livres para uso comercial, só famílias com **vários pesos** (evita display de peso único). Um
+  asterisco marca famílias boas para **texto corrido** (pesos regular/itálico/negrito, contraste baixo, aberturas
+  grandes, x-height alta).
+- A home "What's Trending in Type" mostra sites reais com as fontes (ex.: Neue Montreal, Suisse Int'l, DM Sans,
+  Switzer); várias são **pagas** (Neue Haas, Suisse, Canela): confira a licença antes de propor, inclusive para embutir
+  em app (Capacitor/Electron).
+- Os pares recomendados do Typewolf ("The Definitive Guide to Free Fonts") **não foram extraídos**; use os 12 pares da §2.
+- Complemento: confira suporte a acentos do português (ã, ç, õ) na página da fonte antes de fechar o par.
+

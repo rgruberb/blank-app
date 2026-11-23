@@ -99,6 +99,17 @@ Avaliados e **não copiados**: `DfcdrhgFFMR_2–_4` da rodada 7 (mesmos quadros 
 @noahelhadedy foram para `ui-motion` (`De_J0aOl9SJ_*`, `Dfo__tSjk9k_*`) e `design-direction` (`Df1eAHODjT9_*`); o
 `Dfr6X8qFPwC_1` (tablet nas mãos) para `design-direction`.
 
+## Prints das rodadas 9B e 9C (23/11/2026)
+
+| arquivo | autor | URL | o que mostra | quando abrir |
+|---|---|---|---|---|
+| `9B_dashboards_linha-e-barras_1.jpg` | NN/g (artigo) | https://www.nngroup.com/articles/dashboards-preattentive/ | "Weekly Statistics" em **linha** com pontos (seg–dom) + "Usage Overview" em **barras horizontais** a–d com trilho cinza | Defender barras/linhas contra gauge/donut (`layout-patterns.md` §11). Obs.: as barras usam 4 cores sem rótulo de texto, o que o próprio critério pede para evitar |
+| `ref_dribbble_dashboard-ui_1.jpg` | Dribbble (galeria da tag) | https://dribbble.com/tags/dashboard-ui (URL inferida pelo nome do print) | Grade de shots: "Overview Panel" claro (RonDesignLab) num monitor, painel escuro com grafo e 45% (George Railean), stats de atleta (Nixtio); banner de cookies cobre um canto | Mostrar tendência visual de dashboards; não usar como regra (`domain-examples.md` §30a) |
+
+Avaliados e **não copiados**: `ref_dribbble_dashboard-ui_2` (quase igual ao _1); os prints 9E de @shohan.designs,
+@code.xr, @_code_and_chill_, @ui.iliasmiah000 e @designmotionhq (miniaturas 441×244 do Instagram, UI ilegível; posts
+descritos em `domain-examples.md` §30b).
+
 ## Perfis avaliados
 
 Contas lidas nas rodadas 3A/3B/3C avaliadas como fonte para **dashboards e telas de app** (leitura de 18/11/2026).
@@ -137,3 +148,31 @@ Nota 1–5 = utilidade para esta skill.
 | @uiuxsharon | sim | freelancer; mockups | 2 | MediCore: hero com resumo do dia; erros de dado, hashtags aleatórias, imita marca da Amazon. §26 |
 | Code & Chill (Facebook) | sim (20K) | mesma pessoa de @_code_and_chill_ | 2 | Só cross-posts dos reels do Instagram; nada novo além de divergências de leitura. §27 |
 | @code_and_chill (sem underline) | **não: 0 posts** | — | 1 | Não é @_code_and_chill_. Nada |
+
+### Perfis reconferidos e novos (rodada 9E, leitura de 22–23/11/2026)
+
+Lista geral (foco, risco, Top 15, YouTube/Facebook/newsletters) em `design-direction` → `references/learning-sources.md`.
+Aqui só o que importa para **dashboards e telas de app**.
+
+| Handle | Ativo? | Tipo | Nota | O que aproveitar |
+|---|---|---|---|---|
+| @_code_and_chill_ | sim (84,2K, 143 posts; último 22/11/2026) | templates de dashboard em código | 4 | Planejador de estúdio `Df7dwtMPccu` (agenda), aba que "derrete" `DbfG6fuPE9y`. §30b |
+| @code.xr | sim (128K, 124 posts) | demos React | 3 | Admin Dashboard V20 `DgCXLXMTSW7`, Glassy Sidebar V10 `DgC6ruhT2NZ`; legendas de template, "comente Code". §30b |
+| @shohan.designs | sim, diário (26,5K, 1.536 posts) | fintech/SaaS | 3 | Finanças em tablet `DgDFfyBFIZN` (lima no escuro), carteira Unipay `Df978CFlMsF`. §30b |
+| @ui.iliasmiah000 | sim, várias vezes ao dia (9,3K) | casos SaaS com legenda de decisão | 4 | Metas/limites/alertas do supervisor `DgD79jFhsIf`; papéis e página bloqueada com saída `DgDuN_3h3AU`. Promove serviço. §30b |
+| @showcase_ui | sim, vários por dia (28,5K) | curadoria com crédito (destaque "Dashboard") | 2 | Volume de dashboards para tom visual; sem texto |
+| @designmotionhq | sim (65,4K) | regras numéricas UI/motion | 3 | Cards de métrica com toque "instantâneo" (`DgCqEFtBmnz`); regras no vídeo. Promove plugin |
+| @noahelhadedy | sim, diário (18,4K) | componentes de motion com código | 3 | Medidor de armazenamento em **barra** que anima só a mudança (`DgCpGgjjokC`) |
+| @uxbrainy | sim, diário (644K) | agência; carrosséis | 3 | "Your AI screens look junior" (`DgDSue_Ftd-`) como checklist anti-slop |
+| @memorisely | sim, diário (198K) | treinamento | 2 | "Cada cor é um sinal" (`Df7SmUBO5x5`); sidebar simples (`DfzRnlsuvfG`) |
+| @felvrabr | sim (5,9K, 53 posts) | agência BR | 3 | Reels indexados continuam valendo; posts recentes só comerciais |
+| @ramotion | sim, raro (último 18/11/2026) | agência | 2 | Case Isomer (IA), não aberto |
+| @ui.pixel | sim, fora do foco (último próprio 21/09/2026) | criador | 1 | 8 posts recentes sobre hackathon/IA; nada de UI |
+| @untitledui | sim, diário | kit Figma/React | 1 | Só referência visual de sistema |
+| @uidesignpatterns | sim, pouco frequente (último 02/09/2026) | curadoria | 1 | Nada de dashboard |
+| @gifux, @uxdesignmastery | **confirmados** inativos (0 posts; último 09/05/2024) | — | 1 | Não reavaliar |
+| @ui.designs, @uitrends, @humble_ux, @uxigers, @ux_ui_wireframes, @uigarage, @uiuxgifs, @iamjesseshow | não (parados 2020–2024, privados ou indisponíveis) | — | — | Não reavaliar; detalhes em `learning-sources.md` §1.3 |
+
+Dribbble (9C): autores verificados de dashboard de criador — Chandra Mudha Mahendra/VanguardCX (Kreya), Wolfpixel
+(Blenz), Amir Baqian/Ace Design (Invoice/Proposal), Erudite07. Nota 2: shots estáticos sem estados; §30a.
+

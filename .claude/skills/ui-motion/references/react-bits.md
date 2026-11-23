@@ -58,6 +58,8 @@ Lista completa por categoria: os nomes ficam nas pastas `src/content/<Categoria>
 1. **Cada componente cumpre uma função.** Escolha pelo que o motion comunica (feedback, origem, progresso, mudança de valor), não pelo efeito. Se o componente for só "bonito", corte.
 2. **Ajuste os valores aos desta skill.** Os defaults da biblioteca costumam ser mais longos e chamativos. Troque `duration`/`delay`/`stiffness`/`damping` pelos tokens da tabela do `SKILL.md`.
 3. **Use `prefers-reduced-motion` sempre.** Nem todo componente trata isso. Envolva o componente ou passe props estáticas quando `matchMedia('(prefers-reduced-motion: reduce)')` for verdadeiro.
+   - Componentes em `motion`: **envolva o app em `<MotionConfig reducedMotion="user">`**. O padrão do Motion é `"never"`, ou seja, sem isso o Reduce Motion do sistema é ignorado (rodada 9D; `css-recipes.md` §13). O Motion exige **React 18.2+** e tem defaults próprios (spring em `x`/`scale`, tween de **0,3 s** em `opacity`, `bounce` 0,25): sobrescreva com os tokens da skill.
+   - Componentes em `gsap`: use `gsap.matchMedia()` com `(prefers-reduced-motion: reduce)`. Licença do GSAP: gratuita, mas própria (**"Standard No Charge"**, não MIT; proíbe uso em ferramenta no-code concorrente do Webflow).
 4. **WebGL tem orçamento.** Os componentes Backgrounds, Glass e os 3D usam canvas WebGL. Regras:
    - no máximo 1 canvas por página;
    - pausar quando sair da tela;

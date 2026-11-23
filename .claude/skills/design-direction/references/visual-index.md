@@ -69,6 +69,27 @@ e `typography-pairing.md`.
 Avaliados e não copiados aqui: `De_J0aOl9SJ_*`, `Dfo__tSjk9k_*` e `DfKaOBqjUr4_3` (UI animada e GSAP: estão em
 `ui-motion`); `Dfr6X8qFPwC_2/_3` (UI plana do Zentra: `dashboard-ui`).
 
+## Prints da rodada 9C (benchmarking, 23/11/2026)
+
+Prints de tela inteira (960×428) de sites de benchmarking. Conteúdo em `color-palettes.md` (contraste),
+`typography-pairing.md` §5 e `claude-web-design-workflow.md` (onde achar referências). Os cases do Behance são
+**conceitos**, não apps em produção.
+
+| Arquivo | Autor/fonte | URL | O que mostra | Quando abrir |
+|---|---|---|---|---|
+| `9C_coolors_contrast-checker_1.jpg` | Coolors | https://coolors.co/contrast-checker/112a46-acc8e5 | Campos texto `#112A46` × fundo `#ACC8E5`, razão **8.42** "Very good", estrelas por tamanho de texto | Mostrar como validar contraste dos tokens |
+| `9C_typewolf_google-fonts_1.jpg` | Typewolf | https://www.typewolf.com/google-fonts | "The 40 Best Free Fonts Available on Google Fonts" (12/01/2026), nota do asterisco = boa para texto corrido | Escolher fonte open source com vários pesos |
+| `9C_perfil-criador_nomey_1.jpg` | Behance, "Multiple Owners" (Nomey) | https://www.behance.net/gallery/254485187/Nomey-Creator-Monetization-Platform | Capa: wordmark "nomey" gigante em sans arredondada sobre gradiente azul, celular com perfil | Hero de case/marca com 1 cor e tipo enorme |
+| `9C_perfil-criador_nomey_2.jpg` | idem | idem | Card de perfil escuro sobre gradiente: avatar com selo, nome, handle, "78 Reels", ícones sociais, **1 CTA branco** "Subscribe for $4.99/month" | Card de perfil com uma ação só |
+| `9C_perfil-criador_nomey_3.jpg` | idem | idem | Grade de vídeos 3 colunas com **tab bar flutuante de 4 ícones**; citação do founder ao lado | Grade de conteúdo + tab bar flutuante |
+| `9C_propostas_cook_1.jpg` | Behance, Suhani Barai (Cook) | https://www.behance.net/gallery/258614563/Cook-%28-CreatorBrand-Deals-App-%29 | Ilustração chapada colorida + celular com cards-ticket ("NEW CAMPAIGN ₹4-7K", "ENDS IN 2 DAYS"), CTA verde "continue with phone" | Identidade ilustrada aplicada a app; cards tipo ingresso |
+| `9C_propostas_cook_2.jpg` | idem | idem | Processo do case em 5 cards numerados (pesquisa → define → estrutura → design); display condensada "BRAND DEALS, SORTED." | Como apresentar processo num case; display condensada em app |
+
+Avaliados e **não copiados**: os 28 prints da rodada 9E (miniaturas 441×244 do Instagram, ilegíveis; os posts estão
+descritos em `learning-sources.md` e abaixo em "Perfis avaliados"); `9C_landing_land-book_1`,
+`9C_portfolio_siteinspire_1`, `9C_portfolio_awwwards-daniel-neath_1` (só páginas de galeria/listagem); os prints 9F
+(cabeçalhos de canal/grupo, sem conteúdo de design).
+
 ## Perfis avaliados
 
 Avaliação das contas lidas nas rodadas 3A/3B/3C como fonte para **direção de arte, cor e branding** (leitura de
@@ -109,3 +130,32 @@ Avaliação das contas lidas nas rodadas 3A/3B/3C como fonte para **direção de
 | @shohan.designs | sim (1.532 posts, 26,4K) | conceitos de UI do Orbix Studio | 3 | Para esta skill: o molde de apresentação (device → plano → recorte 3D desfocado). Posts "5 fonts" só listados, não lidos. Dashboards: `dashboard-ui` |
 | @designmotionhq | sim | regras numéricas de tipografia | 4 | Conteúdo (escala, line-height, tracking, 50ch) ficou na skill `ux-patterns`; não duplicado aqui |
 | @aiwithknox | indisponível (link `DfkSCaRNfa0` redireciona para perfil fora do ar) | — | — | Nada |
+
+### Perfis novos e reconferidos (rodada 9E, leitura de 22–23/11/2026)
+
+Lista completa com foco/risco e fontes fora do Instagram em `learning-sources.md`. Aqui só o que importa para
+**direção de arte, cor, tipografia e marca**.
+
+| Handle | Ativo? | Tipo | Nota | O que aproveitar |
+|---|---|---|---|---|
+| @lay.the.designer | sim (51,4K, 546 posts; último 19/11/2026) | galeria pessoal de concepts (designer da @humbleteam.agency) | 4 | Identidade forte num fluxo de app: Slice Club (`DfjoEHGgLcg`) com lettering à mão, vermelho-tomate e "monte sua pizza"; animação feita com IA/After Effects |
+| @memorisely | sim, diário (198K) | treinamento (bootcamps) | 4 | "Cada cor da UI é um sinal": sete cores competem, menos cores = leitura mais rápida (`Df7SmUBO5x5`) — reforça o 2+1; navegação invisível (`DfzRnlsuvfG`). Simplificado de propósito |
+| @uxbrainy | sim, diário (644K) | agência; carrosséis didáticos | 4 | "Your AI screens look junior" (`DgDSue_Ftd-`): gradiente roxo, emoji como ícone, três cards iguais, números falsos grandes → trocar por **uma cor sólida no botão principal**. Lead-gen por comentário |
+| @zanderwhitehurst | sim (750K; último 19/11/2026) | tutoriais Figma (fundador @memorisely) | 3 | Sistema de raio ("Stop guessing your corner radius", `DRuEeIPCH7M`), espaçamento de formulário (`DfFFnkBOllG`), Liquid Glass em Figma. Números só no vídeo ou por DM |
+| @ux.robin | sim (58,7K) | ferramentas de design com IA | 3 | Biblioteca de 12 controles "anime" (squash/overshoot, `Df4JJADCPVa`); "7 Claude Code Design Skills" (`DgCbnhtiCzI`, links por comentário). Exagero visual: filtrar |
+| @showcase_ui | sim, vários por dia (28,5K) | curadoria com crédito | 2 | Layout editorial de restaurante (`DgBw1OjO9zO`, crédito @gil.huybrecht) e landing de serviço pessoal (`DgBR6h4olO7`, @uixshuvo). Só visual |
+| @uidesignpatterns | **reconferido:** sim, pouco frequente (último 02/09/2026) | curadoria sem texto | 2 | Portfólio pessoal em colagem animada (`DcyWWw-hCTz`); o post de 13/07 ("sick") não ensina nada |
+| @theglidestudio | reconferido: sim, diário (3,7K) | estúdio de motion | 3 | Agora posta "Wrong/Right" de motion de UI (card vira página, pull-to-refresh) → `ui-motion` |
+| @ramotion | reconferido: sim, raro (último 18/11/2026) | agência | 3 | Case Isomer (IA) e redesign Firefox (`DYFPTrIMe90`); segue útil para sistemas de marca |
+| @dailywebdesign | reconferido: sim, diário (580K) | curadoria | 2 | Mockups limpos de iPhone em vez de screenshot (`DUn6E65jtBT`) |
+| @felvrabr | sim (5,9K; PT/EN) | agência BR | 2 | Nos 8 posts recentes só chamada comercial; nada didático |
+| @humbleteam.agency, @arounda.agency, @filllodesign | sim | agências | 1 | Showcase promocional; sem legenda didática |
+| @untitledui | sim, diário | kit Figma/React | 1 | Legendas "Day N — Made with untitledui.com"; só referência visual de sistema |
+| @kenny.kenray, @afternow.co | sim | branding/marketing | 1 | Descartados para UI de produto (rebrands) |
+| @ui.designs | não: último post 03/01/2020 | — | — | Não reavaliar |
+| @uitrends | não: último post 01/12/2023 | — | — | Não reavaliar |
+| @humble_ux, @uxigers | não: parados desde 05/2024 e 01/2021 | — | — | Não reavaliar |
+| @ux_ui_wireframes | não: privado, 0 posts | — | — | Não reavaliar |
+| @uigarage, @uiuxgifs, @iamjesseshow | não: página indisponível | — | — | Não reavaliar |
+| @uxbucket | limítrofe: último 21/05/2026 (209K) | — | — | Reconferir antes de usar |
+| @gifux, @uxdesignmastery | **confirmados** inativos na 9E | — | 1 | Ver tabela acima |

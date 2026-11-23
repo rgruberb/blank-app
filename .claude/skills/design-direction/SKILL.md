@@ -1,11 +1,11 @@
 ---
 name: design-direction
-description: Direção de arte e identidade visual para sites, landing pages, apps e marcas — paleta 2 cores base + 1 acento (catálogo com hex, 60/30/10, rampas de tons), camadas identidade → profundidade (luz, vidro, sombra tingida) → movimento, layout que transmite confiança, par tipográfico (12 pares), branding (logo, embalagem × preço, brand book) e workflow com o Claude e o Claude Design mostrando referências e componentes reais em vez de adjetivos. Use quando pedirem "escolhe uma paleta", "que cores usar", "60/30/10", "font pairing", "par de fontes", "sombra", "cara premium", "site genérico/sem personalidade", "parece pouco confiável", "como pedir pro Claude fazer um site bonito", "Claude Design", "branding", "identidade visual", "criar logo", "brand book", "embalagem", "parece barato", "biblioteca de componentes para IA" ou antes de começar a UI de uma landing page nova.
+description: Direção de arte e identidade visual para sites, landing pages, apps e marcas — paleta 2 cores base + 1 acento (catálogo com hex, 60/30/10, rampas de tons), camadas identidade → profundidade (luz, vidro, sombra tingida) → movimento, layout que transmite confiança, par tipográfico (12 pares), branding (logo, embalagem × preço, brand book) e workflow com o Claude e o Claude Design mostrando referências e componentes reais em vez de adjetivos. Use quando pedirem "escolhe uma paleta", "que cores usar", "60/30/10", "font pairing", "par de fontes", "sombra", "cara premium", "site genérico/sem personalidade", "parece pouco confiável", "como pedir pro Claude fazer um site bonito", "Claude Design", "branding", "identidade visual", "criar logo", "brand book", "embalagem", "parece barato", "biblioteca de componentes para IA", "onde aprender design", "quem seguir no Instagram/YouTube", "Behance/Dribbble/Mobbin", "checar contraste" ou antes de começar a UI de uma landing page nova.
 ---
 
 # Design Direction
 
-Destilado de 11 reels sobre direção de arte web (paletas 2+1, camadas, layout de confiança, workflow com Claude) da rodada 3 de perfis (branding, logo, embalagem, sistemas de marca da Ramotion, antes/depois de paleta) e das rodadas 1 e 5 (rampas de paleta, 60/30/10 e sombra da @gg.designhub, font pairing, bibliotecas de componentes/skills/ícones para IA, apresentação em mockup). Use para **decidir** a direção antes de codar e para **corrigir** UIs genéricas.
+Destilado de 11 reels sobre direção de arte web (paletas 2+1, camadas, layout de confiança, workflow com Claude) da rodada 3 de perfis (branding, logo, embalagem, sistemas de marca da Ramotion, antes/depois de paleta), das rodadas 1 e 5 (rampas de paleta, 60/30/10 e sombra da @gg.designhub, font pairing, bibliotecas de componentes/skills/ícones para IA, apresentação em mockup) e das rodadas 9C/9E/9F (benchmarking e fontes contínuas de aprendizado). Use para **decidir** a direção antes de codar e para **corrigir** UIs genéricas.
 
 ## Gatilhos adicionais
 Também use para: "cara de startup", "melhora a direção de arte", "adiciona animação/movimento no site" (direção; valores
@@ -37,7 +37,7 @@ lançamento no Claude Design", "limite do Claude Design acabou", "o logo está r
 10. **Logo**: 1 ideia, funciona pequeno (ícone de app) e em preto e branco chapado, sem depender de degradê/tendência. O movimento faz parte do logo: traço lento = calmo, encaixe rápido = ágil, crescer de um ponto = amigável.
 11. **Visual comunica preço**: budget = cores altas + ofertas; mid = azul/bege + selo de valor; premium = preto + dourado, serifa discreta, muito espaço. Defina preço/posicionamento antes; design desalinhado do valor perde vendas.
 12. **Movimento: um efeito por vez**, sutil e legível, testado em desktop e mobile. Tipos: headline reveal, micro-interactions, portfolio showcase, animated gallery, scroll reveal. Em página: **um momento animado** (hero ou CTA, não os dois). Valores: `ui-motion`.
-13. **60/30/10 por área**: base dominante ~60%, superfícies ~30%, acento ≤10% (CTA, estado interativo, dado-chave). É o 2+1 com número; 10% é teto, não meta. "Se parece poluído, o acento está cobrindo 30% da tela." (`color-palettes.md`)
+13. **60/30/10 por área**: base dominante ~60%, superfícies ~30%, acento ≤10% (CTA, estado interativo, dado-chave). É o 2+1 com número; 10% é teto, não meta. Se o produto deixar o cliente/tenant usar a cor da marca, troque **só o acento** e valide contraste ≥ 4,5:1 nos dois temas antes de salvar. "Se parece poluído, o acento está cobrindo 30% da tela." (`color-palettes.md`)
 14. **Paleta de produto = rampa de tons + 1 acento**: 5–6 tons de uma base (fundo → superfície → borda → texto 2 → texto 1) e o acento de matiz oposto no fim. **Confira todo hex de post no conta-gotas** (@uiuxaadi tem rótulo errado).
 15. **Sombra tingida, nunca preta chapada**: matiz do fundo escurecido, opacidade ~8%, **blur = 2× o Y** (Y 8 · blur 16). Em tema escuro, profundidade vem de luz/glow atrás de vidro. (`layers-and-trust-layout.md` §4)
 16. **Par tipográfico: 2–3 famílias, contraste display × corpo, hierarquia por peso, o mesmo par em tudo.** O trio sans + serif itálico + mono já cabe nesse limite. 12 pares prontos em `references/typography-pairing.md`; escala/line-height/8 pt em `ux-patterns`.
@@ -53,7 +53,7 @@ lançamento no Claude Design", "limite do Claude Design acabou", "o logo está r
 6. **Camada 2 – profundidade** (luz/glow, frosted glass, sombras). Valide.
 7. **Camada 3 – movimento**, um efeito por vez (implementação: `ui-motion`, `ext-gsap-scrolltrigger`, `ext-gsap-*`). Respeite `prefers-reduced-motion`.
 8. **Se o pedido for marca/identidade**: siga o workflow de `references/branding-identity.md` §8 (pesquisa e faixa de preço → paleta → par tipográfico → logo testado pequeno e em P&B → 5 pontos de contato).
-9. **Crítica final** com `ext-impeccable` (design system/critique) e `ext-taste-skill` (anti-slop); cheque contraste do acento (AA 4.5:1).
+9. **Crítica final** com `ext-impeccable` (design system/critique) e `ext-taste-skill` (anti-slop); cheque contraste do acento (AA 4.5:1; texto grande e bordas 3:1) no Coolors contrast checker (`color-palettes.md`, fim).
 
 ## Referências — quando abrir
 
@@ -65,6 +65,7 @@ lançamento no Claude Design", "limite do Claude Design acabou", "o logo está r
 | `references/claude-web-design-workflow.md` | For escrever prompts de web design, orientar o usuário a dar referências, planejar o processo com o Claude, escolher **bibliotecas de componentes/skills/ícones para IA** (teste dos 4 estados) ou **apresentar o design em mockup** (device → plano → recorte 3D). |
 | `references/claude-design-course.md` | For usar o **Claude Design** (app da Anthropic): criar design system/brand, pitch deck, wireframe vs. high-fidelity de landing, protótipo de app mobile, vídeo de lançamento com HyperFrames, levar para Claude Code → GitHub → Vercel, ou economizar o limite de sessão do Design. |
 | `references/typography-pairing.md` | For escolher **par de fontes**: 12 pares display + corpo com tom de uso, 4 regras (2–3 famílias, contraste, pesos, consistência) e como o trio sans/serif/mono e o display + Inter da Ramotion se encaixam. |
+| `references/learning-sources.md` | Perguntarem **onde continuar aprendendo** ou **quem seguir**: Top 15 do Instagram (foco/risco), inativos para não reavaliar, 15 canais de YouTube, 10 do Facebook (página × grupo, como usar), 10 newsletters/comunidades, galerias de benchmarking (Mobbin, Dribbble, Behance, Awwwards, Land-book, SiteInspire, Coolors, Typewolf) e lacunas (PT-BR, motion de UI). |
 | `references/visual-index.md` | Precisar saber qual imagem mostra qual exemplo antes de abrir uma; ou consultar a tabela **"Perfis avaliados"** (quais contas valem como fonte, inclusive as inativas). |
 
 ## Imagens (`assets/visual-refs/*.jpg`)
@@ -81,6 +82,9 @@ Folhas de contato 4x3 dos reels (`<ID>.jpg`) e prints únicos das rodadas 1 e 3 
 - `DescJ2zTeSf_1.jpg` — os 12 pares de fontes renderizados (@gfx.om).
 - `DfEmKLLFEDi_1.jpg` / `DfUnwyQGCTA_1.jpg` — rampa de 6 tons; o segundo mostra o hex errado.
 - `DfkBGDyDgqS_1.jpg` — mosaico de bibliotecas de componentes dark para IA.
+
+- `9C_coolors_contrast-checker_1.jpg` (razão de contraste 8.42) e `9C_typewolf_google-fonts_1.jpg` (40 Google Fonts).
+- `9C_perfil-criador_nomey_1–_3.jpg` / `9C_propostas_cook_1–_2.jpg` — cases Behance (perfil com 1 CTA, tab bar flutuante, identidade ilustrada); conceitos, não apps reais.
 
 `De9oszIIQ4V.jpg` e `Dfm0NTiIfyd.jpg` são fora do tema (hype de ferramentas de IA); não abra.
 
