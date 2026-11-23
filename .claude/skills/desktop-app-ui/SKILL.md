@@ -91,7 +91,7 @@ indicado na tabela "Onde está o resto".
 - **NN/g, Data Tables (9B):** tabela vence cards para **comparar e escalar**; desenhe para as **4 tarefas**: achar
   registro, comparar, ver/editar linha, agir. **1ª coluna = identificador legível**; cabeçalho **e** 1ª coluna fixos;
   ocultar/reordenar colunas com estado visível; editar em **painel lateral não modal** (modal cobre as linhas
-  vizinhas que a pessoa quer consultar — print `9B_tabelas_painel-lateral-crm_1.jpg`); ações em lote com "selecionar
+  vizinhas que a pessoa quer consultar — print `../ux-patterns/assets/visual-refs/9B_tabelas_painel-lateral-crm_1.jpg`); ações em lote com "selecionar
   todos" + barra contextual.
 
 **5. Hover, foco e estados**
@@ -159,7 +159,7 @@ indicado na tabela "Onde está o resto".
 **13. Dashboards e abas (NN/g, 9B)**
 - Defina se o painel é **operacional** (decisão imediata, uma tela) ou **analítico** (exploração).
 - Valor por **comprimento (barras)** e **posição 2D (linhas, dispersão)**; **evite gauge, pizza, donut, treemap e 3D**
-  em leitura rápida (print `9B_dashboards_linha-e-barras_1.jpg`). Cor para **categoria**, não magnitude; nunca o único
+  em leitura rápida (print `../ux-patterns/assets/visual-refs/9B_dashboards_linha-e-barras_1.jpg`). Cor para **categoria**, não magnitude; nunca o único
   sinal (~8% dos homens têm daltonismo). Gráficos com a skill `dataviz`; padrões em `dashboard-ui`.
 - Abas: separe **abas de navegação** de **abas internas** e não misture; 1 nível; rótulos de 1–2 palavras, sem caixa-alta;
   **≥ 2 indicadores** de seleção (linha + negrito/fundo); não selecionadas legíveis; mais usada primeiro; teclado e ARIA.

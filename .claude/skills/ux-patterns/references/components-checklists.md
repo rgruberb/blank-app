@@ -113,7 +113,7 @@ App de trading "Markets" (lista de ativos + detalhe com candles). A tese da lege
 - [ ] Se houver deck: "Skip" visível, poucos cards, 1 conceito por card; tema/cores fora do onboarding.
 
 **Navegação**
-- [ ] Tab bar mobile com **4–5 destinos**, ícone + rótulo, sempre visível; sem "More".
+- [ ] Tab bar mobile com **3–5 destinos** (NN/g: teto 4–5; vale `mobile-app-ui` §3), ícone + rótulo, sempre visível; sem "More".
 - [ ] Tabs internas: rótulo de 1–2 palavras, **≥ 2 indicadores de seleção**, um nível; no mobile, acordeão para conteúdo longo.
 
 **Empty state**

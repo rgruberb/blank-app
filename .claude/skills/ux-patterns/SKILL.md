@@ -46,7 +46,7 @@ Regras de UX que dá para testar numa tela real, tiradas de 14 reels (@motion_ui
 
 **Pesquisa NN/g** (`references/nng-research.md`; checklist em `components-checklists.md` §12)
 - Onboarding: evite o instrucional; prefira dica em contexto e empty state que ensina. Só quando o app precisa de dados para começar.
-- Tab bar mobile com **4–5** destinos e rótulo; tabs internas com 1–2 palavras e ≥ 2 indicadores de seleção.
+- Tab bar mobile com **3–5** destinos e rótulo (NN/g: teto de 4–5; regra de plataforma em `mobile-app-ui` §3); tabs internas com 1–2 palavras e ≥ 2 indicadores de seleção.
 - Alvo físico **~1 cm** (ação primária ~2 cm). Empty state: estado do sistema + ensina + botão.
 - Formulário: coluna única, rótulo fora do placeholder, validação inline **depois de concluir o campo**, erro ao lado com cor + ícone.
 - Dashboard: barras/linhas > pizza/donut/gauge; cor nunca é o único sinal (**diverge de `dashboard-ui`**, critério em §6).

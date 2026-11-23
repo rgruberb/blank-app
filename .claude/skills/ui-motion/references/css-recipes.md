@@ -176,7 +176,8 @@ function toast(type, msg) {
 ## 10. Drag para reordenar (lift 105%, outros 200 ms)
 ```css
 .row { transition: transform var(--dur-reorder) var(--ease-out); }
-.row.dragging { transform: scale(var(--lift-scale)); box-shadow: 0 12px 32px rgb(0 0 0 / .25); transition: none; z-index: 1; }
+.row.dragging { transform: scale(var(--lift-scale)); box-shadow: 0 16px 32px hsl(var(--shadow-hue, 222 60% 18%) / .10); transition: none; z-index: 1; }
+/* sombra tingida (matiz do fundo, blur = 2× Y), não preta: design-direction → layers-and-trust-layout.md §4 */
 ```
 
 ## 11. Interrupção

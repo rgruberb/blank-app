@@ -22,7 +22,7 @@ Imagens: escolha em `visual-index.md` antes de abrir qualquer uma.
 - **Permissões** (NN/g `permission-requests`): só as essenciais na 1ª abertura; o resto **no contexto** (ao tocar em
   câmera, agenda, contatos). Tela de pré-aviso com "[recurso] para que você possa [benefício]" (motivo: **+12%** de
   aceite; melhor texto vs pior: **+81%**); "Agora não" respeitado (nagging em `dark-patterns.md` §A). Negou: estado
-  explicado + "Abrir Ajustes" (print `9B_permissoes_venmo-camera-negada_1.jpg`). [nativo] Android pede tela antes do
+  explicado + "Abrir Ajustes" (print `../../ux-patterns/assets/visual-refs/9B_permissoes_venmo-camera-negada_1.jpg`). [nativo] Android pede tela antes do
   diálogo, iOS usa purpose string; [PWA] diálogo é do navegador, sem link para Ajustes — escreva o caminho.
 - **Confiança em degraus** (NN/g `commitment-levels`): mostre valor antes de pedir login, dado pessoal, cartão ou
   conta conectada; convite de cliente abre conteúdo antes do cadastro quando possível.
@@ -39,7 +39,7 @@ Imagens: escolha em `visual-index.md` antes de abrir qualquer uma.
   (`DfZkZZ4hkuV`). Erro com shake curto + texto, não só cor (complemento; `ext-transitions-dev` "error state shake").
 - Botão "Sign in" ≥ 48px, loading **mantém a largura** e ignora o 2º toque (`DfemaTCBncA`).
 - NN/g (9B, `checklist-registration-login`): login opcional quando possível; pedir só o mínimo; **mostrar senha**;
-  regras de senha **antes** de digitar + medidor de força (`9B_formularios_slack-forca-senha_1.jpg`); **sem campo de
+  regras de senha **antes** de digitar + medidor de força (`../../ux-patterns/assets/visual-refs/9B_formularios_slack-forca-senha_1.jpg`); **sem campo de
   confirmação**; código por SMS/OTP em vez de link por e-mail; biometria; "Esqueci a senha". Senha no celular ≈ 2× o
   tempo do desktop. Passkeys: não cobertas nas páginas lidas.
 - Login de vidro e transição login ↔ cadastro: `dashboard-ui/references/glassmorphism.md` (`DeoGCPlzKOs`; é web, adapte).
@@ -61,7 +61,7 @@ Imagens: escolha em `visual-index.md` antes de abrir qualquer uma.
 
 ## 4. Tab bar
 - **3–5 destinos** (seções, não ações — Apple HIG 9A: ações vão na toolbar); NN/g: **4–5** é o teto com alvo adequado;
-  ícone + **rótulo** de 1 palavra ("glance, don't guess", `DfreUkyBNQg`; `9B_touch-targets_target-app_1.jpg`).
+  ícone + **rótulo** de 1 palavra ("glance, don't guess", `DfreUkyBNQg`; `../../ux-patterns/assets/visual-refs/9B_touch-targets_target-app_1.jpg`).
 - Apple HIG (9A): sempre visível ao trocar de seção (some só sob modal); **sem aba "More"**; **não desabilitar nem
   esconder abas** — seção vazia explica; ícone preenchido; badge só para informação crítica. iPhone: flutua sobre o
   conteúdo e pode minimizar ao rolar (Liquid Glass [nativo]; [PWA] vidro só sobre conteúdo). iPad: vai para o topo/sidebar.
@@ -93,7 +93,7 @@ Imagens: escolha em `visual-index.md` antes de abrir qualquer uma.
 - Apple HIG Sheets (9A): detents **medium (~½)** e **large**; **grabber** em sheet redimensionável (também dá acesso ao
   VoiceOver); **uma sheet por vez**; Cancel (início) + Done (fim), ou Back em etapas, **nunca os três**; swipe para
   baixo fecha e, com alteração não salva, confirma por action sheet; fluxo longo → tela cheia. Print
-  `9A_apple-sheet-detents_1.jpg`. Conteúdo rolável dentro sem brigar com o gesto de fechar (complemento).
+  `9A_apple-sheet-detents_1.jpg` (não versionado: `benchmark-sources.md`). Conteúdo rolável dentro sem brigar com o gesto de fechar (complemento).
 - Material (9A): bottom sheet/diálogo cheio em compact ↔ **menu** em medium+ (troca equivalente ao alargar).
 - [PWA] Drawer do shadcn (Base UI) com `snapPoints` e `showSwipeHandle`, ou Ionic sheet modal — `component-libraries.md`.
 - Modal só para tarefa autocontida ou confirmação destrutiva; menu/popover **nasce do botão** que o abriu (`DfwhC1riuuO`).
@@ -115,7 +115,7 @@ Imagens: escolha em `visual-index.md` antes de abrir qualquer uma.
   campo, cor + ícone, animação só no ícone; ajuda extra após **3 erros** repetidos; nunca só resumo no topo nem tooltip.
   Mobile: cuidado com o teclado cobrindo a mensagem.
 - **Botão de enviar abaixo dos campos**, não no topo (regra iOS que falha em teste, NN/g `4-ios-rules-break`); se
-  precisa estar sempre à mão, **fixo no rodapé** (`9B_formularios_hoteltonight-botao-fixo_1.jpg`).
+  precisa estar sempre à mão, **fixo no rodapé** (`9B_formularios_hoteltonight-botao-fixo_1.jpg`, não versionado: `benchmark-sources.md`).
 - Fuso horário (agenda): detectar e permitir trocar; busca por **cidade** (44% buscam assim) e por nome do fuso,
   ordem alfabética por cidade com país + offset — só 34% sabem o offset UTC (NN/g `time-zone-selectors`).
 - Slider: thumb cresce **140%** ao agarrar, bolha de valor segue (`DfWjKQPhUbn`); arraste que muda valor mostra o

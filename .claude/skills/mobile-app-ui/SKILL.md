@@ -35,7 +35,7 @@ e NN/g lidas nas páginas oficiais (pesquisa 9A/9B, nov/2026) vêm com a fonte c
 
 ## Regras específicas do celular (com números)
 
-**1. Alvos de toque.** Mínimo **44 × 44 pt** iOS e **48 × 48 dp** Android; web mobile piso 24px, meta 44. Cresça
+**1. Alvos de toque.** Mínimo **44 × 44 pt** iOS e **48 × 48 dp** Android; app web/PWA no celular segue o piso **44px** desta skill (o piso 24px/meta 44 é de site, `website-ui`). Cresça
 por padding (**20 + 12 + 12 = 44**), nunca o ícone; **~8px** entre áreas de alvos pequenos (centros a 52px, não 32px).
 Botão primário **48px** de altura, 24px de padding, label 17px semibold (`ux-patterns` → `typography-and-touch.md` §1,
 `components-checklists.md` §1–2). Fontes oficiais (rodada 9A/9B): Apple **44×44pt padrão, 28×28pt mínimo absoluto**
@@ -132,8 +132,8 @@ virtualizadas, sem re-render desnecessário, **teste em celular médio e rede le
 15, 23, 26, 31). Orçamento de 16,7ms por frame; gestos na thread de UI (Reanimated/worklets, Flutter) (complemento).
 
 **14. Dark mode.** Sem `#000` (ex.: `#0C1424`), texto a **87%**, accent clareado (2,9:1 → 8,6:1), elevação por
-luminosidade, glow com parcimônia (`typography-and-touch.md` §4). Siga o tema do sistema por padrão e ofereça troca
-manual (complemento). Vidro **só** sobre conteúdo: blur 30px atrás da tab bar (`micro-interactions.md` §8);
+luminosidade, glow com parcimônia (`typography-and-touch.md` §4). Siga o tema do sistema por padrão. Seletor de tema próprio: a Apple HIG pede para **evitar** no app ("Avoid offering an
+app-specific appearance setting", developer.apple.com/design/human-interface-guidelines/dark-mode); ofereça só com motivo de produto. Vidro **só** sobre conteúdo: blur 30px atrás da tab bar (`micro-interactions.md` §8);
 "Reduce transparency" nas settings (`dashboard-ui` → `domain-examples.md` §2).
 
 **15. Acessibilidade e motion reduzido.** Contraste 4,5:1 texto/placeholder, 3:1 ícones/bordas; variação sempre com

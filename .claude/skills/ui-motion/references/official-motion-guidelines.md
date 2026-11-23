@@ -133,7 +133,7 @@ Outros sistemas lidos na 9D: Fluent 2 (princípios e modo "sem motion", sem núm
 | reduced motion: fade ≤ 150 ms ou corte | — | fast effects 150 | fast-02 fade 110 | desliga (instantâneo) | **Bate** |
 | Saída | (skill sem token próprio) | accelerate `(0.3, 0, 1, 1)` | exit `(0.2, 0, 1, 0.9)` | ease-in practical `(0.6, 0, 0.8, 0.6)` | **(complemento)**: saídas mais curtas que entradas e com ease-in |
 
-Resumo: onde a skill tem número, ele cai **dentro** das faixas oficiais, exceto o press (mais longo que Carbon/Atlassian, por causa do spring) e o reveal/cena (motion de site/vídeo, fora do escopo dos sistemas de produto). Onde a skill não tem número (saída, hover, fade simples), use Carbon ou Atlassian.
+Resumo: onde a skill tem número, ele cai **dentro** das faixas oficiais, exceto o press (mais longo que Carbon/Atlassian, por causa do spring) e o reveal/cena (motion de site/vídeo, fora do escopo dos sistemas de produto). Onde a skill não tem número (saída, hover, fade simples), use o token de `transitions-dev` (micro 80 ms, quick 150 ms, fast 250 ms), como manda a tabela "Prioridade entre skills" do `SKILL.md`; Carbon e Atlassian servem de checagem.
 
 ## 8. Checklist (complemento)
 - [ ] App React com Motion: `<MotionConfig reducedMotion="user">` na raiz.
