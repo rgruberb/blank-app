@@ -36,7 +36,11 @@ Os números vêm dessas skills (reels e carrosséis listados nos `visual-index.m
 **1. Alvos de toque.** Mínimo **44 × 44 pt** iOS e **48 × 48 dp** Android; web mobile piso 24px, meta 44. Cresça
 por padding (**20 + 12 + 12 = 44**), nunca o ícone; **~8px** entre áreas de alvos pequenos (centros a 52px, não 32px).
 Botão primário **48px** de altura, 24px de padding, label 17px semibold (`ux-patterns` → `typography-and-touch.md` §1,
-`components-checklists.md` §1–2).
+`components-checklists.md` §1–2). Fontes oficiais (rodada 9A/9B): Apple **44×44pt padrão, 28×28pt mínimo absoluto**
+(só para controle secundário denso), ~12pt de folga em controle com borda/fundo e ~24pt sem; Material **48×48dp + ≥ 8dp**
+entre alvos (ícone 24dp com padding até 48); NN/g mede em **tamanho físico: ≥ 1 × 1 cm**, ~2 × 2 cm para ação primária
+ou uso em movimento, e alerta da "view–tap asymmetry" (pontinhos de carrossel legíveis mas impossíveis de tocar).
+[PWA] use **44px CSS de piso e 48px de padrão** (1dp ≈ 1px CSS é inferência). Mapa com pinos pequenos → ofereça lista.
 
 **2. Zona do polegar.** Ação principal grande e perto (Fitts: 0,66 s → 0,28 s). Ações de decisão e CTA de compra
 **fixos no rodapé** (Buy/Sell, "Schedule a collection", "Pay now"). Topo da tela = leitura e navegação secundária
@@ -46,13 +50,24 @@ Botão primário **48px** de altura, 24px de padding, label 17px semibold (`ux-p
 (complemento HIG). Ícone + rótulo; **um accent** só na aba ativa (pílula flutuante: WayLoo, Markets). Botão central
 circular para ação principal só funciona por ser **visualmente distinto** (Von Restorff), não pela posição —
 divergência com Serial position registrada em `components-checklists.md` §10. Indicador **viaja**, não pisca
-(`ui-motion` → `micro-interactions.md` §11 Meniscus, §13 pílula).
+(`ui-motion` → `micro-interactions.md` §11 Meniscus, §13 pílula). Oficial (9A/9B): NN/g — tab bar persistente e
+rotulada aguenta **4–5** destinos, acima disso o alvo encolhe; hambúrguer esconde a navegação ("longe da vista") e
+menu por swipe de borda sem sinal quase ninguém descobre (e briga com o voltar do iOS). Apple — tab bar é navegação,
+**ações vão na toolbar**; sempre visível (exceto sob modal); **evite aba "More"**; **nunca desabilite nem esconda
+aba** (seção vazia explica o porquê); rótulo de 1 palavra; badge só para o crítico; ≤ 5 se for personalizável.
+Material — largura **compact < 600dp → navigation bar inferior**; medium 600–839 → bar ou **navigation rail**;
+expanded ≥ 840 → rail (expandida). Troque só componentes equivalentes (bar ↔ rail; bottom sheet ↔ menu).
 
 **4. Navegação: stack, modal, sheet.** Hierarquia em **stack** com back (o edge-swipe de voltar do iOS nunca é
 bloqueado; Android respeita o back do sistema — complemento). Tarefa autocontida em **modal/sheet**. Bottom sheet
 **segue o dedo e faz snap** (146px com overshoot de 7px), página atrás escurece (`components-checklists.md` §8;
 backdrop 17,4:1 → 2,5:1, `ux-laws.md` Figure-ground). Card → detalhe: **o card vira a página e volta para onde estava**
 (`page-transitions-and-timing.md`). Side menu: página encolhe para **86%** e desliza **150px** ("push, don't cover").
+**Sheet (Apple HIG, 9A):** tarefa curta e contextual; **uma sheet por vez**; detents **medium (~½ da altura)** e
+**large (altura total)**; **grabber** visível em sheet redimensionável; swipe para baixo fecha e, com alteração não
+salva, confirma antes; botões Cancel (início) + Done (fim) ou Back em fluxo de etapas — **nunca os três juntos**;
+fluxo longo vai para tela cheia. [nativo] `presentationDetents`/`UISheetPresentationController`; [PWA] snap points
+(Drawer do shadcn/Base UI ou Motion `drag="y"` — ver `references/component-libraries.md`).
 
 **5. Safe areas.** Nada interativo sob notch, Dynamic Island, home indicator ou cantos arredondados; rodapé fixo soma
 `env(safe-area-inset-bottom)` / `WindowInsets` / `SafeAreaView` (complemento). Status bar não cobre conteúdo — bug real
@@ -63,6 +78,11 @@ pequena; line-height 1,5 no corpo → 1,1 no display; tracking −0,02em em tít
 Se seguir a escala nativa iOS (corpo **17pt**), mantenha a nativa e não misture. **Dynamic Type / font scale do
 Android:** use estilos de texto do sistema, teste em 200% e deixe linhas quebrarem (complemento HIG/Material; piso 11pt).
 Large title **34 → 18px ligado ao scroll** (`micro-interactions.md` §4). Número-herói enorme (20 → 76px no app de clima, §5).
+Oficial (9A): Apple iOS corpo **17pt padrão / 11pt mínimo**; texto ampliável a **≥ 200%**; **evite pesos Ultralight,
+Thin e Light** (prefira Regular/Medium/Semibold/Bold; fonte fina pede tamanho maior); não trunque em área rolável,
+empilhe o layout em tamanhos grandes; poucas famílias. Material: escala **Major Second 1,125, base 14**, 15 estilos
+baseline + 15 emphasized, `rem` na web — divergência com a 1,2 acima: em app Android puro siga a do Material; não
+misture escalas. [PWA] `font: -apple-system-body`/`system-ui` ou fonte própria em `rem`, nunca `px` fixo no corpo.
 
 **7. Gestos e haptics.** Todo gesto tem alternativa visível (botão/menu) (complemento). Swipe-away segue o dedo,
 inclina **12°** e sai com velocidade; photo viewer segue **1:1** e volta com spring; long press = **400ms** de hold,
@@ -112,7 +132,38 @@ manual (complemento). Vidro **só** sobre conteúdo: blur 30px atrás da tab bar
 
 **15. Acessibilidade e motion reduzido.** Contraste 4,5:1 texto/placeholder, 3:1 ícones/bordas; variação sempre com
 **sinal + cor**; `prefers-reduced-motion`/Reduce Motion troca deslocamento por fade ≤150ms. Labels para VoiceOver/TalkBack
-em botões de ícone, ordem de foco lógica (complemento).
+em botões de ícone, ordem de foco lógica (complemento). **Reduce Motion (Apple HIG, 9A):** springs mais firmes (menos
+bounce), animação presa ao gesto, nada de animar profundidade (z), troque x/y/z por **fade**, sem entrar/sair com blur.
+Motion nunca é o único canal (some haptic/texto) e é sempre cancelável. Contraste Apple: 4,5:1, **buscar 7:1 em texto
+pequeno no dark**. [PWA] com Motion for React, `<MotionConfig reducedMotion="user">` na raiz (o padrão é `"never"`).
+
+**16. Primeiro uso, permissões e confiança (NN/g, 9B).**
+- **Evite onboarding instrucional** (deck de cards não melhorou desempenho em estudo): prefira dica em contexto,
+  empty state que ensina e UI aprendível. Só vale quando o app **precisa de dados para começar**, é muito
+  personalizado ou o fluxo é realmente novo; aí: poucos cards, 1 ideia por card, **"Pular" visível**, progresso,
+  explicar por que pede cada dado; **tema/cor não se escolhe no onboarding**; promoção de função só quando ela fica acionável.
+- **Confiança em degraus** (5 níveis): não peça cadastro, dado pessoal ou conta conectada antes de entregar valor;
+  login obrigatório na 1ª tela pula para o nível 3; conectar conta social é nível 5. Login opcional quando possível.
+- **Permissões no contexto** (ao tocar no recurso), só as essenciais na 1ª abertura; frase "[app] quer acessar
+  [recurso] para que você possa [benefício]" — dar motivo subiu o aceite em **12%** e o melhor texto rendeu **+81%**
+  sobre o pior; nunca "para melhorar sua experiência". Se negar: tela explica o que não funciona + botão para os
+  Ajustes. [nativo] iOS usa purpose string, Android pede tela explicativa antes do diálogo; [PWA] a permissão é do
+  navegador (pré-aviso é seu, e não há "abrir Ajustes" — explique o caminho). Detalhes: `references/mobile-patterns.md` §1–2, §7.
+
+## PWA vs nativo — o que dá para aproximar
+| Recurso | [nativo] | [PWA] / Capacitor (aproximação) |
+|---|---|---|
+| **Liquid Glass** (material de vidro do iOS 26+) | só em UIKit/SwiftUI | `backdrop-filter: blur()` + fundo translúcido **só sobre conteúdo** (tab bar, sheet), com fallback opaco e "Reduce transparency"; nunca em texto longo (`dashboard-ui/references/glassmorphism.md`) |
+| **Dynamic Type** | estilos de texto do sistema | `font: -apple-system-body` no Safari ou tamanhos em `rem` + zoom do navegador; teste 200%; sem altura fixa em linha de texto |
+| **SF Symbols** | `Image(systemName:)` | não embutir (licença Apple); use biblioteca de ícones própria (Lucide/Phosphor) no mesmo peso do texto |
+| **SF Pro** | fonte do sistema | `font-family: system-ui, -apple-system` (cai em Roboto no Android); não empacotar SF Pro |
+| **Sheet detents / grabber** | `presentationDetents` | Drawer com `snapPoints` + handle; `body{position:relative}` no iOS Safari |
+| **Swipe-back / stack** | grátis no `UINavigationController` | Ionic (nativo) ou camada própria com Motion `drag="x"` + `AnimatePresence`; nunca bloquear o gesto do navegador |
+| **Haptics** | `UIImpactFeedbackGenerator` | Capacitor Haptics; PWA puro: `navigator.vibrate` não existe no iOS Safari → sem haptic |
+| **Safe area** | `SafeAreaView`/insets | `viewport-fit=cover` + `env(safe-area-inset-*)` |
+| **Permissões** | diálogo do SO | diálogo do navegador (PWA) ou do SO via plugin (Capacitor) |
+Linhas sem número de fonte são **(complemento)**; Liquid Glass, Dynamic Type, SF Symbols e detents são nativos
+segundo o HIG (9A). Bibliotecas e camada iOS própria: `references/component-libraries.md`.
 
 ## Checklist mobile (copie para a auditoria)
 - [ ] Todo alvo ≥ 44pt/48dp, ≥ 8px entre áreas; medido, não estimado.
