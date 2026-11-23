@@ -36,6 +36,12 @@ Cada skill de tema tem:
 - `references/visual-index.md`: tabela que diz o que cada imagem mostra, quando abrir, e os perfis avaliados como fonte.
 - `assets/visual-refs/`: folhas de contato 4x3 com frames dos reels (`<id>.jpg`) e prints dos carrosséis (`<id>_<n>.jpg`). O Claude lê as imagens quando precisa de um exemplo visual.
 
+## Skills exclusivas de um app
+
+`projetos/<app>/` guarda skills feitas para um app específico. Elas ficam fora de `.claude/skills/` para não carregarem nos outros projetos. Para usar uma delas, copie a pasta para `.claude/skills/` na repo daquele app.
+
+- `projetos/marca-pessoal-app/`: app de gestão de marca pessoal, com as decisões D1–D8, os itens obrigatórios do dia 1 e a síntese da pesquisa em `references/sintese.md`.
+
 ## Skills de terceiros
 
 ```bash
