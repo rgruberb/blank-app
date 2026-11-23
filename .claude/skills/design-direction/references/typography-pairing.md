@@ -3,7 +3,7 @@
 Fontes: infográfico "Font Pairing" de @gfx.om (`DescJ2zTeSf`, imagem única, 19/10/2026, selo "AI content"; print
 `DescJ2zTeSf_1.jpg`), somado ao que a skill já tinha: trio de identidade (@thedzianis, `layers-and-trust-layout.md` §1)
 e display + Inter dos sistemas da Ramotion (`branding-identity.md` §5). **Escala tipográfica, line-height, tracking e
-medida de linha não ficam aqui**: estão na skill `ux-patterns` (`../ux-patterns/references/typography-and-touch.md`).
+medida de linha não ficam aqui**: estão na skill `ux-patterns` (`../../ux-patterns/references/typography-and-touch.md`).
 
 ## 1. Regras (as 4 "Quick Tips" do post, mais o que se repete nas outras fontes)
 

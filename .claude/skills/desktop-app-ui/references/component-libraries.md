@@ -2,7 +2,7 @@
 
 Fonte: pesquisa 9D (docs e repositórios oficiais lidos em 22–23/11/2026; dado bruto em `docs/achados/rodada-9D.md`).
 Cenário avaliado: painel web + app mobile (PWA → Capacitor) no mesmo código, Tailwind, **React 18**. Versões mudam:
-confira antes de instalar. Versão mobile desta tabela (gestos, camada iOS): `../mobile-app-ui/references/component-libraries.md`.
+confira antes de instalar. Versão mobile desta tabela (gestos, camada iOS): `../../mobile-app-ui/references/component-libraries.md`.
 
 ## Compatibilidade
 

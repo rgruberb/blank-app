@@ -1,7 +1,7 @@
 # Fontes de benchmark para app desktop / painel web
 
 Pesquisa 9 (nov/2026; dado bruto em `docs/achados/rodada-9A.md`…`9D.md`). ✅ = aberto sem login · ⚠️ = abre com
-limite · 🔒 = exige login (pendente). Lista geral de galerias e perfis: `../design-direction/references/learning-sources.md` §5.
+limite · 🔒 = exige login (pendente). Lista geral de galerias e perfis: `../../design-direction/references/learning-sources.md` §5.
 
 | Fonte | Status | Serve para | Limite |
 |---|---|---|---|
