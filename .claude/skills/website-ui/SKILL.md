@@ -52,7 +52,8 @@ Vitals, convenções web), não vêm das fontes. Regras do NN/g e das galerias d
 
 **2. Largura máxima de conteúdo** (complemento, salvo a medida)
 - Container **1200–1280px** (frame de design em 1440); hero e mídia podem ir full-bleed.
-- Texto corrido: **50–60ch** (45–75 caracteres; teto ~75) — esta é das fontes (`ux-patterns` →
+- Texto corrido: token `--measure: 50ch` (≈ 66–71 caracteres); regra em caracteres: **45–75** (teto ~75) e
+  **45–60** em formulários; conte na sua fonte — das fontes (`ux-patterns` →
   `typography-and-touch.md` §2/§2b). Nunca parágrafo na largura total do container.
 
 **3. Breakpoints mobile-first** (complemento)
@@ -77,7 +78,7 @@ Vitals, convenções web), não vêm das fontes. Regras do NN/g e das galerias d
 
 **6. CTAs**
 - **Verbo + objeto** ("Começar teste grátis", "Add to cart"), nunca "Enviar/OK". Altura **≥ 44px (alvo 48)**, padding
-  lateral **24px**, label ≥ **4,5:1**, borda ≥ **3:1**, feedback em **100ms** (`components-checklists.md` §1–2).
+  lateral **24px**, label ≥ **4,5:1**, borda ≥ **3:1**, latência de resposta **≤ 100ms** (`components-checklists.md` §1–2).
 - O **acento só no CTA** e em 1 dado/palavra; ≤ **10%** da área (60/30/10). `Dfc-Q-0yy0W` é a melhor referência
   (`design-direction` → `color-palettes.md`).
 - Mesmo CTA primário repetido no hero e no CTA final, com o mesmo texto (complemento).
@@ -147,7 +148,7 @@ Vitals, convenções web), não vêm das fontes. Regras do NN/g e das galerias d
 
 ## Checklist de entrega
 - [ ] 1 h1, 1 CTA primário por seção, acento ≤ 10% e só em CTA/dado-chave.
-- [ ] Escala 1,25 em tokens, corpo 16–18px, parágrafos ≤ 60ch, line-height caindo com o tamanho.
+- [ ] Escala 1,25 em tokens, corpo 16–18px, parágrafos ≤ `--measure` (50ch; 45–75 caracteres), line-height caindo com o tamanho.
 - [ ] Grade de 8; container ≤ 1280px; sem scroll horizontal em 320/375.
 - [ ] Título + CTA no primeiro paint; nada competindo acima da dobra.
 - [ ] Um momento animado; reveal ≤ 700 ms, uma vez; `prefers-reduced-motion` testado.

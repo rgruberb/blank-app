@@ -104,7 +104,7 @@ prova (números/depoimentos) → pricing → FAQ → CTA final → footer**. Cor
   grid ("Don't cut. Carry.", `DfwhC1riuuO`); View Transitions/FLIP em `ui-motion/references/css-recipes.md`.
 - **CTA de compra grande e perto** do preço/imagem (Fitts: **0.66s vs 0.28s**, card "Aurora Speaker $249",
   `Dd25eCoBJGr`).
-- **Botão "Add to cart"** com as 6 decisões: **48px** altura, **24px** padding, label **17px semibold**, borda 4:1 /
+- **Botão "Add to cart"** com as 6 decisões: **48px** altura, **24px** padding, label **17px semibold** na fonte (na escala 1,25 do site: 16 ou 20), borda 4:1 /
   label 14:1, pill radius 24, 1 ícone a 10px, estado "Added ✓" (`Ddy5RJOha1U`; estados loading/foco/disabled em
   `DfemaTCBncA`; `components-checklists.md` §1–2). Em escala 1,25 arredonde o label para 16 ou 20.
 - Motion: add to cart em **arco 500 ms + badge +1** (`DfTr-mwhZT3`, `micro-interactions.md` §3).
@@ -138,7 +138,7 @@ prova (números/depoimentos) → pricing → FAQ → CTA final → footer**. Cor
   scroll **não** entra no checkout (`scroll-and-screen-transitions.md` §2).
 
 ## 10. Blog / conteúdo
-- Corpo **16–18px**, line-height **1,5**, medida **50–60ch** (45–75 caracteres), escala **1,25** com line-height por
+- Corpo **16–18px**, line-height **1,5**, medida `--measure: 50ch` (45–75 caracteres), escala **1,25** com line-height por
   degrau (`DfRucYFjrac_1/_2`, `ux-patterns/references/typography-and-touch.md` §2b).
 - Par editorial: Lora + Open Sans (blog/educação), Playfair Display + Montserrat (editorial), Fraunces + Inter
   (`typography-pairing.md` §2). Tom editorial: serifa fina grande + menu mono caixa-alta pequeno

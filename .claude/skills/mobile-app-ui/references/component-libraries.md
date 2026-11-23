@@ -1,4 +1,4 @@
-# Bibliotecas de componentes para app mobile web (PWA → Capacitor)
+# Bibliotecas de componentes para app mobile web (PWA, opcionalmente empacotado com Capacitor)
 
 Fonte: pesquisa 9D (docs e repositórios oficiais lidos em 22–23/11/2026; dado bruto em `docs/achados/rodada-9D.md`).
 "(inferido)" = a doc não diz; uma lib React DOM roda no WebView do Capacitor por ser web. Versões mudam: confira antes de instalar.
@@ -20,15 +20,19 @@ Fonte: pesquisa 9D (docs e repositórios oficiais lidos em 22–23/11/2026; dado
 | Vant | MIT | **não**: oficial só Vue; versões React são da comunidade | — | — | não | fora para app React |
 | Motion for React | MIT (núcleo) | sim | **sim (18.2+)** | sim | gestos, springs, layout | `reducedMotion` padrão **"never"** → use `<MotionConfig reducedMotion="user">` |
 
-## Critérios (Parte 4 da 9D)
-Cenário: PWA → Capacitor, visual iOS-like, Tailwind, React 18, painel web e mobile no mesmo código.
-Pese: visual iOS-like · gestos nativos · acessibilidade · peso do bundle (não medido) · customização com Tailwind ·
-maturidade · licença · **compatível com React 18 hoje**. Componente 100% próprio = acessibilidade toda por sua conta.
+## Critérios (gerais; Parte 4 da 9D)
+A 9D avaliou um cenário de exemplo (PWA → Capacitor, visual iOS-like, Tailwind, React 18, web e mobile no mesmo
+código). Para qualquer projeto, pese: **compatível com a versão de React do projeto** (eliminatório) · visual
+plataforma-like pedido · gestos nativos · acessibilidade · peso do bundle (não medido) · casa com o sistema de estilo já
+adotado · maturidade · licença. Componente 100% próprio = acessibilidade toda por sua conta.
 
-## Recomendação
-**shadcn/ui (variante Base UI) + Tailwind + Motion for React + uma camada própria fina de padrões iOS.**
-Mantine e HeroUI saem enquanto o projeto estiver em React 18. **Ionic React é plano B**, só para o app Capacitor, se
-transições de página nativas virarem requisito — custo: dois sistemas visuais.
+## Recomendação condicionada ao stack
+- **Se o stack for React DOM + Tailwind + PWA (com ou sem Capacitor) e um só sistema com o web app:** shadcn/ui (uma
+  variante, ex. Base UI) + Motion for React + uma camada própria fina de padrões iOS (abaixo).
+- **Se estiver em React 18:** Mantine v9 e HeroUI v3 ficam fora (exigem React 19+); em React 19+ voltam à disputa.
+- **Se transições de página nativas forem requisito e o app for empacotado (Capacitor):** Ionic React — custo: dois
+  sistemas visuais se houver web app separado.
+- **Se o app for nativo (SwiftUI/Compose) ou RN/Flutter:** esta tabela não se aplica; use os componentes da plataforma.
 
 ### Camada iOS própria (o que o shadcn não tem)
 | Padrão | Como construir | Regra de UX (SKILL.md) |
@@ -38,9 +42,9 @@ transições de página nativas virarem requisito — custo: dois sistemas visua
 | **Sheet com snap points** | Drawer Base UI (`snapPoints`, handle) | regra 4; `mobile-patterns.md` §6 |
 | **Push/pop com swipe-back** | Motion `drag="x"` + `AnimatePresence`; não bloquear o voltar do navegador | regra 4 |
 | Swipe actions em lista, segmented control, pull-to-refresh, action sheet | Motion `drag` + `onDragEnd` (`info.velocity`); Toggle Group adaptado; Drawer adaptado | regras 7, 11; `mobile-patterns.md` §16 |
-| Haptics | Capacitor Haptics (sem equivalente no Safari) | regra 7 |
+| Haptics | Se empacotado com Capacitor: Capacitor Haptics (sem equivalente no Safari) | regra 7 |
 
-### Dia 1
+### Dia 1 (se adotar esse stack)
 `<MotionConfig reducedMotion="user">` na raiz · tokens de duração/easing no Tailwind com os valores de `ui-motion` ·
 animar só `transform`/`opacity` · `body { position: relative }` (Drawer no iOS Safari) · testar em **iOS 16.4+**
 (Tailwind v4 exige Safari 16.4+/Chrome 111+) · Lighthouse no CI, axe-core nos testes · Storybook quando a camada passar

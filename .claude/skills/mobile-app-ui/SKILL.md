@@ -37,7 +37,7 @@ e NN/g lidas nas páginas oficiais (pesquisa 9A/9B, nov/2026) vêm com a fonte c
 
 **1. Alvos de toque.** Mínimo **44 × 44 pt** iOS e **48 × 48 dp** Android; app web/PWA no celular segue o piso **44px** desta skill (o piso 24px/meta 44 é de site, `website-ui`). Cresça
 por padding (**20 + 12 + 12 = 44**), nunca o ícone; **~8px** entre áreas de alvos pequenos (centros a 52px, não 32px).
-Botão primário **48px** de altura, 24px de padding, label 17px semibold (`ux-patterns` → `typography-and-touch.md` §1,
+Botão primário **48px** de altura, 24px de padding, label 16 ou 19px semibold na escala 1,2 (a fonte usa 17px; `ux-patterns` → `typography-and-touch.md` §1–2,
 `components-checklists.md` §1–2). Fontes oficiais (rodada 9A/9B): Apple **44×44pt padrão, 28×28pt mínimo absoluto**
 (só para controle secundário denso), ~12pt de folga em controle com borda/fundo e ~24pt sem; Material **48×48dp + ≥ 8dp**
 entre alvos (ícone 24dp com padding até 48); NN/g mede em **tamanho físico: ≥ 1 × 1 cm**, ~2 × 2 cm para ação primária
@@ -77,7 +77,7 @@ no protótipo do Claude Design (`design-direction` → `claude-design-course.md`
 
 **6. Tipografia mobile.** Escala **16 × 1,2^n** (16, 19, 23, 28, 33, 40, 48) é a recomendada para produto denso em tela
 pequena; line-height 1,5 no corpo → 1,1 no display; tracking −0,02em em títulos (`typography-and-touch.md` §2, §2b).
-Se seguir a escala nativa iOS (corpo **17pt**), mantenha a nativa e não misture. **Dynamic Type / font scale do
+App web/PWA (mesmo empacotado em casca nativa) usa a **mesma escala do produto (1,2, corpo 16)** para manter um só sistema com a versão web; o corpo **17pt** é referência do nativo iOS (SwiftUI/UIKit), onde valem os estilos do sistema. Nunca misture as duas. **Dynamic Type / font scale do
 Android:** use estilos de texto do sistema, teste em 200% e deixe linhas quebrarem (complemento HIG/Material; piso 11pt).
 Large title **34 → 18px ligado ao scroll** (`micro-interactions.md` §4). Número-herói enorme (20 → 76px no app de clima, §5).
 Oficial (9A): Apple iOS corpo **17pt padrão / 11pt mínimo**; texto ampliável a **≥ 200%**; **evite pesos Ultralight,
@@ -124,7 +124,7 @@ Virtualize listas longas. Próximo card **espia 32%** em carrossel horizontal (C
 com detents, SF Pro, cantos contínuos (squircle, `micro-interactions.md` §1). Android (Material 3): navigation bar
 embaixo (3–5), top app bar, back do sistema/predictive back, FAB para a ação principal, bottom sheet com handle,
 Roboto/fonte da marca, ripple. Cross-platform (RN/Flutter): siga a plataforma em navegação, back e controles nativos
-(switch, picker, date); a marca entra em cor, tipo, ilustração e motion. Detalhes em `ext-impeccable` (`reference/ios.md`, `reference/android.md`). **Web/PWA com cara de iOS:** shadcn (Base UI) + Tailwind + Motion e uma camada própria de **tab bar, título grande que colapsa, sheet com snap points e push/pop com swipe-back**; Ionic React como plano B no Capacitor (`references/component-libraries.md`, pesquisa 9D).
+(switch, picker, date); a marca entra em cor, tipo, ilustração e motion. Detalhes em `ext-impeccable` (`reference/ios.md`, `reference/android.md`). **Web/PWA com cara de iOS:** se o stack for React DOM + Tailwind, shadcn (uma variante) + Motion e uma camada própria de **tab bar, título grande que colapsa, sheet com snap points e push/pop com swipe-back**; Ionic React se o app for empacotado com Capacitor e precisar de transições nativas (critérios em `references/component-libraries.md`, pesquisa 9D).
 
 **13. Performance e 60fps.** Anime só `transform`/`opacity`; nada de animar `width/height/top` em lista; parallax
 decorativo em mobile não (`scroll-and-screen-transitions.md` §2–3). Imagens WebP/AVIF com lazy load, listas
@@ -132,8 +132,8 @@ virtualizadas, sem re-render desnecessário, **teste em celular médio e rede le
 15, 23, 26, 31). Orçamento de 16,7ms por frame; gestos na thread de UI (Reanimated/worklets, Flutter) (complemento).
 
 **14. Dark mode.** Sem `#000` (ex.: `#0C1424`), texto a **87%**, accent clareado (2,9:1 → 8,6:1), elevação por
-luminosidade, glow com parcimônia (`typography-and-touch.md` §4). Siga o tema do sistema por padrão. Seletor de tema próprio: a Apple HIG pede para **evitar** no app ("Avoid offering an
-app-specific appearance setting", developer.apple.com/design/human-interface-guidelines/dark-mode); ofereça só com motivo de produto. Vidro **só** sobre conteúdo: blur 30px atrás da tab bar (`micro-interactions.md` §8);
+luminosidade, glow com parcimônia (`typography-and-touch.md` §4). App nativo/PWA **segue o tema do sistema, sem seletor próprio** (Apple HIG: "Avoid offering an
+app-specific appearance setting", developer.apple.com/design/human-interface-guidelines/dark-mode). Seletor Claro/Escuro/Sistema só em web app (`desktop-app-ui` §11). Vidro **só** sobre conteúdo: blur 30px atrás da tab bar (`micro-interactions.md` §8);
 "Reduce transparency" nas settings (`dashboard-ui` → `domain-examples.md` §2).
 
 **15. Acessibilidade e motion reduzido.** Contraste 4,5:1 texto/placeholder, 3:1 ícones/bordas; variação sempre com
@@ -184,7 +184,7 @@ segundo o HIG (9A). Bibliotecas e camada iOS própria: `references/component-lib
 - [ ] Lista: pull-to-refresh, back restaura posição, "End of results", virtualização.
 - [ ] Dark mode sem #000, texto 87%, contraste AA; reduced motion respeitado.
 - [ ] Total do rodapé bate com o valor do botão; Buy e Sell do mesmo tamanho.
-- [ ] Sem pesos Ultralight/Thin/Light no texto; corpo ≥ 17pt iOS (piso 11pt).
+- [ ] Sem pesos Ultralight/Thin/Light no texto; corpo ≥ 16px na escala 1,2 (17pt no nativo iOS); piso 11pt.
 - [ ] Sheet: 1 por vez, detents medium/large com grabber, Cancel+Done (nunca os três), confirma ao descartar.
 - [ ] Nenhum pedido de cadastro/permissão antes de entregar valor; permissão no contexto com motivo e caminho de volta.
 - [ ] Cada regra marcada [PWA]/[nativo] conferida na plataforma real (Liquid Glass, Dynamic Type, SF Symbols só nativos).
@@ -238,7 +238,7 @@ segundo o HIG (9A). Bibliotecas e camada iOS própria: `references/component-lib
 | Protótipo de app mobile no Claude Design | `design-direction/references/claude-design-course.md` "Mobile App Prototype" |
 | Padrões de tela deste skill e imagens mobile | `references/mobile-patterns.md`, `references/visual-index.md` |
 | Pesquisa NN/g completa (onboarding, empty state, formulários, permissões, HEART/CASTLE) | `ux-patterns/references/nng-research.md` |
-| Bibliotecas (shadcn, Ionic, Framework7…) × React 18/PWA/Capacitor; camada iOS própria | `references/component-libraries.md` |
+| Bibliotecas (shadcn, Ionic, Framework7…): critérios por stack (versão de React, PWA/Capacitor); camada iOS própria | `references/component-libraries.md` |
 | Onde buscar inspiração (Mobbin 🔒, Dribbble, Behance, kits Figma) e prints da pesquisa 9 | `references/benchmark-sources.md` |
 | Durações/easing oficiais (Apple sem números, Material springs → CSS, Carbon), Reduce Motion, `MotionConfig` | `ui-motion/references/official-motion-guidelines.md` (os tokens de `ui-motion` prevalecem) |
 

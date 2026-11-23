@@ -1,7 +1,8 @@
 # Bibliotecas de componentes para web app desktop (React)
 
 Fonte: pesquisa 9D (docs e repositórios oficiais lidos em 22–23/11/2026; dado bruto em `docs/achados/rodada-9D.md`).
-Cenário avaliado: painel web + app mobile (PWA → Capacitor) no mesmo código, Tailwind, **React 18**. Versões mudam:
+A pesquisa avaliou um cenário de exemplo (web app + app mobile PWA no mesmo código, Tailwind, React 18); use a
+tabela para qualquer stack React DOM e aplique os critérios abaixo ao seu. Versões mudam:
 confira antes de instalar. Versão mobile desta tabela (gestos, camada iOS): `../../mobile-app-ui/references/component-libraries.md`.
 
 ## Compatibilidade
@@ -17,15 +18,18 @@ confira antes de instalar. Versão mobile desta tabela (gestos, camada iOS): `..
 | Ionic React / Framework7 / Ant Design Mobile / Vant | MIT | — | próprio | **kits mobile**: não usar no painel desktop |
 | Motion for React | MIT (núcleo) | sim (18.2+) | — | `layout`/`layoutId` (aba ativa, card → detalhe), `AnimatePresence` (toasts, painéis); `<MotionConfig reducedMotion="user">` (padrão é "never") |
 
-## Critérios
-Customização com Tailwind · acessibilidade (Base UI/Radix/React Aria) · compatível com React 18 hoje · peso (não
-medido na 9D) · maturidade · licença · cobre tabela, ⌘K, sidebar e painel lateral sem lib extra.
+## Critérios (gerais)
+**Compatível com a versão de React do projeto** (eliminatório) · casa com o sistema de estilo já adotado (Tailwind,
+CSS Modules…) · acessibilidade (Base UI/Radix/React Aria) · peso (não medido na 9D) · maturidade · licença · cobre
+tabela, ⌘K, sidebar e painel lateral sem lib extra · um sistema só se web e mobile dividirem código.
 
-## Recomendação (9D, Parte 4)
-**shadcn/ui (variante Base UI) + Tailwind + Motion**, o mesmo stack do mobile; no desktop quase tudo já existe como
-componente (Data Table, Command, Sidebar, Sheet). Mantine e HeroUI ficam para reavaliar se o projeto subir para React 19.
-Ionic é plano B **só do app Capacitor**, nunca do painel. Qualidade: Lighthouse e axe-core no CI; Storybook quando os
-componentes próprios passarem de ~10.
+## Recomendação condicionada ao stack (9D, Parte 4)
+- **Se o stack for React DOM + Tailwind** (qualquer versão de React suportada): **shadcn/ui (uma variante, ex. Base UI) +
+  Motion**; no desktop quase tudo já existe como componente (Data Table, Command, Sidebar, Sheet).
+- **Se o projeto estiver em React 18:** Mantine v9 e HeroUI v3 ficam fora (exigem React 19+). **Em React 19+** eles
+  entram na disputa: Mantine se o time preferir kit admin completo sem Tailwind; HeroUI se já usar Tailwind v4.
+- Kits mobile (Ionic, Framework7) nunca no web app desktop; Ionic só como plano B do app mobile empacotado.
+- Qualidade: Lighthouse e axe-core no CI; Storybook quando os componentes próprios passarem de ~10.
 
 ## Referências prontas (inspiração, não copiar)
 - shadcn **Blocks** (`dashboard-01`: sidebar, KPI com tendência, gráfico com filtro de período) — ui.shadcn.com/blocks.

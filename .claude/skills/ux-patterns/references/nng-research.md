@@ -64,7 +64,7 @@ Nunca deixe a tela totalmente vazia (dúvida: carregando? erro? filtro errado?).
 | **Um único** número contra uma meta clara (score 0–100, % da meta, progresso do anel de atividade), com o **número escrito** no centro | Anel/gauge aceito como **moldura** do número, não como forma de leitura |
 | Parte de um todo com **2–3 fatias** e rótulo com % | Donut aceito; com 4+ fatias, troque por barra empilhada ou barras horizontais |
 | Pizza/donut/gauge lado a lado para comparar | **Nunca**: troque por barras |
-Em todos os casos: valor numérico visível, cor + rótulo/forma, sem 3D. Vale para cliente e gestor; no painel de gestor (ferramenta de trabalho), prefira sempre barras/linhas.
+Em todos os casos: valor numérico visível, cor + rótulo/forma, sem 3D. Vale para cliente e gestor; em painel operacional de uso diário (ferramenta de trabalho), sem gauge/anel: só barras/linhas (`dashboard-ui` padrão 17).
 
 ## 7. Tabelas de dados (`data-tables`, 2022)
 Tabela vence cards em comparação e escala. 4 tarefas: achar, comparar, ver/editar linha, agir. 1ª coluna com identificador legível; cabeçalho e 1ª coluna fixos; ocultar/reordenar colunas com estado visível; **edição em painel lateral não modal** (modal cobre os registros vizinhos, `9B_tabelas_painel-lateral-crm_1.jpg`); ações em lote com "selecionar todos" e barra contextual.
@@ -97,7 +97,7 @@ Contraste 4,5:1 (3:1 para texto ≥ 18pt ou 14pt bold); não depender só de cor
 - **Gestos e componentes iOS atuais** (sheets, menus contextuais, Dynamic Island): artigos de 2017–2018.
 - **Dark mode**, **mobile tables**, **push e microsessões**, **skeleton vs spinner** (vídeo bloqueado sem cookies): não lidos.
 - **Domínio do produto** (CRM, propostas, contratos, agenda de conteúdo, cobrança) e **PT-BR**: não cobertos.
-- **Dados antigos**: muitos estudos mobile de 2015–2019; reavalie no piloto.
+- **Dados antigos**: muitos estudos mobile de 2015–2019; reavalie com teste no seu produto.
 - Acessibilidade cognitiva/neurodivergência: sem guia aprofundado.
 
 ## Artigos usados (todos em `https://www.nngroup.com/articles/<slug>/`)

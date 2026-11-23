@@ -4,7 +4,7 @@ Data: 23/11/2026. Base: rodadas `docs/achados/rodada-9A.md` (fundações oficiai
 
 **Produto:** gestão de marca pessoal (presença, conteúdo, agenda, portfólio, networking, propostas, contratos, mensagens, resultados). Painel web para gestor e cliente; app mobile do cliente como PWA no piloto e depois o mesmo React empacotado com Capacitor. Stack: React 18, TypeScript, Vite, Supabase, Tailwind, shadcn/ui, Motion for React. Público avançado, PT e EN. React Native fica fora como base.
 
-**Como ler este documento.** As seções 2 a 12 resumem as rodadas e apontam para o arquivo de origem. A seção 13 traz as decisões. A 14 é o checklist de auditoria e a 15 reúne os entregáveis. A seção 16 lista as lacunas e a 17, as fontes. Cada número citado vem de uma rodada ou de uma skill, com a fonte entre parênteses. Quando uma decisão é inferência minha, ela aparece marcada como **(inferência)**.
+**Como ler este documento.** As seções 2 a 12 resumem as rodadas e apontam para o arquivo de origem. A seção 13 traz as decisões. A 14 é o checklist de auditoria e a 15 reúne os entregáveis. A seção 16 lista as lacunas e a 17, as fontes. Cada número citado vem de uma rodada ou de uma skill, com a fonte entre parênteses. Quando uma decisão é inferência minha, ela aparece marcada como **(inferência)**. As decisões aprovadas pelo usuário aparecem como **D1–D8** (lista no início da seção 13).
 
 ---
 
@@ -31,7 +31,7 @@ Detalhes: `docs/achados/rodada-9A.md` (fichas 1–7 e a tabela comparativa).
 |---|---|---|
 | Alvo de toque | Piso de 44 px no PWA e padrão confortável de 48 px, com ≥ 8 px entre alvos. Na web com mouse o piso é 24 px e a meta 44 | 9A (Apple 44×44 pt / Material 48×48 dp, 8 dp), `ux-patterns`, `desktop-app-ui` §3 |
 | Escala tipográfica | Produto denso: 16 × 1,2ⁿ = 16, 19, 23, 28, 33, 40, 48. Site e portfólio público: Major Third 16 × 1,25ⁿ = 12,8, 16, 20, 25, 31, 39, 49. Não misturar as duas na mesma superfície | `ux-patterns`, `mobile-app-ui` §6, `website-ui` |
-| Texto | Line-height de 1,5 no corpo caindo até 1,1 nos títulos grandes. Tracking de −0,02em em títulos e +0,05–0,06em em caixa-alta. Medida de 45–75 caracteres (50–60ch); o Material pede 40–60. Mínimo de 11 pt (iOS). Pesos Regular a Bold, sem Ultralight, Thin ou Light | `ux-patterns`, 9A (Apple Typography, M3) |
+| Texto | Line-height de 1,5 no corpo caindo até 1,1 nos títulos grandes. Tracking de −0,02em em títulos e +0,05–0,06em em caixa-alta. Medida de 45–75 caracteres (45–60 em formulários), com o token `--measure: 50ch` ≈ 66–71 caracteres (D8); o Material pede 40–60. Mínimo de 11 pt (iOS). Pesos Regular a Bold, sem Ultralight, Thin ou Light | `ux-patterns`, 9A (Apple Typography, M3) |
 | Texto ampliável | Funcionar com 200% de texto, sem truncar em áreas roláveis | 9A (Apple Accessibility) |
 | Contraste | 4,5:1 no texto, 3:1 em texto grande, ícones e bordas. Buscar 7:1 em texto pequeno no dark mode | 9A, 9B, 9C (Coolors), `ux-patterns` |
 | Espaçamento | Grade de 8 (8, 16, 24, 32, 48, 64); o 4 só em micro | `ux-patterns` |
@@ -41,7 +41,7 @@ Detalhes: `docs/achados/rodada-9A.md` (fichas 1–7 e a tabela comparativa).
 | Dark mode | Sem `#000` (ex.: `#0C1424`), texto a 87%, acento clareado, elevação por luminosidade. Seguir `prefers-color-scheme` | `ux-patterns`, `mobile-app-ui` §14, 9A |
 | Acessibilidade web | Landmarks ARIA, um único H1 e headings sem pular nível | 9A (M3 Accessibility designing) |
 
-**Ponto crítico:** a tabela de tipografia iOS capturada na 9A corresponde ao tamanho "xSmall", não ao padrão "Large", então não serve como escala. O único dado confirmado é o corpo padrão de 17 pt. A escala do projeto (16 × 1,2) é a recomendação das skills. Se um dia o projeto seguir a escala nativa iOS, não pode misturar as duas (`mobile-app-ui` §6).
+**Ponto crítico:** a tabela de tipografia iOS capturada na 9A corresponde ao tamanho "xSmall", não ao padrão "Large", então não serve como escala. O único dado confirmado é o corpo padrão de 17 pt. A escala do projeto é 16 × 1,2 com corpo 16, igual no app e no painel (D1); o corpo 17 pt do iOS fica só como referência do nativo (`mobile-app-ui` §6).
 
 ---
 
@@ -72,7 +72,7 @@ Detalhes: `9B` (17 artigos NN/g, top 15 e lacunas), `ux-patterns` (leis e checkl
 - **Confiança:** seguir a hierarquia de 5 níveis de compromisso. Não pedir dado sensível nem conta conectada antes de entregar valor (9B).
 - **Agenda e fuso:** detectar o fuso automaticamente, buscar por cidade e ordenar alfabeticamente por cidade com o offset ao lado. 73% conhecem o próprio fuso e só 34% sabem o offset em UTC (9B).
 - **Tabelas no painel:** primeira coluna identificável, cabeçalho fixo, edição em painel lateral não modal e ações em lote (9B, `desktop-app-ui` §4). Linha de 32–36 px compacta ou 44–48 px confortável.
-- **Dashboards:** barras e linhas. Evitar pizza, donut, gauge e treemap em painel de leitura rápida, e nunca usar só a cor como sinal (9B). **Conflito:** o `dashboard-ui` (regra 10) usa gauge e anel como "progresso como linguagem". Resolução **(inferência)**: anel e gauge só para progresso N/M de metas; valores e tendências ficam em barra e linha.
+- **Dashboards:** barras e linhas. Evitar pizza, donut, gauge e treemap em painel de leitura rápida, e nunca usar só a cor como sinal (9B). **Conflito:** o `dashboard-ui` usa gauge e anel como "progresso como linguagem". **Decisão (D4):** no painel operacional do gestor, sem gauge nem anel (barras e linhas); no painel e no app do cliente, só anel de meta com o número visível, no máximo 1–2 por tela, pelo critério do `dashboard-ui` padrão 17.
 - **Tabs:** separar navegação de abas internas, usar pelo menos 2 indicadores de seleção e preferir acordeão a tabs no mobile para conteúdo longo (9B).
 - **Métricas de UX:** CASTLE para o painel do gestor (ferramenta de trabalho) e HEART para o app do cliente (9B).
 - **Leis com número** (`ux-patterns`): Doherty ≤ 400 ms de feedback. Hick: poucos itens visíveis e o resto em "Mais". Von Restorff: um destaque, nunca três. Goal gradient: o progresso não começa do zero.
@@ -221,22 +221,32 @@ São 11 sistemas avaliados. As durações aparecem só onde a página trouxe nú
 
 ## 13. Recomendação em 3 fases
 
+**Decisões do usuário (D1–D8), aprovadas em 23/11/2026:**
+- **D1 Tipografia do app:** escala 16 × 1,2ⁿ com corpo 16, igual ao painel; botões em 16 ou 19 px. O corpo 17 pt do iOS fica só como referência do nativo (1.5).
+- **D2 Latência × animação:** "feedback em 100 ms, concluído em 300 ms" é prazo de resposta do sistema, não duração de animação; a animação do press segue o `ui-motion` (feedback visual em 0 ms, press 160 ms) (Loading).
+- **D3 Motion do painel web:** os mesmos tokens do `ui-motion`; onde ele não define, micro = 80 ms (`transitions-dev`). Carbon productive só como referência comparativa (1.3–1.4).
+- **D4 Gauges e anéis:** proibidos no painel operacional do gestor (barras e linhas); no painel/app do cliente, só anel de meta com o número visível, no máximo 1–2 por tela (`dashboard-ui` padrão 17) (seção 4).
+- **D5 Tab bar:** 5 abas como hipótese a validar em teste de usuários antes de fechar (1.12).
+- **D6 Tema:** app do cliente segue o tema do sistema, sem seletor; painel web com seletor Claro/Escuro/Sistema (1.10).
+- **D7 Personalização por cliente:** nenhuma no piloto; depois, só a cor de acento, com contraste ≥ 4,5:1 validado automaticamente (Fase 3).
+- **D8 Medida de linha:** token `--measure: 50ch` (≈ 66–71 caracteres); regra em caracteres: 45–75, e 45–60 em formulários (seção 2, item 7).
+
 ### Fase 1: Fundações (tokens, shell, acessibilidade de base)
 
 | # | Decisão concreta | Números | Fonte |
 |---|---|---|---|
 | 1.1 | Stack de UI: shadcn/ui com **uma** base (Base UI), Motion e uma camada `ios/` própria | React 18; Mantine e HeroUI fora | 9D Parte 4 |
 | 1.2 | `<MotionConfig reducedMotion="user" transition={…}>` na raiz | sobrescreve o tween padrão de 0,3 s | 9D |
-| 1.3 | Tokens de motion em CSS vars e Tailwind: `--press-scale .95`, `--dur-press 160ms` (feedback em 0 ms), `--dur-micro 100–150ms`, `--dur-expand 350ms` ease-out, `--dur-success 470ms`, `--dur-reveal ≤700ms`, `--stagger 70/100ms`; spring UI com damping ratio 0,8; toast com stiffness 180 / damping 20; saída mais curta que a entrada | ver à esquerda | `ui-motion`; 9D (Atlassian < 150 ms para o frequente; saídas mais curtas) |
-| 1.4 | Curvas: ease-out `cubic-bezier(0.22, 1, 0.36, 1)` (`ui-motion`) no app. Carbon productive `0.2, 0, 0.38, 0.9` no painel web. Spring em CSS: M3 Expressive default spatial `0.38, 1.21, 0.22, 1.00` em 500 ms só sem interrupção | — | `ui-motion`, 9A, 9D |
-| 1.5 | Tipografia: escala 16 × 1,2ⁿ no app e no painel; corpo 16; labels do painel 13–14; botão primário 17 semibold; perfil público em Major Third 1,25 | lh 1,5 → 1,1; tracking −0,02em | `ux-patterns`, `desktop-app-ui` §3, `website-ui` |
+| 1.3 | Tokens de motion em CSS vars e Tailwind: `--press-scale .95`, `--dur-press 160ms` (feedback em 0 ms), micro de **80 ms** (`transitions-dev`) onde o `ui-motion` não define (D3), `--dur-expand 350ms` ease-out, `--dur-success 470ms`, `--dur-reveal ≤700ms`, `--stagger 70/100ms`; spring UI com damping ratio 0,8; toast com stiffness 180 / damping 20; saída mais curta que a entrada | ver à esquerda | `ui-motion`; 9D (Atlassian < 150 ms para o frequente; saídas mais curtas) |
+| 1.4 | Curvas: ease-out `cubic-bezier(0.22, 1, 0.36, 1)` (`ui-motion`) no app **e** no painel web, com os mesmos tokens (D3). Carbon productive `0.2, 0, 0.38, 0.9` fica só como referência comparativa. Spring em CSS: M3 Expressive default spatial `0.38, 1.21, 0.22, 1.00` em 500 ms só sem interrupção | — | `ui-motion`, 9A, 9D |
+| 1.5 | Tipografia: escala 16 × 1,2ⁿ no app e no painel; corpo 16; labels do painel 13–14; botão primário em 16 ou 19 semibold (D1; o corpo 17 pt do iOS é só referência do nativo); perfil público em Major Third 1,25 | lh 1,5 → 1,1; tracking −0,02em | `ux-patterns`, `desktop-app-ui` §3, `website-ui` |
 | 1.6 | Fonte: 1 família com 2 pesos (no máximo 2–3 famílias), open source, com acentos PT verificados | Typewolf "40 Best Google Fonts" | `design-direction` regra 16, `ux-patterns` (anti AI slop), 9C |
 | 1.7 | Alvos: `--tap: 44px` como piso no PWA e 48 no botão primário; `--tap-gap: 8px`; crescer por padding (20 + 12 + 12) | web desktop: piso de 24 e meta de 44 | 9A, `ux-patterns`, `mobile-app-ui` §1 |
 | 1.8 | Breakpoints do Tailwind: base 375; 768 (tablet: rail); 1024 (desktop: sidebar vira rail, inspector em overlay); 1280 (sidebar larga de 220–260); 1440 (inspector fixo de 320–400); 1920 (limitar a medida do texto) | M3: barra < 600 e rail a partir de 840 | `desktop-app-ui` §1–2, `website-ui`, 9A |
 | 1.9 | Cor: 2 bases + 1 acento em 60/30/10 (acento ≤ 10%); rampa de 5–6 tons por base; papéis semânticos claro, escuro e alto contraste | texto 4,5:1; UI 3:1 | `design-direction` 1, 13, 14; 9A |
-| 1.10 | Dark mode: `#0C1424` em vez de `#000`, texto a 87%, segue o sistema. **Conflito:** a Apple pede para não ter seletor próprio no app nativo; `mobile-app-ui`/`desktop-app-ui` sugerem troca manual. Decisão **(inferência)**: seguir o sistema e oferecer a troca manual só no painel web | — | 9A, `mobile-app-ui` §14, `desktop-app-ui` §11 |
+| 1.10 | Dark mode: `#0C1424` em vez de `#000`, texto a 87%, segue o sistema. **Conflito:** a Apple pede para não ter seletor próprio no app nativo; `mobile-app-ui`/`desktop-app-ui` sugerem troca manual. **Decisão (D6):** o app do cliente segue o tema do sistema, sem seletor; o painel web tem seletor Claro/Escuro/Sistema | — | 9A, `mobile-app-ui` §14, `desktop-app-ui` §11 |
 | 1.11 | Sombras: separar blocos por espaço ou fundo; sombra tingida só no que flutua (Y 8, blur 16, ~8%) | — | `design-direction` 15, regra de prioridade |
-| 1.12 | Shell do app: tab bar com 5 abas. Hipótese a testar: Início, Agenda, Conteúdo, Mensagens, Perfil (propostas, contratos, portfólio e networking entram em Perfil ou na Início). Sem aba "More" | 3–5 abas | 9A, 9B (inferência da 9B), `mobile-app-ui` §3 |
+| 1.12 | Shell do app: tab bar com 5 abas como **hipótese a validar em teste** de usuários (árvore/primeiro clique) antes de fechar (D5): Início, Agenda, Conteúdo, Mensagens, Perfil (propostas, contratos, portfólio e networking entram em Perfil ou na Início). Sem aba "More" | 3–5 abas | 9A, 9B (hipótese a validar em teste), `mobile-app-ui` §3 |
 | 1.13 | Shell web: sidebar larga 220–260 ↔ rail 56–64 com tooltip; topbar com 1 CTA e ⌘K | ⌘K abre em 150 ms | `desktop-app-ui` §1, §6 |
 | 1.14 | Safe areas e Drawer no iOS: `env(safe-area-inset-bottom)` no rodapé fixo; `body { position: relative }` | — | `mobile-app-ui` §5, 9D |
 | 1.15 | Qualidade no CI: Lighthouse (PWA e performance) e axe-core nos testes; Playwright nas viewports 360, 375, 390, 768, 1280 e 1440 | LCP ≤ 2,5 s, INP ≤ 200 ms, CLS ≤ 0,1 (complemento da skill) | 9D, `website-ui`, `mobile-app-ui` |
@@ -255,7 +265,7 @@ São 11 sistemas avaliados. As durações aparecem só onde a página trouxe nú
 | **Configurações** | Escopo em cada linha, uma linha de consequência, confirmação do save, reset do que não é padrão e "quando vale" | — | `ux-patterns` Settings |
 | **Empty states** | Estado do sistema + o que fazer + botão para a 1ª tarefa (componente Empty). A home nunca abre vazia | — | 9B, 9D, `mobile-app-ui` §10 |
 | **Erros** | Inline depois do blur, ao lado do campo, com cor e ícone; ajuda depois de 3 erros. Toast de erro fica até ser reconhecido. Offline: banner persistente e ações "pendentes" | erro até reconhecer | 9B, `ui-motion` (toast), `mobile-app-ui` §10 |
-| **Loading** | Título no 1º paint; skeleton para conteúdo sem layout shift; spinner só abaixo de 3 s; loader dentro do botão (mantém a largura e ignora o 2º clique); UI otimista com reversão | feedback ≤ 400 ms; botão em 100/300 ms | `mobile-app-ui` §10, `ux-patterns` |
+| **Loading** | Título no 1º paint; skeleton para conteúdo sem layout shift; spinner só abaixo de 3 s; loader dentro do botão (mantém a largura e ignora o 2º clique); UI otimista com reversão | feedback ≤ 400 ms; latência do botão: resposta ≤ 100 ms e estado final ou spinner ≤ 300 ms (D2); a animação do press segue os tokens (feedback em 0 ms, 160 ms) | `mobile-app-ui` §10, `ux-patterns` |
 | **Resultados (dashboard)** | 1 KPI principal + 3 secundários, período nomeado, dígitos tabulares, barra e linha; cor do delta pelo sentido bom ou ruim | 3–6 KPIs na faixa | `ux-patterns` anti-slop, `dashboard-ui` 3 e 11, 9B |
 
 ### Fase 3: Diferenciação
@@ -268,7 +278,7 @@ São 11 sistemas avaliados. As durações aparecem só onde a página trouxe nú
 | **Transições** | Push/pop com swipe-back (Motion `drag="x"` + `AnimatePresence`); card → página; pílula ativa desliza em 250–350 ms; sheet com snap | 250–350 ms | 9D Parte 4, `ui-motion`, `desktop-app-ui` §9 |
 | **Gestos** | Swipe actions em listas (`onDragEnd` com `info.velocity`), pull-to-refresh com dedo 100% e lista 35%, rubber band de 200 → 86 px, sempre com alternativa visível | 0,35; 200 → 86 | 9D, `ui-motion`, 9A |
 | **Animação de dados** | Animar só a mudança (números rolando, barra que redimensiona), não o card inteiro; stagger de 100 ms em dígitos | 100 ms | 9E (@noahelhadedy), `ui-motion` |
-| **Personalização** | Tema por cliente só pelo token de acento (CSS var), validado em 4,5:1 nos dois temas antes de salvar **(inferência)**. Personalização de conteúdo sim; de tema no onboarding não | 4,5:1 | 9B, 9C (Coolors), `design-direction` |
+| **Personalização** | **Decisão (D7):** nenhum tema por cliente no piloto. Na fase seguinte, só a cor de acento (CSS var), validada automaticamente em contraste ≥ 4,5:1 nos dois temas antes de salvar. Personalização de conteúdo sim; de tema no onboarding não | 4,5:1 | 9B, 9C (Coolors), `design-direction` |
 | **Vidro** | Só sobre conteúdo (blur de 30 px atrás da tab bar), com fallback em `prefers-reduced-transparency` | blur 30 px | `mobile-app-ui` §14, `dashboard-ui` |
 | **Performance** | Só `transform` e `opacity`; `filter: drop-shadow` em vez de animar `boxShadow`; listas virtualizadas; imagens WebP/AVIF; teste em celular médio e rede lenta | 16,7 ms por quadro | 9D, `mobile-app-ui` §13 |
 | **Acessibilidade** | Reduced motion troca deslocamento por fade ≤ 150 ms; texto a 200%; foco visível; labels em botões de ícone; teste com 5 usuários, incluindo baixa visão e motora | ≤ 150 ms; 200% | `ui-motion` 13, 9A, 9B |
@@ -286,9 +296,9 @@ São 11 sistemas avaliados. As durações aparecem só onde a página trouxe nú
 
 **Layout (5)**
 6. [ ] O espaçamento segue a grade de 8 (4 só em micro), sem valores como 13 ou 27 px?
-7. [ ] O texto corrido fica em 45–75 caracteres (50–60ch)?
+7. [ ] O texto corrido fica em 45–75 caracteres (45–60 em formulários), com `--measure: 50ch` (D8)?
 8. [ ] Não há scroll horizontal em 320/375 px?
-9. [ ] Em ≥ 1024 px o shell usa sidebar 220–260 ou rail 56–64, e abaixo de 1024 vira layout mobile?
+9. [ ] Em ≥ 1024 px o shell usa sidebar 220–260 ou rail 56–64; entre 840 e 1023 px, rail + 1 painel (`desktop-app-ui` §2); abaixo de 840 px, `mobile-app-ui`?
 10. [ ] O conteúdo nunca fica sob notch, Dynamic Island ou home indicator?
 
 **UX (5)**
@@ -611,7 +621,7 @@ Fonte: 9F. Use a aba /videos, porque os links de vídeos individuais não foram 
 ### (g) Plano de implementação de 90 dias
 
 **Sprint 1 (dias 1–30): Fundações**
-- **Entregáveis:** tokens (tipo 16 × 1,2; grade de 8; tap 44/48 e gap 8; cores 2+1 com rampa e dark; motion conforme a seção 13, 1.3–1.4) no Tailwind e em CSS vars; `<MotionConfig reducedMotion="user">`; shell do PWA (tab bar de 5, stack, Drawer com snap, safe areas, `body { position: relative }`); shell web (sidebar 220–260 ↔ rail 56–64, topbar, ⌘K); breakpoints 375/768/1024/1280/1440/1920; CI com Lighthouse, axe-core e Playwright em 6 viewports; decisão sobre Tailwind v3 × v4 (o v4 exige Safari 16.4+).
+- **Entregáveis:** tokens (tipo 16 × 1,2; grade de 8; tap 44/48 e gap 8; cores 2+1 com rampa e dark; motion conforme a seção 13, 1.3–1.4) no Tailwind e em CSS vars; `<MotionConfig reducedMotion="user">`; shell do PWA (tab bar de 5 como hipótese validada em teste (D5), stack, Drawer com snap, safe areas, `body { position: relative }`); shell web (sidebar 220–260 ↔ rail 56–64, topbar, ⌘K); breakpoints 375/768/1024/1280/1440/1920; CI com Lighthouse, axe-core e Playwright em 6 viewports; decisão sobre Tailwind v3 × v4 (o v4 exige Safari 16.4+).
 - **Critérios de pronto:** checklist itens 1–10, 16–25, 30–33 e 36–37 = sim; nenhum alvo abaixo de 44 px no PWA; contraste AA nos dois temas; Lighthouse sem regressão; reduced motion comprovado por emulação.
 
 **Sprint 2 (dias 31–60): Fluxos críticos**
@@ -619,7 +629,7 @@ Fonte: 9F. Use a aba /videos, porque os links de vídeos individuais não foram 
 - **Critérios de pronto:** itens 11–15, 26–29 e 40–56 = sim; teste de usabilidade com 5 usuários (incluindo baixa visão ou dificuldade motora) sem bloqueio crítico; métricas definidas (CASTLE no gestor, HEART no cliente); LCP ≤ 2,5 s, INP ≤ 200 ms e CLS ≤ 0,1 em mobile com throttling.
 
 **Sprint 3 (dias 61–90): Diferenciação**
-- **Entregáveis:** identidade aplicada (acento ≤ 10%, raios concêntricos, ícones de uma grade só); motion system documentado por evento; microinterações (press, copiar → check, sucesso em 470 ms, segurar para confirmar); transições (push/pop com swipe-back, pílula de 250–350 ms); gestos (swipe actions, pull de 0,35); animação de dados (números rolando, stagger de 100 ms); tema por cliente via token de acento validado; vidro só na tab bar com fallback; Storybook da camada iOS; empacotamento Capacitor com Haptics e teste em iOS e Android reais.
+- **Entregáveis:** identidade aplicada (acento ≤ 10%, raios concêntricos, ícones de uma grade só); motion system documentado por evento; microinterações (press, copiar → check, sucesso em 470 ms, segurar para confirmar); transições (push/pop com swipe-back, pílula de 250–350 ms); gestos (swipe actions, pull de 0,35); animação de dados (números rolando, stagger de 100 ms); tema por cliente só via token de acento com contraste ≥ 4,5:1 validado automaticamente (D7: fora do piloto); vidro só na tab bar com fallback; Storybook da camada iOS; empacotamento Capacitor com Haptics e teste em iOS e Android reais.
 - **Critérios de pronto:** itens 34–35, 38–39 = sim, e a auditoria completa da seção 14 com 56/56 ou exceções justificadas; 60 fps em celular médio (sem quadros acima de 16,7 ms nas transições principais); revisão com `ext-impeccable` e `design:accessibility-review` sem achado grave; decisão registrada sobre o plano B do Ionic (acionar só se as transições da camada própria não passarem no teste em dispositivo).
 
 ### (h) Critérios de escolha e recomendação FINAL: shadcn/ui × Ionic React × Mantine × HeroUI × componentes próprios
@@ -667,7 +677,7 @@ Fonte: 9F. Use a aba /videos, porque os links de vídeos individuais não foram 
 - **YouTube:** não há links de vídeos individuais (9F).
 - **Newsletters:** foram verificadas 10 de 15. Falta newsletter de UX e comunidade de motion de UI (9F).
 - **Facebook:** Ionic Brasil, Motion Designers (privado) e WCAG A11y (privado) foram vistos só no cartão de busca (9F).
-- **Conflitos entre fontes** registrados neste documento: escala 1,2 × 1,25 (`ux-patterns`); gauge e anel × NN/g (seção 4); seletor de tema próprio × Apple (1.10); duração de press de 160 ms (`ui-motion`) × microinteração de 90–120 ms (Carbon) e < 150 ms para o frequente (Atlassian). Pela regra de prioridade valem os tokens das skills, com o feedback começando em 0 ms. Toast que some sozinho × Apple ("evitar elementos que se auto-dispensam"): o erro fica até ser reconhecido, e info e warning precisam de pausa no hover.
+- **Conflitos entre fontes** registrados neste documento: escala 1,2 × 1,25 (`ux-patterns`); gauge e anel × NN/g (seção 4, D4); seletor de tema próprio × Apple (1.10, D6); duração de press de 160 ms (`ui-motion`) × microinteração de 90–120 ms (Carbon) e < 150 ms para o frequente (Atlassian) (D2, D3). Pela regra de prioridade valem os tokens das skills, com o feedback começando em 0 ms. Toast que some sozinho × Apple ("evitar elementos que se auto-dispensam"): o erro fica até ser reconhecido, e info e warning precisam de pausa no hover.
 - **Prints:** as rodadas citam pastas `prints-9A`…`prints-9E`, mas elas **não estão em `docs/achados/`** neste checkout.
 
 ---

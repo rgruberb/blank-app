@@ -30,15 +30,15 @@ Regras de UX que dá para testar numa tela real, tiradas de 14 reels (@motion_ui
 
 **Botão primário**
 - Altura ≥ **44px** (alvo 48), padding lateral 24px, área de toque ≥ 44px mesmo que o visual seja menor.
-- Label 17px semibold, sentence case, **verbo + objeto** ("Add to cart", nunca "Submit/OK").
+- Label 16 ou 19px semibold (escala 1,2; a fonte usa 17), sentence case, **verbo + objeto** ("Add to cart", nunca "Submit/OK").
 - Contraste do label ≥ **4.5:1** e da borda ≥ **3:1**. Fill cinza a 1.6:1 some.
 - Um primário por tela; Cancel como ghost. Pill: radius = altura ÷ 2; no máximo 1 ícone, a 10px do label.
-- Feedback em **100ms**, concluído em **300ms**. Loading mantém a largura e ignora o 2º clique.
+- Latência: resposta em **≤ 100ms** e estado final/spinner em **≤ 300ms** (prazo do sistema, não duração de animação; a animação segue `ui-motion`: press 160 ms, feedback em 0 ms). Loading mantém a largura e ignora o 2º clique.
 - Focus ring visível (nunca `outline: none`). Disabled diz o porquê.
 
 **Alvos e tipografia** (`references/typography-and-touch.md`)
 - Toque: **44pt** iOS, **48dp** Android; web piso **24px**, meta **44**. Cresça por padding (**20 + 12 + 12 = 44**), **~8px** entre alvos pequenos.
-- Fonte: **uma** escala por projeto: `16 × 1,2^n` (16, 19, 23, 28, 33, 40, 48) para produto denso **ou** Major Third `16 × 1,25^n` (12,8, 16, 20, 25, 31, 39, 49) para site/editorial (a divisão por tipo de produto é complemento). Line-height **1,5** no corpo caindo até **1,1** nos títulos grandes; tracking **−0,02em** em títulos, **+0,05–0,06em** em caps; linha de **45–75** caracteres (`50–60ch`).
+- Fonte: **uma** escala por projeto: `16 × 1,2^n` (16, 19, 23, 28, 33, 40, 48) para produto denso **ou** Major Third `16 × 1,25^n` (12,8, 16, 20, 25, 31, 39, 49) para site/editorial (a divisão por tipo de produto é complemento). Line-height **1,5** no corpo caindo até **1,1** nos títulos grandes; tracking **−0,02em** em títulos, **+0,05–0,06em** em caps; linha de **45–75** caracteres (45–60 em formulários), token `--measure: 50ch` (`typography-and-touch.md` §2b).
 - Espaçamento: grade de **8** (8, 16, 24, 32, 48, 64), **4** só para micro; nada de 13 ou 27px.
 - Arraste que muda valor mostra o resultado antes de soltar ("Drag to extend · 4 nights", `components-checklists.md` §8).
 - Contraste: texto e placeholder **4,5:1**; texto grande (24px ou 19px bold), ícones e bordas **3:1**; scrim em texto sobre foto.

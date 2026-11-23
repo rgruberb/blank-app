@@ -289,7 +289,7 @@ como usar num painel de gestor e num de cliente. Tudo marcado "(complemento)" é
 | | **gestor** (opera, acompanha a equipe) | **cliente** (acompanha o próprio resultado) |
 |---|---|---|
 | pergunta | "quem/qual área está atrás da meta e o que faço agora?" | "como estou indo e o que falta para o próximo marco?" |
-| métrica de progresso | % da equipe/área no prazo (gauge "92% TODAY"), checklists por ordem de serviço | 1 meta pessoal grande (anel), marco seguinte com prazo |
+| métrica de progresso | % da equipe/área no prazo em barras horizontais (painel operacional: sem gauge, §11), checklists por ordem de serviço | 1 meta pessoal grande (anel), marco seguinte com prazo |
 | ranking | sim, entre equipes/talhões/vendedores, com filtro e ordenação por risco (como a saúde `DfV39ohhwAC`) | evitar ranking contra outros clientes; no máximo "você vs. sua média" |
 | badges/níveis | atribuídos pelo gestor ou automáticos; visíveis como chips na lista da equipe | nível/tier do cliente como chip no header; conquistas em histórico |
 | streaks | por equipe (dias sem atraso), discreto | pessoal, visível no topo da home |
@@ -410,7 +410,7 @@ horizontais de uso).
 número e **uma** meta não pede comparação, pede "quanto falta" — aí o arco funciona como moldura do número. O problema
 é usar arco/fatia para **comparar** (categorias, períodos, equipes).
 
-**Critério (vale para gestor e cliente):**
+**Critério** (a linha do gauge/anel vale só fora de painel operacional de uso diário, que fica em barras/linhas; padrão 17):
 | Pergunta do card | Use | Não use |
 |---|---|---|
 | "Quanto falta para a meta?" (1 número, 1 meta: progresso, score, ocupação, % do dia) | gauge/anel **com o valor numérico ao lado ou no centro** + meta/fração em texto ("5/6 · 83%", "730 · Excellent") | anel sem número; anel com 3+ séries para comparar |
@@ -423,7 +423,7 @@ número e **uma** meta não pede comparação, pede "quanto falta" — aí o arc
 - **Cor nunca é o único sinal**: todo delta leva sinal (+/−) ou seta; todo status leva palavra ou ícone; séries têm
   rótulo direto ou padrão (tracejado, hachura — como as barras hachuradas de `DftsSH-jnfs_1`).
 - No máximo **1 gauge/anel por card e 1–2 por tela**; o resto do painel em barras/linhas. Em painel **operacional**
-  (decisão imediata) prefira barras; em painel de **cliente/vitrine** um anel-hero de meta é aceitável.
+  (decisão imediata, uso diário) **sem gauge/anel**: barras/linhas; em painel de **cliente/vitrine** um anel-hero de meta é aceitável.
 - Anéis concêntricos de "mix" (Crop Mix, Energy Mix, "By project") (complemento): troque por barra empilhada ou
   barras horizontais quando o usuário precisar comparar as partes; mantenha o anel só se a leitura for "total + 1 destaque".
 - Escala de cor sequencial (heatmap, matriz de risco) só com o **número dentro da célula** ou legenda de faixas.

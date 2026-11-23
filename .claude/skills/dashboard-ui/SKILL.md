@@ -66,7 +66,7 @@ Também use para: "tela de login com vidro", "dashboard gamificado", "painel do 
 10. **Progresso como linguagem** (base para gamificação): gauges que enchem, anéis N/M, checklists segmentados,
     números que contam. Nenhuma referência tem pontos/badges/ranking explícitos — esses blocos estão em
     `layout-patterns.md` §7 marcados como complemento. Gauge/anel só para **1 número com meta**, sempre com o valor
-    numérico visível (padrão 17).
+    numérico visível e fora de painel operacional (padrão 17).
 11. **O acento marca o que pede ação ou bate a meta**, não o maior número: KPI "Overdue" cheio de coral contra 3 neutros
     (Ember V29), barras acima da linha de meta tracejada em laranja e abaixo em cinza (vendas), célula de risco
     selecionada só com contorno no acento. Período anterior = linha **tracejada** neutra, não uma 2ª cor.
@@ -90,7 +90,9 @@ Também use para: "tela de login com vidro", "dashboard gamificado", "painel do 
     1 número com meta** (progresso, score, ocupação) com o valor numérico ao lado ou no centro e a meta em texto
     ("5/6 · 83%"); **comparação entre categorias → barras** ordenadas; **tendência → linha/área** (anterior tracejado);
     composição → barra empilhada única. **Cor nunca é o único sinal**: delta com +/− ou seta, status com palavra/ícone,
-    séries com rótulo direto ou padrão. Máx. 1–2 gauges por tela. Tabela e exemplos em `layout-patterns.md` §11.
+    séries com rótulo direto ou padrão. Máx. 1–2 gauges por tela. **Painel operacional de uso diário (decisão imediata):
+    sem gauge/anel**, só barras/linhas; o anel de meta fica para painel/app de acompanhamento (score, meta pessoal,
+    vitrine). Tabela e exemplos em `layout-patterns.md` §11.
 
 ## Paleta: escuro vs claro
 - **Escuro neutro-quente** (saúde, tasks): fundo `#0b0c0e`, cards `#151618`–`#1b1c1e`, borda 1px `rgba(255,255,255,.06)`,
@@ -116,7 +118,7 @@ Também use para: "tela de login com vidro", "dashboard gamificado", "painel do 
 - **Claro pastel com gradiente** (CreditPros `DfaQe-CiBfJ_1`): branco → pêssego → verde-claro, ✓ em limão `#D4F53C`.
 - **Claro + 1 acento** (Deuce `Dfus5sWFAov_1` verde-oliva `#7A9A3A`; MediCore `DfUWa0jAed7_1` azul `#3B82F6`).
 - Ofereça os dois temas quando o painel for uso diário (varejo e seguros mostram dark + light do mesmo produto,
-  com a troca animada).
+  com a troca animada): web app com seletor Claro/Escuro/Sistema; app nativo/PWA segue o sistema (`mobile-app-ui` §14).
 
 ## Receita de glassmorphism (série @code.xr + smart home)
 Funciona **só sobre um fundo com conteúdo** (foto de interior, ondas 3D, gradiente vivo). Sobre fundo liso vira cinza.

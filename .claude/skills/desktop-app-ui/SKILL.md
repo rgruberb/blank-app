@@ -69,8 +69,8 @@ indicado na tabela "Onde está o resto".
   **Divergência registrada:** o Material corta em 840 e 1200, esta skill em 1024 e 1280. Mantenha **1024/1280/1440/1920**
   como pontos de **teste** (larguras reais de notebook/monitor) e use os cortes do Material para decidir **quantos
   painéis e qual navegação**: entre 840 e 1023 a janela já é "expanded" — não quebre para layout de celular, use rail
-  + 1 painel. Linha de texto: Material pede **40–60 caracteres** (ux-patterns: 45–75); em formulários e texto corrido
-  fique em 45–60.
+  + 1 painel. Linha de texto: Material pede **40–60 caracteres**; regra das skills: 45–75 no texto corrido e **45–60
+  em formulários**, token `--measure: 50ch` (`ux-patterns` `typography-and-touch.md` §2b).
 
 **3. Densidade**
 - Escala tipográfica **16 × 1,2^n** (16, 19, 23, 28, 33, 40, 48) para produto denso; 1,25 fica para site/editorial
@@ -131,11 +131,12 @@ indicado na tabela "Onde está o resto".
 **9. Motion contido em tela aberta por horas**
 - Anime troca de página, item ativo, troca de tema e o elemento-assunto; **nunca loops decorativos**
   (`dashboard-ui` anti-padrões). Pílula ativa que desliza **250–350ms** ease-out (`micro-interactions.md` §13).
-- Feedback de botão em **100ms**, concluído em **300ms**; Doherty **< 400ms** (`ux-patterns`).
-- Referência oficial de ferramenta de trabalho (Carbon, 9A): estilo **productive** por padrão, **expressive** só em
-  momentos raros; microinteração **90–120 ms** ease-out; painel lateral que sai mas fica "por perto" usa curva
-  standard, não exit. Os tokens de `ui-motion` continuam valendo; Carbon serve de checagem
-  (`../ui-motion/references/official-motion-guidelines.md`).
+- Latência do botão: resposta em **≤ 100ms** e estado final/spinner em **≤ 300ms** (prazo do sistema, não duração
+  de animação); Doherty **< 400ms** (`ux-patterns` `components-checklists.md` §1).
+- Web app e ferramenta de trabalho usam **os mesmos tokens e a mesma curva de `ui-motion`** do app mobile; onde
+  `ui-motion` não tem número, micro = **80 ms** de `transitions-dev`. Carbon (9A) fica só como referência
+  comparativa: productive por padrão, expressive raro, microinteração 90–120 ms, painel lateral que fica "por perto"
+  usa curva standard, não exit (`../ui-motion/references/official-motion-guidelines.md`).
 - Telas de trabalho repetitivo (tabela, formulário, settings): só feedback de estado, sem scroll reveal
   (`ui-motion` `scroll-and-screen-transitions.md` §2, complemento). Toasts: canto **inferior direito** no desktop,
   info 4s, warning 7s, erro até reconhecer, máx. 3, pausa no hover (`micro-interactions.md` §9).
@@ -146,9 +147,10 @@ indicado na tabela "Onde está o resto".
   (padrão 11). Cor do delta pelo sentido bom/ruim, não pelo sinal (padrão 16).
 
 **11. Dark mode**
-- Ofereça os dois temas em painel de uso diário (`dashboard-ui` "Paleta"). Sem `#000` (ex.: `#0C1424` ou `#0b0c0e`),
+- Web app de uso diário: os dois temas com seletor **Claro / Escuro / Sistema** (padrão = Sistema). App nativo/PWA
+  segue o tema do sistema, sem seletor (`mobile-app-ui` §14). Sem `#000` (ex.: `#0C1424` ou `#0b0c0e`),
   texto a **87%**, accent clareado, elevação por luminosidade, borda 1px `rgba(255,255,255,.06)`
-  (`typography-and-touch.md` §4). Siga o tema do SO por padrão **(complemento)**.
+  (`typography-and-touch.md` §4).
 
 **12. Performance percebida**
 - Skeleton no lugar de tela vazia, optimistic UI, streaming de IA token a token, debounce na busca, virtualização,
@@ -158,8 +160,8 @@ indicado na tabela "Onde está o resto".
 
 **13. Dashboards e abas (NN/g, 9B)**
 - Defina se o painel é **operacional** (decisão imediata, uma tela) ou **analítico** (exploração).
-- Valor por **comprimento (barras)** e **posição 2D (linhas, dispersão)**; **evite gauge, pizza, donut, treemap e 3D**
-  em leitura rápida (print `../ux-patterns/assets/visual-refs/9B_dashboards_linha-e-barras_1.jpg`). Cor para **categoria**, não magnitude; nunca o único
+- Valor por **comprimento (barras)** e **posição 2D (linhas, dispersão)**; **sem gauge, pizza, donut, treemap e 3D**
+  em painel operacional de uso diário (anel de meta só fora dele, critério em `dashboard-ui` padrão 17) (print `../ux-patterns/assets/visual-refs/9B_dashboards_linha-e-barras_1.jpg`). Cor para **categoria**, não magnitude; nunca o único
   sinal (~8% dos homens têm daltonismo). Gráficos com a skill `dataviz`; padrões em `dashboard-ui`.
 - Abas: separe **abas de navegação** de **abas internas** e não misture; 1 nível; rótulos de 1–2 palavras, sem caixa-alta;
   **≥ 2 indicadores** de seleção (linha + negrito/fundo); não selecionadas legíveis; mais usada primeiro; teclado e ARIA.
@@ -225,7 +227,7 @@ indicado na tabela "Onde está o resto".
 | Par tipográfico | `../design-direction/references/typography-pairing.md` |
 | Padrões detalhados desta skill | `references/desktop-patterns.md` |
 | Pesquisa NN/g completa (tabelas, dashboards, abas, empty state, CASTLE) | `../ux-patterns/references/nng-research.md` |
-| Bibliotecas (shadcn, Radix, React Aria, Mantine, HeroUI…) × React 18 e a recomendação | `references/component-libraries.md` |
+| Bibliotecas (shadcn, Radix, React Aria, Mantine, HeroUI…): critérios e recomendação condicionada ao stack | `references/component-libraries.md` |
 | Onde buscar inspiração (Dribbble, Behance, kits Figma, shadcn blocks) e prints da pesquisa 9 | `references/benchmark-sources.md` |
 | Quais imagens abrir | `references/visual-index.md` |
 

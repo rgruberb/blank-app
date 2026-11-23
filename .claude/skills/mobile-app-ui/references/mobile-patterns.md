@@ -198,6 +198,7 @@ Imagens: escolha em `visual-index.md` antes de abrir qualquer uma.
 ## 14. Gamificação mobile
 - O que as fontes mostram é **progresso e meta**, não pontos/badges: gauge que enche, anel **N/M** (Tasks 3/8),
   checklist segmentado **3/4**, mini-anéis de conquista ("Vitamins 9/12"), grade ✓/✕ de meses (base de streak).
+  Anel/gauge só para **1 número com meta**, com o valor visível, no máximo 1–2 por tela (`dashboard-ui` padrão 17).
 - Goal gradient: comece com progresso dado (cartão 8 vazios → 10 com 2 dados: **19% → 34%**).
 - Streak (complemento): 7 pontos (dias) no topo da home, preenchidos no accent; nunca "quebra" para pressionar compra.
 - Celebração = 1 animação curta, uma vez (estrelas **100ms** separadas com pop; confetti 18 peças), reduced motion

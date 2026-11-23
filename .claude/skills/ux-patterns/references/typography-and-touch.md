@@ -53,7 +53,7 @@ Tokens da fonte (resumidos): `--text-0: 16px` … `--text-6: 48px`; `body` 16/1,
 
 **Divergências com o que já está na skill (registrar, não apagar):**
 - `DfPJo9UBJ7D` (`dark-patterns.md` §C) usa a hierarquia **40/24/18/14**. Só 40 cai na escala 1,2; 24, 18 e 14 não. As duas fontes concordam em "1 família, poucos pesos, hierarquia por tamanho"; divergem nos valores. Escolha **uma** escala por projeto e não misture.
-- Botão primário com label **17px** (`Ddy5RJOha1U`) e ⌘K com input **26px / detalhes 14px** (`DeUr5-AhdvQ`) também ficam fora da escala 1,2. **(complemento)**: em componentes, arredonde para o degrau vizinho (17 → 16 ou 19; 26 → 28) se o projeto adotar a escala; se seguir a escala nativa iOS (17pt corpo), mantenha a nativa e não misture as duas.
+- Botão primário com label **17px** (`Ddy5RJOha1U`) e ⌘K com input **26px / detalhes 14px** (`DeUr5-AhdvQ`) também ficam fora da escala 1,2. **(complemento)**: em componentes, arredonde para o degrau vizinho (17 → 16 ou 19; 26 → 28) se o projeto adotar a escala; app web/PWA usa a mesma escala do produto (1,2, corpo 16) para manter um só sistema; o corpo 17pt é referência do nativo iOS. Não misture as duas.
 
 ### 2b. Escala 1,25 (Major Third): duas fontes novas, rodadas 1 e 2
 **`DfRucYFjrac` (@designmotionhq, carrossel de 8 folhas, rodada 2).** O **mesmo autor** do `DfjxqzkCrUI` (razão 1,2), agora com outra razão. Gancho: "Type that looks designed is mostly four numbers."
@@ -79,6 +79,8 @@ Conferência da rodada: as contas batem. Erro menor do slide: a última razão "
 | Medida | 45–75 car., `60ch` | `50ch` ≈ 66–71 car., teto ~75 | 45–75 car. |
 
 Leitura: o mesmo perfil publicou as duas razões, então nenhuma é "a regra" dele. Todas concordam em **uma razão só, line-height caindo com o tamanho, tracking negativo em título e teto de ~75 caracteres**. **(complemento)** Como escolher: **1,2** para produto denso (dashboard, app, muitos níveis em tela pequena: saltos menores); **1,25** para site, landing e conteúdo editorial (mais contraste entre níveis). Escolha **uma** por projeto e registre nos tokens. O tracking caps de 0,05 ou 0,06em é diferença de ajuste fino: comece em 0,05em e ajuste a olho. Na escala 1,25, os componentes de §2 também ficam fora (17px do botão → 16 ou 20; 26px do ⌘K → 25).
+
+**Regra da skill para medida:** token `--measure: 50ch` como teto (≈ 66–71 caracteres na fonte de `DfRucYFjrac`; `ch` muda com a fonte, então conte). A regra vale em **caracteres**: **45–75** no texto corrido e **45–60** em formulários. `60ch` passa de 75 caracteres em muitas fontes.
 
 ### 2c. Escalas oficiais: Apple e Material 3 (rodada 9A)
 - **Apple HIG (iOS/iPadOS)**: corpo padrão **17 pt**, mínimo **11 pt** (macOS 13/10; watchOS 16/12; visionOS 17/12). Texto deve poder crescer **200%**. Evitar pesos **Ultralight, Thin e Light**; preferir Regular, Medium, Semibold, Bold; fonte fina pede tamanho maior. Tracking do SF Pro varia por tamanho (17 pt −26/1000 em; 28 pt +14; 11 pt +6). Tabela capturada só no tamanho "xSmall" de Dynamic Type (Large Title 31, Body 14), **não** no padrão "Large": não use como escala.
@@ -140,6 +142,6 @@ App fitness: "93%" (Workout Quality), "89%" (progresso semanal), "68%" (treino) 
 - [ ] Tamanhos de fonte vêm de **uma** escala (16 × 1,2^n **ou** 16 × 1,25^n, nunca as duas); nenhum tamanho "solto".
 - [ ] Espaçamentos em múltiplos de 8 (4 só em micro); exceções justificadas.
 - [ ] Line-height 1,5 no corpo caindo até 1,1 nos títulos grandes; tracking −0,02em em títulos grandes e +0,05–0,06em em caps.
-- [ ] Parágrafos com `max-width` entre `50ch` e `60ch` (conte: 45–75 caracteres).
+- [ ] Parágrafos com `max-width: var(--measure)` (`50ch`) e contagem real de 45–75 caracteres (45–60 em formulários).
 - [ ] Contraste: 4,5:1 texto e placeholder, 3:1 texto grande, ícones e bordas; scrim em texto sobre foto.
 - [ ] Dark mode: sem #000, texto ~87%, accent clareado, elevação por luminosidade.
