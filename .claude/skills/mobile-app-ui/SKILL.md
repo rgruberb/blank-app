@@ -1,6 +1,6 @@
 ---
 name: mobile-app-ui
-description: UI/UX de app mobile (iOS e Android nativo, React Native, Flutter, PWA instalável e a versão mobile de web apps) com números concretos — alvos 44pt/48dp e 8px entre alvos, zona do polegar, tab bar de 3–5 itens, stack, modal e bottom sheet, safe areas, Dynamic Type, gestos e haptics, press 95%, pull-to-refresh 35%, springs, large title 34→18, teclado e formulários, estados offline/carregando, listas e infinite scroll, rodapé fixo com total, Buy/Sell fixos, convenções HIG vs Material, 60fps e dark mode. Aponta para as references e imagens de ui-motion, ux-patterns, dashboard-ui e design-direction. Use quando falarem em "app de celular", "app mobile", "iOS", "Android", "React Native", "Flutter", "PWA", "tab bar", "bottom sheet", "tela de app", "gestos", "swipe", "safe area", "notch", "Dynamic Island", "haptic", "onboarding do app", "checkout no app", "app fitness/finanças" ou "versão mobile".
+description: UI/UX de app mobile (iOS e Android nativo, React Native, Flutter, PWA instalável e a versão mobile de web apps) com números concretos — alvos 44pt/48dp e 8px entre alvos, zona do polegar, tab bar de 3–5 itens, stack, modal e bottom sheet, safe areas, Dynamic Type, gestos e haptics, press 95%, pull-to-refresh 35%, springs, large title 34→18, teclado e formulários, estados offline/carregando, listas e infinite scroll, rodapé fixo com total, Buy/Sell fixos, convenções HIG vs Material (sheet detents, navigation rail), PWA vs nativo, permissões e onboarding (NN/g), 60fps e dark mode. Aponta para as references e imagens de ui-motion, ux-patterns, dashboard-ui e design-direction. Use quando falarem em "app de celular", "app mobile", "iOS", "Android", "React Native", "Flutter", "PWA", "tab bar", "bottom sheet", "tela de app", "gestos", "swipe", "safe area", "notch", "Dynamic Island", "haptic", "onboarding do app", "checkout no app", "app fitness/finanças" ou "versão mobile".
 ---
 
 # Mobile App UI
@@ -8,7 +8,9 @@ description: UI/UX de app mobile (iOS e Android nativo, React Native, Flutter, P
 Skill de **plataforma**: traz só o que é específico do celular e aponta para as skills de **tema** (`ui-motion`,
 `ux-patterns`, `dashboard-ui`, `design-direction`), que continuam sendo a base. Não copie de lá: abra a seção indicada.
 Os números vêm dessas skills (reels e carrosséis listados nos `visual-index.md` delas). O que está marcado
-**(complemento)** é conhecimento geral (Apple HIG, Material 3, WCAG), não vem das fontes.
+**(complemento)** é conhecimento geral (WCAG, prática de mercado), não vem das fontes. Regras de Apple HIG, Material 3
+e NN/g lidas nas páginas oficiais (pesquisa 9A/9B, nov/2026) vêm com a fonte citada; **[PWA]** = vale no PWA/Capacitor,
+**[nativo]** = só em app nativo (SwiftUI/UIKit/Compose).
 
 ## Escopo e fronteiras
 - **Esta skill:** apps de celular iOS/Android (SwiftUI, UIKit, Compose, React Native, Expo, Flutter), PWA instalável
@@ -101,6 +103,10 @@ momentum ~1000px; stagger 70/100ms; expand **ease-out 350ms**; sucesso **470ms**
 acima do teclado** (`KeyboardAvoidingView`, `visualViewport`, `adjustResize` — complemento). Label a **8px** do campo e
 **24px** do próximo; label flutuante 20 → 14px; OTP com dígitos caindo **70ms**; medidor de senha em 4 segmentos;
 Postel (1/4 → 4/4 formatos aceitos), Tesler/Parkinson (31 → 16 e 30 → 7 teclas: CEP primeiro). `ux-laws.md`, `micro-interactions.md` §5–6.
+NN/g (9B): **coluna única**, **sem placeholder no lugar de rótulo**, "(opcional)" marcado, validar **só depois que o
+campo termina**, erro **ao lado do campo** com cor + ícone, ajuda extra após **3 erros** repetidos; botão de enviar
+**abaixo dos campos** (nunca no topo, padrão iOS que falha em teste) ou **fixo no rodapé**; senha: mostrar/ocultar,
+regras antes, sem campo de confirmação duplicado; digitar senha no celular leva ~2× mais tempo → login social/biometria/código.
 
 **10. Estados: carregando, vazio, erro, offline.** Feedback ≤ **400ms** (Doherty); título primeiro, nunca 2 s em
 branco. Skeleton para conteúdo, barra/anel com % quando se sabe, spinner só < 3 s, loader **dentro do botão** para ação
@@ -118,7 +124,7 @@ Virtualize listas longas. Próximo card **espia 32%** em carrossel horizontal (C
 com detents, SF Pro, cantos contínuos (squircle, `micro-interactions.md` §1). Android (Material 3): navigation bar
 embaixo (3–5), top app bar, back do sistema/predictive back, FAB para a ação principal, bottom sheet com handle,
 Roboto/fonte da marca, ripple. Cross-platform (RN/Flutter): siga a plataforma em navegação, back e controles nativos
-(switch, picker, date); a marca entra em cor, tipo, ilustração e motion. Detalhes em `ext-impeccable` (`reference/ios.md`, `reference/android.md`).
+(switch, picker, date); a marca entra em cor, tipo, ilustração e motion. Detalhes em `ext-impeccable` (`reference/ios.md`, `reference/android.md`). **Web/PWA com cara de iOS:** shadcn (Base UI) + Tailwind + Motion e uma camada própria de **tab bar, título grande que colapsa, sheet com snap points e push/pop com swipe-back**; Ionic React como plano B no Capacitor (`references/component-libraries.md`, pesquisa 9D).
 
 **13. Performance e 60fps.** Anime só `transform`/`opacity`; nada de animar `width/height/top` em lista; parallax
 decorativo em mobile não (`scroll-and-screen-transitions.md` §2–3). Imagens WebP/AVIF com lazy load, listas
@@ -178,6 +184,11 @@ segundo o HIG (9A). Bibliotecas e camada iOS própria: `references/component-lib
 - [ ] Lista: pull-to-refresh, back restaura posição, "End of results", virtualização.
 - [ ] Dark mode sem #000, texto 87%, contraste AA; reduced motion respeitado.
 - [ ] Total do rodapé bate com o valor do botão; Buy e Sell do mesmo tamanho.
+- [ ] Sem pesos Ultralight/Thin/Light no texto; corpo ≥ 17pt iOS (piso 11pt).
+- [ ] Sheet: 1 por vez, detents medium/large com grabber, Cancel+Done (nunca os três), confirma ao descartar.
+- [ ] Nenhum pedido de cadastro/permissão antes de entregar valor; permissão no contexto com motivo e caminho de volta.
+- [ ] Cada regra marcada [PWA]/[nativo] conferida na plataforma real (Liquid Glass, Dynamic Type, SF Symbols só nativos).
+- [ ] Largura ≥ 600dp (tablet/paisagem): bar → navigation rail, sheet → menu (`desktop-app-ui` breakpoints).
 
 ## Workflow
 1. **Plataforma e stack**: iOS, Android, os dois (RN/Flutter) ou web mobile/PWA? Defina o que segue a plataforma
@@ -226,6 +237,10 @@ segundo o HIG (9A). Bibliotecas e camada iOS própria: `references/component-lib
 | Layout que parece seguro (2 telas mobile) | `design-direction/references/layers-and-trust-layout.md` §2 |
 | Protótipo de app mobile no Claude Design | `design-direction/references/claude-design-course.md` "Mobile App Prototype" |
 | Padrões de tela deste skill e imagens mobile | `references/mobile-patterns.md`, `references/visual-index.md` |
+| Pesquisa NN/g completa (onboarding, empty state, formulários, permissões, HEART/CASTLE) | `ux-patterns/references/nng-research.md` |
+| Bibliotecas (shadcn, Ionic, Framework7…) × React 18/PWA/Capacitor; camada iOS própria | `references/component-libraries.md` |
+| Onde buscar inspiração (Mobbin 🔒, Dribbble, Behance, kits Figma) e prints da pesquisa 9 | `references/benchmark-sources.md` |
+| Durações/easing oficiais (Apple sem números, Material springs → CSS, Carbon), Reduce Motion, `MotionConfig` | `ui-motion/references/official-motion-guidelines.md` (os tokens de `ui-motion` prevalecem) |
 
 ## Skills externas (dependências)
 Esta skill pode delegar para: `ext-playwright-cli`, `ext-impeccable`, `ext-transitions-dev`. Elas **não** fazem parte

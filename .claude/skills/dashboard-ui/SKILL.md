@@ -1,6 +1,6 @@
 ---
 name: dashboard-ui
-description: Galeria de referências e padrões visuais para dashboards e web apps — SaaS, varejo, kanban, CRM, saúde, logística, fintech/crédito, investimento/trading, apps de score (fitness, finanças pessoais), fluxos de pedido em etapas e "OS" operacionais sobre foto aérea — com folhas de contato e prints em assets/visual-refs, receita de glassmorphism e padrões de gamificação (progresso, metas, níveis, ranking) para painel de gestor e de cliente. Use ao "criar dashboard", "painel admin", "tela de analytics", "KPI cards", "sidebar de app", "kanban", "glassmorphism", "dashboard fintech", "dashboard de saúde", "app fitness", "score de crédito", "app de investimento/trading", "card de ticker", "gamificação", "painel com metas", "acompanhamento de pedido" ou ao revisar hierarquia, paleta e densidade de um painel existente.
+description: Galeria de referências e padrões visuais para dashboards e web apps — SaaS, varejo, kanban, CRM, saúde, logística, fintech/crédito, investimento/trading, apps de score (fitness, finanças pessoais), fluxos de pedido em etapas e "OS" operacionais sobre foto aérea — com folhas de contato e prints em assets/visual-refs, receita de glassmorphism e padrões de gamificação (progresso, metas, níveis, ranking) para painel de gestor e de cliente. Use ao "criar dashboard", "painel admin", "tela de analytics", "KPI cards", "sidebar de app", "kanban", "glassmorphism", "dashboard fintech", "dashboard de saúde", "app fitness", "score de crédito", "app de investimento/trading", "card de ticker", "gamificação", "painel com metas", "acompanhamento de pedido", "gauge ou barras?", "que gráfico usar" ou ao revisar hierarquia, paleta e densidade de um painel existente.
 ---
 
 # dashboard-ui
@@ -51,7 +51,8 @@ Também use para: "tela de login com vidro", "dashboard gamificado", "painel do 
    barra de progresso fina, avatar e data.
 7. **Gráficos com "personalidade" sóbria**: gauge de ticks (saúde), barras de ticks empilhados estilo equalizador,
    heatmap de coorte em triângulo (SaaS), funil em barras, anéis de atividade (tasks), dial de termostato e grade de
-   agenda (smart home). Sempre um destaque, o resto neutro.
+   agenda (smart home). Sempre um destaque, o resto neutro. **Atenção:** gauges, donuts e anéis aqui são escolha
+   estética das referências; para leitura rápida o NN/g prefere barras/linhas — critério no padrão 17.
 8. **Movimento funcional, não decorativo**: troca de tema com `startViewTransition` + clip-path em círculo
    a partir do botão; pílula ativa que desliza com borda dianteira rápida e traseira atrasada (GSAP);
    **troca de página com o conteúdo desfocando e voltando** (SaaS, orçamento, smart home, V7/V8);
@@ -64,7 +65,8 @@ Também use para: "tela de login com vidro", "dashboard gamificado", "painel do 
    acento trocado por domínio.
 10. **Progresso como linguagem** (base para gamificação): gauges que enchem, anéis N/M, checklists segmentados,
     números que contam. Nenhuma referência tem pontos/badges/ranking explícitos — esses blocos estão em
-    `layout-patterns.md` §7 marcados como complemento.
+    `layout-patterns.md` §7 marcados como complemento. Gauge/anel só para **1 número com meta**, sempre com o valor
+    numérico visível (padrão 17).
 11. **O acento marca o que pede ação ou bate a meta**, não o maior número: KPI "Overdue" cheio de coral contra 3 neutros
     (Ember V29), barras acima da linha de meta tracejada em laranja e abaixo em cinza (vendas), célula de risco
     selecionada só com contorno no acento. Período anterior = linha **tracejada** neutra, não uma 2ª cor.
@@ -83,6 +85,12 @@ Também use para: "tela de login com vidro", "dashboard gamificado", "painel do 
 16. **Score = número + delta + palavra + data**, dentro de faixas/arco, com 1 botão de próximo passo ("730 +6 pts
     Excellent · Updated 5 days ago"; "93% · Your Body Is Ready · Start Workout"). Cor do delta pelo sentido **bom/ruim**,
     não pelo sinal (alerta subindo nunca em verde).
+17. **Forma do gráfico pela pergunta (divergência NN/g × referências, rodada 9B).** As referências usam gauge/donut/anel
+    (gamificação, score); o NN/g recomenda **comprimento e posição** para leitura rápida. Critério: **gauge/anel só para
+    1 número com meta** (progresso, score, ocupação) com o valor numérico ao lado ou no centro e a meta em texto
+    ("5/6 · 83%"); **comparação entre categorias → barras** ordenadas; **tendência → linha/área** (anterior tracejado);
+    composição → barra empilhada única. **Cor nunca é o único sinal**: delta com +/− ou seta, status com palavra/ícone,
+    séries com rótulo direto ou padrão. Máx. 1–2 gauges por tela. Tabela e exemplos em `layout-patterns.md` §11.
 
 ## Paleta: escuro vs claro
 - **Escuro neutro-quente** (saúde, tasks): fundo `#0b0c0e`, cards `#151618`–`#1b1c1e`, borda 1px `rgba(255,255,255,.06)`,
@@ -128,6 +136,10 @@ Versão completa (login com cantos chanfrados, botão neon, item ativo em pílul
 ## Anti-padrões
 - Todos os KPIs com o mesmo peso e a mesma cor → escolha 1 principal (invertido ou maior).
 - Várias cores de destaque competindo; gradiente roxo-azul genérico sem motivo de marca.
+- **Donut/pizza/anéis concêntricos para comparar categorias ou períodos** → barras/linhas (§11). Gauge sem o número,
+  ou 3+ gauges lado a lado competindo.
+- **Cor como único sinal**: ponto verde/vermelho sem palavra, delta sem +/−, legenda de cores longe das séries,
+  heatmap sem número/faixa rotulada.
 - Gráfico 100% saturado em todas as barras: as referências deixam o histórico neutro e destacam só o "agora".
 - Glass sobre fundo chapado, blur > 40px, texto pequeno sobre vidro claro sem contraste (WCAG AA).
 - Cards todos do mesmo tamanho num grid 3x3 — as referências usam grid assimétrico.
@@ -147,7 +159,8 @@ Versão completa (login com cantos chanfrados, botão neon, item ativo em pílul
 3. Escolha estrutura (rail + top nav ou sidebar larga) e tema (claro / escuro / glass) — `references/layout-patterns.md`.
 4. Defina tokens: fundo, superfície, borda, texto 1/2/3, **uma** cor de destaque, verde/vermelho/âmbar semânticos.
 5. Monte: header → faixa de KPIs → gráfico principal + coluna lateral → tabela/lista → card de insight.
-6. Cores e marcas de gráfico: carregue a skill **`dataviz`** antes de escrever o código dos gráficos.
+6. Para cada card, escreva a pergunta e escolha a forma pelo critério do padrão 17 (`layout-patterns.md` §11).
+   Cores e marcas de gráfico: carregue a skill **`dataviz`** antes de escrever o código dos gráficos.
 7. Revise contra os anti-padrões acima e, para AI slop em dashboards, contra **`ux-patterns`** (do projeto).
    Para acabamento visual geral use **`ext-impeccable`** (audit/polish) e **`ext-taste-skill`** (anti-slop).
 
@@ -170,19 +183,22 @@ saúde escura → `DfUvP_ulPC6_2`; perfil de atleta claro → `Dfus5sWFAov_1`; s
 apresentação → `DfcdrhgFFMR_3`. Cripto web → Zentra `Dfr6X8qFPwC_2`/`_3`; crédito privado → `1A3pMvMBW2_1–_3`;
 Caféra/Verdan/Maren em componentes isolados → `Df4Shdgmafx_1`/`_2`/`_4`, `DfuhN08lTWN_3`/`_5`, `Dfr4RMBlaPH_3`/`_4`;
 app fitness → `DffCenmFASU_1`/`_4`; finanças pessoais mobile → `DfmwyDclA0Q_2`/`_4` (§22b, §27–29).
+**Barras/linhas no lugar de gauge (NN/g) → `9B_dashboards_linha-e-barras_1`**; tendência visual da tag dashboard do
+Dribbble → `ref_dribbble_dashboard-ui_1`. Posts novos das rodadas 9C/9E (Kreya, Blenz, Admin V20, metas do supervisor)
+estão só descritos em `domain-examples.md` §30.
 Os reels da rodada 3 sem imagem (vendas com meta, skeuomorfismo, Ember, fluxos @ui.pixel) estão só
 descritos em `domain-examples.md` §14–21.
 
 ## Arquivos
 - `references/visual-index.md` — tabela das 18 folhas + 4 prints da rodada 3 + 9 prints da rodada 2 (autor, URL, domínio, estilo, quando abrir)
-  e **"Perfis avaliados"** (quais contas valem como fonte, nota 1–5, inclusive inativas/inexistentes).
+  e **"Perfis avaliados"** (quais contas valem como fonte, nota 1–5, inclusive inativas/inexistentes; reconferidas na 9E).
 - `references/domain-examples.md` — descrição de cada dashboard e o que copiar dele (§14–21: rodada 3 — verificação,
   vendas com meta, crédito privado, skeuomorfismo, sidebar curva, Ember coral, trading/Borea, fluxos de app @ui.pixel;
   §22–29: fintech Orbix, CreditPros, Deuce, logística, MediCore, Code & Chill no Facebook, Caféra/Verdan/Maren em carrossel,
-  apps fitness e finanças pessoais).
+  apps fitness e finanças pessoais; §30: dashboards de criador do Dribbble e posts novos da rodada 9E).
 - `references/layout-patterns.md` — estruturas, KPI cards, gráficos, densidade, animações com código e
   §7 padrões de gamificação (gestor vs. cliente), §8 momento de decisão / card de ticker (investimento), §9 fluxos de
-  pedido em etapas, §10 dashboard fintech web e apps de score.
+  pedido em etapas, §10 dashboard fintech web e apps de score, **§11 escolha de gráfico (NN/g × gauge/anel)**.
 - `references/glassmorphism.md` — receita CSS completa da série glass.
 
 ## Skills externas (dependências)

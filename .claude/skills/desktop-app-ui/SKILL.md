@@ -1,6 +1,6 @@
 ---
 name: desktop-app-ui
-description: UI/UX específica de app desktop — tela grande, mouse e teclado: web apps SaaS, dashboards, painel admin, CRM e sistemas internos no navegador do desktop, e apps nativos/Electron/Tauri para macOS e Windows. Traz app shell (sidebar, topbar, conteúdo, painel lateral) com larguras e colapso, densidade (escala 1,2), tabela de dados, hover/foco/estados, atalhos e ⌘K, breakpoints de app 1024/1280/1440/1920, menu de contexto, drag-and-drop, multi-seleção, convenções macOS vs Windows, motion contido e acento só em alerta, apontando para as references e imagens de dashboard-ui, ux-patterns, ui-motion e design-direction. Use quando falarem em "app desktop", "web app", "SaaS", "painel admin", "sistema interno", "back-office", "Electron", "Tauri", "app para Mac/Windows", "tela com sidebar", "atalhos de teclado", "tabela de dados", "data grid", "split view" ou "menu de contexto".
+description: UI/UX específica de app desktop — tela grande, mouse e teclado: web apps SaaS, dashboards, painel admin, CRM e sistemas internos no navegador do desktop, e apps nativos/Electron/Tauri para macOS e Windows. Traz app shell (sidebar, topbar, conteúdo, painel lateral) com larguras e colapso, densidade (escala 1,2), tabela de dados, hover/foco/estados, atalhos e ⌘K, breakpoints de app 1024/1280/1440/1920, breakpoints Material 3 (compact→extra-large) e navigation rail, tabela e dashboard pelo NN/g, métricas CASTLE, menu de contexto, drag-and-drop, multi-seleção, convenções macOS vs Windows, motion contido e acento só em alerta, apontando para as references e imagens de dashboard-ui, ux-patterns, ui-motion e design-direction. Use quando falarem em "app desktop", "web app", "SaaS", "painel admin", "sistema interno", "back-office", "Electron", "Tauri", "app para Mac/Windows", "tela com sidebar", "atalhos de teclado", "tabela de dados", "data grid", "split view" ou "menu de contexto".
 ---
 
 # desktop-app-ui
@@ -15,8 +15,9 @@ indicado na tabela "Onde está o resto".
   desktop; apps nativos ou Electron/Tauri para macOS e Windows; editores e ferramentas de produtividade.
 - **Não entra:** site de marketing, landing page, portfólio e blog → **`website-ui`**. App de celular (iOS/Android,
   PWA mobile) → **`mobile-app-ui`**. Se o mesmo produto tem as três frentes, use a skill de cada superfície.
-- Regra de origem: números com autor/ID vêm das fontes das skills de tema; o que for conhecimento geral (Apple HIG
-  macOS, Fluent/Windows, WCAG, prática de mercado) está marcado **(complemento)**.
+- Regra de origem: números com autor/ID vêm das fontes das skills de tema; Material 3, Carbon e NN/g lidos nas páginas
+  oficiais (pesquisa 9A/9B, nov/2026) vêm com a fonte citada; o que for conhecimento geral (Apple HIG macOS,
+  Fluent/Windows, WCAG, prática de mercado) está marcado **(complemento)**.
 
 ## Prioridade entre skills (quando as regras conflitam)
 
@@ -45,12 +46,31 @@ indicado na tabela "Onde está o resto".
 - Painel lateral de detalhe (inspector/drawer) à direita, **320–400px** **(complemento)**; coluna direita fixa que
   persiste entre páginas aparece no CRM V8 `DfKPFDwz2aA`.
 - A ação mais comum fica fixa no topo ("+ Create New Request", logística `DftsSH-jnfs_1`).
+- **Navigation rail (Material 3, 9A)** é o equivalente oficial do rail de ícones: a barra inferior do celular **vira
+  rail** a partir de 600dp e **rail expandida** (≈ sidebar) a partir de 840dp. Troque só componentes equivalentes
+  (bar ↔ rail ↔ sidebar; bottom sheet ↔ menu; nunca botão ↔ chip). Apple faz o mesmo por size class: tab bar → sidebar
+  no espaço regular.
 
 **2. Breakpoints de app (complemento)**
 - **1024** mínimo útil: sidebar vira rail, painel lateral vira overlay. **1280** padrão de notebook: sidebar larga +
   conteúdo. **1440** cabe painel lateral fixo. **1920+**: limite a largura de texto e formulários (`max-width` por
   bloco, linha de 45–75 caracteres de `ux-patterns`), deixe tabelas e gráficos crescerem.
 - Abaixo de 1024 não é desktop: aplique `mobile-app-ui` ou uma visão reduzida, sem espremer a tabela.
+- **Mapeamento com os breakpoints do Material 3 (9A, largura da janela em dp ≈ px CSS — equivalência é inferência):**
+
+| Material 3 | Faixa | Navegação M3 | Painéis M3 | Nesta skill |
+|---|---|---|---|---|
+| compact | < 600 | navigation bar inferior | 1 | não é desktop → `mobile-app-ui` |
+| medium | 600–839 | bar ou rail | 1 (2 só se pouco denso) | tablet / janela estreita → `mobile-app-ui` + alvos daqui |
+| expanded | 840–1199 | rail expandida | 1–2 (recom. 2) | **1024** cai aqui: rail, painel lateral em overlay |
+| large | 1200–1599 | rail expandida/sidebar | 1–2 (recom. 2) | **1280** e **1440**: sidebar larga; painel fixo a partir de 1440 |
+| extra-large | ≥ 1600 | sidebar | 1–3 | **1920**: até 3 painéis; limitar texto e formulários |
+
+  **Divergência registrada:** o Material corta em 840 e 1200, esta skill em 1024 e 1280. Mantenha **1024/1280/1440/1920**
+  como pontos de **teste** (larguras reais de notebook/monitor) e use os cortes do Material para decidir **quantos
+  painéis e qual navegação**: entre 840 e 1023 a janela já é "expanded" — não quebre para layout de celular, use rail
+  + 1 painel. Linha de texto: Material pede **40–60 caracteres** (ux-patterns: 45–75); em formulários e texto corrido
+  fique em 45–60.
 
 **3. Densidade**
 - Escala tipográfica **16 × 1,2^n** (16, 19, 23, 28, 33, 40, 48) para produto denso; 1,25 fica para site/editorial
@@ -67,6 +87,12 @@ indicado na tabela "Onde está o resto".
 - Paginação contada ("Page 3 of 48 · 1,187 results"), estado em `?page=&sort=` e back que restaura scroll e linha
   (`ux-patterns` `components-checklists.md` §4). Acima de alguns milhares de linhas: **virtualização** (item 23 de
   `perceived-performance.md`). Detalhes e escolha paginação × virtualização em `references/desktop-patterns.md` §3.
+
+- **NN/g, Data Tables (9B):** tabela vence cards para **comparar e escalar**; desenhe para as **4 tarefas**: achar
+  registro, comparar, ver/editar linha, agir. **1ª coluna = identificador legível**; cabeçalho **e** 1ª coluna fixos;
+  ocultar/reordenar colunas com estado visível; editar em **painel lateral não modal** (modal cobre as linhas
+  vizinhas que a pessoa quer consultar — print `9B_tabelas_painel-lateral-crm_1.jpg`); ações em lote com "selecionar
+  todos" + barra contextual.
 
 **5. Hover, foco e estados**
 - Hover é sinal de clicável e lugar de ações secundárias da linha, **nunca o único caminho** para uma ação
@@ -106,6 +132,10 @@ indicado na tabela "Onde está o resto".
 - Anime troca de página, item ativo, troca de tema e o elemento-assunto; **nunca loops decorativos**
   (`dashboard-ui` anti-padrões). Pílula ativa que desliza **250–350ms** ease-out (`micro-interactions.md` §13).
 - Feedback de botão em **100ms**, concluído em **300ms**; Doherty **< 400ms** (`ux-patterns`).
+- Referência oficial de ferramenta de trabalho (Carbon, 9A): estilo **productive** por padrão, **expressive** só em
+  momentos raros; microinteração **90–120 ms** ease-out; painel lateral que sai mas fica "por perto" usa curva
+  standard, não exit. Os tokens de `ui-motion` continuam valendo; Carbon serve de checagem
+  (`../ui-motion/references/official-motion-guidelines.md`).
 - Telas de trabalho repetitivo (tabela, formulário, settings): só feedback de estado, sem scroll reveal
   (`ui-motion` `scroll-and-screen-transitions.md` §2, complemento). Toasts: canto **inferior direito** no desktop,
   info 4s, warning 7s, erro até reconhecer, máx. 3, pausa no hover (`micro-interactions.md` §9).
@@ -126,6 +156,24 @@ indicado na tabela "Onde está o resto".
 - Em Electron/Tauri: janela aparece já com o shell desenhado e o conteúdo entra depois; nunca janela branca
   **(complemento)**.
 
+**13. Dashboards e abas (NN/g, 9B)**
+- Defina se o painel é **operacional** (decisão imediata, uma tela) ou **analítico** (exploração).
+- Valor por **comprimento (barras)** e **posição 2D (linhas, dispersão)**; **evite gauge, pizza, donut, treemap e 3D**
+  em leitura rápida (print `9B_dashboards_linha-e-barras_1.jpg`). Cor para **categoria**, não magnitude; nunca o único
+  sinal (~8% dos homens têm daltonismo). Gráficos com a skill `dataviz`; padrões em `dashboard-ui`.
+- Abas: separe **abas de navegação** de **abas internas** e não misture; 1 nível; rótulos de 1–2 palavras, sem caixa-alta;
+  **≥ 2 indicadores** de seleção (linha + negrito/fundo); não selecionadas legíveis; mais usada primeiro; teclado e ARIA.
+- Empty state em app complexo: diz o estado ("nenhum registro no período"), ensina a função, dá o botão da 1ª tarefa;
+  **nunca "Sem registros" enquanto carrega** (corrói confiança).
+
+**14. Medir: CASTLE, não HEART (NN/g, 9B)**
+- Para ferramenta de trabalho (admin, CRM, painel do gestor) use **CASTLE**: **C**ognitive load (NASA-TLX), **A**dvanced
+  feature usage (uso de atalhos, filtros salvos, ações em lote), **S**atisfaction (SEQ por tarefa), **T**ask efficiency
+  (tempo na tarefa), **L**earnability (tempo até proficiência), **E**rrors (erros de validação, desfazer). HEART fica
+  para o app de consumo. Cada dimensão → meta, sinal e medida; pareie com pesquisa qualitativa (métrica diz *se*, não *por quê*).
+- Instrumente desde o início **(complemento)**: uso de ⌘K e atalhos (A), erros de validação por campo (E), tempo das
+  3 tarefas principais (T).
+
 ## Checklist (desktop)
 - [ ] Shell definido: rail 56–64 ou sidebar 220–260, colapso com tooltip, topbar com 1 CTA e busca/⌘K.
 - [ ] Testado em 1024, 1280, 1440 e 1920; nada de scroll horizontal da página (só dentro da tabela).
@@ -138,6 +186,10 @@ indicado na tabela "Onde está o resto".
 - [ ] Motion só funcional; `prefers-reduced-motion` respeitado; toasts no canto inferior direito.
 - [ ] Dark e light revisados; contraste 4,5:1 texto, 3:1 bordas e ícones.
 - [ ] Nativo: atalhos ⌘/Ctrl por SO, área dos botões de janela reservada, ordem de botões de diálogo do SO.
+- [ ] Entre 840 e 1023px a tela ainda é "expanded": rail + 1 painel, sem cair para layout de celular.
+- [ ] Tabela: 1ª coluna identificadora fixa, edição em painel lateral não modal, ações em lote.
+- [ ] Gráficos de barras/linhas (sem gauge/pizza/donut no painel operacional); abas com 2 indicadores.
+- [ ] Metas CASTLE definidas (tempo de tarefa, erros, uso de recursos avançados).
 
 ## Workflow
 1. **Defina o uso**: quem abre, por quanto tempo, qual a pergunta principal da tela (`dashboard-ui` Workflow §1) e se
@@ -172,6 +224,9 @@ indicado na tabela "Onde está o resto".
 | Paleta 2 + 1, 60/30/10, rampa de tons, sombra tingida | `../design-direction/references/color-palettes.md`, `layers-and-trust-layout.md` §4 |
 | Par tipográfico | `../design-direction/references/typography-pairing.md` |
 | Padrões detalhados desta skill | `references/desktop-patterns.md` |
+| Pesquisa NN/g completa (tabelas, dashboards, abas, empty state, CASTLE) | `../ux-patterns/references/nng-research.md` |
+| Bibliotecas (shadcn, Radix, React Aria, Mantine, HeroUI…) × React 18 e a recomendação | `references/component-libraries.md` |
+| Onde buscar inspiração (Dribbble, Behance, kits Figma, shadcn blocks) e prints da pesquisa 9 | `references/benchmark-sources.md` |
 | Quais imagens abrir | `references/visual-index.md` |
 
 ## Imagens

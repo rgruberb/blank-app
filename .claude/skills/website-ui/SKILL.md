@@ -1,6 +1,6 @@
 ---
 name: website-ui
-description: UI/UX específico de WEBSITE — sites institucionais, landing pages, páginas de vendas, portfólios, e-commerce/loja, blogs e páginas de produto/SaaS marketing. Traz regras com números para layout e grid, largura de conteúdo, breakpoints mobile-first, hero e acima da dobra, navbar/footer, CTA, tipografia fluida (Major Third 1,25), imagens e Core Web Vitals, motion de site (um momento animado por página, scroll reveal, reduced motion), SEO/semântica e acessibilidade (alvos 24/44px, contraste), com workflow de verificação em 375/768/1280/1440 e ponteiros para as skills de tema. Use ao "criar site", "landing page", "página de vendas", "portfólio", "e-commerce", "loja online", "home do site", "site responsivo", "hero", "navbar", "footer", "pricing", "página de produto", "checkout", "blog" ou ao revisar um site existente. Web app de uso diário (dashboard SaaS) fica em desktop-app-ui.
+description: UI/UX específico de WEBSITE — sites institucionais, landing pages, páginas de vendas, portfólios, e-commerce/loja, blogs e páginas de produto/SaaS marketing. Traz regras com números para layout e grid, largura de conteúdo, breakpoints mobile-first, hero e acima da dobra, navbar/footer, CTA, tipografia fluida (Major Third 1,25), imagens e Core Web Vitals, motion de site (um momento animado por página, scroll reveal, reduced motion), SEO/semântica e acessibilidade (alvos 24/44px, contraste), formulários e confiança (NN/g), fontes de benchmark (Awwwards, Land-book, SiteInspire, Coolors, Typewolf), com workflow de verificação em 375/768/1280/1440 e ponteiros para as skills de tema. Use ao "criar site", "landing page", "página de vendas", "portfólio", "e-commerce", "loja online", "home do site", "site responsivo", "hero", "navbar", "footer", "pricing", "página de produto", "checkout", "blog" ou ao revisar um site existente. Web app de uso diário (dashboard SaaS) fica em desktop-app-ui.
 ---
 
 # Website UI
@@ -10,7 +10,8 @@ decide e sai). As skills de **tema** continuam sendo a base: `design-direction` 
 `ui-motion` (valores de motion), `ux-patterns` (leis, números de UX) e `dashboard-ui`. Aqui fica só o que é
 específico de site e o mapa para o resto. Padrões por seção/página: `references/website-patterns.md`. Imagens:
 `references/visual-index.md`. Itens marcados **(complemento)** são conhecimento geral de plataforma (WCAG, Core Web
-Vitals, convenções web), não vêm das fontes.
+Vitals, convenções web), não vêm das fontes. Regras do NN/g e das galerias de benchmark lidas na pesquisa 9B/9C
+(nov/2026) vêm com a fonte citada. Onde buscar referência visual: `references/benchmark-sources.md`.
 
 ## Escopo e fronteira
 - **Esta skill:** site institucional, landing page/página de vendas, portfólio, loja (vitrine, produto, carrinho,
@@ -92,6 +93,9 @@ Vitals, convenções web), não vêm das fontes.
 - Line-height **1,5** corpo → **1,1** display; tracking **−0,02em** títulos ≥ 39px, **+0,05em** caps; 2–3 famílias, o
   mesmo par no site inteiro (`design-direction` → `typography-pairing.md`). Carregue a fonte de verdade
   (`display=swap`, self-host, ≤ 2–3 pesos) — `ux-patterns` → `dark-patterns.md` §C; `perceived-performance.md` item 29.
+- Escolher fonte livre: **Typewolf "40 Best Google Fonts"** (9C, atualizada 12/01/2026; open source, uso comercial,
+  famílias com vários pesos). Confira acentos PT na página de cada fonte; as fontes da home do Typewolf (Neue Montreal,
+  Suisse, Canela…) costumam ser **pagas**. Pares: `design-direction` → `typography-pairing.md`.
 
 **8. Imagens e performance / Core Web Vitals**
 - Das fontes (`perceived-performance.md`): WebP/AVIF (02), CDN (06), Brotli (09), lazy loading fora da tela (15), SSR
@@ -125,6 +129,21 @@ Vitals, convenções web), não vêm das fontes.
 - Contraste: texto **4,5:1**, texto grande (24px / 19px bold), ícones e bordas **3:1**; texto sobre foto com scrim
   medido **no ponto mais claro** (§3). Focus ring visível; skip link "Pular para o conteúdo" (complemento).
 - Dark mode: sem `#000` (ex. `#0C1424`), texto ~87% (§4). Formulários: label visível, erro em texto, não só cor.
+- Medir contraste: **Coolors contrast checker** (coolors.co/contrast-checker, 9C) — AA **4,5:1** texto normal e **3:1**
+  texto grande (≥ 18pt ou negrito); AAA **7:1** e **4,5:1**. Teste cada par de token claro **e** escuro; paleta bonita
+  não define papel semântico (texto, borda, estado). NN/g (9B): teste também em escala de cinza e com foco visível espesso.
+
+**12. Formulários e confiança (NN/g web, 9B)**
+- **Não peça antes de entregar valor.** Hierarquia de confiança em 5 níveis: relevância → preferência → dado pessoal
+  → dado sensível/financeiro → relação contínua. Não pule degraus: cadastro/login obrigatório para ver conteúdo,
+  "agende uma demo" antes de mostrar preço, ou conta social conectada (nível 5) na primeira visita espantam. Mostre
+  conteúdo, preço e prova antes do formulário; deixe explorar.
+- Formulário: **coluna única**, grupos nomeados, poucos campos (só o necessário), "(opcional)" marcado, tempo estimado
+  em formulário longo; **rótulo visível, nunca placeholder como rótulo**; exemplo de formato; validação **depois** que
+  o campo termina, erro **ao lado do campo** com cor + ícone e texto que diz como corrigir; ajuda extra após **3 erros**;
+  resumo no topo nunca sozinho; erro nunca em tooltip. Botão de enviar **abaixo dos campos**.
+- Microcopy (3 I's: informar, influenciar, interagir): < 3 frases; o botão diz **o que acontece** ("Receber o orçamento"),
+  explique por que pede cada dado ao lado do campo.
 
 ## Checklist de entrega
 - [ ] 1 h1, 1 CTA primário por seção, acento ≤ 10% e só em CTA/dado-chave.
@@ -137,12 +156,16 @@ Vitals, convenções web), não vêm das fontes.
 - [ ] Title/description/OG, landmarks, alt, JSON-LD do tipo de página.
 - [ ] Sem dark pattern: prova social real, sem plano-isca, trial com aviso (`ux-patterns` → `dark-patterns.md` §A).
 - [ ] Estados desenhados: vazio, carregando, erro, texto longo; 404 dentro do sistema de marca.
+- [ ] Nenhum cadastro/dado pessoal pedido antes de o visitante ver valor (conteúdo, preço, prova).
+- [ ] Formulário em 1 coluna, rótulo visível, validação após o campo, erro ao lado com texto e ícone.
+- [ ] Pares de cor medidos (Coolors/DevTools) em claro e escuro, não estimados.
 
 ## Workflow
 1. **Brief:** tipo de site, público, objetivo da página (1 ação), faixa de preço/posicionamento (visual comunica
    preço: `design-direction` → `branding-identity.md` §3), conteúdo real disponível.
 2. **Direção:** siga `design-direction` (2+1 com hex, par tipográfico, terceira camada). Peça 2–5 referências; URL →
-   `ext-extract-design`. Anti-genérico: `ext-taste-skill`.
+   `ext-extract-design`. Anti-genérico: `ext-taste-skill`. Onde achar referências (Awwwards, Land-book, SiteInspire)
+   e como usar sem copiar: `references/benchmark-sources.md`.
 3. **Estrutura de seções:** monte a ordem com `references/website-patterns.md` (ex. landing: hero → prova social →
    problema/benefícios → features → como funciona → pricing → FAQ → CTA final → footer). Escreva o copy antes do
    visual; uma ideia por seção.
@@ -174,4 +197,7 @@ Vitals, convenções web), não vêm das fontes.
 | Performance (31 itens) | `ux-patterns/references/perceived-performance.md` |
 | Glassmorphism (vidro sobre foto) | `dashboard-ui/references/glassmorphism.md` |
 | Web app/dashboard | skill `desktop-app-ui` (e `dashboard-ui`) |
+| Pesquisa NN/g completa (formulários, confiança, microcopy) | `ux-patterns/references/nng-research.md` |
+| Galerias de benchmark (Awwwards, Land-book, SiteInspire, Coolors, Typewolf) e prints da pesquisa 9 | `references/benchmark-sources.md` |
+| Kits Figma (Obra shadcn) e blocks prontos de login/conta (shadcn, Supabase Library) | `desktop-app-ui/references/component-libraries.md` §"Referências prontas" |
 | Implementação de motion | `ext-gsap-scrolltrigger`, `ext-transitions-dev` (accordion, tabs, toast) |

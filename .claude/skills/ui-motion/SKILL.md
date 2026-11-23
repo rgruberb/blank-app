@@ -1,6 +1,6 @@
 ---
 name: ui-motion
-description: Projeta e implementa micro-interações e motion de UI com valores concretos de reels de motion design: press (95%), pull-to-refresh (35%), números rolando, ícones que morfam, toasts, drag-and-drop, loaders, transição card→página, pílula de navegação que desliza, durações, easing e springs, a regra de um momento animado por página, motion de site (headline reveal, galeria, scroll reveal), bibliotecas de componentes animados e motion para redes: texto de reel (≤6 palavras, 1,2 s), logo (~1 s), carrossel educativo. Use quando o pedido falar em "animar", "micro-interação", "app mais fluido/premium", "spring", "easing", "quanto tempo deve durar a animação", "loader/skeleton", "pull to refresh", "toast", "drag and drop", "transição de página", "scroll reveal", "animar site com Claude", "um momento animado", "biblioteca de componentes", "componente animado pronto", "ícone animado", "polish de motion", "React Bits", "reel", "carrossel", "animar logo" ou "por que o iPhone parece tão suave".
+description: Projeta e implementa micro-interações e motion de UI com valores concretos: press (95%), pull-to-refresh (35%), números rolando, ícones que morfam, toasts, drag-and-drop, loaders, card→página, pílula de navegação, durações, easing, springs, um momento animado por página, motion de site e de redes (reel, logo, carrossel), bibliotecas animadas e comparação com Apple HIG, Material 3, Carbon e Atlassian. Use quando o pedido falar em "animar", "micro-interação", "app mais fluido/premium", "spring", "easing", "quanto tempo deve durar a animação", "loader/skeleton", "pull to refresh", "toast", "drag and drop", "transição de página", "scroll reveal", "um momento animado", "biblioteca de componentes", "ícone animado", "polish de motion", "React Bits", "reel", "carrossel", "animar logo", "Material 3 motion", "Carbon", "Apple HIG motion", "Reduce Motion", "MotionConfig" ou "por que o iPhone parece tão suave".
 ---
 
 # UI Motion
@@ -27,7 +27,7 @@ Motion é metade de como uma interface "parece". Apps premium não são mais rá
 10. **Morph, não swap.** Ícones e botões mudam de forma (play→pause 300 ms; botão 260→64 px virando spinner em 270 ms; Dynamic Island cresce da pílula). Nada "pisca" para outro desenho.
 11. **Nada aparece do nada.** Card vira a página e volta exatamente para onde estava; menus nascem do botão que os abriu.
 12. **Percepção > velocidade real.** Skeleton em vez de tela vazia, UI otimista (mostre sucesso já), barra de progresso que começa rápida e desacelera.
-13. **Respeite `prefers-reduced-motion`.** Troque deslocamentos/escala/bounce por fade curto (≤150 ms) ou corte; mantenha o feedback de estado (cor, ícone, texto). (complemento)
+13. **Respeite `prefers-reduced-motion`.** Troque deslocamentos/escala/bounce por fade curto (≤150 ms) ou corte; mantenha o feedback de estado (cor, ícone, texto) (complemento). Regras da Apple HIG: springs mais firmes (menos bounce), animação segue o gesto, nada de profundidade (z), x/y/z vira fade, sem blur entrando/saindo. Com Motion for React, **`<MotionConfig reducedMotion="user">` na raiz é obrigatório** (o padrão é `"never"`). Ver `references/official-motion-guidelines.md` §1.1 e §5.
 14. **Título primeiro.** Nunca deixe a tela em branco: "2 s em branco parecem uma hora". O título aparece no primeiro paint e o resto entra em cascata (theglidestudio, Dfy7ig_B-FL).
 15. **Texto de reel: ≤ 6 palavras, grande, 1,2 s na tela**; se não dá para ler duas vezes, está rápido. **Logo: ~1 s**, e o tipo de movimento é a personalidade (linha lenta = calmo, encaixe rápido = rápido, crescer de um ponto = amigável) (theglidestudio, DfxpIbfP-SB, Dfzkwu3hSj5).
 16. Anime só `transform` e `opacity` sempre que possível; evite animar `width/height/top` em listas grandes. (complemento)
@@ -55,6 +55,8 @@ Motion é metade de como uma interface "parece". Apps premium não são mais rá
 | `--dur-reel-text` | 1,2 s por tela de texto (≤ 6 palavras) | DfxpIbfP-SB |
 | `--dur-logo` | ~1,0 s | Dfzkwu3hSj5 |
 
+Esses tokens têm prioridade sobre os de sistemas oficiais; a comparação com Material 3, Carbon e Atlassian (quase todos caem dentro das faixas oficiais; press e reveal divergem) está em `references/official-motion-guidelines.md` §7.
+
 Curvas CSS equivalentes (complemento): ease-out `cubic-bezier(0.22, 1, 0.36, 1)`; ease-in-out para flips `cubic-bezier(0.65, 0, 0.35, 1)`; spring com overshoot leve `cubic-bezier(0.34, 1.56, 0.64, 1)` ou `linear()` gerado (ver `references/css-recipes.md`).
 
 ## Workflow
@@ -62,7 +64,7 @@ Curvas CSS equivalentes (complemento): ease-out `cubic-bezier(0.22, 1, 0.36, 1)`
 2. **Para cada um, escolha o padrão** em `references/micro-interactions.md` (ou loaders/refresh/transições) e **copie os valores** — não invente durações.
 3. **Defina tokens** (`:root` CSS vars ou objeto JS) e use-os em todo lugar.
 4. **Implemente** com os snippets de `references/css-recipes.md`; para coreografia complexa use GSAP.
-5. **Garanta interrupção** (transitions CSS ou springs que partem do valor atual) e **reduced-motion**.
+5. **Garanta interrupção** (transitions CSS ou springs que partem do valor atual) e **reduced-motion** (React + Motion: `<MotionConfig reducedMotion="user">`; `css-recipes.md` §13).
 6. **Verifique no browser** a 1× e em câmera lenta (DevTools → Animations a 25%, como os reels mostram "¼ speed").
 
 ## Quando abrir cada reference
@@ -73,6 +75,7 @@ Curvas CSS equivalentes (complemento): ease-out `cubic-bezier(0.22, 1, 0.36, 1)`
 - `references/motion-for-social-video.md` — texto de reel, logo animado, título primeiro em vídeo de site, scroll-storytelling (RWB Porsche), carrossel educativo (capa com promessa numerada, 1 ideia por slide, CTA), reel de "fixes" e reel de demo com cursor e código. Abra para qualquer motion de marketing/redes sociais.
 - `references/css-recipes.md` — snippets CSS/JS prontos (press, spring `linear()`, pull-to-refresh, stagger, rolling number, View Transitions, FLIP, toast stack, reduced-motion).
 - `references/react-bits.md` — componentes React animados prontos (React Bits) mapeados para cada padrão desta skill, com comando de instalação, dependências e regras (ajustar valores, WebGL ≤ 1 por página); no fim, **outras bibliotecas** (Bencho, BoardUI, Transitions.dev, Beautiful UI, Skiper UI, Kokonut UI, Cult UI, Animata…), o teste **vazio/carregando/erro/texto longo** antes de adotar e curadorias de ícones e skills de motion. Abra quando o padrão já existir pronto ou o pedido for "qual biblioteca de componentes usar".
+- `references/official-motion-guidelines.md` — **Apple HIG** (princípios; não publica ms/curvas; regras de Reduce Motion), **Material 3 Expressive** (springs desde maio/2025, tabela web cubic-bezier + duração, legado não mantido), **Carbon** (70–700 ms, productive/expressive), **Atlassian** (50–150/150–400 ms), **Motion for React** (React 18.2+, defaults, `reducedMotion` padrão `"never"`), GSAP/Lottie, e tabela **tokens da skill × oficiais** (onde batem e divergem, sem mudar os tokens). Abra quando pedirem "o que o Material/Carbon/Apple diz", para calibrar algo que a skill não cobre (saídas, hover) ou para justificar um valor.
 - `references/visual-index.md` — qual imagem mostra o quê, e no fim a tabela **Perfis avaliados** (ativo?, nota, o que aproveitar).
 
 ## Imagens (`assets/visual-refs/*.jpg`)
@@ -92,7 +95,7 @@ Folhas de contato 4×3 dos reels, mais 6 prints únicos (`<ID>_<n>.jpg`: scroll-
 
 ## Skills complementares
 - `ext-transitions-dev` / `ext-transitions-polish` — CSS transitions prontas e polish (é a base da biblioteca Transitions.dev citada em `react-bits.md`).
-- `ext-gsap-core`, `ext-gsap-scrolltrigger`, `ext-gsap-react` — timelines, scroll-linked (large title encolhendo, reveals), React.
+- `ext-gsap-core`, `ext-gsap-scrolltrigger`, `ext-gsap-react` — timelines, scroll-linked (large title encolhendo, reveals), React. Licença do GSAP: gratuita, mas própria ("Standard No Charge", **não MIT**); confira antes de usar em produto construtor de sites/no-code.
 - `design-direction` — personalidade de marca, paleta e logo estático antes de animar o logo.
 - `ux-patterns` — alvos de toque e escala tipográfica (os componentes que você anima precisam ter ≥ 44px de toque).
 - `ext-playwright-cli` — abrir no browser, gravar/capturar e checar estados e `prefers-reduced-motion` (emulação).

@@ -684,3 +684,43 @@ anterior) / Outcome $1,148.80 em vermelho; transações Figma −$90, Photoshop 
 abaixo do número; KPI com subtotal de contexto; delta colorido pelo sentido bom/ruim; card tracejado de "adicionar";
 status → ação (rastreio com ligar/mensagem; "Start harvest"); score = número + delta + palavra + data; forma do gráfico
 pela pergunta; projeção tracejada depois do "hoje".
+
+## 30. Referências novas das rodadas 9C e 9E (22–23/11/2026) — só texto, sem folha
+
+Nenhuma destas tem print legível na skill (Dribbble bloqueou com anti-bot; os prints 9E são miniaturas). Use como lista
+de candidatos para abrir no navegador.
+
+### 30a. Dashboards de criador no Dribbble (9C, autor verificado)
+- **Kreya – Content Creator Dashboard** — Chandra Mudha Mahendra (VanguardCX),
+  https://dribbble.com/shots/25294910-Kreya-Content-Creator-Dashboard — hierarquia de métricas e cards; base para uma
+  aba "Resultados". Shot estático, sem estados vazio/erro.
+- **Blenz | Influencer Analytics Dashboard UI** — Wolfpixel, https://dribbble.com/shots/26534678-Blenz-Influencer-Analytics-Dashboard-UI
+  — analytics organizado por criador/rede. Padrão de agência, não de pessoa.
+- **Invoice / Proposal Creator** — Amir Baqian (Ace Design), https://dribbble.com/shots/25532738-Invoice-Proposal-Creator
+  — fluxo de criação de proposta/fatura (visto só por título e autor).
+- **Creator Brand & Content Management Mobile App** — Erudite07,
+  https://dribbble.com/shots/27744939-Creator-Brand-Content-Management-Mobile-App — home mobile de criador (conceito).
+- Sem autor verificado: Creator Analytics Dashboard (`/shots/27669622`), Creatora SaaS (`/shots/27784384`), BLOOMIO
+  mobile (`/shots/27669776`).
+- Galeria da tag "dashboard" (print `ref_dribbble_dashboard-ui_1.jpg`): "Overview Panel" claro de RonDesignLab num
+  monitor, painel escuro de George Railean com grafo e "45%", stats de atleta de Nixtio. Serve para **tom visual**, não
+  para regra; muitos shots de agência com Pro+.
+- Behance **Nomey** (monetização de criador) e **Cook** (deals criador × marca): ver `design-direction`
+  (`9C_perfil-criador_nomey_*`, `9C_propostas_cook_*`).
+
+### 30b. Posts novos de perfis já indexados (9E)
+| Post | O que mostra (pela legenda/miniatura) | Aproveitar |
+|---|---|---|
+| @shohan.designs `DgDFfyBFIZN` (22/11) | finanças pessoais em tablet: cards de saldo no topo, gráficos de orçamento e fluxo de caixa, tabela de transações, **lima sobre fundo escuro** | mesma ordem de leitura do §22 (saldo → composição → gráfico → transações) |
+| @shohan.designs `Df978CFlMsF` (20/11) | "Unipay" carteira mobile: gradiente azul no saldo, atalhos, Quick Send com retratos, atividade com ícones simples | home de carteira mobile |
+| @code.xr `DgCXLXMTSW7` (22/11) | "Admin Dashboard V20", analítico interativo (React) | só estrutura; glass chamativo |
+| @code.xr `DgC6ruhT2NZ` (22/11) | "Glassy Sidebar V10" (React/CSS) | sidebar glass → `glassmorphism.md` |
+| @_code_and_chill_ `Df7dwtMPccu` (19/11) | dashboard de planejador de estúdio de arquitetura | referência de agenda/planner |
+| @_code_and_chill_ `DbfG6fuPE9y` (01/08) | aba ativa que "derrete" em vez de deslizar (HTML/CSS/JS) | variante da pílula ativa (§6); valores em `ui-motion` |
+| @ui.iliasmiah000 `DgD79jFhsIf` (22/11) | painel escuro onde o supervisor define **metas, limites e alertas** para agentes | configuração de metas do gestor (§7.3) |
+| @ui.iliasmiah000 `DgDuN_3h3AU` (22/11) | admin revisa um membro e vê o que cada **papel** pode aprovar; página bloqueada mostra caminho em vez de beco sem saída | permissões gestor × cliente |
+| @designmotionhq `DgCqEFtBmnz` (22/11) | cards de métricas com "toques que parecem instantâneos" quando a API leva ~800 ms (regras no vídeo) | feedback otimista em KPI; comentário alerta que falha com rede ruim |
+| @noahelhadedy `DgCpGgjjokC` (22/11) | medidor de armazenamento: números rolam, a **barra** redimensiona, cada linha abre; "anime a mudança, não o card inteiro" | medidor em barra (não anel), com código |
+| @uxbrainy `DgDSue_Ftd-` (22/11) | "Your AI screens look junior": gradiente roxo, emoji como ícone, 3 cards iguais, números falsos grandes | checklist anti-slop de painel |
+| @memorisely `Df7SmUBO5x5` (19/11) | "cada cor da UI é um sinal"; 7 cores competindo | reforça "uma cor de destaque só" |
+

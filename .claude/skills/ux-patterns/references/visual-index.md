@@ -24,6 +24,13 @@ Cada `.jpg` é uma folha de contato 4×3 com frames do reel em ordem cronológic
 | `DfRucYFjrac_2.jpg` | @designmotionhq | https://www.instagram.com/p/DfRucYFjrac/?img_index=3 | Print único, "RULE 02 — Line height shrinks with size": 16×1,5 / 20×1,4 / 31,25×1,25 / 48,83×1,1 e "Set it right. Set it tight." 73px vs 54px | Para explicar por que título não usa line-height de corpo |
 | `DfRucYFjrac_3.jpg` | @designmotionhq | https://www.instagram.com/p/DfRucYFjrac/?img_index=6 | Print único, "COPY THIS — One type spec": bloco `:root` com `--step--1…--step-5`, `--lh-0…--lh-5`, `--measure: 50ch` e tracking | Raramente: os tokens já estão em `typography-and-touch.md` §2b |
 | `De_FtT3k-tT_2.jpg` | @gg.designhub | https://www.instagram.com/p/De_FtT3k-tT/?img_index=4 | Print único, "Cheat Code #03 Fail-Safe Type Hierarchy": tabela 39/31/25/20/16px (× 1,25) sobre pedra entalhada, takeaway "Major Third (1.250)" | Para mostrar a escala 1,25 arredondada como hierarquia de site |
+| `9B_dashboards_linha-e-barras_1.jpg` | NN/g (`dashboards-preattentive`) | https://www.nngroup.com/articles/dashboards-preattentive/ | Print único: "Weekly Statistics" em linha com área clara (seg–dom) e "Usage Overview" em 4 barras horizontais coloridas com rótulos a–d | Para mostrar o formato recomendado (linha + barras) contra pizza/donut/gauge (`nng-research.md` §6) |
+| `9B_empty-states_datadog_1.jpg` | NN/g (`empty-state-interface-design`) | https://www.nngroup.com/articles/empty-state-interface-design/ | Print único: menu escuro do Datadog com a área de favoritos vazia ensinando "Star your favorites to list them here" (destacado em verde); aviso de cookies no canto | Empty state que ensina a função (§4) |
+| `9B_permissoes_venmo-camera-negada_1.jpg` | NN/g (`permission-requests`) | https://www.nngroup.com/articles/permission-requests/ | Print único: tela escura "No Camera Access", motivo ("To scan codes and take pictures for your profile…") e link "Open Settings" | Reversão de permissão negada (§9) |
+| `9B_formularios_slack-forca-senha_1.jpg` | NN/g (`errors-forms-design-guidelines`) | https://www.nngroup.com/articles/errors-forms-design-guidelines/ | Print único: "Password Reset" do Slack com rótulos fora do campo, medidor de força em 4 segmentos ("Good") e botão verde "Change my password" | Validação em tempo real que mostra sucesso; rótulo acima do campo (§5) |
+| `9B_tabelas_painel-lateral-crm_1.jpg` | NN/g (`data-tables`) | https://www.nngroup.com/articles/data-tables/ | Print único: tabela de oportunidades (Campaign, Priority em selo, Estimated Value) com linha selecionada e painel lateral não modal de edição (Cancel/Update) | Editar registro sem cobrir a tabela (§7) |
+| `9B_tabs_google-finance-in-page_1.jpg` | NN/g (`tabs-used-right`) | https://www.nngroup.com/articles/tabs-used-right/ | Print único: Google Finance com 2 níveis de tabs internas (mercado US/Europe/Asia… e período 1D…MAX) mudando o gráfico, anotado "In-page tabs organize different views" | Tabs internas com filtro de período (§2) |
+| `9B_touch-targets_target-app_1.jpg` | NN/g (`touch-target-size`) | https://www.nngroup.com/articles/touch-target-size/ | Print único: home do app Target com 2 botões circulares grandes (~2 cm: busca e scanner), lista com chevrons e tab bar de 5 itens com rótulo | Alvo grande para ação primária e tab bar de 5 (§2–3) |
 
 ## Perfis avaliados (rodadas 1, 2, 3A–3C e 7, 18/11/2026)
 Notas 1–5 como fonte de **UX/regras**. Nota com "*" é nossa (a rodada não deu nota). Inativo = sem post há mais de ~1 ano, 0 posts ou perfil inexistente.
@@ -55,3 +62,15 @@ Notas 1–5 como fonte de **UX/regras**. Nota com "*" é nossa (a rodada não de
 | @twohabitsdesign | não (último post 11/2022) | — | n/a | Nada novo |
 
 Prints de @designmotionhq e @motion_ui_interface das rodadas 3A–3C não estavam disponíveis em arquivo; os números estão transcritos em `typography-and-touch.md`. Das rodadas 1 e 2 vieram os prints `DfRucYFjrac_1–3` e `De_FtT3k-tT_2` (tabela acima). Os prints de `DffCenmFASU` (fonte de matriz de pontos) e `Dfr4RMBlaPH` (tooltip de arraste) da rodada 7 estão em `../../dashboard-ui/assets/visual-refs/` (`DffCenmFASU_1.jpg`, `Dfr4RMBlaPH_3.jpg`).
+
+## Fontes de pesquisa e guias oficiais (rodadas 9A e 9B, 22/11/2026)
+Não são perfis do Instagram: são fontes com estudo ou guia oficial, lidas no navegador.
+
+| Fonte | Tipo | Nota | O que aproveitar nesta skill |
+|---|---|---|---|
+| Nielsen Norman Group (nngroup.com) | Pesquisa de usabilidade, 17 artigos lidos | 5* | Onboarding, tabs 4–5, alvo 1 cm, empty states, formulários, dashboards (diverge de `dashboard-ui`), confiança, permissões, HEART × CASTLE (`nng-research.md`). Vários estudos de 2015–2019; sem motion e sem PT-BR |
+| Apple HIG (Accessibility, Typography) | Guia oficial | 5* | Alvo 44pt (mín. 28pt), corpo 17pt (mín. 11pt), sem pesos finos, texto até 200% (`typography-and-touch.md` §1b e §2c) |
+| Material 3 (Accessibility, Typography) | Guia oficial | 5* | Alvo 48dp + 8dp; escala Major Second 1,125 base 14 (diverge de 1,2/1,25); medida 40–60 car. |
+
+Os prints `9B_*` vieram das imagens dos próprios artigos do NN/g; as telas pertencem às empresas mostradas (Datadog, Venmo, Slack, Target, Google): uso só como referência de estudo. Não foram copiados: tab bar Facebook e formulário Hotel Tonight (cabem em `mobile-app-ui`). Prints da 9A (tab bar e sheet iOS, layouts canônicos M3) ficam nas skills de plataforma.
+

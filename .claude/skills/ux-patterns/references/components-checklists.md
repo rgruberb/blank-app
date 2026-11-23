@@ -106,3 +106,31 @@ App de trading "Markets" (lista de ativos + detalhe com candles). A tese da lege
 - **Não abra a home com estado vazio** ("No properties found" na primeira dobra). Mostre conteúdo útil: cartões com foto grande, preço, selo e nota.
 - Filtros em pílula com **um estado ativo cheio**, em vez de 4 cores de contorno.
 - Banner com ilustração e **um CTA claro** no lugar de bloco de gradiente com texto longo.
+
+## 12. Checklists de pesquisa NN/g (rodada 9B; detalhes e fontes em `nng-research.md`)
+**Onboarding**
+- [ ] Sem tour/deck instrucional se o app não precisa de dados para começar; prefira dica em contexto e empty state que ensina.
+- [ ] Se houver deck: "Skip" visível, poucos cards, 1 conceito por card; tema/cores fora do onboarding.
+
+**Navegação**
+- [ ] Tab bar mobile com **4–5 destinos**, ícone + rótulo, sempre visível; sem "More".
+- [ ] Tabs internas: rótulo de 1–2 palavras, **≥ 2 indicadores de seleção**, um nível; no mobile, acordeão para conteúdo longo.
+
+**Empty state**
+- [ ] Diz o estado do sistema, ensina a função e oferece **um botão** para a 1ª tarefa. Nunca "Sem registros" durante o carregamento.
+
+**Formulário**
+- [ ] Coluna única; **rótulo fora do campo** (placeholder nunca é o rótulo); "(opcional)" marcado.
+- [ ] Validação inline **depois de concluir o campo** (blur), erro ao lado do campo com cor + ícone; sem tooltip de erro; ajuda extra após 3 erros.
+- [ ] Botão de enviar embaixo dos campos ou fixo no rodapé, nunca no topo.
+
+**Dashboard** (divergência com `dashboard-ui` em `nng-research.md` §6)
+- [ ] Valores em barras/linhas; pizza/donut/gauge só como moldura de **um** número com meta, com o número escrito.
+- [ ] Cor nunca é o único sinal (rótulo, forma, posição).
+
+**Confiança e permissões**
+- [ ] Valor entregue antes de pedir login, dados pessoais, pagamento ou conta conectada (5 níveis de compromisso).
+- [ ] Permissão pedida **no contexto**, com "para que você possa [benefício]" (+12% de aceite com motivo) e caminho de volta às configurações se negada.
+
+**Métricas**
+- [ ] App de consumo → HEART; ferramenta de trabalho/painel → **CASTLE** (carga cognitiva, recursos avançados, satisfação, eficiência, aprendizado, erros).

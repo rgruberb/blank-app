@@ -49,6 +49,8 @@ prova (números/depoimentos) → pricing → FAQ → CTA final → footer**. Cor
   de conteúdo.
 - Confiança também é layout: espaço, alinhamento, ritmo calmo (`DfyFShTounu`); marca julgada em ~3 s
   (`branding-identity.md` §1).
+- **Ordem dos pedidos** (NN/g `commitment-levels`, 9B): valor e prova antes de qualquer formulário; newsletter/lead
+  depois do conteúdo, não em pop-up na chegada; cadastro só quando o próximo passo exige; dados financeiros por último.
 
 ## 3. Features / benefícios
 - **Uma ideia por seção**, título de seção com 1 palavra em serif itálico, acento **1–2 vezes por seção** (padrão do
@@ -154,6 +156,9 @@ prova (números/depoimentos) → pricing → FAQ → CTA final → footer**. Cor
   §7); foto PB + 1 ponto de cor como foco.
 - Apresente cada case em device → plano → recorte 3D desfocado (`claude-web-design-workflow.md`, mockup); revise os
   dados dos mockups.
+- Benchmark (9C): **Awwwards** categoria Portfolio (tipografia e hero; cuidado com peso de animação), **SiteInspire**
+  (filtros Portfolio/Typographic/Minimal, layout editorial), **Land-book** (filtro Portfolio). Extraia estrutura, não
+  o visual — `benchmark-sources.md`.
 
 ## 12. 404 e estados
 - 404 como peça de marca: foto em tela cheia, "404" grande, frase em serif itálico, **CTA de volta visível**

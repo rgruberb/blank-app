@@ -1,11 +1,11 @@
 ---
 name: ux-patterns
-description: Padrões e checklists de UX com números concretos para revisar e corrigir interfaces: 18 leis de UX (Fitts, Hick, Doherty, Proximity, Von Restorff, Goal gradient…), alvos de toque (44pt/48dp, web 24px), escala tipográfica (16×1,2^n ou Major Third 1,25) com line-height, tracking e medida, grade de espaçamento de 8px, contraste, dark mode, botão primário, settings, paginação, chat, ⌘K, toolbar, tela de decisão, fluxo de pedido, dark patterns, "AI slop" e 31 itens de performance percebida. Use quando o usuário pedir "revisar UX", "auditar a tela", "botão parece barato", "tela de settings", "paginação", "infinite scroll", "chat", "command palette", "⌘K", "toolbar lotada", "dark pattern", "app parece feito por IA", "app lento", "skeleton", "performance percebida", "alvo de toque", "touch target", "tamanho de fonte", "escala tipográfica", "Major Third", "line-height", "grid de 8", "espaçamento", "contraste", "dark mode", "tela de compra/decisão" ou "barra de progresso do pedido".
+description: Padrões e checklists de UX com números concretos para revisar e corrigir interfaces: 18 leis de UX (Fitts, Hick, Doherty, Proximity, Von Restorff…), alvos de toque (44pt/48dp, web 24px), escala tipográfica (1,2 ou 1,25) com line-height, tracking e medida, grade de 8px, contraste, dark mode, botão primário, settings, paginação, chat, ⌘K, toolbar, tela de decisão, fluxo de pedido, dark patterns, "AI slop", performance percebida e pesquisa NN/g (onboarding, empty state, formulário, dashboard, permissões, HEART/CASTLE). Use quando o usuário pedir "revisar UX", "auditar a tela", "botão parece barato", "settings", "paginação", "infinite scroll", "chat", "⌘K", "toolbar lotada", "dark pattern", "app parece feito por IA", "app lento", "skeleton", "alvo de toque", "tamanho de fonte", "escala tipográfica", "line-height", "grid de 8", "espaçamento", "contraste", "dark mode", "tela de compra/decisão", "progresso do pedido", "onboarding", "empty state", "formulário", "permissão" ou "NN/g".
 ---
 
 # UX Patterns
 
-Regras de UX que dá para testar numa tela real, tiradas de 14 reels (@motion_ui_interface, @designmotionhq e @gustagoat.ai), das rodadas 3A–3C de perfis (@designmotionhq, @motion_ui_interface, @theglidestudio, @rish_designs, @ui.pixel, @dailywebdesign) e das rodadas 1, 2 e 7 (@gg.designhub, @designmotionhq, @felvrabr, @shohan.designs). Os números são das demonstrações dos reels. Use-os como alvo padrão, não como lei física.
+Regras de UX que dá para testar numa tela real, tiradas de 14 reels (@motion_ui_interface, @designmotionhq e @gustagoat.ai), das rodadas 3A–3C de perfis (@designmotionhq, @motion_ui_interface, @theglidestudio, @rish_designs, @ui.pixel, @dailywebdesign) das rodadas 1, 2 e 7 (@gg.designhub, @designmotionhq, @felvrabr, @shohan.designs) e, como fonte de pesquisa, do **Nielsen Norman Group** (rodada 9B) e das guias oficiais **Apple HIG** e **Material 3** (rodada 9A). Os números dos reels são de demonstração; os do NN/g vêm de estudos (muitos de 2015–2019). Use-os como alvo padrão, não como lei física.
 
 ## Quando usar
 - Revisar ou criar um componente: botão, settings, lista paginada, chat, ⌘K, toolbar, dashboard.
@@ -43,6 +43,15 @@ Regras de UX que dá para testar numa tela real, tiradas de 14 reels (@motion_ui
 - Arraste que muda valor mostra o resultado antes de soltar ("Drag to extend · 4 nights", `components-checklists.md` §8).
 - Contraste: texto e placeholder **4,5:1**; texto grande (24px ou 19px bold), ícones e bordas **3:1**; scrim em texto sobre foto.
 - Dark mode: sem `#000` (ex.: `#0C1424`), texto a **87%**, accent clareado, elevação por luminosidade.
+
+**Pesquisa NN/g** (`references/nng-research.md`; checklist em `components-checklists.md` §12)
+- Onboarding: evite o instrucional; prefira dica em contexto e empty state que ensina. Só quando o app precisa de dados para começar.
+- Tab bar mobile com **4–5** destinos e rótulo; tabs internas com 1–2 palavras e ≥ 2 indicadores de seleção.
+- Alvo físico **~1 cm** (ação primária ~2 cm). Empty state: estado do sistema + ensina + botão.
+- Formulário: coluna única, rótulo fora do placeholder, validação inline **depois de concluir o campo**, erro ao lado com cor + ícone.
+- Dashboard: barras/linhas > pizza/donut/gauge; cor nunca é o único sinal (**diverge de `dashboard-ui`**, critério em §6).
+- Confiança: 5 níveis de compromisso; não peça login/dados antes de entregar valor. Permissão em contexto com motivo (**+12%** de aceite).
+- Métricas: HEART para consumo, **CASTLE** para ferramenta de trabalho.
 
 **Tela de decisão** (`components-checklists.md` §9): só sinais imediatos e contexto mínimo; as duas ações opostas com o mesmo peso no rodapé; tirar atrito, não somar features.
 
@@ -84,9 +93,10 @@ Regras de UX que dá para testar numa tela real, tiradas de 14 reels (@motion_ui
 |---|---|
 | `references/ux-laws.md` | Precisar da definição, falha e correção de qualquer uma das 18 leis, ou citar o número da demonstração |
 | `references/components-checklists.md` | For mexer em botão, settings, paginação, chat, ⌘K, toolbar, micro-interações (sheet, tooltip, toast, file drop, pagamento), tela de decisão (comprar/vender), fluxo de pedido ou home com estado vazio |
-| `references/typography-and-touch.md` | Precisar de alvo de toque, escala e tamanhos de fonte (1,2 vs 1,25), line-height, tracking, medida de linha, grade de espaçamento de 8, números em matriz de pontos, contraste mínimo ou dark mode |
+| `references/typography-and-touch.md` | Precisar de alvo de toque (inclui Apple 44/28pt, Material 48dp + 8dp, NN/g 1 cm), escala e tamanhos de fonte (1,2 vs 1,25 vs Material 1,125; Apple 17/11pt), line-height, tracking, medida de linha, grade de espaçamento de 8, números em matriz de pontos, contraste mínimo ou dark mode |
 | `references/dark-patterns.md` | Houver fluxo de assinatura, preço, ads ou popups, ou o app "parecer feito por IA" (dashboard ou fonte) |
 | `references/perceived-performance.md` | O app parecer lento, ou ao revisar app de vibe coding antes de lançar |
+| `references/nng-research.md` | Onboarding, tab bar/tabs, empty state, formulário e erros, login, dashboard (barras × donut/gauge), tabela de dados, confiança, permissões, métricas HEART/CASTLE, ou quando precisar citar estudo do NN/g e suas lacunas |
 | `references/visual-index.md` | Antes de abrir qualquer imagem, para escolher qual |
 
 ## Imagens (`assets/visual-refs/<ID>.jpg`)
@@ -97,7 +107,8 @@ São folhas de contato 4×3 com frames antes/depois. **Cada uma custa bastante c
 - Leis: `Dd25eCoBJGr`, `Dd4UtBDBsIS`, `Del7XTgsuwI`.
 - Tela de decisão (trading): `DXeeUP7FKGs_1` (print único, não folha 4×3).
 - Escala 1,25: `DfRucYFjrac_1` (escada), `DfRucYFjrac_2` (line-height), `De_FtT3k-tT_2` (Major Third 16→39). Prints únicos, pequenos.
-- Perfis avaliados (quem vale seguir, quem está inativo): fim do `visual-index.md`.
+- NN/g: dashboard linha + barras `9B_dashboards_linha-e-barras_1`, empty state `9B_empty-states_datadog_1`, permissão negada `9B_permissoes_venmo-camera-negada_1`, senha com medidor `9B_formularios_slack-forca-senha_1`, tabela + painel lateral `9B_tabelas_painel-lateral-crm_1`, tabs internas `9B_tabs_google-finance-in-page_1`, alvo grande `9B_touch-targets_target-app_1` (prints únicos).
+- Perfis avaliados (quem vale seguir, quem está inativo) e fontes de pesquisa/oficiais: fim do `visual-index.md`.
 
 ## Skills complementares
 - `ext-impeccable`: audit, critique e polish de interface.
@@ -108,6 +119,7 @@ São folhas de contato 4×3 com frames antes/depois. **Cada uma custa bastante c
 - `DfgcqeMBPCU`: a legenda é sobre dark patterns, mas o vídeo mostra micro-interações. As versões honestas são **(complemento)**.
 - A série de leis tem 4 partes; a parte 3 não está nas fontes.
 - Divergências registradas: escala 1,2 vs a hierarquia 40/24/18/14 de `DfPJo9UBJ7D` e o label de 17px (`typography-and-touch.md` §2); escala 1,2 (`DfjxqzkCrUI`) vs 1,25 do **mesmo autor** (`DfRucYFjrac`) e do @gg.designhub, com caps +0,06 vs +0,05em e medida 60ch vs 50ch (§2b); grade de 8 vs chat 18px e ícone a 10px (§6); "um primário por tela" vs Buy/Sell de mesmo peso (§9); botão central da tab bar vs Serial position (§10).
+- Divergências das rodadas 9A/9B: NN/g evita pizza/donut/gauge e `dashboard-ui` usa donut/gauge/anéis (critério em `nng-research.md` §6); Material usa escala 1,125 base 14 vs 1,2/1,25 base 16 desta skill (`typography-and-touch.md` §2c); mínimo Apple 28pt vs padrão 44pt (§1b).
 - O "kit" de performance e o plugin "UX Engine" mencionados nos reels não estão incluídos.
 
 ## Skills externas (dependências)

@@ -40,5 +40,7 @@ Implementação: View Transitions API (`view-transition-name` igual no card e no
 - **Troca de tela em dashboard** (Code & Chill, rodada 6): pílula ativa desliza na sidebar e o conteúdo troca com transição curta, sem tela em branco (detalhes em `micro-interactions.md` §13).
 - **Interrupção** (De4B0UxPXIk): toda transição de painel/rota precisa poder reverter no meio (0 ms de espera vs 180 ms).
 
-## Reduced motion (complemento)
-Com `prefers-reduced-motion: reduce`: substitua zoom/slide/shared element por crossfade ≤ 150 ms ou corte; remova parallax, bounce e oscilação; mantenha mudanças de estado visíveis (cor, ícone, texto) e progresso.
+## Reduced motion
+Com `prefers-reduced-motion: reduce`: substitua zoom/slide/shared element por crossfade ≤ 150 ms ou corte; remova parallax, bounce e oscilação; mantenha mudanças de estado visíveis (cor, ícone, texto) e progresso (complemento).
+
+Regras da **Apple HIG (Accessibility, Reduce Motion)**, rodada 9A: (1) reduzir animações automáticas e repetitivas (zoom, scale, movimento periférico); (2) **apertar os springs** para reduzir o bounce; (3) a animação **segue o gesto** direto; (4) **evitar animar profundidade** (eixo z); (5) **trocar transições x/y/z por fade**; (6) **evitar entrar/sair de blur**. Carbon pede sempre uma versão reduzida/estática; Atlassian deixa motion desligado e instantâneo. No React com Motion, `<MotionConfig reducedMotion="user">` é obrigatório (o padrão é `"never"`). Código em `css-recipes.md` §13; comparação em `official-motion-guidelines.md`.

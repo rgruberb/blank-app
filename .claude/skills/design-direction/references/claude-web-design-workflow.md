@@ -102,3 +102,18 @@ segurado pelas duas mãos, moldura "Designed by Orbix Studio · Save for later" 
 planas). O mesmo molde vale para app de celular (`DffCenmFASU_1`/`_4`: 1 celular → 3 celulares em leque).
 Cuidados (complemento): revise os dados do mockup (vários cases têm números impossíveis); não imite marca alheia no
 slide de contato (MediCore copia o sorriso da Amazon).
+
+## Onde achar referências para mostrar ao Claude (rodada 9C)
+
+Escolha a galeria pelo tipo de peça; detalhes, status de login e riscos em `learning-sources.md` §5.
+- **Fluxo de app real** (onboarding, paywall, perfil): Mobbin (exige login).
+- **Estudo de caso completo** (processo + várias telas): Behance. Ex.: Nomey (`9C_perfil-criador_nomey_1–_3.jpg`:
+  wordmark gigante sobre gradiente azul, card de perfil com 1 CTA "Subscribe for $4.99/month", tab bar flutuante de 4
+  ícones) e Cook (`9C_propostas_cook_1/_2.jpg`: processo em 5 cards numerados, ilustração + display condensada,
+  cards de oferta tipo ticket). São **conceitos**, não apps em produção.
+- **Tendência visual de tela/dashboard**: Dribbble (shots editados; anti-bot após ~20 aberturas).
+- **Landing e portfólio**: Land-book (seções: hero, pricing, case), Awwwards (motion/tipografia; pesado para app),
+  SiteInspire (editorial).
+- Complemento: mande ao Claude **1 print + 1 frase do que copiar** ("o card de perfil com um único CTA branco"), não a
+  galeria inteira; a regra "mostrar, não descrever" vale também para o recorte.
+

@@ -1,7 +1,8 @@
 # Padrões de tela de app mobile
 
 Cada padrão: regras curtas, números das fontes (com ID do reel/post) e **ponteiro** para o texto completo na skill
-de tema. "(complemento)" = Apple HIG, Material 3, WCAG ou inferência nossa; não vem das fontes.
+de tema. "(complemento)" = WCAG ou inferência nossa; não vem das fontes. Apple HIG, Material 3 e NN/g lidos na pesquisa 9 (nov/2026) aparecem com "9A"/"9B" e o slug do artigo.
+Arquivos `9A_*`/`9B_*`/`9D_*` citados são prints da pesquisa, **não versionados** (lista em `benchmark-sources.md`).
 Imagens: escolha em `visual-index.md` antes de abrir qualquer uma.
 
 ---
@@ -12,8 +13,19 @@ Imagens: escolha em `visual-index.md` antes de abrir qualquer uma.
 - **Progresso nunca começa do zero** (Goal gradient 19% → 34%, `Dd4UtBDBsIS`). Passos visíveis: "Finish Setup · 2 of 4 ·
   Skip · Next" (Zentra `Dfr6X8qFPwC`); perfil "90% Complete" em anel (Qwash `DX_bA4rCWf0`).
 - **Pouco por passo** (Hick, Choice overload 3% → 30%); peça só o necessário e preencha o resto (Tesler 31 → 16 teclas).
-- Pedido de permissão (notificação, localização) **no momento em que faz sentido**, com tela explicando o ganho antes
-  do diálogo do sistema; "Agora não" respeitado (complemento; nagging em `dark-patterns.md` §A).
+- **Antes de tudo: precisa de onboarding?** NN/g (9B, `mobile-app-onboarding`): evite onboarding instrucional; deck de
+  cards não melhorou desempenho. Justifica-se só se o app **precisa de dados do usuário para começar**, depende de
+  preferências ou tem fluxo realmente novo. No resto: dica em contexto, coach mark no momento certo, **empty state que
+  ensina** (diz o estado, ensina a função, botão para a 1ª tarefa — nunca "Sem registros" enquanto carrega).
+- Se fizer: poucos cards, **1 conceito por card**, "Pular" visível, explicar por que pede cada dado; **personalize
+  conteúdo, não tema/cor**; promoção de função vai para a loja ou para quando a função fica acionável.
+- **Permissões** (NN/g `permission-requests`): só as essenciais na 1ª abertura; o resto **no contexto** (ao tocar em
+  câmera, agenda, contatos). Tela de pré-aviso com "[recurso] para que você possa [benefício]" (motivo: **+12%** de
+  aceite; melhor texto vs pior: **+81%**); "Agora não" respeitado (nagging em `dark-patterns.md` §A). Negou: estado
+  explicado + "Abrir Ajustes" (print `9B_permissoes_venmo-camera-negada_1.jpg`). [nativo] Android pede tela antes do
+  diálogo, iOS usa purpose string; [PWA] diálogo é do navegador, sem link para Ajustes — escreva o caminho.
+- **Confiança em degraus** (NN/g `commitment-levels`): mostre valor antes de pedir login, dado pessoal, cartão ou
+  conta conectada; convite de cliente abre conteúdo antes do cadastro quando possível.
 - Carrossel de boas-vindas: próximo slide espiando, paginação com dots elásticos (borda da frente sai 130ms antes, `DfWjKQPhUbn`); "Pular" sempre visível (complemento).
 - Ponteiros: `ux-patterns/references/ux-laws.md` Partes 2 e 4; `ui-motion/references/micro-interactions.md` §4;
   `design-direction/references/claude-design-course.md` "Mobile App Prototype" (onboarding com connect bank, 3 perguntas, notificação).
@@ -26,6 +38,10 @@ Imagens: escolha em `visual-index.md` antes de abrir qualquer uma.
 - OTP: dígitos caem **70ms** separados e as caixas acendem em onda; senha com medidor de **4 segmentos** vermelho → azul
   (`DfZkZZ4hkuV`). Erro com shake curto + texto, não só cor (complemento; `ext-transitions-dev` "error state shake").
 - Botão "Sign in" ≥ 48px, loading **mantém a largura** e ignora o 2º toque (`DfemaTCBncA`).
+- NN/g (9B, `checklist-registration-login`): login opcional quando possível; pedir só o mínimo; **mostrar senha**;
+  regras de senha **antes** de digitar + medidor de força (`9B_formularios_slack-forca-senha_1.jpg`); **sem campo de
+  confirmação**; código por SMS/OTP em vez de link por e-mail; biometria; "Esqueci a senha". Senha no celular ≈ 2× o
+  tempo do desktop. Passkeys: não cobertas nas páginas lidas.
 - Login de vidro e transição login ↔ cadastro: `dashboard-ui/references/glassmorphism.md` (`DeoGCPlzKOs`; é web, adapte).
 - Ponteiros: `ux-patterns/references/components-checklists.md` §2; `ui-motion/references/micro-interactions.md` §5–6.
 
@@ -44,7 +60,13 @@ Imagens: escolha em `visual-index.md` antes de abrir qualquer uma.
   `design-direction/references/layers-and-trust-layout.md` §2; `dashboard-ui/references/layout-patterns.md` §9.
 
 ## 4. Tab bar
-- **3–5 destinos** (seções, não ações — complemento HIG/Material); ícone + **rótulo** ("glance, don't guess", `DfreUkyBNQg`).
+- **3–5 destinos** (seções, não ações — Apple HIG 9A: ações vão na toolbar); NN/g: **4–5** é o teto com alvo adequado;
+  ícone + **rótulo** de 1 palavra ("glance, don't guess", `DfreUkyBNQg`; `9B_touch-targets_target-app_1.jpg`).
+- Apple HIG (9A): sempre visível ao trocar de seção (some só sob modal); **sem aba "More"**; **não desabilitar nem
+  esconder abas** — seção vazia explica; ícone preenchido; badge só para informação crítica. iPhone: flutua sobre o
+  conteúdo e pode minimizar ao rolar (Liquid Glass [nativo]; [PWA] vidro só sobre conteúdo). iPad: vai para o topo/sidebar.
+- Material (9A): **compact < 600dp** → navigation bar; **600–839** → bar ou navigation rail; **≥ 840** → rail.
+  Testar o PWA em paisagem/tablet e trocar a bar pelo rail, não esticá-la.
 - Aba ativa com **um accent**: pílula flutuante (WayLoo `DVv7OOECewR`, Markets `DXeeUP7FKGs_1`), gota líquida "Meniscus"
   com cor por aba (`DbfG6fuPE9y`). Indicador viaja (`power3.out`, 250–350ms — complemento) e nunca pisca.
 - **Vidro fosco**: 30px de blur atrás da tab bar (`Dflzxq5Bqfj`); só sobre conteúdo que rola.
@@ -68,8 +90,12 @@ Imagens: escolha em `visual-index.md` antes de abrir qualquer uma.
 - Sheet **segue o dedo e faz snap em 146px com overshoot de 7px**; a página escurece (`DfgcqeMBPCU`, "Choose a ride").
 - Backdrop baixa o contraste do fundo **17,4:1 → 2,5:1** (Figure-ground, `Del7XTgsuwI`).
 - "More" em sheet agrupada por tarefa (Edit / Adjust) para tools raros (`DfreUkyBNQg`, Hick 12 → 4 + More).
-- Detents (médio/grande), handle visível, fecha por swipe para baixo, tap no backdrop e botão; conteúdo rolável dentro
-  sem brigar com o gesto de fechar (complemento HIG/Material).
+- Apple HIG Sheets (9A): detents **medium (~½)** e **large**; **grabber** em sheet redimensionável (também dá acesso ao
+  VoiceOver); **uma sheet por vez**; Cancel (início) + Done (fim), ou Back em etapas, **nunca os três**; swipe para
+  baixo fecha e, com alteração não salva, confirma por action sheet; fluxo longo → tela cheia. Print
+  `9A_apple-sheet-detents_1.jpg`. Conteúdo rolável dentro sem brigar com o gesto de fechar (complemento).
+- Material (9A): bottom sheet/diálogo cheio em compact ↔ **menu** em medium+ (troca equivalente ao alargar).
+- [PWA] Drawer do shadcn (Base UI) com `snapPoints` e `showSwipeHandle`, ou Ionic sheet modal — `component-libraries.md`.
 - Modal só para tarefa autocontida ou confirmação destrutiva; menu/popover **nasce do botão** que o abriu (`DfwhC1riuuO`).
 - Tooltip cresce **50% → 100% a partir da seta** (`DfgcqeMBPCU`). Dynamic Island/alertas: morph da pílula, não pop (`Dflzxq5Bqfj`).
 - Ponteiros: `ux-patterns/references/components-checklists.md` §8; `ui-motion/references/micro-interactions.md` §8.
@@ -81,8 +107,17 @@ Imagens: escolha em `visual-index.md` antes de abrir qualquer uma.
   sobe junto com o teclado (complemento).
 - Postel: aceite qualquer formato e normalize (telefone **1/4 → 4/4**); Chunking: `415 555 0123`; Tesler/Parkinson:
   CEP/postcode primeiro (**31 → 16**, **30 → 7 teclas**) — `Dd25eCoBJGr`, `Dd4UtBDBsIS`, `Del7XTgsuwI`.
-- Validação inline depois de sair do campo, erro com texto + ícone (complemento); disabled diz o porquê
+- Validação inline depois de sair do campo, erro com texto + ícone; disabled diz o porquê
   ("Name your workspace first", `DfemaTCBncA`).
+- NN/g (9B, `4-principles-reduce-cognitive-load`, `errors-forms-design-guidelines`): **coluna única**, grupos
+  nomeados, "uma coisa por página" em fluxo longo, tempo estimado e progresso, "(opcional)" marcado, linguagem de 6º–8º
+  ano, exemplo de formato; **sem placeholder como rótulo**; não validar antes de terminar o campo; erro ao lado do
+  campo, cor + ícone, animação só no ícone; ajuda extra após **3 erros** repetidos; nunca só resumo no topo nem tooltip.
+  Mobile: cuidado com o teclado cobrindo a mensagem.
+- **Botão de enviar abaixo dos campos**, não no topo (regra iOS que falha em teste, NN/g `4-ios-rules-break`); se
+  precisa estar sempre à mão, **fixo no rodapé** (`9B_formularios_hoteltonight-botao-fixo_1.jpg`).
+- Fuso horário (agenda): detectar e permitir trocar; busca por **cidade** (44% buscam assim) e por nome do fuso,
+  ordem alfabética por cidade com país + offset — só 34% sabem o offset UTC (NN/g `time-zone-selectors`).
 - Slider: thumb cresce **140%** ao agarrar, bolha de valor segue (`DfWjKQPhUbn`); arraste que muda valor mostra o
   resultado antes de soltar ("Drag to extend · 4 nights", `Dfr4RMBlaPH`).
 - Ponteiros: `ux-patterns/references/ux-laws.md`; `components-checklists.md` §2, §8; `ui-motion/references/micro-interactions.md` §4–6.
