@@ -1,0 +1,619 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>RG AI · Portfólio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="canonical" href="https://gruberia.com/portfolio/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="description" content="Apps sob medida por Rafael Gruber Bernstein (RG AI Ltda): especialidade em crédito e finanças, e produtos para agências de marca pessoal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@500;600;700&display=swap">
+<style>
+/* Layout: coluna editorial única de 1120px, seções separadas por régua fina; cada projeto abre com a frase de resultado, depois visualizador de telas e ficha.
+   Identidade RG AI: papel frio, tinta grafite, um verde de livro-caixa como único acento. */
+:root{
+  --bg:#F2F4F3; --surface:#FFFFFF; --sunken:#E8ECEA; --ink:#141C19; --ink-2:#3A4540; --muted:#5A6661;
+  --rule:#D3DAD6; --accent:#1D5A45; --accent-ink:#FFFFFF; --accent-soft:#DDEBE5; --mark:#B4501F;
+  --f-display:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --shadow:0 1px 2px rgba(20,28,25,.06),0 12px 32px -16px rgba(20,28,25,.22);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0F1512; --surface:#171F1B; --sunken:#1C2621; --ink:#E9EFEC; --ink-2:#BFCAC4; --muted:#93A19A;
+  --rule:#2A3630; --accent:#6CC4A0; --accent-ink:#0B1511; --accent-soft:#183128; --mark:#E8895A;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px -16px rgba(0,0,0,.6); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1512; --surface:#171F1B; --sunken:#1C2621; --ink:#E9EFEC; --ink-2:#BFCAC4; --muted:#93A19A;
+  --rule:#2A3630; --accent:#6CC4A0; --accent-ink:#0B1511; --accent-soft:#183128; --mark:#E8895A;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px -16px rgba(0,0,0,.6); color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
+body{background:var(--bg);color:var(--ink-2);font:400 16px/1.62 var(--f-body);-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:var(--accent);text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+.w{max-width:1120px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);color:var(--ink);text-wrap:balance;margin:0;font-weight:600;letter-spacing:-.015em}
+p{margin:0}
+.mono{font-family:var(--f-mono)}
+.eyebrow{font:500 12px/1.3 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+/* barra de topo */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--bg)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.top .w{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font:600 17px/1 var(--f-display);letter-spacing:-.01em}
+.brand svg{width:26px;height:26px}
+.brand span{color:var(--muted);font-weight:500}
+.top nav{display:flex;gap:22px;font-size:14px}
+.top nav a{color:var(--ink-2);text-decoration:none}
+.top nav a:hover{color:var(--accent)}
+@media(max-width:640px){.top nav a:not(.cta-s){display:none}}
+.cta-s{font-weight:600}
+
+/* herói */
+.hero{padding-block:clamp(40px,7vw,88px) clamp(28px,4vw,48px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:end}
+.hero h1{font-size:clamp(2rem,4.6vw,3.55rem);line-height:1.06;font-weight:700;margin-top:18px}
+.hero .lead{margin-top:22px;font-size:1.125rem;max-width:56ch;color:var(--ink-2)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:6px;font:600 15px/1 var(--f-body);text-decoration:none;border:1px solid var(--rule);background:var(--surface);color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--accent)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.ficha{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:6px 20px;margin:0}
+.ficha div{display:grid;grid-template-columns:minmax(0,7.5rem) minmax(0,1fr);gap:14px;padding:13px 0;border-top:1px solid var(--rule);font-size:.93rem;align-items:baseline}
+.ficha div:first-child{border-top:0}
+.ficha dt{font:500 11.5px/1.4 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.ficha dd{margin:0;color:var(--ink)}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}}
+
+/* em resumo */
+.glance{padding-block:0 clamp(40px,6vw,72px)}
+.glance-h{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 20px;margin-bottom:16px}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+@media(max-width:1000px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.cards{grid-template-columns:1fr}}
+.card{display:flex;flex-direction:column;gap:10px;background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:12px 12px 16px;min-width:0}
+.card .thumb{display:block;aspect-ratio:1500/938;overflow:hidden;border-radius:6px;border:1px solid var(--rule);background:var(--sunken)}
+.card .thumb img{width:100%;height:100%;object-fit:cover;object-position:top left}
+.card .seg{font:500 11px/1.3 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:4px;padding-inline:4px}
+.card h3{font-size:1.2rem;padding-inline:4px;line-height:1.2}
+.card p{font-size:.92rem;line-height:1.5;padding-inline:4px;flex:1}
+.card .links{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.9rem;font-weight:600;padding-inline:4px;margin-top:2px}
+.card .links a{text-decoration:none}
+.card .links a:hover{text-decoration:underline}
+
+/* figuras e visualizador */
+figure{margin:0}
+figcaption{font-size:.85rem;color:var(--muted);margin-top:12px;line-height:1.5;min-height:3em}
+figcaption b{font:500 11.5px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--mark);margin-right:8px}
+.viewer{min-width:0}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.tabs button{font:600 13.5px/1 var(--f-body);min-height:40px;padding:0 14px;border-radius:6px;border:1px solid var(--rule);background:transparent;color:var(--ink-2);cursor:pointer}
+.tabs button:hover{border-color:var(--accent)}
+.tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.stage{aspect-ratio:1500/938;background:var(--surface);border:1px solid var(--rule);border-radius:10px;overflow:hidden;box-shadow:var(--shadow);position:relative}
+.stage img{width:100%;height:100%;object-fit:cover;object-position:top left}
+.stage.phones{display:flex;align-items:center;justify-content:center;gap:2.2%;background:var(--sunken);padding:2.4% 0}
+.stage.phones img{height:100%;width:auto;max-width:31%;object-fit:contain;border-radius:10px;border:1px solid var(--rule);box-shadow:var(--shadow);flex:none}
+.stage.phones.one img{max-width:60%}
+.stage.dark-bg{background:var(--sunken)}
+.panel[hidden]{display:none}
+
+/* seções */
+section{padding-block:clamp(44px,7vw,92px);border-top:1px solid var(--rule)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(20px,5vw,72px);margin-bottom:clamp(28px,4vw,52px);align-items:start}
+.sec-head h2{font-size:clamp(1.65rem,3vw,2.35rem);line-height:1.12;margin-top:12px}
+.sec-head p{font-size:1.04rem;max-width:62ch}
+@media(max-width:860px){.sec-head{grid-template-columns:1fr}}
+.note{background:var(--accent-soft);border-radius:8px;padding:14px 18px;font-size:.93rem;color:var(--ink);max-width:72ch;margin-top:16px}
+.seg-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;padding-bottom:14px;border-bottom:2px solid var(--ink);margin-bottom:0}
+.seg-h h3{font-size:1.15rem}
+
+.proj{padding-block:clamp(32px,5vw,56px);border-top:1px solid var(--rule)}
+.seg-h+.proj{border-top:0}
+.p-head{max-width:78ch;margin-bottom:clamp(20px,3vw,32px)}
+.tag{display:inline-flex;align-items:center;gap:8px;font:500 11.5px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.tag i{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.proj h3.name{font-size:clamp(1.5rem,2.6vw,2rem);margin:12px 0 10px;line-height:1.1}
+.outcome{font:600 clamp(1.15rem,2vw,1.5rem)/1.3 var(--f-display);color:var(--ink);letter-spacing:-.01em;text-wrap:balance}
+.p-body{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+.proj.rev .p-body{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr)}
+.proj.rev .viewer{order:2}
+@media(max-width:960px){.p-body,.proj.rev .p-body{grid-template-columns:1fr}.proj.rev .viewer{order:0}}
+.spec{margin:0;display:grid;gap:0}
+.spec div{display:grid;grid-template-columns:5.4rem minmax(0,1fr);gap:12px;padding:11px 0;border-top:1px solid var(--rule);font-size:.92rem;line-height:1.55}
+.spec div:first-child{border-top:0;padding-top:0}
+.spec dt{font:500 11px/1.8 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.spec dd{margin:0;color:var(--ink-2);max-width:56ch}
+.spec dd b{color:var(--ink);font-weight:600}
+@media(max-width:420px){.spec div{grid-template-columns:1fr;gap:2px}}
+
+.result{margin-top:28px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 22px;align-items:center;background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:6px;padding:18px 22px}
+.result .big{font:700 clamp(2.2rem,5vw,3.2rem)/1 var(--f-display);color:var(--accent);letter-spacing:-.03em}
+.result p{font-size:.95rem;max-width:60ch}
+@media(max-width:520px){.result{grid-template-columns:1fr}}
+
+/* Wonespace */
+.wonespace{background:var(--sunken)}
+.video video{width:100%;height:auto;aspect-ratio:16/9;background:#000;border-radius:10px;border:1px solid var(--rule);box-shadow:var(--shadow)}
+.video .cap{font:400 12px var(--f-mono);color:var(--muted);margin-top:10px}
+
+/* como eu trabalho */
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
+.grid3 article{border-top:2px solid var(--ink);padding-top:16px}
+.grid3 h3{font-size:1.1rem;margin-bottom:10px}
+.grid3 ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:.93rem}
+.grid3 li{padding-left:16px;position:relative}
+.grid3 li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:1px;background:var(--accent)}
+@media(max-width:860px){.grid3{grid-template-columns:1fr}}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:clamp(28px,4vw,44px)}
+.stack span{font:500 13px/1 var(--f-mono);padding:8px 11px;border:1px solid var(--rule);border-radius:4px;background:var(--surface);color:var(--ink)}
+.bg{margin:clamp(28px,4vw,44px) 0 0;display:grid}
+.bg div{display:grid;grid-template-columns:9.5rem minmax(0,1fr);gap:18px;padding:13px 0;border-top:1px solid var(--rule);font-size:.93rem}
+.bg dt{font:500 12px/1.6 var(--f-mono);letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+.bg dd{margin:0}
+.bg dd b{color:var(--ink);font-weight:600}
+@media(max-width:560px){.bg div{grid-template-columns:1fr;gap:2px}}
+
+/* contato */
+.contact{background:var(--ink);color:#CDD6D1;border-top:0}
+.contact h2{line-height:1.1;color:#fff;font-size:clamp(1.8rem,3.6vw,2.8rem);max-width:20ch}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .contact{background:var(--surface);border-top:1px solid var(--rule)}:root:not([data-theme="light"]) .contact h2{color:var(--ink)}}
+:root[data-theme="dark"] .contact{background:var(--surface);border-top:1px solid var(--rule)}
+:root[data-theme="dark"] .contact h2{color:var(--ink)}
+.contact p.l{margin-top:16px;max-width:56ch;font-size:1.05rem}
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:28px}
+.mail code{font:500 clamp(1rem,2.4vw,1.35rem)/1.2 var(--f-mono);color:inherit;user-select:all;-webkit-user-select:all;overflow-wrap:anywhere}
+.contact .btn{background:transparent;color:inherit;border-color:rgba(255,255,255,.3)}
+.contact .btn:hover{border-color:#fff}
+.contact .btn.pri{background:#fff;color:#141C19;border-color:#fff}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .contact .btn{border-color:var(--rule)}:root:not([data-theme="light"]) .contact .btn.pri{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}}
+:root[data-theme="dark"] .contact .btn{border-color:var(--rule)}
+:root[data-theme="dark"] .contact .btn.pri{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.contact a{color:inherit}
+.copied{font:500 13px var(--f-mono);min-height:1.2em}
+footer{padding-block:28px;font-size:.84rem;color:var(--muted)}
+footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* ampliar imagem */
+.stage img{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:rgba(8,12,10,.88);padding:calc(16px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));opacity:0;transition:opacity .2s ease}
+.lb.on{opacity:1}
+.lb img{max-width:100%;max-height:calc(100% - 64px);width:auto;height:auto;object-fit:contain;border-radius:8px;box-shadow:0 20px 60px -20px rgba(0,0,0,.7);cursor:zoom-out;background:#fff}
+.lb p{margin:0;color:#E9EFEC;font-size:.9rem;max-width:80ch;text-align:center}
+.lb-x{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px));min-width:44px;min-height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);color:#fff;font:500 22px/1 var(--f-body);cursor:pointer}
+.lb-x:focus-visible{outline:2px solid #fff}
+@media(prefers-reduced-motion:reduce){.lb{transition:none}}
+</style>
+
+<header class="top">
+  <div class="w">
+    <a class="brand" href="/" aria-label="RG AI, página inicial">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="1" width="24" height="24" rx="4" style="fill:var(--accent)"/><path d="M6 19V15h4v4M10 15v-4h4v4M14 11V7h4v4" fill="none" style="stroke:var(--accent-ink)" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      RG AI <span>Ltda</span>
+    </a>
+    <nav aria-label="Seções">
+      <a href="#projetos">Projetos</a>
+      <a href="#wonespace">Wonespace</a>
+      <a href="#entrega">Como entregamos</a>
+      <a href="#contato" class="cta-s">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main id="topo">
+<div class="hero">
+  <div class="w">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">RG AI Ltda · Rafael Gruber Bernstein</p>
+        <h1>Apps sob medida, do requisito à produção.</h1>
+        <p class="lead">Construímos aplicações web de dados e IA para quem precisa de uma ferramenta própria. Nossa especialidade é crédito e finanças, e também fazemos produtos para outros segmentos, como agências de marca pessoal. Cuidamos do produto, do modelo, do código e da operação, e registramos a sua marca no INPI.</p>
+        <div class="btns">
+          <a class="btn pri" href="#projetos">Ver os projetos</a>
+          <a class="btn" href="#contato">Fale com a gente</a>
+        </div>
+      </div>
+      <dl class="ficha">
+        <div><dt>Especialidade</dt><dd>Crédito, recebíveis e FIDC</dd></div>
+        <div><dt>Também</dt><dd>Agências de marca pessoal (Wonespace, produto próprio em construção)</dd></div>
+        <div><dt>Em produção</dt><dd>3 aplicações web de crédito, desde mar/2026</dd></div>
+        <div><dt>Marca</dt><dd>Registramos sua marca no INPI</dd></div>
+        <div><dt>Fundador</dt><dd>Rafael Gruber Bernstein: mais de 3 anos em produtos de dados e IA, do conceito à produção. Engenharia mecânica na PUC-Rio e no Technion, CSPO (2025), inglês fluente</dd></div>
+      </dl>
+    </div>
+  </div>
+</div>
+
+<div class="glance">
+  <div class="w">
+    <div class="glance-h">
+      <p class="eyebrow">Em resumo</p>
+      <p class="eyebrow">Telas de demonstração, com dados fictícios</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <a class="thumb" href="#riskai" tabindex="-1" aria-hidden="true"><img src="img/riskai-1.webp" width="1500" height="938" alt=""></a>
+        <p class="seg">Crédito e finanças</p>
+        <h3>RiskAI FIDC</h3>
+        <p>Leitura de risco e deterioração da carteira por cedente e grupo econômico, para o comitê de crédito.</p>
+        <div class="links"><a href="#riskai">Ver o projeto</a></div>
+      </div>
+      <div class="card">
+        <a class="thumb" href="#leadscout" tabindex="-1" aria-hidden="true"><img src="img/leadscout-1.webp" width="1500" height="938" alt=""></a>
+        <p class="seg">Crédito e finanças</p>
+        <h3>LeadScout</h3>
+        <p>Prospecção de cedentes com pesquisa de IA auditada: sem fonte verificável, a afirmação fica indeterminada.</p>
+        <div class="links"><a href="#leadscout">Ver o projeto</a></div>
+      </div>
+      <div class="card">
+        <a class="thumb" href="#carteira360" tabindex="-1" aria-hidden="true"><img src="img/carteira360-3.webp" width="1500" height="938" alt=""></a>
+        <p class="seg">Crédito e finanças</p>
+        <h3>Carteira360</h3>
+        <p>Agenda, rotas de visita e alertas da carteira. Com o LeadScout, +200% de produtividade nesses processos.</p>
+        <div class="links"><a href="#carteira360">Ver o projeto</a></div>
+      </div>
+      <div class="card">
+        <a class="thumb" href="#wonespace" tabindex="-1" aria-hidden="true"><img src="img/wonespace-1.webp" width="1500" height="938" alt=""></a>
+        <p class="seg">Agências de marca pessoal</p>
+        <h3>Wonespace</h3>
+        <p>Agência e médico no mesmo dado, em tempo real. Produto próprio em construção.</p>
+        <div class="links"><a href="#wonespace">Ver o caso</a><a href="#video-wonespace">Ver o vídeo</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="projetos">
+  <div class="w">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Especialidade</p>
+        <h2>Crédito e finanças: três aplicações em produção</h2>
+      </div>
+      <div>
+        <p>Desde março de 2026 atendemos uma empresa do setor de crédito e recebíveis (FIDC). Construímos com Claude Code, do requisito ao deploy, três aplicações web em produção para o comitê de crédito, a diretoria e o time comercial.</p>
+        <p class="note">Nomes de clientes e dados reais não aparecem aqui. As telas são protótipos de demonstração, com nomes, CNPJs e valores fictícios. Onde havia dado com cara de real, borramos.</p>
+      </div>
+    </div>
+
+    <!-- RiskAI -->
+    <article class="proj" id="riskai">
+      <div class="p-head">
+        <p class="tag"><i></i>Em produção · comitê de crédito</p>
+        <h3 class="name">RiskAI FIDC</h3>
+        <p class="outcome">Leitura de risco e deterioração da carteira, por cedente e grupo econômico, para o comitê decidir limites e continuidade da relação.</p>
+      </div>
+      <div class="p-body">
+        <div class="viewer" data-viewer>
+          <div class="tabs" role="tablist" aria-label="Telas do RiskAI FIDC">
+            <button role="tab" id="t-ra-1" aria-controls="p-ra-1" aria-selected="true">Resumo</button>
+            <button role="tab" id="t-ra-2" aria-controls="p-ra-2" aria-selected="false" tabindex="-1">Ficha do grupo</button>
+            <button role="tab" id="t-ra-4" aria-controls="p-ra-4" aria-selected="false" tabindex="-1">Sinais na carteira</button>
+            <button role="tab" id="t-ra-5" aria-controls="p-ra-5" aria-selected="false" tabindex="-1">PDD lançada e indicadores</button>
+          </div>
+          <div class="panel" role="tabpanel" id="p-ra-1" aria-labelledby="t-ra-1">
+            <figure><div class="stage"><img src="img/riskai-1.webp" width="1500" height="938" alt="Resumo da carteira de crédito, com grupos por faixa de risco e tabelas de maiores riscos e maiores variações."></div>
+            <figcaption><b>Dados de demonstração</b>Resumo da carteira: grupos por faixa de risco e as maiores variações do dia.</figcaption></figure>
+          </div>
+          <div class="panel" role="tabpanel" id="p-ra-2" aria-labelledby="t-ra-2" hidden>
+            <figure><div class="stage"><img loading="lazy" src="img/riskai-2.webp" width="1500" height="938" alt="Ficha de um grupo econômico com risco total, limite, sinais e variação em 30 dias."></div>
+            <figcaption><b>Dados de demonstração</b>Ficha do grupo: risco total, uso do limite, sinais por origem e o que mudou em 30 dias.</figcaption></figure>
+          </div>
+          <div class="panel" role="tabpanel" id="p-ra-4" aria-labelledby="t-ra-4" hidden>
+            <figure><div class="stage"><img loading="lazy" src="img/riskai-4.webp" width="1500" height="938" alt="Painel com a PDD lançada por mês e por origem, o saldo por tipo de cobrança e os sinais de piora da carteira, com o número de grupos e o risco total de cada um."></div>
+            <figcaption><b>Dados de demonstração</b>Painel, Sinais na carteira: quantos grupos têm cada sinal de piora (vencido há mais de 15 dias, recompra nos últimos 30 dias, prorrogação acima de 6%, títulos em oposição) e o risco total deles. Acima, a PDD lançada por mês e por origem. Carteira fictícia.</figcaption></figure>
+          </div>
+          <div class="panel" role="tabpanel" id="p-ra-5" aria-labelledby="t-ra-5" hidden>
+            <figure><div class="stage"><img loading="lazy" src="img/riskai-5.webp" width="1500" height="938" alt="Gráfico da PDD lançada mês a mês contra a inadimplência PJ do Banco Central, com a correlação de zero a seis meses antes."></div>
+            <figcaption><b>Dados de demonstração</b>Painel, PDD lançada no mês e indicadores: a PDD lançada mês a mês ao lado de um indicador real do Banco Central (inadimplência PJ), com a correlação do mesmo mês a seis meses antes. Carteira fictícia, indicador real.</figcaption></figure>
+          </div>
+        </div>
+        <dl class="spec">
+          <div><dt>Problema</dt><dd>O comitê decide se ajusta o limite ou encerra a relação com um cedente. Precisa ver cedo onde a carteira piora.</dd></div>
+          <div><dt>O que faz</dt><dd>Mostra o estado de cada cedente (ativo, livro vencido, dormente, sem exposição) e a taxa medida de cada estado. Aponta os sinais que antecedem a piora: freada da originação, recompras e prorrogações. Lista os grupos que cruzaram o marco nas últimas 52 semanas e compara a PDD do mês com indicadores do BCB e do IBGE.</dd></div>
+          <div><dt>Como</dt><dd>Validação fora do tempo, com critério de aprovação escrito antes de ver o resultado. Dados da época em cada corte, para o modelo nunca enxergar o futuro. <b>Retreino diário que só publica modelos aprovados na validação</b>, com recuo automático para a taxa por faixa se o realizado sair do previsto.</dd></div>
+          <div><dt>Situação</dt><dd>Em produção. As telas são da demonstração, sobre carteira fictícia.</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <!-- LeadScout -->
+    <article class="proj rev" id="leadscout">
+      <div class="p-head">
+        <p class="tag"><i></i>Em produção · área comercial</p>
+        <h3 class="name">LeadScout</h3>
+        <p class="outcome">Pesquisa de IA para prospectar cedentes, em que um modelo audita o outro e toda afirmação sem fonte verificável fica marcada como indeterminada.</p>
+      </div>
+      <div class="p-body">
+        <div class="viewer" data-viewer>
+          <div class="tabs" role="tablist" aria-label="Telas do LeadScout">
+            <button role="tab" id="t-ls-1" aria-controls="p-ls-1" aria-selected="true">Ficha do lead</button>
+            <button role="tab" id="t-ls-2" aria-controls="p-ls-2" aria-selected="false" tabindex="-1">Lista de leads</button>
+            <button role="tab" id="t-ls-3" aria-controls="p-ls-3" aria-selected="false" tabindex="-1">Pipeline</button>
+          </div>
+          <div class="panel" role="tabpanel" id="p-ls-1" aria-labelledby="t-ls-1">
+            <figure><div class="stage"><img loading="lazy" src="img/leadscout-1.webp" width="1500" height="938" alt="Ficha de lead com nota, fila, etapa do funil, lastro, parecer e prova de venda com três fontes."></div>
+            <figcaption><b>Dados de demonstração</b>Ficha do lead: nota, lastro, parecer e prova de venda com fonte. CNPJ e telefone borrados.</figcaption></figure>
+          </div>
+          <div class="panel" role="tabpanel" id="p-ls-2" aria-labelledby="t-ls-2" hidden>
+            <figure><div class="stage"><img loading="lazy" src="img/leadscout-2.webp" width="1500" height="938" alt="Tabela de leads com fila, nota, cidade, lastro, etapa, próximo passo e responsável."></div>
+            <figcaption><b>Dados de demonstração</b>Lista de leads com fila, lastro (forte, fraco ou indeterminado), etapa e próximo passo.</figcaption></figure>
+          </div>
+          <div class="panel" role="tabpanel" id="p-ls-3" aria-labelledby="t-ls-3" hidden>
+            <figure><div class="stage"><img loading="lazy" src="img/leadscout-3.webp" width="1500" height="938" alt="Quadro do funil por etapa: Novo, Contato, Visita marcada, Documentação, Contrato para assinatura e Cadastro efetivo, com os cartões dos leads."></div>
+            <figcaption><b>Dados de demonstração</b>Pipeline: quadro por etapa do funil, de Novo a Cadastro efetivo, com prazo da etapa, dias parado e próximo passo em cada cartão. O cartão se arrasta entre as colunas.</figcaption></figure>
+          </div>
+        </div>
+        <dl class="spec">
+          <div><dt>Problema</dt><dd>Prospectar cedentes exige pesquisar cada empresa. Pesquisa de IA sem checagem pode afirmar o que ninguém confirmou.</dd></div>
+          <div><dt>O que faz</dt><dd>Pesquisa cada lead com a API da Anthropic, dá uma nota e escreve um parecer com provas de venda e fontes. Integra com o CRM: funil, agenda e distribuição de leads.</dd></div>
+          <div><dt>Como</dt><dd>Um modelo audita o outro. <b>Afirmação sem fonte verificável fica indeterminada</b> e visível na tela.</dd></div>
+          <div><dt>Situação</dt><dd>Em produção, junto com a gestão de carteira.</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <!-- Carteira360 -->
+    <article class="proj" id="carteira360">
+      <div class="p-head">
+        <p class="tag"><i></i>Em produção · gestão de carteira</p>
+        <h3 class="name">Carteira360</h3>
+        <p class="outcome">Agenda, rotas de visita e alerta de cliente que parou de operar, com uma visão para o gerente, outra para o gestor e uma para o celular em campo.</p>
+      </div>
+      <div class="p-body">
+        <div class="viewer" data-viewer>
+          <div class="tabs" role="tablist" aria-label="Telas do Carteira360">
+            <button role="tab" id="t-c3-2" aria-controls="p-c3-2" aria-selected="true">Gestor</button>
+            <button role="tab" id="t-c3-4" aria-controls="p-c3-4" aria-selected="false" tabindex="-1">Relatório</button>
+            <button role="tab" id="t-c3-5" aria-controls="p-c3-5" aria-selected="false" tabindex="-1">Rota</button>
+            <button role="tab" id="t-c3-1" aria-controls="p-c3-1" aria-selected="false" tabindex="-1">Gerente</button>
+            <button role="tab" id="t-c3-3" aria-controls="p-c3-3" aria-selected="false" tabindex="-1">Celular</button>
+          </div>
+          <div class="panel" role="tabpanel" id="p-c3-2" aria-labelledby="t-c3-2">
+            <figure><div class="stage"><img loading="lazy" src="img/carteira360-3.webp" width="1500" height="938" alt="Mesa do gestor, com a contagem de visitas atrasadas, vencidos e parados por pessoa da equipe."></div>
+            <figcaption><b>Dados de demonstração</b>Visão do gestor: a Mesa cruza cada pessoa da equipe com visita atrasada, vencido em aberto e parado além do prazo, e permite mandar a lista ao gerente ou reatribuir a carteira.</figcaption></figure>
+          </div>
+          <div class="panel" role="tabpanel" id="p-c3-4" aria-labelledby="t-c3-4" hidden>
+            <figure><div class="stage"><img loading="lazy" src="img/carteira360-4.webp" width="1500" height="938" alt="Relatório de resultado: receita mês a mês contra a meta e desempenho comercial por gerente."></div>
+            <figcaption><b>Dados de demonstração</b>Relatórios, aba Resultado: receita do mês contra a meta, receita mês a mês (carteiras com meta e demais) e desempenho comercial por gerente, com o percentual atingido. Há envio automático e exportação.</figcaption></figure>
+          </div>
+          <div class="panel" role="tabpanel" id="p-c3-5" aria-labelledby="t-c3-5" hidden>
+            <figure><div class="stage"><img loading="lazy" src="img/carteira360-5.webp" width="1500" height="938" alt="Rota de hoje no mapa do Rio de Janeiro, com cinco paradas numeradas e a lista de visitas com horário estimado."></div>
+            <figcaption><b>Dados de demonstração</b>Rota de hoje: mapa com as paradas numeradas na ordem da visita e o raio de 25 km, e a lista com horário estimado, motivo da visita e o botão Visitei. A rota se ordena pelo caminho e abre no Maps.</figcaption></figure>
+          </div>
+          <div class="panel" role="tabpanel" id="p-c3-1" aria-labelledby="t-c3-1" hidden>
+            <figure><div class="stage"><img loading="lazy" src="img/carteira360-1.webp" width="1500" height="938" alt="Tela Hoje do gerente com pendências por cliente e a ficha do cliente aberta."></div>
+            <figcaption><b>Dados de demonstração</b>Visão do gerente no computador: pendências do dia, ficha do cliente e ações.</figcaption></figure>
+          </div>
+          <div class="panel" role="tabpanel" id="p-c3-3" aria-labelledby="t-c3-3" hidden>
+            <figure><div class="stage phones">
+              <img loading="lazy" src="img/carteira360-m1.webp" width="620" height="1342" alt="Relatórios no celular, com alertas e atrasos da carteira.">
+              <img loading="lazy" src="img/carteira360-m2.webp" width="620" height="1342" alt="Ficha de cliente no celular com contatos, crédito e histórico.">
+              <img loading="lazy" src="img/carteira360-m3.webp" width="620" height="1342" alt="Agenda semanal no celular com compromissos do dia.">
+            </div>
+            <figcaption><b>Dados de demonstração</b>Celular: relatórios e alertas, ficha do cliente e agenda.</figcaption></figure>
+          </div>
+        </div>
+        <dl class="spec">
+          <div><dt>Problema</dt><dd>Em uma carteira grande, quem para de operar ou fica sem visita passa despercebido.</dd></div>
+          <div><dt>O que faz</dt><dd>Organiza agenda e rotas de visita e avisa quando um cliente parou de operar. O gestor vê a equipe toda. O gerente vê a própria carteira, no computador ou no celular.</dd></div>
+          <div><dt>Como</dt><dd>Regras ambíguas viraram lógica determinística: prazo de visita por cliente, o que conta como atraso, o que é cliente parado.</dd></div>
+          <div><dt>Situação</dt><dd>Em produção. Telas da versão de demonstração.</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <div class="result" role="note">
+      <div class="big">+200%</div>
+      <p>de produtividade nos processos de prospecção e de gestão de carteira, somando o LeadScout e o Carteira360, com os três apps em produção.</p>
+    </div>
+  </div>
+</section>
+
+<section id="wonespace" class="wonespace">
+  <div class="w">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Agências de marca pessoal</p>
+        <h2>Wonespace: agência e médico no mesmo app</h2>
+      </div>
+      <div>
+        <p>A Wonespace é um app de gestão para agências que produzem conteúdo para a marca pessoal de médicos. Os dois lados trabalham no mesmo dado em tempo real: a agência acompanha tarefas, produção e prazos, e o médico aprova, responde e vê o que está pendente.</p>
+        <p class="note">A Wonespace é um produto próprio em construção. Aparecem aqui os protótipos, não um sistema em produção.</p>
+      </div>
+    </div>
+
+    <div class="video" id="video-wonespace">
+      <video controls preload="metadata" playsinline poster="media/wonespace-poster.jpg" aria-label="Vídeo promocional da Wonespace, 1 minuto e 54 segundos, com música e sem narração">
+        <source src="media/wonespace-promo.mp4" type="video/mp4">
+        Seu navegador não reproduz este vídeo.
+      </video>
+      <p class="cap">Vídeo de 1 min 54 s, 60 quadros por segundo, só música. Toque em play para ouvir.</p>
+    </div>
+
+    <article class="proj" style="padding-bottom:0;border-top:0;margin-top:clamp(32px,5vw,56px)">
+      <div class="p-head">
+        <p class="outcome">Agência e médico trabalham no mesmo dado: o que um faz aparece no outro, em tempo real.</p>
+      </div>
+      <div class="p-body">
+        <div class="viewer" data-viewer>
+          <div class="tabs" role="tablist" aria-label="Telas da Wonespace">
+            <button role="tab" id="t-rn-1" aria-controls="p-rn-1" aria-selected="true">Gestor e médico lado a lado</button>
+            <button role="tab" id="t-rn-2" aria-controls="p-rn-2" aria-selected="false" tabindex="-1">Produção</button>
+            <button role="tab" id="t-rn-4" aria-controls="p-rn-4" aria-selected="false" tabindex="-1">Hoje · Andamento do projeto</button>
+          <button role="tab" id="t-rn-5" aria-controls="p-rn-5" aria-selected="false" tabindex="-1">Mapa mental</button>
+          <button role="tab" id="t-rn-6" aria-controls="p-rn-6" aria-selected="false" tabindex="-1">Mensagens</button>
+          <button role="tab" id="t-rn-3" aria-controls="p-rn-3" aria-selected="false" tabindex="-1">App do médico</button>
+          </div>
+          <div class="panel" role="tabpanel" id="p-rn-1" aria-labelledby="t-rn-1">
+            <figure><div class="stage"><img loading="lazy" src="img/wonespace-1.webp" width="1500" height="938" alt="Painel do gestor da agência e app do médico lado a lado, no mesmo endereço."></div>
+            <figcaption><b>Dados de demonstração</b>Gestor e médico lado a lado: o que um faz aparece no outro. Dados fictícios.</figcaption></figure>
+          </div>
+          <div class="panel" role="tabpanel" id="p-rn-2" aria-labelledby="t-rn-2" hidden>
+            <figure><div class="stage"><img loading="lazy" src="img/wonespace-3.webp" width="1500" height="938" alt="Tela de produção do gestor, com as trilhas dos projetos por etapa, progresso e atrasos."></div>
+            <figcaption><b>Dados de demonstração</b>Produção, aba Projetos: trilhas por etapa, do planejamento ao lançamento, com progresso e atrasos.</figcaption></figure>
+          </div>
+          <div class="panel" role="tabpanel" id="p-rn-4" aria-labelledby="t-rn-4" hidden>
+          <figure><div class="stage"><img loading="lazy" src="img/wonespace-4.webp" width="1500" height="938" alt="Tela Hoje do gestor: Andamento do projeto, com a pilha de camadas de um conteúdo e as etapas Pauta, Roteiro, Gravação, Edição, Aprovação e No ar, ao lado do Gargalo na produção."></div>
+          <figcaption><b>Dados de demonstração</b>Hoje, faixa Andamento do projeto: cada conteúdo é uma pilha de camadas, uma por etapa, que acendem quando ficam prontas. A camada escolhida (Gravação) abre as tarefas e os arquivos da etapa. Ao lado, o Gargalo na produção lista os conteúdos parados.</figcaption></figure>
+        </div>
+                  <div class="panel" role="tabpanel" id="p-rn-5" aria-labelledby="t-rn-5" hidden>
+            <figure><div class="stage"><img loading="lazy" src="img/wonespace-5.webp" width="1500" height="938" alt="Mapa mental, aba Brainstorm: quadro livre com notas, ideias de conteúdo, um grupo, uma referência em vídeo e o botão Transformar em projeto."></div>
+            <figcaption><b>Dados de demonstração</b>Mapa mental, aba Brainstorm: notas, ideias de conteúdo, um grupo e uma referência em vídeo num quadro livre. O botão Transformar em projeto fica no topo.</figcaption></figure>
+          </div>
+          <div class="panel" role="tabpanel" id="p-rn-6" aria-labelledby="t-rn-6" hidden>
+            <figure><div class="stage"><img loading="lazy" src="img/wonespace-6.webp" width="1500" height="938" alt="Mensagens: conversa com uma cliente com um story enviado para aprovação, um balão de áudio com onda e transcrição e uma foto em anexo, e sugestões de tarefa ao lado."></div>
+            <figcaption><b>Dados de demonstração</b>Mensagens, conversa com a Dra. Marina: a agência manda um story para aprovar (“Bastidores — sala nova”), uma mensagem de voz com onda e transcrição e uma foto em anexo. Ao lado, o app sugere a tarefa de cada mensagem.</figcaption></figure>
+          </div>
+<div class="panel" role="tabpanel" id="p-rn-3" aria-labelledby="t-rn-3" hidden>
+            <figure><div class="stage phones one"><img loading="lazy" src="img/wonespace-m1.webp" width="620" height="1342" alt="App do médico, tela Hoje, com tarefas, aprovações e próximos conteúdos."></div>
+            <figcaption><b>Dados de demonstração</b>App do médico, tela Hoje.</figcaption></figure>
+          </div>
+        </div>
+        <dl class="spec">
+          <div><dt>Para quem</dt><dd>Agências que produzem conteúdo para a marca pessoal de médicos, e os próprios médicos.</dd></div>
+          <div><dt>O que faz</dt><dd>A agência acompanha tarefas, produção e prazos. O médico aprova, responde e vê o que está pendente, no celular.</dd></div>
+          <div><dt>Como</dt><dd>Dois apps sobre o mesmo dado, com a regra de que cada resposta vai para o cliente certo.</dd></div>
+          <div><dt>Situação</dt><dd>Produto próprio em construção.</dd></div>
+        </dl>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="entrega">
+  <div class="w">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Como trabalhamos</p>
+        <h2>Do requisito à operação</h2>
+      </div>
+      <p>Um app de crédito só vale se for confiável depois do deploy. Entregamos o produto e também o que o mantém de pé.</p>
+    </div>
+    <div class="grid3">
+      <article>
+        <h3>Produto</h3>
+        <ul>
+          <li>Requisito traduzido para lógica determinística: política de risco, etapas do funil, significado do score.</li>
+          <li>Métricas de produto acompanhadas, como entregas no prazo.</li>
+          <li>Product Owner certificado (CSPO, 2025), com Scrum e Kanban.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>IA e modelos</h3>
+        <ul>
+          <li>Benchmark de modelos por acurácia, custo e desempenho.</li>
+          <li>Tolerância explícita a falso positivo e falso negativo.</li>
+          <li>Prova pré-registrada: o critério de aprovação é escrito antes de ver o resultado, e um modelo que não passa não vai para a tela.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Engenharia e operação</h3>
+        <ul>
+          <li>Servidor Linux e VM em nuvem com systemd, Cloudflare Tunnel e Access.</li>
+          <li>Deploy via GitHub com health check e rollback.</li>
+          <li>Backups e monitoramento.</li>
+          <li>Senhas com hash, acesso por papéis e SSO entre os apps.</li>
+          <li>QA de API e de interface antes de cada release.</li>
+        </ul>
+      </article>
+    </div>
+    <p class="eyebrow" style="margin-top:clamp(32px,5vw,56px);margin-bottom:8px">Trajetória do fundador · Rafael Gruber Bernstein</p>
+    <dl class="bg">
+      <div><dt>Mar/2026 até hoje</dt><dd><b>Freelancer em crédito e recebíveis (FIDC).</b> Os três apps em produção descritos acima.</dd></div>
+      <div><dt>Set/2023 até hoje</dt><dd><b>Radix, Product Owner.</b> Dois produtos de IA de visão computacional levados à produção: monitoramento de segurança em processos químicos e automação de relatórios a partir de várias fontes de dados. Benchmark de modelos, métricas, controle de acesso por permissão e conciliação mensal da qualidade dos dados.</dd></div>
+      <div><dt>2023</dt><dd><b>Prévia FIDC, analista de dados.</b> Dashboards em Power BI e automação em Python de dados financeiros.</dd></div>
+      <div><dt>Formação</dt><dd><b>Engenharia mecânica</b> na PUC-Rio e no Technion, com ênfase em robótica.</dd></div>
+    </dl>
+    <div class="stack" aria-label="Tecnologias">
+      <span>Python</span><span>pandas</span><span>LightGBM</span><span>Backtesting out-of-time</span><span>SQL Server</span><span>Power BI</span><span>Flask</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>SQLite</span><span>APIs REST</span><span>Linux</span><span>Cloudflare</span><span>GitHub</span><span>Claude Code</span><span>API da Anthropic</span>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="contact">
+  <div class="w">
+    <p class="eyebrow" style="color:inherit;opacity:.7">Contato</p>
+    <h2 style="margin-top:12px">Vamos conversar sobre o seu app.</h2>
+    <p class="l">Se há um processo de crédito, carteira ou risco que hoje roda em planilha ou em memória de alguém, podemos desenhar e construir a ferramenta, e cuidar dela depois do deploy.</p>
+    <div class="mail">
+      <code id="mail">rafael@gruberia.com</code>
+      <button class="btn pri" id="copy" type="button">Copiar e-mail</button>
+      <a class="btn" href="https://www.linkedin.com/in/rafaelgruberbernstein" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="copied" id="copied" role="status" aria-live="polite"></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="w">
+    <span>RG AI Ltda · Rafael Gruber Bernstein</span>
+    <span>Telas de demonstração, com dados fictícios. Nenhum cliente é identificado.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* visualizador de telas: abas acessíveis, setas, Home e End */
+  document.querySelectorAll('[data-viewer]').forEach(function(v){
+    var tabs=[].slice.call(v.querySelectorAll('[role=tab]'));
+    function show(t,focus){
+      tabs.forEach(function(b){
+        var on=b===t;
+        b.setAttribute('aria-selected',on?'true':'false');
+        b.tabIndex=on?0:-1;
+        var p=document.getElementById(b.getAttribute('aria-controls'));
+        if(p){p.hidden=!on;if(on){[].forEach.call(p.querySelectorAll('img[loading=lazy]'),function(i){i.loading='eager'})}}
+      });
+      if(focus)t.focus();
+    }
+    tabs.forEach(function(b,i){
+      b.addEventListener('click',function(){show(b,false)});
+      b.addEventListener('keydown',function(e){
+        var n=null;
+        if(e.key==='ArrowRight'||e.key==='ArrowDown')n=tabs[(i+1)%tabs.length];
+        else if(e.key==='ArrowLeft'||e.key==='ArrowUp')n=tabs[(i-1+tabs.length)%tabs.length];
+        else if(e.key==='Home')n=tabs[0];
+        else if(e.key==='End')n=tabs[tabs.length-1];
+        if(n){e.preventDefault();show(n,true)}
+      });
+    });
+  });
+  var btn=document.getElementById('copy'),msg=document.getElementById('copied'),el=document.getElementById('mail');
+  function sel(){try{var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r)}catch(e){}}
+  btn.addEventListener('click',function(){
+    var t=el.textContent.trim();
+    function ok(){msg.textContent='E-mail copiado.';setTimeout(function(){msg.textContent=''},2500)}
+    function no(){sel();msg.textContent='Selecionado. Use Ctrl+C ou Cmd+C para copiar.'}
+    try{navigator.clipboard.writeText(t).then(ok,no)}catch(e){no()}
+  });
+  /* clique na imagem: abre ampliada; Esc, clique ou X fecham */
+  var last=null;
+  function fecha(lb){lb.classList.remove('on');setTimeout(function(){lb.remove()},200);document.body.style.overflow='';if(last)last.focus()}
+  function abre(img){
+    last=img;
+    var cap=img.closest('figure')&&img.closest('figure').querySelector('figcaption');
+    var lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label','Imagem ampliada');
+    var big=document.createElement('img');big.src=img.currentSrc||img.src;big.alt=img.alt;
+    var x=document.createElement('button');x.type='button';x.className='lb-x';x.setAttribute('aria-label','Fechar');x.textContent='×';
+    lb.appendChild(x);lb.appendChild(big);
+    if(cap){var p=document.createElement('p');p.textContent=cap.textContent;lb.appendChild(p)}
+    lb.addEventListener('click',function(e){if(e.target===lb||e.target===big||e.target===x)fecha(lb)});
+    lb.addEventListener('keydown',function(e){if(e.key==='Escape'){e.preventDefault();fecha(lb)}if(e.key==='Tab'){e.preventDefault();x.focus()}});
+    document.body.appendChild(lb);document.body.style.overflow='hidden';
+    requestAnimationFrame(function(){lb.classList.add('on')});x.focus();
+  }
+  document.querySelectorAll('.stage img').forEach(function(img){
+    img.tabIndex=0;img.setAttribute('role','button');img.setAttribute('aria-label','Ampliar: '+img.alt);
+    img.addEventListener('click',function(){abre(img)});
+    img.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();abre(img)}});
+  });
+})();
+</script>
+
+</body></html>

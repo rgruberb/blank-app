@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>RG AI · Apps sob medida</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Apps web de dados e IA sob medida, do requisito à produção. Especialidade em crédito, recebíveis e FIDC. Também produtos para agências de marca pessoal.">
+<link rel="canonical" href="https://gruberia.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="RG AI">
+<meta property="og:title" content="RG AI · Apps sob medida, do requisito à produção">
+<meta property="og:description" content="Apps web de dados e IA para crédito, recebíveis e FIDC. Três aplicações em produção desde março de 2026.">
+<meta property="og:url" content="https://gruberia.com/">
+<meta property="og:image" content="https://gruberia.com/portfolio/img/riskai-1.webp">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"RG AI Ltda","url":"https://gruberia.com/","email":"rafael@gruberia.com","founder":{"@type":"Person","name":"Rafael Gruber Bernstein"},"sameAs":["https://www.linkedin.com/in/rafaelgruberbernstein"],"description":"Apps web de dados e IA sob medida, com especialidade em crédito, recebíveis e FIDC."}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@500;600;700&display=swap">
+<style>
+/* Layout: coluna de 1120px; herói em duas colunas com o "maço" de telas reais à direita; faixas alternam papel e superfície; contato em bloco grafite.
+   Mesma identidade do portfólio: papel frio, tinta grafite, verde de livro-caixa como único acento, laranja só em rótulos de dado. */
+:root{
+  color-scheme:light;
+  --bg:#F2F4F3; --surface:#FFFFFF; --sunken:#E8ECEA; --ink:#141C19; --ink-2:#3A4540; --muted:#5A6661;
+  --rule:#D3DAD6; --accent:#1D5A45; --accent-ink:#FFFFFF; --accent-soft:#DDEBE5; --mark:#B4501F;
+  --band:#141C19; --band-ink:#CDD6D1; --band-head:#FFFFFF; --band-rule:rgba(255,255,255,.28);
+  --f-display:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --shadow:0 1px 2px rgba(20,28,25,.06),0 16px 40px -18px rgba(20,28,25,.28);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0F1512; --surface:#171F1B; --sunken:#1C2621; --ink:#E9EFEC; --ink-2:#BFCAC4; --muted:#93A19A;
+  --rule:#2A3630; --accent:#6CC4A0; --accent-ink:#0B1511; --accent-soft:#183128; --mark:#E8895A;
+  --band:#171F1B; --band-ink:#BFCAC4; --band-head:#E9EFEC; --band-rule:#2A3630;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 16px 40px -18px rgba(0,0,0,.7); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1512; --surface:#171F1B; --sunken:#1C2621; --ink:#E9EFEC; --ink-2:#BFCAC4; --muted:#93A19A;
+  --rule:#2A3630; --accent:#6CC4A0; --accent-ink:#0B1511; --accent-soft:#183128; --mark:#E8895A;
+  --band:#171F1B; --band-ink:#BFCAC4; --band-head:#E9EFEC; --band-rule:#2A3630;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 16px 40px -18px rgba(0,0,0,.7); color-scheme:dark}
+
+*{box-sizing:border-box}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink-2);font:400 1rem/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+@media(min-width:1024px){body{font-size:1.0625rem}}
+img{max-width:100%;display:block}
+a{color:var(--accent);text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+.skip{position:absolute;left:16px;top:-60px;z-index:30;background:var(--accent);color:var(--accent-ink);padding:10px 14px;border-radius:6px;font-weight:600}
+.skip:focus{top:calc(8px + env(safe-area-inset-top,0px))}
+.w{max-width:1120px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media(min-width:768px){.w{padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}}
+h1,h2,h3{font-family:var(--f-display);color:var(--ink);text-wrap:balance;margin:0;font-weight:600;letter-spacing:-.015em}
+p{margin:0}
+.eyebrow{font:500 .78rem/1.3 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+/* topo */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--bg)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.top .w{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font:600 1.07rem/1 var(--f-display);letter-spacing:-.01em}
+.brand svg{width:28px;height:28px;flex:none}
+.top nav{display:flex;align-items:center;gap:24px;font-size:.9rem}
+.top nav a{color:var(--ink-2);text-decoration:none}
+.top nav a:hover{color:var(--accent)}
+.top nav a.btn{color:var(--accent-ink)}
+@media(max-width:760px){.top nav a:not(.btn){display:none}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:6px;font:600 .95rem/1 var(--f-body);text-decoration:none;border:1px solid var(--rule);background:var(--surface);color:var(--ink);cursor:pointer;transition:border-color .15s ease,transform .16s ease}
+.btn:hover{border-color:var(--accent)}
+.btn:active{transform:scale(.97)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.sm{min-height:40px;padding:0 16px;font-size:.88rem}
+.lnk{font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px;min-height:48px}
+.lnk:hover{text-decoration:underline}
+.lnk span{transition:transform .15s ease}
+.lnk:hover span{transform:translateX(3px)}
+
+/* herói */
+.hero{padding-block:clamp(48px,8vw,104px) clamp(48px,6vw,88px);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:clamp(32px,5vw,64px);align-items:center}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2.441rem,1.6rem + 3.2vw,3.815rem);line-height:1.04;font-weight:700;letter-spacing:-.025em;margin-top:20px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lead{margin-top:24px;font-size:1.15rem;line-height:1.55;max-width:50ch}
+.hero .acts{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;margin-top:32px}
+
+/* maço de telas: o único momento animado da página */
+.deck{position:relative;aspect-ratio:1500/1120;max-width:100%}
+.deck figure{position:absolute;margin:0;width:78%;aspect-ratio:1500/938;border-radius:10px;overflow:hidden;border:1px solid var(--rule);background:var(--surface);box-shadow:var(--shadow)}
+.deck img{width:100%;height:100%;object-fit:cover;object-position:top left}
+.deck .d1{left:0;top:0}
+.deck .d2{left:11%;top:15%}
+.deck .d3{left:22%;top:30%}
+.deck figcaption{position:absolute;right:10px;top:10px;font:500 .7rem/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--surface);color:var(--ink);border:1px solid var(--rule);padding:6px 8px;border-radius:4px}
+@media(prefers-reduced-motion:no-preference){
+  .deck figure{animation:fan .7s cubic-bezier(.2,.7,.2,1) both}
+  .deck .d1{animation-delay:.05s}.deck .d2{animation-delay:.14s}.deck .d3{animation-delay:.23s}
+  @keyframes fan{from{transform:translate(18%,10%);opacity:.0}to{transform:none;opacity:1}}
+}
+
+/* faixa de fatos (livro-caixa) */
+.facts{border-block:1px solid var(--rule);background:var(--surface)}
+.facts dl{margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.facts div{padding:24px 24px 24px 0;display:grid;gap:6px;align-content:start}
+.facts div+div{padding-left:24px;border-left:1px solid var(--rule)}
+.facts dt{font:500 .72rem/1.3 var(--f-mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted);order:2}
+.facts dd{margin:0;font:700 clamp(1.5rem,1.1rem + 1.4vw,2.1rem)/1.05 var(--f-display);color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.facts dd small{display:block;font:400 .88rem/1.45 var(--f-body);color:var(--ink-2);letter-spacing:0;margin-top:6px}
+@media(max-width:900px){.facts dl{grid-template-columns:repeat(2,minmax(0,1fr))}.facts div:nth-child(3){padding-left:0;border-left:0}.facts div:nth-child(n+3){border-top:1px solid var(--rule)}}
+@media(max-width:480px){.facts dl{grid-template-columns:1fr}.facts div,.facts div+div{padding-left:0;border-left:0}.facts div+div{border-top:1px solid var(--rule)}}
+
+/* seções */
+section{padding-block:clamp(56px,8vw,112px)}
+section+section{border-top:1px solid var(--rule)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(16px,5vw,64px);margin-bottom:clamp(32px,5vw,56px);align-items:end}
+.sec-head h2{font-size:clamp(1.95rem,1.4rem + 1.8vw,2.441rem);line-height:1.1;margin-top:12px}
+.sec-head p{max-width:58ch}
+@media(max-width:900px){.sec-head{grid-template-columns:1fr;align-items:start}}
+
+/* o que fazemos */
+.offer{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}
+@media(max-width:960px){.offer{grid-template-columns:1fr}}
+.offer article{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.offer article.main{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.offer article.main h3,.offer article.main .eyebrow{color:var(--accent-ink)}
+.offer article.main .eyebrow{opacity:.8}
+.offer h3{font-size:1.5rem;line-height:1.15}
+.offer ul{margin:4px 0 0;padding:0;list-style:none;display:grid;gap:8px;font-size:.95rem}
+.offer li{padding-left:18px;position:relative}
+.offer li::before{content:"";position:absolute;left:0;top:.75em;width:8px;height:1px;background:currentColor;opacity:.7}
+.offer article:not(.main) li::before{background:var(--accent);opacity:1}
+
+/* projetos */
+.projs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+@media(max-width:760px){.projs{grid-template-columns:1fr}}
+.proj{display:grid;grid-template-rows:auto 1fr;background:var(--surface);border:1px solid var(--rule);border-radius:10px;overflow:hidden;color:inherit;text-decoration:none;min-width:0;transition:border-color .15s ease}
+.proj:hover{border-color:var(--accent)}
+.proj .shot{aspect-ratio:1500/860;overflow:hidden;border-bottom:1px solid var(--rule);background:var(--sunken)}
+.proj .shot img{width:100%;height:100%;object-fit:cover;object-position:top left;transition:transform .35s ease}
+@media(prefers-reduced-motion:no-preference){.proj:hover .shot img{transform:scale(1.025)}}
+.proj .txt{padding:20px 24px 24px;display:flex;flex-direction:column;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:8px;font:500 .72rem/1.2 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.tag i{width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.tag.own{color:var(--mark)}
+.proj h3{font-size:1.4rem;line-height:1.15}
+.proj p{font-size:.95rem;max-width:52ch}
+.proj .more{margin-top:auto;padding-top:8px;font-weight:600;color:var(--accent);font-size:.92rem}
+.note{margin-top:24px;font-size:.88rem;color:var(--muted);max-width:72ch}
+.portfolio-cta{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px}
+
+/* como trabalhamos */
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,40px)}
+@media(max-width:900px){.how{grid-template-columns:1fr}}
+.how article{border-top:2px solid var(--ink);padding-top:16px}
+.how h3{font-size:1.2rem;margin-bottom:12px}
+.how ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:.95rem}
+.how li{padding-left:18px;position:relative}
+.how li::before{content:"";position:absolute;left:0;top:.75em;width:8px;height:1px;background:var(--accent)}
+
+/* fundador */
+.founder{background:var(--sunken)}
+.founder .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:clamp(24px,5vw,64px);align-items:start}
+@media(max-width:900px){.founder .grid{grid-template-columns:1fr}}
+.founder h2{font-size:clamp(1.95rem,1.4rem + 1.8vw,2.441rem);line-height:1.1;margin-top:12px}
+.founder .bio{display:grid;gap:16px;max-width:60ch}
+.cv{margin:8px 0 0;display:grid}
+.cv div{display:grid;grid-template-columns:8.5rem minmax(0,1fr);gap:16px;padding:12px 0;border-top:1px solid var(--rule);font-size:.93rem}
+.cv dt{font:500 .74rem/1.7 var(--f-mono);letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.cv dd{margin:0}
+.cv dd b{color:var(--ink);font-weight:600}
+@media(max-width:480px){.cv div{grid-template-columns:1fr;gap:2px}}
+
+/* contato */
+.contact{background:var(--band);color:var(--band-ink)}
+section.contact{border-top:0}
+.contact h2{color:var(--band-head);font-size:clamp(2.2rem,1.5rem + 2.6vw,3.05rem);line-height:1.06;max-width:18ch;margin-top:12px}
+.contact .eyebrow{color:var(--band-ink)}
+.contact p.l{margin-top:20px;max-width:54ch;font-size:1.08rem}
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-top:32px}
+.mail code{font:500 clamp(1.1rem,.9rem + 1vw,1.5rem)/1.2 var(--f-mono);color:var(--band-head);user-select:all;-webkit-user-select:all;overflow-wrap:anywhere}
+.contact .btn{background:transparent;color:var(--band-head);border-color:var(--band-rule)}
+.contact .btn:hover{border-color:var(--band-head)}
+.contact .btn.pri{background:var(--band-head);color:var(--band);border-color:var(--band-head)}
+.copied{font:500 .85rem var(--f-mono);min-height:1.4em;margin-top:12px}
+
+footer{padding-block:28px;font-size:.85rem;color:var(--muted);border-top:1px solid var(--rule)}
+footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px}
+footer a{color:inherit}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="top">
+  <div class="w">
+    <a class="brand" href="#conteudo" aria-label="RG AI, início">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="1" width="24" height="24" rx="4" style="fill:var(--accent)"/><path d="M6 19V15h4v4M10 15v-4h4v4M14 11V7h4v4" fill="none" style="stroke:var(--accent-ink)" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      RG AI
+    </a>
+    <nav aria-label="Seções">
+      <a href="#servicos">O que fazemos</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#como">Como trabalhamos</a>
+      <a href="portfolio/">Portfólio</a>
+      <a class="btn pri sm" href="#contato">Fale com a gente</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+<div class="hero">
+  <div class="w hero-grid">
+    <div>
+      <p class="eyebrow">RG AI · crédito, recebíveis e FIDC</p>
+      <h1>Apps sob medida, do requisito <em>à produção.</em></h1>
+      <p class="lead">Construímos aplicações web de dados e IA para quem precisa de uma ferramenta própria. Cuidamos do produto, do modelo, do código e da operação depois do deploy.</p>
+      <div class="acts">
+        <a class="btn pri" href="#contato">Fale com a gente</a>
+        <a class="lnk" href="portfolio/">Ver o portfólio <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="deck" aria-label="Telas de três aplicações, com dados fictícios">
+      <figure class="d1"><img src="portfolio/img/leadscout-2.webp" width="1500" height="938" alt="LeadScout: lista de leads com nota, lastro e etapa." fetchpriority="high"><figcaption>LeadScout</figcaption></figure>
+      <figure class="d2"><img src="portfolio/img/carteira360-3.webp" width="1500" height="938" alt="Carteira360: mesa do gestor com visitas atrasadas e clientes parados." fetchpriority="high"><figcaption>Carteira360</figcaption></figure>
+      <figure class="d3"><img src="portfolio/img/riskai-1.webp" width="1500" height="938" alt="RiskAI FIDC: resumo da carteira com grupos por faixa de risco." fetchpriority="high"><figcaption>RiskAI FIDC</figcaption></figure>
+    </div>
+  </div>
+</div>
+
+<div class="facts">
+  <div class="w">
+    <dl>
+      <div><dt>Em produção</dt><dd>3 apps<small>para uma empresa de crédito e recebíveis (FIDC)</small></dd></div>
+      <div><dt>Desde</dt><dd>mar/2026<small>atendendo comitê de crédito, diretoria e comercial</small></dd></div>
+      <div><dt>Produtividade</dt><dd>+200%<small>em prospecção e gestão de carteira</small></dd></div>
+      <div><dt>Marca</dt><dd>INPI<small>registramos a marca do seu produto</small></dd></div>
+    </dl>
+  </div>
+</div>
+
+<section id="servicos">
+  <div class="w">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">O que fazemos</p>
+        <h2>Uma ferramenta própria, no lugar da planilha</h2>
+      </div>
+      <p>Se um processo de crédito, carteira ou risco depende de planilha ou da memória de alguém, desenhamos e construímos o app que resolve, e mantemos ele de pé depois.</p>
+    </div>
+    <div class="offer">
+      <article class="main">
+        <p class="eyebrow">Especialidade</p>
+        <h3>Crédito, recebíveis e FIDC</h3>
+        <ul>
+          <li>Leitura de risco e deterioração da carteira para o comitê de crédito.</li>
+          <li>Prospecção de cedentes com pesquisa de IA auditada.</li>
+          <li>Gestão de carteira: agenda, rotas de visita e alertas.</li>
+          <li>Relatórios para a diretoria, com envio automático.</li>
+        </ul>
+      </article>
+      <article>
+        <p class="eyebrow">Também</p>
+        <h3>Agências de marca pessoal</h3>
+        <ul>
+          <li>Apps de gestão em que agência e cliente trabalham no mesmo dado.</li>
+          <li>A Wonespace, nosso produto próprio, nasceu daqui.</li>
+        </ul>
+      </article>
+      <article>
+        <p class="eyebrow">Junto com o app</p>
+        <h3>Marca registrada</h3>
+        <ul>
+          <li>Registramos a marca do seu produto no INPI.</li>
+          <li>Hospedagem, domínio, acesso e backups configurados.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="projetos">
+  <div class="w">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Projetos</p>
+        <h2>Três apps em produção e um produto próprio</h2>
+      </div>
+      <p>As telas abaixo são protótipos de demonstração, com nomes, CNPJs e valores fictícios. Nenhum cliente é identificado.</p>
+    </div>
+    <div class="projs">
+      <a class="proj" href="portfolio/#riskai">
+        <div class="shot"><img loading="lazy" src="portfolio/img/riskai-2.webp" width="1500" height="938" alt="Ficha de um grupo econômico com risco total, limite e sinais."></div>
+        <div class="txt">
+          <p class="tag"><i></i>Em produção · comitê de crédito</p>
+          <h3>RiskAI FIDC</h3>
+          <p>Leitura de risco e deterioração da carteira por cedente e grupo econômico, para o comitê decidir limites e a continuidade da relação.</p>
+          <span class="more">Ver no portfólio →</span>
+        </div>
+      </a>
+      <a class="proj" href="portfolio/#leadscout">
+        <div class="shot"><img loading="lazy" src="portfolio/img/leadscout-1.webp" width="1500" height="938" alt="Ficha de lead com nota, lastro, parecer e fontes."></div>
+        <div class="txt">
+          <p class="tag"><i></i>Em produção · área comercial</p>
+          <h3>LeadScout</h3>
+          <p>Prospecção de cedentes com pesquisa de IA em que um modelo audita o outro. Afirmação sem fonte verificável fica marcada como indeterminada.</p>
+          <span class="more">Ver no portfólio →</span>
+        </div>
+      </a>
+      <a class="proj" href="portfolio/#carteira360">
+        <div class="shot"><img loading="lazy" src="portfolio/img/carteira360-5.webp" width="1500" height="938" alt="Rota de visitas do dia no mapa, com paradas numeradas."></div>
+        <div class="txt">
+          <p class="tag"><i></i>Em produção · gestão de carteira</p>
+          <h3>Carteira360</h3>
+          <p>Agenda, rotas de visita e alerta de cliente que parou de operar, com visões para o gestor, o gerente e o celular em campo.</p>
+          <span class="more">Ver no portfólio →</span>
+        </div>
+      </a>
+      <a class="proj" href="portfolio/#wonespace">
+        <div class="shot"><img loading="lazy" src="portfolio/img/wonespace-1.webp" width="1500" height="938" alt="Painel da agência e app do médico lado a lado."></div>
+        <div class="txt">
+          <p class="tag own"><i></i>Produto próprio · em construção</p>
+          <h3>Wonespace</h3>
+          <p>App para agências que cuidam da marca pessoal de médicos. Agência e médico trabalham no mesmo dado, em tempo real.</p>
+          <span class="more">Ver o caso e o vídeo →</span>
+        </div>
+      </a>
+    </div>
+    <div class="portfolio-cta">
+      <a class="btn" href="portfolio/">Abrir o portfólio completo</a>
+      <p class="note" style="margin:0">Telas de cada projeto, ficha técnica e o vídeo da Wonespace.</p>
+    </div>
+  </div>
+</section>
+
+<section id="como">
+  <div class="w">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Como trabalhamos</p>
+        <h2>Do requisito à operação</h2>
+      </div>
+      <p>Um app de crédito só vale se continuar confiável depois do deploy. Entregamos o produto e também o que o mantém funcionando.</p>
+    </div>
+    <div class="how">
+      <article>
+        <h3>Produto</h3>
+        <ul>
+          <li>Regra ambígua vira lógica determinística: política de risco, etapas do funil, prazo de visita.</li>
+          <li>Métricas de produto acompanhadas, como entregas no prazo.</li>
+          <li>Product Owner certificado (CSPO), com Scrum e Kanban.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>IA e modelos</h3>
+        <ul>
+          <li>Benchmark de modelos por acurácia, custo e desempenho.</li>
+          <li>Critério de aprovação escrito antes de ver o resultado.</li>
+          <li>Modelo que não passa na validação não vai para a tela.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Engenharia e operação</h3>
+        <ul>
+          <li>Deploy via GitHub com health check e rollback.</li>
+          <li>Cloudflare Tunnel e Access, backups e monitoramento.</li>
+          <li>Acesso por papéis, senhas com hash e SSO entre os apps.</li>
+          <li>QA de API e de interface antes de cada release.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="founder" id="fundador">
+  <div class="w grid">
+    <div>
+      <p class="eyebrow">Fundador</p>
+      <h2>Rafael Gruber Bernstein</h2>
+    </div>
+    <div class="bio">
+      <p>Mais de três anos levando produtos de dados e IA do conceito à produção. Engenharia mecânica na PUC-Rio e no Technion, CSPO (2025), inglês fluente.</p>
+      <dl class="cv">
+        <div><dt>Mar/2026 até hoje</dt><dd><b>Crédito e recebíveis (FIDC).</b> Os três apps em produção desta página.</dd></div>
+        <div><dt>Set/2023 até hoje</dt><dd><b>Radix, Product Owner.</b> Dois produtos de IA de visão computacional levados à produção.</dd></div>
+        <div><dt>2023</dt><dd><b>Prévia FIDC, analista de dados.</b> Dashboards em Power BI e automação em Python.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="contact">
+  <div class="w">
+    <p class="eyebrow">Contato</p>
+    <h2>Vamos conversar sobre o seu app.</h2>
+    <p class="l">Conte qual processo você quer tirar da planilha. Respondemos por e-mail com as próximas etapas.</p>
+    <div class="mail">
+      <code id="mail">rafael@gruberia.com</code>
+      <button class="btn pri" id="copy" type="button">Copiar e-mail</button>
+      <a class="btn" href="https://www.linkedin.com/in/rafaelgruberbernstein" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="copied" id="copied" role="status" aria-live="polite"></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="w">
+    <span>RG AI Ltda · Rafael Gruber Bernstein</span>
+    <span><a href="portfolio/">Portfólio</a> · Telas com dados fictícios. Nenhum cliente é identificado.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('copy'),msg=document.getElementById('copied'),el=document.getElementById('mail');
+  function sel(){try{var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r)}catch(e){}}
+  btn.addEventListener('click',function(){
+    var t=el.textContent.trim();
+    function ok(){msg.textContent='E-mail copiado.';setTimeout(function(){msg.textContent=''},2500)}
+    function no(){sel();msg.textContent='Selecionado. Use Ctrl+C ou Cmd+C para copiar.'}
+    try{navigator.clipboard.writeText(t).then(ok,no)}catch(e){no()}
+  });
+})();
+</script>
+</body>
+</html>
