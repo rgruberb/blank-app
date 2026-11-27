@@ -104,7 +104,7 @@ Regras de leitura:
 - **Quando usar:** corretora, cripto, app de investimento, painel de tesouraria. Saldo e ativos à esquerda, ação
   principal no **único** gradiente da tela, Deposit/Buy ao lado do gráfico (legenda `DgPLR1SDouB`).
 - **Fontes:** 10A `DgPLR1SDouB` (sem imagem legível); `dashboard-ui/references/layout-patterns.md` §8, §10;
-  `domain-examples.md` §20, §22.
+  `dashboard-ui/references/domain-examples.md` §20, §22.
 - **Imagens (em `dashboard-ui`):** `DXeeUP7FKGs_1.jpg`, `DfcdrhgFFMR_1.jpg`, `Dfr6X8qFPwC_2.jpg` (ver
   `visual-index.md`, "Imagens em outras skills").
 - **Atenção:** hex deste template **não foram medidos**; confirme com a marca do cliente.

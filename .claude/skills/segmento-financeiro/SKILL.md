@@ -45,7 +45,7 @@ da plataforma.
 | Itaú | `#FF6200`, `#000066` | `#000000`, `#3B3B3B` | `#F1F2F4`, `#CFD1D3` |
 - **Evite** (inferência): verde/vermelho puros como único sinal de ganho/perda; cor de marca saturada como fundo de
   área cheia de números; CTA vermelho igual à cor de alerta. Marca verde? Diferencie do verde semântico
-  (`dashboard-ui` → `layout-patterns.md` §8).
+  (`../dashboard-ui/references/layout-patterns.md` §8).
 - Hex são de páginas de marketing; o produto logado pode diferir (não medido).
 
 **2. Tipografia e números.** Sans neutra/geométrica, com display próprio para títulos e neutra para texto
