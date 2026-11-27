@@ -179,6 +179,17 @@ Se o projeto é de um setor, abra primeiro a skill `segmento-*` correspondente.
 - Instrumente desde o início **(complemento)**: uso de ⌘K e atalhos (A), erros de validação por campo (E), tempo das
   3 tarefas principais (T).
 
+**15. Padrões de painel e tabela da rodada 10A** (1 frame + legenda por post)
+- Tabela de usuários com **alternância Table / Cards**, seleção por linha, chip de plano e barra de uso 30d
+  (`DgAT3fVBJ8B`, print em `dashboard-ui`). **Linha expansível só se revelar algo novo** (crítica nos comentários do
+  mesmo post) — complemento.
+- Fluxo com agente: **o agente propõe com o ganho em número, a pessoa aprova uma vez no painel lateral, o sistema
+  notifica** (Wayline `Df1WDAnhbtx`); **prévia do impacto antes de aprovar** (Threshold `DfxspuNBjye`); fila como KPI
+  "X de Y prontos, N precisam de você" (Linden `DgH6J4mgMM4`). Detalhes: `dashboard-ui` → `layout-patterns.md` §12.
+- Lista reordenável: alça que aparece no hover, cursor `grab`, linha erguida e espaço aberto (`DgM5twdsInO`; regra 7).
+- Sidebar/tabs de vidro (@code.xr V15, V20): só sobre foto/conteúdo e com "Reduce transparency"
+  (`dashboard-ui/references/glassmorphism.md`); em app aberto por horas, prefira superfície sólida (complemento).
+
 ## Checklist (desktop)
 - [ ] Shell definido: rail 56–64 ou sidebar 220–260, colapso com tooltip, topbar com 1 CTA e busca/⌘K.
 - [ ] Testado em 1024, 1280, 1440 e 1920; nada de scroll horizontal da página (só dentro da tabela).

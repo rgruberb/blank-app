@@ -159,6 +159,24 @@ pequeno no dark**. [PWA] com Motion for React, `<MotionConfig reducedMotion="use
   Ajustes. [nativo] iOS usa purpose string, Android pede tela explicativa antes do diálogo; [PWA] a permissão é do
   navegador (pré-aviso é seu, e não há "abrir Ajustes" — explique o caminho). Detalhes: `references/mobile-patterns.md` §1–2, §7.
 
+**17. Celular de 375 px e ajustes finos (rodada 10A).**
+- **Número grande: uma linha, teto ~30px**, `nowrap` + `tabular-nums` (@designmotionhq `Deq_kvJBI3g`, "on a 375px
+  phone, five things break"; só o fix 2 foi visto). Print em `dashboard-ui/assets/visual-refs/Deq_kvJBI3g_1.jpg`.
+- **Header não come a tela** (@theglidestudio `DgCe3izzZVP`: header ocupando 50% → "Shrink it"). Reforça o large title
+  34 → 18 da regra 6. [PWA] altura de tela em **`100dvh`**, nunca `100vh` (a barra do navegador corta o rodapé fixo;
+  @fabianocarvalhojr `Df5pCOhmYuP`).
+- **Cantos contínuos**: no Figma **Corner Smoothing 60%**; no CSS `corner-shape: squircle` com `border-radius` de
+  fallback; raio interno = externo − padding (@metic.studio_official `DgHo3AxIw75`; `ui-motion` → `css-recipes.md` §12).
+- **Accordion pelo conteúdo** (@ale.uiux `DgLUGlUORly`): chevron (FAQ), cards com prévia, aninhado (settings), etapas
+  (checkout Envio → Pagamento → Revisão), read more, horizontal (galeria) — `ux-patterns` → `components-checklists.md` §13.1.
+- **Lista arrastável**: alça visível, linha erguida (105%), espaço aberto (200ms) (@theglidestudio `DgM5twdsInO`; regra 7).
+- **Permissão de notificação: conquiste o sim antes de pedir** (@theglidestudio `DgDlMjfhNhc`, "Wait until it
+  matters"). Mesma regra do NN/g na regra 16.
+- **Navegação**: o reel "7 padrões de navegação" (@design_withazhar `DgLbB_lNiAd`) abre com **"Pattern 01 — Tab bar:
+  your key screens, one tap away"** (tab bar flutuante de 4 ícones); os outros 6 não foram vistos. Tab bar flutuante
+  escura com item ativo em destaque também em `DfkL5N_H4GK` (`dashboard-ui`). Regra 3 continua valendo.
+- **Texto animado < 1 s** e só onde informa (word stream em resposta de IA, typing dots no chat): `ui-motion` regra 21.
+
 ## PWA vs nativo — o que dá para aproximar
 | Recurso | [nativo] | [PWA] / Capacitor (aproximação) |
 |---|---|---|

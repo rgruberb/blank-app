@@ -4,10 +4,11 @@ Skills próprias, destiladas de ~70 reels do Instagram (vídeo + frames + transc
 
 ## Estrutura
 
-As skills estão em duas camadas:
+As skills estão em três camadas:
 
 1. **Por tema**: o conhecimento de base, que vale para qualquer plataforma.
 2. **Por plataforma**: as regras específicas de cada plataforma, com ponteiros para as skills de tema e para as imagens delas. Essas skills não têm imagens próprias.
+3. **Por segmento** (`segmento-*`): o que muda num setor (tom, paleta medida em produtos reais, o que nunca animar, regulação que muda a tela, templates e componentes do setor), com ponteiros para plataforma e tema.
 
 ```
 .claude/skills/
@@ -15,6 +16,13 @@ As skills estão em duas camadas:
 ├── website-ui/         sites, landing pages, portfólio, e-commerce, blog (Major Third 1,25, Core Web Vitals, SEO)
 ├── desktop-app-ui/     web apps SaaS, admin, CRM e apps Mac/Windows (app shell, densidade 1,2, tabelas, teclado, ⌘K)
 ├── mobile-app-ui/      apps iOS/Android/React Native/Flutter (44pt/48dp, zona do polegar, tab bar, bottom sheet, gestos)
+│  ── por segmento ──
+├── segmento-financeiro/     banco digital, fintech, corretora, pagamentos, crédito, investimento (números tabulares, CET, LGPD)
+├── segmento-crm/            CRM, pipeline, leads, contas e metas comerciais (denso, cor só para ação e estado)
+├── segmento-publicidade/    agência, anunciante, gestor de tráfego, ferramenta de marketing (anúncio identificável, KPI com período)
+├── segmento-marca-pessoal/  creator, freelancer, consultor, portfólio, link na bio (personalidade manda, publi identificada)
+├── segmento-saude/          clínica, consultório, telemedicina, healthtech, plano de saúde (calmo, legível, dado sensível na LGPD)
+├── segmento-juridico/       advocacia, departamento jurídico, legaltech, prazos e contratos (sóbrio, Provimento OAB 205/2021)
 │  ── por tema ──
 ├── design-direction/   paleta 2+1, 60/30/10, camadas, confiança, branding, par tipográfico, workflow com Claude/Claude Design
 ├── ui-motion/          micro-interações, easing e springs, loaders, transições, scroll, React Bits, motion para redes
@@ -25,9 +33,9 @@ As skills estão em duas camadas:
 └── ext-*/              skills de terceiros (não versionadas; ver abaixo)
 ```
 
-**Prioridade:** quando uma regra das skills de terceiros conflita com a das skills do projeto, valem os valores das skills do projeto. As de terceiros servem para implementação (código, APIs, checkers). Os 3 conflitos conhecidos (quantidade de animação, durações, sombras) estão resolvidos na seção "Prioridade entre skills" das skills de plataforma, da `ui-motion` e da `design-direction`.
+**Prioridade (da mais forte para a mais fraca):** skill de app específico (`projetos/<app>/`, copiada para a repo do app) > skill de **segmento** (`segmento-*`) > skill de **plataforma** > skill de **tema** > skills de **terceiros** (`ext-*`). As de terceiros servem para implementação (código, APIs, checkers) e usam os valores das skills do projeto. A de segmento ou de app só sobrepõe o que diz explicitamente; no resto valem plataforma e tema. Os 3 conflitos conhecidos (quantidade de animação, durações, sombras) estão resolvidos na seção "Prioridade entre skills" das skills de plataforma, da `ui-motion` e da `design-direction`.
 
-**Por qual começar:** primeiro a de plataforma (`website-ui`, `desktop-app-ui` ou `mobile-app-ui`). Ela diz quais arquivos das skills de tema abrir.
+**Por qual começar:** se o projeto é de um setor, abra primeiro a skill `segmento-*` correspondente; depois a de plataforma (`website-ui`, `desktop-app-ui` ou `mobile-app-ui`). Ela diz quais arquivos das skills de tema abrir.
 
 Cada skill de tema tem:
 

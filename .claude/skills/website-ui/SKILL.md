@@ -75,7 +75,8 @@ Se o projeto é de um setor, abra primeiro a skill `segmento-*` correspondente.
 - Navbar mínima: logo à esquerda, **3–5 links**, **1 CTA** colorido à direita (RWB Porsche `DYpD5C7zwx6`; glide:
   "nav reduzida a logo + Sign in"). Hick: menos opções, decisão mais rápida.
 - Menu (mobile/fullscreen) **nasce do botão** que o abriu, fundo escurece; abre em **~0,7 s**, press em **0,16 s**
-  (`ui-motion` → `page-transitions-and-timing.md`). Header sticky com altura ≤ 64–72px (complemento).
+  (`ui-motion` → `page-transitions-and-timing.md`). Header sticky com altura ≤ 64–72px (complemento); reforço da rodada 10A:
+  @theglidestudio `DgCe3izzZVP` mostra um header ocupando **50%** do celular — "devolva a página ao leitor": encolha.
 - Footer **sempre alcançável**: infinite scroll enterra contato e termos → "Load more, then stop" (`ux-patterns` →
   `components-checklists.md` §4).
 
@@ -119,6 +120,12 @@ Se o projeto é de um setor, abra primeiro a skill `segmento-*` correspondente.
 - 5 padrões de site (headline reveal, micro-interactions, portfolio showcase, animated gallery, scroll reveal): escolha
   **1 expressivo**, um efeito por vez, teste desktop e mobile (§6).
 - `prefers-reduced-motion`: troque deslocamento por fade ≤ 150 ms ou corte; mantenha estados.
+- **Motion segue o visitante** (@theglidestudio `DgEyy8nRybB`, "Follow, don't lead"): efeito de scroll avança com o
+  polegar e para quando ele para (`ui-motion` regra 20).
+- **Toda interação "premium" tem custo** (@thedesignstack.co.in `DgNTvDZCMNX`): rastro de cursor some no celular,
+  fundo que muda por seção pode falhar em contraste, spotlight esconde conteúdo, footer takeover exige cuidado no
+  mobile, distorção no hover e cenas de scroll/showreel pesam. Tabela em `scroll-and-screen-transitions.md` §7.
+- Carrossel horizontal com **máscara nas bordas** e altura de seção em `dvh` no celular (`css-recipes.md` §14).
 
 **10. SEO e semântica** (complemento)
 - Um `<h1>` por página; hierarquia h2/h3 sem pular; landmarks `header`/`nav`/`main`/`footer`; `<a>` para navegar,
@@ -192,7 +199,8 @@ Se o projeto é de um setor, abra primeiro a skill `segmento-*` correspondente.
 | Onde scroll/reveal faz sentido, 1 momento, 5 padrões de site | `ui-motion/references/scroll-and-screen-transitions.md` §1–6 |
 | Durações (press/reveal/cena), card→página, menu | `ui-motion/references/page-transitions-and-timing.md` |
 | Snippets (stagger, View Transitions, reduced motion) | `ui-motion/references/css-recipes.md` |
-| Componentes animados prontos, orçamento WebGL | `ui-motion/references/react-bits.md` |
+| Componentes animados prontos, orçamento WebGL, 5 sites de UI animada (Snapblocks, Scroll Shaders, Audiocn, Animata, ScrollTide) | `ui-motion/references/react-bits.md` |
+| Buscar referências por programa (MCP Refero/ScreensDesign/Mobbin, RSS Land-book/SiteInspire) | `design-direction/references/reference-apis.md` |
 | Vídeo do site, scroll-storytelling | `ui-motion/references/motion-for-social-video.md` §3–4 |
 | Escala 1,2 vs 1,25, alvos, contraste, grade de 8 | `ux-patterns/references/typography-and-touch.md` §1–3, §6 |
 | Botão, paginação, decisão, fluxo de pedido | `ux-patterns/references/components-checklists.md` §1–2, §4, §9–10 |

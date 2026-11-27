@@ -7,7 +7,9 @@ description: Skill exclusiva do app de gestão de marca pessoal (presença, cont
 
 Esta skill vale **só para este app**. As regras gerais de design ficam nas skills gerais (`mobile-app-ui`, `desktop-app-ui`, `website-ui`, `ui-motion`, `ux-patterns`, `design-direction`, `dashboard-ui`). Aqui estão só as decisões do produto.
 
-**Prioridade:** neste app, as decisões abaixo valem sobre as skills gerais. No resto, siga as skills gerais, que valem sobre as de terceiros.
+**Prioridade:** neste app, as decisões abaixo valem sobre as skills gerais. No resto, siga as skills gerais, que valem sobre as de terceiros. Ordem: `marca-pessoal-app` > `segmento-marca-pessoal` > plataforma > tema > terceiros.
+
+**Segmento:** este app se apoia em `segmento-marca-pessoal` (`.claude/skills/segmento-marca-pessoal/SKILL.md`) para as regras gerais do setor: tom, paleta de referência, templates `TPL-MPE`, componentes `CMP-MPE` e regulação (LGPD, publi). Em conflito, D1–D8 vencem.
 
 ## Produto
 - **Usuários:** profissionais que gerenciam a própria marca pessoal. Público avançado, em PT e EN.

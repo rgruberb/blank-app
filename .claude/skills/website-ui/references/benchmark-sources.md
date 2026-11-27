@@ -13,7 +13,8 @@ Pesquisa 9C (verificado em 22–23/11/2026; dado bruto em `docs/achados/rodada-9
 | **Typewolf** (typewolf.com; /google-fonts) | ✅ | "What's Trending in Type" (sites reais + fontes); **"40 Best Google Fonts"** (open source, uso comercial, vários pesos; atual. 12/01/2026); "Flawless Typography Checklist" | muitas fontes da home são pagas; pares do guia de fontes livres **não extraídos**; licença de embed em app: ler na foundry |
 | Dribbble | ⚠️ | tendência de landing/portfólio em shot | conceito editado; anti-bot após ~20 aberturas |
 | Behance | ⚠️ | case completo de marca/site | "log in to view more" |
-| Mobbin (seção Sites) | 🔒 **pendente** | sites reais por fluxo | exige conta |
+| Mobbin (seção Sites) | 🔒 **pendente** | sites reais por fluxo | exige conta; MCP só no Pro (o conector deste ambiente responde "requires a paid plan") |
+| Godly → recent.design, Refero, designeer.xyz | ⚠️ (rodadas 10A/C2) | sites escolhidos a dedo (Godly), telas e fluxos reais (Refero, MCP pago), catálogo curado (designeer) | ver `design-direction/references/learning-sources.md` §5 e `reference-apis.md` |
 
 ## Como usar sem copiar
 1. Escolha **1 pergunta** por busca ("como sites de serviço pessoal mostram preço?") e junte **3–5** exemplos de fontes diferentes.
