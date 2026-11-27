@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Direções da landing de saúde</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Figtree:wght@400;600;700&family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@500&family=Manrope:wght@300;500;700&family=Schibsted+Grotesk:wght@600;700&family=IBM+Plex+Sans:wght@400;600&family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&display=swap">
+<style>
+/* Layout: prancha de comparação; 6 cartões iguais (mini-hero real + paleta + tipo + notas), ordem das seções em comum no topo.
+   A moldura é neutra para não competir com as amostras; cada amostra traz as próprias cores, fixas nos dois temas. */
+:root{
+  --bg:#F4F5F6; --surface:#FFFFFF; --ink:#1B2126; --ink-2:#47525C; --muted:#66717B; --rule:#D9DEE2; --accent:#0B5CAD;
+  --f-ui:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif; --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111417;--surface:#1A1E22;--ink:#E8ECEF;--ink-2:#B9C2C9;--muted:#8E99A3;--rule:#2C3338;--accent:#7DB5F0;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111417;--surface:#1A1E22;--ink:#E8ECEF;--ink-2:#B9C2C9;--muted:#8E99A3;--rule:#2C3338;--accent:#7DB5F0;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink-2);font:400 16px/1.55 var(--f-ui)}
+.w{max-width:1240px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px}
+h1,h2,h3{color:var(--ink);margin:0;text-wrap:balance}
+h1{font-size:clamp(1.7rem,1.2rem + 1.6vw,2.4rem);line-height:1.1;letter-spacing:-.02em}
+.lead{margin-top:12px;max-width:70ch}
+.lbl{font:500 12px/1.3 var(--f-mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.order{margin-top:28px;background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:20px 24px}
+.order ol{margin:12px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.order li{font-size:14px;padding:8px 12px;border:1px solid var(--rule);border-radius:6px;color:var(--ink);background:var(--bg)}
+.order li b{font:500 12px var(--f-mono);color:var(--muted);margin-right:6px}
+.order p{margin-top:12px;font-size:14px;max-width:90ch}
+.grid{margin-top:32px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.opt{background:var(--surface);border:1px solid var(--rule);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.opt header{display:flex;justify-content:space-between;align-items:baseline;gap:8px 16px;flex-wrap:wrap;padding:16px 20px 12px}
+.opt h2{font-size:1.15rem}
+.code{font:500 12px var(--f-mono);color:var(--accent)}
+.info{padding:16px 20px 20px;display:grid;gap:14px;border-top:1px solid var(--rule);font-size:14px}
+.sw{display:flex;flex-wrap:wrap;gap:6px}
+.sw span{display:flex;align-items:center;gap:6px;font:500 11.5px var(--f-mono);color:var(--ink);border:1px solid var(--rule);border-radius:4px;padding:4px 7px 4px 4px}
+.sw i{width:16px;height:16px;border-radius:3px;border:1px solid rgba(0,0,0,.12)}
+.info dl{margin:0;display:grid;gap:8px}
+.info dl div{display:grid;grid-template-columns:6.5rem minmax(0,1fr);gap:10px}
+.info dt{font:500 11px/1.9 var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.info dd{margin:0}
+.open a{display:inline-flex;align-items:center;min-height:44px;font-weight:600;color:var(--accent)}
+@media(max-width:420px){.info dl div{grid-template-columns:1fr;gap:0}}
+
+/* mini-hero: cada um define as próprias cores */
+.mock{padding:22px 22px 24px;background:var(--m-bg);color:var(--m-text);font-family:var(--m-body);min-height:260px;display:flex;flex-direction:column;gap:12px}
+.mock nav{display:flex;justify-content:space-between;align-items:center;font-size:12px;gap:8px}
+.mock nav b{font-family:var(--m-head);font-size:14px;color:var(--m-head-c)}
+.mock nav span{opacity:.8}
+.mock .k{font:600 11px/1.3 var(--m-body);letter-spacing:.06em;text-transform:uppercase;color:var(--m-kicker)}
+.mock h3{font-family:var(--m-head);color:var(--m-head-c);font-size:clamp(1.3rem,1rem + 1vw,1.7rem);line-height:1.1;letter-spacing:var(--m-track,-.01em);font-weight:var(--m-hw,700);max-width:22ch}
+.mock p{font-size:14.5px;line-height:1.5;max-width:44ch;margin:0}
+.mock .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:4px}
+.mock .cta{display:inline-flex;align-items:center;min-height:40px;padding:0 18px;font:600 14px var(--m-body);background:var(--m-cta);color:var(--m-cta-ink);border-radius:var(--m-r);border-bottom:var(--m-cta-b,0)}
+.mock .proof{font-size:12px;opacity:.85}
+.mock .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.mock .chips span{font-size:11.5px;padding:5px 9px;border-radius:var(--m-r);background:var(--m-chip);color:var(--m-chip-ink)}
+
+.o1{--m-bg:#FFFFFF;--m-text:#212B32;--m-head-c:#212B32;--m-kicker:#003087;--m-cta:#007F3B;--m-cta-ink:#fff;--m-cta-b:3px solid #00401E;--m-chip:#F0F4F5;--m-chip-ink:#212B32;--m-r:4px;--m-head:"Arimo",Arial,sans-serif;--m-body:"Arimo",Arial,sans-serif}
+.o2{--m-bg:#DFF9F2;--m-text:#2A2623;--m-head-c:#1E3A33;--m-kicker:#006A59;--m-cta:#006A59;--m-cta-ink:#fff;--m-chip:#EEE8E3;--m-chip-ink:#2A2623;--m-r:999px;--m-head:"Figtree",system-ui,sans-serif;--m-body:"Figtree",system-ui,sans-serif}
+.o3{--m-bg:#F5F7F8;--m-text:#2F3B45;--m-head-c:#27455C;--m-kicker:#27455C;--m-cta:#005EB8;--m-cta-ink:#fff;--m-chip:#FFFFFF;--m-chip-ink:#27455C;--m-r:6px;--m-head:"Inter",system-ui,sans-serif;--m-body:"Inter",system-ui,sans-serif;--m-track:-.02em}
+.o4{--m-bg:#0B0C0E;--m-text:#C9CED3;--m-head-c:#F1F3F4;--m-kicker:#2FB58F;--m-cta:#2FB58F;--m-cta-ink:#06140F;--m-chip:#151618;--m-chip-ink:#C9CED3;--m-r:12px;--m-head:"Manrope",system-ui,sans-serif;--m-body:"Manrope",system-ui,sans-serif;--m-hw:500;--m-track:-.02em}
+.o5{--m-bg:#F2F4F3;--m-text:#3A4540;--m-head-c:#141C19;--m-kicker:#1D5A45;--m-cta:#1D5A45;--m-cta-ink:#fff;--m-chip:#DDEBE5;--m-chip-ink:#141C19;--m-r:6px;--m-head:"Schibsted Grotesk",system-ui,sans-serif;--m-body:"IBM Plex Sans",system-ui,sans-serif;--m-track:-.02em}
+.o6{--m-bg:#F7F5FC;--m-text:#3D3354;--m-head-c:#2A1B47;--m-kicker:#7457D1;--m-cta:#2A1B47;--m-cta-ink:#fff;--m-chip:#ECE6FA;--m-chip-ink:#2A1B47;--m-r:10px;--m-head:"DM Sans",system-ui,sans-serif;--m-body:"DM Sans",system-ui,sans-serif;--m-track:-.02em}
+.o6 .mock h3 em{font-style:normal;color:#F26B1D}
+.o1 .mock{border-top:6px solid #005EB8}
+.o4 .mock .cta{box-shadow:0 0 24px -6px rgba(47,181,143,.55)}
+</style>
+</head><body>
+
+<div class="w">
+  <p class="lbl">Landing de saúde · antes de codar</p>
+  <h1>Seis direções para escolher</h1>
+  <p class="lead" style="margin-top:8px"><b>As 6 páginas completas estão prontas:</b> use o link "Abrir a página completa" em cada cartão.</p>
+  <p class="lead">Cada cartão mostra o topo da página na direção proposta, com paleta, tipografia e quando faz sentido. As quatro primeiras são os templates TPL-SAU da skill. A 5 e a 6 adaptam o TPL-SAU-02 às marcas que você já tem (RG AI e Wonespace). Os textos dos exemplos são provisórios.</p>
+
+  <div class="order">
+    <p class="lbl" style="margin:0">Ordem das seções (igual nas seis)</p>
+    <ol>
+      <li><b>1</b>Topo: logo, 3 links, 1 CTA</li>
+      <li><b>2</b>Hero com 1 CTA</li>
+      <li><b>3</b>Prova social</li>
+      <li><b>4</b>Como funciona</li>
+      <li><b>5</b>Preços e planos</li>
+      <li><b>6</b>FAQ</li>
+      <li><b>7</b>CTA final</li>
+      <li><b>8</b>Rodapé</li>
+    </ol>
+    <p>O mesmo CTA, com o mesmo texto, no topo, no hero e no fim. Prova social logo depois do hero, só com números e depoimentos reais. "Como funciona" numerado porque é uma sequência de verdade (conversa, protótipo, construção, operação). Corpo de 19px a partir de 641px e 16px no celular (regra do segmento saúde). Um único momento animado, no hero.</p>
+  </div>
+
+  <div class="grid">
+    <article class="opt o1">
+      <header><h2>1 · Sistema público claro</h2><span class="code">TPL-SAU-01</span></header>
+      <div class="mock">
+        <nav><b>RG AI Saúde</b><span>Como funciona · Planos · Dúvidas</span></nav>
+        <p class="k">Sistemas para clínicas e consultórios</p>
+        <h3>Agenda, prontuário e relatórios no mesmo lugar</h3>
+        <p>Construímos o sistema da sua clínica sob medida e cuidamos dele depois de pronto.</p>
+        <div class="row"><span class="cta">Agendar uma conversa</span></div>
+      </div>
+      <div class="info">
+        <div class="sw"><span><i style="background:#FFFFFF"></i>#FFFFFF</span><span><i style="background:#212B32"></i>#212B32</span><span><i style="background:#005EB8"></i>#005EB8</span><span><i style="background:#003087"></i>#003087</span><span><i style="background:#007F3B"></i>#007F3B</span><span><i style="background:#F0F4F5"></i>#F0F4F5</span></div>
+        <dl>
+          <div><dt>Tipografia</dt><dd>Arimo (equivalente aberto da Arial) em tudo, uma família só</dd></div>
+          <div><dt>Forma</dt><dd>Cantos quase retos (4px), sem sombra, botão com borda inferior sólida</dd></div>
+          <div><dt>Bom para</dt><dd>Passar seriedade máxima, público mais velho, clínicas maiores. O mais sóbrio de todos</dd></div>
+        </dl>
+        <p class="open"><a href="opcao-1.html">Abrir a página completa da opção 1 →</a></p>
+      </div>
+    </article>
+
+    <article class="opt o2">
+      <header><h2>2 · Marketplace acolhedor</h2><span class="code">TPL-SAU-02</span></header>
+      <div class="mock">
+        <nav><b>RG AI Saúde</b><span>Como funciona · Planos · Dúvidas</span></nav>
+        <p class="k">Para clínicas e consultórios</p>
+        <h3>Sua clínica com agenda online e menos telefone tocando</h3>
+        <p>Um sistema feito para a rotina da sua equipe, do agendamento ao relatório do mês.</p>
+        <div class="row"><span class="cta">Agendar uma conversa</span></div>
+        <div class="chips"><span>Agenda online</span><span>Lembretes</span><span>Relatórios</span></div>
+      </div>
+      <div class="info">
+        <div class="sw"><span><i style="background:#006A59"></i>#006A59</span><span><i style="background:#DFF9F2"></i>#DFF9F2</span><span><i style="background:#EEE8E3"></i>#EEE8E3</span><span><i style="background:#B6AEA5"></i>#B6AEA5</span><span><i style="background:#2A2623"></i>#2A2623</span><span><i style="background:#27455C"></i>#27455C</span></div>
+        <dl>
+          <div><dt>Tipografia</dt><dd>Figtree (sans humanista) em títulos e corpo</dd></div>
+          <div><dt>Forma</dt><dd>Botões e chips arredondados, sombra leve só num bloco de destaque</dd></div>
+          <div><dt>Bom para</dt><dd>Falar com o dono de clínica pequena ou médio porte. O mais caloroso</dd></div>
+        </dl>
+        <p class="open"><a href="opcao-2.html">Abrir a página completa da opção 2 →</a></p>
+      </div>
+    </article>
+
+    <article class="opt o3">
+      <header><h2>3 · Clínico profissional</h2><span class="code">TPL-SAU-03</span></header>
+      <div class="mock">
+        <nav><b>RG AI Saúde</b><span>Como funciona · Planos · Dúvidas</span></nav>
+        <p class="k">Software clínico sob medida</p>
+        <h3>O sistema da sua clínica, desenhado com a sua equipe</h3>
+        <p>Agenda, fila de atendimento e indicadores com dados organizados e seguros.</p>
+        <div class="row"><span class="cta">Agendar uma conversa</span></div>
+        <div class="chips"><span>LGPD</span><span>Acesso por papéis</span><span>Backups diários</span></div>
+      </div>
+      <div class="info">
+        <div class="sw"><span><i style="background:#F5F7F8"></i>#F5F7F8</span><span><i style="background:#27455C"></i>#27455C</span><span><i style="background:#005EB8"></i>#005EB8</span><span><i style="background:#2F3B45"></i>#2F3B45</span><span><i style="background:#D8DDE0"></i>#D8DDE0</span></div>
+        <dl>
+          <div><dt>Tipografia</dt><dd>Inter em títulos e corpo, números tabulares em preços e tabelas</dd></div>
+          <div><dt>Forma</dt><dd>Cantos 6–8px, bordas de 1px no lugar de sombra</dd></div>
+          <div><dt>Bom para</dt><dd>Vender para gestores e equipe técnica da clínica. Neutro e técnico</dd></div>
+        </dl>
+        <p class="open"><a href="opcao-3.html">Abrir a página completa da opção 3 →</a></p>
+      </div>
+    </article>
+
+    <article class="opt o4">
+      <header><h2>4 · Operação clínica escura</h2><span class="code">TPL-SAU-04</span></header>
+      <div class="mock">
+        <nav><b>RG AI Saúde</b><span>Como funciona · Planos · Dúvidas</span></nav>
+        <p class="k">Back-office de saúde</p>
+        <h3>Autorizações, convênios e fila sob controle</h3>
+        <p>Painéis para a operação da clínica enxergar prazos e glosas antes que virem prejuízo.</p>
+        <div class="row"><span class="cta">Agendar uma conversa</span></div>
+        <div class="chips"><span>Autorização prévia</span><span>Faturamento</span><span>Central de agendamento</span></div>
+      </div>
+      <div class="info">
+        <div class="sw"><span><i style="background:#0B0C0E"></i>#0B0C0E</span><span><i style="background:#151618"></i>#151618</span><span><i style="background:#2FB58F"></i>#2FB58F</span><span><i style="background:#C9CED3"></i>#C9CED3</span><span><i style="background:#E0A43A"></i>#E0A43A</span></div>
+        <dl>
+          <div><dt>Tipografia</dt><dd>Manrope, títulos em peso leve, números grandes e finos</dd></div>
+          <div><dt>Forma</dt><dd>Cards com cantos de 16px, borda sutil e brilho verde muito leve</dd></div>
+          <div><dt>Bom para</dt><dd>Oferta só de back-office (convênio, autorização). A skill não indica para paciente</dd></div>
+        </dl>
+        <p class="open"><a href="opcao-4.html">Abrir a página completa da opção 4 →</a></p>
+      </div>
+    </article>
+
+    <article class="opt o5">
+      <header><h2>5 · Acolhedor com a marca RG AI</h2><span class="code">TPL-SAU-02 · marca RG AI</span></header>
+      <div class="mock">
+        <nav><b>RG AI</b><span>Como funciona · Planos · Dúvidas</span></nav>
+        <p class="k">Apps sob medida para saúde</p>
+        <h3>Apps sob medida para clínicas, do requisito à produção</h3>
+        <p>A mesma equipe que tem três apps de crédito em produção, agora para a rotina da sua clínica.</p>
+        <div class="row"><span class="cta">Agendar uma conversa</span><span class="proof">3 apps em produção · +200% de produtividade</span></div>
+      </div>
+      <div class="info">
+        <div class="sw"><span><i style="background:#F2F4F3"></i>#F2F4F3</span><span><i style="background:#141C19"></i>#141C19</span><span><i style="background:#1D5A45"></i>#1D5A45</span><span><i style="background:#DDEBE5"></i>#DDEBE5</span><span><i style="background:#B4501F"></i>#B4501F</span></div>
+        <dl>
+          <div><dt>Tipografia</dt><dd>Schibsted Grotesk nos títulos, IBM Plex Sans no corpo, Plex Mono em rótulos</dd></div>
+          <div><dt>Forma</dt><dd>A do site gruberia.com, com a calma e o corpo de 19px do segmento saúde</dd></div>
+          <div><dt>Bom para</dt><dd>Uma página de saúde dentro do site atual (ex.: gruberia.com/saude). Continuidade de marca</dd></div>
+        </dl>
+        <p class="open"><a href="opcao-5.html">Abrir a página completa da opção 5 →</a></p>
+      </div>
+    </article>
+
+    <article class="opt o6">
+      <header><h2>6 · Acolhedor com a marca Wonespace</h2><span class="code">TPL-SAU-02 · marca Wonespace</span></header>
+      <div class="mock">
+        <nav><b>Wonespace</b><span>Como funciona · Planos · Dúvidas</span></nav>
+        <p class="k">Para agências de marca pessoal de médicos</p>
+        <h3>Agência e médico no <em>mesmo app</em>, em tempo real</h3>
+        <p>Pauta, gravação, aprovação e publicação num lugar só. O médico aprova pelo celular.</p>
+        <div class="row"><span class="cta">Agendar uma demonstração</span></div>
+        <div class="chips"><span>Aprovação no celular</span><span>Mensagens</span><span>Métricas</span></div>
+      </div>
+      <div class="info">
+        <div class="sw"><span><i style="background:#F7F5FC"></i>#F7F5FC</span><span><i style="background:#2A1B47"></i>#2A1B47</span><span><i style="background:#7457D1"></i>#7457D1</span><span><i style="background:#F26B1D"></i>#F26B1D</span><span><i style="background:#ECE6FA"></i>#ECE6FA</span></div>
+        <dl>
+          <div><dt>Tipografia</dt><dd>DM Sans em títulos e corpo (fonte da marca Wonespace)</dd></div>
+          <div><dt>Forma</dt><dd>Cantos de 10px, laranja só numa palavra-chave, ameixa no CTA</dd></div>
+          <div><dt>Bom para</dt><dd>Vender a Wonespace. Foge do azul e verde típicos do segmento, mas não usa vermelho</dd></div>
+        </dl>
+        <p class="open"><a href="opcao-6.html">Abrir a página completa da opção 6 →</a></p>
+      </div>
+    </article>
+  </div>
+</div>
+
+</body></html>
