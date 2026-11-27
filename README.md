@@ -50,6 +50,15 @@ Cada skill de tema tem:
 
 - `projetos/marca-pessoal-app/`: app de gestão de marca pessoal, com as decisões D1–D8, os itens obrigatórios do dia 1 e a síntese da pesquisa em `references/sintese.md`.
 
+## Catálogo de design (Artifact)
+
+Página para navegar e escolher templates, componentes e referências por segmento e plataforma, com busca (`⌘K`), kit de seleção e geração de prompt `CLAUDE.md`: https://claude.ai/artifact/2CmNXN8Gsg144NSxXHrBLs (privado).
+
+- **Dados:** gerados a partir das skills por `scripts/build-catalog.py`, que cria `catalogo/catalogo.json` e as miniaturas em `catalogo/thumbs/`.
+- **Atualizar depois de mudar as skills:**
+  1. rode `python3 -I scripts/build-catalog.py`;
+  2. republique `catalogo/index.html` com `catalogo.json` e `thumbs/` (mesmo link).
+
 ## Instalar como plugin (recomendado: atualiza sem copiar pastas)
 
 Esta repo é um **marketplace de plugins** do Claude Code (`design-skills`), com 3 plugins:
