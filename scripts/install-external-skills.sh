@@ -50,8 +50,9 @@ MSG
 # ---------------------------------------------------------------------------
 # Extras opcionais: plugins citados nos posts do @gut1n (rodada 10A).
 # São instalados como PLUGINS do Claude Code (escopo do usuário), não como pastas ext-*.
-#   --extras      instala os 5 leves
-#   --extras-all  instala também os 2 pesados (ECC: ~1.089 skills; claude-mem: hooks + processo em segundo plano)
+#   --extras      instala 5 plugins leves + só as 2 skills de acessibilidade do ECC (como pastas ext-ecc-*)
+#   --extras-all  também instala o claude-mem (hooks + processo em segundo plano)
+# O ECC inteiro (~1.089 skills) NÃO é instalado: as skills de motion dele repetem o ui-motion com outros números.
 # Não são usados para criar as skills deste repositório.
 # ---------------------------------------------------------------------------
 if [ "$EXTRAS" = 1 ]; then
@@ -69,7 +70,6 @@ if [ "$EXTRAS" = 1 ]; then
   )
   if [ "$EXTRAS_ALL" = 1 ]; then
     EXTRA_PLUGINS+=(
-      "affaan-m/ECC|ecc@ecc|MIT — ATENÇÃO: ~1.089 skills, aumenta bastante a lista de skills"
       "thedotmack/claude-mem|claude-mem@thedotmack|Apache-2.0 — ATENÇÃO: instala hooks e um processo em segundo plano (memória entre sessões)"
     )
   fi
@@ -79,5 +79,16 @@ if [ "$EXTRAS" = 1 ]; then
     claude plugin marketplace add "$repo" >/dev/null || { echo "   falhou ao adicionar o marketplace $repo" >&2; continue; }
     claude plugin install "$plugin" || echo "   falhou ao instalar $plugin" >&2
   done
-  echo "Extras instalados como plugins do usuário. Para remover: claude plugin uninstall <plugin>."
+  # ECC: só as skills de acessibilidade (MIT), copiadas como pastas.
+  echo "→ extra: affaan-m/ECC (só accessibility e frontend-a11y; MIT)"
+  if git clone -q --depth 1 https://github.com/affaan-m/ECC "$TMP/ecc"; then
+    for sk in accessibility frontend-a11y; do
+      rm -rf "${DEST:?}/ext-ecc-$sk"
+      cp -R "$TMP/ecc/skills/$sk" "$DEST/ext-ecc-$sk"
+      echo "   instalada: ext-ecc-$sk"
+    done
+  else
+    echo "   falhou ao clonar o ECC" >&2
+  fi
+  echo "Extras: plugins instalados no usuário (remova com: claude plugin uninstall <plugin>); skills ECC em $DEST."
 fi
