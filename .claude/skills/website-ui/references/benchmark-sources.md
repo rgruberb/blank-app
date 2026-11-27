@@ -24,11 +24,14 @@ Pesquisa 9C (verificado em 22–23/11/2026; dado bruto em `docs/achados/rodada-9
 4. Passe paleta e pares pelo Coolors (claro e escuro) e a fonte pela licença.
 5. URL de referência que o usuário trouxe → `ext-extract-design` extrai tokens para **estudo**, não para clonar marca.
 
-## Prints da pesquisa 9 (não versionados)
-Fora da repo (scratchpad da pesquisa); reabra pela URL da fonte se precisar.
-- `9C_portfolio_awwwards-daniel-neath_1.jpg` — portfólio de product design: título grande, navegação e hero.
-- `9C_landing_land-book_1.jpg` / `ref_landbook_home_1.jpg` — abas Websites/Sections/Mobile/Motion e filtros por tipo.
-- `9C_portfolio_siteinspire_1.jpg` / `ref_siteinspire_home_1.jpg` — galeria com filtros por categoria.
-- `9C_coolors_contrast-checker_1.jpg` — contrast checker (razão 8,42 e nota por tamanho de texto).
-- `9C_typewolf_google-fonts_1.jpg` — lista "40 Best Google Fonts".
-- `9B_formularios_slack-forca-senha_1.jpg` — validação de senha inline (formulário de cadastro).
+## Prints da pesquisa 9
+Na repo (caminho a partir de `.claude/skills/`):
+- `segmento-marca-pessoal/assets/visual-refs/9C_portfolio_awwwards-daniel-neath_1.jpg` — portfólio de product design: título grande, navegação e hero.
+- `segmento-marca-pessoal/assets/visual-refs/9C_landing_land-book_1.jpg` — abas Websites/Sections/Mobile/Motion e filtros por tipo.
+- `segmento-publicidade/assets/visual-refs/9C_portfolio_siteinspire_1.jpg` — galeria com filtros por categoria.
+- `design-direction/assets/visual-refs/9C_coolors_contrast-checker_1.jpg` — contrast checker (razão 8,42 e nota por tamanho de texto).
+- `design-direction/assets/visual-refs/9C_typewolf_google-fonts_1.jpg` — lista "40 Best Google Fonts".
+- `ux-patterns/assets/visual-refs/9B_formularios_slack-forca-senha_1.jpg` — validação de senha inline (formulário de cadastro).
+
+Não versionados (ficaram no scratchpad da pesquisa; reabra pela URL da fonte): `ref_landbook_home_1.jpg` e
+`ref_siteinspire_home_1.jpg`, segundas capturas das mesmas homes acima — use as versões da repo.

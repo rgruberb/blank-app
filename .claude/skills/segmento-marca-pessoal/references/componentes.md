@@ -10,7 +10,7 @@ C2–C3, 9C e regras gerais das skills de tema/plataforma. "(inferência)" = con
   selo de verificado e um CTA.
 - **Estados:** padrão, sem foto (iniciais), carregando (skeleton do tamanho final).
 - **Regras:** o visitante entende quem é em segundos (10B); no máximo **um** CTA no cartão (Nomey); foto real.
-- **Plataformas:** todas; topo do link na bio. **Referências:** Beacons (C2), `9C_perfil-criador_nomey_2.jpg`.
+- **Plataformas:** todas; topo do link na bio. **Referências:** Beacons (C2), `../../design-direction/assets/visual-refs/9C_perfil-criador_nomey_2.jpg`.
 
 ## CMP-MPE-02 — Botão de link com ícone
 - **Anatomia:** botão largura total, ícone da rede/tipo à esquerda, rótulo verbo + objeto ("Agendar call 1:1").
@@ -36,7 +36,7 @@ C2–C3, 9C e regras gerais das skills de tema/plataforma. "(inferência)" = con
 - **Anatomia:** (1) introdução, (2) problema, (3) processo, (4) exemplos anotados; ficha com papel, prazo, cliente.
 - **Regras:** mostrar processo, não só o final (Behance "Portfolio 2017", via busca); linhas de 45–75 caracteres;
   autorização do cliente para expor o trabalho: não coberta pela fonte (ver `regulacao.md`).
-- **Plataformas:** website. **Referências:** 10B §6; `9C_propostas_cook_2.jpg` (processo em cards numerados).
+- **Plataformas:** website. **Referências:** 10B §6; `../../design-direction/assets/visual-refs/9C_propostas_cook_2.jpg` (processo em cards numerados).
 
 ## CMP-MPE-06 — Agenda pública
 - **Anatomia:** lista por data (dia, mês, cidade/local ou online, título, botão de ingresso/inscrição).

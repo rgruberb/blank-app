@@ -25,7 +25,9 @@ atividades. Vale para qualquer CRM ou módulo comercial; não descreve nenhum ap
 `mobile-app-ui`, `website-ui`) > 4. **tema** (`dashboard-ui`, `ux-patterns`, `ui-motion`, `design-direction`) >
 5. **skills de terceiros** (`ext-*`: só implementação, com os valores acima).
 Esta skill decide **cor, densidade, números do funil, o que não animar e o que a LGPD pede**; shell, breakpoints e
-teclado vêm de `desktop-app-ui`.
+teclado vêm de `desktop-app-ui`. Densidade alta **não** reduz alvos: no mobile continuam 44pt/48dp com 8px entre
+alvos, e na web o piso de 24px (meta 44px na ação principal) de `ux-patterns`; o que encolhe é padding de linha e texto
+secundário, não a área clicável.
 
 ## Tom e personalidade
 - Eficiente, denso, neutro, rápido, previsível. O usuário quer controle e velocidade em trabalho repetitivo (inferência).
@@ -45,7 +47,9 @@ teclado vêm de `desktop-app-ui`.
 
 **2. Tipografia.** **Inter** domina (Attio `Inter`/`Inter Display`, Linear `Inter Variable`, Pipedrive `Inter` +
 `Haffer`; HubSpot `HubSpot Sans` + `HubSpot Serif`) + **mono para IDs e códigos** (`JetBrains Mono`, `Berkeley Mono`).
-- Linha de tabela densa **12–13px**, corpo **14px** (inferência; não verificado nos produtos). Escala **1,2**
+- Corpo **16px** (escala geral de app, decisão do projeto). Linha de tabela densa **12–13px** (inferência da 10B; não
+  verificado nos produtos): **sobrepõe** os 13–14px de célula do `desktop-app-ui` só na tabela densa, porque esta skill
+  decide a densidade; piso 12px. Escala **1,2**
   (`desktop-app-ui` regra 3). `tabular-nums` em valores, contagens e datas em coluna; valores alinhados à direita.
 
 **3. Densidade: alta.** Muitos registros por sessão; trocar de contexto custa (inferência). Salesforce SLDS 2: UI

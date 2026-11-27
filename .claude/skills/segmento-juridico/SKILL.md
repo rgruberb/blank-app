@@ -19,8 +19,15 @@ Provimento OAB 205/2021, Lei 14.063/2020; 27/11/2026) e imagens das rodadas C2�
   e faturamento, leitor de peças/contratos, fluxo de assinatura eletrônica, portal do cliente do escritório.
 
 ## Prioridade
-skill de app específico > **segmento (esta)** > plataforma > tema > skills de terceiros (`ext-*`). Em conflito, esta
-skill vence (ex.: "um momento animado por página" do `website-ui` não vale em botão de assinar nem em prazo).
+skill de app específico > **segmento (esta)** > plataforma > tema > skills de terceiros (`ext-*`). Esta skill só
+sobrepõe o que diz explicitamente; no resto valem plataforma e tema. Sobreposições explícitas:
+- **Corpo 19px** em tela grande na **leitura longa** (peça, contrato, consulta processual pelo cidadão) e no template
+  sóbrio institucional (`TPL-JUR-01`): sobrepõe o corpo 16 da escala geral porque o GOV.UK usa 19px para leitura por
+  público amplo. Em tela pequena, no site de legaltech (`TPL-JUR-02`) fora da leitura longa e no app de gestão de
+  processos/prazos (`TPL-JUR-04`), vale o corpo **16px** da escala geral.
+- **Motion:** mais restritivo que `website-ui`/`ui-motion`: o "um momento animado por página" nunca cai em botão de
+  assinar, prazo, valor ou cláusula (lista "nunca animar" abaixo).
+- **Medida:** a mesma do projeto (`--measure: 50ch`, 45–75 caracteres); esta skill não a sobrepõe.
 
 ## Tom
 Sóbrio, claro, rigoroso, discreto, confiável. O usuário espera precisão e ausência de ambiguidade. Para advogado, a
@@ -44,7 +51,7 @@ norma pede publicidade **"sóbria, discreta e informativa"** (Provimento 205/202
 
 **Densidade**
 - **Média, com blocos de texto longo**: coluna estreita para peça/contrato; gestão (processos, prazos) densa
-  (inferência). Leitura: medida 45–75 caracteres, `max-width: 60ch` (`ux-patterns/references/typography-and-touch.md`).
+  (inferência). Leitura: medida 45–75 caracteres, token `--measure: 50ch` (`ux-patterns/references/typography-and-touch.md` §2b).
 
 **Motion**
 - Mínimo; GOV.UK como referência de motion nulo. **Nunca animar** (inferência): prazos, valores, cláusulas, botão de
@@ -111,7 +118,7 @@ números de confiança · `12` Alternância de público · `13` Termo explicado 
 - `references/templates.md` · `references/componentes.md` · `references/regulacao.md` · `references/fontes.md` ·
   `references/visual-index.md` (4 imagens próprias + imagens em outras skills).
 - Tabelas, painel lateral, ⌘K, atalhos: `desktop-app-ui`; KPIs e "needs attention": `dashboard-ui`
-  (`references/layout-patterns.md`).
+  (`../dashboard-ui/references/layout-patterns.md`).
 - Formulários, erros, confiança, linguagem simples: `ux-patterns/references/nng-research.md` §5, §8, §11;
   dark patterns: `ux-patterns/references/dark-patterns.md`.
 - Confiança e footer de site: `website-ui/references/website-patterns.md` §2, §7. Assinatura no celular:

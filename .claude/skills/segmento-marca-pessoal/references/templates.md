@@ -72,4 +72,4 @@ páginas públicas, 27/11/2026); onde não houve medição está "não medido". 
 - **Quando usar:** creator que vende produto, call, assinatura ou mídia kit.
 - **Fontes:** C2 (https://beacons.ai/); 9C Nomey (https://www.behance.net/gallery/254485187/Nomey-Creator-Monetization-Platform).
 - **Imagens:** `10C_MPE_beacons_perfil-link-bio-mock_1.jpg`,
-  `../../design-direction/assets/visual-refs/9C_perfil-criador_nomey_1.jpg` a `_3.jpg`.
+  `../../design-direction/assets/visual-refs/9C_perfil-criador_nomey_1.jpg`, `9C_perfil-criador_nomey_2.jpg` e `9C_perfil-criador_nomey_3.jpg` (mesma pasta).

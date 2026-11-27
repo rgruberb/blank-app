@@ -75,7 +75,7 @@ conferidos (vários dependem de "comente X").
   geração; **confira repositório, licença e último commit** antes de instalar (18 repositórios, um deles com 16 das 42).
   Já cobertas aqui: `ext-impeccable`, `ext-taste-skill`, `ext-extract-design`, `ux-patterns` (dark patterns, AI slop).
   O post é só índice de nomes: sem os links, procure cada repositório.
-- **Ícones** (@noahelhadedy, `Df1eAHODjT9`, rodada 5, prints `Df1eAHODjT9_1–_3.jpg`): 8 sets (Neat Icons, Doo Icons,
+- **Ícones** (@noahelhadedy, `Df1eAHODjT9`, rodada 5, prints `Df1eAHODjT9_1.jpg`, `Df1eAHODjT9_2.jpg`, `Df1eAHODjT9_3.jpg`): 8 sets (Neat Icons, Doo Icons,
   Majesticons, Gravity UI, Pictogrammers/Material Design Icons, Humbleicons, Bootstrap Icons, Vectopus). Critérios para
   escolher (complemento a partir do post): **uma grade só (24×24)**, estilos disponíveis (line/solid/duotone), mesma
   espessura de traço em todo o produto, licença (open source vs. pago) e arquivo Figma. O 1º item é o produto do
@@ -84,7 +84,7 @@ conferidos (vários dependem de "comente X").
   redrawing a single icon", grade 24×24 e seletor de estilo/traço/cor ao vivo.
 - **Bibliotecas de UI animada** (@noahelhadedy, `De_J0aOl9SJ`): Skiper UI, Kokonut UI, Cult UI, SmoothUI, Animata,
   Eldora UI, Hover.dev. Dica do post: **um momento animado por página (hero ou CTA, não os dois)**. Implementação e
-  prints (`De_J0aOl9SJ_1–_3.jpg`): `ui-motion`.
+  prints (`De_J0aOl9SJ_1.jpg`, `De_J0aOl9SJ_2.jpg`, `De_J0aOl9SJ_3.jpg`): `ui-motion`.
 
 Prompt (complemento): "Use os componentes de [biblioteca] para cards, tabela e date picker. Para cada componente,
 mostre os estados vazio, carregando, erro e com texto longo (nome de 60 caracteres, número de 9 dígitos)."
@@ -98,8 +98,8 @@ com desfoque forte nas bordas** (profundidade de campo) num gráfico ou tabela �
 mesmo design em monitor inclinado ou MacBook com luz dramática (@uiuxcenter, @webdesignssphere). Dá 4–5 slides de um
 único design, mostra detalhe sem poluir. Prints de exemplo: `assets/visual-refs/Dfr6X8qFPwC_1.jpg` (Zentra num tablet
 segurado pelas duas mãos, moldura "Designed by Orbix Studio · Save for later" em pílula branca no topo) e
-`dashboard-ui/assets/visual-refs/` (`DfcdrhgFFMR_3.jpg` = recorte inclinado; `Dfr6X8qFPwC_2`/`_3` = as duas metades
-planas). O mesmo molde vale para app de celular (`DffCenmFASU_1`/`_4`: 1 celular → 3 celulares em leque).
+`dashboard-ui/assets/visual-refs/` (`DfcdrhgFFMR_3.jpg` = recorte inclinado; `Dfr6X8qFPwC_2.jpg`/`Dfr6X8qFPwC_3.jpg` = as duas metades
+planas). O mesmo molde vale para app de celular (`dashboard-ui/assets/visual-refs/DffCenmFASU_1.jpg`/`DffCenmFASU_4.jpg`: 1 celular → 3 celulares em leque).
 Cuidados (complemento): revise os dados do mockup (vários cases têm números impossíveis); não imite marca alheia no
 slide de contato (MediCore copia o sorriso da Amazon).
 
@@ -107,9 +107,9 @@ slide de contato (MediCore copia o sorriso da Amazon).
 
 Escolha a galeria pelo tipo de peça; detalhes, status de login e riscos em `learning-sources.md` §5.
 - **Fluxo de app real** (onboarding, paywall, perfil): Mobbin (exige login).
-- **Estudo de caso completo** (processo + várias telas): Behance. Ex.: Nomey (`9C_perfil-criador_nomey_1–_3.jpg`:
+- **Estudo de caso completo** (processo + várias telas): Behance. Ex.: Nomey (`9C_perfil-criador_nomey_1.jpg`, `9C_perfil-criador_nomey_2.jpg`, `9C_perfil-criador_nomey_3.jpg`:
   wordmark gigante sobre gradiente azul, card de perfil com 1 CTA "Subscribe for $4.99/month", tab bar flutuante de 4
-  ícones) e Cook (`9C_propostas_cook_1/_2.jpg`: processo em 5 cards numerados, ilustração + display condensada,
+  ícones) e Cook (`9C_propostas_cook_1.jpg`, `9C_propostas_cook_2.jpg`: processo em 5 cards numerados, ilustração + display condensada,
   cards de oferta tipo ticket). São **conceitos**, não apps em produção.
 - **Tendência visual de tela/dashboard**: Dribbble (shots editados; anti-bot após ~20 aberturas).
 - **Landing e portfólio**: Land-book (seções: hero, pricing, case), Awwwards (motion/tipografia; pesado para app),

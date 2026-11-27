@@ -20,17 +20,20 @@ limite · 🔒 = exige login (pendente). Lista geral de galerias e perfis: `../.
 3. Shot de Dribbble não tem dado real: refaça com os seus números e teste vazio, carregando, erro, texto longo.
 4. Valide contra NN/g (barras/linhas, tabela com painel lateral) e contra `dashboard-ui` antes de adotar.
 
-## Prints da pesquisa 9 (não versionados)
-Fora da repo (scratchpad da pesquisa); reabra pela URL da fonte se precisar.
+## Prints da pesquisa 9
+Na repo (caminho a partir de `.claude/skills/`):
+- `ui-motion/assets/visual-refs/9A_carbon-easing-curves_1.jpg` — curvas productive × expressive.
+- `ux-patterns/assets/visual-refs/9B_tabelas_painel-lateral-crm_1.jpg` — tabela de oportunidades com edição em painel lateral não modal.
+- `dashboard-ui/assets/visual-refs/9B_dashboards_linha-e-barras_1.jpg` — linha + barras, o formato recomendado.
+- `ux-patterns/assets/visual-refs/9B_tabs_google-finance-in-page_1.jpg` — dois níveis de abas internas com gráfico.
+- `ux-patterns/assets/visual-refs/9B_empty-states_datadog_1.jpg` — empty state que ensina.
+- `dashboard-ui/assets/visual-refs/ref_dribbble_dashboard-ui_1.jpg` — listagem Dribbble de dashboards (banner de cookies).
+
+Não versionados (ficaram fora da repo, no scratchpad da pesquisa; reabra pela URL da fonte):
 - `9A_m3-canonical-listdetail_1.jpg` — list-detail anotado (bar, rail, pane 1, pane 2).
 - `9A_m3-canonical-feed_1.jpg` — grade de cards com rail e filtros em chips.
-- `9A_carbon-easing-curves_1.jpg` — curvas productive × expressive.
-- `9B_tabelas_painel-lateral-crm_1.jpg` — tabela de oportunidades com edição em painel lateral não modal.
-- `9B_dashboards_linha-e-barras_1.jpg` — linha + barras, o formato recomendado.
-- `9B_tabs_google-finance-in-page_1.jpg` — dois níveis de abas internas com gráfico.
-- `9B_empty-states_datadog_1.jpg` — empty state que ensina.
-- `9D_shadcn-blocks-dashboard_1.jpg` / `_2.jpg` — dashboard-01 no desktop e empilhado no mobile.
+- `9D_shadcn-blocks-dashboard_1.jpg` e `9D_shadcn-blocks-dashboard_2.jpg` — dashboard-01 no desktop e empilhado no mobile.
 - `9D_figma-crm-dashboard-kit_1.jpg` — CRM kit: métricas, tarefas, tabelas, gráficos.
 - `9D_figma-obra-shadcn-kit_1.jpg` — componentes shadcn no Figma.
 - `9D_supabase-library-blocks_1.jpg` — blocks de login, métricas, chat e conta.
-- `ref_dribbble_dashboard-ui_1.jpg` / `_2.jpg` — listagem Dribbble de dashboards (banner de cookies).
+- `ref_dribbble_dashboard-ui_2.jpg` — segunda página da listagem Dribbble.

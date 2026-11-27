@@ -22,22 +22,24 @@ limite · 🔒 = exige login (pendente). Lista geral de galerias e perfis para c
 4. Confira a regra na fonte oficial (HIG/Material/NN/g) antes de adotar algo visto só em galeria.
 5. Nunca reproduza marca, ícones (SF Symbols), assets de kit Apple ou layout inteiro de terceiros.
 
-## Prints da pesquisa 9 (não versionados)
-Ficam fora da repo (pasta de scratchpad da pesquisa); reabra pela URL da fonte se precisar.
+## Prints da pesquisa 9
+Na repo (caminho a partir de `.claude/skills/`):
+- `ux-patterns/assets/visual-refs/9B_touch-targets_target-app_1.jpg` — botões primários ~2 cm e tab bar de 5 com rótulo.
+- `ux-patterns/assets/visual-refs/9B_permissoes_venmo-camera-negada_1.jpg` — câmera negada: explica e leva a "Open Settings".
+- `ux-patterns/assets/visual-refs/9B_formularios_slack-forca-senha_1.jpg` — medidor de força de senha inline.
+- `ux-patterns/assets/visual-refs/9B_empty-states_datadog_1.jpg` — empty state que ensina.
+- `design-direction/assets/visual-refs/9C_perfil-criador_nomey_1.jpg`, `9C_perfil-criador_nomey_2.jpg`, `9C_perfil-criador_nomey_3.jpg` — perfil de criador e grade com tab bar flutuante de 4 ícones (conceito Behance).
+- `design-direction/assets/visual-refs/9C_propostas_cook_1.jpg`, `9C_propostas_cook_2.jpg` — onboarding e cards de oferta (conceito Behance).
+- `ui-motion/assets/visual-refs/9D_motion-examples-swipe_1.jpg` — exemplos de swipe, sheet e card stack do Motion.
+
+Não versionados (ficaram fora da repo, no scratchpad da pesquisa; reabra pela URL da fonte):
 - `9A_apple-tabbar_1.jpg` — tab bar iOS flutuante, 4 abas + busca separada.
 - `9A_apple-sheet-detents_1.jpg` — sheet nos detents large e medium, com grabber e fechar.
 - `9A_m3-canonical-listdetail_1.jpg` / `9A_m3-canonical-feed_1.jpg` — layouts canônicos M3 com bar/rail e painéis.
 - `9B_navegacao_facebook-tabbar_1.jpg` — tab bar inferior iOS × no topo Android.
-- `9B_touch-targets_target-app_1.jpg` — botões primários ~2 cm e tab bar de 5 com rótulo.
-- `9B_permissoes_venmo-camera-negada_1.jpg` — câmera negada: explica e leva a "Open Settings".
 - `9B_formularios_hoteltonight-botao-fixo_1.jpg` — formulário com pagamento fixo no rodapé.
-- `9B_formularios_slack-forca-senha_1.jpg` — medidor de força de senha inline.
-- `9B_empty-states_datadog_1.jpg` — empty state que ensina.
-- `9C_perfil-criador_nomey_1..3.jpg` — perfil de criador e grade com tab bar flutuante de 4 ícones (conceito Behance).
-- `9C_propostas_cook_1..2.jpg` — onboarding e cards de oferta (conceito Behance).
 - `9D_figma-ios27-kit_1.jpg` — layout guides/safe areas do kit Apple iOS 27.
-- `9D_shadcn-drawer_1.jpg` / `_2.jpg` — drawer lateral com CTA fixo; drawer inferior com handle e snap ("peek").
+- `9D_shadcn-drawer_1.jpg` e `9D_shadcn-drawer_2.jpg` — drawer lateral com CTA fixo; drawer inferior com handle e snap ("peek").
 - `9D_ionic-ios-sheet-modal_1.jpg` / `9D_ionic-ios-tab-bar_1.jpg` — sheet e tab bar no modo iOS do Ionic.
 - `9D_framework7-ios26-kitchen-sink_1.jpg` — título grande, lista agrupada inset (estilo iOS 26).
-- `9D_motion-examples-swipe_1.jpg` — exemplos de swipe, sheet e card stack do Motion.
 - `ref_dribbble_ui-ux-design_1.jpg` — listagem Dribbble "UI UX Design" (shots de app, banner de cookies).

@@ -1,6 +1,6 @@
 ---
 name: segmento-marca-pessoal
-description: 'Camada de SEGMENTO marca pessoal (código MPE) para qualquer pessoa que vende a si mesma — creator, influenciador, freelancer, consultor, palestrante, artista, designer com portfólio. O único segmento em que a personalidade da pessoa manda: densidade baixa, motion tolerante (nunca no CTA), moldura neutra (Framer #1F1F1F) ou viva (Linktree #E9C0E9/#D2E823 com texto #1E2330), link na bio mobile-first, portfólio com estudo de caso em 4 blocos, prova social real com data, publi identificada (CONAR art. 28), LGPD na captura de e-mail, templates TPL-MPE e componentes CMP-MPE (perfil, botões de link, reserve seu endereço, grade de portfólio, agenda, depoimento). Use em "marca pessoal", "personal brand", "creator", "criador de conteúdo", "influenciador", "portfólio pessoal", "link na bio", "link in bio", "freelancer", "site pessoal", "mídia kit", "agendar call", "página de palestrante".'
+description: 'Camada de SEGMENTO marca pessoal (código MPE) para qualquer pessoa que vende a si mesma — creator, influenciador, freelancer, consultor, palestrante, artista, designer com portfólio. O único segmento em que a personalidade da pessoa manda: densidade baixa, motion tolerante no estilo (ainda 1 momento animado por página; nunca no CTA), moldura neutra (Framer #1F1F1F) ou viva (Linktree #E9C0E9/#D2E823 com texto #1E2330), link na bio mobile-first, portfólio com estudo de caso em 4 blocos, prova social real com data, publi identificada (CONAR art. 28), LGPD na captura de e-mail, templates TPL-MPE e componentes CMP-MPE (perfil, botões de link, reserve seu endereço, grade de portfólio, agenda, depoimento). Use em "marca pessoal", "personal brand", "creator", "criador de conteúdo", "influenciador", "portfólio pessoal", "link na bio", "link in bio", "freelancer", "site pessoal", "mídia kit", "agendar call", "página de palestrante".'
 ---
 
 # Segmento: Marca pessoal (MPE)
@@ -24,6 +24,9 @@ pesquisa 9C e `docs/pesquisa-marca-pessoal/sintese.md` (só o que é geral). "(i
 
 ## Prioridade
 skill de app específico (ex.: `marca-pessoal-app`) > **segmento (esta)** > plataforma > tema > terceiros (`ext-*`).
+Esta skill só sobrepõe o que diz explicitamente (paleta da pessoa, tom, densidade baixa, regulação); no resto valem
+plataforma e tema. **Motion "tolerante" não sobrepõe o limite de 1 momento animado por página** de `website-ui`/`ui-motion`:
+a tolerância é de *estilo* (hover e microinterações com personalidade, easing mais expressivo), não de quantidade.
 
 ## Tom e personalidade
 - Autoral, expressivo, direto, humano, memorável. O dono quer identidade própria; o visitante quer entender **quem é
@@ -52,7 +55,8 @@ skill de app específico (ex.: `marca-pessoal-app`) > **segmento (esta)** > plat
   contatar (Behance blog, via busca). Link na bio: botões principais primeiro, sem dezenas sem hierarquia.
 
 **Motion**
-- O segmento **mais tolerante**: microinterações, transição de portfólio, hover (10B).
+- O segmento **mais tolerante** no estilo: microinterações, transição de portfólio, hover (10B). Quantidade: continua
+  1 momento expressivo por página (ver Prioridade).
 - **Nunca** (inferência, 10B): animar o botão de contato/CTA principal; atrasar o carregamento do link na bio;
   ignorar `prefers-reduced-motion`.
 - Scroll: "Motion should follow the visitor" — parou de rolar, o movimento para; não sequestrar o scroll

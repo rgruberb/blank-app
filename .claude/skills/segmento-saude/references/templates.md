@@ -37,7 +37,7 @@ são sugestão nossa (inferência) e devem ser ajustados ao projeto. Escala tipo
 |---|---|
 | Paleta | neutros frios + azul-petróleo `#27455C` (medido na Doctoralia) como cor de estrutura; ação `#005EB8`; alerta vermelho só para fora da faixa (inferência — **sem fonte de produto logado**) |
 | Par tipográfico | sans de sistema/Inter + `tabular-nums` em agenda e exames (complemento) |
-| Escala | corpo 14–16px no profissional (inferência); nunca dado clínico < 14px |
+| Escala | corpo 16px (escala geral de app); 13–14px só em célula e rótulo (inferência); nunca dado clínico < 14px |
 | Raio | 6–8px (inferência) |
 | Sombra | bordas 1px em vez de sombra (inferência) |
 | Densidade | média-alta (agenda, prontuário) — não verificado |

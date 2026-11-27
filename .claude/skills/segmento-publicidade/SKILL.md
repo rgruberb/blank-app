@@ -23,8 +23,10 @@ nossa, não está na fonte.
 - Criador de conteúdo com publi → `segmento-marca-pessoal` (o selo vem daqui, `CMP-PUB-08/09`).
 
 ## Prioridade
-skill de app específico > **segmento (esta)** > plataforma > tema > terceiros (`ext-*`). Em conflito, esta vence a
-de plataforma (ex.: densidade alta numa tabela de campanhas mesmo no mobile de consulta).
+skill de app específico > **segmento (esta)** > plataforma > tema > terceiros (`ext-*`). Esta skill só sobrepõe o
+que diz explicitamente (paleta, densidade, formatos de anúncio, o que não animar, regulação); no resto valem plataforma
+e tema. Ex.: densidade alta numa tabela de campanhas mesmo no mobile de consulta, **sem** reduzir alvos (44pt/48dp e
+8px entre alvos no mobile, piso 24px na web): o que encolhe é padding e texto secundário, não a área de toque.
 
 ## Tom e personalidade
 - **Ferramenta:** funcional, analítica, neutra. O gestor quer controle de orçamento e resultado.

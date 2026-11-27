@@ -20,8 +20,15 @@ CFM; 27/11/2026), imagens das rodadas 10C/C2–C4 e posts da 10A. "(inferência)
 - Bem-estar (meditação, sono) usa esta skill com peso menor: o tom vale, a regulação clínica pode não valer (inferência).
 
 ## Prioridade
-skill de app específico > **segmento (esta)** > plataforma > tema > skills de terceiros (`ext-*`). Em conflito, esta
-skill vence a de plataforma (ex.: corpo 19px no desktop do paciente em vez do 16px padrão de app).
+skill de app específico > **segmento (esta)** > plataforma > tema > skills de terceiros (`ext-*`). Esta skill só
+sobrepõe o que diz explicitamente; no resto valem plataforma e tema. Sobreposições explícitas:
+- **Corpo 19px** nas telas do **paciente/público leigo** em tela grande (desktop e tablet), site ou app: sobrepõe o
+  corpo 16 da escala geral (`ux-patterns` "Alvos e tipografia") porque NHS e GOV.UK usam 19px para leitura por
+  público amplo, idoso ou com baixa visão. Em tela pequena (celular) o corpo volta a **16px**. Títulos seguem a escala
+  do projeto (na 1,2, 19 é o próprio degrau 1 = 19,2; na 1,25 de site, 19 é exceção só do corpo).
+- Telas do **profissional** (agenda, prontuário, fila) **não** sobrepõem: corpo 16 da escala de app; 13–14px só em
+  célula e rótulo; nunca informação clínica abaixo de 14px.
+- **Motion mínimo** e a lista "nunca animar" abaixo valem acima de `ui-motion` e de `website-ui` (são mais restritivos).
 
 ## Tom
 Claro, calmo, acolhedor, sério, legível. O paciente, muitas vezes ansioso ou idoso, espera segurança, privacidade e

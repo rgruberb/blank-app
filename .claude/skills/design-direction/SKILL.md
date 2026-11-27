@@ -78,7 +78,7 @@ Folhas de contato 4x3 dos reels (`<ID>.jpg`) e prints únicos das rodadas 1 e 3 
 - `DfyFShTounu.jpg` — layout inseguro vs. seguro (mobile).
 - `DfVlIwHISSv.jpg` — terceira camada como luz/objeto 3D.
 
-- `Dak9nkTFpYI_1.jpg` / `_2.jpg` — paleta de marca documentada (hex+RGB) e par Funnel Display + Inter (Ramotion).
+- `Dak9nkTFpYI_1.jpg` / `Dak9nkTFpYI_2.jpg` — paleta de marca documentada (hex+RGB) e par Funnel Display + Inter (Ramotion).
 - `DYpD5C7zwx6_1.jpg` — página de produto com 3D, título outline + sólido.
 - `De_FtT3k-tT_1.jpg` (60/30/10) e `De_FtT3k-tT_3.jpg` (sombra tingida) — @gg.designhub.
 - `DescJ2zTeSf_1.jpg` — os 12 pares de fontes renderizados (@gfx.om).
@@ -86,7 +86,7 @@ Folhas de contato 4x3 dos reels (`<ID>.jpg`) e prints únicos das rodadas 1 e 3 
 - `DfkBGDyDgqS_1.jpg` — mosaico de bibliotecas de componentes dark para IA.
 
 - `9C_coolors_contrast-checker_1.jpg` (razão de contraste 8.42) e `9C_typewolf_google-fonts_1.jpg` (40 Google Fonts).
-- `9C_perfil-criador_nomey_1–_3.jpg` / `9C_propostas_cook_1–_2.jpg` — cases Behance (perfil com 1 CTA, tab bar flutuante, identidade ilustrada); conceitos, não apps reais.
+- `9C_perfil-criador_nomey_1.jpg`, `9C_perfil-criador_nomey_2.jpg`, `9C_perfil-criador_nomey_3.jpg` / `9C_propostas_cook_1.jpg`, `9C_propostas_cook_2.jpg` — cases Behance (perfil com 1 CTA, tab bar flutuante, identidade ilustrada); conceitos, não apps reais.
 
 `De9oszIIQ4V.jpg` e `Dfm0NTiIfyd.jpg` são fora do tema (hype de ferramentas de IA); não abra.
 
@@ -96,13 +96,14 @@ Ordem completa, da mais forte para a mais fraca: **skill de app específico** (e
 Se o projeto é de um setor, abra primeiro a skill `segmento-*` correspondente.
 
 1. **Valores e decisões de design** (números, quantidade de animação, cor, sombra, tipografia) vêm das **skills do projeto** (app específico → segmento → plataforma → tema, nessa ordem): `website-ui`, `desktop-app-ui`, `mobile-app-ui`, `design-direction`, `ui-motion`, `ux-patterns`, `dashboard-ui`.
-2. **Skills de terceiros** (`design-taste-frontend`, `impeccable`, `transitions-*`, `gsap-*`, `playwright-cli`, `extract-design`) servem para **implementação**: código pronto, APIs, checkers e verificação no browser. Use o código delas, mas com os valores do item 1.
+2. **Skills de terceiros** (`design-taste-frontend`, `impeccable`, `transitions-*`, `gsap-*`, `playwright-cli`, `extract-design`) servem para **implementação**: código pronto, APIs, checkers e verificação no browser. Use o código delas, mas com os valores do item 1. Vale o mesmo para qualquer skill de terceiros instalada depois (ex.: `expo/skills`, ECC `motion-*`/`frontend-*`, `karpathy-guidelines`, `mattpocock/skills`). Regras de **código** de terceiros ("mínimo que resolve", "sem feature não pedida", mudança cirúrgica) valem para a estrutura do código; os estados (vazio, carregando, erro), a acessibilidade e o `prefers-reduced-motion` que as skills do projeto exigem **fazem parte do pedido de UI**, não são feature extra.
 3. Se o checker ou a regra de uma skill de terceiros reprovar algo que segue o item 1, **siga o item 1** e diga ao usuário qual regra externa foi ignorada e por quê.
 4. Na plataforma, vale a skill da plataforma (`website-ui`, `desktop-app-ui` ou `mobile-app-ui`); nos temas, vale a skill de tema que ela indicar. A skill de segmento ou de app específico só sobrepõe o que ela disser explicitamente (paleta do setor, tom, compliance, telas obrigatórias); no resto valem plataforma e tema.
 
 | Conflito | Vale | Em vez de |
 |---|---|---|
 | **Sombras** | Seções e blocos se separam por **espaço ou mudança de fundo**, sem sombra (as duas fontes concordam). **Sombra tingida** (cor do fundo, blur = 2× Y, ~8%) **só em elementos que flutuam**: dropdown, popover, modal, card arrastável, toast | `design-taste-frontend` sem sombras em nada; e sombra preta genérica |
+| **Violeta/lilás** | Permitido quando vem da marca, do segmento (lilás Linktree em `segmento-marca-pessoal`, roxo Attio/Pipedrive em `segmento-crm`) ou de paleta escolhida em `design-direction`; nunca como cor padrão sem motivo nem em gradiente roxo→azul (`ux-patterns` `dark-patterns.md`) | `design-taste-frontend`: nunca violeta ou lilás na página |
 
 ## Skills complementares (já instaladas)
 

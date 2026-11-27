@@ -64,7 +64,7 @@ Regra repetida em 2 posts do @noahelhadedy:
 - `De_J0aOl9SJ` (bibliotecas de UI animada): "escolha **um momento animado por página**. Hero **ou** CTA, não os dois. Menos movimento parece mais premium."
 - `Dfo__tSjk9k` (componentes de motion): "um momento lúdico por tela. **Se tudo mexe, nada é especial.**"
 - Prints em `assets/visual-refs/`: `De_J0aOl9SJ_1.jpg` (hero com fumaça WebGL como **o** momento da página; o resto é
-  estático) e `Dfo__tSjk9k_1–_3.jpg` (pull cord, swipe deck, parallax ticket: um componente lúdico por palco).
+  estático) e `Dfo__tSjk9k_1.jpg`, `Dfo__tSjk9k_2.jpg`, `Dfo__tSjk9k_3.jpg` (pull cord, swipe deck, parallax ticket: um componente lúdico por palco).
 
 Como aplicar **(complemento)**:
 - O "momento" é o efeito **expressivo** (reveal de hero, componente lúdico, fundo WebGL, tilt). Feedback funcional (press a 95%, hover, foco, sucesso, toast, skeleton) **não conta**: continua em todo lugar.

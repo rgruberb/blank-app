@@ -151,7 +151,7 @@ Nota 1–5 = utilidade para esta skill.
 
 ### Perfis reconferidos e novos (rodada 9E, leitura de 22–23/11/2026)
 
-Lista geral (foco, risco, Top 15, YouTube/Facebook/newsletters) em `design-direction` → `references/learning-sources.md`.
+Lista geral (foco, risco, Top 15, YouTube/Facebook/newsletters) em `../../design-direction/references/learning-sources.md`.
 Aqui só o que importa para **dashboards e telas de app**.
 
 | Handle | Ativo? | Tipo | Nota | O que aproveitar |
@@ -171,7 +171,7 @@ Aqui só o que importa para **dashboards e telas de app**.
 | @untitledui | sim, diário | kit Figma/React | 1 | Só referência visual de sistema |
 | @uidesignpatterns | sim, pouco frequente (último 02/09/2026) | curadoria | 1 | Nada de dashboard |
 | @gifux, @uxdesignmastery | **confirmados** inativos (0 posts; último 09/05/2024) | — | 1 | Não reavaliar |
-| @ui.designs, @uitrends, @humble_ux, @uxigers, @ux_ui_wireframes, @uigarage, @uiuxgifs, @iamjesseshow | não (parados 2020–2024, privados ou indisponíveis) | — | — | Não reavaliar; detalhes em `learning-sources.md` §1.3 |
+| @ui.designs, @uitrends, @humble_ux, @uxigers, @ux_ui_wireframes, @uigarage, @uiuxgifs, @iamjesseshow | não (parados 2020–2024, privados ou indisponíveis) | — | — | Não reavaliar; detalhes em `../../design-direction/references/learning-sources.md` §1.3 |
 
 Dribbble (9C): autores verificados de dashboard de criador — Chandra Mudha Mahendra/VanguardCX (Kreya), Wolfpixel
 (Blenz), Amir Baqian/Ace Design (Invoice/Proposal), Erudite07. Nota 2: shots estáticos sem estados; §30a.

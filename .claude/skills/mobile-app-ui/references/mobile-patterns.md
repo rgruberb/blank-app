@@ -2,7 +2,7 @@
 
 Cada padrão: regras curtas, números das fontes (com ID do reel/post) e **ponteiro** para o texto completo na skill
 de tema. "(complemento)" = WCAG ou inferência nossa; não vem das fontes. Apple HIG, Material 3 e NN/g lidos na pesquisa 9 (nov/2026) aparecem com "9A"/"9B" e o slug do artigo.
-Arquivos `9A_*`/`9B_*`/`9D_*` citados são prints da pesquisa, **não versionados** (lista em `benchmark-sources.md`).
+Arquivos `9A_*`/`9B_*`/`9D_*` citados são prints da pesquisa; `benchmark-sources.md` separa os que estão na repo (com caminho) dos **não versionados**.
 Imagens: escolha em `visual-index.md` antes de abrir qualquer uma.
 
 ---
