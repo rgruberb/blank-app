@@ -185,6 +185,7 @@ saúde escura → `DfUvP_ulPC6_2`; perfil de atleta claro → `Dfus5sWFAov_1`; s
 apresentação → `DfcdrhgFFMR_3`. Cripto web → Zentra `Dfr6X8qFPwC_2`/`_3`; crédito privado → `1A3pMvMBW2_1–_3`;
 Caféra/Verdan/Maren em componentes isolados → `Df4Shdgmafx_1`/`_2`/`_4`, `DfuhN08lTWN_3`/`_5`, `Dfr4RMBlaPH_3`/`_4`;
 app fitness → `DffCenmFASU_1`/`_4`; finanças pessoais mobile → `DfmwyDclA0Q_2`/`_4` (§22b, §27–29).
+Admin de usuários com contador-objeto → `DgAT3fVBJ8B_1`; vendas mobile 2×2 → `DfkL5N_H4GK_1`; KPI que quebra em 375px → `Deq_kvJBI3g_1` (rodada 10A).
 **Barras/linhas no lugar de gauge (NN/g) → `9B_dashboards_linha-e-barras_1`**; tendência visual da tag dashboard do
 Dribbble → `ref_dribbble_dashboard-ui_1`. Posts novos das rodadas 9C/9E (Kreya, Blenz, Admin V20, metas do supervisor)
 estão só descritos em `domain-examples.md` §30.
@@ -200,7 +201,7 @@ descritos em `domain-examples.md` §14–21.
   apps fitness e finanças pessoais; §30: dashboards de criador do Dribbble e posts novos da rodada 9E).
 - `references/layout-patterns.md` — estruturas, KPI cards, gráficos, densidade, animações com código e
   §7 padrões de gamificação (gestor vs. cliente), §8 momento de decisão / card de ticker (investimento), §9 fluxos de
-  pedido em etapas, §10 dashboard fintech web e apps de score, **§11 escolha de gráfico (NN/g × gauge/anel)**.
+  pedido em etapas, §10 dashboard fintech web e apps de score, **§11 escolha de gráfico (NN/g × gauge/anel)**, §12 padrões gerais da rodada 10A (fila "X de Y prontos", agente propõe/pessoa aprova, prévia de impacto, valor em risco na linha, agregado → indivíduo).
 - `references/glassmorphism.md` — receita CSS completa da série glass.
 
 ## Skills externas (dependências)

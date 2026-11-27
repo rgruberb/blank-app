@@ -27,12 +27,15 @@ plataforma-like pedido · gestos nativos · acessibilidade · peso do bundle (n�
 adotado · maturidade · licença. Componente 100% próprio = acessibilidade toda por sua conta.
 
 ## Recomendação condicionada ao stack
+Escolha do stack em app novo (`SKILL.md`, workflow passo 1): **só de celular → Expo/React Native** (esta tabela não se
+aplica; componentes RN e as skills `expo`, plugin opcional, com os tokens de `ui-motion` e as regras de UX do projeto);
+**com web app/painel gêmeo → PWA → Capacitor** com o mesmo código React DOM (esta tabela vale).
 - **Se o stack for React DOM + Tailwind + PWA (com ou sem Capacitor) e um só sistema com o web app:** shadcn/ui (uma
   variante, ex. Base UI) + Motion for React + uma camada própria fina de padrões iOS (abaixo).
 - **Se estiver em React 18:** Mantine v9 e HeroUI v3 ficam fora (exigem React 19+); em React 19+ voltam à disputa.
 - **Se transições de página nativas forem requisito e o app for empacotado (Capacitor):** Ionic React — custo: dois
   sistemas visuais se houver web app separado.
-- **Se o app for nativo (SwiftUI/Compose) ou RN/Flutter:** esta tabela não se aplica; use os componentes da plataforma.
+- **Se o app for Expo/RN (padrão para app só de celular) ou nativo (SwiftUI/Compose)/Flutter:** esta tabela não se aplica; use os componentes da plataforma (em Expo, via skills `expo`), com os valores das skills do projeto.
 
 ### Camada iOS própria (o que o shadcn não tem)
 | Padrão | Como construir | Regra de UX (SKILL.md) |

@@ -75,7 +75,7 @@ conferidos (vários dependem de "comente X").
   geração; **confira repositório, licença e último commit** antes de instalar (18 repositórios, um deles com 16 das 42).
   Já cobertas aqui: `ext-impeccable`, `ext-taste-skill`, `ext-extract-design`, `ux-patterns` (dark patterns, AI slop).
   O post é só índice de nomes: sem os links, procure cada repositório.
-- **Ícones** (@noahelhadedy, `Df1eAHODjT9`, rodada 5, prints `Df1eAHODjT9_1–_3.jpg`): 8 sets (Neat Icons, Doo Icons,
+- **Ícones** (@noahelhadedy, `Df1eAHODjT9`, rodada 5, prints `Df1eAHODjT9_1.jpg`, `Df1eAHODjT9_2.jpg`, `Df1eAHODjT9_3.jpg`): 8 sets (Neat Icons, Doo Icons,
   Majesticons, Gravity UI, Pictogrammers/Material Design Icons, Humbleicons, Bootstrap Icons, Vectopus). Critérios para
   escolher (complemento a partir do post): **uma grade só (24×24)**, estilos disponíveis (line/solid/duotone), mesma
   espessura de traço em todo o produto, licença (open source vs. pago) e arquivo Figma. O 1º item é o produto do
@@ -84,7 +84,7 @@ conferidos (vários dependem de "comente X").
   redrawing a single icon", grade 24×24 e seletor de estilo/traço/cor ao vivo.
 - **Bibliotecas de UI animada** (@noahelhadedy, `De_J0aOl9SJ`): Skiper UI, Kokonut UI, Cult UI, SmoothUI, Animata,
   Eldora UI, Hover.dev. Dica do post: **um momento animado por página (hero ou CTA, não os dois)**. Implementação e
-  prints (`De_J0aOl9SJ_1–_3.jpg`): `ui-motion`.
+  prints (`De_J0aOl9SJ_1.jpg`, `De_J0aOl9SJ_2.jpg`, `De_J0aOl9SJ_3.jpg`): `ui-motion`.
 
 Prompt (complemento): "Use os componentes de [biblioteca] para cards, tabela e date picker. Para cada componente,
 mostre os estados vazio, carregando, erro e com texto longo (nome de 60 caracteres, número de 9 dígitos)."
@@ -98,8 +98,8 @@ com desfoque forte nas bordas** (profundidade de campo) num gráfico ou tabela �
 mesmo design em monitor inclinado ou MacBook com luz dramática (@uiuxcenter, @webdesignssphere). Dá 4–5 slides de um
 único design, mostra detalhe sem poluir. Prints de exemplo: `assets/visual-refs/Dfr6X8qFPwC_1.jpg` (Zentra num tablet
 segurado pelas duas mãos, moldura "Designed by Orbix Studio · Save for later" em pílula branca no topo) e
-`dashboard-ui/assets/visual-refs/` (`DfcdrhgFFMR_3.jpg` = recorte inclinado; `Dfr6X8qFPwC_2`/`_3` = as duas metades
-planas). O mesmo molde vale para app de celular (`DffCenmFASU_1`/`_4`: 1 celular → 3 celulares em leque).
+`dashboard-ui/assets/visual-refs/` (`DfcdrhgFFMR_3.jpg` = recorte inclinado; `Dfr6X8qFPwC_2.jpg`/`Dfr6X8qFPwC_3.jpg` = as duas metades
+planas). O mesmo molde vale para app de celular (`dashboard-ui/assets/visual-refs/DffCenmFASU_1.jpg`/`DffCenmFASU_4.jpg`: 1 celular → 3 celulares em leque).
 Cuidados (complemento): revise os dados do mockup (vários cases têm números impossíveis); não imite marca alheia no
 slide de contato (MediCore copia o sorriso da Amazon).
 
@@ -107,9 +107,9 @@ slide de contato (MediCore copia o sorriso da Amazon).
 
 Escolha a galeria pelo tipo de peça; detalhes, status de login e riscos em `learning-sources.md` §5.
 - **Fluxo de app real** (onboarding, paywall, perfil): Mobbin (exige login).
-- **Estudo de caso completo** (processo + várias telas): Behance. Ex.: Nomey (`9C_perfil-criador_nomey_1–_3.jpg`:
+- **Estudo de caso completo** (processo + várias telas): Behance. Ex.: Nomey (`9C_perfil-criador_nomey_1.jpg`, `9C_perfil-criador_nomey_2.jpg`, `9C_perfil-criador_nomey_3.jpg`:
   wordmark gigante sobre gradiente azul, card de perfil com 1 CTA "Subscribe for $4.99/month", tab bar flutuante de 4
-  ícones) e Cook (`9C_propostas_cook_1/_2.jpg`: processo em 5 cards numerados, ilustração + display condensada,
+  ícones) e Cook (`9C_propostas_cook_1.jpg`, `9C_propostas_cook_2.jpg`: processo em 5 cards numerados, ilustração + display condensada,
   cards de oferta tipo ticket). São **conceitos**, não apps em produção.
 - **Tendência visual de tela/dashboard**: Dribbble (shots editados; anti-bot após ~20 aberturas).
 - **Landing e portfólio**: Land-book (seções: hero, pricing, case), Awwwards (motion/tipografia; pesado para app),
@@ -117,3 +117,65 @@ Escolha a galeria pelo tipo de peça; detalhes, status de login e riscos em `lea
 - Complemento: mande ao Claude **1 print + 1 frase do que copiar** ("o card de perfil com um único CTA branco"), não a
   galeria inteira; a regra "mostrar, não descrever" vale também para o recorte.
 
+
+## Skills de design, prompts de auditoria e referências de animação (rodada 10A)
+
+Lidos na legenda e em parte dos slides; **nenhum repositório foi instalado**.
+- **Referências de animação para o agente** (@techinsixty, `DgAOxJbjWZs`): "sites feitos por IA ficam iguais porque o
+  agente recebe referências pobres". Mesmo princípio do "mostrar, não descrever", agora para motion: dê ao Claude
+  1 componente animado + o prompt dele (Snapblocks e ScrollTide trazem prompt por componente). Lista dos 5 sites e
+  regras de uso em `ui-motion` → `react-bits.md` ("Sites de UI animada e catálogos").
+- **5 skills de design por fase** (@griffinwooldridge1, `DfgxgBNlK59`, 6 slides; instalações no Skills.sh lidas no
+  slide): **Frontend Design** (Anthropic, `anthropics/skills`, ~1,1 M) para construir com direção visual própria;
+  **Web Design Guidelines** (Vercel, `vercel-labs/agent-skills`, ~840 mil) para auditar acessibilidade, usabilidade e
+  responsivo antes do handoff; **Taste Skill** (`Leonxlnx/taste-skill`, ~750 mil) para direção de arte — **já instalada
+  aqui como `ext-taste-skill`**; **UI/UX Pro Max** (`nextlevelbuilder/ui-ux-pro-max-skill`, ~442 mil) para paletas,
+  pares de fontes e padrões; **Impeccable** (`pbakaus/impeccable`, ~393 mil) para polimento — **já instalada como
+  `ext-impeccable`**. Lição: uma skill por fase (construir, auditar, direção, descoberta, polimento). Valores continuam
+  vindo das skills do projeto (ver "Prioridade entre skills" no `SKILL.md`).
+- **hallmark** (@cirogestor, `DfyBOaVDEar`; Together AI, MIT, "51 mil+ estrelas" segundo o autor, não conferido):
+  escolhe 3 temas entre 50, monta a página em torno do que o visitante veio fazer, confere num navegador real em
+  **8 larguras** contra os vícios de página de IA e **pede foto, print e número real antes de montar**; comandos
+  `/hallmark audit <arquivo>` e `/hallmark redesign <pasta>`. Não contradiz `website-ui` (que verifica em 375/768/1280/1440):
+  as 4 larguras da skill são o mínimo; mais larguras só ajudam. Lições aproveitadas: **auditar antes de refazer** e
+  **conteúdo real antes do layout** (igual à regra 17 e aos 4 estados).
+- **20 dicas de tipografia, cor e polimento** (@charles.unemployed, `DgIYTG0xNrM`): skill do Claude só por DM, montada
+  com 12 dicas de Dan Liu (texto e cor) e 8 de Emil Kowalski. Frame visto: "1. Left-align long text". Conteúdo completo
+  não verificado; não instalar sem ver o repositório.
+- **5 prompts de auditoria "premium"** (@vamshi.work, `DfJaRP4n8e4`, slides 2–6 lidos; formato role / give me / output).
+  Use depois da camada de identidade, um por vez:
+  1. **Hierarchy check**: onde o olho vai 1º, 2º e 3º; o que *deveria* ver primeiro; o que briga por atenção; uma correção por problema.
+  2. **Type teardown**: par de fontes, escala, espaçamento (linhas de 45–75 caracteres), peso primário × secundário, com tamanhos e pesos exatos.
+  3. **Space stress test**: seções, componentes e respiro, com valores exatos em px (confira contra a grade de 8 de `ux-patterns`).
+  4. **Color audit**: principal, secundária e acento, clima, contraste **WCAG AA 4,5:1** e acento em excesso (regra 13: ≤ 10%).
+  5. **Why does it look cheap?**: 3 motivos, a causa raiz (tipo, espaço, cor ou layout), **a única correção de maior efeito**, 3 mudanças para parecer mais caro e 1 coisa que já funciona.
+  Checklist humano equivalente: `ux-patterns` → `components-checklists.md` §13.6 (5 fixes da @gg.designhub).
+
+## Repositórios citados (não instalados)
+
+Os 16 repositórios dos carrosséis de @gut1n (`Df4SUQYHWZA` e `DgDhbRvIG-T`, rodada 10A), conferidos no GitHub em
+27/11/2026 (licença e tipo da página; estrelas mudam). **Registro, não recomendação:** nada aqui foi instalado ou
+auditado; antes de usar, confira código, licença e último commit (regra do mapa de skills acima). AGPL-3.0 obriga a
+abrir o código de serviço que o use em rede.
+
+| Repositório | O que faz | Tipo | Licença |
+|---|---|---|---|
+| `vercel/next-forge` | template Turborepo/Next.js de produção (login, pagamentos, monitoramento) | template | MIT |
+| `expo/skills` | skills de agente para projetos Expo/EAS | skill de agente | MIT |
+| `instantdb/instant` | backend para apps codados por IA (auth, permissões, presença) | biblioteca/serviço | Apache-2.0 |
+| `nhost/nhost` | alternativa open source ao Firebase com GraphQL | biblioteca/serviço | MIT |
+| `puckeditor/puck` | editor visual de arrastar e soltar para React | biblioteca | MIT |
+| `assistant-ui/assistant-ui` | UI de chat com IA em React/TypeScript | biblioteca | MIT |
+| `founded-labs/react-native-reusables` | shadcn/ui para React Native | biblioteca de componentes | MIT |
+| `getlago/lago` | medição e cobrança por uso | ferramenta/serviço | AGPL-3.0 |
+| `multica-ai/andrej-karpathy-skills` | CLAUDE.md derivado das observações de Karpathy | plugin/skill do Claude | não exibida na página |
+| `hugohe3/ppt-master` | documento ou tema → deck PowerPoint nativo | skill/ferramenta (tipo exato não verificado) | MIT |
+| `cathrynlavery/diagram-design` | diagramas editoriais em HTML + SVG (52 tipos) | skill de agente | MIT |
+| `debpalash/VoiceStudio` | alternativa local ao ElevenLabs (voz, dublagem, transcrição) | ferramenta (app) | AGPL-3.0 |
+| `paperclipai/paperclip` | gerenciar agentes de IA no trabalho | ferramenta (orquestração) | MIT |
+| `mattpocock/skills` | "Skills for Real Engineers" | skills/plugin do Claude | MIT |
+| `affaan-m/ECC` | harness de agentes: skills, memória, segurança | skills/plugin e ferramenta | MIT |
+| `thedotmack/claude-mem` | contexto persistente entre sessões | plugin do Claude | Apache-2.0 |
+
+Padrão de slide reaproveitável dos dois carrosséis (complemento): cada card responde **"o que faz / o que vem pronto /
+por que importa"** com a prova (estrelas, comando) e a promessa em uma frase.

@@ -31,7 +31,7 @@ Demo (loja de objetos — Orb, Halo, Column, Arc…): no "Tap. Cut." a página d
 2. **Voltar volta**: a página encolhe exatamente para a posição de origem no grid.
 3. **Menus começam no botão**: o menu (popover escuro com Shop, New in, Journal, About) nasce do botão hambúrguer no canto superior direito e o fundo escurece.
 "Nada simplesmente aparece. Tudo na tela veio de algum lugar."
-Implementação: View Transitions API (`view-transition-name` igual no card e no hero) ou FLIP — ver `css-recipes.md`. Duração alvo: um reveal (~350–700 ms).
+Implementação: View Transitions API (`view-transition-name` igual no card e no hero) ou FLIP — ver `css-recipes.md`. Duração alvo: um reveal (~350–700 ms). Card→página (shared element/morph) **conta como o momento animado** da página; fade/slide padrão de navegação não conta (`scroll-and-screen-transitions.md` §5).
 
 ## Outros padrões de navegação
 - **Side menu** (DfWjKQPhUbn): página encolhe para **86%** e desliza **150 px**; o menu fica embaixo — "push, don't cover".

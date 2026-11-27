@@ -112,3 +112,39 @@ Dashboard escuro de API ("Monitorea sin perder detalle"): medidores de linha, ag
 Reels de ~5 s em loop (dashboards "SaaS revenue analytics" e "Private credit loan management"): a **pílula do item ativo desliza** na sidebar até o item clicado e a tela troca com uma **transição curta**; 4 telas em ~5 s (Funnels → Campaigns → Cohorts; Property → Portfolio → Risk). O painel de código mostra `slidePill(pill, target)` com `gsap.to(…, { ease: 'power3.out' })` (leitura aproximada; duração não legível). Os KPIs fazem contagem entre frames.
 - Princípio: o indicador **viaja** de um item ao outro (mesma regra do "morph, não swap"); não some num e reaparece no outro.
 - **(complemento)** Valores: 250–350 ms com ease-out forte (`power3.out` ≈ `cubic-bezier(0.22, 1, 0.36, 1)`), interrompível (clique no meio parte da posição atual), só `transform` (translate/scale da pílula, medidos com FLIP). Troca de conteúdo ≤ 200–300 ms com fade + deslocamento curto; em `prefers-reduced-motion` a pílula pula direto. Pronto: `ext-transitions-dev` ("sliding tabs", "segmented control") ou `PillNav` em `react-bits.md`. Indicador líquido alternativo: §11.
+
+## 14. 19 regras de animação de UI — DgI3UF_k_-G (@samro_ai, rodada 10A)
+Reel "19 UI animation rules that make apps feel expensive": cada regra é uma cena com **dois celulares lado a lado, sem × com a regra** (frame visto: "Exaggeration", princípio Disney, checkout). Só a legenda e 1 frame foram lidos; a lista completa das 19 **não foi verificada**.
+- Fontes citadas na legenda: **Doherty** (responder em até **400 ms**, IBM 1982); a maior parte do motion de UI fica entre **100 e 500 ms** (NN/g); **se é usado ~100 vezes por dia, não anime** (Emil Kowalski); **9 das 19** vêm dos 12 princípios da Disney (*The Illusion of Life*, 1981).
+- Encaixe nos tokens: press 160 ms, morph 300–400 ms, expand 350 ms e sucesso 470 ms estão dentro de 100–500 ms. Reveal (~700 ms) e cena (~1,2 s) ficam fora, mas são de site/troca de tela; **valem os tokens da skill** (a faixa é heurística, não teto). Ações de alta frequência (enviar mensagem, marcar tarefa, trocar aba em app de trabalho): só feedback de estado, sem coreografia — igual a `scroll-and-screen-transitions.md` §2 e à regra de frequência da Atlassian (< 150 ms, `official-motion-guidelines.md`).
+
+## 15. "The ABC of UI" — 42 micro-interações — DgFUOPxtOJK (@anside_design, rodada 10A)
+Grade 6×7 com nome padronizado por célula (print `DgFUOPxtOJK_1.jpg`; animação de cada célula não verificada). Use como **checklist de inventário** no passo 1 do workflow: quais destes o produto tem e qual padrão desta skill cobre cada um.
+| Grupo (complemento) | Nomes da grade | Onde está o padrão |
+|---|---|---|
+| Controles | Toggle, Checkbox, Radio Group, Range Slider, Star Rating, Stepper, Tab Switch, Grid ↔ List, Day/Night | §2–5, `ext-transitions-dev` (toggle, checkbox, sliding tabs) |
+| Botões e ações | Live Burst (curtir), Send Button, Ripple Tap, Copy, Trash, Unlock, Play/Pause, Menu → Close | §1–2, §7 (morph) |
+| Espera e progresso | Spinner, Progress Bar, Progress Ring, Dot Loader, Skeleton, Charging, Connecting, Equalizer | `loaders-and-refresh.md` |
+| Arquivos | Download, Upload, Open Folder, Doc Preview | §10 |
+| Superfícies | Accordion, Modal Pop, Toast, Notification, Card Flip, Carousel, Search Expand | §9, `page-transitions-and-timing.md` |
+| Listas | Drag to Sort, Swipe Delete, Avatar Stack | §2, §16, `css-recipes.md` §10 |
+| Texto e dados | Typing…, Float Label, Bar Chart | §5, §17 |
+Lição da legenda: "ninguém nota o detalhe bem feito; sem ele o produto inteiro parece chapado". Não é licença para animar tudo: a regra de **um momento animado por página** continua valendo (o resto é feedback funcional).
+
+## 16. Linhas arrastáveis — DgM5twdsInO (@theglidestudio, rodada 10A)
+"Nada diz que elas se movem, então ninguém tenta." Três correções na mesma lista (frame: lista "Today" com alças à direita): **(1) mostre uma alça**, **(2) erga a linha** ao pegar, **(3) abra um espaço** onde ela vai cair. Reforça os tokens já existentes: lift **105%** e os outros abrindo espaço em **200 ms** (`css-recipes.md` §10). Desktop: alça aparece no hover e o cursor vira `grab` (complemento).
+
+## 17. Texto animado: 6 formas — DgQYY6OpZMB (@ale.uiux, rodada 10A)
+Regra da legenda: **cada animação de texto dura menos de 1 s**, para não atrasar a leitura.
+| Forma | Contexto citado |
+|---|---|
+| Typewriter | notas e busca |
+| Word stream | resposta de chat de IA (`ext-transitions-dev`: "streaming text") |
+| Scramble | senhas e códigos |
+| Retype | hero de landing (conta como o momento animado da página) |
+| Typing dots | "digitando…" em chat |
+| Letter rise | título de boas-vindas |
+(complemento) Em `prefers-reduced-motion`, mostre o texto inteiro de uma vez; leitores de tela recebem o texto final, não as letras (`aria-live="polite"` só no resultado).
+
+## 18. Componentes "com física" — The Kitchen (Df5J3c6EabL, @samro_ai sobre a biblioteca de dqnamo, rodada 10A)
+Grade vista: Cassette Button, Scramble Text, Hold-to-delete, Cassette Player (carretéis girando), Hold to Confirm, Drum Zone, e um checkout que "imprime" um recibo. Código em cada página; a legenda oferece uma skill do Claude por DM (não verificada). Lições: **ação destrutiva com segurar para confirmar** (igual ao "hold to publish" de `react-bits.md`); personalidade física vale em **um** componente de destaque, não no produto inteiro. Biblioteca não instalada nem auditada.

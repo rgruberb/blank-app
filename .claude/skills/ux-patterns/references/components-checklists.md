@@ -134,3 +134,31 @@ App de trading "Markets" (lista de ativos + detalhe com candles). A tese da lege
 
 **Métricas**
 - [ ] App de consumo → HEART; ferramenta de trabalho/painel → **CASTLE** (carga cognitiva, recursos avançados, satisfação, eficiência, aprendizado, erros).
+
+## 13. Padrões da rodada 10A (Instagram, 27/11/2026; 1 frame + legenda por post)
+
+### 13.1 Accordion: escolha pelo conteúdo (`DgLUGlUORly`, @ale.uiux, "6 ways to show more on tap")
+| Tipo | Quando |
+|---|---|
+| Chevron | FAQ simples |
+| Cards expansíveis | o item aberto precisa de prévia (viagem, produto); "o aberto sobe com uma prévia" |
+| Aninhado | configurações em grupos |
+| Etapas | checkout dividido em Envio → Pagamento → Revisão |
+| Read more | artigo longo |
+| Horizontal | galeria |
+(complemento) Botão do cabeçalho com `aria-expanded`; abrir um não fecha os outros, salvo em etapas; animação de altura com `ext-transitions-dev` ("accordion").
+
+### 13.2 Header fixo que come a tela (`DgCe3izzZVP`, @theglidestudio, "Half the screen is a header")
+"Devolva a página ao leitor": no frame, o header de um site de notícias ocupava **50%** da altura do celular; correção 1 = **encolher**. As outras 2 correções não foram vistas. Reforça o header sticky ≤ 64–72px de `website-ui` §5 (complemento) e o large title que encolhe 34 → 18 de `mobile-app-ui`.
+
+### 13.3 Arrastar para reordenar (`DgM5twdsInO`, @theglidestudio)
+"Nada diz que elas se movem, então ninguém tenta": **alça visível**, **linha erguida** ao pegar, **espaço aberto** onde vai cair. Valores: `ui-motion` → `micro-interactions.md` §16.
+
+### 13.4 Permissão de notificação (`DgDlMjfhNhc`, @theglidestudio, "Earn the yes before you ask")
+Frame: "1. Wait until it matters" (app de plantas). Mesma regra do NN/g (§12 e `nng-research.md` §9): **peça no contexto, depois de entregar valor**, nunca na primeira abertura.
+
+### 13.5 Número grande em 375 px (`Deq_kvJBI3g`, @designmotionhq, "On a 375px phone, five things break")
+Fix 2 "Big numbers": **uma linha, tamanho com teto** — `white-space: nowrap; font-variant-numeric: tabular-nums; font-size` até **~30px** no celular (antes: €5.3M quebrado em 48px). Print: `dashboard-ui/assets/visual-refs/Deq_kvJBI3g_1.jpg`; CSS em `ui-motion` → `css-recipes.md` §14. Os outros 4 fixes não foram vistos.
+
+### 13.6 Cinco "fixes" antes de recomeçar do zero (`DgOzQOLk5m9`, @gg.designhub)
+(1) hierarquia: o mais importante maior, apoio discreto, ordem de leitura clara; (2) simplificar: tirar o não essencial, dar respiro, **uma** mensagem; (3) tipografia: entrelinha, 45–75 caracteres, contraste título × corpo; (4) remover o que não pertence (formas decorativas, informação repetida); (5) alinhamento e contraste: **uma grade**, texto com contraste forte, conferir no tamanho real de visualização. Reforço de @wejustclick.me (`Dft07xmDJkm`): contraste de cor, tamanho e peso cria foco; poucas cores e **uma lidera**. Prompts de auditoria equivalentes para o Claude: `design-direction` → `claude-web-design-workflow.md`.

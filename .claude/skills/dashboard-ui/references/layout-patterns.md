@@ -64,7 +64,7 @@ ocupação (heatmap de células) + área de receita por noite com tooltip. Bom p
 
 ## 2. KPI cards — anatomia
 1. Rótulo: 11–12px, caps ou sentence case, cinza (60% opacidade), às vezes com ícone de 14px.
-2. Valor: 28–36px, peso regular/medium (saúde usa peso leve), tabular nums (complemento: `font-variant-numeric: tabular-nums`).
+2. Valor: 28–36px, peso regular/medium (saúde usa peso leve), tabular nums (complemento: `font-variant-numeric: tabular-nums`). **No celular de 375px: uma linha (`white-space: nowrap`) e teto de ~30px** — €5.3M a 48px quebra (@designmotionhq `Deq_kvJBI3g`, "FIX 2 · BIG NUMBERS", print `Deq_kvJBI3g_1.jpg`, rodada 10A). Não contradiz os 28–36px: o teto vale para a largura do celular.
 3. Delta: chip pequeno com fundo tingido (verde/vermelho/âmbar) — ou texto verde simples (varejo).
 4. Opcional: sparkline de 1px embaixo (varejo), ou unidade pequena ao lado do número ("3.4 d", "807 hours", "25 min").
 
@@ -431,3 +431,32 @@ número e **uma** meta não pede comparação, pede "quanto falta" — aí o arc
 - Divergência registrada, não resolvida por gosto: quando o usuário pedir "dashboard gamificado", siga §7 **com** este
   critério; quando pedir "painel de análise/gestão", comece por barras e linhas.
 
+
+## 12. Padrões gerais da rodada 10A (27/11/2026; 1 frame + legenda por post)
+Detalhes de setor (saúde, financeiro, CRM) ficam nas skills `segmento-*`; aqui só o que vale para qualquer painel.
+
+- **Contador que vira objeto** (`DgAT3fVBJ8B`, @divan_raj, admin de usuários; print `DgAT3fVBJ8B_1.jpg`): card hero
+  **claro** contra o fundo escuro com o total (2.184, "+8,2% vs Oct · 77% of 2,847 seats") e **bolhas de avatar
+  proporcionais** por plano (Free 50% · Pro 28% · Team 17%); embaixo, tabela de usuários com seleção, chip de plano,
+  status com ponto e **barra de uso 30d**, e alternância **Table / Cards**. Um comentário pergunta para que serve a
+  linha expansível "se o conteúdo é o mesmo": **(complemento) só expanda a linha se ela revelar algo novo**.
+- **Fila de trabalho como KPI central** (Linden, `DgH6J4mgMM4`): "96 de 128 prontos, 7 precisam de você, 11 em risco"
+  + anel de prontidão. Mostre **X de Y prontos e N que precisam de pessoa**, não o volume bruto.
+- **O agente propõe, a pessoa aprova uma vez, o sistema avisa** (Wayline, `Df1WDAnhbtx`: desvio que economiza 38 min,
+  aprovado no painel lateral, motorista e cliente notificados). A decisão chega pronta, com o ganho em número.
+- **Prévia do impacto antes de aprovar** (Threshold, `DfxspuNBjye`): toda mudança proposta mostra o efeito nos prazos
+  antes do "aprovar"; dois relógios (contrato acima, financiamento abaixo) numa linha do tempo só.
+- **Valor em risco na própria linha** (portal de clínica, `DgAqhGGDBws`): itens em ordem de vencimento, com o R$ em
+  risco e a ação sugerida (encaixar na agenda) na linha.
+- **Do agregado ao indivíduo por transição** (Undertow, `DgN_gLyKKHN`): a coorte vira curva de retenção e se abre nas
+  461 contas; a animação liga as duas visões (mesmo princípio de "nada aparece do nada" de `ui-motion`).
+- **Filtros de tempo a um toque acima do gráfico; ações ao lado dele** (trading, `DgPLR1SDouB`: 24h/Week/Month/6M/Year;
+  Deposit/Buy junto ao gráfico ao vivo; saldo e ativos à esquerda). O "único gradiente na ação principal" do mesmo post
+  **diverge** do acento chapado de `ux-patterns` (`dark-patterns.md` §B): vale o chapado (registro em
+  `design-direction` → `color-palettes.md`, "Ajustes finos").
+- **Mobile de vendas** (`DfkL5N_H4GK`, @uimunna; print `DfkL5N_H4GK_1.jpg`): chips de filtro removíveis, pilha de
+  avatares "+6", grade 2×2 de métricas (Total Sales $90,744, Growth +5%, Revenue $124,500, Orders 1.284) em cards com
+  gradiente pêssego suave, card "Sales Trend" e **tab bar flutuante escura** com item ativo em destaque.
+- **Série glass de @code.xr** (Glassy Dashboard V43, Sidebar V15, Navigation Tabs V20, Admin V2): mesma receita de
+  `glassmorphism.md` (vidro só sobre foto/conteúdo); nada novo em número. Templates animados de @buildindex.dev
+  (Undertow, Switchboard, Conduit: 4 views cada) e Vivra (sono, @_code_and_chill_) só como referência visual.

@@ -26,16 +26,23 @@ Vitals, convenções web), não vêm das fontes. Regras do NN/g e das galerias d
 
 ## Prioridade entre skills (quando as regras conflitam)
 
-1. **Valores e decisões de design** (números, quantidade de animação, cor, sombra, tipografia) vêm das **skills do projeto**: `website-ui`, `desktop-app-ui`, `mobile-app-ui`, `design-direction`, `ui-motion`, `ux-patterns`, `dashboard-ui`.
-2. **Skills de terceiros** (`design-taste-frontend`, `impeccable`, `transitions-*`, `gsap-*`, `playwright-cli`, `extract-design`) servem para **implementação**: código pronto, APIs, checkers e verificação no browser. Use o código delas, mas com os valores do item 1.
+Ordem completa, da mais forte para a mais fraca: **skill de app específico** (ex.: `projetos/marca-pessoal-app/`, copiada para `.claude/skills/` na repo do app) > **skill de SEGMENTO** (`segmento-financeiro`, `segmento-crm`, `segmento-publicidade`, `segmento-marca-pessoal`, `segmento-saude`, `segmento-juridico`) > **plataforma** (`website-ui`, `desktop-app-ui`, `mobile-app-ui`) > **tema** (`design-direction`, `ui-motion`, `ux-patterns`, `dashboard-ui`) > **terceiros** (`ext-*`).
+Se o projeto é de um setor, abra primeiro a skill `segmento-*` correspondente.
+
+1. **Valores e decisões de design** (números, quantidade de animação, cor, sombra, tipografia) vêm das **skills do projeto** (app específico → segmento → plataforma → tema, nessa ordem): `website-ui`, `desktop-app-ui`, `mobile-app-ui`, `design-direction`, `ui-motion`, `ux-patterns`, `dashboard-ui`.
+2. **Skills de terceiros** (`design-taste-frontend`, `impeccable`, `transitions-*`, `gsap-*`, `playwright-cli`, `extract-design`) servem para **implementação**: código pronto, APIs, checkers e verificação no browser. Use o código delas, mas com os valores do item 1. Vale o mesmo para qualquer skill de terceiros instalada depois (ex.: skills `expo`, ECC, `karpathy-guidelines`, `mattpocock/skills`). O plugin opcional **ECC** instala só as skills de acessibilidade (`ext-ecc-accessibility`, `ext-ecc-frontend-a11y`): as regras de acessibilidade delas **somam-se** às nossas e, em conflito de número, vale o mais acessível/rigoroso. Regras de **código** de terceiros ("mínimo que resolve", "sem feature não pedida", mudança cirúrgica) valem para a estrutura do código; os estados (vazio, carregando, erro), a acessibilidade e o `prefers-reduced-motion` que as skills do projeto exigem **fazem parte do pedido de UI**, não são feature extra.
 3. Se o checker ou a regra de uma skill de terceiros reprovar algo que segue o item 1, **siga o item 1** e diga ao usuário qual regra externa foi ignorada e por quê.
-4. Na plataforma, vale a skill da plataforma (`website-ui`, `desktop-app-ui` ou `mobile-app-ui`); nos temas, vale a skill de tema que ela indicar.
+4. Na plataforma, vale a skill da plataforma (`website-ui`, `desktop-app-ui` ou `mobile-app-ui`); nos temas, vale a skill de tema que ela indicar. A skill de segmento ou de app específico só sobrepõe o que ela disser explicitamente (paleta do setor, tom, compliance, telas obrigatórias); no resto valem plataforma e tema.
 
 | Conflito | Vale | Em vez de |
 |---|---|---|
-| **Quantidade de animação** | **1 momento animado por página**: a entrada do hero **ou** um momento no CTA/seção, nunca os dois. Página longa também fica com 1. Micro-feedback funcional (press, hover, foco, sucesso) não conta | `design-taste-frontend`: entrada do hero + 1 momento por página (2 em página longa) |
-| **Durações** | Os tokens de `ui-motion`: press **160 ms** (feedback em 0 ms), stagger **70–100 ms**, expandir card/abrir painel **350 ms**, sucesso **470 ms**, reveal **≤ 700 ms**. Onde `ui-motion` não tem número, use o token de `transitions-dev` (micro 80 ms, quick 150 ms, fast 250 ms) | `transitions-dev`: stagger 40 ms, panel open 400 ms, success check 500 ms |
+| **Quantidade de animação** | **1 momento animado por página**: a entrada do hero **ou** um momento no CTA/seção, nunca os dois. Página longa também fica com 1. Não contam: micro-feedback funcional (press, hover, foco, sucesso), o reveal discreto de seção (linha "Scroll reveal") e a transição de navegação padrão (fade/slide). Transição **expressiva** (shared element, morph, card→página) **conta** | `design-taste-frontend`: entrada do hero + 1 momento por página (2 em página longa) |
+| **Durações** | Os tokens de `ui-motion`: press **160 ms** (feedback em 0 ms), stagger **70–100 ms**, expandir card/abrir painel **350 ms**, sucesso **470 ms**, reveal do momento **≤ 700 ms** (reveal discreto de seção **≤ 400 ms**). Onde `ui-motion` não tem número, use o token de `transitions-dev` (micro 80 ms, quick 150 ms, fast 250 ms) | `transitions-dev`: stagger 40 ms, panel open 400 ms, success check 500 ms |
 | **Sombras** | Seções e blocos se separam por **espaço ou mudança de fundo**, sem sombra (as duas fontes concordam). **Sombra tingida** (cor do fundo, blur = 2× Y, ~8%) **só em elementos que flutuam**: dropdown, popover, modal, card arrastável, toast | `design-taste-frontend` sem sombras em nada; e sombra preta genérica |
+| **Motion em app nativo/RN** | Os mesmos tokens de `ui-motion` (press **0,95 em 160 ms**, painel **350 ms**, sucesso **470 ms**); as skills `expo` (como `expo-animation`) entram só com a implementação (Reanimated na thread de UI, springs, haptics) | `expo-animation`: press 0,97 em 100–150 ms e tudo < 300 ms; ECC `motion-foundations` (não instalada): fast 180 / normal 350 / slow 600 ms |
+| **Scroll reveal** | **1 reveal discreto por seção** é permitido e **não conta** como momento: opacidade + deslocamento **≤ 8px**, **≤ 400 ms**, uma vez, **sem stagger/cascata**. Cascata (stagger **70–100 ms**) em galeria ou lista só quando ela for **o** momento da página. Esta regra supera o veto de fade-in no scroll | `design-taste-frontend`: nenhum fade-in de card/seção no scroll |
+| **Stack de app mobile** | App novo **só de celular** (sem web app ou painel gêmeo) → **Expo/React Native**: a implementação fica com as skills `expo` (plugin opcional), mas os tokens de motion de `ui-motion` e as regras de UX das skills do projeto continuam valendo em RN. Produto com **web app/painel gêmeo** → **PWA → Capacitor** com o mesmo código React DOM. Projeto existente mantém o stack que já tem, e a skill de app específico pode fixar outro (passo 1 do workflow de `mobile-app-ui`). Não migre um web app para Expo por iniciativa própria | `expo-web-to-native`: "transformar site em app" = migrar para Expo/RN |
+| **Violeta/lilás** | **Evite como cor padrão** quando o cliente não tem marca: as sugestões padrão de paleta saem sem violeta/lilás, para fugir do visual genérico "de IA". **Permitido** quando vem da marca, do segmento (lilás Linktree em `segmento-marca-pessoal`, roxo Attio/Pipedrive em `segmento-crm`) ou de uma paleta escolhida em `design-direction` (as paletas violeta lá estão marcadas "só com marca/escolha"); nunca em gradiente roxo→azul (`ux-patterns` `dark-patterns.md`) | `design-taste-frontend`: nunca violeta ou lilás na página, nem com marca |
 
 ## Regras de website (com números)
 
@@ -72,7 +79,8 @@ Vitals, convenções web), não vêm das fontes. Regras do NN/g e das galerias d
 - Navbar mínima: logo à esquerda, **3–5 links**, **1 CTA** colorido à direita (RWB Porsche `DYpD5C7zwx6`; glide:
   "nav reduzida a logo + Sign in"). Hick: menos opções, decisão mais rápida.
 - Menu (mobile/fullscreen) **nasce do botão** que o abriu, fundo escurece; abre em **~0,7 s**, press em **0,16 s**
-  (`ui-motion` → `page-transitions-and-timing.md`). Header sticky com altura ≤ 64–72px (complemento).
+  (`ui-motion` → `page-transitions-and-timing.md`). Header sticky com altura ≤ 64–72px (complemento); reforço da rodada 10A:
+  @theglidestudio `DgCe3izzZVP` mostra um header ocupando **50%** do celular — "devolva a página ao leitor": encolha.
 - Footer **sempre alcançável**: infinite scroll enterra contato e termos → "Load more, then stop" (`ux-patterns` →
   `components-checklists.md` §4).
 
@@ -90,7 +98,8 @@ Vitals, convenções web), não vêm das fontes. Regras do NN/g e das galerias d
   serve a produto denso (app/dashboard). Escala: **12,8 · 16 · 20 · 25 · 31 · 39 · 49** (+61 só no hero desktop,
   complemento).
 - Fluida (complemento): `clamp()` por degrau, ex. h1 `clamp(2.441rem, 1.6rem + 3.5vw, 3.815rem)` (39→61px), corpo
-  **16px** mobile → **18px** desktop no máximo. Nunca `vw` puro (quebra zoom).
+  **16px** fixo (degrau da escala). **Exceção declarada:** leitura longa (blog, artigo) pode usar **18px** no
+  corpo do texto, só ali. Nunca `vw` puro (quebra zoom).
 - Line-height **1,5** corpo → **1,1** display; tracking **−0,02em** títulos ≥ 39px, **+0,05em** caps; 2–3 famílias, o
   mesmo par no site inteiro (`design-direction` → `typography-pairing.md`). Carregue a fonte de verdade
   (`display=swap`, self-host, ≤ 2–3 pesos) — `ux-patterns` → `dark-patterns.md` §C; `perceived-performance.md` item 29.
@@ -109,13 +118,21 @@ Vitals, convenções web), não vêm das fontes. Regras do NN/g e das galerias d
   `react-bits.md`).
 
 **9. Motion de site**
-- **Um momento animado por página: hero OU CTA**, não os dois; "se tudo mexe, nada é especial". Feedback funcional
-  (press, hover, foco) não conta (`ui-motion` → `scroll-and-screen-transitions.md` §5).
-- Scroll reveal: **≤ 700 ms** ease-out, deslocamento ~24px, stagger **70–100 ms**, **uma vez só**, nunca no conteúdo já
-  visível no load; sem scroll-jacking; sem parallax decorativo no mobile (§1–§4).
+- **Um momento animado por página: hero OU CTA**, não os dois; "se tudo mexe, nada é especial". Não contam: feedback
+  funcional (press, hover, foco), o reveal discreto de seção e a transição de navegação padrão (fade/slide); transição
+  expressiva (shared element, morph, card→página) conta (`ui-motion` → `scroll-and-screen-transitions.md` §5).
+- Scroll reveal fora do momento: **1 por seção**, opacidade + deslocamento **≤ 8px**, **≤ 400 ms**, **uma vez só**,
+  **sem stagger**, nunca no conteúdo já visível no load; sem scroll-jacking; sem parallax decorativo no mobile (§1–§4).
+  Cascata (stagger **70–100 ms**) em galeria só se ela for **o** momento; o reveal do momento vai até **≤ 700 ms**.
 - 5 padrões de site (headline reveal, micro-interactions, portfolio showcase, animated gallery, scroll reveal): escolha
   **1 expressivo**, um efeito por vez, teste desktop e mobile (§6).
 - `prefers-reduced-motion`: troque deslocamento por fade ≤ 150 ms ou corte; mantenha estados.
+- **Motion segue o visitante** (@theglidestudio `DgEyy8nRybB`, "Follow, don't lead"): efeito de scroll avança com o
+  polegar e para quando ele para (`ui-motion` regra 20).
+- **Toda interação "premium" tem custo** (@thedesignstack.co.in `DgNTvDZCMNX`): rastro de cursor some no celular,
+  fundo que muda por seção pode falhar em contraste, spotlight esconde conteúdo, footer takeover exige cuidado no
+  mobile, distorção no hover e cenas de scroll/showreel pesam. Tabela em `scroll-and-screen-transitions.md` §7.
+- Carrossel horizontal com **máscara nas bordas** e altura de seção em `dvh` no celular (`css-recipes.md` §14).
 
 **10. SEO e semântica** (complemento)
 - Um `<h1>` por página; hierarquia h2/h3 sem pular; landmarks `header`/`nav`/`main`/`footer`; `<a>` para navegar,
@@ -148,10 +165,10 @@ Vitals, convenções web), não vêm das fontes. Regras do NN/g e das galerias d
 
 ## Checklist de entrega
 - [ ] 1 h1, 1 CTA primário por seção, acento ≤ 10% e só em CTA/dado-chave.
-- [ ] Escala 1,25 em tokens, corpo 16–18px, parágrafos ≤ `--measure` (50ch; 45–75 caracteres), line-height caindo com o tamanho.
+- [ ] Escala 1,25 em tokens, corpo 16px (18px só em leitura longa, declarado), parágrafos ≤ `--measure` (50ch; 45–75 caracteres), line-height caindo com o tamanho.
 - [ ] Grade de 8; container ≤ 1280px; sem scroll horizontal em 320/375.
 - [ ] Título + CTA no primeiro paint; nada competindo acima da dobra.
-- [ ] Um momento animado; reveal ≤ 700 ms, uma vez; `prefers-reduced-motion` testado.
+- [ ] Um momento animado (≤ 700 ms); reveal de seção ≤ 400 ms, ≤ 8px, sem stagger, uma vez; `prefers-reduced-motion` testado.
 - [ ] LCP ≤ 2,5 s, CLS ≤ 0,1 em mobile throttled; imagens com dimensões, WebP/AVIF, lazy abaixo da dobra.
 - [ ] Alvos ≥ 24px (meta 44), contraste 4,5/3:1, foco visível em todo link/botão, navegação por Tab completa.
 - [ ] Title/description/OG, landmarks, alt, JSON-LD do tipo de página.
@@ -189,7 +206,8 @@ Vitals, convenções web), não vêm das fontes. Regras do NN/g e das galerias d
 | Onde scroll/reveal faz sentido, 1 momento, 5 padrões de site | `ui-motion/references/scroll-and-screen-transitions.md` §1–6 |
 | Durações (press/reveal/cena), card→página, menu | `ui-motion/references/page-transitions-and-timing.md` |
 | Snippets (stagger, View Transitions, reduced motion) | `ui-motion/references/css-recipes.md` |
-| Componentes animados prontos, orçamento WebGL | `ui-motion/references/react-bits.md` |
+| Componentes animados prontos, orçamento WebGL, 5 sites de UI animada (Snapblocks, Scroll Shaders, Audiocn, Animata, ScrollTide) | `ui-motion/references/react-bits.md` |
+| Buscar referências por programa (MCP Refero/ScreensDesign/Mobbin, RSS Land-book/SiteInspire) | `design-direction/references/reference-apis.md` |
 | Vídeo do site, scroll-storytelling | `ui-motion/references/motion-for-social-video.md` §3–4 |
 | Escala 1,2 vs 1,25, alvos, contraste, grade de 8 | `ux-patterns/references/typography-and-touch.md` §1–3, §6 |
 | Botão, paginação, decisão, fluxo de pedido | `ux-patterns/references/components-checklists.md` §1–2, §4, §9–10 |

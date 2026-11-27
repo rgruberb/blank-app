@@ -36,12 +36,13 @@ lançamento no Claude Design", "limite do Claude Design acabou", "o logo está r
 9. **Sistema de marca = 1 cor saturada + escuro + 1–2 de apoio**, display larga **só em títulos** + Inter (sans neutra) no corpo; documente hex **e** RGB; 1 palavra do título na cor de marca (padrão dos 3 cases da Ramotion). É o 2+1 da regra 1 em escala de sistema: a cor de apoio extra fica para ícones/ilustração/páginas secundárias, nunca compete com o acento na mesma tela.
 10. **Logo**: 1 ideia, funciona pequeno (ícone de app) e em preto e branco chapado, sem depender de degradê/tendência. O movimento faz parte do logo: traço lento = calmo, encaixe rápido = ágil, crescer de um ponto = amigável.
 11. **Visual comunica preço**: budget = cores altas + ofertas; mid = azul/bege + selo de valor; premium = preto + dourado, serifa discreta, muito espaço. Defina preço/posicionamento antes; design desalinhado do valor perde vendas.
-12. **Movimento: um efeito por vez**, sutil e legível, testado em desktop e mobile. Tipos: headline reveal, micro-interactions, portfolio showcase, animated gallery, scroll reveal. Em página: **um momento animado** (hero ou CTA, não os dois). Valores: `ui-motion`.
+12. **Movimento: um efeito por vez**, sutil e legível, testado em desktop e mobile. Tipos: headline reveal, micro-interactions, portfolio showcase, animated gallery, scroll reveal. Em página: **um momento animado** (hero ou CTA, não os dois); reveal discreto de seção (≤ 8px, ≤ 400 ms, sem stagger) não conta, galeria em cascata conta. Valores: `ui-motion`.
 13. **60/30/10 por área**: base dominante ~60%, superfícies ~30%, acento ≤10% (CTA, estado interativo, dado-chave). É o 2+1 com número; 10% é teto, não meta. Se o produto deixar o cliente/tenant usar a cor da marca, troque **só o acento** e valide contraste ≥ 4,5:1 nos dois temas antes de salvar. "Se parece poluído, o acento está cobrindo 30% da tela." (`color-palettes.md`)
 14. **Paleta de produto = rampa de tons + 1 acento**: 5–6 tons de uma base (fundo → superfície → borda → texto 2 → texto 1) e o acento de matiz oposto no fim. **Confira todo hex de post no conta-gotas** (@uiuxaadi tem rótulo errado).
 15. **Sombra tingida, nunca preta chapada**: matiz do fundo escurecido, opacidade ~8%, **blur = 2× o Y** (Y 8 · blur 16). Em tema escuro, profundidade vem de luz/glow atrás de vidro. (`layers-and-trust-layout.md` §4)
 16. **Par tipográfico: 2–3 famílias, contraste display × corpo, hierarquia por peso, o mesmo par em tudo.** O trio sans + serif itálico + mono já cabe nesse limite. 12 pares prontos em `references/typography-pairing.md`; escala/line-height/8 pt em `ux-patterns`.
 17. **Dê à IA peças reais** (biblioteca de componentes, ícones de uma grade só, skills de avaliação), não "desenhe do zero", e exija os 4 estados: **vazio, carregando, erro e texto longo**. (`claude-web-design-workflow.md`)
+18. **Audite antes de refazer e peça conteúdo real antes do layout** (hallmark e 5 prompts de auditoria, rodada 10A): hierarquia → tipo → espaço → cor → "por que parece barato?", uma correção de maior efeito por vez. Degradê, se houver, interpolado em OKLCH (`color-palettes.md`, "Ajustes finos").
 
 ## Workflow
 
@@ -62,10 +63,11 @@ lançamento no Claude Design", "limite do Claude Design acabou", "o logo está r
 | `references/color-palettes.md` | For escolher/propor paleta; precisar de hex; quiser os padrões base→acento (combinações citadas), a **proporção 60/30/10** ou as **rampas de 6 tons** de @uiuxaadi (com os hex errados marcados). |
 | `references/layers-and-trust-layout.md` | For montar camadas (identidade/profundidade/movimento), revisar layout por confiança, listar os 5 tipos de movimento, ou definir **sombra tingida** (§4). |
 | `references/branding-identity.md` | For criar/revisar **marca**: logo (6 erros), embalagem × faixa de preço, os 5 pontos de contato julgados em 3 s, movimento do logo, sistemas de marca da Ramotion (paleta + par tipográfico + ordem do brand book), antes/depois de paleta e direção de arte de páginas de marca (scroll-storytelling 3D, foto PB com 1 cor, 404). |
-| `references/claude-web-design-workflow.md` | For escrever prompts de web design, orientar o usuário a dar referências, planejar o processo com o Claude, escolher **bibliotecas de componentes/skills/ícones para IA** (teste dos 4 estados) ou **apresentar o design em mockup** (device → plano → recorte 3D). |
+| `references/claude-web-design-workflow.md` | For escrever prompts de web design, orientar o usuário a dar referências, planejar o processo com o Claude, escolher **bibliotecas de componentes/skills/ícones para IA** (teste dos 4 estados), **apresentar o design em mockup** (device → plano → recorte 3D), usar os **5 prompts de auditoria** e as 5 skills de design por fase (rodada 10A), ou consultar os **16 repositórios citados (não instalados)**. |
 | `references/claude-design-course.md` | For usar o **Claude Design** (app da Anthropic): criar design system/brand, pitch deck, wireframe vs. high-fidelity de landing, protótipo de app mobile, vídeo de lançamento com HyperFrames, levar para Claude Code → GitHub → Vercel, ou economizar o limite de sessão do Design. |
 | `references/typography-pairing.md` | For escolher **par de fontes**: 12 pares display + corpo com tom de uso, 4 regras (2–3 famílias, contraste, pesos, consistência) e como o trio sans/serif/mono e o display + Inter da Ramotion se encaixam. |
 | `references/learning-sources.md` | Perguntarem **onde continuar aprendendo** ou **quem seguir**: Top 15 do Instagram (foco/risco), inativos para não reavaliar, 15 canais de YouTube, 10 do Facebook (página × grupo, como usar), 10 newsletters/comunidades, galerias de benchmarking (Mobbin, Dribbble, Behance, Awwwards, Land-book, SiteInspire, Coolors, Typewolf) e lacunas (PT-BR, motion de UI). |
+| `references/reference-apis.md` | Precisar **buscar referências por programa** (Claude chamando um MCP/API/feed): tabela de Mobbin, Refero, ScreensDesign, Figma, Pinterest, Dribbble, Behance, Land-book, SiteInspire, Awwwards, Page Flows, Godly/recent.design; ranking das 5 melhores; **o conector Mobbin exige plano pago (Pro)**. |
 | `references/visual-index.md` | Precisar saber qual imagem mostra qual exemplo antes de abrir uma; ou consultar a tabela **"Perfis avaliados"** (quais contas valem como fonte, inclusive as inativas). |
 
 ## Imagens (`assets/visual-refs/*.jpg`)
@@ -76,7 +78,7 @@ Folhas de contato 4x3 dos reels (`<ID>.jpg`) e prints únicos das rodadas 1 e 3 
 - `DfyFShTounu.jpg` — layout inseguro vs. seguro (mobile).
 - `DfVlIwHISSv.jpg` — terceira camada como luz/objeto 3D.
 
-- `Dak9nkTFpYI_1.jpg` / `_2.jpg` — paleta de marca documentada (hex+RGB) e par Funnel Display + Inter (Ramotion).
+- `Dak9nkTFpYI_1.jpg` / `Dak9nkTFpYI_2.jpg` — paleta de marca documentada (hex+RGB) e par Funnel Display + Inter (Ramotion).
 - `DYpD5C7zwx6_1.jpg` — página de produto com 3D, título outline + sólido.
 - `De_FtT3k-tT_1.jpg` (60/30/10) e `De_FtT3k-tT_3.jpg` (sombra tingida) — @gg.designhub.
 - `DescJ2zTeSf_1.jpg` — os 12 pares de fontes renderizados (@gfx.om).
@@ -84,20 +86,25 @@ Folhas de contato 4x3 dos reels (`<ID>.jpg`) e prints únicos das rodadas 1 e 3 
 - `DfkBGDyDgqS_1.jpg` — mosaico de bibliotecas de componentes dark para IA.
 
 - `9C_coolors_contrast-checker_1.jpg` (razão de contraste 8.42) e `9C_typewolf_google-fonts_1.jpg` (40 Google Fonts).
-- `9C_perfil-criador_nomey_1–_3.jpg` / `9C_propostas_cook_1–_2.jpg` — cases Behance (perfil com 1 CTA, tab bar flutuante, identidade ilustrada); conceitos, não apps reais.
+- `9C_perfil-criador_nomey_1.jpg`, `9C_perfil-criador_nomey_2.jpg`, `9C_perfil-criador_nomey_3.jpg` / `9C_propostas_cook_1.jpg`, `9C_propostas_cook_2.jpg` — cases Behance (perfil com 1 CTA, tab bar flutuante, identidade ilustrada); conceitos, não apps reais.
 
 `De9oszIIQ4V.jpg` e `Dfm0NTiIfyd.jpg` são fora do tema (hype de ferramentas de IA); não abra.
 
 ## Prioridade entre skills (quando as regras conflitam)
 
-1. **Valores e decisões de design** (números, quantidade de animação, cor, sombra, tipografia) vêm das **skills do projeto**: `website-ui`, `desktop-app-ui`, `mobile-app-ui`, `design-direction`, `ui-motion`, `ux-patterns`, `dashboard-ui`.
-2. **Skills de terceiros** (`design-taste-frontend`, `impeccable`, `transitions-*`, `gsap-*`, `playwright-cli`, `extract-design`) servem para **implementação**: código pronto, APIs, checkers e verificação no browser. Use o código delas, mas com os valores do item 1.
+Ordem completa, da mais forte para a mais fraca: **skill de app específico** (ex.: `projetos/marca-pessoal-app/`, copiada para `.claude/skills/` na repo do app) > **skill de SEGMENTO** (`segmento-financeiro`, `segmento-crm`, `segmento-publicidade`, `segmento-marca-pessoal`, `segmento-saude`, `segmento-juridico`) > **plataforma** (`website-ui`, `desktop-app-ui`, `mobile-app-ui`) > **tema** (`design-direction`, `ui-motion`, `ux-patterns`, `dashboard-ui`) > **terceiros** (`ext-*`).
+Se o projeto é de um setor, abra primeiro a skill `segmento-*` correspondente.
+
+1. **Valores e decisões de design** (números, quantidade de animação, cor, sombra, tipografia) vêm das **skills do projeto** (app específico → segmento → plataforma → tema, nessa ordem): `website-ui`, `desktop-app-ui`, `mobile-app-ui`, `design-direction`, `ui-motion`, `ux-patterns`, `dashboard-ui`.
+2. **Skills de terceiros** (`design-taste-frontend`, `impeccable`, `transitions-*`, `gsap-*`, `playwright-cli`, `extract-design`) servem para **implementação**: código pronto, APIs, checkers e verificação no browser. Use o código delas, mas com os valores do item 1. Vale o mesmo para qualquer skill de terceiros instalada depois (ex.: skills `expo`, ECC, `karpathy-guidelines`, `mattpocock/skills`). O plugin opcional **ECC** instala só as skills de acessibilidade (`ext-ecc-accessibility`, `ext-ecc-frontend-a11y`): as regras de acessibilidade delas **somam-se** às nossas e, em conflito de número, vale o mais acessível/rigoroso. Regras de **código** de terceiros ("mínimo que resolve", "sem feature não pedida", mudança cirúrgica) valem para a estrutura do código; os estados (vazio, carregando, erro), a acessibilidade e o `prefers-reduced-motion` que as skills do projeto exigem **fazem parte do pedido de UI**, não são feature extra.
 3. Se o checker ou a regra de uma skill de terceiros reprovar algo que segue o item 1, **siga o item 1** e diga ao usuário qual regra externa foi ignorada e por quê.
-4. Na plataforma, vale a skill da plataforma (`website-ui`, `desktop-app-ui` ou `mobile-app-ui`); nos temas, vale a skill de tema que ela indicar.
+4. Na plataforma, vale a skill da plataforma (`website-ui`, `desktop-app-ui` ou `mobile-app-ui`); nos temas, vale a skill de tema que ela indicar. A skill de segmento ou de app específico só sobrepõe o que ela disser explicitamente (paleta do setor, tom, compliance, telas obrigatórias); no resto valem plataforma e tema.
 
 | Conflito | Vale | Em vez de |
 |---|---|---|
 | **Sombras** | Seções e blocos se separam por **espaço ou mudança de fundo**, sem sombra (as duas fontes concordam). **Sombra tingida** (cor do fundo, blur = 2× Y, ~8%) **só em elementos que flutuam**: dropdown, popover, modal, card arrastável, toast | `design-taste-frontend` sem sombras em nada; e sombra preta genérica |
+| **Stack de app mobile** | App novo **só de celular** (sem web app ou painel gêmeo) → **Expo/React Native**: a implementação fica com as skills `expo` (plugin opcional), mas os tokens de motion de `ui-motion` e as regras de UX das skills do projeto continuam valendo em RN. Produto com **web app/painel gêmeo** → **PWA → Capacitor** com o mesmo código React DOM. Projeto existente mantém o stack que já tem, e a skill de app específico pode fixar outro (passo 1 do workflow de `mobile-app-ui`). Não migre um web app para Expo por iniciativa própria | `expo-web-to-native`: "transformar site em app" = migrar para Expo/RN |
+| **Violeta/lilás** | **Evite como cor padrão** quando o cliente não tem marca: as sugestões padrão de paleta saem sem violeta/lilás, para fugir do visual genérico "de IA". **Permitido** quando vem da marca, do segmento (lilás Linktree em `segmento-marca-pessoal`, roxo Attio/Pipedrive em `segmento-crm`) ou de uma paleta escolhida em `design-direction` (as paletas violeta lá estão marcadas "só com marca/escolha"); nunca em gradiente roxo→azul (`ux-patterns` `dark-patterns.md`) | `design-taste-frontend`: nunca violeta ou lilás na página, nem com marca |
 
 ## Skills complementares (já instaladas)
 
