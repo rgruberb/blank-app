@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
-"""Gera catalogo/catalogo.json e catalogo/thumbs/*.webp a partir das skills de design.
+"""Gera catalogo/catalogo.json e catalogo/media/<REF>/ a partir das skills de design e da biblioteca
+de referências reais.
 
-Fonte única: .claude/skills/segmento-*/references/{templates,componentes,visual-index}.md,
-SKILL.md de cada segmento e os visual-index.md das skills de tema/plataforma.
+Fontes:
+- referencias/index.json (gerado por scripts/build-references.py): fonte PRINCIPAL das referências
+  (reels com frames + loop.webp, carrosséis, prints e galerias enviados pelo usuário);
+- .claude/skills/segmento-*/references/{templates,componentes,visual-index}.md, SKILL.md de cada
+  segmento e os visual-index.md das skills de tema/plataforma (templates, componentes e as imagens
+  das skills que não estão na biblioteca; as que estão viram alias, sem duplicar).
 Exclui ext-* e quant-investing (não é de design).
+
+Saída: catalogo/catalogo.json e catalogo/media/<REF>/{thumb.webp (640 px, 2x de um card de ~320 px),
+1.jpg..N.jpg (resolução cheia, copiadas da biblioteca/skill), loop.webp (reels)}. Códigos REF em ordem de data de envio (o mais antigo é REF-0001).
 
 Uso (da raiz da repo):  python3 -I scripts/build-catalog.py [--no-thumbs]
 Requer só a stdlib e o ffmpeg (com libwebp) no PATH para as miniaturas.
@@ -13,13 +21,16 @@ import hashlib
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKILLS = os.path.join(ROOT, ".claude", "skills")
 OUT_DIR = os.path.join(ROOT, "catalogo")
-THUMBS = os.path.join(OUT_DIR, "thumbs")
+THUMBS = os.path.join(OUT_DIR, "thumbs")   # legado: removido ao gerar media/
+MEDIA = os.path.join(OUT_DIR, "media")
+LIB = os.path.join(ROOT, "referencias")
 EXCLUDE = {"quant-investing"}
 
 SEGMENTS = [
@@ -773,21 +784,306 @@ def probe_size(path):
         return 480, 300
 
 
+
+# ---------------------------------------------------------------- biblioteca referencias/ (fonte principal)
+ID_RX = r"[A-Za-z0-9_\-]{10,11}"
+MAX_MEDIA_FILES = 509
+THUMB_REUSE_W = 800
+THUMB_REUSE_BYTES = 120 * 1024
+KIND_LABEL = {"reel": "Reel", "carrossel": "Carrossel", "print": "Print", "galeria": "Galeria", "skill": "Imagem de skill"}
+
+
+def post_id_of(fname):
+    stem = os.path.basename(fname).rsplit(".", 1)[0]
+    for rx in (r"^(?:10A_)?(" + ID_RX + r")(?:_\d+)?$", r"^9E_.+?_(" + ID_RX + r")_\d+$"):
+        m = re.match(rx, stem)
+        if m:
+            return m.group(1)
+    return None
+
+
+def short_name(*texts, limit=72):
+    for t in texts:
+        t = (t or "").strip().strip('"“”')
+        if not t:
+            continue
+        t = re.sub(r"\s+", " ", t)
+        out = ""
+        for sent in re.findall(r"[^.!?]+[.!?]*", t):
+            if len(out) >= 28 or len(out + sent) > limit:
+                break
+            out += sent
+        out = out.strip()
+        if 12 <= len(out) <= limit:
+            return out.rstrip(".")
+        return clean(t, limit)
+    return ""
+
+
+GENERIC_CAPTION = re.compile(r"^\W*(click the link|comment|comente|follow|did you know|link in bio|save this)", re.I)
+
+
+def load_library():
+    p = os.path.join(LIB, "index.json")
+    if not os.path.exists(p):
+        return []
+    with open(p, encoding="utf-8") as f:
+        recs = json.load(f).get("referencias", [])
+    out = []
+    for rec in recs:
+        a = rec.get("arquivos", {})
+        if rec["tipo"] == "reel":
+            imgs = [{"path": "referencias/" + x["arquivo"], "w": x["w"], "h": x["h"], "t": x.get("t")} for x in a.get("frames", [])]
+            imgs += [{"path": "referencias/" + x["arquivo"], "w": x["w"], "h": x["h"]} for x in a.get("prints", [])]
+            lp = a.get("loop")
+            loop = {"path": "referencias/" + lp["arquivo"], "w": lp["w"], "h": lp["h"], "start": lp.get("inicio"),
+                    "dur": lp.get("duracao")} if lp else None
+        else:
+            imgs = [{"path": "referencias/" + x["arquivo"], "w": x["w"], "h": x["h"]} for x in a.get("imagens", [])]
+            loop = None
+        segs = [x for x in rec.get("segmentos") or ["GER"]]
+        nonger = [x for x in segs if x != "GER"]
+        segs = nonger or ["GER"]
+        files = [os.path.basename(i["path"]) for i in imgs if "/prints/" in i["path"]]
+        out.append({
+            "type": "reference", "kind": rec["tipo"], "id_post": rec["id_post"],
+            "name": short_name(rec.get("nome"), *((rec.get("o_que_mostra"), rec.get("legenda"))
+                                                  if GENERIC_CAPTION.search(rec.get("legenda") or "")
+                                                  else (rec.get("legenda"), rec.get("o_que_mostra")))) or rec["id_post"],
+            "author": rec.get("autor") or "", "author_name": rec.get("autor_nome") or "",
+            "url": rec.get("url") or "", "what": clean(rec.get("o_que_mostra") or "", 420), "when": "",
+            "caption": clean(rec.get("legenda_completa") or rec.get("legenda") or "", 600),
+            "segment": segs[0], "segments": segs, "platforms": rec.get("plataformas") or [],
+            "skills": rec.get("skills") or [], "lib_tags": rec.get("tags") or [],
+            "date_added": to_utc(rec.get("data_envio")), "date_source": rec.get("data_envio_fonte"),
+            "date_origin": rec.get("data_origem"), "duration": rec.get("duracao"),
+            "src_images": imgs, "src_loop": loop, "aliases": files, "image": imgs[0]["path"] if imgs else "",
+            "doc": rec.get("doc") or "",
+        })
+    return out
+
+
+def merge_references(lib, skill_refs):
+    """Biblioteca primeiro; imagens das skills que casam por ID/arquivo viram alias (enriquecem texto,
+    skills e segmentos). As que sobram entram como referências próprias (kind 'skill')."""
+    by_key = {}
+    for r in lib:
+        by_key.setdefault(r["id_post"], r)
+        for f in r["aliases"]:
+            by_key.setdefault(f, r)
+            by_key.setdefault(f.rsplit(".", 1)[0], r)
+    out = list(lib)
+    excluded = set()
+    p = os.path.join(LIB, "index.json")
+    if os.path.exists(p):
+        with open(p, encoding="utf-8") as f:
+            excluded = set(json.load(f).get("excluidos", []))
+    for sr in skill_refs:
+        names = [sr["file"]] + sr["aliases"]
+        if any((post_id_of(n) or "") in excluded for n in names):
+            continue   # investimento/quant ou fora do tema (lista em referencias/index.json)
+        hit = None
+        for n in names:
+            stem = n.rsplit(".", 1)[0]
+            hit = by_key.get(n) or by_key.get(stem) or by_key.get(post_id_of(n) or "\0")
+            if hit:
+                break
+        if hit:
+            for n in names:
+                if n not in hit["aliases"]:
+                    hit["aliases"].append(n)
+            for k in ("skills",):
+                for v in sr[k]:
+                    if v not in hit[k]:
+                        hit[k].append(v)
+            for sg in sr["segments"]:
+                if sg != "GER" and sg not in hit["segments"]:
+                    hit["segments"] = [x for x in hit["segments"] if x != "GER"] + [sg]
+            hit["segment"] = hit["segments"][0]
+            if not hit["what"] and sr["what"]:
+                hit["what"] = sr["what"]
+            hit["when"] = hit["when"] or sr["when"]
+            hit["author"] = hit["author"] or sr["author"]
+            hit["url"] = hit["url"] or sr["url"]
+            if not hit["date_added"] and sr["date_added"]:
+                hit["date_added"], hit["date_source"] = sr["date_added"], "git"
+            for p in sr["platforms"]:
+                if p not in hit["platforms"]:
+                    hit["platforms"].append(p)
+            hit.setdefault("skill_images", []).append(sr["image"])
+            continue
+        w, h = image_size(os.path.join(ROOT, sr["image"]))
+        out.append({
+            "type": "reference", "kind": "skill", "id_post": post_id_of(sr["file"]) or sr["file"].rsplit(".", 1)[0],
+            "name": sr["name"], "author": sr["author"], "author_name": "", "url": sr["url"], "what": sr["what"],
+            "when": sr["when"], "caption": "", "segment": sr["segment"], "segments": sr["segments"],
+            "platforms": sr["platforms"], "skills": sr["skills"], "lib_tags": [],
+            "date_added": sr["date_added"], "date_source": "git", "date_origin": None, "duration": None,
+            "src_images": [{"path": sr["image"], "w": w, "h": h}], "src_loop": None,
+            "aliases": [sr["file"]] + sr["aliases"], "image": sr["image"], "doc": "",
+        })
+    return out
+
+
+def image_size(path):
+    try:
+        out = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
+                              "stream=width,height", "-of", "csv=p=0:s=x", path],
+                             capture_output=True, text=True, check=False).stdout.strip()
+        w, h = out.split("x")[:2]
+        return int(w), int(h)
+    except Exception:
+        return 1200, 800
+
+
+def ffmpeg_img(src, dst, width, webp=False, q=None):
+    vf = "scale='min(%d,iw)':-2:flags=lanczos" % width
+    args = ["ffmpeg", "-nostdin", "-loglevel", "error", "-y", "-i", src, "-vf", vf, "-frames:v", "1"]
+    if webp:
+        args += ["-c:v", "libwebp", "-quality", str(q or 72)]
+    else:
+        args += ["-q:v", str(q or 3)]
+    subprocess.run(args + [dst], check=False)
+
+
+def build_media(refs, make):
+    """catalogo/media/<REF>/: thumb.webp (640), 1.jpg..N.jpg (resolução cheia), loop.webp."""
+    # Limite do Artifact: 511 arquivos por versão (página + catalogo.json + media). Se passar,
+    # os reels mostram no catálogo só os 3 primeiros frames (a biblioteca referencias/ mantém os 4).
+    def planned(max_frames):
+        n = 0
+        for r in refs:
+            imgs = r["src_images"][:max_frames] if r["kind"] == "reel" else r["src_images"]
+            f = imgs[0] if imgs else None
+            reuse = f and (f["w"] <= THUMB_REUSE_W or os.path.getsize(os.path.join(ROOT, f["path"])) <= THUMB_REUSE_BYTES)
+            n += len(imgs) + (0 if reuse else 1) + (1 if r["src_loop"] else 0)
+        return n
+    max_frames = 99
+    for mf in (99, 3, 2):
+        max_frames = mf
+        if planned(mf) <= MAX_MEDIA_FILES:
+            break
+    for r in refs:
+        if r["kind"] == "reel":
+            r["src_images"] = r["src_images"][:max_frames]
+    if make:
+        if os.path.isdir(MEDIA):
+            shutil.rmtree(MEDIA)
+        if os.path.isdir(THUMBS):
+            shutil.rmtree(THUMBS)
+        os.makedirs(MEDIA)
+    for r in refs:
+        d = os.path.join(MEDIA, r["code"])
+        rel_d = "media/" + r["code"]
+        if make:
+            os.makedirs(d, exist_ok=True)
+        media = []
+        for i, im in enumerate(r["src_images"], 1):
+            dst = os.path.join(d, "%d.jpg" % i)
+            src = os.path.join(ROOT, im["path"])
+            if make:
+                shutil.copyfile(src, dst)      # resolução cheia para o lightbox
+            w, h = im["w"], im["h"]
+            media.append({"src": "%s/%d.jpg" % (rel_d, i), "w": w, "h": h, "t": im.get("t")})
+        # Miniatura da grade (640 px). Para caber no limite de arquivos por versão do Artifact (511),
+        # a 1ª imagem serve de miniatura quando já é leve (≤ 800 px de largura ou ≤ 120 KB).
+        r["media"] = media
+        first = r["src_images"][0] if r["src_images"] else None
+        reuse = first and (first["w"] <= THUMB_REUSE_W or
+                           os.path.getsize(os.path.join(ROOT, first["path"])) <= THUMB_REUSE_BYTES)
+        if reuse:
+            r["thumb"], r["thumb_w"], r["thumb_h"] = media[0]["src"], media[0]["w"], media[0]["h"]
+        else:
+            thumb = os.path.join(d, "thumb.webp")
+            if make and first:
+                ffmpeg_img(os.path.join(ROOT, first["path"]), thumb, 640, webp=True, q=72)
+            tw, th = image_size(thumb) if os.path.exists(thumb) else (640, 400)
+            r["thumb"], r["thumb_w"], r["thumb_h"] = rel_d + "/thumb.webp", tw, th
+        r["loop"] = None
+        if r["src_loop"]:
+            if make:
+                shutil.copyfile(os.path.join(ROOT, r["src_loop"]["path"]), os.path.join(d, "loop.webp"))
+            r["loop"] = {"src": rel_d + "/loop.webp", "w": r["src_loop"]["w"], "h": r["src_loop"]["h"],
+                         "dur": r["src_loop"]["dur"]}
+        r["image"] = r["image"] or (r["src_images"][0]["path"] if r["src_images"] else "")
+        r.pop("src_images", None)
+        r.pop("src_loop", None)
+
+
+CAT_TAGS = {"navegação": ["tab bar", "sidebar", "⌘K", "bottom sheet"], "dados": ["dashboard", "gráfico", "kanban"],
+            "formulário": ["formulário", "login", "botão"], "feedback": ["toast", "loader", "micro-interação"],
+            "motion": ["motion", "micro-interação", "drag-and-drop", "loader"], "layout": ["landing", "dashboard"],
+            "confiança": ["landing", "formulário"], "conteúdo": ["IA", "tipografia"]}
+
+
+def related_refs(item, refs, cited, n=6):
+    seg = item["segment"]
+    words = norm_words(" ".join([item["name"], item.get("when", ""), item.get("description", ""),
+                                 item.get("category", ""), " ".join(item.get("screens", []))]))
+    want = set(CAT_TAGS.get(item.get("category"), []))
+    scored = []
+    for r in refs:
+        if r["code"] in cited:
+            continue
+        sc = 0.0
+        if seg != "GER" and seg in r["segments"]:
+            sc += 4
+        elif seg != "GER":
+            sc -= 1
+        sc += 1.2 * len(set(item.get("screens", [])) & set(r["screens"]))
+        sc += 0.4 * len(set(item.get("platforms", [])) & set(r["platforms"]))
+        tags = set(r["lib_tags"])
+        sc += 1.0 * len(want & tags)
+        sc += 0.6 * sum(1 for t in tags if t.lower() in words)
+        if r["kind"] in ("reel", "carrossel", "print", "galeria"):
+            sc += 0.5
+        if sc >= 3:
+            scored.append((sc, r["date_added"] or "", r["code"]))
+    scored.sort(key=lambda x: x[1], reverse=True)   # mais novas primeiro no empate
+    scored.sort(key=lambda x: -x[0])
+    return [c for _, _, c in scored[:n]]
+
+
+def norm_words(t):
+    return t.lower()
+
+
 # ---------------------------------------------------------------- main
 def main():
     make_thumbs = "--no-thumbs" not in sys.argv
     templates = parse_templates()
     components = parse_components()
-    references = parse_references(make_thumbs)
+    skill_refs = parse_references(False)
+    lib = load_library()
+    references = merge_references(lib, skill_refs)
+    for r in references:
+        r["screens"] = infer_screens(" ".join([r["name"], r["what"], r["caption"], " ".join(r["lib_tags"])]))
+    references.sort(key=lambda r: (r["date_added"] is None, r["date_added"] or "", r["id_post"]))
+    for i, r in enumerate(references, 1):
+        r["code"] = "REF-%04d" % i
+    build_media(references, make_thumbs)
 
     ref_by_file = {}
     for r in references:
-        for n in [r["file"]] + r["aliases"]:
-            ref_by_file[n] = r["code"]
+        for n in [r["id_post"]] + r["aliases"]:
+            ref_by_file.setdefault(n, r["code"])
+            ref_by_file.setdefault(n.rsplit(".", 1)[0], r["code"])
+
+    def resolve(names):
+        out = []
+        for n in names:
+            c = ref_by_file.get(n) or ref_by_file.get(n.rsplit(".", 1)[0]) or ref_by_file.get(post_id_of(n) or "\0")
+            if c and c not in out:
+                out.append(c)
+        return out
     for t in templates:
-        t["ref_codes"] = [ref_by_file[i] for i in t["images"] if i in ref_by_file]
+        t["ref_codes"] = resolve(t["images"])
     for c in components:
-        c["ref_codes"] = [ref_by_file[i] for i in c["ref_images"] if i in ref_by_file]
+        c["ref_codes"] = resolve(c["ref_images"])
+    # citações nas skills por ID de post (sem .jpg), dentro do texto do template/componente
+    for coll in (templates, components):
+        for it in coll:
+            it["ref_related"] = related_refs(it, references, set(it["ref_codes"]))
 
     # tags
     for t in templates:
@@ -795,11 +1091,18 @@ def main():
     for c in components:
         c["tags"] = sorted(set([c["segment"], "componente", c["category"]] + c["platforms"] + c["screens"]))
     for r in references:
-        tg = set(r["segments"] + r["platforms"] + r["screens"] + r["skills"] + ["referência"])
+        tg = set(r["segments"] + r["platforms"] + r["screens"] + r["skills"] + r["lib_tags"] + ["referência", KIND_LABEL.get(r["kind"], r["kind"]).lower()])
         if r["author"]:
             tg.add(r["author"])
         tg.update(hexes(r["what"]))
         r["tags"] = sorted(tg)
+    cited_by = {}
+    for it in templates + components:
+        for c in it["ref_codes"]:
+            cited_by.setdefault(c, []).append(it["code"])
+    for r in references:
+        r["cited_by"] = cited_by.get(r["code"], [])
+        r.pop("lib_tags", None)
 
     segs = []
     for code, name, skill in SEGMENTS:
@@ -829,16 +1132,20 @@ def main():
         json.dump(data, f, ensure_ascii=False, indent=1)
         f.write("\n")
 
-    thumbs = [os.path.join(THUMBS, f) for f in os.listdir(THUMBS)] if os.path.isdir(THUMBS) else []
-    size = sum(os.path.getsize(p) for p in thumbs)
+    nfiles, size = 0, 0
+    for dp, _, fs in os.walk(MEDIA):
+        for f in fs:
+            nfiles += 1
+            size += os.path.getsize(os.path.join(dp, f))
+    from collections import Counter
     nodate = sum(1 for r in references if not r["date_added"])
     print("templates:   %d" % len(templates))
     print("componentes: %d" % len(components))
-    print("referências: %d (sem data: %d)" % (len(references), nodate))
-    print("miniaturas:  %d (%.1f KB)" % (len(thumbs), size / 1024))
+    print("referências: %d (sem data: %d) por tipo: %s" % (len(references), nodate, dict(Counter(r["kind"] for r in references))))
+    print("media:       %d arquivos (%.1f MB)" % (nfiles, size / 1048576))
     print("json:        %s (%.1f KB)" % (rel(out), os.path.getsize(out) / 1024))
-    for s in segs:
-        print("  %s %-14s %s" % (s["code"], s["name"], s["counts"]))
+    for s_ in segs:
+        print("  %s %-14s %s" % (s_["code"], s_["name"], s_["counts"]))
 
 
 if __name__ == "__main__":

@@ -4,7 +4,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Akshar:wght@400;600&display=swap">
 <style>
-/* Layout: ferramenta em 3 colunas (filtros · vitrine · kit); topo fixo com busca; no celular, filtros e kit viram folhas. */
+/* Layout: ferramenta em 3 colunas (filtros · vitrine · kit); topo fixo com busca; no celular, filtros e kit viram folhas.
+   Abertura com as inspirações mais recentes (imagens reais); referências em mosaico; lightbox em tela cheia. */
 :root {
   --bg: #F8F9FA;
   --panel: #FFFFFF;
@@ -31,6 +32,15 @@
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
   --r: 8px;
   --head-h: 60px;
+  --lb-bg: #0E0F11;
+  --lb-ink: #F1F2F4;
+  --lb-ink-2: #B4B8BF;
+  --on-media: #FFFFFF;
+  --media-shade: rgba(10, 11, 13, .72);
+  --press: .95;
+  --t-press: 160ms;
+  --t-hover: 160ms;
+  --ease: cubic-bezier(.2, .7, .2, 1);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -126,7 +136,6 @@ main { min-width: 0; }
 .activeq button { border: 0; background: none; color: inherit; font-weight: 700; padding: 0 6px; }
 
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
-.grid.refs { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
 .card { background: var(--panel); border: 1px solid var(--line-2); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; position: relative; min-width: 0; }
 .card:hover { border-color: var(--line); box-shadow: var(--shadow); }
 .card.inkit { border-color: var(--mark); box-shadow: 0 0 0 1px var(--mark); }
@@ -218,6 +227,102 @@ main { min-width: 0; }
 .modal-f { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; padding: 12px 20px 16px; border-top: 1px solid var(--line-2); }
 .copied { color: var(--ink-2); font-size: 13px; }
 .toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(24px + env(safe-area-inset-bottom, 0px)); background: var(--ink); color: var(--panel); padding: 10px 16px; border-radius: 8px; z-index: 90; font-weight: 500; max-width: calc(100% - 32px); }
+
+
+/* ---------- micro-interações (press 0.95 / 160 ms; hover sutil) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .btn, .add, .chip, .tab, .segbtn, .kit-btn, .xbtn, .seg-ctl button, .lb-nav, .t-ref, .m-media, .insp-tile, .refmini button {
+    transition: transform var(--t-press) var(--ease), background-color var(--t-hover) linear, box-shadow var(--t-hover) linear, border-color var(--t-hover) linear; }
+  .btn:active, .add:active, .chip:active, .tab:active, .segbtn:active, .kit-btn:active, .xbtn:active, .seg-ctl button:active, .lb-nav:active, .t-ref:active { transform: scale(var(--press)); }
+  .m-media:active, .insp-tile:active, .refmini button:active { transform: scale(.98); }
+  .card, .mcard { transition: transform var(--t-hover) var(--ease), box-shadow var(--t-hover) linear, border-color var(--t-hover) linear; }
+  .card:hover, .mcard:hover { transform: translateY(-2px); }
+  .m-media img, .insp-tile img { transition: transform .4s var(--ease); }
+  .m-media:hover img, .insp-tile:hover img { transform: scale(1.02); }
+  .insp.enter .insp-tile { animation: tileIn .42s var(--ease) both; animation-delay: calc(var(--i, 0) * 45ms); }
+  .lb:not([hidden]) .lb-fig img { animation: lbIn .2s var(--ease) both; }
+}
+@keyframes tileIn { from { opacity: .001; transform: translateY(10px); } }
+@keyframes lbIn { from { opacity: .4; } }
+
+/* ---------- inspirações recentes ---------- */
+.insp { margin: 0 0 26px; }
+.insp-h { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 8px 16px; margin-bottom: 12px; }
+.insp-h h2 { margin: 0; font: 800 clamp(24px, 3vw, 34px)/1.05 var(--font-display); letter-spacing: -.03em; }
+.insp-h p { margin: 4px 0 0; color: var(--ink-2); max-width: 60ch; }
+.insp-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 172px; gap: 10px; }
+.insp-tile { position: relative; display: block; border: 0; padding: 0; border-radius: 14px; overflow: hidden; background: var(--sunk); cursor: pointer; text-align: left; color: var(--on-media); min-width: 0; }
+.insp-tile:first-child { grid-column: span 2; grid-row: span 2; }
+.insp-tile:nth-child(n+6) { display: none; }
+.insp-tile img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.insp-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 12px 10px; background: linear-gradient(to top, var(--media-shade), transparent); display: grid; gap: 2px; }
+.insp-cap b { font: 600 14px/1.25 var(--font-display); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.insp-tile:first-child .insp-cap b { font-size: 19px; white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.insp-cap span { font-size: 12px; opacity: .92; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.badge { position: absolute; top: 8px; left: 8px; display: inline-flex; align-items: center; gap: 5px; background: var(--media-shade); color: var(--on-media); font: 600 11px/1 var(--font-text); padding: 5px 8px; border-radius: 10px; letter-spacing: .01em; }
+.badge.reel::before { content: ""; width: 0; height: 0; border-left: 7px solid currentColor; border-top: 4.5px solid transparent; border-bottom: 4.5px solid transparent; }
+.badge .mono { font-size: 10.5px; opacity: .9; }
+
+/* ---------- mosaico de referências ---------- */
+/* masonry em colunas distribuídas por JS (mais curta primeiro): a ordem de leitura segue as linhas, mais novas no topo */
+.grid.refs { display: flex; gap: 14px; align-items: flex-start; }
+.grid.refs > .state { flex: 1; }
+.mcol { flex: 1 1 0; min-width: 0; }
+.mcard { break-inside: avoid; margin: 0 0 14px; background: var(--panel); border: 1px solid var(--line-2); border-radius: 14px; overflow: hidden; display: block; position: relative; }
+.mcard:hover { border-color: var(--line); box-shadow: var(--shadow); }
+.mcard.inkit { border-color: var(--mark); box-shadow: 0 0 0 1px var(--mark); }
+.m-media { display: block; width: 100%; border: 0; padding: 0; background: var(--sunk); cursor: zoom-in; position: relative; overflow: hidden; }
+.m-media img { width: 100%; height: auto; display: block; }
+.m-media.tall img { aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; }
+.m-b { padding: 10px 12px 12px; display: grid; gap: 4px; }
+.m-meta { display: flex; align-items: center; gap: 4px 8px; font-size: 12px; color: var(--ink-2); flex-wrap: wrap; min-height: 34px; }
+.m-meta .add { margin-left: auto; }
+.mcard h3 { margin: 0; font: 600 14.5px/1.3 var(--font-display); letter-spacing: -.005em; }
+.mcard h3 button { all: unset; cursor: pointer; }
+.mcard h3 button:focus-visible { outline: 2px solid var(--action); outline-offset: 2px; border-radius: 3px; }
+.m-by { font-size: 12.5px; color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ---------- tira de referências nos templates ---------- */
+.t-refs { display: grid; gap: 6px; margin-top: 4px; }
+.t-refs-l { font: 600 10.5px/1 var(--font-text); letter-spacing: .07em; text-transform: uppercase; color: var(--ink-2); }
+.t-refs-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.t-ref { border: 1px solid var(--line-2); padding: 0; border-radius: 8px; overflow: hidden; background: var(--sunk); aspect-ratio: 1 / 1; position: relative; cursor: zoom-in; min-width: 0; }
+.t-ref img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.t-ref .badge { top: 4px; left: 4px; padding: 3px 5px; font-size: 10px; }
+.gal { columns: 3 150px; column-gap: 10px; }
+.gal button { break-inside: avoid; display: block; width: 100%; margin: 0 0 10px; border: 1px solid var(--line-2); background: var(--panel); border-radius: 10px; padding: 0; overflow: hidden; text-align: left; cursor: zoom-in; position: relative; }
+.gal img { width: 100%; height: auto; display: block; }
+.gal span.gcap { display: block; padding: 6px 8px; font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ---------- lightbox ---------- */
+.lb { position: fixed; inset: 0; z-index: 80; background: var(--lb-bg); color: var(--lb-ink); display: grid; grid-template-columns: minmax(0, 1fr) 360px; grid-template-rows: minmax(0, 1fr);
+  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px); }
+.lb-stage { position: relative; min-width: 0; min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; }
+.lb-fig { margin: 0; min-height: 0; overflow: hidden; display: grid; place-items: center; padding: 20px 72px 8px; position: relative; }
+.lb-fig img { position: absolute; left: 72px; top: 20px; width: calc(100% - 144px); height: calc(100% - 28px); object-fit: contain; display: block; }
+.lb-fig .badge { top: 28px; left: 80px; }
+.lb-nav { position: absolute; top: 50%; translate: 0 -50%; width: 48px; height: 48px; border-radius: 24px; border: 1px solid rgba(255,255,255,.22); background: rgba(255,255,255,.08); color: var(--lb-ink); font-size: 26px; line-height: 1; display: grid; place-items: center; z-index: 2; }
+.lb-nav:hover { background: rgba(255,255,255,.16); }
+.lb-nav.prev { left: 14px; }
+.lb-nav.next { right: 14px; }
+.lb-dots { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; padding: 8px 16px 16px; }
+.lb-dots button { width: 52px; height: 52px; border-radius: 8px; border: 2px solid transparent; padding: 0; overflow: hidden; background: rgba(255,255,255,.08); opacity: .6; position: relative; }
+.lb-dots button img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.lb-dots button[aria-current="true"] { border-color: var(--lb-ink); opacity: 1; }
+.lb-dots button:hover { opacity: 1; }
+.lb-dots .lp { position: absolute; inset: auto 2px 2px auto; font: 700 9px/1 var(--font-text); background: var(--media-shade); color: var(--on-media); padding: 2px 3px; border-radius: 4px; }
+.lb-info { background: var(--panel); color: var(--ink); overflow: auto; padding: 16px 18px 20px; display: grid; gap: 12px; align-content: start; border-left: 1px solid var(--line); }
+.lb-top { display: flex; align-items: center; gap: 8px; }
+.lb-top .xbtn { margin-left: auto; }
+.lb-info h2 { margin: 0; font: 700 22px/1.15 var(--font-display); letter-spacing: -.02em; text-wrap: balance; }
+.lb-by { margin: 0; color: var(--ink-2); font-size: 13px; }
+.lb-by strong { color: var(--ink); }
+.lb-cap { margin: 0; font-size: 13.5px; white-space: pre-line; max-height: 9.5em; overflow: auto; }
+.lb-acts { display: flex; gap: 8px; flex-wrap: wrap; }
+a.btn { text-decoration: none; color: var(--ink); }
+.lb-info .kv { grid-template-columns: 92px minmax(0, 1fr); font-size: 13px; }
+.lb-refnav { display: flex; gap: 8px; flex-wrap: wrap; }
+.lb-hint { color: var(--ink-2); font-size: 12px; margin: 0; }
 
 /* ---------- mockups (em; o contêiner define o tamanho) ---------- */
 .pv { display: flex; gap: .9em; align-items: flex-start; font-size: 6px; }
@@ -314,11 +419,13 @@ main { min-width: 0; }
 }
 @keyframes pvIn { from { opacity: .001; transform: translateY(6px); } }
 @keyframes drIn { from { transform: translateX(24px); opacity: .6; } }
-@media (prefers-reduced-motion: reduce) { .skel { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .skel { animation: none; } .badge.reel::before { display: none; } }
 
 /* ---------- responsivo ---------- */
 @media (max-width: 1180px) {
   .shell { grid-template-columns: 216px minmax(0, 1fr); }
+  .insp-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .insp-tile:nth-child(n+4) { display: none; }
   .kit { position: fixed; inset: auto 0 0 0; top: auto; z-index: 65; max-height: 82vh; border-radius: 16px 16px 0 0; border: 0; box-shadow: var(--shadow);
     padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px)); }
   .kit:not(.open) { display: none; }
@@ -340,9 +447,24 @@ main { min-width: 0; }
   .search input { padding-right: 14px; }
   .top-in { gap: 10px; }
   .grid { grid-template-columns: minmax(0, 1fr); }
-  .grid.refs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .grid.refs .card-b { padding: 10px; }
-  .grid.refs .card h3 { font-size: 13.5px; }
+  .grid.refs { gap: 10px; }
+  .mcard { margin-bottom: 10px; }
+  .m-b { padding: 8px 10px 10px; }
+  .mcard h3 { font-size: 13.5px; }
+  .m-meta .add { width: 30px; height: 30px; }
+  .insp-grid { display: grid; grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 74%; grid-template-rows: 300px; grid-auto-rows: auto; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; padding-bottom: 4px; }
+  .insp-tile, .insp-tile:first-child, .insp-tile:nth-child(n) { display: block; grid-column: auto; grid-row: auto; scroll-snap-align: start; }
+  .lb { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; }
+  .lb-fig { padding: 12px 8px 4px; }
+  .lb-fig img { left: 8px; top: 12px; width: calc(100% - 16px); height: calc(100% - 16px); }
+  .lb-fig .badge { top: 18px; left: 16px; }
+  .lb-nav { width: 40px; height: 40px; font-size: 22px; background: var(--media-shade); }
+  .lb-nav.prev { left: 6px; }
+  .lb-nav.next { right: 6px; }
+  .lb-dots { padding: 4px 8px 8px; }
+  .lb-dots button { width: 40px; height: 40px; }
+  .lb-info { max-height: 46vh; border-left: 0; border-top: 1px solid var(--line); border-radius: 14px 14px 0 0; padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px)); }
+  .lb-info h2 { font-size: 19px; }
   .kv { grid-template-columns: minmax(0, 1fr); }
   .kv dt { margin-top: 6px; }
   .drawer-h h2 { font-size: 22px; }
@@ -380,6 +502,11 @@ main { min-width: 0; }
       <h2>Tipo de tela</h2>
       <div class="chips" id="screenChips"></div>
     </div>
+    <div id="kindBox">
+      <h2>Formato</h2>
+      <div class="chips" id="kindChips"></div>
+      <p class="hint">Vale para a aba Referências.</p>
+    </div>
     <div id="catBox">
       <h2>Categoria</h2>
       <div class="chips" id="catChips"></div>
@@ -389,6 +516,16 @@ main { min-width: 0; }
   </aside>
 
   <main>
+    <section class="insp" id="insp" aria-labelledby="inspTitle" hidden>
+      <div class="insp-h">
+        <div>
+          <h2 id="inspTitle">Inspirações recentes</h2>
+          <p id="inspSub">As últimas referências que você enviou, com autor e data de envio.</p>
+        </div>
+        <button class="btn sm" type="button" data-act="tab-references">Ver todas as referências</button>
+      </div>
+      <div class="insp-grid" id="inspGrid"></div>
+    </section>
     <div class="showhead">
       <div>
         <h1 id="showTitle">Templates</h1>
@@ -482,6 +619,37 @@ main { min-width: 0; }
     </div>
   </div>
 </div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-labelledby="lbTitle" hidden>
+  <div class="lb-stage">
+    <figure class="lb-fig" id="lbFig">
+      <img id="lbImg" alt="" decoding="async">
+      <span class="badge" id="lbBadge" hidden></span>
+    </figure>
+    <button class="lb-nav prev" id="lbPrev" type="button" aria-label="Imagem anterior">‹</button>
+    <button class="lb-nav next" id="lbNext" type="button" aria-label="Próxima imagem">›</button>
+    <div class="lb-dots" id="lbDots" role="group" aria-label="Imagens desta referência"></div>
+  </div>
+  <aside class="lb-info" aria-label="Sobre a referência">
+    <div class="lb-top">
+      <span class="code" id="lbCode"></span>
+      <span class="tool-l" id="lbCount"></span>
+      <button class="xbtn" id="lbClose" type="button" aria-label="Fechar (Esc)">×</button>
+    </div>
+    <h2 id="lbTitle"></h2>
+    <p class="lb-by" id="lbBy"></p>
+    <p class="lb-cap" id="lbCap"></p>
+    <dl class="kv" id="lbKv"></dl>
+    <div class="lb-acts">
+      <button class="btn primary" id="lbAdd" type="button">Adicionar ao kit</button>
+      <a class="btn" id="lbLink" href="#" target="_blank" rel="noopener">Abrir post</a>
+    </div>
+    <div class="lb-refnav">
+      <button class="btn sm" id="lbPrevRef" type="button">← Referência anterior</button>
+      <button class="btn sm" id="lbNextRef" type="button">Próxima referência →</button>
+    </div>
+    <p class="lb-hint">← → imagens · ↑ ↓ referências · Esc fecha</p>
+  </aside>
+</div>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
 <script>
@@ -495,8 +663,11 @@ main { min-width: 0; }
   var TAB_INFO = {
     templates: ["Templates", "Direções visuais por segmento. As prévias são mockups desenhados a partir dos tokens de cada template."],
     components: ["Componentes", "Peças avulsas com regras de UI/UX. Misture com um template ou use sozinhas."],
-    references: ["Referências", "Imagens das skills, em miniatura, com autor e link da fonte. Uso pessoal de referência."]
+    references: ["Referências", "O que você enviou: reels (loop e frames), carrosséis, prints e galerias, com autor, data de envio e link do post. Clique para abrir em tela cheia."]
   };
+  var KINDS = [["reel", "Reels"], ["carrossel", "Carrosséis"], ["print", "Prints"], ["galeria", "Galerias"], ["skill", "Imagens das skills"]];
+  var KIND_ONE = { reel: "Reel", carrossel: "Carrossel", print: "Print", galeria: "Galeria", skill: "Skill" };
+  var RM = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : { matches: false };
   var SAMPLE = {
     FIN: { app: "Conta", lbl: "Saldo disponível", val: "R$ 12.480,32", cta: "Pix", rows: [["Pix recebido", "+R$ 250,00"], ["Mercado Azul", "−R$ 86,40"], ["Rendimento", "+R$ 12,07"]], kpi: [["Saldo", "R$ 12,4 mil", "+2,1%"], ["Entradas", "R$ 8,2 mil", "+5%"], ["Saídas", "R$ 5,9 mil", "−3%"]], tb: [["Pix · Ana", "Concluída", "R$ 250,00"], ["Boleto luz", "Pendente", "R$ 184,90"], ["TED · Loja", "Concluída", "R$ 1.200,00"]], h1: "Sua conta, sem tarifa escondida", sub: "CET e taxas na mesma tela do botão.", band: ["Regulado pelo BC", "Suporte 24/7", "R$ 2 bi movimentados"] },
     CRM: { app: "Pipeline", lbl: "Em negociação", val: "R$ 184 mil", cta: "Novo", rows: [["Acme · Proposta", "R$ 42 mil"], ["Lumen · Demo", "R$ 18 mil"], ["Norte · Contrato", "R$ 65 mil"]], kpi: [["Pipeline", "R$ 184 mil", "+12%"], ["Ganhos", "R$ 61 mil", "+4%"], ["Win rate", "28%", "+2 pp"]], tb: [["Acme Ltda", "Proposta", "R$ 42.000"], ["Lumen SA", "Demo", "R$ 18.500"], ["Norte Co", "Contrato", "R$ 65.000"]], h1: "Cada cliente, uma linha do tempo", sub: "Pipeline com soma por etapa e histórico auditável.", band: ["Visões salvas", "Atalhos ⌘K", "LGPD no contato"] },
@@ -507,16 +678,16 @@ main { min-width: 0; }
     GER: { app: "Painel", lbl: "Resumo", val: "1.284", cta: "Ação", rows: [["Item A", "12"], ["Item B", "8"], ["Item C", "5"]], kpi: [["Ativos", "1.284", "+5%"], ["Novos", "86", "+12"], ["Taxa", "3,2%", "+0,4"]], tb: [["Registro 1", "Ativo", "12"], ["Registro 2", "Pausado", "8"], ["Registro 3", "Ativo", "5"]], h1: "Uma mensagem por dobra", sub: "Direção visual neutra.", band: ["Seção 1", "Seção 2", "Seção 3"] }
   };
 
-  var D = null, ALL = {}, segRules = {}, segTpl = {};
-  var S = { tab: "templates", seg: "", screen: "", cat: "", plats: ["mobile", "desktop", "website"], sort: "recent", q: "", kit: { tpl: null, cmps: [], refs: [] } };
+  var D = null, ALL = {}, segRules = {}, segTpl = {}, LIST = [], INSP = [], inspShown = false;
+  var S = { tab: "templates", seg: "", screen: "", cat: "", kind: "", plats: ["mobile", "desktop", "website"], sort: "recent", q: "", kit: { tpl: null, cmps: [], refs: [] } };
   var drawerReturn = null, drawerPv = null;
 
   function $(id) { return document.getElementById(id); }
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function md(s) { return esc(s).replace(/`([^`]+)`/g, "<code>$1</code>"); }
   function norm(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
-  function load() { try { var v = JSON.parse(localStorage.getItem(LS_KEY) || "null"); if (v && typeof v === "object") { ["tab", "seg", "screen", "cat", "sort"].forEach(function (k) { if (typeof v[k] === "string") S[k] = v[k]; }); if (Array.isArray(v.plats) && v.plats.length) S.plats = v.plats; if (v.kit && typeof v.kit === "object") S.kit = { tpl: v.kit.tpl || null, cmps: v.kit.cmps || [], refs: v.kit.refs || [] }; } } catch (e) { } }
-  function save() { try { localStorage.setItem(LS_KEY, JSON.stringify({ tab: S.tab, seg: S.seg, screen: S.screen, cat: S.cat, plats: S.plats, sort: S.sort, kit: S.kit })); } catch (e) { } }
+  function load() { try { var v = JSON.parse(localStorage.getItem(LS_KEY) || "null"); if (v && typeof v === "object") { ["tab", "seg", "screen", "cat", "kind", "sort"].forEach(function (k) { if (typeof v[k] === "string") S[k] = v[k]; }); if (Array.isArray(v.plats) && v.plats.length) S.plats = v.plats; if (v.kit && typeof v.kit === "object") S.kit = { tpl: v.kit.tpl || null, cmps: v.kit.cmps || [], refs: v.kit.refs || [] }; } } catch (e) { } }
+  function save() { try { localStorage.setItem(LS_KEY, JSON.stringify({ tab: S.tab, seg: S.seg, screen: S.screen, cat: S.cat, kind: S.kind, plats: S.plats, sort: S.sort, kit: S.kit })); } catch (e) { } }
   var toastT = null;
   function toast(msg) { var t = $("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(function () { t.hidden = true; }, 2200); }
   function copyText(text, onOk, onFail) {
@@ -528,6 +699,18 @@ main { min-width: 0; }
     } catch (e) { }
     onFail();
   }
+  var MESES = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
+  function fmtDate(iso) { if (!iso) return "sem data"; var d = new Date(iso); if (isNaN(d)) return String(iso).slice(0, 10); return d.getDate() + " " + MESES[d.getMonth()] + " " + d.getFullYear(); }
+  function fmtDur(s) { s = Math.round(s || 0); return Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2); }
+  function badge(r, small) {
+    if (r.kind === "reel") return '<span class="badge reel">Reel' + (r.duration ? ' <span class="mono">' + fmtDur(r.duration) + '</span>' : "") + '</span>';
+    if ((r.media || []).length > 1) return '<span class="badge">' + esc(KIND_ONE[r.kind] || "") + ' <span class="mono">' + r.media.length + '</span></span>';
+    return small ? "" : '<span class="badge">' + esc(KIND_ONE[r.kind] || "") + '</span>';
+  }
+  function thumbImg(r, attrs) {
+    return '<img src="' + esc(r.thumb) + '" alt="' + esc(r.name) + '" loading="lazy" decoding="async" width="' + r.thumb_w + '" height="' + r.thumb_h + '"' + (r.loop ? ' data-loop="' + esc(r.loop.src) + '" data-still="' + esc(r.thumb) + '"' : "") + (attrs || "") + '>';
+  }
+  function refsOf(it) { return (it.ref_codes || []).concat(it.ref_related || []).filter(function (c) { return ALL[c]; }); }
   function segName(c) { var s = (D.segments || []).find(function (x) { return x.code === c; }); return s ? s.name : c; }
   function skillOf(c) { var s = (D.segments || []).find(function (x) { return x.code === c; }); return s && s.skill; }
 
@@ -585,7 +768,7 @@ main { min-width: 0; }
   function buildIndex() {
     ["templates", "components", "references"].forEach(function (k) {
       D[k].forEach(function (it) {
-        var parts = [it.code, it.name, it.segment, segName(it.segment), (it.segments || []).join(" "), (it.platforms || []).join(" "), it.category, it.author, (it.tags || []).join(" "), it.when, it.description, it.what, it.file];
+        var parts = [it.code, it.name, it.segment, segName(it.segment), (it.segments || []).join(" "), (it.platforms || []).join(" "), it.category, it.author, it.author_name, (it.tags || []).join(" "), it.when, it.description, it.what, it.caption, it.id_post, KIND_ONE[it.kind], (it.aliases || []).join(" ")];
         if (it.tokens) parts.push(it.tokens.palette.join(" "), it.tokens.fonts);
         it._s = norm(parts.join(" "));
         ALL[it.code] = it;
@@ -603,6 +786,7 @@ main { min-width: 0; }
     if (!opts.noSeg && S.seg) { if (kind === "references" ? (it.segments || []).indexOf(S.seg) < 0 : it.segment !== S.seg) return false; }
     if (S.screen && (it.screens || []).indexOf(S.screen) < 0) return false;
     if (kind === "components" && S.cat && it.category !== S.cat) return false;
+    if (kind === "references" && S.kind && it.kind !== S.kind) return false;
     if (kind !== "templates" && it.platforms && it.platforms.length && !it.platforms.some(function (p) { return S.plats.indexOf(p) >= 0; })) return false;
     return match(it, S.q);
   }
@@ -627,18 +811,57 @@ main { min-width: 0; }
     var plats = S.plats;
     return '<article class="card' + (inKit(t.code) ? " inkit" : "") + '"><button class="card-pv" type="button" data-open="' + t.code + '" tabindex="-1" aria-hidden="true">' + tplPreview(t, plats) + '</button>' +
       '<div class="card-b"><div class="card-meta"><span class="code">' + t.code + '</span><span>' + esc(segName(t.segment)) + '</span>' + addBtn(t) + '</div><h3><button type="button" data-open="' + t.code + '">' + esc(t.name) + '</button></h3>' +
-      '<div class="sub">' + md(t.when) + '</div>' + strip(t.tokens.palette) + '</div></article>';
+      '<div class="sub">' + md(t.when) + '</div>' + strip(t.tokens.palette) + refStrip(t) + '</div></article>';
+  }
+  function refStrip(it) {
+    var codes = refsOf(it).slice(0, 3);
+    if (!codes.length) return "";
+    return '<div class="t-refs"><span class="t-refs-l">' + ((it.ref_codes || []).length ? "Inspirado em" : "Referências parecidas") + '</span><div class="t-refs-row">' + codes.map(function (c) {
+      var r = ALL[c];
+      return '<button class="t-ref" type="button" data-lb="' + c + '" data-ctx="' + esc(it.code) + '" aria-label="Ver ' + esc(c + " " + r.name + " " + (r.author || "")) + '">' + thumbImg(r) + (r.kind === "reel" ? '<span class="badge reel"></span>' : "") + '</button>';
+    }).join("") + '</div></div>';
   }
   function cardCmp(c) {
     var t = segTpl[c.segment];
     return '<article class="card' + (inKit(c.code) ? " inkit" : "") + '"><button class="card-pv" type="button" data-open="' + c.code + '" tabindex="-1" aria-hidden="true">' + cmpPreview(c) + '</button>' +
       '<div class="card-b"><div class="card-meta"><span class="code">' + c.code + '</span><span>' + esc(c.category) + '</span><span>· ' + c.platforms.map(function (p) { return PLAT_NAMES[p]; }).join(", ") + '</span>' + addBtn(c) + '</div><h3><button type="button" data-open="' + c.code + '">' + esc(c.name) + '</button></h3>' +
-      '<div class="sub">' + md(c.description) + '</div>' + strip(t ? [t.preview.bg, t.preview.surface, t.preview.text, t.preview.action, t.preview.accent2].filter(Boolean) : []) + '</div></article>';
+      '<div class="sub">' + md(c.description) + '</div>' + strip(t ? [t.preview.bg, t.preview.surface, t.preview.text, t.preview.action, t.preview.accent2].filter(Boolean) : []) + refStrip(c) + '</div></article>';
   }
   function cardRef(r) {
-    return '<article class="card' + (inKit(r.code) ? " inkit" : "") + '"><button class="card-pv ref" type="button" data-open="' + r.code + '" aria-label="Abrir ' + esc(r.code + " " + r.name) + '"><img src="' + esc(r.thumb) + '" alt="' + esc(r.name) + '" loading="lazy" decoding="async" width="' + r.thumb_w + '" height="' + r.thumb_h + '"></button>' +
-      '<div class="card-b"><div class="card-meta"><span class="code">' + r.code + '</span><span>' + esc(r.segments.join(" · ")) + '</span>' + addBtn(r) + '</div><h3><button type="button" data-open="' + r.code + '">' + esc(r.name) + '</button></h3>' +
-      '<div class="reflink">' + esc(r.author || "autor não informado") + (r.url ? ' · <a href="' + esc(r.url) + '" target="_blank" rel="noopener">fonte</a>' : "") + '</div></div>' + addBtn(r) + '</article>';
+    var tall = r.thumb_h > r.thumb_w * 1.5;
+    return '<article class="mcard' + (inKit(r.code) ? " inkit" : "") + '"><button class="m-media' + (tall ? " tall" : "") + '" type="button" data-lb="' + r.code + '" aria-label="Abrir ' + esc(r.code + " " + r.name) + ' em tela cheia">' + thumbImg(r) + badge(r) + '</button>' +
+      '<div class="m-b"><div class="m-meta"><span class="code">' + r.code + '</span><time datetime="' + esc(r.date_added || "") + '">' + esc(fmtDate(r.date_added)) + '</time>' + addBtn(r) + '</div><h3><button type="button" data-lb="' + r.code + '">' + esc(r.name) + '</button></h3>' +
+      '<div class="m-by">' + esc(r.author || "autor não informado") + ' · ' + esc(r.segments.join(" · ")) + '</div></div></article>';
+  }
+  function masonryCols() { var w = $("grid").clientWidth || window.innerWidth; return w < 560 ? 2 : Math.max(2, Math.min(5, Math.floor((w + 14) / 250))); }
+  function masonry(list) {
+    var n = masonryCols(), cols = [], hs = [];
+    for (var i = 0; i < n; i++) { cols.push([]); hs.push(0); }
+    list.forEach(function (r) {
+      var k = hs.indexOf(Math.min.apply(null, hs));
+      cols[k].push(cardRef(r));
+      hs[k] += Math.min(r.thumb_h / r.thumb_w, 1.25) + 0.42;
+    });
+    lastCols = n;
+    return cols.map(function (c) { return '<div class="mcol">' + c.join("") + '</div>'; }).join("");
+  }
+  var lastCols = 0, rsT = null;
+  window.addEventListener("resize", function () { clearTimeout(rsT); rsT = setTimeout(function () { if (D && S.tab === "references" && masonryCols() !== lastCols) render(); }, 150); });
+  function renderInsp() {
+    var box = $("insp");
+    // links que você mandou (data do WhatsApp) primeiro; completa com as demais mais novas
+    var byDate = function (a, b) { return b.date_added.localeCompare(a.date_added) || b.code.localeCompare(a.code); };
+    var dated = D.references.filter(function (r) { return r.kind !== "skill" && r.date_added; });
+    var list = dated.filter(function (r) { return r.date_source === "whatsapp"; }).sort(byDate).slice(0, 7);
+    if (list.length < 7) list = list.concat(dated.filter(function (r) { return list.indexOf(r) < 0; }).sort(byDate).slice(0, 7 - list.length));
+    INSP = list.map(function (r) { return r.code; });
+    box.hidden = !list.length;
+    if (!list.length) return;
+    $("inspGrid").innerHTML = list.map(function (r, i) {
+      return '<button class="insp-tile" type="button" style="--i:' + i + '" data-lb="' + r.code + '" data-ctx="insp" aria-label="' + esc(r.name + ", " + (r.author || "") + ", enviada em " + fmtDate(r.date_added)) + '">' + thumbImg(r, i === 0 ? ' fetchpriority="high"' : "") + badge(r) +
+        '<span class="insp-cap"><b>' + esc(r.name) + '</b><span>' + esc((r.author || "autor não informado") + " · " + fmtDate(r.date_added)) + '</span></span></button>';
+    }).join("");
+    if (!inspShown) { inspShown = true; if (!RM.matches) { box.classList.add("enter"); setTimeout(function () { box.classList.remove("enter"); }, 1200); } }
   }
   function render() {
     if (!D) return;
@@ -649,6 +872,7 @@ main { min-width: 0; }
     });
     var info = TAB_INFO[S.tab];
     var list = sorted(D[S.tab].filter(function (it) { return passFilters(it, S.tab); }));
+    if (S.tab === "references") LIST = list.map(function (r) { return r.code; });
     $("showTitle").innerHTML = esc(S.seg ? info[0] + " " + segName(S.seg) : info[0]) + '<span class="cnt">' + list.length + '</span>';
     $("showSub").textContent = info[1];
     var g = $("grid");
@@ -658,8 +882,8 @@ main { min-width: 0; }
         '</p><div class="acts">' + (S.q ? '<button class="btn" type="button" data-act="clearq">Limpar busca</button>' : "") + '<button class="btn" type="button" data-act="clearf">Limpar filtros</button>' +
         (S.tab !== "references" ? '<button class="btn" type="button" data-act="tab-references">Ver referências</button>' : "") + '</div></div>';
     } else {
-      var f = S.tab === "templates" ? cardTpl : S.tab === "components" ? cardCmp : cardRef;
-      g.innerHTML = list.map(f).join("");
+      if (S.tab === "references") g.innerHTML = masonry(list);
+      else g.innerHTML = list.map(S.tab === "templates" ? cardTpl : cardCmp).join("");
     }
     // filtros
     $("segList").innerHTML = '<button class="segbtn" type="button" id="seg-all" data-seg="" aria-pressed="' + (!S.seg) + '"><span class="sc">—</span>Todos<span class="ct">' + D[S.tab].filter(function (it) { return passFilters(it, S.tab, { noSeg: true }); }).length + '</span></button>' +
@@ -671,11 +895,42 @@ main { min-width: 0; }
     var cats = CATS.filter(function (c) { return D.components.some(function (x) { return x.category === c; }); });
     $("catChips").innerHTML = cats.map(function (c, i) { return '<button class="chip" type="button" id="cat-' + i + '" data-cat="' + c + '" aria-pressed="' + (S.cat === c) + '">' + c + '</button>'; }).join("");
     $("catBox").hidden = S.tab !== "components";
+    $("kindChips").innerHTML = KINDS.filter(function (k) { return D.references.some(function (r) { return r.kind === k[0]; }); }).map(function (k, i) { var n = D.references.filter(function (r) { return r.kind === k[0] && passFilters(r, "references"); }).length; return '<button class="chip" type="button" id="kind-' + i + '" data-kind="' + k[0] + '" aria-pressed="' + (S.kind === k[0]) + '">' + k[1] + ' <span class="mono" style="opacity:.7">' + n + '</span></button>'; }).join("");
+    $("kindBox").hidden = S.tab !== "references";
+    renderInsp();
     document.querySelectorAll("[data-plat]").forEach(function (b) { b.setAttribute("aria-pressed", S.plats.indexOf(b.dataset.plat) >= 0); });
     $("sort").value = S.sort;
     $("activeQ").innerHTML = S.q ? '<span class="activeq">Busca: “' + esc(S.q) + '”<button type="button" data-act="clearq" aria-label="Limpar busca">×</button></span>' : "";
     renderKit();
+    observeLoops();
   }
+
+  /* ---------- loops dos reels: só quando visíveis (ou no hover), pausados fora da tela ---------- */
+  var io = null, playing = [], MAX_PLAY = 6;
+  function playLoop(img, force) {
+    if (RM.matches || !img.dataset.loop || img.dataset.on === "1") return;
+    if (!force && playing.length >= MAX_PLAY) return;
+    img.dataset.on = "1"; playing.push(img);
+    var pre = new Image();
+    pre.onload = function () { if (img.dataset.on === "1") { img.src = img.dataset.loop; img.dataset.loaded = "1"; } };
+    pre.src = img.dataset.loop;
+  }
+  function stopLoop(img) {
+    if (img.dataset.on !== "1") return;
+    img.dataset.on = ""; img.src = img.dataset.still;
+    var i = playing.indexOf(img); if (i >= 0) playing.splice(i, 1);
+  }
+  function observeLoops() {
+    playing = playing.filter(function (im) { return document.body.contains(im); });
+    if (io) io.disconnect();
+    if (RM.matches || !("IntersectionObserver" in window)) return;
+    io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting && e.intersectionRatio >= 0.55) playLoop(e.target); else stopLoop(e.target); });
+    }, { threshold: [0, 0.55] });
+    document.querySelectorAll("#grid img[data-loop], #inspGrid img[data-loop]").forEach(function (im) { io.observe(im); });
+  }
+  document.addEventListener("mouseover", function (e) { var b = e.target.closest(".m-media, .insp-tile, .t-ref, .gal button"); if (!b) return; var im = b.querySelector("img[data-loop]"); if (im) playLoop(im, true); });
+  document.addEventListener("mouseout", function (e) { var b = e.target.closest(".t-ref, .gal button"); if (!b || b.contains(e.relatedTarget)) return; var im = b.querySelector("img[data-loop]"); if (im) stopLoop(im); });
 
   function kitRow(code) {
     var it = ALL[code]; if (!it) return "";
@@ -718,6 +973,7 @@ main { min-width: 0; }
       if (i >= 0) { arr.splice(i, 1); msg = code + " saiu do kit"; } else { arr.push(code); msg = code + " no kit"; }
     }
     save(); refreshKitMarks(); toast(msg);
+    if (!$("lb").hidden) renderLB();
     if (!$("drawer").hidden && $("drawer").dataset.code === code) openDrawer(code, true);
   }
 
@@ -727,7 +983,7 @@ main { min-width: 0; }
       tmp.innerHTML = addBtn(it);
       b.replaceWith(tmp.firstChild);
     });
-    document.querySelectorAll("#grid .card").forEach(function (c) {
+    document.querySelectorAll("#grid .card, #grid .mcard").forEach(function (c) {
       var b = c.querySelector(".add"); if (b) c.classList.toggle("inkit", inKit(b.dataset.add));
     });
     renderKit();
@@ -741,9 +997,14 @@ main { min-width: 0; }
     return '<dl class="kv">' + rows.map(function (x) { return '<dt>' + x[0] + '</dt><dd>' + md(x[1]) + '</dd>'; }).join("") + '</dl>' +
       (anti.length ? '<p style="margin:12px 0 6px;font-weight:600">Anti-padrões</p><ul class="rules">' + anti.map(function (a) { return '<li>' + md(a) + '</li>'; }).join("") + '</ul>' : "");
   }
-  function refMini(codes) {
-    if (!codes || !codes.length) return '<p style="color:var(--ink-2)">Nenhuma imagem própria citada para este item.</p>';
-    return '<div class="refmini">' + codes.map(function (c) { var r = ALL[c]; if (!r) return ""; return '<button type="button" data-open="' + c + '"><img src="' + esc(r.thumb) + '" alt="' + esc(r.name) + '" loading="lazy" width="' + r.thumb_w + '" height="' + r.thumb_h + '"><span><span class="code">' + c + '</span> ' + esc(r.author) + '</span></button>'; }).join("") + '</div>';
+  function refGallery(it) {
+    var cited = (it.ref_codes || []).filter(function (c) { return ALL[c]; }), rel = (it.ref_related || []).filter(function (c) { return ALL[c]; });
+    function gal(codes) {
+      return '<div class="gal">' + codes.map(function (c) { var r = ALL[c]; return '<button type="button" data-lb="' + c + '" data-ctx="' + esc(it.code) + '" aria-label="Ver ' + esc(c + " " + r.name) + '">' + thumbImg(r) + badge(r, true) + '<span class="gcap"><span class="code">' + c + '</span> ' + esc(r.author || r.name) + '</span></button>'; }).join("") + '</div>';
+    }
+    var h = '<div class="dsec"><h3>Referências reais que inspiraram</h3>' + (cited.length ? gal(cited) : '<p style="color:var(--ink-2)">A skill não cita imagem própria para este item.</p>') + '</div>';
+    if (rel.length) h += '<div class="dsec"><h3>Parecidas (segmento e tags)</h3>' + gal(rel) + '</div>';
+    return h;
   }
   function tokensCss(t) {
     var p = t.preview, L = [":root {"];
@@ -758,6 +1019,7 @@ main { min-width: 0; }
   }
   function openDrawer(code, keep) {
     var it = ALL[code]; if (!it) return;
+    if (it.type === "reference") { openLB(code, LIST.indexOf(code) >= 0 ? LIST : [code]); return; }
     if (!keep && $("drawer").hidden) drawerReturn = document.activeElement;
     var dr = $("drawer"); dr.dataset.code = code;
     $("drMeta").innerHTML = '<span class="code' + (inKit(code) ? " marked" : "") + '">' + code + '</span><span>' + esc(it.type === "reference" ? it.segments.join(" · ") : segName(it.segment)) + '</span>' + (inKit(code) ? '<span>· no kit</span>' : "");
@@ -774,12 +1036,12 @@ main { min-width: 0; }
       b += '<div class="dsec"><h3>Tokens</h3><dl class="kv"><dt>Fontes</dt><dd>' + md(it.tokens.fonts) + '</dd><dt>Escala</dt><dd>' + md(it.tokens.scale) + '</dd><dt>Raio / sombra</dt><dd>' + md(it.tokens.radius_shadow) + '</dd><dt>Densidade</dt><dd>' + md(it.tokens.density) + '</dd><dt>Motion</dt><dd>' + md(it.tokens.motion) + '</dd><dt>Quando usar</dt><dd>' + md(it.when) + '</dd><dt>Fontes medidas</dt><dd>' + md(it.sources) + '</dd>' + (it.rules_excerpt ? '<dt>Atenção</dt><dd>' + md(it.rules_excerpt) + '</dd>' : "") + '</dl>' +
         '<p style="margin:10px 0 0"><button class="btn sm" type="button" data-copycss="' + code + '">Copiar tokens CSS</button></p></div>';
       b += '<div class="dsec"><h3>Regras do segmento ' + esc(it.segment) + '</h3>' + listRules(it.segment) + '</div>';
-      b += '<div class="dsec"><h3>Referências que inspiraram</h3>' + refMini(it.ref_codes) + '</div>';
+      b += refGallery(it);
     } else if (it.type === "component") {
       b += '<div class="dsec"><div class="pvbig">' + cmpPreview(it) + '</div><p style="color:var(--ink-2);font-size:12.5px;margin:8px 0 0">Esquema da categoria “' + esc(it.category) + '” nas cores do ' + esc((segTpl[it.segment] || {}).code || "tema neutro") + '.</p></div>';
       b += '<div class="dsec"><h3>Componente</h3><dl class="kv"><dt>Descrição</dt><dd>' + md(it.description) + '</dd>' + (it.anatomy ? '<dt>Anatomia</dt><dd>' + md(it.anatomy) + '</dd>' : "") + (it.states ? '<dt>Estados</dt><dd>' + md(it.states) + '</dd>' : "") + '<dt>Regras</dt><dd>' + md(it.rules) + '</dd><dt>Plataformas</dt><dd>' + it.platforms.map(function (p) { return PLAT_NAMES[p]; }).join(", ") + '</dd><dt>Categoria</dt><dd>' + esc(it.category) + '</dd>' + (it.refs ? '<dt>Fontes</dt><dd>' + md(it.refs) + '</dd>' : "") + '</dl></div>';
       b += '<div class="dsec"><h3>Regras do segmento ' + esc(it.segment) + '</h3>' + listRules(it.segment) + '</div>';
-      b += '<div class="dsec"><h3>Referências</h3>' + refMini(it.ref_codes) + '</div>';
+      b += refGallery(it);
     } else {
       b += '<div class="dsec"><img class="bigimg" src="' + esc(it.thumb) + '" alt="' + esc(it.name) + '" width="' + it.thumb_w + '" height="' + it.thumb_h + '"></div>';
       b += '<div class="dsec"><dl class="kv"><dt>Autor</dt><dd>' + esc(it.author || "não informado") + '</dd><dt>Fonte</dt><dd>' + (it.url ? '<a href="' + esc(it.url) + '" target="_blank" rel="noopener">' + esc(it.url) + '</a>' : "sem link") + '</dd>' + (it.what ? '<dt>O que mostra</dt><dd>' + md(it.what) + '</dd>' : "") + (it.when ? '<dt>Quando abrir</dt><dd>' + md(it.when) + '</dd>' : "") +
@@ -796,6 +1058,79 @@ main { min-width: 0; }
   }
   function closeDrawer() { $("drawer").hidden = true; if ($("modal").hidden && !sheetOpen()) $("scrim").hidden = true; if (drawerReturn && drawerReturn.focus) try { drawerReturn.focus(); } catch (e) { } }
   function sheetOpen() { return $("kit").classList.contains("open") || $("side").classList.contains("open"); }
+
+  /* ---------- lightbox ---------- */
+  var LB = { list: [], i: 0, slide: 0, ret: null };
+  function slidesOf(r) {
+    var sl = [];
+    if (r.loop && !RM.matches) sl.push({ src: r.loop.src, w: r.loop.w, h: r.loop.h, label: "Loop " + fmtDur(r.loop.dur || 4), loop: true });
+    (r.media || []).forEach(function (m, i) { sl.push({ src: m.src, w: m.w, h: m.h, label: r.kind === "reel" ? "Frame " + (i + 1) + (m.t != null ? " · " + fmtDur(m.t) : "") : "Imagem " + (i + 1) }); });
+    if (!sl.length) sl.push({ src: r.thumb, w: r.thumb_w, h: r.thumb_h, label: "Imagem" });
+    return sl;
+  }
+  function ctxList(ctx, code) {
+    if (ctx === "insp") return INSP.slice();
+    if (ctx && ALL[ctx]) return refsOf(ALL[ctx]);
+    return LIST.indexOf(code) >= 0 ? LIST.slice() : [code];
+  }
+  function openLB(code, list) {
+    if ($("lb").hidden) LB.ret = document.activeElement;
+    LB.list = list && list.length ? list : [code];
+    LB.i = Math.max(0, LB.list.indexOf(code)); LB.slide = 0;
+    $("lb").hidden = false; document.documentElement.style.overflow = "hidden";
+    renderLB(); $("lbClose").focus();
+  }
+  function closeLB() {
+    $("lb").hidden = true; $("lbImg").removeAttribute("src"); document.documentElement.style.overflow = "";
+    if (LB.ret && LB.ret.focus && document.body.contains(LB.ret)) try { LB.ret.focus(); } catch (e) { }
+  }
+  function renderLB() {
+    var r = ALL[LB.list[LB.i]]; if (!r) return;
+    var sl = slidesOf(r), cur = sl[Math.min(LB.slide, sl.length - 1)];
+    var img = $("lbImg");
+    img.width = cur.w; img.height = cur.h; img.src = cur.src;
+    img.alt = r.name + " — " + cur.label;
+    var bd = $("lbBadge"); bd.hidden = false; bd.className = "badge" + (r.kind === "reel" ? " reel" : ""); bd.textContent = (r.kind === "reel" ? "Reel · " : (KIND_ONE[r.kind] || "") + " · ") + cur.label;
+    $("lbDots").innerHTML = sl.length > 1 ? sl.map(function (x, i) { return '<button type="button" data-slide="' + i + '" aria-label="' + esc(x.label) + '" aria-current="' + (i === LB.slide) + '"><img src="' + esc(x.loop ? r.thumb : x.src) + '" alt="" loading="lazy" decoding="async" width="52" height="52">' + (x.loop ? '<span class="lp">LOOP</span>' : "") + '</button>'; }).join("") : "";
+    $("lbCode").textContent = r.code; $("lbCode").className = "code" + (inKit(r.code) ? " marked" : "");
+    $("lbCount").textContent = (LB.i + 1) + " de " + LB.list.length + " · imagem " + (LB.slide + 1) + "/" + sl.length;
+    $("lbTitle").textContent = r.name;
+    $("lbBy").innerHTML = '<strong>' + esc(r.author || "autor não informado") + '</strong>' + (r.author_name && r.author_name !== r.author ? " (" + esc(r.author_name) + ")" : "") + ' · enviada em ' + esc(fmtDate(r.date_added)) + (r.date_source && r.date_source !== "whatsapp" ? ' <span title="Sem horário do WhatsApp para este ID: data em que entrou na repo">(data da repo)</span>' : "");
+    $("lbCap").textContent = r.caption || "";
+    $("lbCap").hidden = !r.caption;
+    var kv = [];
+    if (r.what) kv.push(["O que mostra", md(r.what)]);
+    if (r.when) kv.push(["Quando abrir", md(r.when)]);
+    kv.push(["Segmentos", esc(r.segments.map(segName).join(", "))]);
+    kv.push(["Plataformas", esc((r.platforms || []).map(function (p) { return PLAT_NAMES[p]; }).join(", ") || "não informada")]);
+    if (r.date_origin) kv.push(["Publicada", esc(fmtDate(r.date_origin))]);
+    if (r.duration) kv.push(["Duração", esc(fmtDur(r.duration))]);
+    if ((r.cited_by || []).length) kv.push(["Citada em", r.cited_by.map(function (c) { return '<button class="chip" type="button" data-open="' + c + '">' + c + '</button>'; }).join(" ")]);
+    kv.push(["Arquivo", '<code>' + esc(r.image) + '</code>']);
+    $("lbKv").innerHTML = kv.map(function (x) { return '<dt>' + x[0] + '</dt><dd>' + x[1] + '</dd>'; }).join("");
+    var on = inKit(r.code);
+    $("lbAdd").textContent = on ? "Remover do kit" : "Adicionar ao kit"; $("lbAdd").className = "btn" + (on ? "" : " primary"); $("lbAdd").dataset.add = r.code;
+    var a = $("lbLink"); if (r.url) { a.hidden = false; a.href = r.url; a.textContent = /instagram|facebook/.test(r.url) ? "Abrir post" : "Abrir fonte"; } else a.hidden = true;
+    $("lbPrevRef").disabled = LB.i <= 0; $("lbNextRef").disabled = LB.i >= LB.list.length - 1;
+    // pré-carrega a próxima imagem
+    var nx = sl[LB.slide + 1]; if (nx) { var pre = new Image(); pre.src = nx.src; }
+  }
+  function lbStep(d) {
+    var r = ALL[LB.list[LB.i]], n = slidesOf(r).length, s2 = LB.slide + d;
+    if (s2 >= 0 && s2 < n) { LB.slide = s2; renderLB(); return; }
+    var j = LB.i + d; if (j < 0 || j >= LB.list.length) return;
+    LB.i = j; LB.slide = d > 0 ? 0 : slidesOf(ALL[LB.list[j]]).length - 1; renderLB();
+  }
+  function lbRef(d) { var j = LB.i + d; if (j < 0 || j >= LB.list.length) return; LB.i = j; LB.slide = 0; renderLB(); }
+  $("lbClose").addEventListener("click", closeLB);
+  $("lbPrev").addEventListener("click", function () { lbStep(-1); });
+  $("lbNext").addEventListener("click", function () { lbStep(1); });
+  $("lbPrevRef").addEventListener("click", function () { lbRef(-1); });
+  $("lbNextRef").addEventListener("click", function () { lbRef(1); });
+  $("lbFig").addEventListener("click", function (e) { if (e.target === $("lbFig")) closeLB(); });
+  var tx = null;
+  $("lbFig").addEventListener("touchstart", function (e) { tx = e.touches[0].clientX; }, { passive: true });
+  $("lbFig").addEventListener("touchend", function (e) { if (tx == null) return; var dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 40) lbStep(dx < 0 ? 1 : -1); tx = null; });
 
   /* ---------- prompt ---------- */
   function buildPrompt() {
@@ -847,12 +1182,20 @@ main { min-width: 0; }
         L.push("- Detalhe completo: `.claude/skills/" + skillOf(c.segment) + "/references/componentes.md` (" + c.code + ")", "");
       });
     }
-    var refSet = refs.slice();
-    (tpl ? tpl.ref_codes : []).concat.apply([], cmps.map(function (c) { return c.ref_codes; })).forEach(function (c) { if (ALL[c] && refSet.indexOf(ALL[c]) < 0) refSet.push(ALL[c]); });
+    var refSet = refs.slice(), why = {};
+    refs.forEach(function (r) { why[r.code] = "escolhida no kit"; });
+    var cited = (tpl ? tpl.ref_codes : []).concat.apply([], cmps.map(function (c) { return c.ref_codes; }));
+    cited.forEach(function (c) { if (ALL[c] && refSet.indexOf(ALL[c]) < 0) { refSet.push(ALL[c]); why[c] = "citada pelo template/componente"; } });
+    (tpl ? tpl.ref_related || [] : []).slice(0, 3).forEach(function (c) { if (ALL[c] && refSet.indexOf(ALL[c]) < 0) { refSet.push(ALL[c]); why[c] = "parecida (segmento/tags)"; } });
     if (refSet.length) {
-      L.push("## Referências");
-      L.push("Abra só 1–2 imagens por vez (custam contexto). Adapte a estrutura; não copie layout, nomes ou marca.");
-      refSet.forEach(function (r) { L.push("- " + r.code + " · " + r.name + " — " + (r.author || "autor não informado") + (r.url ? " — " + r.url : "") + " — `" + r.image + "`" + (refs.indexOf(r) >= 0 ? "" : " (citada pelo template/componente)")); });
+      L.push("## Referências reais");
+      L.push("Posts e telas que o time escolheu. Abra o link para ver o original; os arquivos locais estão na repo (abra só 1–2 imagens por vez: custam contexto). Adapte a estrutura e o movimento; não copie layout, nomes, textos ou marca.");
+      refSet.forEach(function (r) {
+        L.push("- **" + r.code + " · " + r.name + "** — " + (r.author || "autor não informado") + " — " + (KIND_ONE[r.kind] || r.kind) + (r.duration ? " de " + fmtDur(r.duration) : "") + ", enviada em " + fmtDate(r.date_added) + " (" + why[r.code] + ")");
+        if (r.url) L.push("  - Link: " + r.url);
+        if (r.what) L.push("  - O que mostra: " + r.what);
+        L.push("  - Arquivo: `" + r.image + "`" + (r.kind === "reel" ? " (frames em `referencias/reels/" + r.id_post + "/`, loop em `loop.webp`)" : ""));
+      });
       L.push("");
     }
     L.push("## Como trabalhar");
@@ -896,13 +1239,16 @@ main { min-width: 0; }
     var t = e.target.closest("button, a"); if (!t) { if (!e.target.closest(".search")) $("results").hidden = true; return; }
     if (!t.closest(".search")) $("results").hidden = true;
     var d = t.dataset;
+    if (d.lb) { $("results").hidden = true; openLB(d.lb, ctxList(d.ctx, d.lb)); return; }
+    if (d.slide) { LB.slide = +d.slide; renderLB(); return; }
     if (d.add) { toggleKit(d.add); return; }
-    if (d.open) { $("results").hidden = true; openDrawer(d.open); return; }
+    if (d.open) { $("results").hidden = true; if (!$("lb").hidden && ALL[d.open] && ALL[d.open].type !== "reference") closeLB(); openDrawer(d.open); return; }
     if (d.rm) { toggleKit(d.rm); return; }
     if (d.tab) { S.tab = d.tab; save(); render(); return; }
     if (d.seg !== undefined && t.classList.contains("segbtn")) { S.seg = d.seg; save(); render(); return; }
     if (d.screen) { S.screen = S.screen === d.screen ? "" : d.screen; save(); render(); return; }
     if (d.cat) { S.cat = S.cat === d.cat ? "" : d.cat; save(); render(); return; }
+    if (d.kind) { S.kind = S.kind === d.kind ? "" : d.kind; save(); render(); return; }
     if (d.plat) {
       var i = S.plats.indexOf(d.plat);
       if (i >= 0) { if (S.plats.length === 1) { toast("Deixe ao menos uma plataforma ligada."); return; } S.plats.splice(i, 1); } else S.plats.push(d.plat);
@@ -917,7 +1263,7 @@ main { min-width: 0; }
     if (d.act === "clearf") { clearFilters(); return; }
     if (d.act === "tab-references") { S.tab = "references"; save(); render(); return; }
   });
-  function clearFilters() { S.seg = ""; S.screen = ""; S.cat = ""; S.plats = ["mobile", "desktop", "website"]; save(); render(); }
+  function clearFilters() { S.seg = ""; S.screen = ""; S.cat = ""; S.kind = ""; S.plats = ["mobile", "desktop", "website"]; save(); render(); }
   $("clearFilters").addEventListener("click", clearFilters);
   $("sort").addEventListener("change", function () { S.sort = this.value; save(); render(); });
   $("q").addEventListener("input", renderResults);
@@ -940,17 +1286,25 @@ main { min-width: 0; }
   });
   document.addEventListener("keydown", function (e) {
     var tag = (e.target.tagName || "").toLowerCase(), typing = tag === "input" || tag === "textarea" || tag === "select";
-    if ((e.metaKey || e.ctrlKey) && (e.key === "k" || e.key === "K")) { e.preventDefault(); $("q").focus(); $("q").select(); return; }
+    if ((e.metaKey || e.ctrlKey) && (e.key === "k" || e.key === "K") && $("lb").hidden) { e.preventDefault(); $("q").focus(); $("q").select(); return; }
     if (e.key === "/" && !typing) { e.preventDefault(); $("q").focus(); return; }
+    if (!$("lb").hidden) {
+      if (e.key === "Escape") { e.preventDefault(); closeLB(); return; }
+      if (!typing && e.key === "ArrowRight") { e.preventDefault(); lbStep(1); return; }
+      if (!typing && e.key === "ArrowLeft") { e.preventDefault(); lbStep(-1); return; }
+      if (!typing && (e.key === "ArrowDown" || e.key === "PageDown")) { e.preventDefault(); lbRef(1); return; }
+      if (!typing && (e.key === "ArrowUp" || e.key === "PageUp")) { e.preventDefault(); lbRef(-1); return; }
+    }
     if (e.key === "Escape") {
       if (!$("modal").hidden) { closeModal(); return; }
       if (!$("drawer").hidden) { closeDrawer(); return; }
       if (sheetOpen()) { closeSheets(); return; }
     }
     if (e.key === "Tab") {
-      var root = !$("modal").hidden ? $("modal") : !$("drawer").hidden ? $("drawer") : null;
+      var root = !$("lb").hidden ? $("lb") : !$("modal").hidden ? $("modal") : !$("drawer").hidden ? $("drawer") : null;
       if (!root) return;
-      var f = root.querySelectorAll("button:not([disabled]), a[href], textarea, input");
+      var f = Array.prototype.filter.call(root.querySelectorAll("button:not([disabled]), a[href], textarea, input"), function (x) { return !x.closest("[hidden]") && x.offsetParent !== null; });
+      if (!root.contains(document.activeElement)) { e.preventDefault(); (f[0] || root).focus(); return; }
       if (!f.length) return;
       var first = f[0], last = f[f.length - 1];
       if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
@@ -980,7 +1334,7 @@ main { min-width: 0; }
 
   /* ---------- carga ---------- */
   function showError(msg) {
-    $("grid").innerHTML = '<div class="state err" role="alert"><h3>Não consegui carregar o catálogo</h3><p>' + esc(msg) + '</p><p>A página lê <code>catalogo.json</code> na mesma pasta do <code>index.html</code> e as miniaturas em <code>thumbs/</code>. Gere os dados com <code>python3 -I scripts/build-catalog.py</code> e publique os três juntos. Aberta direto do disco (file://), o navegador bloqueia a leitura: sirva a pasta com <code>python3 -m http.server</code>.</p><div class="acts" style="justify-content:flex-start"><button class="btn" type="button" id="retry">Tentar de novo</button></div></div>';
+    $("grid").innerHTML = '<div class="state err" role="alert"><h3>Não consegui carregar o catálogo</h3><p>' + esc(msg) + '</p><p>A página lê <code>catalogo.json</code> na mesma pasta do <code>index.html</code> e as imagens em <code>media/</code>. Gere os dados com <code>python3 -I scripts/build-references.py</code> e <code>python3 -I scripts/build-catalog.py</code> e publique os três juntos. Aberta direto do disco (file://), o navegador bloqueia a leitura: sirva a pasta com <code>python3 -m http.server</code>.</p><div class="acts" style="justify-content:flex-start"><button class="btn" type="button" id="retry">Tentar de novo</button></div></div>';
     $("retry").addEventListener("click", start);
   }
   function start() {
