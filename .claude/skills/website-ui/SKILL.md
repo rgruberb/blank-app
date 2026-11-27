@@ -98,7 +98,8 @@ Se o projeto é de um setor, abra primeiro a skill `segmento-*` correspondente.
   serve a produto denso (app/dashboard). Escala: **12,8 · 16 · 20 · 25 · 31 · 39 · 49** (+61 só no hero desktop,
   complemento).
 - Fluida (complemento): `clamp()` por degrau, ex. h1 `clamp(2.441rem, 1.6rem + 3.5vw, 3.815rem)` (39→61px), corpo
-  **16px** mobile → **18px** desktop no máximo. Nunca `vw` puro (quebra zoom).
+  **16px** fixo (degrau da escala). **Exceção declarada:** leitura longa (blog, artigo) pode usar **18px** no
+  corpo do texto, só ali. Nunca `vw` puro (quebra zoom).
 - Line-height **1,5** corpo → **1,1** display; tracking **−0,02em** títulos ≥ 39px, **+0,05em** caps; 2–3 famílias, o
   mesmo par no site inteiro (`design-direction` → `typography-pairing.md`). Carregue a fonte de verdade
   (`display=swap`, self-host, ≤ 2–3 pesos) — `ux-patterns` → `dark-patterns.md` §C; `perceived-performance.md` item 29.
@@ -117,10 +118,12 @@ Se o projeto é de um setor, abra primeiro a skill `segmento-*` correspondente.
   `react-bits.md`).
 
 **9. Motion de site**
-- **Um momento animado por página: hero OU CTA**, não os dois; "se tudo mexe, nada é especial". Feedback funcional
-  (press, hover, foco) não conta (`ui-motion` → `scroll-and-screen-transitions.md` §5).
-- Scroll reveal: **≤ 700 ms** ease-out, deslocamento ~24px, stagger **70–100 ms**, **uma vez só**, nunca no conteúdo já
-  visível no load; sem scroll-jacking; sem parallax decorativo no mobile (§1–§4).
+- **Um momento animado por página: hero OU CTA**, não os dois; "se tudo mexe, nada é especial". Não contam: feedback
+  funcional (press, hover, foco), o reveal discreto de seção e a transição de navegação padrão (fade/slide); transição
+  expressiva (shared element, morph, card→página) conta (`ui-motion` → `scroll-and-screen-transitions.md` §5).
+- Scroll reveal fora do momento: **1 por seção**, opacidade + deslocamento **≤ 8px**, **≤ 400 ms**, **uma vez só**,
+  **sem stagger**, nunca no conteúdo já visível no load; sem scroll-jacking; sem parallax decorativo no mobile (§1–§4).
+  Cascata (stagger **70–100 ms**) em galeria só se ela for **o** momento; o reveal do momento vai até **≤ 700 ms**.
 - 5 padrões de site (headline reveal, micro-interactions, portfolio showcase, animated gallery, scroll reveal): escolha
   **1 expressivo**, um efeito por vez, teste desktop e mobile (§6).
 - `prefers-reduced-motion`: troque deslocamento por fade ≤ 150 ms ou corte; mantenha estados.
@@ -162,10 +165,10 @@ Se o projeto é de um setor, abra primeiro a skill `segmento-*` correspondente.
 
 ## Checklist de entrega
 - [ ] 1 h1, 1 CTA primário por seção, acento ≤ 10% e só em CTA/dado-chave.
-- [ ] Escala 1,25 em tokens, corpo 16–18px, parágrafos ≤ `--measure` (50ch; 45–75 caracteres), line-height caindo com o tamanho.
+- [ ] Escala 1,25 em tokens, corpo 16px (18px só em leitura longa, declarado), parágrafos ≤ `--measure` (50ch; 45–75 caracteres), line-height caindo com o tamanho.
 - [ ] Grade de 8; container ≤ 1280px; sem scroll horizontal em 320/375.
 - [ ] Título + CTA no primeiro paint; nada competindo acima da dobra.
-- [ ] Um momento animado; reveal ≤ 700 ms, uma vez; `prefers-reduced-motion` testado.
+- [ ] Um momento animado (≤ 700 ms); reveal de seção ≤ 400 ms, ≤ 8px, sem stagger, uma vez; `prefers-reduced-motion` testado.
 - [ ] LCP ≤ 2,5 s, CLS ≤ 0,1 em mobile throttled; imagens com dimensões, WebP/AVIF, lazy abaixo da dobra.
 - [ ] Alvos ≥ 24px (meta 44), contraste 4,5/3:1, foco visível em todo link/botão, navegação por Tab completa.
 - [ ] Title/description/OG, landmarks, alt, JSON-LD do tipo de página.

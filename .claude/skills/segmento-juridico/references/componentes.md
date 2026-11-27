@@ -24,7 +24,7 @@ Lista-base da ficha JUR (10B §14) + componentes vistos nas imagens (C2–C4). "
 ## CMP-JUR-04 — Leitor de peça com anotações
 - **Anatomia:** documento em coluna estreita, índice/cláusulas à esquerda, anotações e comentários à direita, busca no documento, versão.
 - **Estados:** leitura · anotando · comparando versões (redlines) · somente leitura.
-- **Regras:** corpo 19px em desktop (GOV.UK); nada se move durante a leitura (10B §5); comparação de versões explícita.
+- **Regras:** corpo 19px em todas as larguras (GOV.UK `govuk-body`); nada se move durante a leitura (10B §5); comparação de versões explícita.
 - **Plataformas:** D (M só leitura). **Refs:** ficha 10B §14; "New redlines" no Mara Bureau.
 
 ## CMP-JUR-05 — Seletor do tipo de assinatura

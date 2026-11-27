@@ -7,8 +7,9 @@ Legenda: ✅ aberto e lido · 🔒 só busca/notícia ou exige login · ❌ não
 | nome | URL | o que aproveitar | status |
 |---|---|---|---|
 | NHS Design System | https://service-manual.nhs.uk/design-system | tokens, componentes, acessibilidade; hex medidos | ✅ |
-| NHS Typography | https://service-manual.nhs.uk/design-system/styles/typography | Frutiger/Arial; 19px/16px; escala 14–64px | ✅ |
-| GOV.UK Typography | https://design-system.service.gov.uk/styles/typography/ | 19px/16px (confirma o NHS) | ✅ |
+| NHS Typography | https://service-manual.nhs.uk/design-system/styles/typography | Frutiger/Arial; parágrafo **19px em telas grandes e 16px em telas pequenas**; escala 14–64px | ✅ (reconferido 27/11/2026) |
+| NHS Layout | https://service-manual.nhs.uk/design-system/styles/layout | breakpoints: mobile 320px, tablet **641px**, desktop 769px, large desktop 990px → corpo 19px a partir de 641px | ✅ (reconferido 27/11/2026) |
+| GOV.UK Type scale | https://design-system.service.gov.uk/styles/type-scale/ | `govuk-body` 19px/25px em **todas** as telas; a escala de tela grande (acima de 640px) muda títulos, não o corpo. **Não** é 19/16: o 19/16 por largura é do NHS | ✅ (reconferido 27/11/2026) |
 | Doctoralia | https://www.doctoralia.com.br/ | paleta, busca/agendamento, `system-ui` | ✅ |
 | Design systems de healthtechs brasileiras | — | não localizado | ❌ |
 | Estudo NN/g sobre saúde/idosos | — | não localizado | ❌ |

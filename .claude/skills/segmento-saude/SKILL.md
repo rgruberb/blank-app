@@ -1,6 +1,6 @@
 ---
 name: segmento-saude
-description: 'Camada de SEGMENTO saúde (código SAU) para qualquer empresa do setor — clínica, consultório, hospital, laboratório, telemedicina, healthtech, plano de saúde, bem-estar. Traz tom calmo e legível, paleta medida (NHS #005EB8/#007F3B/#212B32, Doctoralia #006A59/#DFF9F2), corpo 19px/16px (NHS), densidade baixa no paciente e maior no clínico, motion mínimo e o que nunca animar (exame, dose, alerta), dado de saúde como sensível na LGPD (art. 5º II, consentimento destacado art. 11 I), CFM (telemedicina e publicidade, só por notícia), acessibilidade para idosos, templates TPL-SAU e componentes CMP-SAU (busca, agenda, consentimento, teleconsulta, exame). Use em "app de saúde", "clínica", "consultório", "agendamento de consulta", "prontuário", "telemedicina", "teleconsulta", "healthtech", "paciente", "exame", "receita", "convênio", "plano de saúde", "app de bem-estar".'
+description: 'Camada de SEGMENTO saúde (código SAU) para qualquer empresa do setor — clínica, consultório, hospital, laboratório, telemedicina, healthtech, plano de saúde, bem-estar. Traz tom calmo e legível, paleta medida (NHS #005EB8/#007F3B/#212B32, Doctoralia #006A59/#DFF9F2), corpo 19px a partir de 641px e 16px abaixo (NHS), densidade baixa no paciente e maior no clínico, motion mínimo e o que nunca animar (exame, dose, alerta), dado de saúde como sensível na LGPD (art. 5º II, consentimento destacado art. 11 I), CFM (telemedicina e publicidade, só por notícia), acessibilidade para idosos, templates TPL-SAU e componentes CMP-SAU (busca, agenda, consentimento, teleconsulta, exame). Use em "app de saúde", "clínica", "consultório", "agendamento de consulta", "prontuário", "telemedicina", "teleconsulta", "healthtech", "paciente", "exame", "receita", "convênio", "plano de saúde", "app de bem-estar".'
 ---
 
 # Segmento: Saúde (SAU)
@@ -22,9 +22,10 @@ CFM; 27/11/2026), imagens das rodadas 10C/C2–C4 e posts da 10A. "(inferência)
 ## Prioridade
 skill de app específico > **segmento (esta)** > plataforma > tema > skills de terceiros (`ext-*`). Esta skill só
 sobrepõe o que diz explicitamente; no resto valem plataforma e tema. Sobreposições explícitas:
-- **Corpo 19px** nas telas do **paciente/público leigo** em tela grande (desktop e tablet), site ou app: sobrepõe o
-  corpo 16 da escala geral (`ux-patterns` "Alvos e tipografia") porque NHS e GOV.UK usam 19px para leitura por
-  público amplo, idoso ou com baixa visão. Em tela pequena (celular) o corpo volta a **16px**. Títulos seguem a escala
+- **Corpo 19px a partir de 641px** (tablet e desktop) e **16px abaixo** (celular) nas telas do **paciente/público
+  leigo**, site ou app: sobrepõe o corpo 16 da escala geral (`ux-patterns` "Alvos e tipografia") porque o NHS usa
+  parágrafo 19px em tela grande e 16px em tela pequena, e o tablet do NHS começa em **641px** (breakpoints NHS:
+  mobile 320, tablet 641, desktop 769, large desktop 990px). Verificado no NHS (`references/fontes.md`). Títulos seguem a escala
   do projeto (na 1,2, 19 é o próprio degrau 1 = 19,2; na 1,25 de site, 19 é exceção só do corpo).
 - Telas do **profissional** (agenda, prontuário, fila) **não** sobrepõem: corpo 16 da escala de app; 13–14px só em
   célula e rótulo; nunca informação clínica abaixo de 14px.
@@ -44,7 +45,7 @@ Linguagem: frase curta, uma instrução por vez, sem jargão clínico sem explic
   (confunde com alerta clínico); texto cinza de baixo contraste. Vermelho fica reservado a alerta/fora da faixa.
 
 **Tipografia e tamanhos**
-- NHS: Frutiger (marca), **Arial** quando indisponível. Parágrafo **19px em tela grande e 16px em tela pequena**;
+- NHS: Frutiger (marca), **Arial** quando indisponível. Parágrafo **19px a partir de 641px (tablet) e 16px abaixo**;
   texto pequeno (`nhsuk-body-s`) ~16/14px **com moderação**; escala 14→64px. O NHS não define mínimo absoluto.
 - Doctoralia: `system-ui`. Números tabulares: **não verificado** em produto de saúde; use `tabular-nums` em tabelas de
   exame e agenda (complemento).
@@ -81,7 +82,7 @@ Linguagem: frase curta, uma instrução por vez, sem jargão clínico sem explic
   divulgado. ANVISA: não verificado.
 
 **Acessibilidade (público idoso e ansioso)**
-- Corpo 19px desktop / 16px mobile (NHS e GOV.UK ✅); contraste forte (4,5:1 mínimo, `ux-patterns`); botões grandes
+- Corpo 19px a partir de 641px / 16px abaixo (NHS ✅); contraste forte (4,5:1 mínimo, `ux-patterns`); botões grandes
   (≥ 44pt/48dp; ação primária ~2 cm, NN/g); instruções passo a passo; alternativa por telefone (inferência).
 - Rótulo sempre fora do campo; erro ao lado do campo com texto (NN/g §5). Verificação de contraste dos produtos
   citados: **não feita**.
@@ -113,7 +114,7 @@ faixa de referência · `10` Card de próxima consulta (cancelar/reagendar) · `
 - Card de IA com mais destaque que o dado clínico de origem sem dizer de onde veio (inferência).
 
 ## Workflow
-1. Identifique o público: paciente (densidade baixa, 19/16px) ou profissional (densidade média-alta).
+1. Identifique o público: paciente (densidade baixa, corpo 19px ≥ 641px / 16px abaixo) ou profissional (densidade média-alta).
 2. Escolha um `TPL-SAU` e declare os tokens; confira contraste.
 3. Monte a tela com os `CMP-SAU` e as regras da skill de plataforma.
 4. Passe o checklist: consentimento destacado e não marcado · CRM/UF · unidade/fuso/faixa · nada clínico animado ·

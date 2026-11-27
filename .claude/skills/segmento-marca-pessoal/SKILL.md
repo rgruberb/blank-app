@@ -56,7 +56,9 @@ a tolerância é de *estilo* (hover e microinterações com personalidade, easin
 
 **Motion**
 - O segmento **mais tolerante** no estilo: microinterações, transição de portfólio, hover (10B). Quantidade: continua
-  1 momento expressivo por página (ver Prioridade).
+  1 momento expressivo por página (ver Prioridade). Transição grade→case **expressiva** (shared element, morph,
+  card→página) **conta** como o momento: com ela, o hero do case/portfólio fica estático (ou o hero anima e a transição
+  é fade/slide padrão, que não conta). Reveal discreto de seção (≤ 8px, ≤ 400 ms, sem stagger) não conta.
 - **Nunca** (inferência, 10B): animar o botão de contato/CTA principal; atrasar o carregamento do link na bio;
   ignorar `prefers-reduced-motion`.
 - Scroll: "Motion should follow the visitor" — parou de rolar, o movimento para; não sequestrar o scroll

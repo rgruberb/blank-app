@@ -6,7 +6,7 @@ Base: rodada 10B §13 (hex medidos por `getComputedStyle` em páginas de marketi
   Escala **1,2** para app denso (`desktop-app-ui` regra 3; `ux-patterns/references/typography-and-touch.md` §2).
   Sombra só em elemento que flutua (menu, popover, card arrastado), tingida (`design-direction/references/layers-and-trust-layout.md` §4).
 - Motion: tokens de `ui-motion/SKILL.md`; em CRM nunca reordenar linhas lidas, animar contador ao filtrar ou atrasar atalho.
-- Tamanhos de texto: linha de tabela 12–13px (recomendação da 10B, inferência; sobrepõe os 13–14px de célula do `desktop-app-ui` só na tabela densa); corpo 16px (escala geral de app).
+- Tamanhos de texto: linha de tabela 13–14px (como as células do `desktop-app-ui`), com modo compacto opcional de 12px (piso); corpo 16px (escala geral de app).
 
 ---
 

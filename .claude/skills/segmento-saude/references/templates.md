@@ -9,7 +9,7 @@ são sugestão nossa (inferência) e devem ser ajustados ao projeto. Escala tipo
 |---|---|
 | Paleta | fundo `#FFFFFF`, superfície `#F0F4F5`, borda `#D8DDE0`, texto `#212B32`, ação/link `#005EB8`, ação pressionada/título `#003087`, sucesso/confirmação `#007F3B` (NHS, medidos) |
 | Par tipográfico | Frutiger (marca NHS) → **Arial** fora do NHS; uma família só |
-| Escala | corpo **19px (≥ tela grande) / 16px (tela pequena)**; pequeno ~16/14px com moderação; títulos até 64px (NHS) |
+| Escala | corpo **19px a partir de 641px (tablet e desktop) / 16px abaixo**; pequeno ~16/14px com moderação; títulos até 64px (NHS) |
 | Raio | 0–4px, cantos quase retos (inferência; não medido) |
 | Sombra | nenhuma ou borda inferior sólida no botão (inferência; não medido) |
 | Densidade | baixa; uma pergunta por tela em formulário |
@@ -23,7 +23,7 @@ são sugestão nossa (inferência) e devem ser ajustados ao projeto. Escala tipo
 |---|---|
 | Paleta | hero `#006A59` (verde), fundos `#DFF9F2` e `#EEE8E3`, neutro quente `#B6AEA5`, texto `#2A2623` / `#35495E`, apoio `#27455C` (Doctoralia, medidos) |
 | Par tipográfico | `system-ui` (Doctoralia); se quiser personalidade, 1 sans humanista + mesma sans no corpo (inferência) |
-| Escala | corpo 16px mínimo; adotar 19px em desktop para paciente (regra NHS) |
+| Escala | corpo 16px abaixo de 641px; 19px a partir de 641px nas telas de paciente (regra NHS) |
 | Raio | médio, cartões e campo de busca arredondados (observado na imagem; valor não medido) |
 | Sombra | leve, só no bloco de busca (observado; valor não medido) |
 | Densidade | média; lista de especialidades e convênios em texto corrido com "Mais" |

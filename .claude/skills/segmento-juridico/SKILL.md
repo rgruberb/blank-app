@@ -1,6 +1,6 @@
 ---
 name: segmento-juridico
-description: 'Camada de SEGMENTO jurídico (código JUR) para qualquer empresa do setor — escritório de advocacia, departamento jurídico, legaltech, consulta processual, gestão de processos e prazos, contratos e assinatura eletrônica. Traz tom sóbrio e claro, paleta medida (GOV.UK #1D70B8/#0B0C0C, Jusbrasil #0F172A/#007A5F, DocuSign, Clio), corpo 19px/16px (GOV.UK), leitura longa em coluna estreita, motion mínimo e nunca em prazo/valor/assinar, Provimento OAB 205/2021 (sem preço como gancho, sem promessa de resultado, sem logo da OAB), tipos de assinatura da Lei 14.063/2020, linguagem simples, templates TPL-JUR e componentes CMP-JUR. Use em "escritório de advocacia", "site de advogado", "jurídico", "advogado", "processos", "prazos", "consulta processual", "contratos", "assinatura eletrônica", "legaltech", "OAB", "petição".'
+description: 'Camada de SEGMENTO jurídico (código JUR) para qualquer empresa do setor — escritório de advocacia, departamento jurídico, legaltech, consulta processual, gestão de processos e prazos, contratos e assinatura eletrônica. Traz tom sóbrio e claro, paleta medida (GOV.UK #1D70B8/#0B0C0C, Jusbrasil #0F172A/#007A5F, DocuSign, Clio), corpo 19px na leitura longa em todas as larguras (GOV.UK), leitura longa em coluna estreita, motion mínimo e nunca em prazo/valor/assinar, Provimento OAB 205/2021 (sem preço como gancho, sem promessa de resultado, sem logo da OAB), tipos de assinatura da Lei 14.063/2020, linguagem simples, templates TPL-JUR e componentes CMP-JUR. Use em "escritório de advocacia", "site de advogado", "jurídico", "advogado", "processos", "prazos", "consulta processual", "contratos", "assinatura eletrônica", "legaltech", "OAB", "petição".'
 ---
 
 # Segmento: Jurídico (JUR)
@@ -21,10 +21,11 @@ Provimento OAB 205/2021, Lei 14.063/2020; 27/11/2026) e imagens das rodadas C2�
 ## Prioridade
 skill de app específico > **segmento (esta)** > plataforma > tema > skills de terceiros (`ext-*`). Esta skill só
 sobrepõe o que diz explicitamente; no resto valem plataforma e tema. Sobreposições explícitas:
-- **Corpo 19px** em tela grande na **leitura longa** (peça, contrato, consulta processual pelo cidadão) e no template
-  sóbrio institucional (`TPL-JUR-01`): sobrepõe o corpo 16 da escala geral porque o GOV.UK usa 19px para leitura por
-  público amplo. Em tela pequena, no site de legaltech (`TPL-JUR-02`) fora da leitura longa e no app de gestão de
-  processos/prazos (`TPL-JUR-04`), vale o corpo **16px** da escala geral.
+- **Corpo 19px em todas as larguras** (celular incluído) na **leitura longa** (peça, contrato, consulta processual)
+  e no template sóbrio institucional (`TPL-JUR-01`): sobrepõe o corpo 16 da escala geral porque o `govuk-body` do
+  GOV.UK é **19px/25px em telas pequenas e grandes** (a escala de tela grande, acima de 640px, só muda títulos).
+  Verificado no GOV.UK (`references/fontes.md`). Nas demais telas (site de legaltech `TPL-JUR-02` fora da leitura
+  longa, app de gestão de processos/prazos `TPL-JUR-04`), vale o corpo **16px** da escala geral.
 - **Motion:** mais restritivo que `website-ui`/`ui-motion`: o "um momento animado por página" nunca cai em botão de
   assinar, prazo, valor ou cláusula (lista "nunca animar" abaixo).
 - **Medida:** a mesma do projeto (`--measure: 50ch`, 45–75 caracteres); esta skill não a sobrepõe.
@@ -44,8 +45,8 @@ norma pede publicidade **"sóbria, discreta e informativa"** (Provimento 205/202
   parágrafo único proíbe **ostentação** (regra de conteúdo, não de cor).
 
 **Tipografia e tamanhos**
-- GOV.UK: `GDS Transport` só no gov.uk; fora dele **Helvetica ou Arial**. Parágrafo **19px (tela grande) / 16px
-  (pequena)**; menor classe `govuk-body-s` 14px, com moderação. Números tabulares: a página não menciona.
+- GOV.UK: `GDS Transport` só no gov.uk; fora dele **Helvetica ou Arial**. `govuk-body` **19px/25px em todas as
+  telas** (pequenas e grandes); menor classe `govuk-body-s` 14px, com moderação. Números tabulares: a página não menciona.
 - Jusbrasil `Inter`; DocuSign `DSIndigo` (própria); Clio `Facility` + mono. Harvey usa serifa em títulos e KPIs
   (imagem C3). Use `tabular-nums` em prazos e valores (complemento).
 
@@ -78,7 +79,7 @@ norma pede publicidade **"sóbria, discreta e informativa"** (Provimento 205/202
 **Linguagem simples e acessibilidade**
 - Termo técnico com explicação em linha ou glossário; frase curta; verbo no botão ("Assinar contrato") (inferência;
   diretrizes de escrita do GOV.UK **não lidas** — redirecionaram 🔒). NN/g: nível 6º–8º ano em formulário (§5).
-- Corpo 19px/16px, coluna estreita, contraste forte, foco visível, erro descrito em texto ao lado do campo.
+- Corpo 19px na leitura longa (todas as larguras), 16px no resto; coluna estreita, contraste forte, foco visível, erro descrito em texto ao lado do campo.
 - Cliente leigo e idoso: glossário, alternativa humana, nada de prazo só em cor (inferência).
 
 ## Diferenças por plataforma
@@ -111,7 +112,7 @@ números de confiança · `12` Alternância de público · `13` Termo explicado 
 2. Escolha um `TPL-JUR`, declare tokens, confira contraste.
 3. Monte com `CMP-JUR` + skill de plataforma.
 4. Checklist: Provimento (site) · tipo de assinatura + auditoria · prazo com data final · nada animado em
-   prazo/valor/assinar · glossário · 19/16px.
+   prazo/valor/assinar · glossário · corpo 19px na leitura longa / 16px no resto.
 5. Confira `references/regulacao.md` e a norma vigente antes de publicar.
 
 ## Onde está o resto

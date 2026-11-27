@@ -7,7 +7,8 @@ Legenda: ✅ aberto e lido · 🔒 só busca ou página não abriu · ❌ não l
 | nome | URL | o que aproveitar | status |
 |---|---|---|---|
 | GOV.UK Design System | https://design-system.service.gov.uk/ | estilos, componentes, padrões (v6.6.0 de 15/10/2026); hex medidos | ✅ |
-| GOV.UK Typography | https://design-system.service.gov.uk/styles/typography/ | GDS Transport/Helvetica/Arial; 19px/16px; 14px | ✅ |
+| GOV.UK Typography | https://design-system.service.gov.uk/styles/typography/ | GDS Transport/Helvetica/Arial; `govuk-body-s` 14px | ✅ |
+| GOV.UK Type scale | https://design-system.service.gov.uk/styles/type-scale/ | `govuk-body` **19px/25px em todas as telas** (pequenas e grandes); a escala de tela grande vale acima do breakpoint de tablet (640px) e muda títulos, não o corpo | ✅ (reconferido 27/11/2026) |
 | Jusbrasil | https://www.jusbrasil.com.br/ | paleta, Inter, consulta judicial | ✅ |
 | DocuSign (BR) | https://www.docusign.com/pt-br | paleta, assinatura eletrônica | ✅ (captura de imagem descartada por modal de cookies) |
 | Clio | https://www.clio.com/ | paleta, Facility + mono | ✅ |

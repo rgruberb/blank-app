@@ -9,7 +9,7 @@ dessas linhas são sugestão nossa (inferência), salvo quando a imagem mostra.
 |---|---|
 | Paleta | fundo `#FFFFFF` / `#F4F8FB`, texto `#0B0C0C`, secundário `#484949`, ação `#1D70B8` (hover `#1A65A6`), sucesso `#0F7A52` (GOV.UK, medidos) |
 | Par tipográfico | GDS Transport só no gov.uk → fora dele **Helvetica ou Arial**; uma família |
-| Escala | corpo **19px / 16px**; `govuk-body-s` 14px com moderação (GOV.UK) |
+| Escala | corpo **19px em todas as larguras** (`govuk-body` 19/25px); `govuk-body-s` 14px com moderação (GOV.UK) |
 | Raio | 0px (inferência; cantos retos do estilo GOV.UK não medidos) |
 | Sombra | nenhuma; borda inferior sólida no botão (inferência) |
 | Densidade | média; formulário uma pergunta por página quando longo (NN/g §5) |
@@ -23,7 +23,7 @@ dessas linhas são sugestão nossa (inferência), salvo quando a imagem mostra.
 |---|---|
 | Paleta | marinho `#0F172A` (texto forte/segmentado ativo), fundo `#F1F5F9`, verde `#007A5F` (marca/destaque), `#00A37F` (apoio), texto `#455468` / `#5C6F8A` (Jusbrasil, medidos) |
 | Par tipográfico | **Inter** em tudo (Jusbrasil) |
-| Escala | corpo 16px no site; 19px em leitura longa (regra GOV.UK) |
+| Escala | corpo 16px no site; 19px em leitura longa, em todas as larguras (regra GOV.UK) |
 | Raio | campo de busca e chips em pílula (observado na imagem; valor não medido) |
 | Sombra | brilho verde suave ao redor da busca (observado; não medido) |
 | Densidade | baixa na home; média na consulta |
@@ -37,7 +37,7 @@ dessas linhas são sugestão nossa (inferência), salvo quando a imagem mostra.
 |---|---|
 | Paleta | roxo-escuro `#130032` + fundo `#F8F3F0`, violeta `#4C00FF` (ação), `#151B17` (DocuSign BR, medidos) |
 | Par tipográfico | grotesca própria (`DSIndigo`); substituta: uma grotesca licenciada do projeto (inferência) |
-| Escala | 16px mínimo no documento; 19px na leitura em desktop (inferência a partir do GOV.UK) |
+| Escala | corpo 19px na leitura do documento em todas as larguras (GOV.UK `govuk-body`); 16px nas telas de ação fora da leitura |
 | Raio | não medido (página coberta por modal de cookies na C3) |
 | Sombra | não medido |
 | Densidade | **baixa** no fluxo de assinatura (10B) |

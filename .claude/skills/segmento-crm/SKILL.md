@@ -47,9 +47,9 @@ secundário, não a área clicável.
 
 **2. Tipografia.** **Inter** domina (Attio `Inter`/`Inter Display`, Linear `Inter Variable`, Pipedrive `Inter` +
 `Haffer`; HubSpot `HubSpot Sans` + `HubSpot Serif`) + **mono para IDs e códigos** (`JetBrains Mono`, `Berkeley Mono`).
-- Corpo **16px** (escala geral de app, decisão do projeto). Linha de tabela densa **12–13px** (inferência da 10B; não
-  verificado nos produtos): **sobrepõe** os 13–14px de célula do `desktop-app-ui` só na tabela densa, porque esta skill
-  decide a densidade; piso 12px. Escala **1,2**
+- Corpo **16px** (escala geral de app, decisão do projeto). Linha de tabela densa **13–14px**, alinhada às células do
+  `desktop-app-ui` (decisão do usuário, por legibilidade em uso prolongado), com **modo compacto opcional de 12px**
+  (densidade compacta/confortável escolhida pelo usuário; 12px é o piso). Escala **1,2**
   (`desktop-app-ui` regra 3). `tabular-nums` em valores, contagens e datas em coluna; valores alinhados à direita.
 
 **3. Densidade: alta.** Muitos registros por sessão; trocar de contexto custa (inferência). Salesforce SLDS 2: UI

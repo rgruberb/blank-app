@@ -12,7 +12,7 @@ O que vem dos reels está referenciado; o resto está marcado como **(complement
 |---|---|---|
 | Navegação entre telas (lista → detalhe, card → página) | Shared element: o card vira a página e o "voltar" retorna à origem (ver `page-transitions-and-timing.md`) | Evita o "Tap. Cut.": o usuário não precisa se reencontrar na tela (reel DfwhC1riuuO) |
 | Header/título de página ao rolar | Large title que encolhe e vira título compacto na barra (ver `page-transitions-and-timing.md`) | Mostra que você saiu do topo sem perder o contexto |
-| Seções de landing page entrando na tela | Reveal curto (≤ 700 ms, fade + deslocamento pequeno), uma vez só, com stagger de 70–100 ms entre filhos | Cascata guia o olho; nada surge do nada (ver regras de duração no `SKILL.md`) |
+| Seções de landing page entrando na tela | **1 reveal discreto por seção**: opacidade + deslocamento **≤ 8px**, **≤ 400 ms**, uma vez só, **sem stagger** (não conta como momento, §5). Cascata de 70–100 ms entre filhos só quando a galeria/lista for **o** momento da página | Nada surge do nada sem gastar o momento da página (ver regras de duração no `SKILL.md`) |
 | Números e KPIs que entram na viewport | Contagem até o valor (rolling number) quando o card aparece | O olho vê a mudança em vez de perdê-la (reel DfP6EoLBtgg) |
 | Toolbars/barras inferiores em leitura longa | Esconder ao rolar para baixo e mostrar ao rolar para cima **(complemento)** | Libera espaço de leitura sem esconder a navegação |
 | Storytelling/produto (hero, "como funciona") | Seção fixada (pin) com progresso ligado ao scroll (scrub) **(complemento)** | O scroll vira o controle de uma narrativa; só vale para conteúdo sequencial. Exemplo real: site conceito RWB Porsche (`DYpD5C7zwx6`, @rish_designs): 1 palavra-título gigante + 1 ângulo do carro 3D por seção, fundo alternando escuro/claro, texto atrás do objeto (detalhes em `motion-for-social-video.md` §4) |
@@ -67,8 +67,11 @@ Regra repetida em 2 posts do @noahelhadedy:
   estático) e `Dfo__tSjk9k_1.jpg`, `Dfo__tSjk9k_2.jpg`, `Dfo__tSjk9k_3.jpg` (pull cord, swipe deck, parallax ticket: um componente lúdico por palco).
 
 Como aplicar **(complemento)**:
-- O "momento" é o efeito **expressivo** (reveal de hero, componente lúdico, fundo WebGL, tilt). Feedback funcional (press a 95%, hover, foco, sucesso, toast, skeleton) **não conta**: continua em todo lugar.
-- Na landing, escolha onde está a decisão: hero (primeira impressão) **ou** CTA (conversão). O resto entra com reveal curto e discreto, ou sem animação.
+- O "momento" é o efeito **expressivo** (reveal de hero, componente lúdico, fundo WebGL, tilt, galeria em cascata). Feedback funcional (press a 95%, hover, foco, sucesso, toast, skeleton) **não conta**: continua em todo lugar.
+- **Reveal discreto de seção não conta** (decisão do usuário): **1 por seção**, opacidade + deslocamento **≤ 8px**, **≤ 400 ms**, uma vez, **sem stagger/cascata**. Isso supera o veto de fade-in no scroll do `design-taste-frontend`.
+- **Cascata** (stagger 70–100 ms) em galeria ou lista **é** um momento: só entra se for **o** momento da página.
+- **Transição de navegação** conta como momento **só se for expressiva** (shared element, morph, card→página, grade→case). Fade/slide padrão entre páginas **não conta**. Ex.: portfólio com hero animado + card→case expressivo = 2 momentos → escolha um.
+- Na landing, escolha onde está a decisão: hero (primeira impressão) **ou** CTA (conversão). O resto entra com o reveal discreto acima, ou sem animação.
 - Em tela de app, no máximo 1 componente lúdico (ex.: hold to publish, pull cord) e só onde ele também comunica algo.
 - Bate com o "Von Restorff: um destaque, nunca três" de `ux-patterns` e com o "WebGL ≤ 1 por página" de `react-bits.md`.
 - **Tensão registrada:** o @mobileeditingclub (§6) lista 5 padrões para o mesmo site. Leia como cardápio: escolha 1 expressivo e trate os outros como micro-feedback discreto.
@@ -90,7 +93,7 @@ Fluxo recomendado pela fonte:
 3. Teste no **desktop e no mobile**.
 4. Texto sempre legível; o movimento guia até a próxima ação.
 
-**(complemento)** Traduza "suave" e "sutil" para os tokens do `SKILL.md` antes de pedir: reveal ≤ 700 ms ease-out, stagger 70–100 ms na galeria, deslocamento de hover de poucos px, uma vez só no scroll. Visual do layout do carrossel: `Dff1uulGoxb_2.jpg`. O fluxo completo ficou atrás de "comente WEBSITE" e não foi visto.
+**(complemento)** Traduza "suave" e "sutil" para os tokens do `SKILL.md` antes de pedir: reveal do momento ≤ 700 ms ease-out, reveal de seção ≤ 400 ms e ≤ 8px sem stagger, stagger 70–100 ms só na galeria que for o momento, deslocamento de hover de poucos px, uma vez só no scroll. Visual do layout do carrossel: `Dff1uulGoxb_2.jpg`. O fluxo completo ficou atrás de "comente WEBSITE" e não foi visto.
 
 ## 7. Interações "premium" de site e o custo de cada uma (`DgNTvDZCMNX`, @thedesignstack.co.in, rodada 10A)
 Carrossel "Parte 4": cada interação tem função **e** custo. Vale como filtro antes de escolher o **um** momento animado (§5).

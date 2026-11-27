@@ -12,7 +12,7 @@ ação por teclado em tudo; alvo mínimo 24px na web (44pt/48dp no mobile).
   ações da lista (Importar, Exportar, Adicionar) → tabela: checkbox, nome + e-mail, empresa, origem, pontuação, estado,
   criado em, responsável.
 - **Estados:** linha hover, selecionada, multi-seleção com barra de ações em massa, editando inline, carregando, vazia.
-- **Regras:** cabeçalho fixo e semântico; números à direita; linha 12–13px; filtro e ordenação **persistem** ao navegar
+- **Regras:** cabeçalho fixo e semântico; números à direita; linha 13–14px, com modo compacto opcional de 12px (piso); filtro e ordenação **persistem** ao navegar
   (inferência); ação em massa com desfazer. Detalhe em `desktop-app-ui/references/desktop-patterns.md` §3.
 - **Plataformas:** desktop. **Referências:** `10C_CRM_dribbble-conceptzilla_crm-leads-tabela_1.jpg` (`list-tabs`,
   `list-actions`), `10A_DgAT3fVBJ8B_1.jpg` (tabela de usuários com plano, status, uso 30d);

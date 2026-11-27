@@ -63,7 +63,8 @@ prova (números/depoimentos) → pricing → FAQ → CTA final → footer**. Cor
   `layers-and-trust-layout.md` §2).
 - Carrossel de features/depoimentos: deixe **32%** do próximo card espiar (Closure, **0% vs 32%**, `ux-laws.md` parte 4).
 - "Como funciona": passos numerados ligados por uma linha (Uniform connectedness) e tempo de setup por passo (Tally).
-- Scroll reveal discreto aqui (≤ 700 ms, stagger 70–100 ms, uma vez) se o momento animado estiver em outro lugar
+- Scroll reveal discreto aqui (1 por seção: opacidade + ≤ 8px, ≤ 400 ms, uma vez, sem stagger; não conta como momento);
+  cascata de 70–100 ms só se esta seção for o momento animado da página
   (`ui-motion/references/scroll-and-screen-transitions.md` §1, §5).
 
 ## 4. Pricing
@@ -138,7 +139,8 @@ prova (números/depoimentos) → pricing → FAQ → CTA final → footer**. Cor
   scroll **não** entra no checkout (`scroll-and-screen-transitions.md` §2).
 
 ## 10. Blog / conteúdo
-- Corpo **16–18px**, line-height **1,5**, medida `--measure: 50ch` (45–75 caracteres), escala **1,25** com line-height por
+- Corpo **16px** como no resto do site; **18px** só no texto de leitura longa (artigo/post), como exceção declarada
+  (o 18 não é degrau da escala 1,25: use só no corpo do artigo). Line-height **1,5**, medida `--measure: 50ch` (45–75 caracteres), escala **1,25** com line-height por
   degrau (`DfRucYFjrac_1/_2`, `ux-patterns/references/typography-and-touch.md` §2b).
 - Par editorial: Lora + Open Sans (blog/educação), Playfair Display + Montserrat (editorial), Fraunces + Inter
   (`typography-pairing.md` §2). Tom editorial: serifa fina grande + menu mono caixa-alta pequeno
