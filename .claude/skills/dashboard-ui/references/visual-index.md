@@ -176,3 +176,13 @@ Aqui só o que importa para **dashboards e telas de app**.
 Dribbble (9C): autores verificados de dashboard de criador — Chandra Mudha Mahendra/VanguardCX (Kreya), Wolfpixel
 (Blenz), Amir Baqian/Ace Design (Invoice/Proposal), Erudite07. Nota 2: shots estáticos sem estados; §30a.
 
+
+## Prints da rodada 10A (`<ID>_<n>.jpg`, 27/11/2026)
+Capturas da tela inteira do navegador (~1200 px de largura; a mídia aparece com ~450 px dentro do post). Nomes de
+pessoas na UI são de demonstração.
+
+| arquivo | autor | URL | domínio | estilo | o que mostra | quando abrir |
+|---|---|---|---|---|---|---|
+| `DgAT3fVBJ8B_1.jpg` | @divan_raj | https://www.instagram.com/reel/DgAT3fVBJ8B/ | Admin de usuários/planos (SaaS) | dark + card hero azul-claro | Contador 2,184 com bolhas de avatar, bolhas por plano (Free/Pro/Team), tabela "All users" com plano, empresa, status e barra de uso 30d, toggle Table/Cards | Contador como objeto; tabela de usuários com uso (`layout-patterns.md` §12) |
+| `DfkL5N_H4GK_1.jpg` | @uimunna (com @tamal215529) | https://www.instagram.com/p/DfkL5N_H4GK/?img_index=1 | Analytics de vendas (mobile) | claro cinza + gradiente pêssego | Celular na mão: "Sales Insights", chips de filtro, avatares +6, 4 cards de métrica 2×2, "Sales Trend", tab bar flutuante preta | Dashboard mobile com cards 2×2 e tab bar flutuante |
+| `Deq_kvJBI3g_1.jpg` | @designmotionhq | https://www.instagram.com/reel/Deq_kvJBI3g/ | KPI em celular de 375px | dark com grade + verde-água | "FIX 2 · BIG NUMBERS — One line, capped size": €5.3M quebrado a 48px × uma linha; bloco `kpi.css` (`nowrap`, `tabular-nums`, 30px) e régua 16–64px | Número grande que quebra no celular (`layout-patterns.md` §2) |
