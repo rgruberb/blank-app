@@ -1,6 +1,6 @@
 # Rodada 10: novos links + pesquisa profunda por segmento (prompt único)
 
-**Modelo:** Opus 5.5 (julga relevância, compara setores e lida com regulação). Cole o prompt abaixo num chat novo do Claude no Chrome, com Instagram e Facebook logados. Se a resposta cortar, responda "continue".
+**Modelo:** Opus 5.5 (julga relevância, compara setores, lida com regulação e escolhe as telas de referência). Cole o prompt abaixo num chat novo do Claude no Chrome, com Instagram e Facebook logados. Se a resposta cortar, responda "continue".
 
 ```
 Você é um pesquisador sênior de Product Design. Trabalhe com VÁRIAS ABAS ao mesmo tempo: abra os links em lotes de 6 a 8 abas, extraia o que for preciso de cada aba, feche o lote e abra o próximo. Só leia: não curta, não comente, não siga, não entre em grupos, não crie conta, não instale nada.
@@ -117,6 +117,34 @@ Para cada segmento, entregue esta FICHA:
 No final da Parte 2, uma tabela comparativa: 6 segmentos × (tom, paleta, densidade, motion, tipografia, regulação-chave).
 
 ======================================================================
+PARTE 3: GALERIA DE REFERÊNCIAS VISUAIS (guardar os designs)
+======================================================================
+Os designs encontrados viram REFERÊNCIAS VISUAIS permanentes das skills. Guardar as imagens é tão importante quanto o texto.
+
+META: no mínimo 10 telas por segmento (60 no total), mais as dos links da Parte 1, cobrindo website, app desktop e app mobile sempre que existir.
+
+O QUE CAPTURAR
+- Telas reais de produto: home, dashboard, lista ou tabela, detalhe, formulário, onboarding, checkout ou pagamento, agenda, mensagens, configurações e estados vazio ou de erro.
+- Componentes marcantes: card de valor, gráfico, tabela densa, selo de confiança, aviso regulatório, perfil e portfólio.
+- Páginas de design system com tokens de cor, tipografia ou motion.
+- Nos links da Parte 1: os slides ou frames que mostram a tela inteira ou a regra ilustrada (antes/depois, curva, números).
+
+COMO CAPTURAR (qualidade)
+- Abra a imagem ou a página em TAMANHO GRANDE antes do print: post aberto (não a grade do perfil), shot em tela cheia no Dribbble, página do produto na largura normal.
+- NUNCA salve miniatura. A imagem precisa ter pelo menos 900 px de largura e texto legível. Se só houver miniatura, anote "sem imagem legível" e não salve.
+- Um print por tela. Recorte só a interface, sem a barra do navegador nem a interface do Instagram, quando der.
+- Em vídeo ou reel, pause no frame em que a tela aparece inteira.
+- Não capture dados pessoais reais de terceiros (nomes, e-mails, documentos). Se aparecerem, escolha outra tela.
+
+NOME DOS ARQUIVOS
+- Links da Parte 1: 10A_<ID>_<n>.png
+- Segmentos: 10B_<segmento>_<produto-ou-fonte>_<tela>_<n>.png  (ex.: 10B_financeiro_wise_extrato_1.png)
+
+FICHA DE CADA IMAGEM (obrigatória, para todas as imagens salvas)
+Tabela no fim de cada arquivo .md:
+| arquivo | segmento | plataforma (website / desktop / mobile) | produto ou autor | URL exata | tipo de tela | o que observar (paleta, hierarquia, densidade, componente, motion) | como adaptar sem copiar |
+
+======================================================================
 REGRAS
 ======================================================================
 - Abra cada URL antes de citá-la. Não invente nomes, hex, regras nem números. Se não achar, escreva "não verificado".
@@ -128,9 +156,9 @@ REGRAS
 ======================================================================
 ENTREGA
 ======================================================================
-Gere 2 arquivos:
-1. rodada-10A.md: Parte 1 (links), com um resumo de 5 a 10 linhas no topo e a seção "Repositórios do Df4SUQYHWZA".
-2. rodada-10B.md: Parte 2 (6 fichas de segmento + tabela comparativa), com um resumo no topo e "Fontes verificadas" no fim.
-Prints: tire print só do que tiver valor visual (telas de produto do setor, paletas, tabelas, regras regulatórias em destaque), no máximo 3 por link ou fonte. Nomeie como 10A_<ID>_<n>.png e 10B_<segmento>_<fonte>_<n>.png.
-Se conseguir baixar arquivos, baixe os .md e os prints. Se não conseguir, entregue cada .md num ÚNICO bloco de código Markdown, com uma seção "Prints" listando: nome | URL | o que mostra.
+Gere 2 arquivos e as imagens:
+1. rodada-10A.md: Parte 1 (links), com um resumo de 5 a 10 linhas no topo, a seção "Repositórios do Df4SUQYHWZA" e a ficha das imagens 10A_.
+2. rodada-10B.md: Parte 2 (6 fichas de segmento + tabela comparativa) e a Parte 3 (galeria) organizada por segmento, com a ficha das imagens 10B_, um resumo no topo e "Fontes verificadas" no fim.
+3. Imagens: baixe todas as imagens da galeria (10A_ e 10B_), de preferência numa pasta por segmento.
+Se não conseguir baixar arquivos, entregue cada .md num ÚNICO bloco de código Markdown. Nesse caso, a ficha de cada imagem precisa trazer a URL exata (no carrossel, com ?img_index=N; no reel, com o segundo do vídeo), para que as imagens possam ser salvas depois.
 ```
