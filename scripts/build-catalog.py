@@ -220,13 +220,13 @@ def infer_category(name, desc):
 
 SCREEN_KW = [
     ("dashboard", r"dashboard|painel|kpi|analytics|métrica|relatório"),
-    ("landing", r"landing|hero|home\b|site|vitrine|página de preços|preços"),
+    ("landing", r"landing|hero|\bsite\b|website|vitrine|página de preços"),
     ("lista/tabela", r"tabela|lista|extrato|kanban|pipeline|fila|feed"),
     ("formulário", r"formul|checkout|campo|cadastro|captura|busca|agendamento|login|senha"),
     ("detalhe", r"detalhe|perfil|prontuário|case|estudo de caso|contato\b"),
     ("onboarding", r"onboarding|boas-vindas|permiss|primeiro uso"),
     ("motion", r"motion|anima|transição|micro-intera|loader|scroll|reel|slow-mo|spring"),
-    ("marca/cor", r"paleta|tipograf|fonte|logo|marca|branding|cor\b|cores"),
+    ("marca/cor", r"paleta|tipograf|fontes?\b|logo|branding|\bcores?\b"),
 ]
 
 
@@ -314,7 +314,7 @@ def palette_roles(fields):
             between = val[last_end:m.start()].lower()
             after = re.match(r"`?\s*\(([^)]{0,40})\)", val[m.end():])
             role = _role_in(between)
-            if role is None and after and not (key_role and key_role != "unknown"):
+            if role is None and after:
                 role = _role_in(after.group(1).lower())
             if role is None and last_role and len(between.strip(" `")) <= 28:
                 role = last_role

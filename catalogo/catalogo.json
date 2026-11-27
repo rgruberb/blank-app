@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T22:45:49Z",
+ "generated_at": "2026-11-27T22:47:06Z",
  "theme_skills": [
   "design-direction",
   "dashboard-ui",
@@ -274,6 +274,7 @@
     "dark": false,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 10,
     "pill": false,
     "density": "regular",
@@ -335,12 +336,7 @@
       "#F8FAFD",
       "#E5EDF5",
       "#F3EFE6",
-      "#ECDFFF",
-      "#533AFD",
-      "#7F7DFC",
-      "#8D0DE3",
-      "#5D0599",
-      "#1E002F"
+      "#ECDFFF"
      ],
      "text": [
       "#061B31",
@@ -348,7 +344,13 @@
       "#64748D",
       "#000000"
      ],
-     "action": [],
+     "action": [
+      "#533AFD",
+      "#7F7DFC",
+      "#8D0DE3",
+      "#5D0599",
+      "#1E002F"
+     ],
      "border": [],
      "state": [],
      "unknown": []
@@ -373,14 +375,15 @@
     "surface": "#F8FAFD",
     "text": "#061B31",
     "muted": "#50617A",
-    "action": "#061B31",
+    "action": "#533AFD",
     "on_action": "#FFFFFF",
-    "action_text": "#061B31",
-    "accent2": null,
+    "action_text": "#533AFD",
+    "accent2": "#7F7DFC",
     "border": "#DCDFE2",
     "dark": false,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 8,
     "pill": true,
     "density": "airy",
@@ -445,11 +448,13 @@
      ],
      "text": [
       "#9FE870",
+      "#163300",
       "#0E0F0C",
       "#454745"
      ],
      "action": [
-      "#163300"
+      "#163300",
+      "#9FE870"
      ],
      "border": [],
      "state": [],
@@ -472,21 +477,22 @@
    "rules_excerpt": "Cuidado: marca verde compete com o verde de \"ganho\". Use outro tom/ícone para variação (`dashboard-ui` §8).",
    "preview": {
     "bg": "#FFFFFF",
-    "surface": "#F6F6F6",
-    "text": "#57803E",
-    "muted": "#0E0F0C",
+    "surface": "#E8EBE6",
+    "text": "#0E0F0C",
+    "muted": "#163300",
     "action": "#163300",
     "on_action": "#FFFFFF",
     "action_text": "#163300",
-    "accent2": null,
-    "border": "#E7EDE4",
+    "accent2": "#9FE870",
+    "border": "#DDDDDD",
     "dark": false,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 16,
     "pill": true,
     "density": "airy",
-    "adjusted": true
+    "adjusted": false
    },
    "platforms": [
     "website"
@@ -557,20 +563,21 @@
    "preview": {
     "bg": "#191C1F",
     "surface": "#000000",
-    "text": "#848484",
-    "muted": "#C9C9CD",
-    "action": "#848484",
+    "text": "#C9C9CD",
+    "muted": "#868688",
+    "action": "#C9C9CD",
     "on_action": "#111111",
-    "action_text": "#848484",
+    "action_text": "#C9C9CD",
     "accent2": null,
-    "border": "#282B2D",
+    "border": "#323437",
     "dark": true,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 8,
     "pill": false,
     "density": "regular",
-    "adjusted": true
+    "adjusted": false
    },
    "platforms": [
     "mobile",
@@ -661,6 +668,7 @@
     "dark": true,
     "font_display": "Akshar",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 10,
     "pill": false,
     "density": "compact",
@@ -722,12 +730,11 @@
       "#62666D"
      ],
      "action": [
-      "#27A644"
-     ],
-     "border": [],
-     "state": [
+      "#27A644",
       "#F34E52"
      ],
+     "border": [],
+     "state": [],
      "unknown": []
     },
     "palette_approx": [],
@@ -756,6 +763,7 @@
     "dark": true,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 6,
     "pill": false,
     "density": "compact",
@@ -816,11 +824,11 @@
       "#242629",
       "#101112",
       "#505155",
-      "#75777C",
-      "#9B69FF"
+      "#75777C"
      ],
      "action": [
-      "#266DF0"
+      "#266DF0",
+      "#9B69FF"
      ],
      "border": [
       "#CDCED2"
@@ -853,11 +861,12 @@
     "action": "#266DF0",
     "on_action": "#FFFFFF",
     "action_text": "#266DF0",
-    "accent2": "#007D53",
+    "accent2": "#9B69FF",
     "border": "#CDCED2",
     "dark": false,
-    "font_display": "JetBrains Mono",
+    "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 10,
     "pill": false,
     "density": "compact",
@@ -958,6 +967,7 @@
     "dark": false,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 10,
     "pill": true,
     "density": "regular",
@@ -1053,6 +1063,7 @@
     "dark": false,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 10,
     "pill": false,
     "density": "compact",
@@ -1144,6 +1155,7 @@
     "dark": false,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 8,
     "pill": false,
     "density": "compact",
@@ -1235,6 +1247,7 @@
     "dark": false,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 8,
     "pill": false,
     "density": "compact",
@@ -1274,9 +1287,7 @@
      "#B42625"
     ],
     "palette_roles": {
-     "bg": [
-      "#EDEDED"
-     ],
+     "bg": [],
      "text": [],
      "action": [
       "#FFF083",
@@ -1286,7 +1297,8 @@
      "state": [],
      "unknown": [
       "#222222",
-      "#F8F8F8"
+      "#F8F8F8",
+      "#EDEDED"
      ]
     },
     "palette_approx": [],
@@ -1304,22 +1316,23 @@
    ],
    "rules_excerpt": "",
    "preview": {
-    "bg": "#EDEDED",
-    "surface": "#F8F8F8",
+    "bg": "#F8F8F8",
+    "surface": "#EDEDED",
     "text": "#222222",
-    "muted": "#696969",
+    "muted": "#6D6D6D",
     "action": "#FFF083",
     "on_action": "#111111",
-    "action_text": "#736C3B",
+    "action_text": "#222222",
     "accent2": "#B42625",
-    "border": "#D1D1D1",
+    "border": "#DADADA",
     "dark": false,
     "font_display": "Inter Tight",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 8,
     "pill": false,
     "density": "airy",
-    "adjusted": true
+    "adjusted": false
    },
    "platforms": [
     "website"
@@ -1400,6 +1413,7 @@
     "dark": true,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 10,
     "pill": true,
     "density": "compact",
@@ -1470,6 +1484,7 @@
     "dark": false,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 8,
     "pill": true,
     "density": "airy",
@@ -1515,7 +1530,7 @@
     "palette_roles": {
      "bg": [
       "#FFFFFF",
-      "#ECFEF2"
+      "#676B5F"
      ],
      "text": [
       "#1E2330"
@@ -1523,7 +1538,7 @@
      "action": [
       "#E9C0E9",
       "#D2E823",
-      "#676B5F"
+      "#ECFEF2"
      ],
      "border": [],
      "state": [],
@@ -1544,21 +1559,22 @@
    "rules_excerpt": "",
    "preview": {
     "bg": "#FFFFFF",
-    "surface": "#ECFEF2",
+    "surface": "#F6F6F6",
     "text": "#1E2330",
     "muted": "#6D7179",
     "action": "#E9C0E9",
     "on_action": "#111111",
-    "action_text": "#806A80",
+    "action_text": "#1E2330",
     "accent2": "#D2E823",
     "border": "#E0E0E2",
     "dark": false,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 8,
     "pill": false,
     "density": "airy",
-    "adjusted": true
+    "adjusted": false
    },
    "platforms": [
     "mobile",
@@ -1638,6 +1654,7 @@
     "dark": true,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 8,
     "pill": false,
     "density": "airy",
@@ -1707,6 +1724,7 @@
     "dark": false,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 8,
     "pill": false,
     "density": "airy",
@@ -1780,16 +1798,17 @@
     "muted": "#6D6D6D",
     "action": "#FFF083",
     "on_action": "#111111",
-    "action_text": "#736C3B",
+    "action_text": "#222222",
     "accent2": null,
     "border": "#DADADA",
     "dark": false,
     "font_display": "Inter Tight",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 8,
     "pill": false,
     "density": "airy",
-    "adjusted": true
+    "adjusted": false
    },
    "platforms": [
     "website"
@@ -1858,6 +1877,7 @@
     "dark": false,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 16,
     "pill": false,
     "density": "airy",
@@ -1944,6 +1964,7 @@
     "dark": false,
     "font_display": "Arial",
     "font_body": "Arial",
+    "font_mono": "JetBrains Mono",
     "radius": 4,
     "pill": false,
     "density": "airy",
@@ -1996,12 +2017,12 @@
       "#006A59",
       "#DFF9F2",
       "#EEE8E3",
-      "#B6AEA5",
-      "#27455C"
+      "#B6AEA5"
      ],
      "text": [
       "#2A2623",
-      "#35495E"
+      "#35495E",
+      "#27455C"
      ],
      "action": [],
      "border": [],
@@ -2023,22 +2044,23 @@
    ],
    "rules_excerpt": "",
    "preview": {
-    "bg": "#006A59",
-    "surface": "#0D7161",
-    "text": "#DFDEDE",
-    "muted": "#D7DBDF",
-    "action": "#DFDEDE",
-    "on_action": "#111111",
-    "action_text": "#DFDEDE",
+    "bg": "#DFF9F2",
+    "surface": "#EEE8E3",
+    "text": "#2A2623",
+    "muted": "#35495E",
+    "action": "#006A59",
+    "on_action": "#FFFFFF",
+    "action_text": "#006A59",
     "accent2": null,
-    "border": "#1F7A6C",
-    "dark": true,
+    "border": "#C6DBD5",
+    "dark": false,
     "font_display": "system-ui",
     "font_body": "system-ui",
+    "font_mono": "JetBrains Mono",
     "radius": 10,
     "pill": false,
     "density": "regular",
-    "adjusted": true
+    "adjusted": false
    },
    "platforms": [
     "website"
@@ -2104,22 +2126,23 @@
    ],
    "rules_excerpt": "",
    "preview": {
-    "bg": "#27455C",
-    "surface": "#324E64",
-    "text": "#F3F4F6",
-    "muted": "#A5B2BB",
+    "bg": "#FFFFFF",
+    "surface": "#F6F6F6",
+    "text": "#1A1C1F",
+    "muted": "#717274",
     "action": "#005EB8",
     "on_action": "#FFFFFF",
-    "action_text": "#8CB7DF",
+    "action_text": "#005EB8",
     "accent2": null,
-    "border": "#445E72",
-    "dark": true,
+    "border": "#DFDFE0",
+    "dark": false,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 8,
     "pill": false,
     "density": "compact",
-    "adjusted": true
+    "adjusted": false
    },
    "platforms": [
     "mobile"
@@ -2197,6 +2220,7 @@
     "dark": true,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 16,
     "pill": false,
     "density": "compact",
@@ -2285,6 +2309,7 @@
     "dark": false,
     "font_display": "Arial",
     "font_body": "Arial",
+    "font_mono": "JetBrains Mono",
     "radius": 0,
     "pill": false,
     "density": "regular",
@@ -2335,8 +2360,7 @@
     ],
     "palette_roles": {
      "bg": [
-      "#F1F5F9",
-      "#00A37F"
+      "#F1F5F9"
      ],
      "text": [
       "#0F172A",
@@ -2344,7 +2368,8 @@
       "#5C6F8A"
      ],
      "action": [
-      "#007A5F"
+      "#007A5F",
+      "#00A37F"
      ],
      "border": [],
      "state": [],
@@ -2371,11 +2396,12 @@
     "action": "#007A5F",
     "on_action": "#FFFFFF",
     "action_text": "#007A5F",
-    "accent2": null,
+    "accent2": "#00A37F",
     "border": "#D1D6DC",
     "dark": false,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 8,
     "pill": true,
     "density": "airy",
@@ -2457,6 +2483,7 @@
     "dark": false,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 8,
     "pill": false,
     "density": "airy",
@@ -2539,6 +2566,7 @@
     "dark": false,
     "font_display": "Inter",
     "font_body": "Inter",
+    "font_mono": "JetBrains Mono",
     "radius": 6,
     "pill": false,
     "density": "compact",
