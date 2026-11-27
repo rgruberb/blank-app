@@ -50,6 +50,51 @@ Cada skill de tema tem:
 
 - `projetos/marca-pessoal-app/`: app de gestão de marca pessoal, com as decisões D1–D8, os itens obrigatórios do dia 1 e a síntese da pesquisa em `references/sintese.md`.
 
+## Instalar como plugin (recomendado: atualiza sem copiar pastas)
+
+Esta repo é um **marketplace de plugins** do Claude Code (`design-skills`), com 3 plugins:
+
+| Plugin | O que traz |
+|---|---|
+| `design-ui` | As 13 skills de design: plataforma, segmento e tema |
+| `quant-investing` | Validação de estratégias de investimento |
+| `marca-pessoal-app` | Skill exclusiva do app de marca pessoal. Instale só na repo desse app |
+
+**No seu computador (todos os projetos).** No terminal:
+
+```bash
+claude plugin marketplace add rgruberb/blank-app
+claude plugin install design-ui@design-skills
+claude plugin install quant-investing@design-skills
+```
+
+Ou, dentro do Claude Code: `/plugin install design-ui --marketplace rgruberb/blank-app` (e o mesmo para `quant-investing`).
+
+**Para atualizar** depois de mudanças no `main`:
+
+```bash
+claude plugin marketplace update design-skills
+claude plugin update design-ui@design-skills
+```
+
+**Em outra repo (vale também para as sessões na nuvem dessa repo).** Acrescente ao `.claude/settings.json` daquela repo (junte com o que já existir):
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "design-skills": { "source": { "source": "github", "repo": "rgruberb/blank-app" } }
+  },
+  "enabledPlugins": {
+    "design-ui@design-skills": true
+  }
+}
+```
+
+Observações:
+- **Repo privada:** a instalação precisa de acesso ao GitHub com a sua conta. No computador, isso é o seu login do Git. Numa sessão na nuvem de outra repo, `rgruberb/blank-app` precisa estar acessível para a sessão; se não estiver, a sessão avisa.
+- **Dentro desta repo**, não instale o plugin: as skills já carregam pela pasta `.claude/skills/`, e instalar duplicaria os nomes.
+- **No chat do claude.ai** (fora do Claude Code), plugins não se aplicam: lá as skills entram por upload de `.zip` em Configurações → Skills.
+
 ## Skills de terceiros
 
 ```bash
