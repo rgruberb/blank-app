@@ -1,10 +1,18 @@
 #!/usr/bin/env bash
-# Instala as skills de terceiros (lista do Chase AI) em .claude/skills/ deste projeto
+# Instala as skills de terceiros (lista do Chase AI). Opções: --global, --extras, --extras-all (ver o fim do arquivo) em .claude/skills/ deste projeto
 # ou em ~/.claude/skills/ com --global. As skills NÃO são versionadas aqui
 # (licenças de transitions.dev e react-bits não permitem redistribuição).
 set -euo pipefail
 DEST="$(cd "$(dirname "$0")/.." && pwd)/.claude/skills"
-[ "${1:-}" = "--global" ] && DEST="$HOME/.claude/skills"
+GLOBAL=0; EXTRAS=0; EXTRAS_ALL=0
+for a in "$@"; do
+  case "$a" in
+    --global) GLOBAL=1 ;;
+    --extras) EXTRAS=1 ;;
+    --extras-all) EXTRAS=1; EXTRAS_ALL=1 ;;
+  esac
+done
+[ "$GLOBAL" = 1 ] && DEST="$HOME/.claude/skills"
 TMP="$(mktemp -d)"; trap 'rm -rf "$TMP"' EXIT
 mkdir -p "$DEST"
 
@@ -38,3 +46,38 @@ Instale componente por componente (guia: .claude/skills/ui-motion/references/rea
   npx jsrepo@latest add https://reactbits.dev/r/<Componente>-TS-TW
 Playwright CLI também precisa do binário:  npm install -g @playwright/cli
 MSG
+
+# ---------------------------------------------------------------------------
+# Extras opcionais: plugins citados nos posts do @gut1n (rodada 10A).
+# São instalados como PLUGINS do Claude Code (escopo do usuário), não como pastas ext-*.
+#   --extras      instala os 5 leves
+#   --extras-all  instala também os 2 pesados (ECC: ~1.089 skills; claude-mem: hooks + processo em segundo plano)
+# Não são usados para criar as skills deste repositório.
+# ---------------------------------------------------------------------------
+if [ "$EXTRAS" = 1 ]; then
+  if ! command -v claude >/dev/null 2>&1; then
+    echo "Extras: o CLI 'claude' não foi encontrado. Instale o Claude Code e rode de novo." >&2
+    exit 1
+  fi
+  # repo | plugin@marketplace | licença
+  EXTRA_PLUGINS=(
+    "cathrynlavery/diagram-design|diagram-design@diagram-design|MIT"
+    "multica-ai/andrej-karpathy-skills|andrej-karpathy-skills@karpathy-skills|licença não exibida no repositório"
+    "hugohe3/ppt-master|ppt-master@ppt-master|MIT"
+    "mattpocock/skills|mattpocock-skills@mattpocock|MIT"
+    "expo/skills|expo@expo-plugins|MIT"
+  )
+  if [ "$EXTRAS_ALL" = 1 ]; then
+    EXTRA_PLUGINS+=(
+      "affaan-m/ECC|ecc@ecc|MIT — ATENÇÃO: ~1.089 skills, aumenta bastante a lista de skills"
+      "thedotmack/claude-mem|claude-mem@thedotmack|Apache-2.0 — ATENÇÃO: instala hooks e um processo em segundo plano (memória entre sessões)"
+    )
+  fi
+  for e in "${EXTRA_PLUGINS[@]}"; do
+    IFS='|' read -r repo plugin lic <<< "$e"
+    echo "→ extra: $repo ($lic)"
+    claude plugin marketplace add "$repo" >/dev/null || { echo "   falhou ao adicionar o marketplace $repo" >&2; continue; }
+    claude plugin install "$plugin" || echo "   falhou ao instalar $plugin" >&2
+  done
+  echo "Extras instalados como plugins do usuário. Para remover: claude plugin uninstall <plugin>."
+fi
