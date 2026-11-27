@@ -1,6 +1,6 @@
 # Plano: catálogo de templates por segmento (Artifact)
 
-Status: **aguardando a Rodada 10** (`rodada-10A.md`, `rodada-10B.md` + imagens). Depois que ela chegar, o catálogo é construído.
+Status: **aguardando a Rodada 10**. Plano atualizado em 27/11 com componentes avulsos, nomes e busca. (`rodada-10A.md`, `rodada-10B.md` + imagens). Depois que ela chegar, o catálogo é construído.
 
 ## Decisões do usuário (27/11/2026)
 - **Conteúdo:** o catálogo COMPLETO de referências disponíveis. Os templates não têm número fixo: entram todas as direções visuais relevantes que as referências sustentarem.
@@ -8,6 +8,8 @@ Status: **aguardando a Rodada 10** (`rodada-10A.md`, `rodada-10B.md` + imagens).
 - **Saída ao escolher:** um prompt / `CLAUDE.md` pronto para colar no projeto.
 - **Prévias:** o próprio usuário escolhe quais plataformas ver: app mobile, app desktop/painel e website/landing (filtro, várias ao mesmo tempo).
 - **Quando:** só depois da Rodada 10.
+- **Componentes avulsos (27/11):** além de um template inteiro, o usuário pode escolher componentes soltos (ex.: um card de valor, uma tab bar, um toast, um padrão de tabela) e misturar com o template ou usar sem ele.
+- **Nomes e busca (27/11):** TUDO tem nome único e pesquisável (segmentos, templates, componentes e referências).
 
 ## Estrutura planejada
 1. **Navegação:** 6 segmentos (financeiro, CRM, publicidade, marca pessoal, saúde, jurídico) + "Geral".
@@ -21,8 +23,24 @@ Status: **aguardando a Rodada 10** (`rodada-10A.md`, `rodada-10B.md` + imagens).
    - prévias ao vivo, desenhadas a partir dos tokens (mockups originais, não cópia), nas plataformas que o usuário marcar;
    - regras do segmento: tom, o que nunca animar, números, regulação e anti-padrões;
    - as referências que o inspiraram.
-5. **Escolha → kit:** botão que gera o prompt / `CLAUDE.md` com a direção escolhida, as plataformas, os tokens em CSS, as regras de UI/UX e quais skills usar (`segmento-*`, plataforma, temas), com "Copiar" e "Baixar .md".
-6. **Persistência leve:** lembrar a última escolha e os filtros no navegador. Opcional; a página funciona sem isso.
+5. **Componentes avulsos:** uma aba "Componentes" com todos os componentes catalogados (vindos dos templates, das skills e das referências). Cada um tem:
+   - nome, categoria (navegação, dados, formulário, feedback, motion, layout…), segmentos e plataformas;
+   - prévia ao vivo;
+   - regras de UI/UX: alvos, estados, motion, acessibilidade, anti-padrões;
+   - tokens que usa e referências de origem.
+   O usuário marca vários ("carrinho de seleção"), e eles entram no kit junto com o template, ou sozinhos.
+6. **Escolha → kit:** botão que gera o prompt / `CLAUDE.md` com a direção escolhida, as plataformas, os tokens em CSS, as regras de UI/UX e quais skills usar (`segmento-*`, plataforma, temas), com "Copiar" e "Baixar .md".
+7. **Persistência leve:** lembrar a última escolha e os filtros no navegador. Opcional; a página funciona sem isso.
+
+## Nomes e busca
+- **Todo item tem um nome legível e um código estável**, usado no prompt gerado para o Claude saber exatamente o que foi escolhido:
+  - Segmento: `FIN` financeiro, `CRM`, `PUB` publicidade, `MPE` marca pessoal, `SAU` saúde, `JUR` jurídico, `GER` geral.
+  - Template: `TPL-FIN-01 · Sóbrio institucional`.
+  - Componente: `CMP-NAV-03 · Tab bar com indicador que desliza`.
+  - Referência: `REF-0123 · Vaulto, finance dashboard (@shohan.designs)`.
+- **Busca única** (campo no topo, atalho `/` ou `⌘K`) por nome, código, segmento, plataforma, categoria, autor, cor (hex) e tag.
+- **Filtros combinados** com a busca. Resultados agrupados por tipo: templates, componentes e referências.
+- **Os nomes ficam registrados no `catalogo.json`.** Se o mesmo nome for usado nas skills, o prompt gerado pode citar `TPL-…`/`CMP-…`/`REF-…` e o Claude acha a regra correspondente.
 
 ## Data de adição (como calcular)
 1. Data em que o link foi enviado, pelos exports do WhatsApp, quando houver.
@@ -32,4 +50,4 @@ Status: **aguardando a Rodada 10** (`rodada-10A.md`, `rodada-10B.md` + imagens).
 ## Cuidados técnicos
 - **Tamanho:** são centenas de imagens, o que passa do limite de 16 MB da página. Usar o armazenamento de assets do Artifact ou miniaturas otimizadas (~400 px, WebP) com link para a imagem grande.
 - **Privacidade:** as imagens são de terceiros. O Artifact fica privado; se for compartilhado, a página avisa que é referência pessoal.
-- **Fonte única:** a página lê um `catalogo.json` gerado a partir dos `visual-index.md` e das fichas, para não ficar dessincronizada das skills.
+- **Fonte única:** a página lê um `catalogo.json` gerado a partir dos `visual-index.md` e das fichas, para não ficar dessincronizada das skills. O `catalogo.json` também guarda códigos, nomes, tags e datas dos templates, componentes e referências, e é versionado na repo.
