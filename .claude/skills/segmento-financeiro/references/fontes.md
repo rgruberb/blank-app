@@ -49,7 +49,7 @@ públicas. Legenda: ✅ aberto e lido · 🔒 conteúdo útil não renderizou / 
 ## Posts da 10A sem imagem legível (só texto)
 | ID | autor | URL | o que aproveitar |
 |---|---|---|---|
-| `DgPLR1SDouB` | @webdesignssphere | https://www.instagram.com/p/DgPLR1SDouB/ (URL montada pelo ID; não verificado) | trading cripto escuro com verde neon; filtros de tempo a um toque; saldo e ativos à esquerda; ação principal no único gradiente; Deposit/Buy ao lado do gráfico; ficha: fonte Akshar, ≈ #FFFFFF, #B4E33B, #8F2B4B, #00B38C, #000000 (leitura aproximada) → `TPL-FIN-05` |
+| `DgPLR1SDouB` | @webdesignssphere | — (URL não registrada na 10A; só o ID) | trading cripto escuro com verde neon; filtros de tempo a um toque; saldo e ativos à esquerda; ação principal no único gradiente; Deposit/Buy ao lado do gráfico; ficha: fonte Akshar, ≈ #FFFFFF, #B4E33B, #8F2B4B, #00B38C, #000000 (leitura aproximada) → `TPL-FIN-05` |
 | `DfxspuNBjye` (Threshold) | @ui.iliasmiah000 | — | imobiliário/financiamento: prazos de contrato e de financiamento numa só timeline; prévia de impacto antes de aprovar (segmento "geral" na 10A; útil para crédito imobiliário, inferência) |
 
 ## Lacunas

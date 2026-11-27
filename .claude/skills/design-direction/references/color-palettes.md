@@ -130,3 +130,20 @@ acento quente (laranja/âmbar/coral), o mesmo do catálogo acima.
 - Limite: o gerador de paletas do Coolors entrega cores bonitas, não **papéis** (fundo/superfície/texto/acento); mapeie
   cada hex para um token antes de exportar e confira o Tailwind exportado à mão.
 
+
+## Ajustes finos de cor (rodada 10A)
+
+- **Degradê sem "cinza no meio"**: misturar em sRGB/HSL apaga a saturação no centro (ex.: azul → laranja passa por um
+  cinza sujo). Interpole em **OKLCH**: `linear-gradient(in oklch 90deg, …)` e defina tokens em `oklch()` em vez de HSL
+  (@fabianocarvalhojr `Df5pCOhmYuP`, "Cores em OKLCH"; @aniakubow `De16ULetFoR`, "Have you ever noticed this in
+  gradients?", com ruído SVG `feTurbulence` por cima). Receita em `ui-motion` → `css-recipes.md` §14.
+- **Borda com transparência** (`rgb(0 0 0 / .08)` ou branco com alpha no escuro) em vez de hex sólido: a mesma borda
+  serve em qualquer superfície da rampa (mesma fonte).
+- **Foto de produto com fundo branco** sobre superfície clara: `mix-blend-mode: multiply` some com o branco (mesma fonte).
+- **Uma cor lidera** (@wejustclick.me `Dft07xmDJkm`, "Choose the Right Color Palette"): poucas cores bem escolhidas,
+  uma dominante. Reforça o 2+1 e o 60/30/10 acima.
+- **Gradiente no CTA** (@webdesignssphere `DgPLR1SDouB`, dashboard de trading: "a ação principal é o único card com
+  gradiente"): diverge do fix 1 de `ux-patterns` → `dark-patterns.md` §B ("um accent chapado"). **Vale o acento
+  chapado** como padrão; gradiente só se fizer parte da marca e aparecer em **um** elemento por tela (regra 3 desta
+  skill: o acento vai só no que deve ser clicado). Prioridade: as duas são skills de tema; a regra anti-slop vem de
+  auditoria e a outra é um conceito de vitrine.

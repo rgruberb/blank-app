@@ -119,7 +119,7 @@ Nielsen Norman Group.
 ## 5. Galerias de benchmarking (rodada 9C)
 | Fonte | Status | Melhor uso | Limite |
 |---|---|---|---|
-| [Mobbin](https://mobbin.com) | 🔒 biblioteca exige login | fluxos reais de apps iOS (onboarding, paywall, perfil), seção Animations | sem login não lista nada; MCP só Pro/Team |
+| [Mobbin](https://mobbin.com) | 🔒 biblioteca exige login | fluxos reais de apps iOS (onboarding, paywall, perfil), seção Animations | sem login não lista nada; **MCP só a partir do Pro (US$ 10/mês anual)**: o conector instalado aqui responde "requires a paid plan" (rodada 10C) |
 | [Dribbble](https://dribbble.com/tags/ui-ux-design) | ✅ com anti-bot após ~20 shots | tendência visual de telas e dashboards | shots editados, sem estados vazio/erro |
 | [Behance](https://www.behance.net) | ✅ | **estudos de caso completos** (processo + várias telas), ex. Nomey, Cook | muitos cases de estudante; filtre por apreciações |
 | [Awwwards](https://www.awwwards.com/websites/portfolio/) | ✅ | landing/portfólio, motion e tipografia | premia sites pesados demais para app/PWA |
@@ -127,6 +127,15 @@ Nielsen Norman Group.
 | [SiteInspire](https://www.siteinspire.com/websites) | ✅ | layout editorial e tipografia forte | acervo de agências; filtro por URL não aplica |
 | [Coolors](https://coolors.co/contrast-checker) | ✅ | validar contraste de tokens (`color-palettes.md`) | paleta bonita ≠ papéis semânticos |
 | [Typewolf](https://www.typewolf.com/google-fonts) | ✅ | fontes open source com vários pesos (`typography-pairing.md`) | muitas fontes da home são pagas |
+| [Refero](https://refero.design) | MCP pago (rodada 10C) | telas e fluxos reais de produtos; citado em @outskill.io `DfpBdb0E2JP` | plano Pro/Team/Lifetime para o MCP |
+| [ScreensDesign](https://screensdesign.com) (antigo UI Sources) | MCP no Pro (rodada C2) | apps de maior faturamento: telas, fluxos, receita | foco em app mobile |
+| Godly → [recent.design](https://recent.design) | só a home vista (C2) | sites escolhidos a dedo (`DfpBdb0E2JP`); filtros Web, Interface, Motion | API/feed não verificados |
+| [Page Flows](https://pageflows.com) | assinatura (C2) | fluxos em vídeo iOS/Android/web/e-mail | sem API/MCP |
+| [designeer.xyz](https://designeer.xyz) | ✅ (rodada 10A) | catálogo curado (Finds, Inspiration, Resources, Tools, Portfolios; filtros Interface/Motion/3D) | cards patrocinados misturados |
+
+**Buscar referências por programa** (APIs, MCPs, feeds, ranking das 5 melhores, "Mobbin exige plano pago"):
+`reference-apis.md`. As 5 galerias que @outskill.io (`DfpBdb0E2JP`, rodada 10A) recomenda — Godly, Mobbin, Awwwards,
+Landbook, Refero — estão todas nesta tabela.
 
 ## 6. Lacunas conhecidas
 - **PT-BR:** só 1 canal ativo de UX/UI (Hericky Alencar), 1 grupo grande (UI UX Brasil) e 1 de Ionic; nenhuma

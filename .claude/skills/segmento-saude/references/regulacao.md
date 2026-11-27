@@ -24,7 +24,7 @@ Fonte: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm
 
 ## Outras
 - **ANVISA:** não verificado (nenhuma norma aplicável à interface localizada neste escopo).
-- **CDC e CONAR** (identificação de publicidade): ver `segmento-publicidade` se existir; não detalhado aqui.
+- **CDC e CONAR** (identificação de publicidade): ver `segmento-publicidade`; não detalhado aqui.
 - Conselhos de outras profissões (odontologia, psicologia, fisioterapia, nutrição): **não verificados**. Não presuma que
   as regras do CFM valem para eles.
 - Receita digital/atestado eletrônico: norma específica **não verificada**; para tipos de assinatura eletrônica ver

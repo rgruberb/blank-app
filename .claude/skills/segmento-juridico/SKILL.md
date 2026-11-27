@@ -1,6 +1,6 @@
 ---
 name: segmento-juridico
-description: Camada de SEGMENTO jurídico (código JUR) para qualquer empresa do setor — escritório de advocacia, departamento jurídico, legaltech, consulta processual, gestão de processos e prazos, contratos e assinatura eletrônica. Traz tom sóbrio e claro, paleta medida (GOV.UK #1D70B8/#0B0C0C, Jusbrasil #0F172A/#007A5F, DocuSign, Clio), corpo 19px/16px (GOV.UK), leitura longa em coluna estreita, motion mínimo e nunca em prazo/valor/assinar, Provimento OAB 205/2021 (sem preço como gancho, sem promessa de resultado, sem logo da OAB), tipos de assinatura da Lei 14.063/2020, linguagem simples, templates TPL-JUR e componentes CMP-JUR. Use em "escritório de advocacia", "site de advogado", "jurídico", "advogado", "processos", "prazos", "consulta processual", "contratos", "assinatura eletrônica", "legaltech", "OAB", "petição".
+description: 'Camada de SEGMENTO jurídico (código JUR) para qualquer empresa do setor — escritório de advocacia, departamento jurídico, legaltech, consulta processual, gestão de processos e prazos, contratos e assinatura eletrônica. Traz tom sóbrio e claro, paleta medida (GOV.UK #1D70B8/#0B0C0C, Jusbrasil #0F172A/#007A5F, DocuSign, Clio), corpo 19px/16px (GOV.UK), leitura longa em coluna estreita, motion mínimo e nunca em prazo/valor/assinar, Provimento OAB 205/2021 (sem preço como gancho, sem promessa de resultado, sem logo da OAB), tipos de assinatura da Lei 14.063/2020, linguagem simples, templates TPL-JUR e componentes CMP-JUR. Use em "escritório de advocacia", "site de advogado", "jurídico", "advogado", "processos", "prazos", "consulta processual", "contratos", "assinatura eletrônica", "legaltech", "OAB", "petição".'
 ---
 
 # Segmento: Jurídico (JUR)
@@ -44,7 +44,7 @@ norma pede publicidade **"sóbria, discreta e informativa"** (Provimento 205/202
 
 **Densidade**
 - **Média, com blocos de texto longo**: coluna estreita para peça/contrato; gestão (processos, prazos) densa
-  (inferência). Leitura: medida 60–75 caracteres (complemento; ver `ux-patterns/references/typography-and-touch.md`).
+  (inferência). Leitura: medida 45–75 caracteres, `max-width: 60ch` (`ux-patterns/references/typography-and-touch.md`).
 
 **Motion**
 - Mínimo; GOV.UK como referência de motion nulo. **Nunca animar** (inferência): prazos, valores, cláusulas, botão de
