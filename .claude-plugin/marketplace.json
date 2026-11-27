@@ -1,0 +1,71 @@
+{
+  "name": "design-skills",
+  "owner": {
+    "name": "rgruberb",
+    "url": "https://github.com/rgruberb"
+  },
+  "metadata": {
+    "description": "Skills de design, UI/UX por plataforma e por segmento, e de validação de estratégias de investimento."
+  },
+  "plugins": [
+    {
+      "name": "design-ui",
+      "source": "./",
+      "strict": false,
+      "description": "13 skills de design: plataforma (website, app desktop, app mobile), segmento (financeiro, CRM, publicidade, marca pessoal, saúde, jurídico) e tema (direção de arte, motion, UX, dashboards), com regras, templates, componentes e imagens de referência.",
+      "category": "design",
+      "keywords": [
+        "design",
+        "ui",
+        "ux",
+        "motion",
+        "dashboard",
+        "segmentos"
+      ],
+      "skills": [
+        "./.claude/skills/website-ui",
+        "./.claude/skills/desktop-app-ui",
+        "./.claude/skills/mobile-app-ui",
+        "./.claude/skills/segmento-financeiro",
+        "./.claude/skills/segmento-crm",
+        "./.claude/skills/segmento-publicidade",
+        "./.claude/skills/segmento-marca-pessoal",
+        "./.claude/skills/segmento-saude",
+        "./.claude/skills/segmento-juridico",
+        "./.claude/skills/design-direction",
+        "./.claude/skills/ui-motion",
+        "./.claude/skills/ux-patterns",
+        "./.claude/skills/dashboard-ui"
+      ]
+    },
+    {
+      "name": "quant-investing",
+      "source": "./",
+      "strict": false,
+      "description": "Validação quantitativa de estratégias de investimento e backtests (Monte Carlo, walk-forward, Deflated Sharpe, armadilhas, avaliação de fontes). Conteúdo educacional.",
+      "category": "finance",
+      "keywords": [
+        "backtest",
+        "quant",
+        "investimentos"
+      ],
+      "skills": [
+        "./.claude/skills/quant-investing"
+      ]
+    },
+    {
+      "name": "marca-pessoal-app",
+      "source": "./",
+      "strict": false,
+      "description": "Skill exclusiva do app de gestão de marca pessoal (decisões D1–D8, tokens, síntese da pesquisa). Instale só na repo desse app.",
+      "category": "design",
+      "keywords": [
+        "app",
+        "marca pessoal"
+      ],
+      "skills": [
+        "./projetos/marca-pessoal-app"
+      ]
+    }
+  ]
+}
