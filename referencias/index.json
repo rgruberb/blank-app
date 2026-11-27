@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-27T23:14:28Z",
+ "gerado_em": "2026-11-27T23:21:23Z",
  "fontes": {
   "scratch": "<scratchpad da sessão>",
   "pastas": [
@@ -78,33 +78,37 @@
      {
       "arquivo": "reels/DeoGCPlzKOs/frame-1.jpg",
       "t": 0.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DeoGCPlzKOs/frame-2.jpg",
       "t": 2.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DeoGCPlzKOs/frame-3.jpg",
       "t": 5.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DeoGCPlzKOs/loop.webp",
      "inicio": 0.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 164142
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 311300
     },
     "imagem": "reels/DeoGCPlzKOs/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DeoGCPlzKOs.mp4",
+   "video_w": 1440,
+   "video_h": 2560
   },
   {
    "id_post": "Dd9nhiOyrZU",
@@ -145,39 +149,43 @@
      {
       "arquivo": "reels/Dd9nhiOyrZU/frame-1.jpg",
       "t": 2.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dd9nhiOyrZU/frame-2.jpg",
       "t": 5.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dd9nhiOyrZU/frame-3.jpg",
       "t": 10.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dd9nhiOyrZU/frame-4.jpg",
       "t": 16.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/Dd9nhiOyrZU/loop.webp",
-     "inicio": 6.5,
+     "inicio": 7.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 258010
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 435160
     },
     "imagem": "reels/Dd9nhiOyrZU/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/Dd9nhiOyrZU.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DfFBFpXDZLv",
@@ -276,39 +284,43 @@
      {
       "arquivo": "reels/DfIaULMIRC-/frame-1.jpg",
       "t": 1.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfIaULMIRC-/frame-2.jpg",
       "t": 5.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfIaULMIRC-/frame-3.jpg",
       "t": 10.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfIaULMIRC-/frame-4.jpg",
       "t": 13.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfIaULMIRC-/loop.webp",
      "inicio": 6.5,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 325642
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 598356
     },
     "imagem": "reels/DfIaULMIRC-/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfIaULMIRC-.mp4",
+   "video_w": 1440,
+   "video_h": 2560
   },
   {
    "id_post": "DfKxflroHj3",
@@ -348,39 +360,43 @@
      {
       "arquivo": "reels/DfKxflroHj3/frame-1.jpg",
       "t": 2.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfKxflroHj3/frame-2.jpg",
       "t": 4.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfKxflroHj3/frame-3.jpg",
       "t": 7.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfKxflroHj3/frame-4.jpg",
       "t": 9.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfKxflroHj3/loop.webp",
      "inicio": 2.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 321320
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 553276
     },
     "imagem": "reels/DfKxflroHj3/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfKxflroHj3.mp4",
+   "video_w": 1440,
+   "video_h": 2560
   },
   {
    "id_post": "DfSIP2iBuFI",
@@ -419,26 +435,26 @@
      {
       "arquivo": "reels/DfSIP2iBuFI/frame-1.jpg",
       "t": 1.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfSIP2iBuFI/frame-2.jpg",
       "t": 9.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfSIP2iBuFI/frame-3.jpg",
       "t": 14.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfSIP2iBuFI/frame-4.jpg",
       "t": 18.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
@@ -447,11 +463,15 @@
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 304320
+     "fps": 12,
+     "bytes": 310722
     },
     "imagem": "reels/DfSIP2iBuFI/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfSIP2iBuFI.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DfVlIwHISSv",
@@ -491,26 +511,26 @@
      {
       "arquivo": "reels/DfVlIwHISSv/frame-1.jpg",
       "t": 1.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfVlIwHISSv/frame-2.jpg",
       "t": 5.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfVlIwHISSv/frame-3.jpg",
       "t": 9.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfVlIwHISSv/frame-4.jpg",
       "t": 13.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
@@ -519,11 +539,15 @@
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 392080
+     "fps": 12,
+     "bytes": 488508
     },
     "imagem": "reels/DfVlIwHISSv/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfVlIwHISSv.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "Dfa860wIQn4",
@@ -561,39 +585,43 @@
      {
       "arquivo": "reels/Dfa860wIQn4/frame-1.jpg",
       "t": 0.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfa860wIQn4/frame-2.jpg",
       "t": 6.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfa860wIQn4/frame-3.jpg",
       "t": 11.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfa860wIQn4/frame-4.jpg",
       "t": 15.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/Dfa860wIQn4/loop.webp",
      "inicio": 9.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 359536
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 647790
     },
     "imagem": "reels/Dfa860wIQn4/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/Dfa860wIQn4.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "Dfc-Q-0yy0W",
@@ -633,39 +661,43 @@
      {
       "arquivo": "reels/Dfc-Q-0yy0W/frame-1.jpg",
       "t": 3.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfc-Q-0yy0W/frame-2.jpg",
       "t": 6.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfc-Q-0yy0W/frame-3.jpg",
       "t": 10.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfc-Q-0yy0W/frame-4.jpg",
       "t": 16.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/Dfc-Q-0yy0W/loop.webp",
      "inicio": 9.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 365172
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 671586
     },
     "imagem": "reels/Dfc-Q-0yy0W/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/Dfc-Q-0yy0W.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DfyFShTounu",
@@ -710,39 +742,43 @@
      {
       "arquivo": "reels/DfyFShTounu/frame-1.jpg",
       "t": 0.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfyFShTounu/frame-2.jpg",
       "t": 5.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfyFShTounu/frame-3.jpg",
       "t": 9.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfyFShTounu/frame-4.jpg",
       "t": 16.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
      "arquivo": "reels/DfyFShTounu/loop.webp",
-     "inicio": 4.31,
+     "inicio": 5.5,
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 155238
+     "fps": 12,
+     "bytes": 179108
     },
     "imagem": "reels/DfyFShTounu/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfyFShTounu.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DUEjWRukT_2",
@@ -779,40 +815,44 @@
     "frames": [
      {
       "arquivo": "reels/DUEjWRukT_2/frame-1.jpg",
-      "t": 25.25,
-      "w": 900,
-      "h": 1600
+      "t": 4.25,
+      "w": 720,
+      "h": 1280
      },
      {
       "arquivo": "reels/DUEjWRukT_2/frame-2.jpg",
-      "t": 26.25,
-      "w": 900,
-      "h": 1600
+      "t": 25.25,
+      "w": 720,
+      "h": 1280
      },
      {
       "arquivo": "reels/DUEjWRukT_2/frame-3.jpg",
       "t": 45.75,
-      "w": 900,
-      "h": 1600
+      "w": 720,
+      "h": 1280
      },
      {
       "arquivo": "reels/DUEjWRukT_2/frame-4.jpg",
       "t": 61.25,
-      "w": 900,
-      "h": 1600
+      "w": 720,
+      "h": 1280
      }
     ],
     "loop": {
      "arquivo": "reels/DUEjWRukT_2/loop.webp",
      "inicio": 22.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 7944
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 18186
     },
     "imagem": "reels/DUEjWRukT_2/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DUEjWRukT_2.mp4",
+   "video_w": 720,
+   "video_h": 1280
   },
   {
    "id_post": "DXRpZTTMr9a",
@@ -849,40 +889,44 @@
     "frames": [
      {
       "arquivo": "reels/DXRpZTTMr9a/frame-1.jpg",
-      "t": 8.75,
-      "w": 900,
-      "h": 1600
+      "t": 9.25,
+      "w": 720,
+      "h": 1280
      },
      {
       "arquivo": "reels/DXRpZTTMr9a/frame-2.jpg",
-      "t": 22.25,
-      "w": 900,
-      "h": 1600
+      "t": 13.75,
+      "w": 720,
+      "h": 1280
      },
      {
       "arquivo": "reels/DXRpZTTMr9a/frame-3.jpg",
-      "t": 42.75,
-      "w": 900,
-      "h": 1600
+      "t": 30.25,
+      "w": 720,
+      "h": 1280
      },
      {
       "arquivo": "reels/DXRpZTTMr9a/frame-4.jpg",
-      "t": 43.75,
-      "w": 900,
-      "h": 1600
+      "t": 42.25,
+      "w": 720,
+      "h": 1280
      }
     ],
     "loop": {
      "arquivo": "reels/DXRpZTTMr9a/loop.webp",
-     "inicio": 19.0,
+     "inicio": 17.5,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 41578
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 49422
     },
     "imagem": "reels/DXRpZTTMr9a/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DXRpZTTMr9a.mp4",
+   "video_w": 720,
+   "video_h": 1280
   },
   {
    "id_post": "DZ2Dp5wt0pJ",
@@ -919,40 +963,44 @@
     "frames": [
      {
       "arquivo": "reels/DZ2Dp5wt0pJ/frame-1.jpg",
-      "t": 10.25,
-      "w": 900,
-      "h": 1600
+      "t": 9.75,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DZ2Dp5wt0pJ/frame-2.jpg",
       "t": 22.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DZ2Dp5wt0pJ/frame-3.jpg",
-      "t": 36.25,
-      "w": 900,
-      "h": 1600
+      "t": 30.25,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DZ2Dp5wt0pJ/frame-4.jpg",
-      "t": 46.75,
-      "w": 900,
-      "h": 1600
+      "t": 43.25,
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DZ2Dp5wt0pJ/loop.webp",
-     "inicio": 18.5,
+     "inicio": 19.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 87238
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 164422
     },
     "imagem": "reels/DZ2Dp5wt0pJ/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DZ2Dp5wt0pJ.mp4",
+   "video_w": 1440,
+   "video_h": 2560
   },
   {
    "id_post": "DbfG6fuPE9y",
@@ -987,33 +1035,37 @@
      {
       "arquivo": "reels/DbfG6fuPE9y/frame-1.jpg",
       "t": 0.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DbfG6fuPE9y/frame-2.jpg",
       "t": 1.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DbfG6fuPE9y/frame-3.jpg",
       "t": 3.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DbfG6fuPE9y/loop.webp",
      "inicio": 0.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 58714
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 91390
     },
     "imagem": "reels/DbfG6fuPE9y/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DbfG6fuPE9y.mp4",
+   "video_w": 1440,
+   "video_h": 2560
   },
   {
    "id_post": "Dc-4jNbtyJg",
@@ -1052,39 +1104,43 @@
      {
       "arquivo": "reels/Dc-4jNbtyJg/frame-1.jpg",
       "t": 3.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dc-4jNbtyJg/frame-2.jpg",
       "t": 35.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dc-4jNbtyJg/frame-3.jpg",
       "t": 49.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dc-4jNbtyJg/frame-4.jpg",
       "t": 67.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/Dc-4jNbtyJg/loop.webp",
      "inicio": 40.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 46304
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 94480
     },
     "imagem": "reels/Dc-4jNbtyJg/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/Dc-4jNbtyJg.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "Dd25eCoBJGr",
@@ -1122,40 +1178,44 @@
     "frames": [
      {
       "arquivo": "reels/Dd25eCoBJGr/frame-1.jpg",
-      "t": 15.25,
-      "w": 900,
-      "h": 1600
+      "t": 13.75,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dd25eCoBJGr/frame-2.jpg",
-      "t": 25.75,
-      "w": 900,
-      "h": 1600
+      "t": 25.25,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dd25eCoBJGr/frame-3.jpg",
       "t": 49.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dd25eCoBJGr/frame-4.jpg",
       "t": 72.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/Dd25eCoBJGr/loop.webp",
-     "inicio": 11.5,
+     "inicio": 24.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 133344
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 263174
     },
     "imagem": "reels/Dd25eCoBJGr/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/Dd25eCoBJGr.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "Dd4UtBDBsIS",
@@ -1193,40 +1253,44 @@
     "frames": [
      {
       "arquivo": "reels/Dd4UtBDBsIS/frame-1.jpg",
-      "t": 14.75,
-      "w": 900,
-      "h": 1600
+      "t": 15.75,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dd4UtBDBsIS/frame-2.jpg",
-      "t": 27.25,
-      "w": 900,
-      "h": 1600
+      "t": 27.75,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dd4UtBDBsIS/frame-3.jpg",
       "t": 53.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dd4UtBDBsIS/frame-4.jpg",
-      "t": 79.75,
-      "w": 900,
-      "h": 1600
+      "t": 78.25,
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/Dd4UtBDBsIS/loop.webp",
-     "inicio": 51.5,
+     "inicio": 38.5,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 156560
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 275868
     },
     "imagem": "reels/Dd4UtBDBsIS/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/Dd4UtBDBsIS.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DdRneVWhBSY",
@@ -1262,40 +1326,44 @@
     "frames": [
      {
       "arquivo": "reels/DdRneVWhBSY/frame-1.jpg",
-      "t": 16.75,
-      "w": 900,
-      "h": 1600
+      "t": 8.25,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DdRneVWhBSY/frame-2.jpg",
-      "t": 28.25,
-      "w": 900,
-      "h": 1600
+      "t": 16.75,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DdRneVWhBSY/frame-3.jpg",
-      "t": 34.25,
-      "w": 900,
-      "h": 1600
+      "t": 28.75,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DdRneVWhBSY/frame-4.jpg",
-      "t": 42.75,
-      "w": 900,
-      "h": 1600
+      "t": 40.25,
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DdRneVWhBSY/loop.webp",
-     "inicio": 13.15,
+     "inicio": 11.5,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 89222
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 142126
     },
     "imagem": "reels/DdRneVWhBSY/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DdRneVWhBSY.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DdtzWoMhLtW",
@@ -1332,40 +1400,44 @@
     "frames": [
      {
       "arquivo": "reels/DdtzWoMhLtW/frame-1.jpg",
-      "t": 42.75,
-      "w": 900,
-      "h": 1600
+      "t": 9.25,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DdtzWoMhLtW/frame-2.jpg",
-      "t": 43.75,
-      "w": 900,
-      "h": 1600
+      "t": 16.25,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DdtzWoMhLtW/frame-3.jpg",
-      "t": 44.75,
-      "w": 900,
-      "h": 1600
+      "t": 28.25,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DdtzWoMhLtW/frame-4.jpg",
-      "t": 45.75,
-      "w": 900,
-      "h": 1600
+      "t": 43.75,
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DdtzWoMhLtW/loop.webp",
-     "inicio": 14.34,
+     "inicio": 15.5,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 117806
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 230278
     },
     "imagem": "reels/DdtzWoMhLtW/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DdtzWoMhLtW.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "Ddy5RJOha1U",
@@ -1405,40 +1477,44 @@
     "frames": [
      {
       "arquivo": "reels/Ddy5RJOha1U/frame-1.jpg",
-      "t": 22.75,
-      "w": 900,
-      "h": 1600
+      "t": 23.25,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Ddy5RJOha1U/frame-2.jpg",
       "t": 59.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Ddy5RJOha1U/frame-3.jpg",
       "t": 83.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Ddy5RJOha1U/frame-4.jpg",
       "t": 102.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/Ddy5RJOha1U/loop.webp",
-     "inicio": 58.0,
+     "inicio": 58.5,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 98672
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 188456
     },
     "imagem": "reels/Ddy5RJOha1U/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/Ddy5RJOha1U.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "De12lc1vUmr",
@@ -1480,33 +1556,37 @@
      {
       "arquivo": "reels/De12lc1vUmr/frame-1.jpg",
       "t": 0.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/De12lc1vUmr/frame-2.jpg",
       "t": 2.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/De12lc1vUmr/frame-3.jpg",
       "t": 4.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/De12lc1vUmr/loop.webp",
      "inicio": 0.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 145758
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 279422
     },
     "imagem": "reels/De12lc1vUmr/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/De12lc1vUmr.mp4",
+   "video_w": 1440,
+   "video_h": 2560
   },
   {
    "id_post": "De1j52PFdpL",
@@ -1543,33 +1623,37 @@
      {
       "arquivo": "reels/De1j52PFdpL/frame-1.jpg",
       "t": 0.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/De1j52PFdpL/frame-2.jpg",
       "t": 2.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/De1j52PFdpL/frame-3.jpg",
       "t": 4.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/De1j52PFdpL/loop.webp",
      "inicio": 1.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 367614
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 691842
     },
     "imagem": "reels/De1j52PFdpL/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/De1j52PFdpL.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "De4B0UxPXIk",
@@ -1608,39 +1692,43 @@
      {
       "arquivo": "reels/De4B0UxPXIk/frame-1.jpg",
       "t": 20.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/De4B0UxPXIk/frame-2.jpg",
       "t": 39.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/De4B0UxPXIk/frame-3.jpg",
       "t": 74.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/De4B0UxPXIk/frame-4.jpg",
       "t": 106.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
      "arquivo": "reels/De4B0UxPXIk/loop.webp",
-     "inicio": 53.0,
+     "inicio": 1.0,
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 73860
+     "fps": 12,
+     "bytes": 116360
     },
     "imagem": "reels/De4B0UxPXIk/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/De4B0UxPXIk.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DeUr5-AhdvQ",
@@ -1678,39 +1766,43 @@
      {
       "arquivo": "reels/DeUr5-AhdvQ/frame-1.jpg",
       "t": 17.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DeUr5-AhdvQ/frame-2.jpg",
       "t": 32.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DeUr5-AhdvQ/frame-3.jpg",
       "t": 60.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DeUr5-AhdvQ/frame-4.jpg",
       "t": 92.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
      "arquivo": "reels/DeUr5-AhdvQ/loop.webp",
-     "inicio": 89.0,
+     "inicio": 43.0,
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 101374
+     "fps": 12,
+     "bytes": 108154
     },
     "imagem": "reels/DeUr5-AhdvQ/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DeUr5-AhdvQ.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "Del7XTgsuwI",
@@ -1750,39 +1842,43 @@
      {
       "arquivo": "reels/Del7XTgsuwI/frame-1.jpg",
       "t": 14.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Del7XTgsuwI/frame-2.jpg",
       "t": 31.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Del7XTgsuwI/frame-3.jpg",
       "t": 60.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Del7XTgsuwI/frame-4.jpg",
       "t": 90.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
      "arquivo": "reels/Del7XTgsuwI/loop.webp",
-     "inicio": 45.0,
+     "inicio": 29.5,
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 172652
+     "fps": 12,
+     "bytes": 181230
     },
     "imagem": "reels/Del7XTgsuwI/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/Del7XTgsuwI.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "Deoi1WhP83h",
@@ -1826,39 +1922,43 @@
      {
       "arquivo": "reels/Deoi1WhP83h/frame-1.jpg",
       "t": 2.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Deoi1WhP83h/frame-2.jpg",
       "t": 6.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Deoi1WhP83h/frame-3.jpg",
       "t": 9.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Deoi1WhP83h/frame-4.jpg",
       "t": 13.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/Deoi1WhP83h/loop.webp",
      "inicio": 1.5,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 370864
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 690730
     },
     "imagem": "reels/Deoi1WhP83h/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/Deoi1WhP83h.mp4",
+   "video_w": 1440,
+   "video_h": 2560
   },
   {
    "id_post": "DerGbJAhUTm",
@@ -1894,26 +1994,26 @@
      {
       "arquivo": "reels/DerGbJAhUTm/frame-1.jpg",
       "t": 15.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DerGbJAhUTm/frame-2.jpg",
-      "t": 34.75,
-      "w": 900,
-      "h": 1600
+      "t": 35.75,
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DerGbJAhUTm/frame-3.jpg",
       "t": 64.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DerGbJAhUTm/frame-4.jpg",
       "t": 92.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
@@ -1922,11 +2022,15 @@
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 117946
+     "fps": 12,
+     "bytes": 120360
     },
     "imagem": "reels/DerGbJAhUTm/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DerGbJAhUTm.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DfCWtPgPcfP",
@@ -1966,33 +2070,37 @@
      {
       "arquivo": "reels/DfCWtPgPcfP/frame-1.jpg",
       "t": 0.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfCWtPgPcfP/frame-2.jpg",
       "t": 2.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfCWtPgPcfP/frame-3.jpg",
       "t": 4.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfCWtPgPcfP/loop.webp",
      "inicio": 0.14,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 99416
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 196156
     },
     "imagem": "reels/DfCWtPgPcfP/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfCWtPgPcfP.mp4",
+   "video_w": 1440,
+   "video_h": 2560
   },
   {
    "id_post": "DfHrMboTVDZ",
@@ -2034,33 +2142,37 @@
      {
       "arquivo": "reels/DfHrMboTVDZ/frame-1.jpg",
       "t": 0.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfHrMboTVDZ/frame-2.jpg",
       "t": 1.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfHrMboTVDZ/frame-3.jpg",
       "t": 3.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfHrMboTVDZ/loop.webp",
      "inicio": 0.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 177912
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 300168
     },
     "imagem": "reels/DfHrMboTVDZ/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfHrMboTVDZ.mp4",
+   "video_w": 1440,
+   "video_h": 2560
   },
   {
    "id_post": "DfKPFDwz2aA",
@@ -2103,33 +2215,37 @@
      {
       "arquivo": "reels/DfKPFDwz2aA/frame-1.jpg",
       "t": 0.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfKPFDwz2aA/frame-2.jpg",
       "t": 2.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfKPFDwz2aA/frame-3.jpg",
       "t": 3.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfKPFDwz2aA/loop.webp",
      "inicio": 0.06,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 141324
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 261694
     },
     "imagem": "reels/DfKPFDwz2aA/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfKPFDwz2aA.mp4",
+   "video_w": 1440,
+   "video_h": 2560
   },
   {
    "id_post": "DfMH6YTTcwx",
@@ -2168,33 +2284,37 @@
      {
       "arquivo": "reels/DfMH6YTTcwx/frame-1.jpg",
       "t": 0.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfMH6YTTcwx/frame-2.jpg",
       "t": 3.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfMH6YTTcwx/frame-3.jpg",
       "t": 5.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfMH6YTTcwx/loop.webp",
      "inicio": 0.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 133042
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 220278
     },
     "imagem": "reels/DfMH6YTTcwx/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfMH6YTTcwx.mp4",
+   "video_w": 1440,
+   "video_h": 2560
   },
   {
    "id_post": "DfP6EoLBtgg",
@@ -2231,39 +2351,43 @@
      {
       "arquivo": "reels/DfP6EoLBtgg/frame-1.jpg",
       "t": 2.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfP6EoLBtgg/frame-2.jpg",
       "t": 25.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfP6EoLBtgg/frame-3.jpg",
       "t": 34.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfP6EoLBtgg/frame-4.jpg",
       "t": 45.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
      "arquivo": "reels/DfP6EoLBtgg/loop.webp",
-     "inicio": 21.0,
+     "inicio": 20.5,
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 143276
+     "fps": 12,
+     "bytes": 148510
     },
     "imagem": "reels/DfP6EoLBtgg/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfP6EoLBtgg.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DfPJo9UBJ7D",
@@ -2303,26 +2427,26 @@
      {
       "arquivo": "reels/DfPJo9UBJ7D/frame-1.jpg",
       "t": 3.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfPJo9UBJ7D/frame-2.jpg",
       "t": 9.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfPJo9UBJ7D/frame-3.jpg",
       "t": 23.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfPJo9UBJ7D/frame-4.jpg",
       "t": 44.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
@@ -2331,11 +2455,15 @@
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 157918
+     "fps": 12,
+     "bytes": 160992
     },
     "imagem": "reels/DfPJo9UBJ7D/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfPJo9UBJ7D.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DfTr-mwhZT3",
@@ -2373,26 +2501,26 @@
      {
       "arquivo": "reels/DfTr-mwhZT3/frame-1.jpg",
       "t": 2.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfTr-mwhZT3/frame-2.jpg",
       "t": 23.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfTr-mwhZT3/frame-3.jpg",
       "t": 30.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfTr-mwhZT3/frame-4.jpg",
       "t": 41.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
@@ -2401,11 +2529,15 @@
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 107768
+     "fps": 12,
+     "bytes": 109914
     },
     "imagem": "reels/DfTr-mwhZT3/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfTr-mwhZT3.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DfV39ohhwAC",
@@ -2449,40 +2581,44 @@
     "frames": [
      {
       "arquivo": "reels/DfV39ohhwAC/frame-1.jpg",
-      "t": 9.75,
-      "w": 900,
-      "h": 900
+      "t": 2.75,
+      "w": 720,
+      "h": 720
      },
      {
       "arquivo": "reels/DfV39ohhwAC/frame-2.jpg",
-      "t": 12.75,
-      "w": 900,
-      "h": 900
+      "t": 9.75,
+      "w": 720,
+      "h": 720
      },
      {
       "arquivo": "reels/DfV39ohhwAC/frame-3.jpg",
-      "t": 18.25,
-      "w": 900,
-      "h": 900
+      "t": 12.75,
+      "w": 720,
+      "h": 720
      },
      {
       "arquivo": "reels/DfV39ohhwAC/frame-4.jpg",
       "t": 20.75,
-      "w": 900,
-      "h": 900
+      "w": 720,
+      "h": 720
      }
     ],
     "loop": {
      "arquivo": "reels/DfV39ohhwAC/loop.webp",
      "inicio": 12.5,
      "duracao": 4.0,
-     "w": 360,
-     "h": 360,
-     "bytes": 284314
+     "w": 540,
+     "h": 540,
+     "fps": 12,
+     "bytes": 517746
     },
     "imagem": "reels/DfV39ohhwAC/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfV39ohhwAC.mp4",
+   "video_w": 720,
+   "video_h": 720
   },
   {
    "id_post": "DfVOGNnzR_D",
@@ -2520,39 +2656,43 @@
      {
       "arquivo": "reels/DfVOGNnzR_D/frame-1.jpg",
       "t": 5.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfVOGNnzR_D/frame-2.jpg",
       "t": 15.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfVOGNnzR_D/frame-3.jpg",
       "t": 26.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfVOGNnzR_D/frame-4.jpg",
       "t": 38.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
      "arquivo": "reels/DfVOGNnzR_D/loop.webp",
-     "inicio": 16.5,
+     "inicio": 14.5,
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 150758
+     "fps": 12,
+     "bytes": 157502
     },
     "imagem": "reels/DfVOGNnzR_D/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfVOGNnzR_D.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DfWjKQPhUbn",
@@ -2588,39 +2728,43 @@
      {
       "arquivo": "reels/DfWjKQPhUbn/frame-1.jpg",
       "t": 2.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfWjKQPhUbn/frame-2.jpg",
       "t": 22.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfWjKQPhUbn/frame-3.jpg",
       "t": 33.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfWjKQPhUbn/frame-4.jpg",
       "t": 41.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
      "arquivo": "reels/DfWjKQPhUbn/loop.webp",
-     "inicio": 19.5,
+     "inicio": 19.0,
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 140902
+     "fps": 12,
+     "bytes": 149816
     },
     "imagem": "reels/DfWjKQPhUbn/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfWjKQPhUbn.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DfZkZZ4hkuV",
@@ -2658,39 +2802,43 @@
      {
       "arquivo": "reels/DfZkZZ4hkuV/frame-1.jpg",
       "t": 2.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfZkZZ4hkuV/frame-2.jpg",
       "t": 20.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfZkZZ4hkuV/frame-3.jpg",
       "t": 29.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfZkZZ4hkuV/frame-4.jpg",
       "t": 37.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
      "arquivo": "reels/DfZkZZ4hkuV/loop.webp",
-     "inicio": 17.5,
+     "inicio": 17.0,
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 129584
+     "fps": 12,
+     "bytes": 147418
     },
     "imagem": "reels/DfZkZZ4hkuV/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfZkZZ4hkuV.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "Dfby7sPgMPU",
@@ -2728,26 +2876,26 @@
      {
       "arquivo": "reels/Dfby7sPgMPU/frame-1.jpg",
       "t": 3.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Dfby7sPgMPU/frame-2.jpg",
       "t": 19.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Dfby7sPgMPU/frame-3.jpg",
       "t": 33.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Dfby7sPgMPU/frame-4.jpg",
       "t": 69.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
@@ -2756,11 +2904,15 @@
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 369210
+     "fps": 12,
+     "bytes": 376284
     },
     "imagem": "reels/Dfby7sPgMPU/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/Dfby7sPgMPU.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DfcwOHLh76I",
@@ -2798,26 +2950,26 @@
      {
       "arquivo": "reels/DfcwOHLh76I/frame-1.jpg",
       "t": 2.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfcwOHLh76I/frame-2.jpg",
       "t": 17.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfcwOHLh76I/frame-3.jpg",
       "t": 31.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfcwOHLh76I/frame-4.jpg",
       "t": 48.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
@@ -2826,11 +2978,15 @@
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 162292
+     "fps": 12,
+     "bytes": 166466
     },
     "imagem": "reels/DfcwOHLh76I/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfcwOHLh76I.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DfemaTCBncA",
@@ -2869,39 +3025,43 @@
      {
       "arquivo": "reels/DfemaTCBncA/frame-1.jpg",
       "t": 2.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfemaTCBncA/frame-2.jpg",
       "t": 24.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfemaTCBncA/frame-3.jpg",
       "t": 38.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfemaTCBncA/frame-4.jpg",
       "t": 48.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
      "arquivo": "reels/DfemaTCBncA/loop.webp",
-     "inicio": 20.5,
+     "inicio": 2.0,
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 47974
+     "fps": 12,
+     "bytes": 142180
     },
     "imagem": "reels/DfemaTCBncA/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfemaTCBncA.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DffBnb2vlUn",
@@ -2943,34 +3103,38 @@
     "frames": [
      {
       "arquivo": "reels/DffBnb2vlUn/frame-1.jpg",
-      "t": 1.25,
-      "w": 900,
-      "h": 1600
+      "t": 0.75,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DffBnb2vlUn/frame-2.jpg",
       "t": 2.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DffBnb2vlUn/frame-3.jpg",
       "t": 4.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DffBnb2vlUn/loop.webp",
      "inicio": 0.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 115266
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 216576
     },
     "imagem": "reels/DffBnb2vlUn/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DffBnb2vlUn.mp4",
+   "video_w": 1440,
+   "video_h": 2560
   },
   {
    "id_post": "DfgcqeMBPCU",
@@ -3010,39 +3174,43 @@
      {
       "arquivo": "reels/DfgcqeMBPCU/frame-1.jpg",
       "t": 2.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfgcqeMBPCU/frame-2.jpg",
       "t": 18.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfgcqeMBPCU/frame-3.jpg",
       "t": 31.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfgcqeMBPCU/frame-4.jpg",
       "t": 46.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
      "arquivo": "reels/DfgcqeMBPCU/loop.webp",
-     "inicio": 12.5,
+     "inicio": 17.5,
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 154700
+     "fps": 12,
+     "bytes": 105962
     },
     "imagem": "reels/DfgcqeMBPCU/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfgcqeMBPCU.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DfkNvnePItL",
@@ -3084,20 +3252,20 @@
      {
       "arquivo": "reels/DfkNvnePItL/frame-1.jpg",
       "t": 0.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfkNvnePItL/frame-2.jpg",
       "t": 2.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfkNvnePItL/frame-3.jpg",
       "t": 4.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
@@ -3106,11 +3274,15 @@
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 120224
+     "fps": 12,
+     "bytes": 122872
     },
     "imagem": "reels/DfkNvnePItL/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfkNvnePItL.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "Dflzxq5Bqfj",
@@ -3146,26 +3318,26 @@
      {
       "arquivo": "reels/Dflzxq5Bqfj/frame-1.jpg",
       "t": 13.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Dflzxq5Bqfj/frame-2.jpg",
       "t": 26.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Dflzxq5Bqfj/frame-3.jpg",
       "t": 49.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Dflzxq5Bqfj/frame-4.jpg",
       "t": 69.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
@@ -3174,11 +3346,15 @@
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 382510
+     "fps": 12,
+     "bytes": 391244
     },
     "imagem": "reels/Dflzxq5Bqfj/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/Dflzxq5Bqfj.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DfreUkyBNQg",
@@ -3220,26 +3396,26 @@
      {
       "arquivo": "reels/DfreUkyBNQg/frame-1.jpg",
       "t": 12.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfreUkyBNQg/frame-2.jpg",
       "t": 32.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfreUkyBNQg/frame-3.jpg",
       "t": 58.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfreUkyBNQg/frame-4.jpg",
       "t": 70.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
@@ -3248,11 +3424,15 @@
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 114404
+     "fps": 12,
+     "bytes": 116614
     },
     "imagem": "reels/DfreUkyBNQg/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfreUkyBNQg.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DfrqAX9v59S",
@@ -3289,20 +3469,20 @@
      {
       "arquivo": "reels/DfrqAX9v59S/frame-1.jpg",
       "t": 0.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfrqAX9v59S/frame-2.jpg",
       "t": 2.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfrqAX9v59S/frame-3.jpg",
       "t": 3.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
@@ -3311,11 +3491,15 @@
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 128216
+     "fps": 12,
+     "bytes": 130728
     },
     "imagem": "reels/DfrqAX9v59S/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfrqAX9v59S.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DfvAY82DSvD",
@@ -3356,26 +3540,26 @@
      {
       "arquivo": "reels/DfvAY82DSvD/frame-1.jpg",
       "t": 0.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfvAY82DSvD/frame-2.jpg",
       "t": 4.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfvAY82DSvD/frame-3.jpg",
       "t": 7.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfvAY82DSvD/frame-4.jpg",
       "t": 9.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
@@ -3384,11 +3568,15 @@
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 190902
+     "fps": 12,
+     "bytes": 194676
     },
     "imagem": "reels/DfvAY82DSvD/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfvAY82DSvD.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "Dfvja0XCyIi",
@@ -3428,39 +3616,43 @@
      {
       "arquivo": "reels/Dfvja0XCyIi/frame-1.jpg",
       "t": 5.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Dfvja0XCyIi/frame-2.jpg",
       "t": 14.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Dfvja0XCyIi/frame-3.jpg",
-      "t": 24.75,
-      "w": 900,
-      "h": 1600
+      "t": 20.75,
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Dfvja0XCyIi/frame-4.jpg",
-      "t": 29.25,
-      "w": 900,
-      "h": 1600
+      "t": 24.75,
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
      "arquivo": "reels/Dfvja0XCyIi/loop.webp",
-     "inicio": 22.5,
+     "inicio": 12.0,
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 106408
+     "fps": 12,
+     "bytes": 113492
     },
     "imagem": "reels/Dfvja0XCyIi/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/Dfvja0XCyIi.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DfwavjimeIa",
@@ -3499,26 +3691,26 @@
      {
       "arquivo": "reels/DfwavjimeIa/frame-1.jpg",
       "t": 1.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfwavjimeIa/frame-2.jpg",
       "t": 4.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfwavjimeIa/frame-3.jpg",
       "t": 7.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfwavjimeIa/frame-4.jpg",
       "t": 10.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
@@ -3527,11 +3719,15 @@
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 237884
+     "fps": 12,
+     "bytes": 242450
     },
     "imagem": "reels/DfwavjimeIa/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfwavjimeIa.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DfwhC1riuuO",
@@ -3569,46 +3765,50 @@
      {
       "arquivo": "reels/DfwhC1riuuO/frame-1.jpg",
       "t": 2.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfwhC1riuuO/frame-2.jpg",
       "t": 10.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfwhC1riuuO/frame-3.jpg",
       "t": 17.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfwhC1riuuO/frame-4.jpg",
       "t": 23.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfwhC1riuuO/loop.webp",
      "inicio": 18.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 150676
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 242954
     },
     "imagem": "reels/DfwhC1riuuO/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfwhC1riuuO.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "ref_dribbble_dashboard-ui_2",
    "tipo": "galeria",
    "autor": "",
    "autor_nome": "",
-   "nome": "",
+   "nome": "dribbble · dashboard ui",
    "legenda": "",
    "legenda_completa": "",
    "url": "",
@@ -3619,10 +3819,12 @@
     "GER"
    ],
    "plataformas": [
-    "website"
+    "desktop"
    ],
    "o_que_mostra": "",
-   "tags": [],
+   "tags": [
+    "dashboard"
+   ],
    "skills": [
     "desktop-app-ui"
    ],
@@ -3775,39 +3977,43 @@
      {
       "arquivo": "reels/Dfui4V5BMbz/frame-1.jpg",
       "t": 2.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Dfui4V5BMbz/frame-2.jpg",
       "t": 5.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Dfui4V5BMbz/frame-3.jpg",
       "t": 9.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Dfui4V5BMbz/frame-4.jpg",
       "t": 11.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
      "arquivo": "reels/Dfui4V5BMbz/loop.webp",
      "inicio": 3.5,
-     "duracao": 3.0,
-     "w": 320,
-     "h": 568,
-     "bytes": 300596
+     "duracao": 4.0,
+     "w": 360,
+     "h": 640,
+     "fps": 12,
+     "bytes": 648082
     },
     "imagem": "reels/Dfui4V5BMbz/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/Dfui4V5BMbz.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DfpCOjIB1Rb",
@@ -3843,39 +4049,43 @@
      {
       "arquivo": "reels/DfpCOjIB1Rb/frame-1.jpg",
       "t": 2.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfpCOjIB1Rb/frame-2.jpg",
       "t": 4.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfpCOjIB1Rb/frame-3.jpg",
       "t": 9.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfpCOjIB1Rb/frame-4.jpg",
       "t": 11.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
      "arquivo": "reels/DfpCOjIB1Rb/loop.webp",
      "inicio": 3.5,
-     "duracao": 3.0,
-     "w": 300,
-     "h": 534,
-     "bytes": 374190
+     "duracao": 3.5,
+     "w": 360,
+     "h": 640,
+     "fps": 12,
+     "bytes": 675330
     },
     "imagem": "reels/DfpCOjIB1Rb/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfpCOjIB1Rb.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "Dfj_FGsTAVB",
@@ -3919,33 +4129,37 @@
      {
       "arquivo": "reels/Dfj_FGsTAVB/frame-1.jpg",
       "t": 0.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfj_FGsTAVB/frame-2.jpg",
       "t": 2.25,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfj_FGsTAVB/frame-3.jpg",
       "t": 4.75,
-      "w": 900,
-      "h": 1600
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/Dfj_FGsTAVB/loop.webp",
      "inicio": 0.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "bytes": 90886
+     "w": 540,
+     "h": 960,
+     "fps": 12,
+     "bytes": 165732
     },
     "imagem": "reels/Dfj_FGsTAVB/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/Dfj_FGsTAVB.mp4",
+   "video_w": 1440,
+   "video_h": 2560
   },
   {
    "id_post": "DfXoXVFPBfd",
@@ -3982,21 +4196,21 @@
     "frames": [
      {
       "arquivo": "reels/DfXoXVFPBfd/frame-1.jpg",
-      "t": 0.25,
-      "w": 900,
-      "h": 1600
+      "t": 0.75,
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfXoXVFPBfd/frame-2.jpg",
-      "t": 1.25,
-      "w": 900,
-      "h": 1600
+      "t": 2.25,
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfXoXVFPBfd/frame-3.jpg",
-      "t": 2.75,
-      "w": 900,
-      "h": 1600
+      "t": 4.75,
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
@@ -4005,11 +4219,15 @@
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 110522
+     "fps": 12,
+     "bytes": 112646
     },
     "imagem": "reels/DfXoXVFPBfd/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfXoXVFPBfd.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "DfeT74YvQaD",
@@ -4048,20 +4266,20 @@
      {
       "arquivo": "reels/DfeT74YvQaD/frame-1.jpg",
       "t": 0.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfeT74YvQaD/frame-2.jpg",
       "t": 2.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/DfeT74YvQaD/frame-3.jpg",
       "t": 4.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
@@ -4070,11 +4288,15 @@
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 119396
+     "fps": 12,
+     "bytes": 121566
     },
     "imagem": "reels/DfeT74YvQaD/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/DfeT74YvQaD.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "Dfr9S5yhlvX",
@@ -4108,39 +4330,43 @@
      {
       "arquivo": "reels/Dfr9S5yhlvX/frame-1.jpg",
       "t": 2.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Dfr9S5yhlvX/frame-2.jpg",
       "t": 4.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Dfr9S5yhlvX/frame-3.jpg",
       "t": 8.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Dfr9S5yhlvX/frame-4.jpg",
       "t": 13.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
      "arquivo": "reels/Dfr9S5yhlvX/loop.webp",
      "inicio": 3.0,
-     "duracao": 3.0,
-     "w": 300,
-     "h": 534,
-     "bytes": 367076
+     "duracao": 3.5,
+     "w": 360,
+     "h": 640,
+     "fps": 12,
+     "bytes": 643608
     },
     "imagem": "reels/Dfr9S5yhlvX/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/Dfr9S5yhlvX.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "Dfct0mNvg3f",
@@ -4180,20 +4406,20 @@
      {
       "arquivo": "reels/Dfct0mNvg3f/frame-1.jpg",
       "t": 0.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Dfct0mNvg3f/frame-2.jpg",
       "t": 2.25,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      },
      {
       "arquivo": "reels/Dfct0mNvg3f/frame-3.jpg",
       "t": 4.75,
-      "w": 900,
-      "h": 1600
+      "w": 360,
+      "h": 640
      }
     ],
     "loop": {
@@ -4202,11 +4428,15 @@
      "duracao": 4.0,
      "w": 360,
      "h": 640,
-     "bytes": 142106
+     "fps": 12,
+     "bytes": 144756
     },
     "imagem": "reels/Dfct0mNvg3f/frame-1.jpg"
    },
-   "fonte": "ig/vid"
+   "fonte": "ig/vid",
+   "origem_video": "ig/vid/Dfct0mNvg3f.mp4",
+   "video_w": 360,
+   "video_h": 640
   },
   {
    "id_post": "Dfr6X8qFPwC",
@@ -5786,11 +6016,359 @@
    "doc": "docs/achados/rodada-10A.md"
   },
   {
-   "id_post": "9A_apple-sheet-detents_1",
-   "tipo": "print",
+   "id_post": "9F_facebook-figma-uiux_1",
+   "tipo": "galeria",
    "autor": "",
    "autor_nome": "",
-   "nome": "9A_apple-sheet-detents_1.jpg",
+   "nome": "facebook figma uiux",
+   "legenda": "",
+   "legenda_completa": "",
+   "url": "",
+   "data_envio": "2026-11-23T12:51:44Z",
+   "data_envio_fonte": "upload",
+   "data_origem": null,
+   "segmentos": [
+    "GER"
+   ],
+   "plataformas": [
+    "website"
+   ],
+   "o_que_mostra": "",
+   "tags": [],
+   "skills": [],
+   "arquivos": {
+    "imagens": [
+     {
+      "arquivo": "prints/9F_facebook-figma-uiux_1.jpg",
+      "w": 883,
+      "h": 488
+     }
+    ],
+    "imagem": "prints/9F_facebook-figma-uiux_1.jpg"
+   },
+   "fonte": "nova/jpg9",
+   "doc": ""
+  },
+  {
+   "id_post": "9F_ionic-forum_1",
+   "tipo": "galeria",
+   "autor": "",
+   "autor_nome": "",
+   "nome": "ionic forum",
+   "legenda": "",
+   "legenda_completa": "",
+   "url": "",
+   "data_envio": "2026-11-23T12:51:44Z",
+   "data_envio_fonte": "upload",
+   "data_origem": null,
+   "segmentos": [
+    "GER"
+   ],
+   "plataformas": [
+    "website"
+   ],
+   "o_que_mostra": "",
+   "tags": [],
+   "skills": [],
+   "arquivos": {
+    "imagens": [
+     {
+      "arquivo": "prints/9F_ionic-forum_1.jpg",
+      "w": 883,
+      "h": 488
+     }
+    ],
+    "imagem": "prints/9F_ionic-forum_1.jpg"
+   },
+   "fonte": "nova/jpg9",
+   "doc": ""
+  },
+  {
+   "id_post": "9F_smashing-magazine_1",
+   "tipo": "galeria",
+   "autor": "",
+   "autor_nome": "",
+   "nome": "smashing magazine",
+   "legenda": "",
+   "legenda_completa": "",
+   "url": "",
+   "data_envio": "2026-11-23T12:51:44Z",
+   "data_envio_fonte": "upload",
+   "data_origem": null,
+   "segmentos": [
+    "GER"
+   ],
+   "plataformas": [
+    "website"
+   ],
+   "o_que_mostra": "",
+   "tags": [],
+   "skills": [],
+   "arquivos": {
+    "imagens": [
+     {
+      "arquivo": "prints/9F_smashing-magazine_1.jpg",
+      "w": 883,
+      "h": 488
+     }
+    ],
+    "imagem": "prints/9F_smashing-magazine_1.jpg"
+   },
+   "fonte": "nova/jpg9",
+   "doc": ""
+  },
+  {
+   "id_post": "9F_youtube-figma_1",
+   "tipo": "galeria",
+   "autor": "",
+   "autor_nome": "",
+   "nome": "youtube figma",
+   "legenda": "",
+   "legenda_completa": "",
+   "url": "",
+   "data_envio": "2026-11-23T12:51:44Z",
+   "data_envio_fonte": "upload",
+   "data_origem": null,
+   "segmentos": [
+    "GER"
+   ],
+   "plataformas": [
+    "website"
+   ],
+   "o_que_mostra": "",
+   "tags": [],
+   "skills": [],
+   "arquivos": {
+    "imagens": [
+     {
+      "arquivo": "prints/9F_youtube-figma_1.jpg",
+      "w": 702,
+      "h": 488
+     }
+    ],
+    "imagem": "prints/9F_youtube-figma_1.jpg"
+   },
+   "fonte": "nova/jpg9",
+   "doc": ""
+  },
+  {
+   "id_post": "9F_youtube-nngroup_1",
+   "tipo": "galeria",
+   "autor": "",
+   "autor_nome": "",
+   "nome": "youtube nngroup",
+   "legenda": "",
+   "legenda_completa": "",
+   "url": "",
+   "data_envio": "2026-11-23T12:51:44Z",
+   "data_envio_fonte": "upload",
+   "data_origem": null,
+   "segmentos": [
+    "GER"
+   ],
+   "plataformas": [
+    "website"
+   ],
+   "o_que_mostra": "",
+   "tags": [],
+   "skills": [],
+   "arquivos": {
+    "imagens": [
+     {
+      "arquivo": "prints/9F_youtube-nngroup_1.jpg",
+      "w": 702,
+      "h": 488
+     }
+    ],
+    "imagem": "prints/9F_youtube-nngroup_1.jpg"
+   },
+   "fonte": "nova/jpg9",
+   "doc": ""
+  },
+  {
+   "id_post": "ref_dribbble_ui-ux-design_1",
+   "tipo": "galeria",
+   "autor": "",
+   "autor_nome": "",
+   "nome": "dribbble · ui ux design",
+   "legenda": "",
+   "legenda_completa": "",
+   "url": "",
+   "data_envio": "2026-11-23T12:51:44Z",
+   "data_envio_fonte": "upload",
+   "data_origem": null,
+   "segmentos": [
+    "GER"
+   ],
+   "plataformas": [
+    "website"
+   ],
+   "o_que_mostra": "",
+   "tags": [],
+   "skills": [
+    "mobile-app-ui"
+   ],
+   "arquivos": {
+    "imagens": [
+     {
+      "arquivo": "prints/ref_dribbble_ui-ux-design_1.jpg",
+      "w": 960,
+      "h": 428
+     }
+    ],
+    "imagem": "prints/ref_dribbble_ui-ux-design_1.jpg"
+   },
+   "fonte": "nova/jpg9",
+   "doc": ""
+  },
+  {
+   "id_post": "ref_landbook_home_1",
+   "tipo": "galeria",
+   "autor": "",
+   "autor_nome": "",
+   "nome": "landbook · home",
+   "legenda": "",
+   "legenda_completa": "",
+   "url": "",
+   "data_envio": "2026-11-23T12:51:44Z",
+   "data_envio_fonte": "upload",
+   "data_origem": null,
+   "segmentos": [
+    "GER"
+   ],
+   "plataformas": [
+    "website"
+   ],
+   "o_que_mostra": "",
+   "tags": [],
+   "skills": [
+    "website-ui"
+   ],
+   "arquivos": {
+    "imagens": [
+     {
+      "arquivo": "prints/ref_landbook_home_1.jpg",
+      "w": 960,
+      "h": 428
+     }
+    ],
+    "imagem": "prints/ref_landbook_home_1.jpg"
+   },
+   "fonte": "nova/jpg9",
+   "doc": ""
+  },
+  {
+   "id_post": "ref_siteinspire_home_1",
+   "tipo": "galeria",
+   "autor": "",
+   "autor_nome": "",
+   "nome": "siteinspire · home",
+   "legenda": "",
+   "legenda_completa": "",
+   "url": "",
+   "data_envio": "2026-11-23T12:51:44Z",
+   "data_envio_fonte": "upload",
+   "data_origem": null,
+   "segmentos": [
+    "GER"
+   ],
+   "plataformas": [
+    "website"
+   ],
+   "o_que_mostra": "",
+   "tags": [],
+   "skills": [
+    "website-ui"
+   ],
+   "arquivos": {
+    "imagens": [
+     {
+      "arquivo": "prints/ref_siteinspire_home_1.jpg",
+      "w": 960,
+      "h": 428
+     }
+    ],
+    "imagem": "prints/ref_siteinspire_home_1.jpg"
+   },
+   "fonte": "nova/jpg9",
+   "doc": ""
+  },
+  {
+   "id_post": "tool_motion-react_1",
+   "tipo": "galeria",
+   "autor": "",
+   "autor_nome": "",
+   "nome": "motion react",
+   "legenda": "",
+   "legenda_completa": "",
+   "url": "",
+   "data_envio": "2026-11-23T12:51:44Z",
+   "data_envio_fonte": "upload",
+   "data_origem": null,
+   "segmentos": [
+    "GER"
+   ],
+   "plataformas": [
+    "website"
+   ],
+   "o_que_mostra": "",
+   "tags": [
+    "motion"
+   ],
+   "skills": [],
+   "arquivos": {
+    "imagens": [
+     {
+      "arquivo": "prints/tool_motion-react_1.jpg",
+      "w": 960,
+      "h": 428
+     }
+    ],
+    "imagem": "prints/tool_motion-react_1.jpg"
+   },
+   "fonte": "nova/jpg9",
+   "doc": ""
+  },
+  {
+   "id_post": "tool_shadcn-components_1",
+   "tipo": "galeria",
+   "autor": "",
+   "autor_nome": "",
+   "nome": "shadcn components",
+   "legenda": "",
+   "legenda_completa": "",
+   "url": "",
+   "data_envio": "2026-11-23T12:51:44Z",
+   "data_envio_fonte": "upload",
+   "data_origem": null,
+   "segmentos": [
+    "GER"
+   ],
+   "plataformas": [
+    "website"
+   ],
+   "o_que_mostra": "",
+   "tags": [],
+   "skills": [],
+   "arquivos": {
+    "imagens": [
+     {
+      "arquivo": "prints/tool_shadcn-components_1.jpg",
+      "w": 960,
+      "h": 428
+     }
+    ],
+    "imagem": "prints/tool_shadcn-components_1.jpg"
+   },
+   "fonte": "nova/jpg9",
+   "doc": ""
+  },
+  {
+   "id_post": "9A_apple-sheet-detents_1",
+   "tipo": "print",
+   "autor": "developer.apple.com",
+   "autor_nome": "",
+   "nome": "apple sheet detents",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://developer.apple.com/design/human-interface-guidelines/sheets",
@@ -5828,9 +6406,9 @@
   {
    "id_post": "9A_apple-tabbar_1",
    "tipo": "print",
-   "autor": "",
+   "autor": "developer.apple.com",
    "autor_nome": "",
-   "nome": "9A_apple-tabbar_1.jpg",
+   "nome": "apple tabbar",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://developer.apple.com/design/human-interface-guidelines/tab-bars",
@@ -5868,9 +6446,9 @@
   {
    "id_post": "9A_m3-canonical-feed_1",
    "tipo": "print",
-   "autor": "",
+   "autor": "m3.material.io",
    "autor_nome": "",
-   "nome": "9A_m3-canonical-feed_1.jpg",
+   "nome": "m3 canonical feed",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://m3.material.io/foundations/layout/canonical-examples/overview",
@@ -5907,9 +6485,9 @@
   {
    "id_post": "9A_m3-canonical-listdetail_1",
    "tipo": "print",
-   "autor": "",
+   "autor": "m3.material.io",
    "autor_nome": "",
-   "nome": "9A_m3-canonical-listdetail_1.jpg",
+   "nome": "m3 canonical listdetail",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://m3.material.io/foundations/layout/canonical-examples/overview",
@@ -5944,9 +6522,9 @@
   {
    "id_post": "9B_formularios_hoteltonight-botao-fixo_1",
    "tipo": "print",
-   "autor": "",
+   "autor": "nngroup.com",
    "autor_nome": "",
-   "nome": "",
+   "nome": "formularios · hoteltonight botao fixo",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://www.nngroup.com/articles/4-ios-rules-break/",
@@ -5984,9 +6562,9 @@
   {
    "id_post": "9B_navegacao_facebook-tabbar_1",
    "tipo": "print",
-   "autor": "",
+   "autor": "nngroup.com",
    "autor_nome": "",
-   "nome": "",
+   "nome": "navegacao · facebook tabbar",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://www.nngroup.com/articles/mobile-navigation-patterns/",
@@ -6023,9 +6601,9 @@
   {
    "id_post": "9D_figma-crm-dashboard-kit_1",
    "tipo": "galeria",
-   "autor": "",
+   "autor": "figma.com",
    "autor_nome": "",
-   "nome": "",
+   "nome": "figma crm dashboard kit",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://www.figma.com/community/file/1463555657173424575/crm-ui-kit-for-saas-dashboards",
@@ -6063,9 +6641,9 @@
   {
    "id_post": "9D_figma-ios27-kit_1",
    "tipo": "galeria",
-   "autor": "",
+   "autor": "figma.com",
    "autor_nome": "",
-   "nome": "",
+   "nome": "figma ios27 kit",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://www.figma.com/community/file/1651309003795292092/ios-and-ipados-27",
@@ -6103,9 +6681,9 @@
   {
    "id_post": "9D_figma-obra-shadcn-kit_1",
    "tipo": "galeria",
-   "autor": "",
+   "autor": "figma.com",
    "autor_nome": "",
-   "nome": "",
+   "nome": "figma obra shadcn kit",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://www.figma.com/community/file/1514746685758799870/shadcn-ui-kit-community-edition",
@@ -6142,9 +6720,9 @@
   {
    "id_post": "9D_framework7-ios26-kitchen-sink_1",
    "tipo": "print",
-   "autor": "",
+   "autor": "framework7.io",
    "autor_nome": "",
-   "nome": "",
+   "nome": "framework7 ios26 kitchen sink",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://framework7.io/react/kitchen-sink.html",
@@ -6181,9 +6759,9 @@
   {
    "id_post": "9D_ionic-ios-sheet-modal_1",
    "tipo": "print",
-   "autor": "",
+   "autor": "ionicframework.com",
    "autor_nome": "",
-   "nome": "",
+   "nome": "ionic ios sheet modal",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://ionicframework.com/docs/api/modal",
@@ -6222,9 +6800,9 @@
   {
    "id_post": "9D_ionic-ios-tab-bar_1",
    "tipo": "print",
-   "autor": "",
+   "autor": "ionicframework.com",
    "autor_nome": "",
-   "nome": "",
+   "nome": "ionic ios tab bar",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://ionicframework.com/docs/api/tabs",
@@ -6261,9 +6839,9 @@
   {
    "id_post": "9D_shadcn-blocks-dashboard_1",
    "tipo": "galeria",
-   "autor": "",
+   "autor": "ui.shadcn.com",
    "autor_nome": "",
-   "nome": "",
+   "nome": "shadcn blocks dashboard",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://ui.shadcn.com/blocks",
@@ -6301,9 +6879,9 @@
   {
    "id_post": "9D_shadcn-blocks-dashboard_2",
    "tipo": "galeria",
-   "autor": "",
+   "autor": "ui.shadcn.com",
    "autor_nome": "",
-   "nome": "",
+   "nome": "shadcn blocks dashboard",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://ui.shadcn.com/blocks",
@@ -6341,9 +6919,9 @@
   {
    "id_post": "9D_shadcn-drawer_1",
    "tipo": "print",
-   "autor": "",
+   "autor": "ui.shadcn.com",
    "autor_nome": "",
-   "nome": "",
+   "nome": "shadcn drawer",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://ui.shadcn.com/docs/components/drawer",
@@ -6380,9 +6958,9 @@
   {
    "id_post": "9D_shadcn-drawer_2",
    "tipo": "print",
-   "autor": "",
+   "autor": "ui.shadcn.com",
    "autor_nome": "",
-   "nome": "",
+   "nome": "shadcn drawer",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://ui.shadcn.com/docs/components/drawer",
@@ -6418,9 +6996,9 @@
   {
    "id_post": "9D_supabase-library-blocks_1",
    "tipo": "galeria",
-   "autor": "",
+   "autor": "supabase.com",
    "autor_nome": "",
-   "nome": "",
+   "nome": "supabase library blocks",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://supabase.com/library",
@@ -6461,7 +7039,7 @@
    "tipo": "print",
    "autor": "Carbon Design System (IBM, oficial)",
    "autor_nome": "",
-   "nome": "9A_carbon-easing-curves_1.jpg",
+   "nome": "carbon easing curves",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://www.carbondesignsystem.com/building-blocks/foundations/motion/overview",
@@ -6501,7 +7079,7 @@
    "tipo": "print",
    "autor": "NN/g (artigo)",
    "autor_nome": "",
-   "nome": "",
+   "nome": "dashboards · linha e barras",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://www.nngroup.com/articles/dashboards-preattentive/",
@@ -6545,7 +7123,7 @@
    "tipo": "print",
    "autor": "NN/g (`empty-state-interface-design`)",
    "autor_nome": "",
-   "nome": "",
+   "nome": "empty states · datadog",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://www.nngroup.com/articles/empty-state-interface-design/",
@@ -6584,7 +7162,7 @@
    "tipo": "print",
    "autor": "NN/g (`errors-forms-design-guidelines`)",
    "autor_nome": "",
-   "nome": "",
+   "nome": "formularios · slack forca senha",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://www.nngroup.com/articles/errors-forms-design-guidelines/",
@@ -6628,7 +7206,7 @@
    "tipo": "print",
    "autor": "NN/g (`permission-requests`)",
    "autor_nome": "",
-   "nome": "",
+   "nome": "permissoes · venmo camera negada",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://www.nngroup.com/articles/permission-requests/",
@@ -6668,7 +7246,7 @@
    "tipo": "print",
    "autor": "NN/g (`data-tables`)",
    "autor_nome": "",
-   "nome": "",
+   "nome": "tabelas · painel lateral crm",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://www.nngroup.com/articles/data-tables/",
@@ -6711,7 +7289,7 @@
    "tipo": "print",
    "autor": "NN/g (`tabs-used-right`)",
    "autor_nome": "",
-   "nome": "",
+   "nome": "tabs · google finance in page",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://www.nngroup.com/articles/tabs-used-right/",
@@ -6751,7 +7329,7 @@
    "tipo": "print",
    "autor": "NN/g (`touch-target-size`)",
    "autor_nome": "",
-   "nome": "",
+   "nome": "touch targets · target app",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://www.nngroup.com/articles/touch-target-size/",
@@ -6767,6 +7345,7 @@
    ],
    "o_que_mostra": "Home com botões primários grandes (~2 cm) e tab bar de 5 itens com rótulo",
    "tags": [
+    "mobile",
     "tab bar"
    ],
    "skills": [
@@ -6792,7 +7371,7 @@
    "tipo": "print",
    "autor": "motion.dev (Motion for React, oficial)",
    "autor_nome": "",
-   "nome": "",
+   "nome": "motion examples swipe",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://motion.dev/examples?platform=react&search=swipe",
@@ -6832,7 +7411,7 @@
    "tipo": "print",
    "autor": "Coolors",
    "autor_nome": "",
-   "nome": "9C_coolors_contrast-checker_1.jpg",
+   "nome": "coolors · contrast checker",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://coolors.co/contrast-checker/112a46-acc8e5",
@@ -6872,7 +7451,7 @@
    "tipo": "print",
    "autor": "Behance, \"Multiple Owners\" (Nomey)",
    "autor_nome": "",
-   "nome": "9C_perfil-criador_nomey_1.jpg",
+   "nome": "perfil criador · nomey",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://www.behance.net/gallery/254485187/Nomey-Creator-Monetization-Platform",
@@ -6915,7 +7494,7 @@
    "tipo": "print",
    "autor": "",
    "autor_nome": "",
-   "nome": "9C_perfil-criador_nomey_2.jpg",
+   "nome": "perfil criador · nomey",
    "legenda": "",
    "legenda_completa": "",
    "url": "",
@@ -6957,7 +7536,7 @@
    "tipo": "print",
    "autor": "",
    "autor_nome": "",
-   "nome": "9C_perfil-criador_nomey_3.jpg",
+   "nome": "perfil criador · nomey",
    "legenda": "",
    "legenda_completa": "",
    "url": "",
@@ -6998,7 +7577,7 @@
    "tipo": "print",
    "autor": "Behance, Suhani Barai (Cook)",
    "autor_nome": "",
-   "nome": "9C_propostas_cook_1.jpg",
+   "nome": "propostas · cook",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://www.behance.net/gallery/258614563/Cook-%28-CreatorBrand-Deals-App-%29",
@@ -7039,7 +7618,7 @@
    "tipo": "print",
    "autor": "",
    "autor_nome": "",
-   "nome": "9C_propostas_cook_2.jpg",
+   "nome": "propostas · cook",
    "legenda": "",
    "legenda_completa": "",
    "url": "",
@@ -7080,7 +7659,7 @@
    "tipo": "print",
    "autor": "Typewolf",
    "autor_nome": "",
-   "nome": "9C_typewolf_google-fonts_1.jpg",
+   "nome": "typewolf · google fonts",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://www.typewolf.com/google-fonts",
@@ -7122,7 +7701,7 @@
    "tipo": "galeria",
    "autor": "Dribbble (galeria da tag)",
    "autor_nome": "",
-   "nome": "",
+   "nome": "dribbble · dashboard ui",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://dribbble.com/tags/dashboard-ui",
@@ -7347,7 +7926,7 @@
     "imagens": [
      {
       "arquivo": "prints/10A_1A19QTSisE_1.jpg",
-      "w": 1200,
+      "w": 684,
       "h": 662
      }
     ],
@@ -8970,7 +9549,7 @@
    "tipo": "galeria",
    "autor": "Land-book",
    "autor_nome": "",
-   "nome": "9C_landing_land-book_1.jpg",
+   "nome": "Galeria Land-book com filtros",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://land-book.com",
@@ -9011,7 +9590,7 @@
    "tipo": "galeria",
    "autor": "Awwwards / Daniel Neath",
    "autor_nome": "",
-   "nome": "9C_portfolio_awwwards-daniel-neath_1.jpg",
+   "nome": "Portfólio de product design premiado",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://www.awwwards.com/sites/daniel-neath-product-design-portfolio",
@@ -9050,7 +9629,7 @@
    "tipo": "galeria",
    "autor": "SiteInspire",
    "autor_nome": "",
-   "nome": "9C_portfolio_siteinspire_1.jpg",
+   "nome": "Galeria SiteInspire com categorias",
    "legenda": "",
    "legenda_completa": "",
    "url": "https://www.siteinspire.com/websites",
@@ -9082,352 +9661,6 @@
      }
     ],
     "imagem": "prints/9C_portfolio_siteinspire_1.jpg"
-   },
-   "fonte": "nova/jpg9",
-   "doc": ""
-  },
-  {
-   "id_post": "9F_facebook-figma-uiux_1",
-   "tipo": "galeria",
-   "autor": "",
-   "autor_nome": "",
-   "nome": "",
-   "legenda": "",
-   "legenda_completa": "",
-   "url": "",
-   "data_envio": null,
-   "data_envio_fonte": null,
-   "data_origem": null,
-   "segmentos": [
-    "GER"
-   ],
-   "plataformas": [
-    "website"
-   ],
-   "o_que_mostra": "",
-   "tags": [],
-   "skills": [],
-   "arquivos": {
-    "imagens": [
-     {
-      "arquivo": "prints/9F_facebook-figma-uiux_1.jpg",
-      "w": 883,
-      "h": 488
-     }
-    ],
-    "imagem": "prints/9F_facebook-figma-uiux_1.jpg"
-   },
-   "fonte": "nova/jpg9",
-   "doc": ""
-  },
-  {
-   "id_post": "9F_ionic-forum_1",
-   "tipo": "galeria",
-   "autor": "",
-   "autor_nome": "",
-   "nome": "",
-   "legenda": "",
-   "legenda_completa": "",
-   "url": "",
-   "data_envio": null,
-   "data_envio_fonte": null,
-   "data_origem": null,
-   "segmentos": [
-    "GER"
-   ],
-   "plataformas": [
-    "website"
-   ],
-   "o_que_mostra": "",
-   "tags": [],
-   "skills": [],
-   "arquivos": {
-    "imagens": [
-     {
-      "arquivo": "prints/9F_ionic-forum_1.jpg",
-      "w": 883,
-      "h": 488
-     }
-    ],
-    "imagem": "prints/9F_ionic-forum_1.jpg"
-   },
-   "fonte": "nova/jpg9",
-   "doc": ""
-  },
-  {
-   "id_post": "9F_smashing-magazine_1",
-   "tipo": "galeria",
-   "autor": "",
-   "autor_nome": "",
-   "nome": "",
-   "legenda": "",
-   "legenda_completa": "",
-   "url": "",
-   "data_envio": null,
-   "data_envio_fonte": null,
-   "data_origem": null,
-   "segmentos": [
-    "GER"
-   ],
-   "plataformas": [
-    "website"
-   ],
-   "o_que_mostra": "",
-   "tags": [],
-   "skills": [],
-   "arquivos": {
-    "imagens": [
-     {
-      "arquivo": "prints/9F_smashing-magazine_1.jpg",
-      "w": 883,
-      "h": 488
-     }
-    ],
-    "imagem": "prints/9F_smashing-magazine_1.jpg"
-   },
-   "fonte": "nova/jpg9",
-   "doc": ""
-  },
-  {
-   "id_post": "9F_youtube-figma_1",
-   "tipo": "galeria",
-   "autor": "",
-   "autor_nome": "",
-   "nome": "",
-   "legenda": "",
-   "legenda_completa": "",
-   "url": "",
-   "data_envio": null,
-   "data_envio_fonte": null,
-   "data_origem": null,
-   "segmentos": [
-    "GER"
-   ],
-   "plataformas": [
-    "website"
-   ],
-   "o_que_mostra": "",
-   "tags": [],
-   "skills": [],
-   "arquivos": {
-    "imagens": [
-     {
-      "arquivo": "prints/9F_youtube-figma_1.jpg",
-      "w": 883,
-      "h": 488
-     }
-    ],
-    "imagem": "prints/9F_youtube-figma_1.jpg"
-   },
-   "fonte": "nova/jpg9",
-   "doc": ""
-  },
-  {
-   "id_post": "9F_youtube-nngroup_1",
-   "tipo": "galeria",
-   "autor": "",
-   "autor_nome": "",
-   "nome": "",
-   "legenda": "",
-   "legenda_completa": "",
-   "url": "",
-   "data_envio": null,
-   "data_envio_fonte": null,
-   "data_origem": null,
-   "segmentos": [
-    "GER"
-   ],
-   "plataformas": [
-    "website"
-   ],
-   "o_que_mostra": "",
-   "tags": [],
-   "skills": [],
-   "arquivos": {
-    "imagens": [
-     {
-      "arquivo": "prints/9F_youtube-nngroup_1.jpg",
-      "w": 883,
-      "h": 488
-     }
-    ],
-    "imagem": "prints/9F_youtube-nngroup_1.jpg"
-   },
-   "fonte": "nova/jpg9",
-   "doc": ""
-  },
-  {
-   "id_post": "ref_dribbble_ui-ux-design_1",
-   "tipo": "galeria",
-   "autor": "",
-   "autor_nome": "",
-   "nome": "",
-   "legenda": "",
-   "legenda_completa": "",
-   "url": "",
-   "data_envio": null,
-   "data_envio_fonte": null,
-   "data_origem": null,
-   "segmentos": [
-    "GER"
-   ],
-   "plataformas": [
-    "website"
-   ],
-   "o_que_mostra": "",
-   "tags": [],
-   "skills": [
-    "mobile-app-ui"
-   ],
-   "arquivos": {
-    "imagens": [
-     {
-      "arquivo": "prints/ref_dribbble_ui-ux-design_1.jpg",
-      "w": 960,
-      "h": 428
-     }
-    ],
-    "imagem": "prints/ref_dribbble_ui-ux-design_1.jpg"
-   },
-   "fonte": "nova/jpg9",
-   "doc": ""
-  },
-  {
-   "id_post": "ref_landbook_home_1",
-   "tipo": "galeria",
-   "autor": "",
-   "autor_nome": "",
-   "nome": "",
-   "legenda": "",
-   "legenda_completa": "",
-   "url": "",
-   "data_envio": null,
-   "data_envio_fonte": null,
-   "data_origem": null,
-   "segmentos": [
-    "GER"
-   ],
-   "plataformas": [
-    "website"
-   ],
-   "o_que_mostra": "",
-   "tags": [],
-   "skills": [
-    "website-ui"
-   ],
-   "arquivos": {
-    "imagens": [
-     {
-      "arquivo": "prints/ref_landbook_home_1.jpg",
-      "w": 960,
-      "h": 428
-     }
-    ],
-    "imagem": "prints/ref_landbook_home_1.jpg"
-   },
-   "fonte": "nova/jpg9",
-   "doc": ""
-  },
-  {
-   "id_post": "ref_siteinspire_home_1",
-   "tipo": "galeria",
-   "autor": "",
-   "autor_nome": "",
-   "nome": "",
-   "legenda": "",
-   "legenda_completa": "",
-   "url": "",
-   "data_envio": null,
-   "data_envio_fonte": null,
-   "data_origem": null,
-   "segmentos": [
-    "GER"
-   ],
-   "plataformas": [
-    "website"
-   ],
-   "o_que_mostra": "",
-   "tags": [],
-   "skills": [
-    "website-ui"
-   ],
-   "arquivos": {
-    "imagens": [
-     {
-      "arquivo": "prints/ref_siteinspire_home_1.jpg",
-      "w": 960,
-      "h": 428
-     }
-    ],
-    "imagem": "prints/ref_siteinspire_home_1.jpg"
-   },
-   "fonte": "nova/jpg9",
-   "doc": ""
-  },
-  {
-   "id_post": "tool_motion-react_1",
-   "tipo": "galeria",
-   "autor": "",
-   "autor_nome": "",
-   "nome": "",
-   "legenda": "",
-   "legenda_completa": "",
-   "url": "",
-   "data_envio": null,
-   "data_envio_fonte": null,
-   "data_origem": null,
-   "segmentos": [
-    "GER"
-   ],
-   "plataformas": [
-    "website"
-   ],
-   "o_que_mostra": "",
-   "tags": [],
-   "skills": [],
-   "arquivos": {
-    "imagens": [
-     {
-      "arquivo": "prints/tool_motion-react_1.jpg",
-      "w": 960,
-      "h": 428
-     }
-    ],
-    "imagem": "prints/tool_motion-react_1.jpg"
-   },
-   "fonte": "nova/jpg9",
-   "doc": ""
-  },
-  {
-   "id_post": "tool_shadcn-components_1",
-   "tipo": "galeria",
-   "autor": "",
-   "autor_nome": "",
-   "nome": "",
-   "legenda": "",
-   "legenda_completa": "",
-   "url": "",
-   "data_envio": null,
-   "data_envio_fonte": null,
-   "data_origem": null,
-   "segmentos": [
-    "GER"
-   ],
-   "plataformas": [
-    "website"
-   ],
-   "o_que_mostra": "",
-   "tags": [],
-   "skills": [],
-   "arquivos": {
-    "imagens": [
-     {
-      "arquivo": "prints/tool_shadcn-components_1.jpg",
-      "w": 960,
-      "h": 428
-     }
-    ],
-    "imagem": "prints/tool_shadcn-components_1.jpg"
    },
    "fonte": "nova/jpg9",
    "doc": ""

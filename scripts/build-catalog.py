@@ -10,8 +10,8 @@ Fontes:
   das skills que não estão na biblioteca; as que estão viram alias, sem duplicar).
 Exclui ext-* e quant-investing (não é de design).
 
-Saída: catalogo/catalogo.json e catalogo/media/<REF>/{thumb.webp (480 px), 1.jpg..N.jpg (grandes),
-loop.webp (reels)}. Códigos REF em ordem de data de envio (o mais antigo é REF-0001).
+Saída: catalogo/catalogo.json e catalogo/media/<REF>/{thumb.webp (640 px, 2x de um card de ~320 px),
+1.jpg..N.jpg (resolução cheia, copiadas da biblioteca/skill), loop.webp (reels)}. Códigos REF em ordem de data de envio (o mais antigo é REF-0001).
 
 Uso (da raiz da repo):  python3 -I scripts/build-catalog.py [--no-thumbs]
 Requer só a stdlib e o ffmpeg (com libwebp) no PATH para as miniaturas.
@@ -787,6 +787,9 @@ def probe_size(path):
 
 # ---------------------------------------------------------------- biblioteca referencias/ (fonte principal)
 ID_RX = r"[A-Za-z0-9_\-]{10,11}"
+MAX_MEDIA_FILES = 509
+THUMB_REUSE_W = 800
+THUMB_REUSE_BYTES = 120 * 1024
 KIND_LABEL = {"reel": "Reel", "carrossel": "Carrossel", "print": "Print", "galeria": "Galeria", "skill": "Imagem de skill"}
 
 
@@ -805,11 +808,19 @@ def short_name(*texts, limit=72):
         if not t:
             continue
         t = re.sub(r"\s+", " ", t)
-        m = re.match(r"(.{12,}?[.!?])(\s|$)", t)
-        if m and len(m.group(1)) <= limit:
-            return m.group(1).rstrip(".")
+        out = ""
+        for sent in re.findall(r"[^.!?]+[.!?]*", t):
+            if len(out) >= 28 or len(out + sent) > limit:
+                break
+            out += sent
+        out = out.strip()
+        if 12 <= len(out) <= limit:
+            return out.rstrip(".")
         return clean(t, limit)
     return ""
+
+
+GENERIC_CAPTION = re.compile(r"^\W*(click the link|comment|comente|follow|did you know|link in bio|save this)", re.I)
 
 
 def load_library():
@@ -836,7 +847,9 @@ def load_library():
         files = [os.path.basename(i["path"]) for i in imgs if "/prints/" in i["path"]]
         out.append({
             "type": "reference", "kind": rec["tipo"], "id_post": rec["id_post"],
-            "name": short_name(rec.get("nome"), rec.get("legenda"), rec.get("o_que_mostra")) or rec["id_post"],
+            "name": short_name(rec.get("nome"), *((rec.get("o_que_mostra"), rec.get("legenda"))
+                                                  if GENERIC_CAPTION.search(rec.get("legenda") or "")
+                                                  else (rec.get("legenda"), rec.get("o_que_mostra")))) or rec["id_post"],
             "author": rec.get("autor") or "", "author_name": rec.get("autor_nome") or "",
             "url": rec.get("url") or "", "what": clean(rec.get("o_que_mostra") or "", 420), "when": "",
             "caption": clean(rec.get("legenda_completa") or rec.get("legenda") or "", 600),
@@ -860,8 +873,15 @@ def merge_references(lib, skill_refs):
             by_key.setdefault(f, r)
             by_key.setdefault(f.rsplit(".", 1)[0], r)
     out = list(lib)
+    excluded = set()
+    p = os.path.join(LIB, "index.json")
+    if os.path.exists(p):
+        with open(p, encoding="utf-8") as f:
+            excluded = set(json.load(f).get("excluidos", []))
     for sr in skill_refs:
         names = [sr["file"]] + sr["aliases"]
+        if any((post_id_of(n) or "") in excluded for n in names):
+            continue   # investimento/quant ou fora do tema (lista em referencias/index.json)
         hit = None
         for n in names:
             stem = n.rsplit(".", 1)[0]
@@ -927,7 +947,25 @@ def ffmpeg_img(src, dst, width, webp=False, q=None):
 
 
 def build_media(refs, make):
-    """catalogo/media/<REF>/: thumb.webp (480), 1.jpg..N.jpg (grandes: frames 900 / prints ≤ 1200), loop.webp."""
+    """catalogo/media/<REF>/: thumb.webp (640), 1.jpg..N.jpg (resolução cheia), loop.webp."""
+    # Limite do Artifact: 511 arquivos por versão (página + catalogo.json + media). Se passar,
+    # os reels mostram no catálogo só os 3 primeiros frames (a biblioteca referencias/ mantém os 4).
+    def planned(max_frames):
+        n = 0
+        for r in refs:
+            imgs = r["src_images"][:max_frames] if r["kind"] == "reel" else r["src_images"]
+            f = imgs[0] if imgs else None
+            reuse = f and (f["w"] <= THUMB_REUSE_W or os.path.getsize(os.path.join(ROOT, f["path"])) <= THUMB_REUSE_BYTES)
+            n += len(imgs) + (0 if reuse else 1) + (1 if r["src_loop"] else 0)
+        return n
+    max_frames = 99
+    for mf in (99, 3, 2):
+        max_frames = mf
+        if planned(mf) <= MAX_MEDIA_FILES:
+            break
+    for r in refs:
+        if r["kind"] == "reel":
+            r["src_images"] = r["src_images"][:max_frames]
     if make:
         if os.path.isdir(MEDIA):
             shutil.rmtree(MEDIA)
@@ -944,18 +982,23 @@ def build_media(refs, make):
             dst = os.path.join(d, "%d.jpg" % i)
             src = os.path.join(ROOT, im["path"])
             if make:
-                if im["path"].startswith("referencias/") and im["w"] <= 1200:
-                    shutil.copyfile(src, dst)
-                else:
-                    ffmpeg_img(src, dst, 1200)
-            w, h = (im["w"], im["h"]) if im["w"] <= 1200 else (1200, round(im["h"] * 1200 / im["w"]))
+                shutil.copyfile(src, dst)      # resolução cheia para o lightbox
+            w, h = im["w"], im["h"]
             media.append({"src": "%s/%d.jpg" % (rel_d, i), "w": w, "h": h, "t": im.get("t")})
-        thumb = os.path.join(d, "thumb.webp")
-        if make and r["src_images"]:
-            ffmpeg_img(os.path.join(ROOT, r["src_images"][0]["path"]), thumb, 480, webp=True, q=70)
-        tw, th = image_size(thumb) if os.path.exists(thumb) else (480, 300)
+        # Miniatura da grade (640 px). Para caber no limite de arquivos por versão do Artifact (511),
+        # a 1ª imagem serve de miniatura quando já é leve (≤ 800 px de largura ou ≤ 120 KB).
         r["media"] = media
-        r["thumb"], r["thumb_w"], r["thumb_h"] = rel_d + "/thumb.webp", tw, th
+        first = r["src_images"][0] if r["src_images"] else None
+        reuse = first and (first["w"] <= THUMB_REUSE_W or
+                           os.path.getsize(os.path.join(ROOT, first["path"])) <= THUMB_REUSE_BYTES)
+        if reuse:
+            r["thumb"], r["thumb_w"], r["thumb_h"] = media[0]["src"], media[0]["w"], media[0]["h"]
+        else:
+            thumb = os.path.join(d, "thumb.webp")
+            if make and first:
+                ffmpeg_img(os.path.join(ROOT, first["path"]), thumb, 640, webp=True, q=72)
+            tw, th = image_size(thumb) if os.path.exists(thumb) else (640, 400)
+            r["thumb"], r["thumb_w"], r["thumb_h"] = rel_d + "/thumb.webp", tw, th
         r["loop"] = None
         if r["src_loop"]:
             if make:

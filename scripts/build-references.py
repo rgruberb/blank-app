@@ -3,7 +3,8 @@
 
 FONTES (dados de terceiros; lidos como dado, nunca executados). Caminhos relativos a SCRATCH
 (--scratch, ou a variável REFS_SCRATCH; padrão abaixo):
-  ig/vid/<ID>.mp4                 vídeos dos reels (yt-dlp)
+  ig/vid_hd/<ID>.mp4              vídeos em resolução máxima (PREFERIDOS quando existem e abrem)
+  ig/vid/<ID>.mp4                 vídeos dos reels (yt-dlp; fallback)
   ig/meta/, meta10/, ig/meta3/    metadados do yt-dlp (1ª linha JSON: autor, legenda, datas)
   ig/tr/<ID>.txt, sources/<ID>.md transcrição e resumo por reel
   achados/prints-jpg/rodada-3B, achados/prints-jpg/solto      (4A e 4B EXCLUÍDAS: investimento)
@@ -19,12 +20,16 @@ Datas de envio (WhatsApp), em UPLOADS (--uploads ou REFS_UPLOADS):
   Sem timestamp para o ID: usa a data do git em que a imagem/ID entrou na repo.
 
 SAÍDA:
-  referencias/reels/<ID>/frame-1..4.jpg (900 px, q80) + loop.webp (360 px, 12 fps, ~4 s, ≤ 400 KB)
-  referencias/prints/<arquivo>.jpg (largura máx. 1200, dedupe por nome e hash)
+  referencias/reels/<ID>/frame-1..4.jpg (largura nativa até 1080 px, sem upscale, q85)
+                         + loop.webp (até 540 px, 12 fps, ~4 s, ≤ 700 KB)
+  referencias/prints/<arquivo>.jpg (resolução original; JPG copiado byte a byte, PNG → JPG q85;
+                         dedupe por nome e hash)
   referencias/index.json
 
-Idempotente: pula reels/prints já gerados (use --force para refazer). Requer ffmpeg/ffprobe
-(com libwebp) e Pillow.  Uso:  python3 -I scripts/build-references.py [--force] [--only ID,...]
+Idempotente: pula reels/prints já gerados; refaz um reel quando o vídeo de origem muda (ex.: chegou
+o vid_hd/<ID>.mp4). --force refaz tudo; --reels-only refaz só os reels (os prints vêm do cache) e
+reescreve o index.json. Requer ffmpeg/ffprobe (com libwebp) e Pillow.
+Uso:  python3 -I scripts/build-references.py [--force | --reels-only] [--only ID,...]
 """
 import datetime
 import hashlib
@@ -33,6 +38,7 @@ import io
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 
@@ -51,6 +57,11 @@ for i, a in enumerate(sys.argv):
         UPLOADS = sys.argv[i + 1]
 
 VID_DIR = "ig/vid"
+VID_HD_DIR = "ig/vid_hd"
+FRAME_MAX_W = 1080
+FRAME_Q = 85
+LOOP_W = 540
+LOOP_LIMIT = 700 * 1024
 META_DIRS = ["ig/meta", "meta10", "ig/meta10", "ig/meta3"]
 TR_DIR = "ig/tr"
 SRC_DIR = "sources"
@@ -66,6 +77,10 @@ PRINT_DIRS = [
     "r10/jpg",
 ]
 CHATS = ["4bf5eb8d-chat.md", "e288bbd7-chat.txt", "d7ab0dd1-chat.md"]
+# Último recurso para a data de envio: quando o zip da rodada chegou (mtime do upload).
+FOLDER_UPLOAD = {"nova/jpg9": "7d77a0e8-Nova_rodada.zip", "r10/jpg": "dd00b13e-prints-10A.zip",
+                 "jpg-new/rodada-7": "e1577a6a-prints-rodada-7.zip", "jpg-new/rodada-5": "2444c8ed-imagens-rodadas-5-e-6.zip",
+                 "jpg-new/rodada-6": "2444c8ed-imagens-rodadas-5-e-6.zip"}
 
 # Investimento/quant e fora do tema: nunca entram.
 EXCLUDE_IDS = {
@@ -78,7 +93,11 @@ EXCLUDE_IDS = {
 # de pessoa real (e-mail, telefone, rosto identificável fora de contexto público).
 PRIVACY_EXCLUDE = set()
 # Recortes: arquivo -> (esq, topo, dir, base) em fração da imagem original.
-PRIVACY_CROP = {}
+PRIVACY_CROP = {
+    "10A_1A19QTSisE_1.jpg": (0.43, 0.0, 1.0, 1.0),     # página do FB: tira a coluna "Contact info" (telefone/e-mail)
+    "9F_youtube-figma_1.jpg": (0.205, 0.0, 1.0, 1.0),  # tira a barra lateral com as inscrições da conta logada
+    "9F_youtube-nngroup_1.jpg": (0.205, 0.0, 1.0, 1.0),
+}
 
 SEGMENT_RX = [
     ("FIN", r"fintech|\bbank|banco|pagament|payment|wallet|carteira|crédito|credit|\binvest|trading|\bcripto|crypto|"
@@ -400,7 +419,8 @@ def choose_frames(dur, scenes, smp, n):
     med = sharp_sorted[len(sharp_sorted) // 2]
 
     def ok(x):
-        return 18 <= x[1] <= 245 and x[2] >= 14 and x[3] >= 0.6 * med
+        # preto/chapado = std baixo (UIs escuras têm média ~15, então não filtramos só pela média)
+        return 5 <= x[1] <= 250 and x[2] >= 9 and x[3] >= 0.6 * med
 
     def nearest(t):
         return min(q, key=lambda x: abs(x[0] - t))
@@ -432,8 +452,13 @@ def choose_frames(dur, scenes, smp, n):
         for x in sorted(q, key=lambda x: -x[3]):
             if len(chosen) >= n:
                 break
-            if all(abs(x[0] - c[0]) >= 1.0 for c in chosen):
+            if ok(x) and all(abs(x[0] - c[0]) >= gap * 0.5 for c in chosen):
                 chosen.append(x)
+    for x in sorted(q, key=lambda x: -x[3]):
+        if len(chosen) >= n:
+            break
+        if all(abs(x[0] - c[0]) >= 1.0 for c in chosen):
+            chosen.append(x)
     return sorted(c[0] for c in chosen)
 
 
@@ -449,7 +474,7 @@ def loop_window(dur, smp, length=4.0):
     t = 1.0
     while t + length <= dur - 1.5:
         idx = [i for i, (ts, _) in enumerate(smp) if t <= ts <= t + length]
-        if idx and all(18 <= qual[i][0] <= 245 and qual[i][1] >= 10 for i in idx):
+        if idx and all(5 <= qual[i][0] <= 250 and qual[i][1] >= 8 for i in idx):
             act = sum(min(diffs[i], 40) for i in idx) / len(idx)
             sharp = sum(qual[i][2] for i in idx) / len(idx)
             score = act * 0.6 + sharp * 0.4 - abs((t + length / 2) / dur - 0.4) * 6
@@ -461,7 +486,20 @@ def loop_window(dur, smp, length=4.0):
     return best, length
 
 
-def extract_frame(path, t, out, width=900, q=80):
+def video_source(pid):
+    """vid_hd/<ID>.mp4 se existir e tiver vídeo decodificável; senão vid/<ID>.mp4."""
+    hd = sp(VID_HD_DIR, pid + ".mp4")
+    if os.path.exists(hd) and os.path.getsize(hd) > 50000:
+        try:
+            dur, w, h = probe(hd)
+            if dur > 1 and w:
+                return hd
+        except Exception:
+            pass
+    return sp(VID_DIR, pid + ".mp4")
+
+
+def extract_frame(path, t, out, width=900, q=FRAME_Q):
     r = subprocess.run(["ffmpeg", "-nostdin", "-loglevel", "error", "-ss", "%.3f" % t, "-i", path, "-frames:v", "1",
                         "-vf", "scale=%d:-2:flags=lanczos" % width, "-f", "image2pipe", "-c:v", "png", "-"],
                        capture_output=True)
@@ -470,25 +508,28 @@ def extract_frame(path, t, out, width=900, q=80):
     return im.size
 
 
-def make_loop(path, start, length, out, limit=400 * 1024):
-    tries = [(4.0, 360, 70), (4.0, 360, 55), (4.0, 360, 42), (3.5, 360, 38), (3.0, 320, 35), (3.0, 300, 30)]
-    for ln, w, q in tries:
+def make_loop(path, start, length, out, width, limit=LOOP_LIMIT):
+    tries = [(4.0, 12, 72), (4.0, 12, 58), (4.0, 12, 45), (3.5, 12, 40), (3.5, 10, 36), (3.0, 10, 30)]
+    w = width
+    for ln, fps, q in tries:
         ln = min(ln, length)
         subprocess.run(["ffmpeg", "-nostdin", "-loglevel", "error", "-y", "-ss", "%.3f" % start, "-t", "%.2f" % ln,
-                        "-i", path, "-an", "-vf", "fps=12,scale=%d:-2:flags=lanczos" % w, "-c:v", "libwebp_anim",
+                        "-i", path, "-an", "-vf", "fps=%d,scale=%d:-2:flags=lanczos" % (fps, w), "-c:v", "libwebp_anim",
                         "-q:v", str(q), "-compression_level", "5", "-loop", "0", out], check=False)
         if os.path.exists(out) and os.path.getsize(out) <= limit:
-            return ln, w
-    return ln, w
+            return ln, w, fps
+    return ln, w, fps
 
 
 def build_reel(pid, force=False):
-    path = sp(VID_DIR, pid + ".mp4")
+    path = video_source(pid)
     od = os.path.join(OUT, "reels", pid)
     info_p = os.path.join(od, ".build.json")
     if not force and os.path.exists(info_p) and os.path.getmtime(info_p) >= os.path.getmtime(path):
         with open(info_p, encoding="utf-8") as f:
-            return json.load(f)
+            info = json.load(f)
+        if info.get("origem") == os.path.relpath(path, SCRATCH) and info.get("v") == 2:
+            return info
     os.makedirs(od, exist_ok=True)
     for f in os.listdir(od):
         os.remove(os.path.join(od, f))
@@ -500,14 +541,15 @@ def build_reel(pid, force=False):
     frames = []
     for i, t in enumerate(times, 1):
         fn = "frame-%d.jpg" % i
-        fw, fh = extract_frame(path, t, os.path.join(od, fn))
+        fw, fh = extract_frame(path, t, os.path.join(od, fn), width=min(FRAME_MAX_W, w or FRAME_MAX_W))
         frames.append({"arquivo": "reels/%s/%s" % (pid, fn), "t": round(t, 2), "w": fw, "h": fh})
     start, length = loop_window(dur, smp)
-    ln, lw = make_loop(path, start, length, os.path.join(od, "loop.webp"))
+    ln, lw, lfps = make_loop(path, start, length, os.path.join(od, "loop.webp"), min(LOOP_W, w or LOOP_W))
     lh = round(lw * (h or 16) / (w or 9) / 2) * 2
-    info = {"duracao": round(dur, 1), "w": w, "h": h, "cenas": len(scenes), "frames": frames,
+    info = {"v": 2, "origem": os.path.relpath(path, SCRATCH), "duracao": round(dur, 1), "w": w, "h": h,
+            "cenas": len(scenes), "frames": frames,
             "loop": {"arquivo": "reels/%s/loop.webp" % pid, "inicio": round(start, 2), "duracao": ln, "w": lw,
-                     "h": lh, "bytes": os.path.getsize(os.path.join(od, "loop.webp"))}}
+                     "h": lh, "fps": lfps, "bytes": os.path.getsize(os.path.join(od, "loop.webp"))}}
     with open(info_p, "w", encoding="utf-8") as f:
         json.dump(info, f)
     return info
@@ -560,16 +602,19 @@ def print_post_id(fname):
 
 def build_print(src, fname, force=False):
     out = os.path.join(OUT, "prints", fname)
-    if force or not os.path.exists(out) or os.path.getmtime(out) < os.path.getmtime(src):
+    if force or fname in PRIVACY_CROP or not os.path.exists(out) or os.path.getmtime(out) < os.path.getmtime(src):
         os.makedirs(os.path.dirname(out), exist_ok=True)
-        im = Image.open(src).convert("RGB")
-        if fname in PRIVACY_CROP:
-            l, t, r, b = PRIVACY_CROP[fname]
-            W, H = im.size
-            im = im.crop((int(l * W), int(t * H), int(r * W), int(b * H)))
-        if im.width > 1200:
-            im = im.resize((1200, round(im.height * 1200 / im.width)), Image.LANCZOS)
-        im.save(out, "JPEG", quality=82, optimize=True, progressive=True)
+        with Image.open(src) as im0:
+            fmt = im0.format
+        if fname not in PRIVACY_CROP and fmt == "JPEG":
+            shutil.copyfile(src, out)          # resolução e bytes originais
+        else:
+            im = Image.open(src).convert("RGB")
+            if fname in PRIVACY_CROP:
+                l, t, r, b = PRIVACY_CROP[fname]
+                W, H = im.size
+                im = im.crop((int(l * W), int(t * H), int(r * W), int(b * H)))
+            im.save(out, "JPEG", quality=85, optimize=True, progressive=True)
     with Image.open(out) as im:
         return {"arquivo": "prints/" + fname, "w": im.width, "h": im.height}
 
@@ -577,6 +622,7 @@ def build_print(src, fname, force=False):
 # ------------------------------------------------------------------ main
 def main():
     force = "--force" in sys.argv
+    reels_force = force or "--reels-only" in sys.argv
     only = None
     if "--only" in sys.argv:
         only = set(sys.argv[sys.argv.index("--only") + 1].split(","))
@@ -635,7 +681,7 @@ def main():
     for pid in vids:
         if pid in EXCLUDE_IDS or (only and pid not in only):
             continue
-        info = build_reel(pid, force)
+        info = build_reel(pid, reels_force)
         meta = yt_meta(pid)
         rows = skill_rows.get(pid + ".jpg", [])
         what = ""
@@ -672,7 +718,8 @@ def main():
             "tags": sorted(set(infer_tags(text) + infer_screens(text))),
             "skills": skills, "duracao": info["duracao"],
             "arquivos": {"frames": info["frames"], "loop": info["loop"], "imagem": info["frames"][0]["arquivo"]},
-            "fonte": VID_DIR,
+            "fonte": os.path.dirname(info.get("origem", VID_DIR)), "origem_video": info.get("origem", ""),
+            "video_w": info.get("w"), "video_h": info.get("h"),
         })
     # ---------------- prints
     prints = collect_prints()
@@ -707,7 +754,8 @@ def main():
             rows += [d for _, d in tix.get(s, [])]
             rows += [d for _, d in skill_rows.get(s + ".jpg", [])]
         meta = yt_meta(pid) if pid else {}
-        name = bullet(body, "Nome sugerido") or next((clean(row_get(d, "nome")) for d in rows if row_get(d, "nome")), "")
+        name = bullet(body, "Nome sugerido") or next((clean(row_get(d, "nome")) for d in rows
+                                                       if row_get(d, "nome") and not re.search(r"\.(jpg|png)", row_get(d, "nome"))), "")
         what = next((clean(row_get(d, "o que mostra", "o que observar", "o que serve", "descrição", "por que abrir"))
                      for d in rows if row_get(d, "o que mostra", "o que observar", "o que serve", "descrição",
                                                  "por que abrir")), "")
@@ -726,6 +774,10 @@ def main():
         if not author and m9:
             author = "@" + m9.group(1)
         url = next((first_url(row_get(d, "url")) for d in rows if first_url(row_get(d, "url"))), "")
+        if not name and not pid:
+            # nome legível a partir do arquivo: "9F_youtube-nngroup_1" -> "youtube nngroup"
+            name = re.sub(r"^(?:\d+[A-F]|ref|tool)_(?:[A-Z]{3}_)?", "", stems[0])
+            name = re.sub(r"_\d+$", "", name).replace("_", " · ").replace("-", " ")
         fb = pid and re.match(r"^1[A-Za-z0-9]{9}$", pid)
         if pid and not fb:
             kind = sent.get(pid, (None, None))[1]
@@ -735,6 +787,8 @@ def main():
             url = url or "https://www.facebook.com/share/%s/" % pid
         if not url:
             url = first_url(body)
+        if not author and url:
+            author = re.sub(r"^www\.", "", re.sub(r"^https?://([^/]+).*$", r"\1", url))
         seg_txt = " ".join([name, what, legend, " ".join(row_get(d, "segmento") for d in rows), stems[0],
                             bullet(body, "Segmento")])
         segs = []
@@ -756,6 +810,12 @@ def main():
         if pid and not fb and sent.get(pid, (0, ""))[1] == "post" and len(imgs) == 1:
             tipo = "print"
         ds, dsrc = send_date(pid, stems)
+        if not ds:
+            z = os.path.join(UPLOADS, FOLDER_UPLOAD.get(os.path.relpath(os.path.dirname(files[0][0]), SCRATCH), "-"))
+            if os.path.exists(z):
+                ds = datetime.datetime.fromtimestamp(os.path.getmtime(z), datetime.timezone.utc).strftime(
+                    "%Y-%m-%dT%H:%M:%SZ")
+                dsrc = "upload"
         up = meta.get("upload_date")
         origin = "%s-%s-%s" % (up[:4], up[4:6], up[6:8]) if up else None
         if not origin:
@@ -805,9 +865,10 @@ def main():
                 os.remove(os.path.join(OUT, "prints", f))
     reels = [r for r in records if r["tipo"] == "reel"]
     nf = sum(len(r["arquivos"]["frames"]) for r in reels)
-    big = [r["id_post"] for r in reels if r["arquivos"]["loop"]["bytes"] > 400 * 1024]
+    big = [r["id_post"] for r in reels if r["arquivos"]["loop"]["bytes"] > LOOP_LIMIT]
     npr = sum(len(r["arquivos"].get("imagens", [])) + len(r["arquivos"].get("prints", [])) for r in records)
-    print("reels: %d  frames: %d  loops: %d (acima de 400 KB: %s)" % (len(reels), nf, len(reels), big or "nenhum"))
+    hd = sum(1 for r in reels if r.get("origem_video", "").startswith(VID_HD_DIR))
+    print("reels: %d (de vid_hd: %d)  frames: %d  loops: %d (acima de 700 KB: %s)" % (len(reels), hd, nf, len(reels), big or "nenhum"))
     print("prints: %d  registros: %d  sem data: %d" % (npr, len(records), sum(1 for r in records if not r["data_envio"])))
     from collections import Counter
     print("tipos:", dict(Counter(r["tipo"] for r in records)))
