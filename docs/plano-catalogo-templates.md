@@ -51,3 +51,21 @@ Status: **aguardando a Rodada 10**. Plano atualizado em 27/11 com componentes av
 - **Tamanho:** são centenas de imagens, o que passa do limite de 16 MB da página. Usar o armazenamento de assets do Artifact ou miniaturas otimizadas (~400 px, WebP) com link para a imagem grande.
 - **Privacidade:** as imagens são de terceiros. O Artifact fica privado; se for compartilhado, a página avisa que é referência pessoal.
 - **Fonte única:** a página lê um `catalogo.json` gerado a partir dos `visual-index.md` e das fichas, para não ficar dessincronizada das skills. O `catalogo.json` também guarda códigos, nomes, tags e datas dos templates, componentes e referências, e é versionado na repo.
+
+## Interface aprovada (27/11/2026)
+- **Topo:** busca única (`⌘K` / `/`) em nomes, códigos, segmento, autor, hex e tags, com resultados agrupados por tipo. À direita, o ícone do kit com o contador.
+- **Coluna esquerda:** segmentos (FIN, CRM, PUB, MPE, SAU, JUR, Geral) com a contagem de itens; filtros por tipo de tela e por categoria de componente.
+- **Centro:**
+  - abas Templates · Componentes · Referências;
+  - botões de plataforma (Mobile, Desktop, Website), vários ao mesmo tempo;
+  - ordenação: mais recentes (padrão), segmento ou nome;
+  - cards com prévia ao vivo, código, nome, faixa de cores e botão "+".
+- **Coluna direita, o kit:** 1 template + N componentes; avisa quando há conflito entre segmentos; botão "Gerar prompt".
+- **Detalhe:** painel lateral com prévia grande alternável, tokens copiáveis, regras do segmento e as referências que inspiraram.
+- **Gerar prompt:** modal com o `CLAUDE.md` (segmento, plataformas, template, componentes por código, tokens CSS, regras, skills a abrir), com Copiar e Baixar .md.
+- **Comportamento:**
+  - kit e filtros salvos no navegador;
+  - prévias são mockups originais a partir dos tokens; imagens reais só na aba Referências, em miniatura com link;
+  - motion pelas nossas regras (1 momento: a entrada da prévia; reduced motion respeitado).
+- **Visual do catálogo:** neutro, claro/escuro seguindo o sistema, para não competir com as cores dos templates.
+- **Mobile:** filtros numa folha deslizante, kit numa barra fixa embaixo, busca no topo.
