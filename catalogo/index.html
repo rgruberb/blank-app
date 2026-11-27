@@ -4,7 +4,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Akshar:wght@400;600&display=swap">
 <style>
-/* Layout: ferramenta em 3 colunas (filtros · vitrine · kit); topo fixo com busca; no celular, filtros e kit viram folhas. */
+/* Layout: ferramenta em 3 colunas (filtros · vitrine · kit); topo fixo com busca; no celular, filtros e kit viram folhas.
+   Abertura com as inspirações mais recentes (imagens reais); referências em mosaico; lightbox em tela cheia. */
 :root {
   --bg: #F8F9FA;
   --panel: #FFFFFF;
@@ -31,6 +32,15 @@
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
   --r: 8px;
   --head-h: 60px;
+  --lb-bg: #0E0F11;
+  --lb-ink: #F1F2F4;
+  --lb-ink-2: #B4B8BF;
+  --on-media: #FFFFFF;
+  --media-shade: rgba(10, 11, 13, .72);
+  --press: .95;
+  --t-press: 160ms;
+  --t-hover: 160ms;
+  --ease: cubic-bezier(.2, .7, .2, 1);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -126,7 +136,6 @@ main { min-width: 0; }
 .activeq button { border: 0; background: none; color: inherit; font-weight: 700; padding: 0 6px; }
 
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
-.grid.refs { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
 .card { background: var(--panel); border: 1px solid var(--line-2); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; position: relative; min-width: 0; }
 .card:hover { border-color: var(--line); box-shadow: var(--shadow); }
 .card.inkit { border-color: var(--mark); box-shadow: 0 0 0 1px var(--mark); }
@@ -218,6 +227,97 @@ main { min-width: 0; }
 .modal-f { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; padding: 12px 20px 16px; border-top: 1px solid var(--line-2); }
 .copied { color: var(--ink-2); font-size: 13px; }
 .toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(24px + env(safe-area-inset-bottom, 0px)); background: var(--ink); color: var(--panel); padding: 10px 16px; border-radius: 8px; z-index: 90; font-weight: 500; max-width: calc(100% - 32px); }
+
+
+/* ---------- micro-interações (press 0.95 / 160 ms; hover sutil) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .btn, .add, .chip, .tab, .segbtn, .kit-btn, .xbtn, .seg-ctl button, .lb-nav, .t-ref, .m-media, .insp-tile, .refmini button {
+    transition: transform var(--t-press) var(--ease), background-color var(--t-hover) linear, box-shadow var(--t-hover) linear, border-color var(--t-hover) linear; }
+  .btn:active, .add:active, .chip:active, .tab:active, .segbtn:active, .kit-btn:active, .xbtn:active, .seg-ctl button:active, .lb-nav:active, .t-ref:active { transform: scale(var(--press)); }
+  .m-media:active, .insp-tile:active, .refmini button:active { transform: scale(.98); }
+  .card, .mcard { transition: transform var(--t-hover) var(--ease), box-shadow var(--t-hover) linear, border-color var(--t-hover) linear; }
+  .card:hover, .mcard:hover { transform: translateY(-2px); }
+  .m-media img, .insp-tile img { transition: transform .4s var(--ease); }
+  .m-media:hover img, .insp-tile:hover img { transform: scale(1.02); }
+  .insp.enter .insp-tile { animation: tileIn .42s var(--ease) both; animation-delay: calc(var(--i, 0) * 45ms); }
+  .lb:not([hidden]) .lb-fig img { animation: lbIn .2s var(--ease) both; }
+}
+@keyframes tileIn { from { opacity: .001; transform: translateY(10px); } }
+@keyframes lbIn { from { opacity: .4; } }
+
+/* ---------- inspirações recentes ---------- */
+.insp { margin: 0 0 26px; }
+.insp-h { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 8px 16px; margin-bottom: 12px; }
+.insp-h h2 { margin: 0; font: 800 clamp(24px, 3vw, 34px)/1.05 var(--font-display); letter-spacing: -.03em; }
+.insp-h p { margin: 4px 0 0; color: var(--ink-2); max-width: 60ch; }
+.insp-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 172px; gap: 10px; }
+.insp-tile { position: relative; display: block; border: 0; padding: 0; border-radius: 14px; overflow: hidden; background: var(--sunk); cursor: pointer; text-align: left; color: var(--on-media); min-width: 0; }
+.insp-tile:first-child { grid-column: span 2; grid-row: span 2; }
+.insp-tile img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.insp-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 12px 10px; background: linear-gradient(to top, var(--media-shade), transparent); display: grid; gap: 2px; }
+.insp-cap b { font: 600 14px/1.25 var(--font-display); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.insp-tile:first-child .insp-cap b { font-size: 19px; white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.insp-cap span { font-size: 12px; opacity: .92; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.badge { position: absolute; top: 8px; left: 8px; display: inline-flex; align-items: center; gap: 5px; background: var(--media-shade); color: var(--on-media); font: 600 11px/1 var(--font-text); padding: 5px 8px; border-radius: 10px; letter-spacing: .01em; }
+.badge.reel::before { content: ""; width: 0; height: 0; border-left: 7px solid currentColor; border-top: 4.5px solid transparent; border-bottom: 4.5px solid transparent; }
+.badge .mono { font-size: 10.5px; opacity: .9; }
+
+/* ---------- mosaico de referências ---------- */
+.grid.refs { display: block; columns: 4 230px; column-gap: 14px; }
+.grid.refs > .state, .grid.refs > .skel { column-span: all; margin-bottom: 14px; }
+.mcard { break-inside: avoid; margin: 0 0 14px; background: var(--panel); border: 1px solid var(--line-2); border-radius: 14px; overflow: hidden; display: block; position: relative; }
+.mcard:hover { border-color: var(--line); box-shadow: var(--shadow); }
+.mcard.inkit { border-color: var(--mark); box-shadow: 0 0 0 1px var(--mark); }
+.m-media { display: block; width: 100%; border: 0; padding: 0; background: var(--sunk); cursor: zoom-in; position: relative; overflow: hidden; }
+.m-media img { width: 100%; height: auto; display: block; }
+.m-media.tall img { aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; }
+.m-b { padding: 10px 12px 12px; display: grid; gap: 4px; }
+.m-meta { display: flex; align-items: center; gap: 4px 8px; font-size: 12px; color: var(--ink-2); flex-wrap: wrap; min-height: 34px; }
+.m-meta .add { margin-left: auto; }
+.mcard h3 { margin: 0; font: 600 14.5px/1.3 var(--font-display); letter-spacing: -.005em; }
+.mcard h3 button { all: unset; cursor: pointer; }
+.mcard h3 button:focus-visible { outline: 2px solid var(--action); outline-offset: 2px; border-radius: 3px; }
+.m-by { font-size: 12.5px; color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ---------- tira de referências nos templates ---------- */
+.t-refs { display: grid; gap: 6px; margin-top: 4px; }
+.t-refs-l { font: 600 10.5px/1 var(--font-text); letter-spacing: .07em; text-transform: uppercase; color: var(--ink-2); }
+.t-refs-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.t-ref { border: 1px solid var(--line-2); padding: 0; border-radius: 8px; overflow: hidden; background: var(--sunk); aspect-ratio: 1 / 1; position: relative; cursor: zoom-in; min-width: 0; }
+.t-ref img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.t-ref .badge { top: 4px; left: 4px; padding: 3px 5px; font-size: 10px; }
+.gal { columns: 3 150px; column-gap: 10px; }
+.gal button { break-inside: avoid; display: block; width: 100%; margin: 0 0 10px; border: 1px solid var(--line-2); background: var(--panel); border-radius: 10px; padding: 0; overflow: hidden; text-align: left; cursor: zoom-in; position: relative; }
+.gal img { width: 100%; height: auto; display: block; }
+.gal span.gcap { display: block; padding: 6px 8px; font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ---------- lightbox ---------- */
+.lb { position: fixed; inset: 0; z-index: 80; background: var(--lb-bg); color: var(--lb-ink); display: grid; grid-template-columns: minmax(0, 1fr) 360px;
+  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px); }
+.lb-stage { position: relative; min-width: 0; min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; }
+.lb-fig { margin: 0; min-height: 0; display: grid; place-items: center; padding: 20px 72px 8px; position: relative; }
+.lb-fig img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; border-radius: 10px; display: block; }
+.lb-fig .badge { top: 28px; left: 80px; }
+.lb-nav { position: absolute; top: 50%; translate: 0 -50%; width: 48px; height: 48px; border-radius: 24px; border: 1px solid rgba(255,255,255,.22); background: rgba(255,255,255,.08); color: var(--lb-ink); font-size: 26px; line-height: 1; display: grid; place-items: center; z-index: 2; }
+.lb-nav:hover { background: rgba(255,255,255,.16); }
+.lb-nav.prev { left: 14px; }
+.lb-nav.next { right: 14px; }
+.lb-dots { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; padding: 8px 16px 16px; }
+.lb-dots button { width: 52px; height: 52px; border-radius: 8px; border: 2px solid transparent; padding: 0; overflow: hidden; background: rgba(255,255,255,.08); opacity: .6; position: relative; }
+.lb-dots button img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.lb-dots button[aria-current="true"] { border-color: var(--lb-ink); opacity: 1; }
+.lb-dots button:hover { opacity: 1; }
+.lb-dots .lp { position: absolute; inset: auto 2px 2px auto; font: 700 9px/1 var(--font-text); background: var(--media-shade); color: var(--on-media); padding: 2px 3px; border-radius: 4px; }
+.lb-info { background: var(--panel); color: var(--ink); overflow: auto; padding: 16px 18px 20px; display: grid; gap: 12px; align-content: start; border-left: 1px solid var(--line); }
+.lb-top { display: flex; align-items: center; gap: 8px; }
+.lb-top .xbtn { margin-left: auto; }
+.lb-info h2 { margin: 0; font: 700 22px/1.15 var(--font-display); letter-spacing: -.02em; text-wrap: balance; }
+.lb-by { margin: 0; color: var(--ink-2); font-size: 13px; }
+.lb-by strong { color: var(--ink); }
+.lb-cap { margin: 0; font-size: 13.5px; white-space: pre-line; max-height: 9.5em; overflow: auto; }
+.lb-acts { display: flex; gap: 8px; flex-wrap: wrap; }
+.lb-refnav { display: flex; gap: 8px; flex-wrap: wrap; }
+.lb-hint { color: var(--ink-2); font-size: 12px; margin: 0; }
 
 /* ---------- mockups (em; o contêiner define o tamanho) ---------- */
 .pv { display: flex; gap: .9em; align-items: flex-start; font-size: 6px; }
@@ -314,11 +414,13 @@ main { min-width: 0; }
 }
 @keyframes pvIn { from { opacity: .001; transform: translateY(6px); } }
 @keyframes drIn { from { transform: translateX(24px); opacity: .6; } }
-@media (prefers-reduced-motion: reduce) { .skel { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .skel { animation: none; } .badge.reel::before { display: none; } }
 
 /* ---------- responsivo ---------- */
 @media (max-width: 1180px) {
   .shell { grid-template-columns: 216px minmax(0, 1fr); }
+  .insp-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .insp-tile:nth-child(n+6) { display: none; }
   .kit { position: fixed; inset: auto 0 0 0; top: auto; z-index: 65; max-height: 82vh; border-radius: 16px 16px 0 0; border: 0; box-shadow: var(--shadow);
     padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px)); }
   .kit:not(.open) { display: none; }
@@ -340,9 +442,23 @@ main { min-width: 0; }
   .search input { padding-right: 14px; }
   .top-in { gap: 10px; }
   .grid { grid-template-columns: minmax(0, 1fr); }
-  .grid.refs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .grid.refs .card-b { padding: 10px; }
-  .grid.refs .card h3 { font-size: 13.5px; }
+  .grid.refs { columns: 2; column-gap: 10px; }
+  .mcard { margin-bottom: 10px; }
+  .m-b { padding: 8px 10px 10px; }
+  .mcard h3 { font-size: 13.5px; }
+  .m-meta .add { width: 30px; height: 30px; }
+  .insp-grid { display: grid; grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 74%; grid-template-rows: 300px; grid-auto-rows: auto; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; padding-bottom: 4px; }
+  .insp-tile, .insp-tile:first-child { grid-column: auto; grid-row: auto; scroll-snap-align: start; }
+  .lb { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; }
+  .lb-fig { padding: 12px 8px 4px; }
+  .lb-fig .badge { top: 18px; left: 16px; }
+  .lb-nav { width: 40px; height: 40px; font-size: 22px; background: var(--media-shade); }
+  .lb-nav.prev { left: 6px; }
+  .lb-nav.next { right: 6px; }
+  .lb-dots { padding: 4px 8px 8px; }
+  .lb-dots button { width: 40px; height: 40px; }
+  .lb-info { max-height: 46vh; border-left: 0; border-top: 1px solid var(--line); border-radius: 14px 14px 0 0; padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px)); }
+  .lb-info h2 { font-size: 19px; }
   .kv { grid-template-columns: minmax(0, 1fr); }
   .kv dt { margin-top: 6px; }
   .drawer-h h2 { font-size: 22px; }
@@ -380,6 +496,11 @@ main { min-width: 0; }
       <h2>Tipo de tela</h2>
       <div class="chips" id="screenChips"></div>
     </div>
+    <div id="kindBox">
+      <h2>Formato</h2>
+      <div class="chips" id="kindChips"></div>
+      <p class="hint">Vale para a aba Referências.</p>
+    </div>
     <div id="catBox">
       <h2>Categoria</h2>
       <div class="chips" id="catChips"></div>
@@ -389,6 +510,16 @@ main { min-width: 0; }
   </aside>
 
   <main>
+    <section class="insp" id="insp" aria-labelledby="inspTitle" hidden>
+      <div class="insp-h">
+        <div>
+          <h2 id="inspTitle">Inspirações recentes</h2>
+          <p id="inspSub">As últimas referências que você enviou, com autor e data de envio.</p>
+        </div>
+        <button class="btn sm" type="button" data-act="tab-references">Ver todas as referências</button>
+      </div>
+      <div class="insp-grid" id="inspGrid"></div>
+    </section>
     <div class="showhead">
       <div>
         <h1 id="showTitle">Templates</h1>
@@ -481,6 +612,37 @@ main { min-width: 0; }
       <span class="copied" id="copyMsg" role="status"></span>
     </div>
   </div>
+</div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-labelledby="lbTitle" hidden>
+  <div class="lb-stage">
+    <figure class="lb-fig" id="lbFig">
+      <img id="lbImg" alt="" decoding="async">
+      <span class="badge" id="lbBadge" hidden></span>
+    </figure>
+    <button class="lb-nav prev" id="lbPrev" type="button" aria-label="Imagem anterior">‹</button>
+    <button class="lb-nav next" id="lbNext" type="button" aria-label="Próxima imagem">›</button>
+    <div class="lb-dots" id="lbDots" role="group" aria-label="Imagens desta referência"></div>
+  </div>
+  <aside class="lb-info" aria-label="Sobre a referência">
+    <div class="lb-top">
+      <span class="code" id="lbCode"></span>
+      <span class="tool-l" id="lbCount"></span>
+      <button class="xbtn" id="lbClose" type="button" aria-label="Fechar (Esc)">×</button>
+    </div>
+    <h2 id="lbTitle"></h2>
+    <p class="lb-by" id="lbBy"></p>
+    <p class="lb-cap" id="lbCap"></p>
+    <dl class="kv" id="lbKv"></dl>
+    <div class="lb-acts">
+      <button class="btn primary" id="lbAdd" type="button">Adicionar ao kit</button>
+      <a class="btn" id="lbLink" href="#" target="_blank" rel="noopener">Abrir post</a>
+    </div>
+    <div class="lb-refnav">
+      <button class="btn sm" id="lbPrevRef" type="button">← Referência anterior</button>
+      <button class="btn sm" id="lbNextRef" type="button">Próxima referência →</button>
+    </div>
+    <p class="lb-hint">← → imagens · ↑ ↓ referências · Esc fecha</p>
+  </aside>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 

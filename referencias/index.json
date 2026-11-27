@@ -1,0 +1,244 @@
+{
+ "gerado_em": "2026-11-27T23:10:10Z",
+ "fontes": {
+  "scratch": "<scratchpad da sessão>",
+  "pastas": [
+   "ig/vid",
+   "ig/meta",
+   "meta10",
+   "ig/meta10",
+   "ig/meta3",
+   "achados/prints-jpg/rodada-3B",
+   "achados/prints-jpg/solto",
+   "achados2/prints-jpg/rodada-1",
+   "achados2/prints-jpg/rodada-2",
+   "jpg-new/rodada-5",
+   "jpg-new/rodada-6",
+   "jpg-new/rodada-7",
+   "nova/jpg9",
+   "r10/jpg"
+  ],
+  "chats": [
+   "4bf5eb8d-chat.md",
+   "e288bbd7-chat.txt",
+   "d7ab0dd1-chat.md"
+  ],
+  "docs": "docs/achados/rodada-*.md, .claude/skills/*/references/visual-index.md"
+ },
+ "excluidos": [
+  "De7NqmHkbzU",
+  "De9oszIIQ4V",
+  "DfFnuSOkqi9",
+  "DfVf0L-AIkP",
+  "Dfm0NTiIfyd",
+  "DfoRErMChB-",
+  "DfowdSMiPzc",
+  "Dfr5It0xAzA",
+  "DftZ6l2CC_e",
+  "DfuDLH7BUsx",
+  "DfztwFuxh4f"
+ ],
+ "referencias": [
+  {
+   "id_post": "DfwhC1riuuO",
+   "tipo": "reel",
+   "autor": "@theglidestudio",
+   "autor_nome": "The Glide Studio",
+   "legenda": "You tap a card. Where did the page go? A hard cut makes people find their place again. Motion carries them instead: the card becomes the page, and back goes…",
+   "legenda_completa": "You tap a card. Where did the page go? A hard cut makes people find their place again. Motion carries them instead: the card becomes the page, and back goes back. Nothing just appears. Everything came from somewhere. Send this to your designer. #theglidestudio #webdesign #uxdesign #uiux #motiondesign",
+   "url": "https://www.instagram.com/reel/DfwhC1riuuO/",
+   "data_envio": "2026-11-16T13:55:31+00:00",
+   "data_envio_fonte": "git",
+   "data_origem": "2026-11-15T10:00:57Z",
+   "segmentos": [
+    "GER"
+   ],
+   "plataformas": [
+    "website"
+   ],
+   "o_que_mostra": "\"Tap. Cut.\" vs \"Don't cut. Carry.\": card vira a página, back volta, menu nasce do botão (demo em site de loja)",
+   "transcricao": "You tap. Where did the page go? A hard cut makes people find their place again. Motion can carry them instead. Watch the same tap. The card you touched grows into the page itself. Go back, and it shrinks to exactly where it came from. Menus too. They come from the button that opened them. Nobody gets lost because nothing just appears. Everything on screen came from somewhere. Send this to your designer.",
+   "tags": [
+    "botão",
+    "landing",
+    "micro-interação",
+    "motion"
+   ],
+   "skills": [
+    "mobile-app-ui",
+    "ui-motion",
+    "website-ui"
+   ],
+   "duracao": 29.5,
+   "arquivos": {
+    "frames": [
+     {
+      "arquivo": "reels/DfwhC1riuuO/frame-1.jpg",
+      "t": 2.25,
+      "w": 900,
+      "h": 1600
+     },
+     {
+      "arquivo": "reels/DfwhC1riuuO/frame-2.jpg",
+      "t": 10.25,
+      "w": 900,
+      "h": 1600
+     },
+     {
+      "arquivo": "reels/DfwhC1riuuO/frame-3.jpg",
+      "t": 17.75,
+      "w": 900,
+      "h": 1600
+     },
+     {
+      "arquivo": "reels/DfwhC1riuuO/frame-4.jpg",
+      "t": 23.75,
+      "w": 900,
+      "h": 1600
+     }
+    ],
+    "loop": {
+     "arquivo": "reels/DfwhC1riuuO/loop.webp",
+     "inicio": 18.0,
+     "duracao": 4.0,
+     "w": 360,
+     "h": 640,
+     "bytes": 150676
+    },
+    "imagem": "reels/DfwhC1riuuO/frame-1.jpg"
+   },
+   "fonte": "ig/vid"
+  },
+  {
+   "id_post": "DfKaOBqjUr4",
+   "tipo": "carrossel",
+   "autor": "@craftwork.design",
+   "autor_nome": "",
+   "nome": "",
+   "legenda": "\"Ten more skills. This part is about motion, 3D and the final polish.",
+   "legenda_completa": "\"Ten more skills. This part is about motion, 3D and the final polish.",
+   "url": "https://www.instagram.com/p/DfKaOBqjUr4/",
+   "data_envio": "2026-11-18T08:44:00-03:00",
+   "data_envio_fonte": "whatsapp",
+   "data_origem": null,
+   "segmentos": [
+    "GER"
+   ],
+   "plataformas": [
+    "website"
+   ],
+   "o_que_mostra": "Capa \"Selected Design skills — Part 2\": foto atmosférica + script + grotesca pesada; hierarquia tipográfica em 3 camadas",
+   "tags": [
+    "3D",
+    "motion"
+   ],
+   "skills": [
+    "design-direction",
+    "ui-motion",
+    "website-ui"
+   ],
+   "arquivos": {
+    "imagens": [
+     {
+      "arquivo": "prints/DfKaOBqjUr4_1.jpg",
+      "w": 960,
+      "h": 526
+     },
+     {
+      "arquivo": "prints/DfKaOBqjUr4_2.jpg",
+      "w": 960,
+      "h": 526
+     },
+     {
+      "arquivo": "prints/DfKaOBqjUr4_3.jpg",
+      "w": 960,
+      "h": 526
+     }
+    ],
+    "imagem": "prints/DfKaOBqjUr4_1.jpg"
+   },
+   "fonte": "jpg-new/rodada-5",
+   "doc": "docs/achados/rodada-5.md"
+  },
+  {
+   "id_post": "Df4SUQYHWZA",
+   "tipo": "print",
+   "autor": "@gut1n",
+   "autor_nome": "Pedro Augusto",
+   "nome": "\"8 repositórios do GitHub como base para apps com Claude Code\"",
+   "legenda": "\"Comente 'K18'\" para receber o guia completo. Em vez de pedir ao Claude Code para criar tudo do zero, dar uma base do GitHub. Cita next-forge, skills do Expo…",
+   "legenda_completa": "\"Comente 'K18'\" para receber o guia completo. Em vez de pedir ao Claude Code para criar tudo do zero, dar uma base do GitHub. Cita next-forge, skills do Expo, Instant, Nhost, Puck, assistant-ui, React Native Reusables e Lago. 100 comentários (quase todos \"K18\").",
+   "url": "https://www.instagram.com/p/Df4SUQYHWZA/",
+   "data_envio": "2026-11-27T01:25:00-03:00",
+   "data_envio_fonte": "whatsapp",
+   "data_origem": "2026-11-18",
+   "segmentos": [
+    "GER"
+   ],
+   "plataformas": [
+    "mobile",
+    "desktop",
+    "website"
+   ],
+   "o_que_mostra": "capa \"O GITHUB ESCONDE 8 FERRAMENTAS INSANAS PRO CLAUDE CODE\"",
+   "tags": [
+    "IA"
+   ],
+   "skills": [],
+   "arquivos": {
+    "imagens": [
+     {
+      "arquivo": "prints/10A_Df4SUQYHWZA_1.jpg",
+      "w": 1200,
+      "h": 706
+     }
+    ],
+    "imagem": "prints/10A_Df4SUQYHWZA_1.jpg"
+   },
+   "fonte": "r10/jpg",
+   "doc": "docs/achados/rodada-10A.md"
+  },
+  {
+   "id_post": "10C_FIN_wise_home-hero_1",
+   "tipo": "print",
+   "autor": "Wise",
+   "autor_nome": "",
+   "nome": "Hero tipográfico com prova social de lojas",
+   "legenda": "",
+   "legenda_completa": "",
+   "url": "https://wise.com/br/",
+   "data_envio": "2026-11-27T22:19:19+00:00",
+   "data_envio_fonte": "git",
+   "data_origem": null,
+   "segmentos": [
+    "FIN"
+   ],
+   "plataformas": [
+    "website"
+   ],
+   "o_que_mostra": "contraste verde-lima sobre verde-escuro; promessa numérica (1,1% IOF) logo no subtítulo",
+   "tags": [
+    "branding",
+    "dark mode",
+    "gráfico",
+    "landing",
+    "marca/cor"
+   ],
+   "skills": [
+    "segmento-financeiro"
+   ],
+   "arquivos": {
+    "imagens": [
+     {
+      "arquivo": "prints/10C_FIN_wise_home-hero_1.jpg",
+      "w": 1200,
+      "h": 662
+     }
+    ],
+    "imagem": "prints/10C_FIN_wise_home-hero_1.jpg"
+   },
+   "fonte": "r10/jpg",
+   "doc": ""
+  }
+ ]
+}
