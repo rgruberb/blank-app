@@ -1,6 +1,6 @@
 ---
 name: marca-pessoal-app
-description: Skill exclusiva do app de gestão de marca pessoal (presença, conteúdo, agenda, portfólio, networking, propostas, contratos, mensagens e resultados), com painel web para gestor e cliente e app do cliente em PWA, depois empacotado com Capacitor. Traz as decisões já tomadas para este produto (D1–D8), o stack, os tokens da Fase 1, os fluxos críticos, o checklist de 56 itens e o plano de 90 dias, e indica qual skill geral de design abrir em cada caso. Use sempre que a tarefa for neste app: criar ou revisar tela, componente, fluxo, design system, motion, onboarding, perfil, portfólio, agenda, propostas, mensagens, painel do gestor ou do cliente, ou "auditar o app de marca pessoal".
+description: 'Skill exclusiva do app de gestão de marca pessoal (presença, conteúdo, agenda, portfólio, networking, propostas, contratos, mensagens e resultados), com painel web para gestor e cliente e app do cliente em PWA, depois empacotado com Capacitor. Traz as decisões já tomadas para este produto (D1–D8), o stack, os tokens da Fase 1, os fluxos críticos, o checklist de 56 itens e o plano de 90 dias, e indica qual skill geral de design abrir em cada caso. Use sempre que a tarefa for neste app: criar ou revisar tela, componente, fluxo, design system, motion, onboarding, perfil, portfólio, agenda, propostas, mensagens, painel do gestor ou do cliente, ou "auditar o app de marca pessoal".'
 ---
 
 # App de gestão de marca pessoal
