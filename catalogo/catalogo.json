@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T22:44:20Z",
+ "generated_at": "2026-11-27T22:45:49Z",
  "theme_skills": [
   "design-direction",
   "dashboard-ui",
@@ -244,7 +244,8 @@
       "#000066"
      ],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": []
     },
     "palette_approx": [],
     "fonts": "família própria de display + texto neutro (Itaú usa `Itau Display`/`Itau Text`); sem família própria: sans neutra do catálogo de `design-direction/references/typography-pairing.md` (inferência)",
@@ -260,6 +261,24 @@
     "10C_FIN_mercury_home-aviso-regulatorio_1.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#FFFFFF",
+    "surface": "#F1F2F4",
+    "text": "#000000",
+    "muted": "#3B3B3B",
+    "action": "#FF6200",
+    "on_action": "#111111",
+    "action_text": "#CC4E00",
+    "accent2": "#000066",
+    "border": "#DBDBDB",
+    "dark": false,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 10,
+    "pill": false,
+    "density": "regular",
+    "adjusted": true
+   },
    "platforms": [
     "mobile",
     "website"
@@ -317,6 +336,9 @@
       "#E5EDF5",
       "#F3EFE6",
       "#ECDFFF",
+      "#533AFD",
+      "#7F7DFC",
+      "#8D0DE3",
       "#5D0599",
       "#1E002F"
      ],
@@ -326,13 +348,10 @@
       "#64748D",
       "#000000"
      ],
-     "action": [
-      "#533AFD",
-      "#7F7DFC",
-      "#8D0DE3"
-     ],
+     "action": [],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": []
     },
     "palette_approx": [],
     "fonts": "sans geométrica (Stripe `sohne-var`; Nubank `nuSansDisplay` + `nuSansText`)",
@@ -349,6 +368,24 @@
     "10C_FIN_stripe-invoicing_fatura-pagamento-moeda_1.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#FFFFFF",
+    "surface": "#F8FAFD",
+    "text": "#061B31",
+    "muted": "#50617A",
+    "action": "#061B31",
+    "on_action": "#FFFFFF",
+    "action_text": "#061B31",
+    "accent2": null,
+    "border": "#DCDFE2",
+    "dark": false,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 8,
+    "pill": true,
+    "density": "airy",
+    "adjusted": false
+   },
    "platforms": [
     "mobile",
     "desktop",
@@ -403,21 +440,20 @@
     ],
     "palette_roles": {
      "bg": [
-      "#163300",
-      "#9FE870",
       "#FFFFFF",
       "#E8EBE6"
      ],
      "text": [
-      "#163300",
+      "#9FE870",
       "#0E0F0C",
       "#454745"
      ],
      "action": [
-      "#9FE870"
+      "#163300"
      ],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": []
     },
     "palette_approx": [],
     "fonts": "display condensado próprio (`Wise Sans`) + `Inter` no corpo",
@@ -434,6 +470,24 @@
     "10C_FIN_wise_precos-transparentes_1.jpg"
    ],
    "rules_excerpt": "Cuidado: marca verde compete com o verde de \"ganho\". Use outro tom/ícone para variação (`dashboard-ui` §8).",
+   "preview": {
+    "bg": "#FFFFFF",
+    "surface": "#F6F6F6",
+    "text": "#57803E",
+    "muted": "#0E0F0C",
+    "action": "#163300",
+    "on_action": "#FFFFFF",
+    "action_text": "#163300",
+    "accent2": null,
+    "border": "#E7EDE4",
+    "dark": false,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 16,
+    "pill": true,
+    "density": "airy",
+    "adjusted": true
+   },
    "platforms": [
     "website"
    ],
@@ -484,7 +538,8 @@
      ],
      "action": [],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": []
     },
     "palette_approx": [],
     "fonts": "`Aeonik Pro` (display) + `Inter` (texto)",
@@ -499,6 +554,24 @@
     "10C_FIN_dribbble-conceptzilla_banco-app-ios-saldo-transacoes_1.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#191C1F",
+    "surface": "#000000",
+    "text": "#848484",
+    "muted": "#C9C9CD",
+    "action": "#848484",
+    "on_action": "#111111",
+    "action_text": "#848484",
+    "accent2": null,
+    "border": "#282B2D",
+    "dark": true,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 8,
+    "pill": false,
+    "density": "regular",
+    "adjusted": true
+   },
    "platforms": [
     "mobile",
     "website"
@@ -545,13 +618,13 @@
      ],
      "action": [
       "#D4FF3A",
-      "#B4E33B"
-     ],
-     "border": [],
-     "state": [
+      "#B4E33B",
       "#00B38C",
       "#8F2B4B"
-     ]
+     ],
+     "border": [],
+     "state": [],
+     "unknown": []
     },
     "palette_approx": [
      "#00B38C",
@@ -575,6 +648,24 @@
     "Dfr6X8qFPwC_2.jpg"
    ],
    "rules_excerpt": "Atenção: hex deste template não foram medidos; confirme com a marca do cliente.",
+   "preview": {
+    "bg": "#0B0B0D",
+    "surface": "#171719",
+    "text": "#FFFFFF",
+    "muted": "#A2A2A3",
+    "action": "#D4FF3A",
+    "on_action": "#111111",
+    "action_text": "#D4FF3A",
+    "accent2": "#B4E33B",
+    "border": "#2D2D2F",
+    "dark": true,
+    "font_display": "Akshar",
+    "font_body": "Inter",
+    "radius": 10,
+    "pill": false,
+    "density": "compact",
+    "adjusted": false
+   },
    "platforms": [
     "mobile",
     "desktop"
@@ -631,11 +722,13 @@
       "#62666D"
      ],
      "action": [
-      "#27A644",
-      "#F34E52"
+      "#27A644"
      ],
      "border": [],
-     "state": []
+     "state": [
+      "#F34E52"
+     ],
+     "unknown": []
     },
     "palette_approx": [],
     "fonts": "`Inter Variable` + `Berkeley Mono` (IDs, atalhos)",
@@ -650,6 +743,24 @@
     "10A_DgAT3fVBJ8B_1.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#0F1011",
+    "surface": "#08090A",
+    "text": "#F7F8F8",
+    "muted": "#D0D6E0",
+    "action": "#27A644",
+    "on_action": "#111111",
+    "action_text": "#27A644",
+    "accent2": "#F34E52",
+    "border": "#2F3031",
+    "dark": true,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 6,
+    "pill": false,
+    "density": "compact",
+    "adjusted": false
+   },
    "platforms": [
     "mobile",
     "desktop",
@@ -705,18 +816,20 @@
       "#242629",
       "#101112",
       "#505155",
-      "#75777C"
+      "#75777C",
+      "#9B69FF"
      ],
      "action": [
-      "#266DF0",
-      "#9B69FF",
-      "#007D53",
-      "#E0FCED"
+      "#266DF0"
      ],
      "border": [
       "#CDCED2"
      ],
-     "state": []
+     "state": [
+      "#007D53",
+      "#E0FCED"
+     ],
+     "unknown": []
     },
     "palette_approx": [],
     "fonts": "`Inter` / `Inter Display` + `JetBrains Mono`",
@@ -732,6 +845,24 @@
     "10C_CRM_dribbble-conceptzilla_crm-leads-tabela_1.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#FFFFFF",
+    "surface": "#ECECED",
+    "text": "#242629",
+    "muted": "#101112",
+    "action": "#266DF0",
+    "on_action": "#FFFFFF",
+    "action_text": "#266DF0",
+    "accent2": "#007D53",
+    "border": "#CDCED2",
+    "dark": false,
+    "font_display": "JetBrains Mono",
+    "font_body": "Inter",
+    "radius": 10,
+    "pill": false,
+    "density": "compact",
+    "adjusted": false
+   },
    "platforms": [
     "mobile",
     "desktop",
@@ -781,21 +912,23 @@
     ],
     "palette_roles": {
      "bg": [
-      "#FFFFFF"
+      "#FFFFFF",
+      "#F3FCF2",
+      "#D7F9D3"
      ],
      "text": [
-      "#192435"
+      "#192435",
+      "#27455C"
      ],
      "action": [
-      "#F3FCF2",
-      "#D7F9D3",
-      "#27455C",
       "#6861F2",
-      "#FFDE00",
-      "#017737"
+      "#FFDE00"
      ],
      "border": [],
-     "state": []
+     "state": [
+      "#017737"
+     ],
+     "unknown": []
     },
     "palette_approx": [],
     "fonts": "`Inter` + `Haffer` (display)",
@@ -812,6 +945,24 @@
     "10C_CRM_rd-station-crm_home-funil-kanban_1.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#FFFFFF",
+    "surface": "#F3FCF2",
+    "text": "#192435",
+    "muted": "#27455C",
+    "action": "#6861F2",
+    "on_action": "#FFFFFF",
+    "action_text": "#6861F2",
+    "accent2": "#FFDE00",
+    "border": "#DFE0E3",
+    "dark": false,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 10,
+    "pill": true,
+    "density": "regular",
+    "adjusted": false
+   },
    "platforms": [
     "mobile",
     "desktop",
@@ -868,11 +1019,13 @@
      ],
      "action": [
       "#FF4800",
-      "#061C1D",
       "#124548"
      ],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": [
+      "#061C1D"
+     ]
     },
     "palette_approx": [],
     "fonts": "`HubSpot Sans` + `HubSpot Serif` (marca própria); sem família própria, sans neutra + serifada para títulos de marketing (inferência)",
@@ -887,6 +1040,24 @@
     "10C_CRM_hubspot_home-card-contato_1.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#FCFCFA",
+    "surface": "#F8F5EE",
+    "text": "#1F1F1F",
+    "muted": "#737372",
+    "action": "#FF4800",
+    "on_action": "#111111",
+    "action_text": "#CC3A00",
+    "accent2": "#124548",
+    "border": "#DDDDDB",
+    "dark": false,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 10,
+    "pill": false,
+    "density": "compact",
+    "adjusted": true
+   },
    "platforms": [
     "mobile"
    ],
@@ -943,7 +1114,8 @@
       "#1A73E8"
      ],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": []
     },
     "palette_approx": [],
     "fonts": "`Google Sans` (títulos) + `Google Sans Text` (texto) na fonte; equivalente livre: Inter (inferência). Números `tabular-nums`.",
@@ -959,6 +1131,24 @@
     "10A_Deq_kvJBI3g_1.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#FFFFFF",
+    "surface": "#F8F9FA",
+    "text": "#202124",
+    "muted": "#3C4043",
+    "action": "#1A73E8",
+    "on_action": "#FFFFFF",
+    "action_text": "#1A73E8",
+    "accent2": null,
+    "border": "#E0E0E0",
+    "dark": false,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 8,
+    "pill": false,
+    "density": "compact",
+    "adjusted": false
+   },
    "platforms": [
     "mobile",
     "desktop"
@@ -1018,7 +1208,8 @@
       "#0064E0"
      ],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": []
     },
     "palette_approx": [],
     "fonts": "`Optimistic VF` na fonte; sans humanista equivalente (inferência).",
@@ -1031,6 +1222,24 @@
    "sources": "10B PUB §2, §6, §13 direção 2 (https://www.facebook.com/business/tools/ads-manager; https://www.facebook.com/business/ads-guide/update/image).",
    "images": [],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#F1F4F7",
+    "surface": "#F5F6F6",
+    "text": "#1C1E21",
+    "muted": "#1C2B33",
+    "action": "#0064E0",
+    "on_action": "#FFFFFF",
+    "action_text": "#0064E0",
+    "accent2": null,
+    "border": "#D3D6D9",
+    "dark": false,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 8,
+    "pill": false,
+    "density": "compact",
+    "adjusted": false
+   },
    "platforms": [
     "mobile"
    ],
@@ -1065,17 +1274,20 @@
      "#B42625"
     ],
     "palette_roles": {
-     "bg": [],
+     "bg": [
+      "#EDEDED"
+     ],
      "text": [],
      "action": [
-      "#222222",
-      "#F8F8F8",
-      "#EDEDED",
       "#FFF083",
       "#B42625"
      ],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": [
+      "#222222",
+      "#F8F8F8"
+     ]
     },
     "palette_approx": [],
     "fonts": "grotesca — `Inter Tight` na fonte; display grande para o nome da agência/case.",
@@ -1091,6 +1303,24 @@
     "9C_portfolio_siteinspire_1.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#EDEDED",
+    "surface": "#F8F8F8",
+    "text": "#222222",
+    "muted": "#696969",
+    "action": "#FFF083",
+    "on_action": "#111111",
+    "action_text": "#736C3B",
+    "accent2": "#B42625",
+    "border": "#D1D1D1",
+    "dark": false,
+    "font_display": "Inter Tight",
+    "font_body": "Inter",
+    "radius": 8,
+    "pill": false,
+    "density": "airy",
+    "adjusted": true
+   },
    "platforms": [
     "website"
    ],
@@ -1138,7 +1368,8 @@
       "#7088E0"
      ],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": []
     },
     "palette_approx": [
      "#131416",
@@ -1156,6 +1387,24 @@
     "DfXoXVFPBfd.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#131416",
+    "surface": "#15161B",
+    "text": "#F3F4F6",
+    "muted": "#9E9FA1",
+    "action": "#7088E0",
+    "on_action": "#111111",
+    "action_text": "#7088E0",
+    "accent2": null,
+    "border": "#323335",
+    "dark": true,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 10,
+    "pill": true,
+    "density": "compact",
+    "adjusted": false
+   },
    "platforms": [
     "desktop"
    ],
@@ -1189,7 +1438,8 @@
      "text": [],
      "action": [],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": []
     },
     "palette_approx": [],
     "fonts": "não medido; Mailchimp usa serifada em título de seção (\"Recommended for your business\").",
@@ -1207,6 +1457,24 @@
     "10C_PUB_klaviyo_dashboard-receita-atribuida_1.jpg"
    ],
    "rules_excerpt": "Estrutura: (1) uma ação principal — campo de busca/e-mail com CTA (Semrush \"Get insights\", Buffer \"Get started for free\" com aviso de e-mail logo abaixo); (2) prova social com número e origem (Mailchimp 33.000+ reviews + selos; Buffer 375.227); (3) cards de módulo com mock do produto; (4) segundo CTA para quem não decidiu (\"Find the right plan\").",
+   "preview": {
+    "bg": "#FFFFFF",
+    "surface": "#F6F6F6",
+    "text": "#1A1C1F",
+    "muted": "#717274",
+    "action": "#1A1C1F",
+    "on_action": "#FFFFFF",
+    "action_text": "#1A1C1F",
+    "accent2": null,
+    "border": "#DFDFE0",
+    "dark": false,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 8,
+    "pill": true,
+    "density": "airy",
+    "adjusted": false
+   },
    "platforms": [
     "desktop",
     "website"
@@ -1247,7 +1515,7 @@
     "palette_roles": {
      "bg": [
       "#FFFFFF",
-      "#676B5F"
+      "#ECFEF2"
      ],
      "text": [
       "#1E2330"
@@ -1255,11 +1523,11 @@
      "action": [
       "#E9C0E9",
       "#D2E823",
-      "#ECFEF2",
-      "#1E2330"
+      "#676B5F"
      ],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": []
     },
     "palette_approx": [],
     "fonts": "`Linksans` (própria) na fonte; uma sans com personalidade + mesma família no texto (inferência).",
@@ -1274,6 +1542,24 @@
     "10C_MPE_beacons_perfil-link-bio-mock_1.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#FFFFFF",
+    "surface": "#ECFEF2",
+    "text": "#1E2330",
+    "muted": "#6D7179",
+    "action": "#E9C0E9",
+    "on_action": "#111111",
+    "action_text": "#806A80",
+    "accent2": "#D2E823",
+    "border": "#E0E0E2",
+    "dark": false,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 8,
+    "pill": false,
+    "density": "airy",
+    "adjusted": true
+   },
    "platforms": [
     "mobile",
     "website"
@@ -1317,12 +1603,14 @@
       "#999999"
      ],
      "action": [
-      "#1F1F1F",
-      "#111111",
       "#0099FF"
      ],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": [
+      "#1F1F1F",
+      "#111111"
+     ]
     },
     "palette_approx": [],
     "fonts": "`Inter` (+ `walsheim`) na fonte; grotesca para título e texto.",
@@ -1337,6 +1625,24 @@
     "10C_MPE_framer_home-prompt-canvas_1.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#111111",
+    "surface": "#1F1F1F",
+    "text": "#FFFFFF",
+    "muted": "#999999",
+    "action": "#0099FF",
+    "on_action": "#111111",
+    "action_text": "#0099FF",
+    "accent2": null,
+    "border": "#323232",
+    "dark": true,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 8,
+    "pill": false,
+    "density": "airy",
+    "adjusted": false
+   },
    "platforms": [
     "website"
    ],
@@ -1372,7 +1678,8 @@
      "text": [],
      "action": [],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": []
     },
     "palette_approx": [],
     "fonts": "não medido (o caso cita `sofia pro`).",
@@ -1387,6 +1694,24 @@
     "9C_propostas_cook_2.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#FFFFFF",
+    "surface": "#F6F6F6",
+    "text": "#1A1C1F",
+    "muted": "#717274",
+    "action": "#1A1C1F",
+    "on_action": "#FFFFFF",
+    "action_text": "#1A1C1F",
+    "accent2": null,
+    "border": "#DFDFE0",
+    "dark": false,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 8,
+    "pill": false,
+    "density": "airy",
+    "adjusted": false
+   },
    "platforms": [
     "mobile",
     "desktop",
@@ -1424,12 +1749,14 @@
      "bg": [],
      "text": [],
      "action": [
-      "#222222",
-      "#F8F8F8",
       "#FFF083"
      ],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": [
+      "#222222",
+      "#F8F8F8"
+     ]
     },
     "palette_approx": [],
     "fonts": "grotesca (`Inter Tight` na Awwwards); nome da pessoa em display muito grande, caixa-alta.",
@@ -1446,6 +1773,24 @@
     "10A_DgEyy8nRybB_1.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#F8F8F8",
+    "surface": "#EFEFEF",
+    "text": "#222222",
+    "muted": "#6D6D6D",
+    "action": "#FFF083",
+    "on_action": "#111111",
+    "action_text": "#736C3B",
+    "accent2": null,
+    "border": "#DADADA",
+    "dark": false,
+    "font_display": "Inter Tight",
+    "font_body": "Inter",
+    "radius": 8,
+    "pill": false,
+    "density": "airy",
+    "adjusted": true
+   },
    "platforms": [
     "website"
    ],
@@ -1481,7 +1826,8 @@
      "text": [],
      "action": [],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": []
     },
     "palette_approx": [],
     "fonts": "não medido; sans pesada no título (observação dos prints).",
@@ -1499,6 +1845,24 @@
     "9C_perfil-criador_nomey_3.jpg"
    ],
    "rules_excerpt": "Estrutura: (1) cabeçalho com foto, nome, ícones sociais e bio curta; (2) 1–3 botões de ação (\"Book a 1:1 call\", \"Work with me\", material gratuito); (3) vídeo/conteúdo em destaque; (4) vitrine de produtos; (5) um CTA de assinatura/compra no card de perfil (Nomey \"Subscribe for $4.99/month\").",
+   "preview": {
+    "bg": "#FFFFFF",
+    "surface": "#F6F6F6",
+    "text": "#1A1C1F",
+    "muted": "#717274",
+    "action": "#1A1C1F",
+    "on_action": "#FFFFFF",
+    "action_text": "#1A1C1F",
+    "accent2": null,
+    "border": "#DFDFE0",
+    "dark": false,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 16,
+    "pill": false,
+    "density": "airy",
+    "adjusted": false
+   },
    "platforms": [
     "mobile"
    ],
@@ -1545,14 +1909,14 @@
      ],
      "action": [
       "#005EB8",
-      "#003087"
+      "#003087",
+      "#007F3B"
      ],
      "border": [
       "#D8DDE0"
      ],
-     "state": [
-      "#007F3B"
-     ]
+     "state": [],
+     "unknown": []
     },
     "palette_approx": [],
     "fonts": "Frutiger (marca NHS) → Arial fora do NHS; uma família só",
@@ -1567,6 +1931,24 @@
     "9B_formularios_slack-forca-senha_1.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#FFFFFF",
+    "surface": "#F0F4F5",
+    "text": "#212B32",
+    "muted": "#6F767A",
+    "action": "#005EB8",
+    "on_action": "#FFFFFF",
+    "action_text": "#005EB8",
+    "accent2": "#003087",
+    "border": "#D8DDE0",
+    "dark": false,
+    "font_display": "Arial",
+    "font_body": "Arial",
+    "radius": 4,
+    "pill": false,
+    "density": "airy",
+    "adjusted": false
+   },
    "platforms": [
     "mobile",
     "desktop"
@@ -1614,16 +1996,17 @@
       "#006A59",
       "#DFF9F2",
       "#EEE8E3",
-      "#B6AEA5"
+      "#B6AEA5",
+      "#27455C"
      ],
      "text": [
       "#2A2623",
-      "#35495E",
-      "#27455C"
+      "#35495E"
      ],
      "action": [],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": []
     },
     "palette_approx": [],
     "fonts": "`system-ui` (Doctoralia); se quiser personalidade, 1 sans humanista + mesma sans no corpo (inferência)",
@@ -1639,6 +2022,24 @@
     "10C_SAU_zocdoc_home-busca-seguro-saude_1.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#006A59",
+    "surface": "#0D7161",
+    "text": "#DFDEDE",
+    "muted": "#D7DBDF",
+    "action": "#DFDEDE",
+    "on_action": "#111111",
+    "action_text": "#DFDEDE",
+    "accent2": null,
+    "border": "#1F7A6C",
+    "dark": true,
+    "font_display": "system-ui",
+    "font_body": "system-ui",
+    "radius": 10,
+    "pill": false,
+    "density": "regular",
+    "adjusted": true
+   },
    "platforms": [
     "website"
    ],
@@ -1678,14 +2079,16 @@
      "#005EB8"
     ],
     "palette_roles": {
-     "bg": [],
+     "bg": [
+      "#27455C"
+     ],
      "text": [],
      "action": [
-      "#27455C",
       "#005EB8"
      ],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": []
     },
     "palette_approx": [],
     "fonts": "sans de sistema/Inter + `tabular-nums` em agenda e exames (complemento)",
@@ -1700,6 +2103,24 @@
     "10C_SAU_dribbble-phenomenon-lably_dashboard-exames-ia_1.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#27455C",
+    "surface": "#324E64",
+    "text": "#F3F4F6",
+    "muted": "#A5B2BB",
+    "action": "#005EB8",
+    "on_action": "#FFFFFF",
+    "action_text": "#8CB7DF",
+    "accent2": null,
+    "border": "#445E72",
+    "dark": true,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 8,
+    "pill": false,
+    "density": "compact",
+    "adjusted": true
+   },
    "platforms": [
     "mobile"
    ],
@@ -1741,7 +2162,8 @@
       "#2FB58F"
      ],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": []
     },
     "palette_approx": [
      "#0B0C0E",
@@ -1762,6 +2184,24 @@
     "10A_DgAqhGGDBws_1.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#0B0C0E",
+    "surface": "#151618",
+    "text": "#F3F4F6",
+    "muted": "#9B9C9E",
+    "action": "#2FB58F",
+    "on_action": "#111111",
+    "action_text": "#2FB58F",
+    "accent2": null,
+    "border": "#2B2C2E",
+    "dark": true,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 16,
+    "pill": false,
+    "density": "compact",
+    "adjusted": false
+   },
    "platforms": [
     "desktop"
    ],
@@ -1816,7 +2256,8 @@
      "border": [],
      "state": [
       "#0F7A52"
-     ]
+     ],
+     "unknown": []
     },
     "palette_approx": [],
     "fonts": "GDS Transport só no gov.uk → fora dele Helvetica ou Arial; uma família",
@@ -1831,6 +2272,24 @@
     "9B_formularios_slack-forca-senha_1.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#FFFFFF",
+    "surface": "#F4F8FB",
+    "text": "#0B0C0C",
+    "muted": "#484949",
+    "action": "#1D70B8",
+    "on_action": "#FFFFFF",
+    "action_text": "#1D70B8",
+    "accent2": "#1A65A6",
+    "border": "#DDDDDD",
+    "dark": false,
+    "font_display": "Arial",
+    "font_body": "Arial",
+    "radius": 0,
+    "pill": false,
+    "density": "regular",
+    "adjusted": false
+   },
    "platforms": [
     "mobile",
     "desktop",
@@ -1876,19 +2335,20 @@
     ],
     "palette_roles": {
      "bg": [
-      "#F1F5F9"
+      "#F1F5F9",
+      "#00A37F"
      ],
      "text": [
+      "#0F172A",
       "#455468",
       "#5C6F8A"
      ],
      "action": [
-      "#0F172A",
-      "#007A5F",
-      "#00A37F"
+      "#007A5F"
      ],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": []
     },
     "palette_approx": [],
     "fonts": "Inter em tudo (Jusbrasil)",
@@ -1903,6 +2363,24 @@
     "10C_JUR_jusbrasil_home-busca-processo_1.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#F1F5F9",
+    "surface": "#E9ECF0",
+    "text": "#0F172A",
+    "muted": "#455468",
+    "action": "#007A5F",
+    "on_action": "#FFFFFF",
+    "action_text": "#007A5F",
+    "accent2": null,
+    "border": "#D1D6DC",
+    "dark": false,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 8,
+    "pill": true,
+    "density": "airy",
+    "adjusted": false
+   },
    "platforms": [
     "mobile",
     "desktop",
@@ -1942,16 +2420,18 @@
     ],
     "palette_roles": {
      "bg": [
-      "#130032",
-      "#F8F3F0",
-      "#4C00FF"
+      "#F8F3F0"
      ],
      "text": [],
      "action": [
+      "#4C00FF",
       "#151B17"
      ],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": [
+      "#130032"
+     ]
     },
     "palette_approx": [],
     "fonts": "grotesca própria (`DSIndigo`); substituta: uma grotesca licenciada do projeto (inferência)",
@@ -1964,6 +2444,24 @@
    "sources": "https://www.docusign.com/pt-br",
    "images": [],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#F8F3F0",
+    "surface": "#EFEAE8",
+    "text": "#151B17",
+    "muted": "#6B6D69",
+    "action": "#4C00FF",
+    "on_action": "#FFFFFF",
+    "action_text": "#4C00FF",
+    "accent2": "#130032",
+    "border": "#D8D5D2",
+    "dark": false,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 8,
+    "pill": false,
+    "density": "airy",
+    "adjusted": false
+   },
    "platforms": [
     "mobile",
     "desktop",
@@ -2002,14 +2500,16 @@
      "bg": [],
      "text": [],
      "action": [
-      "#000000",
-      "#F5F5F5",
       "#1A56FF",
       "#012587",
       "#F5CE9B"
      ],
      "border": [],
-     "state": []
+     "state": [],
+     "unknown": [
+      "#000000",
+      "#F5F5F5"
+     ]
     },
     "palette_approx": [],
     "fonts": "display leve (`Facility`) + mono (`Openinto Mono`) (Clio); alternativa serifada nos KPIs como Harvey (sem hex medido)",
@@ -2026,6 +2526,24 @@
     "10C_JUR_dribbble-mara-bureau_painel-prioridades-ia_1.jpg"
    ],
    "rules_excerpt": "",
+   "preview": {
+    "bg": "#F5F5F5",
+    "surface": "#ECECEC",
+    "text": "#000000",
+    "muted": "#5D5D5D",
+    "action": "#1A56FF",
+    "on_action": "#FFFFFF",
+    "action_text": "#1A56FF",
+    "accent2": "#012587",
+    "border": "#D3D3D3",
+    "dark": false,
+    "font_display": "Inter",
+    "font_body": "Inter",
+    "radius": 6,
+    "pill": false,
+    "density": "compact",
+    "adjusted": false
+   },
    "platforms": [
     "mobile",
     "desktop"

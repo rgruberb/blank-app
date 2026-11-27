@@ -279,47 +279,185 @@ def segment_rules(skill_dir):
 
 # ---------------------------------------------------------------- templates
 ROLE_WORDS = [
-    ("bg", r"fundo|superf|hero|claro|escuro|neutro|surface"),
-    ("text", r"texto|principal|secundár|terciár"),
-    ("action", r"aç[aã]o|acento|cta|link|destaque|marca|pílula|azul|verde|lima|lilás"),
+    ("bg", r"fundo|superf|cards?\b|hero|surface|neutro"),
+    ("text", r"texto|tipografia|principal|secundár|terciár|desabilitado"),
+    ("action", r"aç[aã]o|acento|cta|link|destaque|pílula|marca|título"),
     ("border", r"borda"),
-    ("state", r"estado|sucesso|erro|alerta|semânt|ganho|perda"),
+    ("state", r"estado|sucesso|erro|alerta|semânt|ganho|perda|risco"),
 ]
 
 
+def _role_in(text):
+    best, pos = None, -1
+    for r, rx in ROLE_WORDS:
+        for m in re.finditer(rx, text):
+            if m.start() > pos:
+                best, pos = r, m.start()
+    return best
+
+
 def palette_roles(fields):
-    """Classifica cada hex por papel (bg/text/action/border/state) usando o rótulo da linha
-    e as palavras imediatamente antes do hex."""
-    roles = {"bg": [], "text": [], "action": [], "border": [], "state": []}
+    """Classifica cada hex por papel (bg/text/action/border/state/unknown) pelo texto entre o hex
+    anterior e este, pelo parêntese logo depois e, por último, pelo rótulo da linha."""
+    roles = {"bg": [], "text": [], "action": [], "border": [], "state": [], "unknown": []}
     approx = set()
     color_keys = [k for k in fields if not re.match(r"(fontes|imagens|quando|par tipo|escala|raio|sombra|densidade|motion|estrutura|cuidado|atenção)", k)]
     allhex = []
     for k in color_keys:
         val = fields[k]
-        last_role = None
+        key_role = _role_in(k)
+        last_role, last_end = None, 0
         for m in HEX_RE.finditer(val):
             h = norm_hex(m.group(2))
             if m.group(1):
                 approx.add(h)
-            before = val[max(0, m.start() - 48):m.start()].lower()
-            before = re.split(r"[;,(]\s*(?=[a-zà-ú])", before)[-1] if before else ""
-            role = None
-            for r, rx in ROLE_WORDS:
-                if re.search(rx, before):
-                    role = r
+            between = val[last_end:m.start()].lower()
+            after = re.match(r"`?\s*\(([^)]{0,40})\)", val[m.end():])
+            role = _role_in(between)
+            if role is None and after and not (key_role and key_role != "unknown"):
+                role = _role_in(after.group(1).lower())
+            if role is None and last_role and len(between.strip(" `")) <= 28:
+                role = last_role
             if role is None:
-                for r, rx in ROLE_WORDS:
-                    if re.search(rx, k):
-                        role = r
-                        break
-            if role is None:
-                role = last_role or "action"
-            last_role = role
-            if h not in roles[role]:
-                roles[role].append(h)
+                role = key_role or "unknown"
+            last_role, last_end = role, m.end()
             if h not in allhex:
                 allhex.append(h)
+            if h not in roles[role]:
+                roles[role].append(h)
     return roles, allhex, sorted(approx)
+
+
+def _rgb(h):
+    return tuple(int(h[i:i + 2], 16) / 255 for i in (1, 3, 5))
+
+
+def _hex(rgb):
+    return "#" + "".join("%02X" % max(0, min(255, round(c * 255))) for c in rgb)
+
+
+def lum(h):
+    def ch(c):
+        return c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4
+    r, g, b = (ch(c) for c in _rgb(h))
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b
+
+
+def contrast(a, b):
+    la, lb = lum(a), lum(b)
+    return (max(la, lb) + 0.05) / (min(la, lb) + 0.05)
+
+
+def chroma(h):
+    r, g, b = _rgb(h)
+    return max(r, g, b) - min(r, g, b)
+
+
+def mix(a, b, t):
+    ra, rb = _rgb(a), _rgb(b)
+    return _hex(tuple(x + (y - x) * t for x, y in zip(ra, rb)))
+
+
+def ensure(fg, bg, target=4.5):
+    """Aproxima fg de preto/branco até atingir o contraste pedido com bg."""
+    if contrast(fg, bg) >= target:
+        return fg, False
+    pole = "#000000" if lum(bg) > 0.18 else "#FFFFFF"
+    for i in range(1, 21):
+        c = mix(fg, pole, i / 20)
+        if contrast(c, bg) >= target:
+            return c, True
+    return pole, True
+
+
+def preview_theme(roles, allhex, name, fonts, radius_shadow, density):
+    dark_hint = bool(re.search(r"escur|preto|dark", name.lower()))
+    text = roles["text"][:]
+    bgs = roles["bg"][:]
+    if bgs and not dark_hint:
+        light = [h for h in bgs if lum(h) > 0.5]
+        bgs = light or ["#FFFFFF"]
+    pool = roles["unknown"] + roles["bg"] + roles["action"]
+    if not bgs:
+        neutrals = [h for h in roles["unknown"] if chroma(h) < 0.12]
+        if text:
+            cands = [h for h in neutrals if h not in text] or [h for h in roles["unknown"] if h not in text]
+            if cands:
+                bgs = [max(cands, key=lambda h: contrast(h, text[0]))]
+        elif neutrals:
+            bgs = [min(neutrals, key=lum)] if dark_hint else [max(neutrals, key=lum)]
+    if not bgs:
+        bgs = ["#0E0F11" if dark_hint else "#FFFFFF"]
+    bg = bgs[0]
+    if dark_hint and lum(bg) > 0.4:
+        darks = [h for h in roles["bg"] + roles["unknown"] if lum(h) < 0.05]
+        if darks:
+            bg = darks[0]
+    is_dark = lum(bg) < 0.18
+    if not text:
+        neutrals = [h for h in pool if h != bg and chroma(h) < 0.12 and contrast(h, bg) >= 3]
+        text = [max(neutrals, key=lambda h: contrast(h, bg))] if neutrals else ["#F3F4F6" if is_dark else "#1A1C1F"]
+    best = max(text, key=lambda h: contrast(h, bg))
+    t0, adj_t = ensure(text[0] if contrast(text[0], bg) >= 4.5 else best, bg)
+    text = [t0] + [h for h in text if h != t0 and contrast(h, bg) >= 3]
+    surface = next((h for h in bgs[1:] + roles["unknown"] if h != bg and chroma(h) < 0.12
+                    and contrast(h, bg) < 1.35 and contrast(t0, h) >= 4.5), None)
+    if not surface:
+        surface = mix(bg, "#FFFFFF" if is_dark else "#000000", 0.05 if is_dark else 0.035)
+    muted_src = text[1] if len(text) > 1 else mix(t0, bg, 0.38)
+    muted, _ = ensure(muted_src, bg)
+    acts = [h for h in roles["action"] if h not in (bg,)]
+    acts_sat = [h for h in acts if chroma(h) >= 0.12]
+    if acts_sat:
+        action = acts_sat[0]
+    elif acts and contrast(acts[0], bg) >= 1.5:
+        action = acts[0]
+    else:
+        others = [h for h in roles["unknown"] + roles["bg"] + roles["text"] + roles["state"]
+                  if h not in (bg, t0) and chroma(h) >= 0.12]
+        action = max(others, key=chroma) if others else t0
+    on_action = "#FFFFFF" if contrast("#FFFFFF", action) >= contrast("#111111", action) else "#111111"
+    if contrast(on_action, action) < 4.5:
+        on_action = ensure(on_action, action)[0]
+    if contrast(action, bg) < 3:
+        action_text, adj_a = t0, False
+    else:
+        action_text, adj_a = ensure(action, bg)
+    accent2 = next((h for h in roles["action"] + roles["state"] + roles["unknown"]
+                    if h not in (bg, action, t0) and chroma(h) >= 0.12), None)
+    border = roles["border"][0] if roles["border"] else mix(bg, t0, 0.14)
+    f = fonts.lower()
+    display = "Inter"
+    for fam in ("Inter Tight", "Akshar"):
+        if fam.lower() in f:
+            display = fam
+            break
+    else:
+        if re.search(r"arial|helvetica|frutiger", f):
+            display = "Arial"
+        elif "system-ui" in f:
+            display = "system-ui"
+    mono = "JetBrains Mono"
+    body = "Arial" if display == "Arial" else ("system-ui" if display == "system-ui" else "Inter")
+    rs = radius_shadow.lower()
+    nums = [int(n) for n in re.findall(r"(\d+)\s*px", rs.split("sombra")[0])]
+    if nums:
+        radius = round(sum(nums[:2]) / len(nums[:2]))
+    elif re.search(r"\balto\b|bem arredond", rs):
+        radius = 16
+    elif "pequeno" in rs:
+        radius = 6
+    elif "médio" in rs or "arredond" in rs:
+        radius = 10
+    else:
+        radius = 8
+    pill = bool(re.search(r"pílula", rs))
+    d = density.lower()
+    dens = "compact" if re.match(r"\s*(alta|média-alta|alta-média)", d) else ("airy" if re.match(r"\s*baixa", d) else "regular")
+    return {"bg": bg, "surface": surface, "text": t0, "muted": muted, "action": action,
+            "on_action": on_action, "action_text": action_text, "accent2": accent2, "border": border,
+            "dark": is_dark, "font_display": display, "font_body": body, "font_mono": mono, "radius": radius, "pill": pill,
+            "density": dens, "adjusted": adj_t or adj_a}
 
 
 def parse_templates():
@@ -355,6 +493,7 @@ def parse_templates():
             scale = clean(pick(fields, "escala"), 260)
             density = clean(pick(fields, "densidade"), 200)
             plat_text = " ".join([when, scale, density, name])
+            fonts_txt = clean(pick(fields, "par tipo"), 260)
             item = {
                 "type": "template",
                 "code": tcode,
@@ -364,7 +503,7 @@ def parse_templates():
                     "palette": allhex,
                     "palette_roles": roles,
                     "palette_approx": approx,
-                    "fonts": clean(pick(fields, "par tipo"), 260),
+                    "fonts": fonts_txt,
                     "scale": scale,
                     "radius_shadow": radius_shadow,
                     "density": density,
@@ -374,6 +513,7 @@ def parse_templates():
                 "sources": clean(pick(fields, "fontes"), 320),
                 "images": imgs,
                 "rules_excerpt": " ".join(extras),
+                "preview": preview_theme(roles, allhex, name, fonts_txt, radius_shadow, density),
                 "platforms": infer_platforms(plat_text, ["mobile", "desktop", "website"]),
                 "source_file": rel(path),
                 "date_added": to_utc(git_first_date_string("## " + tcode, path)),
