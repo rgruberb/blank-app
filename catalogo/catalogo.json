@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T22:47:06Z",
+ "generated_at": "2026-11-27T22:54:03Z",
  "theme_skills": [
   "design-direction",
   "dashboard-ui",
@@ -286,9 +286,7 @@
    ],
    "source_file": ".claude/skills/segmento-financeiro/references/templates.md",
    "date_added": "2026-11-27T22:19:19Z",
-   "screens": [
-    "marca/cor"
-   ],
+   "screens": [],
    "ref_codes": [
     "REF-0160",
     "REF-0152"
@@ -302,7 +300,6 @@
     "#FF6200",
     "#FFFFFF",
     "FIN",
-    "marca/cor",
     "mobile",
     "template",
     "website"
@@ -396,9 +393,7 @@
    ],
    "source_file": ".claude/skills/segmento-financeiro/references/templates.md",
    "date_added": "2026-11-27T22:19:19Z",
-   "screens": [
-    "marca/cor"
-   ],
+   "screens": [],
    "ref_codes": [
     "REF-0157",
     "REF-0155",
@@ -421,7 +416,6 @@
     "#FFFFFF",
     "FIN",
     "desktop",
-    "marca/cor",
     "mobile",
     "template",
     "website"
@@ -2624,9 +2618,7 @@
    ],
    "source_file": ".claude/skills/segmento-financeiro/references/componentes.md",
    "date_added": "2026-11-27T22:19:19Z",
-   "screens": [
-    "landing"
-   ],
+   "screens": [],
    "ref_codes": [
     "REF-0139",
     "REF-0149",
@@ -2638,7 +2630,6 @@
     "componente",
     "dados",
     "desktop",
-    "landing",
     "mobile"
    ]
   },
@@ -3141,9 +3132,7 @@
    ],
    "source_file": ".claude/skills/segmento-crm/references/componentes.md",
    "date_added": "2026-11-27T22:21:55Z",
-   "screens": [
-    "marca/cor"
-   ],
+   "screens": [],
    "ref_codes": [
     "REF-0146"
    ],
@@ -3152,7 +3141,6 @@
     "componente",
     "desktop",
     "layout",
-    "marca/cor",
     "mobile",
     "website"
    ]
@@ -3771,8 +3759,7 @@
    "source_file": ".claude/skills/segmento-publicidade/references/componentes.md",
    "date_added": "2026-11-27T22:19:19Z",
    "screens": [
-    "lista/tabela",
-    "marca/cor"
+    "lista/tabela"
    ],
    "ref_codes": [],
    "tags": [
@@ -3781,7 +3768,6 @@
     "dados",
     "desktop",
     "lista/tabela",
-    "marca/cor",
     "mobile"
    ]
   },
@@ -3931,16 +3917,13 @@
    "ref_images": [],
    "source_file": ".claude/skills/segmento-publicidade/references/componentes.md",
    "date_added": "2026-11-27T22:19:19Z",
-   "screens": [
-    "marca/cor"
-   ],
+   "screens": [],
    "ref_codes": [],
    "tags": [
     "PUB",
     "componente",
     "confiança",
     "desktop",
-    "marca/cor",
     "mobile",
     "website"
    ]
@@ -4608,9 +4591,7 @@
    ],
    "source_file": ".claude/skills/segmento-saude/references/componentes.md",
    "date_added": "2026-11-27T22:19:19Z",
-   "screens": [
-    "marca/cor"
-   ],
+   "screens": [],
    "ref_codes": [
     "REF-0180"
    ],
@@ -4619,7 +4600,6 @@
     "componente",
     "confiança",
     "desktop",
-    "marca/cor",
     "mobile",
     "website"
    ]
@@ -4745,9 +4725,7 @@
    ],
    "source_file": ".claude/skills/segmento-saude/references/componentes.md",
    "date_added": "2026-11-27T22:19:19Z",
-   "screens": [
-    "marca/cor"
-   ],
+   "screens": [],
    "ref_codes": [
     "REF-0181"
    ],
@@ -4756,7 +4734,6 @@
     "componente",
     "dados",
     "desktop",
-    "marca/cor",
     "mobile",
     "website"
    ]
@@ -4890,9 +4867,7 @@
    ],
    "source_file": ".claude/skills/segmento-saude/references/componentes.md",
    "date_added": "2026-11-27T22:19:19Z",
-   "screens": [
-    "marca/cor"
-   ],
+   "screens": [],
    "ref_codes": [
     "REF-0181",
     "REF-0072"
@@ -4902,7 +4877,6 @@
     "componente",
     "dados",
     "desktop",
-    "marca/cor",
     "mobile",
     "website"
    ]
@@ -5570,8 +5544,7 @@
    "date_added": "2026-11-16T13:55:10Z",
    "screens": [
     "landing",
-    "motion",
-    "marca/cor"
+    "motion"
    ],
    "code": "REF-0006",
    "thumb": "thumbs/REF-0006.webp",
@@ -5582,7 +5555,6 @@
     "GER",
     "design-direction",
     "landing",
-    "marca/cor",
     "motion",
     "referência",
     "website"
@@ -5614,7 +5586,6 @@
    "copies": [],
    "date_added": "2026-11-16T13:55:10Z",
    "screens": [
-    "landing",
     "marca/cor"
    ],
    "code": "REF-0007",
@@ -5627,7 +5598,6 @@
     "PUB",
     "design-direction",
     "desktop",
-    "landing",
     "marca/cor",
     "mobile",
     "referência"
@@ -5866,7 +5836,6 @@
    "copies": [],
    "date_added": "2026-11-16T13:55:31Z",
    "screens": [
-    "landing",
     "lista/tabela"
    ],
    "code": "REF-0013",
@@ -5878,7 +5847,6 @@
     "GER",
     "dashboard-ui",
     "desktop",
-    "landing",
     "lista/tabela",
     "referência"
    ]
@@ -5908,7 +5876,6 @@
    "date_added": "2026-11-16T13:55:31Z",
    "screens": [
     "dashboard",
-    "landing",
     "lista/tabela",
     "detalhe",
     "motion"
@@ -5924,7 +5891,6 @@
     "dashboard-ui",
     "desktop",
     "detalhe",
-    "landing",
     "lista/tabela",
     "motion",
     "referência"
@@ -5956,7 +5922,6 @@
    "date_added": "2026-11-16T13:55:31Z",
    "screens": [
     "dashboard",
-    "landing",
     "lista/tabela",
     "detalhe"
    ],
@@ -5972,7 +5937,6 @@
     "dashboard-ui",
     "desktop",
     "detalhe",
-    "landing",
     "lista/tabela",
     "referência"
    ]
@@ -6001,9 +5965,7 @@
    "image": ".claude/skills/dashboard-ui/assets/visual-refs/DfKPFDwz2aA.jpg",
    "copies": [],
    "date_added": "2026-11-16T13:55:31Z",
-   "screens": [
-    "landing"
-   ],
+   "screens": [],
    "code": "REF-0016",
    "thumb": "thumbs/REF-0016.webp",
    "thumb_w": 480,
@@ -6014,7 +5976,6 @@
     "GER",
     "dashboard-ui",
     "desktop",
-    "landing",
     "referência"
    ]
   },
@@ -6382,10 +6343,7 @@
    "image": ".claude/skills/ui-motion/assets/visual-refs/DbfG6fuPE9y.jpg",
    "copies": [],
    "date_added": "2026-11-16T13:55:31Z",
-   "screens": [
-    "landing",
-    "marca/cor"
-   ],
+   "screens": [],
    "code": "REF-0025",
    "thumb": "thumbs/REF-0025.webp",
    "thumb_w": 480,
@@ -6393,8 +6351,6 @@
    "tags": [
     "@_code_and_chill_",
     "GER",
-    "landing",
-    "marca/cor",
     "mobile",
     "referência",
     "ui-motion"
@@ -6701,7 +6657,6 @@
    "copies": [],
    "date_added": "2026-11-16T13:55:31Z",
    "screens": [
-    "landing",
     "motion"
    ],
    "code": "REF-0033",
@@ -6711,7 +6666,6 @@
    "tags": [
     "@motion_ui_interface",
     "GER",
-    "landing",
     "mobile",
     "motion",
     "referência",
@@ -6947,8 +6901,7 @@
    "copies": [],
    "date_added": "2026-11-16T13:55:31Z",
    "screens": [
-    "dashboard",
-    "marca/cor"
+    "dashboard"
    ],
    "code": "REF-0039",
    "thumb": "thumbs/REF-0039.webp",
@@ -6959,7 +6912,6 @@
     "GER",
     "dashboard",
     "desktop",
-    "marca/cor",
     "referência",
     "ux-patterns"
    ]
@@ -6990,7 +6942,6 @@
    "copies": [],
    "date_added": "2026-11-16T13:55:31Z",
    "screens": [
-    "landing",
     "lista/tabela",
     "formulário"
    ],
@@ -7003,7 +6954,6 @@
     "GER",
     "desktop",
     "formulário",
-    "landing",
     "lista/tabela",
     "mobile",
     "referência",
@@ -7526,8 +7476,7 @@
    "date_added": "2026-11-18T13:35:32Z",
    "screens": [
     "dashboard",
-    "lista/tabela",
-    "marca/cor"
+    "lista/tabela"
    ],
    "code": "REF-0053",
    "thumb": "thumbs/REF-0053.webp",
@@ -7542,7 +7491,6 @@
     "dashboard-ui",
     "desktop",
     "lista/tabela",
-    "marca/cor",
     "referência"
    ]
   },
@@ -7788,8 +7736,7 @@
    "screens": [
     "dashboard",
     "landing",
-    "lista/tabela",
-    "marca/cor"
+    "lista/tabela"
    ],
    "code": "REF-0059",
    "thumb": "thumbs/REF-0059.webp",
@@ -7803,7 +7750,6 @@
     "desktop",
     "landing",
     "lista/tabela",
-    "marca/cor",
     "referência"
    ]
   },
@@ -7872,7 +7818,6 @@
    "copies": [],
    "date_added": "2026-11-18T14:23:57Z",
    "screens": [
-    "landing",
     "lista/tabela"
    ],
    "code": "REF-0061",
@@ -7884,7 +7829,6 @@
     "GER",
     "dashboard-ui",
     "desktop",
-    "landing",
     "lista/tabela",
     "referência"
    ]
@@ -8005,8 +7949,7 @@
    "copies": [],
    "date_added": "2026-11-18T14:23:57Z",
    "screens": [
-    "landing",
-    "marca/cor"
+    "landing"
    ],
    "code": "REF-0064",
    "thumb": "thumbs/REF-0064.webp",
@@ -8017,7 +7960,6 @@
     "GER",
     "design-direction",
     "landing",
-    "marca/cor",
     "referência",
     "website"
    ]
@@ -8208,9 +8150,7 @@
    "image": ".claude/skills/design-direction/assets/visual-refs/Dak9nkTFpYI_3.jpg",
    "copies": [],
    "date_added": "2026-11-18T14:23:57Z",
-   "screens": [
-    "marca/cor"
-   ],
+   "screens": [],
    "code": "REF-0069",
    "thumb": "thumbs/REF-0069.webp",
    "thumb_w": 480,
@@ -8219,7 +8159,6 @@
     "@ramotion (Source)",
     "GER",
     "design-direction",
-    "marca/cor",
     "referência",
     "website"
    ]
@@ -8371,9 +8310,7 @@
    "image": ".claude/skills/dashboard-ui/assets/visual-refs/DfaQe-CiBfJ_1.jpg",
    "copies": [],
    "date_added": "2026-11-18T15:13:04Z",
-   "screens": [
-    "marca/cor"
-   ],
+   "screens": [],
    "code": "REF-0073",
    "thumb": "thumbs/REF-0073.webp",
    "thumb_w": 480,
@@ -8384,7 +8321,6 @@
     "GER",
     "dashboard-ui",
     "desktop",
-    "marca/cor",
     "referência"
    ]
   },
@@ -9323,7 +9259,6 @@
    "copies": [],
    "date_added": "2026-11-18T16:01:38Z",
    "screens": [
-    "landing",
     "marca/cor"
    ],
    "code": "REF-0098",
@@ -9334,7 +9269,6 @@
     "@shohan.designs",
     "GER",
     "dashboard-ui",
-    "landing",
     "marca/cor",
     "mobile",
     "referência"
@@ -9365,8 +9299,7 @@
    "date_added": "2026-11-18T16:01:38Z",
    "screens": [
     "landing",
-    "lista/tabela",
-    "marca/cor"
+    "lista/tabela"
    ],
    "code": "REF-0099",
    "thumb": "thumbs/REF-0099.webp",
@@ -9378,7 +9311,6 @@
     "dashboard-ui",
     "landing",
     "lista/tabela",
-    "marca/cor",
     "mobile",
     "referência"
    ]
@@ -9406,9 +9338,7 @@
    "image": ".claude/skills/dashboard-ui/assets/visual-refs/DffCenmFASU_4.jpg",
    "copies": [],
    "date_added": "2026-11-18T16:01:38Z",
-   "screens": [
-    "landing"
-   ],
+   "screens": [],
    "code": "REF-0100",
    "thumb": "thumbs/REF-0100.webp",
    "thumb_w": 480,
@@ -9417,7 +9347,6 @@
     "@shohan.designs",
     "GER",
     "dashboard-ui",
-    "landing",
     "mobile",
     "referência"
    ]
@@ -9484,9 +9413,7 @@
    "image": ".claude/skills/dashboard-ui/assets/visual-refs/DfmwyDclA0Q_4.jpg",
    "copies": [],
    "date_added": "2026-11-18T16:01:38Z",
-   "screens": [
-    "landing"
-   ],
+   "screens": [],
    "code": "REF-0102",
    "thumb": "thumbs/REF-0102.webp",
    "thumb_w": 480,
@@ -9496,7 +9423,6 @@
     "FIN",
     "GER",
     "dashboard-ui",
-    "landing",
     "mobile",
     "referência"
    ]
@@ -9829,8 +9755,7 @@
    "copies": [],
    "date_added": "2026-11-18T16:01:38Z",
    "screens": [
-    "landing",
-    "marca/cor"
+    "landing"
    ],
    "code": "REF-0111",
    "thumb": "thumbs/REF-0111.webp",
@@ -9841,7 +9766,6 @@
     "GER",
     "design-direction",
     "landing",
-    "marca/cor",
     "referência",
     "website"
    ]
@@ -10561,7 +10485,6 @@
    "copies": [],
    "date_added": "2026-11-23T12:54:37Z",
    "screens": [
-    "landing",
     "lista/tabela",
     "formulário"
    ],
@@ -10574,7 +10497,6 @@
     "NN/g (`touch-target-size`)",
     "SAU",
     "formulário",
-    "landing",
     "lista/tabela",
     "mobile",
     "referência",
@@ -10688,8 +10610,7 @@
    "date_added": "2026-11-23T12:58:14Z",
    "screens": [
     "landing",
-    "detalhe",
-    "marca/cor"
+    "detalhe"
    ],
    "code": "REF-0133",
    "thumb": "thumbs/REF-0133.webp",
@@ -10702,7 +10623,6 @@
     "design-direction",
     "detalhe",
     "landing",
-    "marca/cor",
     "mobile",
     "referência",
     "website"
@@ -11556,8 +11476,7 @@
    "copies": [],
    "date_added": "2026-11-27T22:19:19Z",
    "screens": [
-    "dashboard",
-    "landing"
+    "dashboard"
    ],
    "code": "REF-0154",
    "thumb": "thumbs/REF-0154.webp",
@@ -11567,7 +11486,6 @@
     "FIN",
     "Ramp",
     "dashboard",
-    "landing",
     "referência",
     "segmento-financeiro",
     "website"
@@ -12041,8 +11959,7 @@
     "dashboard",
     "landing",
     "formulário",
-    "detalhe",
-    "marca/cor"
+    "detalhe"
    ],
    "code": "REF-0166",
    "thumb": "thumbs/REF-0166.webp",
@@ -12055,7 +11972,6 @@
     "detalhe",
     "formulário",
     "landing",
-    "marca/cor",
     "mobile",
     "referência",
     "segmento-marca-pessoal",
@@ -12296,8 +12212,7 @@
    "screens": [
     "dashboard",
     "formulário",
-    "detalhe",
-    "marca/cor"
+    "detalhe"
    ],
    "code": "REF-0172",
    "thumb": "thumbs/REF-0172.webp",
@@ -12309,7 +12224,6 @@
     "dashboard",
     "detalhe",
     "formulário",
-    "marca/cor",
     "referência",
     "segmento-publicidade",
     "website"
@@ -12672,8 +12586,7 @@
    "date_added": "2026-11-27T22:19:19Z",
    "screens": [
     "dashboard",
-    "lista/tabela",
-    "marca/cor"
+    "lista/tabela"
    ],
    "code": "REF-0181",
    "thumb": "thumbs/REF-0181.webp",
@@ -12684,7 +12597,6 @@
     "SAU",
     "dashboard",
     "lista/tabela",
-    "marca/cor",
     "referência",
     "segmento-saude",
     "website"
@@ -12789,8 +12701,7 @@
    "copies": [],
    "date_added": "2026-11-27T22:19:19Z",
    "screens": [
-    "formulário",
-    "marca/cor"
+    "formulário"
    ],
    "code": "REF-0184",
    "thumb": "thumbs/REF-0184.webp",
@@ -12800,7 +12711,6 @@
     "SAU",
     "Zocdoc",
     "formulário",
-    "marca/cor",
     "referência",
     "segmento-saude",
     "website"
