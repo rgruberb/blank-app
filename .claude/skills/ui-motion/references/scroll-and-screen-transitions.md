@@ -21,7 +21,7 @@ O que vem dos reels está referenciado; o resto está marcado como **(complement
 
 - **Telas de trabalho repetitivo:** em formulários, tabelas, dashboards de uso diário, settings e checkout, o usuário volta muitas vezes e o movimento vira atrito. Fique com feedback de estado (press, sucesso, erro) e não ponha efeitos de scroll.
 - **Conteúdo que o usuário precisa ler ou comparar agora:** nada de reveal que atrase o texto. Se o conteúdo já está na viewport no load, ele aparece sem animação.
-- **Scroll-jacking:** não altere a velocidade nem a direção do scroll nativo, e não prenda o usuário numa seção longa.
+- **Scroll-jacking:** não altere a velocidade nem a direção do scroll nativo, e não prenda o usuário numa seção longa. Reforço da rodada 10A (@theglidestudio `DgEyy8nRybB`, "Follow, don't lead", print `DgEyy8nRybB_1.jpg`): "sua página briga com quem rola"; na versão calma **o polegar dita o ritmo e, parou de rolar, o movimento para**. Efeito com `scrub` ligado ao scroll obedece a isso; animação disparada que continua sozinha depois de o usuário parar não.
 - **Parallax decorativo em mobile:** custa performance e não informa nada.
 - **Animações que repetem** a cada vez que o elemento sai e volta da viewport: anime uma vez.
 
@@ -91,3 +91,18 @@ Fluxo recomendado pela fonte:
 4. Texto sempre legível; o movimento guia até a próxima ação.
 
 **(complemento)** Traduza "suave" e "sutil" para os tokens do `SKILL.md` antes de pedir: reveal ≤ 700 ms ease-out, stagger 70–100 ms na galeria, deslocamento de hover de poucos px, uma vez só no scroll. Visual do layout do carrossel: `Dff1uulGoxb_2.jpg`. O fluxo completo ficou atrás de "comente WEBSITE" e não foi visto.
+
+## 7. Interações "premium" de site e o custo de cada uma (`DgNTvDZCMNX`, @thedesignstack.co.in, rodada 10A)
+Carrossel "Parte 4": cada interação tem função **e** custo. Vale como filtro antes de escolher o **um** momento animado (§5).
+
+| Interação | Função | Custo citado |
+|---|---|---|
+| Rastro do cursor | primeira tela memorável | some no celular (sem cursor) |
+| Mudança de fundo por seção | ritmo entre seções | pode falhar em contraste |
+| Spotlight no cursor | clima | pode esconder conteúdo |
+| Footer takeover (o rodapé sobe e cobre a página) | fechamento marcante | exige cuidado no mobile |
+| Distorção de imagem no hover | tato em portfólio | custa performance |
+| Cenas guiadas por scroll | narrativa | dos mais pesados |
+| Showreel em tela cheia | portfólio/agência | dos mais pesados |
+
+(complemento) Efeito que depende de cursor precisa de equivalente no toque ou de nenhum efeito no mobile; mudança de fundo por seção exige medir o contraste de cada par texto × fundo (`design-direction` → `color-palettes.md`); WebGL/vídeo ≤ 1 por página (`react-bits.md`).

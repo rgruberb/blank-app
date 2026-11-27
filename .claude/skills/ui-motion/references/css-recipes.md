@@ -185,6 +185,11 @@ Prefira `transition` (CSS reverte a partir do valor atual) a `@keyframes` para e
 
 ## 12. Cantos contínuos (squircle)
 `border-radius` é arco circular. Aproximação: `corner-shape: squircle` (onde suportado) ou `clip-path`/máscara SVG de superellipse. Cantos concêntricos: `inner-radius = outer-radius - padding` (36 − 12 = 24).
+Reforço da rodada 10A: **@metic.studio_official** (`DgHo3AxIw75`) explica o porquê — o `border-radius` "cola uma reta num círculo" e a curvatura salta de 0 para 1/R; a Apple usa cantos contínuos **G²** (superelipse). Cheat sheet do reel: **Figma → Corner Smoothing 60%**; CSS → `border-radius: 32px; corner-shape: squircle;` (mantenha o `border-radius` como fallback onde `corner-shape` não existe — complemento). A fórmula concêntrica aparece de novo em @fabianocarvalhojr (`Df5pCOhmYuP`, "raio concêntrico"), @wejustclick.me (`DfzcornCO73`: 24 − 8 = 16) e @uiuxaadi (`DfkIW6XFJYu`).
+```css
+.card  { --r: 24px; --pad: 8px; border-radius: var(--r); corner-shape: squircle; padding: var(--pad); }
+.card > .inner { border-radius: calc(var(--r) - var(--pad)); corner-shape: squircle; }
+```
 
 ## 13. Reduce Motion de verdade (regras Apple + Motion for React)
 Regras da Apple HIG (Accessibility) e da doc do Motion; detalhes em `official-motion-guidelines.md` §1.1 e §5.
@@ -206,3 +211,21 @@ const spring = reduce ? { type: "spring", bounce: 0 }                           
 ```
 **CSS:** além do §0, nada de `filter: blur()` animado, `translateZ`/`perspective` ou zoom de fundo dentro de `prefers-reduced-motion: reduce`; drag/swipe continua 1:1 com o dedo, mas sem inércia nem rubber band (complemento).
 **GSAP:** `gsap.matchMedia().add("(prefers-reduced-motion: reduce)", () => { /* fades */ })` (ver `ext-gsap-core`).
+
+## 14. Ajustes finos de CSS (rodada 10A: `Df5pCOhmYuP` @fabianocarvalhojr, `Deq_kvJBI3g` @designmotionhq)
+Itens da legenda "10 ajustes finos de design"; valores entre parênteses são complemento.
+```css
+/* número grande em card: 1 linha, dígitos de largura fixa, teto ~30px no celular de 375px (Deq_kvJBI3g, "FIX 2 · BIG NUMBERS") */
+.kpi-value { white-space: nowrap; font-variant-numeric: tabular-nums; font-size: clamp(22px, 7vw, 30px); }
+/* altura de tela no celular: dvh no lugar de 100vh (a barra do navegador não corta o rodapé) */
+.screen { min-height: 100dvh; }
+/* borda com transparência em vez de hex sólido: funciona sobre qualquer superfície */
+.card { border: 1px solid rgb(0 0 0 / .08); }
+/* degradê sem "cinza no meio": interpolar em OKLCH (De16ULetFoR, Df5pCOhmYuP) */
+.hero { background: linear-gradient(in oklch 90deg, oklch(70% .2 30), oklch(70% .2 250)); }
+/* foto de produto com fundo branco sobre superfície clara */
+.product img { mix-blend-mode: multiply; }
+/* carrossel com máscara nas bordas (o próximo item "some" em vez de ser cortado seco) */
+.carousel { mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent); }
+```
+Outros itens da mesma lista, sem código: espessura do traço do ícone combinando com o peso da fonte; desfoque curto na troca de ícone (SKILL regra 10); superfícies **mais claras** para elevar no modo escuro (igual a `ux-patterns` → `typography-and-touch.md` §4).

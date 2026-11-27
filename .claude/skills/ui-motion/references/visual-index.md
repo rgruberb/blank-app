@@ -83,3 +83,13 @@ Não são perfis: são guias oficiais lidos no navegador. Detalhes e comparaçã
 | Motion for React | React 18.2+; defaults; `reducedMotion` padrão `"never"` | Defaults ≠ tokens da skill |
 | GSAP / Lottie | Licença "Standard No Charge" (não MIT); curvas cubic-bezier no Lottie Creator | LottieFiles Motion System é pago |
 
+
+## Prints da rodada 10A (27/11/2026)
+Capturas da tela inteira do navegador (~1200 px de largura; a mídia aparece com ~450 px dentro do post, texto grande legível).
+
+| arquivo | autor | URL | o que mostra | quando abrir |
+|---|---|---|---|---|
+| `DgFUOPxtOJK_1.jpg` | @anside_design | https://www.instagram.com/reel/DgFUOPxtOJK/ | Grade 6×7 "The ABC of UI · 42 micro-interactions" em fundo branco, cada célula com ícone colorido e nome (Toggle, Live Burst, Spinner… Bar Chart) | Inventário de micro-interações (`micro-interactions.md` §15) |
+| `DgEyy8nRybB_1.jpg` | @theglidestudio | https://www.instagram.com/reel/DgEyy8nRybB/ | "Follow, don't lead.": metade preta com o título, dois celulares rotulados LEADS × FOLLOWS com cartão preto "Ready when you are." | Motion ligado ao scroll que para quando o usuário para (SKILL regra 20) |
+
+Perfis novos da rodada 10A (só legenda + 1 frame; nada seguido): **@samro_ai** (regras de animação com fontes citadas; vende skill por DM — nota 3), **@anside_design** (catálogos visuais de micro-interação — 3), **@ale.uiux** (6 variações de um padrão por reel: accordion, digitação — 3), **@metic.studio_official** (squircle/geometria de cantos — 3), **@techinsixty** (listas de sites; CTA por comentário — 2).

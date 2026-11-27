@@ -43,6 +43,8 @@ Regras de UX que dá para testar numa tela real, tiradas de 14 reels (@motion_ui
 - Arraste que muda valor mostra o resultado antes de soltar ("Drag to extend · 4 nights", `components-checklists.md` §8).
 - Contraste: texto e placeholder **4,5:1**; texto grande (24px ou 19px bold), ícones e bordas **3:1**; scrim em texto sobre foto.
 - Dark mode: sem `#000` (ex.: `#0C1424`), texto a **87%**, accent clareado, elevação por luminosidade.
+- Número grande em card no celular (375px): **1 linha** (`nowrap`), `tabular-nums`, teto **~30px** (`components-checklists.md` §13.5).
+- Header fixo não passa de uma faixa: se come metade da tela, encolha (§13.2). Lista arrastável mostra alça, ergue a linha e abre espaço (§13.3). Accordion escolhido pelo conteúdo (§13.1).
 
 **Pesquisa NN/g** (`references/nng-research.md`; checklist em `components-checklists.md` §12)
 - Onboarding: evite o instrucional; prefira dica em contexto e empty state que ensina. Só quando o app precisa de dados para começar.
@@ -92,7 +94,7 @@ Regras de UX que dá para testar numa tela real, tiradas de 14 reels (@motion_ui
 | Arquivo | Abra quando |
 |---|---|
 | `references/ux-laws.md` | Precisar da definição, falha e correção de qualquer uma das 18 leis, ou citar o número da demonstração |
-| `references/components-checklists.md` | For mexer em botão, settings, paginação, chat, ⌘K, toolbar, micro-interações (sheet, tooltip, toast, file drop, pagamento), tela de decisão (comprar/vender), fluxo de pedido ou home com estado vazio |
+| `references/components-checklists.md` | For mexer em botão, settings, paginação, chat, ⌘K, toolbar, micro-interações (sheet, tooltip, toast, file drop, pagamento), tela de decisão (comprar/vender), fluxo de pedido, home com estado vazio, ou os padrões da rodada 10A (§13: accordion, header fixo, arrastar, permissão de notificação, número grande em 375px, 5 fixes antes de recomeçar) |
 | `references/typography-and-touch.md` | Precisar de alvo de toque (inclui Apple 44/28pt, Material 48dp + 8dp, NN/g 1 cm), escala e tamanhos de fonte (1,2 vs 1,25 vs Material 1,125; Apple 17/11pt), line-height, tracking, medida de linha, grade de espaçamento de 8, números em matriz de pontos, contraste mínimo ou dark mode |
 | `references/dark-patterns.md` | Houver fluxo de assinatura, preço, ads ou popups, ou o app "parecer feito por IA" (dashboard ou fonte) |
 | `references/perceived-performance.md` | O app parecer lento, ou ao revisar app de vibe coding antes de lançar |

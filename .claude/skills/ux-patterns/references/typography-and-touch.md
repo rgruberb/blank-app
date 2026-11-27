@@ -80,6 +80,8 @@ Conferência da rodada: as contas batem. Erro menor do slide: a última razão "
 
 Leitura: o mesmo perfil publicou as duas razões, então nenhuma é "a regra" dele. Todas concordam em **uma razão só, line-height caindo com o tamanho, tracking negativo em título e teto de ~75 caracteres**. **(complemento)** Como escolher: **1,2** para produto denso (dashboard, app, muitos níveis em tela pequena: saltos menores); **1,25** para site, landing e conteúdo editorial (mais contraste entre níveis). Escolha **uma** por projeto e registre nos tokens. O tracking caps de 0,05 ou 0,06em é diferença de ajuste fino: comece em 0,05em e ajuste a olho. Na escala 1,25, os componentes de §2 também ficam fora (17px do botão → 16 ou 20; 26px do ⌘K → 25).
 
+**Reforço da rodada 10A (mesma regra, fontes novas):** @wejustclick.me (`DfzcornCO73`, "Font Size Scale (Formula)") dá a conta: próximo = atual × **1,25** (ou 1,333) → corpo **16**, subtítulo **20**, título **25**, display **31,25 ≈ 32**, **arredondando para múltiplo de 4**. Arredondar para 4 só no degrau display (31,25 → 32) não muda a regra "uma razão só"; nos degraus menores mantenha os valores da escala (20, 25) — complemento. Medida de **45–75 caracteres** aparece de novo em @vamshi.work (`DfJaRP4n8e4`, prompt "Type teardown") e @gg.designhub (`DgOzQOLk5m9`, Fix 03). Espessura do traço do ícone deve combinar com o peso da fonte ao lado (@fabianocarvalhojr `Df5pCOhmYuP`).
+
 **Regra da skill para medida:** token `--measure: 50ch` como teto (≈ 66–71 caracteres na fonte de `DfRucYFjrac`; `ch` muda com a fonte, então conte). A regra vale em **caracteres**: **45–75** no texto corrido e **45–60** em formulários. `60ch` passa de 75 caracteres em muitas fontes.
 
 ### 2c. Escalas oficiais: Apple e Material 3 (rodada 9A)
@@ -111,7 +113,7 @@ Também: use **cinzas sólidos por tema**, não preto a 50% de opacidade (o resu
 1. **Fundo**: cinza-azulado profundo, nunca preto puro (`#000000 → #0C1424`).
 2. **Texto**: branco a **87%**; detalhes em cinza.
 3. **Accent**: clarear no escuro, contraste **2,9:1 → 8,6:1** (só na legenda).
-4. **Elevação**: superfície mais alta = **mais clara**, não com sombra.
+4. **Elevação**: superfície mais alta = **mais clara**, não com sombra. Reforço (rodada 10A): @fabianocarvalhojr `Df5pCOhmYuP`, "superfícies mais claras no modo escuro".
 5. **Imagens**: reduzir brilho para **82%** (só na legenda; comentaristas notam que piora fotos já escuras).
 6. **Glow em vez de sombra**: no escuro a luz faz o papel da sombra. Comentaristas acharam o glow do exemplo exagerado; use com parcimônia **(complemento)**.
 

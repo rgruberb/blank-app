@@ -90,10 +90,13 @@ Folhas de contato 4x3 dos reels (`<ID>.jpg`) e prints únicos das rodadas 1 e 3 
 
 ## Prioridade entre skills (quando as regras conflitam)
 
-1. **Valores e decisões de design** (números, quantidade de animação, cor, sombra, tipografia) vêm das **skills do projeto**: `website-ui`, `desktop-app-ui`, `mobile-app-ui`, `design-direction`, `ui-motion`, `ux-patterns`, `dashboard-ui`.
+Ordem completa, da mais forte para a mais fraca: **skill de app específico** (ex.: `projetos/marca-pessoal-app/`, copiada para `.claude/skills/` na repo do app) > **skill de SEGMENTO** (`segmento-financeiro`, `segmento-crm`, `segmento-publicidade`, `segmento-marca-pessoal`, `segmento-saude`, `segmento-juridico`) > **plataforma** (`website-ui`, `desktop-app-ui`, `mobile-app-ui`) > **tema** (`design-direction`, `ui-motion`, `ux-patterns`, `dashboard-ui`) > **terceiros** (`ext-*`).
+Se o projeto é de um setor, abra primeiro a skill `segmento-*` correspondente.
+
+1. **Valores e decisões de design** (números, quantidade de animação, cor, sombra, tipografia) vêm das **skills do projeto** (app específico → segmento → plataforma → tema, nessa ordem): `website-ui`, `desktop-app-ui`, `mobile-app-ui`, `design-direction`, `ui-motion`, `ux-patterns`, `dashboard-ui`.
 2. **Skills de terceiros** (`design-taste-frontend`, `impeccable`, `transitions-*`, `gsap-*`, `playwright-cli`, `extract-design`) servem para **implementação**: código pronto, APIs, checkers e verificação no browser. Use o código delas, mas com os valores do item 1.
 3. Se o checker ou a regra de uma skill de terceiros reprovar algo que segue o item 1, **siga o item 1** e diga ao usuário qual regra externa foi ignorada e por quê.
-4. Na plataforma, vale a skill da plataforma (`website-ui`, `desktop-app-ui` ou `mobile-app-ui`); nos temas, vale a skill de tema que ela indicar.
+4. Na plataforma, vale a skill da plataforma (`website-ui`, `desktop-app-ui` ou `mobile-app-ui`); nos temas, vale a skill de tema que ela indicar. A skill de segmento ou de app específico só sobrepõe o que ela disser explicitamente (paleta do setor, tom, compliance, telas obrigatórias); no resto valem plataforma e tema.
 
 | Conflito | Vale | Em vez de |
 |---|---|---|
