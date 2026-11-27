@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="canonical" href="https://gruberia.com/saude/">
+<title>RG AI Saúde · Back-office de saúde</title>
+<meta name="description" content="Painéis sob medida para a operação da clínica enxergar prazos de autorização, guias de convênio e fila antes que virem prejuízo.">
+<meta property="og:title" content="RG AI Saúde · Back-office de saúde">
+<meta property="og:description" content="Painéis sob medida para a operação da clínica enxergar prazos de autorização, guias de convênio e fila antes que virem prejuízo.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Vocês já fizeram sistema para clínica?", "acceptedAnswer": {"@type": "Answer", "text": "Nossos três apps em produção são do setor de crédito, onde prazo, valor em risco e fila são o dia a dia. Em saúde, estamos construindo um produto próprio para agências que atendem médicos. O método é o mesmo: requisito, protótipo, produção e operação."}}, {"@type": "Question", "name": "Como vocês cuidam dos dados dos pacientes?", "acceptedAnswer": {"@type": "Answer", "text": "Dado de saúde é dado sensível pela LGPD (art. 5º, II). Usamos acesso por papéis, senhas com hash, conexão criptografada e backups. Os painéis mostram só o que cada papel precisa ver, e nada é compartilhado com terceiros."}}, {"@type": "Question", "name": "Quanto custa?", "acceptedAnswer": {"@type": "Answer", "text": "Depende do escopo. O Diagnóstico existe para isso: ao final, você recebe por escrito o prazo e o valor do Projeto e da Operação."}}, {"@type": "Question", "name": "Vocês substituem o sistema que a clínica já usa?", "acceptedAnswer": {"@type": "Answer", "text": "Não precisa. O painel pode ler as planilhas e exportações do sistema atual e mostrar o que está parado, vencendo ou negado."}}, {"@type": "Question", "name": "Funciona no celular?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Os sistemas são web e funcionam no navegador do computador e do celular, sem instalar nada."}}, {"@type": "Question", "name": "Vocês registram a marca do sistema?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. No plano Projeto, registramos a marca do seu sistema no INPI."}}]}</script>
+<script>(function(){var r=document.documentElement;try{var th=localStorage.getItem('rgai-saude-theme');if(th==='dark'||th==='light')r.setAttribute('data-theme',th);var l=localStorage.getItem('rgai-saude-lang');if(l==='en'||l==='pt')r.setAttribute('data-lang',l)}catch(e){}if(!r.getAttribute('data-lang')){r.setAttribute('data-lang',/^pt/i.test(navigator.language||'pt')?'pt':'en')}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&display=swap">
+<style>
+*{box-sizing:border-box}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink-2);font:400 1rem/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+@media(min-width:641px){body{font-size:1.1875rem;line-height:1.55}}
+img{max-width:100%;display:block}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+h1,h2,h3{font-family:var(--f-head);color:var(--head);margin:0;text-wrap:balance;font-weight:var(--hw,700);letter-spacing:var(--track,-.01em)}
+p{margin:0}
+.w{max-width:1200px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media(min-width:768px){.w{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}}
+.skip{position:absolute;left:16px;top:-80px;z-index:40;background:var(--cta);color:var(--cta-ink);padding:12px 16px;font-weight:600}
+.skip:focus{top:calc(8px + env(safe-area-inset-top,0px))}
+.kicker{font:600 .8rem/1.3 var(--f-label);letter-spacing:.07em;text-transform:uppercase;color:var(--kicker)}
+.prev{background:#1B2126;color:#E8ECEF;font:500 13px/1.4 system-ui,sans-serif}
+.prev .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;padding-block:8px}
+.prev a{color:#9CC8F5;display:inline-flex;align-items:center;min-height:28px}
+/* topo */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:31;background:var(--top-bg)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--top-bg);border-bottom:1px solid var(--top-rule)}
+.top .w{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.brand{display:flex;align-items:center;gap:10px;font:700 1.15rem/1 var(--f-head);color:var(--top-ink);text-decoration:none;letter-spacing:-.01em}
+.brand svg{width:30px;height:30px;flex:none}
+.top nav{display:flex;align-items:center;gap:24px;font-size:1rem}
+.top nav a{color:var(--top-ink);text-decoration:none}
+.top nav a:hover{text-decoration:underline}
+@media(max-width:860px){.top nav a.nl{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;font:600 1rem/1 var(--f-body);text-decoration:none;border-radius:var(--r);border:2px solid transparent;cursor:pointer;transition:transform .16s ease,background-color .15s ease}
+.btn:active{transform:scale(.97)}
+.btn.pri{background:var(--cta);color:var(--cta-ink);box-shadow:var(--cta-shadow,none)}
+.btn.pri:hover{background:var(--cta-h)}
+.btn.sec{background:transparent;color:var(--head);border-color:var(--rule-strong)}
+.top nav .btn{min-height:44px;padding:0 18px;font-size:.95rem}
+/* hero */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding-block:clamp(48px,7vw,96px)}
+.hero h1{color:var(--hero-head);font-size:clamp(2.2rem,1.5rem + 3vw,3.8rem);line-height:1.06;margin-top:16px;max-width:18ch}
+.hero .kicker{color:var(--hero-kicker)}
+.hero .sub{margin-top:20px;max-width:46ch;font-size:1.1em}
+.hero .acts{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center}
+.hero .fine{font-size:.85rem;opacity:.9}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
+@media(max-width:960px){.hero-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:no-preference){
+  .hero .mockup{animation:rise .6s cubic-bezier(.2,.7,.2,1) both .1s}
+  @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+}
+/* maquete: próxima consulta (CMP-SAU-10) */
+.mockup{min-width:0}
+.mk{background:var(--mk-bg);color:var(--mk-ink);border:1px solid var(--mk-rule);border-radius:var(--r-card);box-shadow:var(--mk-shadow,none);padding:24px;display:grid;gap:16px;font-size:1rem;line-height:1.5}
+.mk .tagx{font:600 .75rem/1.2 var(--f-label);letter-spacing:.06em;text-transform:uppercase;color:var(--mk-muted)}
+.mk h3{font-size:1.25rem;color:var(--mk-head)}
+.mk .when{font-variant-numeric:tabular-nums;font-weight:600;color:var(--mk-head);font-size:1.15rem}
+.mk .who{font-size:.95rem;color:var(--mk-muted)}
+.mk .row{display:flex;flex-wrap:wrap;gap:8px}
+.mk .b{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:var(--r);font-weight:600;font-size:.95rem;border:2px solid var(--mk-rule);color:var(--mk-head)}
+.mk .b.p{background:var(--cta);color:var(--cta-ink);border-color:var(--cta)}
+.mk ul{list-style:none;margin:0;padding:0;display:grid;border-top:1px solid var(--mk-rule)}
+.mk li{display:grid;grid-template-columns:4.2rem minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--mk-rule);font-size:.95rem}
+.mk li time{font-variant-numeric:tabular-nums;font-weight:600;color:var(--mk-head)}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--chip-bg);color:var(--chip-ink);white-space:nowrap}
+.chip.ok{background:var(--ok-bg);color:var(--ok-ink)}
+.chip.warn{background:var(--warn-bg);color:var(--warn-ink)}
+.chip.bad{background:var(--bad-bg);color:var(--bad-ink)}
+/* seções */
+section{padding-block:clamp(56px,8vw,112px)}
+.band{background:var(--alt)}
+.sh{max-width:720px;margin-bottom:clamp(32px,5vw,56px)}
+.sh h2{font-size:clamp(1.95rem,1.4rem + 1.8vw,2.45rem);line-height:1.12;margin-top:12px}
+.sh p{margin-top:16px;max-width:60ch}
+/* prova social */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+@media(max-width:900px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.stats{grid-template-columns:1fr}}
+.stat{border-top:var(--stat-line);padding-top:16px;display:grid;gap:6px;align-content:start}
+.stat b{font:var(--hw-stat,700) clamp(1.95rem,1.5rem + 1.4vw,2.45rem)/1.05 var(--f-head);color:var(--head);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stat span{font-size:.95rem}
+.case{margin-top:clamp(32px,5vw,48px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:clamp(24px,4vw,48px);background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-card);padding:clamp(24px,4vw,40px);align-items:start}
+@media(max-width:860px){.case{grid-template-columns:1fr}}
+.case h3{font-size:1.5rem;line-height:1.2;margin-top:10px}
+.case p+p{margin-top:12px}
+.case .src{font-size:.85rem;color:var(--muted)}
+/* como funciona */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;counter-reset:s}
+@media(max-width:960px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+.steps li{counter-increment:s;display:grid;gap:10px;align-content:start;background:var(--step-bg);border:var(--step-border);border-radius:var(--r-card);padding:var(--step-pad)}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:var(--num-r);background:var(--num-bg);color:var(--num-ink);font:700 1.15rem/1 var(--f-head);font-variant-numeric:tabular-nums}
+.steps h3{font-size:1.25rem}
+.steps p{font-size:.95em}
+/* planos */
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}
+@media(max-width:960px){.plans{grid-template-columns:1fr}}
+.plan{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-card);padding:28px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.plan.hl{border:2px solid var(--cta);box-shadow:var(--plan-shadow,none)}
+.plan .flag{align-self:flex-start;font:600 .75rem/1 var(--f-label);letter-spacing:.06em;text-transform:uppercase;background:var(--cta);color:var(--cta-ink);padding:6px 10px;border-radius:var(--r)}
+.plan h3{font-size:1.5rem}
+.plan .for{font-size:.95em;color:var(--muted)}
+.plan .price{font:700 1.5rem/1.1 var(--f-head);color:var(--head)}
+.plan .price small{display:block;font:400 .85rem/1.4 var(--f-body);color:var(--muted);margin-top:4px}
+.plan ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:.95em;flex:1}
+.plan li{padding-left:28px;position:relative}
+.plan li::before{content:"";position:absolute;left:2px;top:.45em;width:14px;height:8px;border-left:2.5px solid var(--check);border-bottom:2.5px solid var(--check);transform:rotate(-45deg)}
+.plan .btn{width:100%}
+.plans-note{margin-top:24px;font-size:.95rem;color:var(--muted);max-width:70ch}
+/* FAQ */
+.faq{max-width:820px;display:grid;border-top:1px solid var(--rule)}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:64px;padding-block:16px;font:600 1.1em/1.35 var(--f-head);color:var(--head)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;border:2px solid var(--rule-strong);font:500 1.2rem/1 var(--f-body);color:var(--head)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{padding-bottom:20px;max-width:64ch}
+/* CTA final */
+.final{background:var(--final-bg);color:var(--final-ink)}
+.final h2{color:var(--final-head);font-size:clamp(2.2rem,1.5rem + 2.6vw,3.05rem);line-height:1.08;max-width:20ch;margin-top:12px}
+.final .kicker{color:var(--final-kicker)}
+.final p.l{margin-top:20px;max-width:52ch}
+.final .acts{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center}
+.final code{font:600 clamp(1.1rem,.95rem + .8vw,1.45rem)/1.3 var(--f-mono,ui-monospace,monospace);color:var(--final-head);user-select:all;-webkit-user-select:all;overflow-wrap:anywhere}
+.final .btn.pri{background:var(--final-cta);color:var(--final-cta-ink)}
+.final .btn.pri:hover{background:var(--final-cta);filter:brightness(1.08)}
+.final .btn.sec{color:var(--final-head);border-color:var(--final-rule)}
+.final .copied{min-height:1.5em;margin-top:12px;font-size:.95rem}
+.final .human{margin-top:24px;font-size:.95rem;opacity:.9}
+footer{background:var(--foot-bg);color:var(--foot-ink);font-size:.95rem;padding-block:32px}
+footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px}
+footer a{color:inherit}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+:root{color-scheme:dark;--bg:#0B0C0E;--alt:#101114;--surface:#151618;--ink-2:#C9CED3;--muted:#9AA2AA;--head:#F1F3F4;--rule:#26282C;--rule-strong:#3A3D42;
+--link:#5FD3B0;--focus:#5FD3B0;--kicker:#2FB58F;--cta:#2FB58F;--cta-h:#3CC9A0;--cta-ink:#04130E;--r:12px;--r-card:16px;--hw:500;--hw-stat:300;--track:-.025em;
+--f-head:"Manrope",system-ui,sans-serif;--f-body:"Manrope",system-ui,sans-serif;--f-label:"Manrope",system-ui,sans-serif;
+--top-bg:#0B0C0E;--top-ink:#E3E6E8;--top-rule:#1D1F22;--hero-bg:#0B0C0E;--hero-ink:#C9CED3;--hero-head:#F1F3F4;--hero-kicker:#2FB58F;
+--mk-bg:#151618;--mk-ink:#C9CED3;--mk-head:#F1F3F4;--mk-muted:#9AA2AA;--mk-rule:#26282C;--mk-shadow:0 0 0 1px rgba(47,181,143,.12),0 24px 60px -24px rgba(47,181,143,.35);
+--chip-bg:#1F2124;--chip-ink:#C9CED3;--ok-bg:#12352A;--ok-ink:#7FE3C2;--warn-bg:#3A2C10;--warn-ink:#F2C66B;--bad-bg:#3A1714;--bad-ink:#FF9C90;
+--stat-line:1px solid #2FB58F;--step-bg:#151618;--step-border:1px solid #26282C;--step-pad:28px;--num-bg:#12352A;--num-ink:#7FE3C2;--num-r:12px;--check:#2FB58F;
+--final-bg:#151618;--final-ink:#C9CED3;--final-head:#F1F3F4;--final-kicker:#2FB58F;--final-cta:#2FB58F;--final-cta-ink:#04130E;--final-rule:#3A3D42;
+--foot-bg:#0B0C0E;--foot-ink:#9AA2AA;--cta-shadow:0 0 28px -8px rgba(47,181,143,.6);--plan-shadow:0 0 40px -16px rgba(47,181,143,.45)}
+.mk li{grid-template-columns:minmax(0,1fr) auto}
+.mk .val{font-variant-numeric:tabular-nums;color:#F1F3F4;font-weight:500}
+.final{border-top:1px solid #26282C}
+
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
+--bg:#F5F6F7;--alt:#FFFFFF;--surface:#FFFFFF;--ink-2:#2E3338;--muted:#59626A;--head:#101214;--rule:#DDE1E4;--rule-strong:#B5BCC2;
+--link:#0B6E52;--focus:#0B6E52;--kicker:#0B6E52;--cta:#0E7A5C;--cta-h:#0B6650;--cta-ink:#FFFFFF;
+--top-bg:#F5F6F7;--top-ink:#101214;--top-rule:#DDE1E4;--hero-bg:#F5F6F7;--hero-ink:#2E3338;--hero-head:#101214;--hero-kicker:#0B6E52;
+--mk-bg:#FFFFFF;--mk-ink:#2E3338;--mk-head:#101214;--mk-muted:#59626A;--mk-rule:#E4E7EA;--mk-shadow:0 1px 2px rgba(16,18,20,.06),0 20px 44px -20px rgba(14,122,92,.30);
+--chip-bg:#EEF0F2;--chip-ink:#2E3338;--ok-bg:#DDF3EA;--ok-ink:#0B5A43;--warn-bg:#FFF1D1;--warn-ink:#5C4400;--bad-bg:#FBE3E1;--bad-ink:#8A1C12;
+--stat-line:1px solid #0E7A5C;--step-bg:#FFFFFF;--step-border:1px solid #DDE1E4;--num-bg:#DDF3EA;--num-ink:#0B5A43;--check:#0E7A5C;
+--final-bg:#101214;--final-ink:#C9CED3;--final-head:#FFFFFF;--final-kicker:#5FD3B0;--final-cta:#2FB58F;--final-cta-ink:#04130E;--final-rule:#3A3D42;
+--foot-bg:#F5F6F7;--foot-ink:#59626A;--cta-shadow:none;--plan-shadow:0 18px 40px -20px rgba(14,122,92,.30);color-scheme:light;
+}}
+:root[data-theme="light"]{
+--bg:#F5F6F7;--alt:#FFFFFF;--surface:#FFFFFF;--ink-2:#2E3338;--muted:#59626A;--head:#101214;--rule:#DDE1E4;--rule-strong:#B5BCC2;
+--link:#0B6E52;--focus:#0B6E52;--kicker:#0B6E52;--cta:#0E7A5C;--cta-h:#0B6650;--cta-ink:#FFFFFF;
+--top-bg:#F5F6F7;--top-ink:#101214;--top-rule:#DDE1E4;--hero-bg:#F5F6F7;--hero-ink:#2E3338;--hero-head:#101214;--hero-kicker:#0B6E52;
+--mk-bg:#FFFFFF;--mk-ink:#2E3338;--mk-head:#101214;--mk-muted:#59626A;--mk-rule:#E4E7EA;--mk-shadow:0 1px 2px rgba(16,18,20,.06),0 20px 44px -20px rgba(14,122,92,.30);
+--chip-bg:#EEF0F2;--chip-ink:#2E3338;--ok-bg:#DDF3EA;--ok-ink:#0B5A43;--warn-bg:#FFF1D1;--warn-ink:#5C4400;--bad-bg:#FBE3E1;--bad-ink:#8A1C12;
+--stat-line:1px solid #0E7A5C;--step-bg:#FFFFFF;--step-border:1px solid #DDE1E4;--num-bg:#DDF3EA;--num-ink:#0B5A43;--check:#0E7A5C;
+--final-bg:#101214;--final-ink:#C9CED3;--final-head:#FFFFFF;--final-kicker:#5FD3B0;--final-cta:#2FB58F;--final-cta-ink:#04130E;--final-rule:#3A3D42;
+--foot-bg:#F5F6F7;--foot-ink:#59626A;--cta-shadow:none;--plan-shadow:0 18px 40px -20px rgba(14,122,92,.30);color-scheme:light;
+}
+.mk .val{color:var(--mk-head)}
+.final{border-top:1px solid var(--rule)}
+.tools{display:flex;align-items:center;gap:8px}
+.seg{display:inline-flex;border:1px solid var(--rule-strong);border-radius:999px;padding:2px}
+.seg button{min-width:44px;min-height:40px;border:0;border-radius:999px;background:transparent;color:var(--top-ink);font:600 .85rem/1 var(--f-body);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--top-ink);color:var(--top-bg)}
+.icon-btn{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--rule-strong);background:transparent;color:var(--top-ink);cursor:pointer}
+.icon-btn svg{width:20px;height:20px}
+.icon-btn .i-sun{display:none}
+.is-dark .icon-btn .i-sun{display:block}.is-dark .icon-btn .i-moon{display:none}
+.top nav{gap:20px}
+@media(max-width:1060px){.top nav a.nl{display:none}}
+@media(max-width:600px){.top .w{gap:8px}.top nav .btn{display:none}}
+@media(max-width:360px){.brand span{display:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo" data-i18n="skip">Pular para o conteúdo</a>
+<header class="top">
+  <div class="w">
+    <a class="brand" href="#conteudo"><svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="9" fill="#12352A"/><path d="M6 16h5l2-5 4 9 2-4h5" fill="none" stroke="#2FB58F" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg><span data-i18n="brand">RG AI Saúde</span></a>
+    <nav aria-label="Seções">
+      <a class="nl" href="#como-funciona" data-i18n="nav_como">Como funciona</a>
+      <a class="nl" href="#planos" data-i18n="nav_planos">Planos</a>
+      <a class="nl" href="#duvidas" data-i18n="nav_faq">Dúvidas</a>
+      <div class="tools">
+        <div class="seg" role="group" aria-label="Idioma / Language"><button type="button" data-setlang="pt" aria-pressed="true" lang="pt-BR">PT</button><button type="button" data-setlang="en" aria-pressed="false" lang="en">EN</button></div>
+        <button class="icon-btn" id="theme" type="button" aria-label="Mudar para o tema claro"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></g></svg></button>
+      </div>
+      <a class="btn pri" href="#contato" data-i18n="cta">Agendar uma conversa</a>
+    </nav>
+  </div>
+</header>
+<main id="conteudo">
+  <div class="hero">
+    <div class="w hero-grid">
+      <div>
+        <p class="kicker" data-i18n="kicker">Back-office de saúde</p>
+        <h1 data-i18n="h1">Autorizações, convênios e fila sob controle</h1>
+        <p class="sub" data-i18n="sub">Painéis para a operação da clínica enxergar prazos e guias paradas antes que virem prejuízo.</p>
+        <div class="acts"><a class="btn pri" href="#contato" data-i18n="cta">Agendar uma conversa</a><span class="fine" data-i18n="fine">Resposta por e-mail, sem compromisso.</span></div>
+      </div>
+      <div class="mockup">
+<div class="mk" role="img" data-i18n-aria="mk_aria" aria-label="Exemplo de tela: guias de convênio com prazo e valor em risco, uma vencendo em 2 dias, uma negada e uma autorizada.">
+  <p class="tagx"><span data-i18n="mk_tag">Exemplo de tela · dados fictícios</span></p>
+  <h3><span data-i18n="mk_h">Guias que precisam de alguém</span></h3>
+  <ul>
+    <li><span><span data-i18n="mk_1">Guia 1042 · Convênio A · ressonância</span><br><span class="val"><span data-i18n="mk_1v">R$ 1.240,00</span></span></span><span class="chip warn"><span aria-hidden="true">▲</span> <span data-i18n="mk_1s">Vence em 2 dias</span></span></li>
+    <li><span><span data-i18n="mk_2">Guia 1038 · Convênio B · consulta</span><br><span class="val"><span data-i18n="mk_2v">R$ 180,00</span></span></span><span class="chip bad"><span aria-hidden="true">✕</span> <span data-i18n="mk_2s">Negada</span></span></li>
+    <li><span><span data-i18n="mk_3">Guia 1031 · Convênio A · exame</span><br><span class="val"><span data-i18n="mk_3v">R$ 96,50</span></span></span><span class="chip ok"><span aria-hidden="true">✓</span> <span data-i18n="mk_3s">Autorizada</span></span></li>
+  </ul>
+</div></div>
+    </div>
+  </div>
+
+  <section class="band" id="prova" aria-labelledby="h-prova">
+    <div class="w">
+      <div class="sh"><p class="kicker" data-i18n="prova_k">Prova social</p><h2 id="h-prova" data-i18n="prova_h">O que já está no ar</h2></div>
+      <div class="stats"><div class="stat"><b data-i18n="s1b">3 apps</b><span data-i18n="s1">em produção, construídos do requisito ao deploy</span></div><div class="stat"><b data-i18n="s2b">mar/2026</b><span data-i18n="s2">no ar desde então, em uso diário</span></div><div class="stat"><b data-i18n="s3b">+200%</b><span data-i18n="s3">de produtividade em prospecção e gestão de carteira</span></div><div class="stat"><b data-i18n="s4b">INPI</b><span data-i18n="s4">registramos a marca do seu sistema</span></div></div>
+      <div class="case"><div><p class="kicker" data-i18n="case_k">Caso em produção · crédito e recebíveis</p><h3 data-i18n="case_h">Carteira360: agenda, rotas de visita e alertas para uma equipe comercial</h3></div>
+        <div><p data-i18n="case_p1">Construímos para uma empresa de crédito (FIDC) um app que organiza a agenda e as rotas de visita e avisa quando um cliente parou de operar. O gestor vê a equipe toda; o gerente vê a própria carteira, no computador ou no celular.</p><p data-i18n="case_p2">É o mesmo problema de uma operação clínica com muitas guias: nenhuma pode ficar esquecida.</p><p class="src" data-i18n="case_src">O cliente não é identificado. Números informados pelo próprio uso em produção.</p></div></div>
+    </div>
+  </section>
+
+  <section id="como-funciona" aria-labelledby="h-como">
+    <div class="w">
+      <div class="sh"><p class="kicker" data-i18n="como_k">Como funciona</p><h2 id="h-como" data-i18n="como_h">Quatro etapas, da conversa ao sistema no ar</h2></div>
+      <ol class="steps"><li><h3 data-i18n="st1h">Conversa</h3><p data-i18n="st1">Você mostra onde a operação trava: autorizações, guias, glosas, fila da central.</p></li><li><h3 data-i18n="st2h">Protótipo</h3><p data-i18n="st2">Você vê e clica nos painéis principais antes da construção, com estimativa de prazo e custo.</p></li><li><h3 data-i18n="st3h">Construção</h3><p data-i18n="st3">Ligamos o painel às planilhas e sistemas que a clínica já usa, em ciclos curtos.</p></li><li><h3 data-i18n="st4h">Operação</h3><p data-i18n="st4">Colocamos no ar, treinamos a equipe e cuidamos de hospedagem, backups e ajustes.</p></li></ol>
+    </div>
+  </section>
+
+  <section class="band" id="planos" aria-labelledby="h-planos">
+    <div class="w">
+      <div class="sh"><p class="kicker" data-i18n="pl_k">Preços e planos</p><h2 id="h-planos" data-i18n="pl_h">Comece pequeno, cresça com a clínica</h2></div>
+      <div class="plans"><article class="plan"><h3><span data-i18n="p1h">Diagnóstico</span></h3><p class="for"><span data-i18n="p1f">Para entender o problema antes de investir</span></p><p class="price"><span data-i18n="price">Sob consulta</span><small><span data-i18n="price_s">valor enviado por escrito</span></small></p><ul><li><span data-i18n="p1a">Mapeamento do processo atual</span></li><li><span data-i18n="p1b">Protótipo clicável dos painéis principais</span></li><li><span data-i18n="p1c">Estimativa de prazo e custo por escrito</span></li></ul><a class="btn sec" href="#contato"><span data-i18n="cta">Agendar uma conversa</span></a></article><article class="plan hl"><span class="flag"><span data-i18n="flag">Recomendado</span></span><h3><span data-i18n="p2h">Projeto</span></h3><p class="for"><span data-i18n="p2f">Para construir o painel da operação</span></p><p class="price"><span data-i18n="price">Sob consulta</span><small><span data-i18n="price_s">valor enviado por escrito</span></small></p><ul><li><span data-i18n="p2a">Sistema web sob medida, no computador e no celular</span></li><li><span data-i18n="p2b">Acesso por papéis e backups diários</span></li><li><span data-i18n="p2c">Treinamento da equipe</span></li><li><span data-i18n="p2d">Registro da marca no INPI</span></li></ul><a class="btn pri" href="#contato"><span data-i18n="cta">Agendar uma conversa</span></a></article><article class="plan"><h3><span data-i18n="p3h">Operação</span></h3><p class="for"><span data-i18n="p3f">Para manter o sistema de pé, todo mês</span></p><p class="price"><span data-i18n="price">Sob consulta</span><small><span data-i18n="price_s">valor enviado por escrito</span></small></p><ul><li><span data-i18n="p3a">Hospedagem e monitoramento</span></li><li><span data-i18n="p3b">Backups e atualizações de segurança</span></li><li><span data-i18n="p3c">Ajustes e pequenas melhorias</span></li><li><span data-i18n="p3d">Suporte por e-mail</span></li></ul><a class="btn sec" href="#contato"><span data-i18n="cta">Agendar uma conversa</span></a></article></div>
+      <p class="plans-note" data-i18n="pl_note">Os valores dependem do escopo e são enviados por escrito depois do Diagnóstico. Sem cobrança automática e sem fidelidade escondida.</p>
+    </div>
+  </section>
+
+  <section id="duvidas" aria-labelledby="h-faq">
+    <div class="w">
+      <div class="sh"><p class="kicker" data-i18n="faq_k">Dúvidas</p><h2 id="h-faq" data-i18n="faq_h">Perguntas frequentes</h2></div>
+      <div class="faq"><details><summary data-i18n="q1">Vocês já fizeram sistema para clínica?</summary><p data-i18n="a1">Nossos três apps em produção são do setor de crédito, onde prazo, valor em risco e fila são o dia a dia. Em saúde, estamos construindo um produto próprio para agências que atendem médicos. O método é o mesmo: requisito, protótipo, produção e operação.</p></details><details><summary data-i18n="q2">Como vocês cuidam dos dados dos pacientes?</summary><p data-i18n="a2">Dado de saúde é dado sensível pela LGPD (art. 5º, II). Usamos acesso por papéis, senhas com hash, conexão criptografada e backups. Os painéis mostram só o que cada papel precisa ver, e nada é compartilhado com terceiros.</p></details><details><summary data-i18n="q3">Quanto custa?</summary><p data-i18n="a3">Depende do escopo. O Diagnóstico existe para isso: ao final, você recebe por escrito o prazo e o valor do Projeto e da Operação.</p></details><details><summary data-i18n="q4">Vocês substituem o sistema que a clínica já usa?</summary><p data-i18n="a4">Não precisa. O painel pode ler as planilhas e exportações do sistema atual e mostrar o que está parado, vencendo ou negado.</p></details><details><summary data-i18n="q5">Funciona no celular?</summary><p data-i18n="a5">Sim. Os sistemas são web e funcionam no navegador do computador e do celular, sem instalar nada.</p></details><details><summary data-i18n="q6">Vocês registram a marca do sistema?</summary><p data-i18n="a6">Sim. No plano Projeto, registramos a marca do seu sistema no INPI.</p></details></div>
+    </div>
+  </section>
+
+  <section class="final" id="contato" aria-labelledby="h-final">
+    <div class="w">
+      <p class="kicker" data-i18n="fin_k">Contato</p>
+      <h2 id="h-final" data-i18n="fin_h">Vamos conversar sobre a operação da sua clínica.</h2>
+      <p class="l" data-i18n="fin_p">Mande um e-mail contando onde a operação mais trava hoje. Respondemos com um horário para conversar.</p>
+      <div class="acts">
+        <code id="mail">rafael@gruberia.com</code>
+        <button class="btn pri" id="copy" type="button" data-i18n="copy">Copiar e-mail</button>
+        <a class="btn sec" href="https://www.linkedin.com/in/rafaelgruberbernstein" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <p class="copied" id="copied" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+<footer><div class="w"><span data-i18n="foot1">RG AI Ltda · Rafael Gruber Bernstein</span><span data-i18n="foot2">Telas de exemplo com dados fictícios. Sem promessa de resultado.</span></div></footer>
+<script>(function(){
+var r=document.documentElement,EN={"title": "RG AI Health · Healthcare back-office", "desc": "Custom dashboards that show your clinic's operations team authorization deadlines, insurance claims and queues before they turn into losses.", "skip": "Skip to content", "brand": "RG AI Health", "nav_como": "How it works", "nav_planos": "Plans", "nav_faq": "FAQ", "cta": "Book a call", "kicker": "Healthcare back-office", "h1": "Authorizations, insurers and queues under control", "sub": "Dashboards that show your clinic's operations team deadlines and stalled claims before they turn into losses.", "fine": "We reply by email, no commitment.", "mk_tag": "Sample screen · fictional data", "mk_h": "Claims that need someone", "mk_1": "Claim 1042 · Insurer A · MRI", "mk_1v": "R$1,240.00", "mk_1s": "Due in 2 days", "mk_2": "Claim 1038 · Insurer B · visit", "mk_2v": "R$180.00", "mk_2s": "Denied", "mk_3": "Claim 1031 · Insurer A · lab test", "mk_3v": "R$96.50", "mk_3s": "Approved", "prova_k": "Track record", "prova_h": "What's already live", "s1b": "3 apps", "s1": "in production, built from requirements to deploy", "s2b": "Mar 2026", "s2": "live since then, in daily use", "s3b": "+200%", "s3": "productivity in prospecting and portfolio management", "s4b": "Trademark", "s4": "we register your system's brand with the INPI (Brazil)", "case_k": "Live case · credit and receivables", "case_h": "Carteira360: schedules, visit routes and alerts for a sales team", "case_p1": "We built an app for a credit company (a Brazilian receivables fund) that organizes schedules and visit routes and flags when a client stops operating. Managers see the whole team; each account manager sees their own portfolio, on desktop or phone.", "case_p2": "It's the same problem as a clinic handling many insurance claims: none of them can be forgotten.", "case_src": "The client is not named. Figures come from production use.", "como_k": "How it works", "como_h": "Four steps, from first call to a live system", "st1h": "Call", "st1": "You show us where operations get stuck: authorizations, claims, denials, the call-center queue.", "st2h": "Prototype", "st2": "You see and click through the main dashboards before we build, with a time and cost estimate.", "st3h": "Build", "st3": "We connect the dashboards to the spreadsheets and systems your clinic already uses, in short cycles.", "st4h": "Operation", "st4": "We go live, train your team and take care of hosting, backups and adjustments.", "pl_k": "Pricing and plans", "pl_h": "Start small, grow with your clinic", "flag": "Recommended", "price": "On request", "price_s": "quoted in writing", "p1h": "Assessment", "p1f": "To understand the problem before investing", "p1a": "Map of your current process", "p1b": "Clickable prototype of the main dashboards", "p1c": "Written time and cost estimate", "p2h": "Project", "p2f": "To build your operations dashboards", "p2a": "Custom web system, on desktop and phone", "p2b": "Role-based access and daily backups", "p2c": "Team training", "p2d": "Trademark registration with the INPI", "p3h": "Operation", "p3f": "To keep the system running, every month", "p3a": "Hosting and monitoring", "p3b": "Backups and security updates", "p3c": "Adjustments and small improvements", "p3d": "Email support", "pl_note": "Prices depend on scope and are sent in writing after the Assessment. No automatic charges and no hidden lock-in.", "faq_k": "FAQ", "faq_h": "Frequently asked questions", "q1": "Have you built systems for clinics before?", "a1": "Our three apps in production are in the credit sector, where deadlines, money at risk and queues are daily work. In healthcare, we are building our own product for agencies that serve doctors. The method is the same: requirements, prototype, production and operation.", "q2": "How do you handle patient data?", "a2": "Health data is sensitive personal data under Brazil's LGPD (art. 5, II). We use role-based access, hashed passwords, encrypted connections and backups. Dashboards show each role only what it needs, and nothing is shared with third parties.", "q3": "How much does it cost?", "a3": "It depends on scope. That's what the Assessment is for: at the end, you get the time and price of the Project and Operation in writing.", "q4": "Do you replace the system the clinic already uses?", "a4": "No need. The dashboards can read your current system's spreadsheets and exports and show what is stalled, due or denied.", "q5": "Does it work on phones?", "a5": "Yes. Our systems run in the browser on desktop and phone, with nothing to install.", "q6": "Do you register the system's brand?", "a6": "Yes. In the Project plan, we register your system's brand with the INPI, Brazil's trademark office.", "fin_k": "Contact", "fin_h": "Let's talk about your clinic's operations.", "fin_p": "Send us an email about where your operations get stuck most. We'll reply with a time to talk.", "copy": "Copy email", "foot1": "RG AI Ltda · Rafael Gruber Bernstein", "foot2": "Sample screens with fictional data. No promised results."},UI={"pt": {"copied": "E-mail copiado.", "sel": "E-mail selecionado. Use Ctrl+C ou Cmd+C para copiar.", "toLight": "Mudar para o tema claro", "toDark": "Mudar para o tema escuro", "mk_aria": "Exemplo de tela: guias de convênio com prazo e valor em risco, uma vencendo em 2 dias, uma negada e uma autorizada."}, "en": {"copied": "Email copied.", "sel": "Email selected. Press Ctrl+C or Cmd+C to copy.", "toLight": "Switch to light theme", "toDark": "Switch to dark theme", "mk_aria": "Sample screen: insurance claims with deadline and amount at risk; one due in 2 days, one denied and one approved."}},PT={},PTA={};
+var nodes=[].slice.call(document.querySelectorAll('[data-i18n]')),anodes=[].slice.call(document.querySelectorAll('[data-i18n-aria]'));
+nodes.forEach(function(n){PT[n.getAttribute('data-i18n')]=n.textContent});
+var md=document.querySelector('meta[name=description]');PT.title=document.title;PT.desc=md.content;
+var lang='pt';
+function setLang(l,save){lang=l;var D=l==='en'?EN:PT;
+ nodes.forEach(function(n){var k=n.getAttribute('data-i18n');if(D[k]!=null)n.textContent=D[k]});
+ anodes.forEach(function(n){n.setAttribute('aria-label',UI[l][n.getAttribute('data-i18n-aria')])});
+ document.title=D.title;md.content=D.desc;r.lang=l==='en'?'en':'pt-BR';r.setAttribute('data-lang',l);
+ [].forEach.call(document.querySelectorAll('[data-setlang]'),function(b){b.setAttribute('aria-pressed',b.getAttribute('data-setlang')===l?'true':'false')});
+ if(save){try{localStorage.setItem('rgai-saude-lang',l)}catch(e){}}paintTheme()}
+[].forEach.call(document.querySelectorAll('[data-setlang]'),function(b){b.addEventListener('click',function(){setLang(b.getAttribute('data-setlang'),true)})});
+var tb=document.getElementById('theme'),mq=matchMedia('(prefers-color-scheme: light)');
+function curTheme(){var v=r.getAttribute('data-theme');return v?v:(mq.matches?'light':'dark')}
+function paintTheme(){var d=curTheme()==='dark';r.classList.toggle('is-dark',d);tb.setAttribute('aria-label',d?UI[lang].toLight:UI[lang].toDark)}
+tb.addEventListener('click',function(){var n=curTheme()==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('rgai-saude-theme',n)}catch(e){}paintTheme()});
+if(mq.addEventListener)mq.addEventListener('change',paintTheme);
+setLang(r.getAttribute('data-lang')==='en'?'en':'pt',false);
+var b=document.getElementById('copy'),m=document.getElementById('copied'),e=document.getElementById('mail');
+function sel(){try{var x=document.createRange();x.selectNodeContents(e);var s=getSelection();s.removeAllRanges();s.addRange(x)}catch(z){}}
+b.addEventListener('click',function(){var tt=e.textContent.trim();function ok(){m.textContent=UI[lang].copied;setTimeout(function(){m.textContent=''},2500)}function no(){sel();m.textContent=UI[lang].sel}try{navigator.clipboard.writeText(tt).then(ok,no)}catch(z){no()}});
+})();</script>
+</body>
+</html>

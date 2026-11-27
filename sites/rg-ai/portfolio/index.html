@@ -176,6 +176,12 @@ section{padding-block:clamp(44px,7vw,92px);border-top:1px solid var(--rule)}
 .copied{font:500 13px var(--f-mono);min-height:1.2em}
 footer{padding-block:28px;font-size:.84rem;color:var(--muted)}
 footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px}
+.theme-btn{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--rule);background:var(--surface);color:var(--ink);cursor:pointer;flex:none}
+.theme-btn:hover{border-color:var(--accent)}
+.theme-btn svg{width:20px;height:20px}
+.theme-btn .i-sun{display:none}
+.is-dark .theme-btn .i-sun{display:block}.is-dark .theme-btn .i-moon{display:none}
+.top nav{align-items:center}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 /* ampliar imagem */
 .stage img{cursor:zoom-in}
@@ -199,6 +205,7 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px
       <a href="#wonespace">Wonespace</a>
       <a href="#entrega">Como entregamos</a>
       <a href="#contato" class="cta-s">Contato</a>
+      <button class="theme-btn" id="theme" type="button" aria-label="Mudar para o tema escuro"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></g></svg></button>
     </nav>
   </div>
 </header>
@@ -260,7 +267,7 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px
         <p class="seg">Agências de marca pessoal</p>
         <h3>Wonespace</h3>
         <p>Agência e médico no mesmo dado, em tempo real. Produto próprio em construção.</p>
-        <div class="links"><a href="#wonespace">Ver o caso</a><a href="#video-wonespace">Ver o vídeo</a></div>
+        <div class="links"><a href="#wonespace">Ver o caso</a></div>
       </div>
     </div>
   </div>
@@ -422,19 +429,11 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px
       </div>
       <div>
         <p>A Wonespace é um app de gestão para agências que produzem conteúdo para a marca pessoal de médicos. Os dois lados trabalham no mesmo dado em tempo real: a agência acompanha tarefas, produção e prazos, e o médico aprova, responde e vê o que está pendente.</p>
-        <p class="note">A Wonespace é um produto próprio em construção. Aparecem aqui os protótipos, não um sistema em produção.</p>
+        <p class="note">A Wonespace é um produto próprio em construção. Mostramos aqui só duas telas do protótipo; a demonstração completa é feita ao vivo, com acordo de confidencialidade.</p>
       </div>
     </div>
 
-    <div class="video" id="video-wonespace">
-      <video controls preload="metadata" playsinline poster="media/wonespace-poster.jpg" aria-label="Vídeo promocional da Wonespace, 1 minuto e 54 segundos, com música e sem narração">
-        <source src="media/wonespace-promo.mp4" type="video/mp4">
-        Seu navegador não reproduz este vídeo.
-      </video>
-      <p class="cap">Vídeo de 1 min 54 s, 60 quadros por segundo, só música. Toque em play para ouvir.</p>
-    </div>
-
-    <article class="proj" style="padding-bottom:0;border-top:0;margin-top:clamp(32px,5vw,56px)">
+    <article class="proj" style="padding-bottom:0;border-top:0;padding-top:0">
       <div class="p-head">
         <p class="outcome">Agência e médico trabalham no mesmo dado: o que um faz aparece no outro, em tempo real.</p>
       </div>
@@ -442,31 +441,11 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px
         <div class="viewer" data-viewer>
           <div class="tabs" role="tablist" aria-label="Telas da Wonespace">
             <button role="tab" id="t-rn-1" aria-controls="p-rn-1" aria-selected="true">Gestor e médico lado a lado</button>
-            <button role="tab" id="t-rn-2" aria-controls="p-rn-2" aria-selected="false" tabindex="-1">Produção</button>
-            <button role="tab" id="t-rn-4" aria-controls="p-rn-4" aria-selected="false" tabindex="-1">Hoje · Andamento do projeto</button>
-          <button role="tab" id="t-rn-5" aria-controls="p-rn-5" aria-selected="false" tabindex="-1">Mapa mental</button>
-          <button role="tab" id="t-rn-6" aria-controls="p-rn-6" aria-selected="false" tabindex="-1">Mensagens</button>
           <button role="tab" id="t-rn-3" aria-controls="p-rn-3" aria-selected="false" tabindex="-1">App do médico</button>
           </div>
           <div class="panel" role="tabpanel" id="p-rn-1" aria-labelledby="t-rn-1">
             <figure><div class="stage"><img loading="lazy" src="img/wonespace-1.webp" width="1500" height="938" alt="Painel do gestor da agência e app do médico lado a lado, no mesmo endereço."></div>
             <figcaption><b>Dados de demonstração</b>Gestor e médico lado a lado: o que um faz aparece no outro. Dados fictícios.</figcaption></figure>
-          </div>
-          <div class="panel" role="tabpanel" id="p-rn-2" aria-labelledby="t-rn-2" hidden>
-            <figure><div class="stage"><img loading="lazy" src="img/wonespace-3.webp" width="1500" height="938" alt="Tela de produção do gestor, com as trilhas dos projetos por etapa, progresso e atrasos."></div>
-            <figcaption><b>Dados de demonstração</b>Produção, aba Projetos: trilhas por etapa, do planejamento ao lançamento, com progresso e atrasos.</figcaption></figure>
-          </div>
-          <div class="panel" role="tabpanel" id="p-rn-4" aria-labelledby="t-rn-4" hidden>
-          <figure><div class="stage"><img loading="lazy" src="img/wonespace-4.webp" width="1500" height="938" alt="Tela Hoje do gestor: Andamento do projeto, com a pilha de camadas de um conteúdo e as etapas Pauta, Roteiro, Gravação, Edição, Aprovação e No ar, ao lado do Gargalo na produção."></div>
-          <figcaption><b>Dados de demonstração</b>Hoje, faixa Andamento do projeto: cada conteúdo é uma pilha de camadas, uma por etapa, que acendem quando ficam prontas. A camada escolhida (Gravação) abre as tarefas e os arquivos da etapa. Ao lado, o Gargalo na produção lista os conteúdos parados.</figcaption></figure>
-        </div>
-                  <div class="panel" role="tabpanel" id="p-rn-5" aria-labelledby="t-rn-5" hidden>
-            <figure><div class="stage"><img loading="lazy" src="img/wonespace-5.webp" width="1500" height="938" alt="Mapa mental, aba Brainstorm: quadro livre com notas, ideias de conteúdo, um grupo, uma referência em vídeo e o botão Transformar em projeto."></div>
-            <figcaption><b>Dados de demonstração</b>Mapa mental, aba Brainstorm: notas, ideias de conteúdo, um grupo e uma referência em vídeo num quadro livre. O botão Transformar em projeto fica no topo.</figcaption></figure>
-          </div>
-          <div class="panel" role="tabpanel" id="p-rn-6" aria-labelledby="t-rn-6" hidden>
-            <figure><div class="stage"><img loading="lazy" src="img/wonespace-6.webp" width="1500" height="938" alt="Mensagens: conversa com uma cliente com um story enviado para aprovação, um balão de áudio com onda e transcrição e uma foto em anexo, e sugestões de tarefa ao lado."></div>
-            <figcaption><b>Dados de demonstração</b>Mensagens, conversa com a Dra. Marina: a agência manda um story para aprovar (“Bastidores — sala nova”), uma mensagem de voz com onda e transcrição e uma foto em anexo. Ao lado, o app sugere a tarefa de cada mensagem.</figcaption></figure>
           </div>
 <div class="panel" role="tabpanel" id="p-rn-3" aria-labelledby="t-rn-3" hidden>
             <figure><div class="stage phones one"><img loading="lazy" src="img/wonespace-m1.webp" width="620" height="1342" alt="App do médico, tela Hoje, com tarefas, aprovações e próximos conteúdos."></div>
@@ -584,6 +563,13 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px
       });
     });
   });
+  /* tema claro/escuro: segue o sistema até a pessoa escolher */
+  var root=document.documentElement,tb=document.getElementById('theme'),mq=matchMedia('(prefers-color-scheme: dark)');
+  function cur(){var t=root.getAttribute('data-theme');return t?t:(mq.matches?'dark':'light')}
+  function paint(){var d=cur()==='dark';root.classList.toggle('is-dark',d);tb.setAttribute('aria-label',d?'Mudar para o tema claro':'Mudar para o tema escuro')}
+  try{var sv=localStorage.getItem('rgai-theme');if(sv==='dark'||sv==='light')root.setAttribute('data-theme',sv)}catch(e){}
+  paint();if(mq.addEventListener)mq.addEventListener('change',paint);
+  tb.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('rgai-theme',n)}catch(e){}paint()});
   var btn=document.getElementById('copy'),msg=document.getElementById('copied'),el=document.getElementById('mail');
   function sel(){try{var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r)}catch(e){}}
   btn.addEventListener('click',function(){

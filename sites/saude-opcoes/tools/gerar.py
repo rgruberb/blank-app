@@ -2,7 +2,7 @@
 """Gera as 6 landings de saúde (uma por direção TPL-SAU) + índice. Uso: gerar.py <pasta-de-saida>"""
 import sys, os, html
 
-OUT = sys.argv[1]
+OUT = sys.argv[1] if len(sys.argv)>1 else "."
 FONTS = {
     1: "family=Arimo:wght@400;700",
     2: "family=Figtree:wght@400;600;700",
@@ -522,6 +522,7 @@ b.addEventListener('click',function(){{var t=e.textContent.trim();function ok(){
 import json
 def _j(s): return json.dumps(s, ensure_ascii=False)
 
-for n in OPTS:
+if __name__ == "__main__":
+  for n in OPTS:
     open(os.path.join(OUT, f"opcao-{n}.html"), "w", encoding="utf-8").write(page(n))
-print("ok")
+  print("ok")
