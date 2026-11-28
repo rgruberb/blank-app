@@ -1,0 +1,157 @@
+<title>Logo rg ai</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Manrope:wght@500;600;700;800&display=swap">
+<style>
+/* Layout: prancha de uma proposta só (a 20, "Duas camadas"), com o nome em minúsculas: 4 arranjos lado a lado, depois aplicações reais.
+   A prancha segue o tema de quem vê; cada amostra tem as próprias cores fixas (escuro #07090B, claro #F4F6F5, menta #3DDCA8 / #0E7A5C). */
+:root{--bg:#F3F5F4;--surface:#FFFFFF;--ink:#0C1210;--ink-2:#3A4540;--muted:#5D6A64;--rule:#DCE2DF;--accent:#0E7A5C;
+ --f:"Manrope",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B0D0F;--surface:#13171A;--ink:#EEF2F0;--ink-2:#C3CCC8;--muted:#8E9A95;--rule:#252B2F;--accent:#3DDCA8;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0B0D0F;--surface:#13171A;--ink:#EEF2F0;--ink-2:#C3CCC8;--muted:#8E9A95;--rule:#252B2F;--accent:#3DDCA8;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink-2);font:400 15px/1.55 var(--f)}
+.w{max-width:1240px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 72px}
+h1,h2,h3{color:var(--ink);margin:0;letter-spacing:-.02em}
+h1{font-size:clamp(1.8rem,1.3rem + 1.6vw,2.6rem);line-height:1.1}
+h2{font-size:1.2rem;margin:40px 0 14px}
+.lead{margin-top:12px;max-width:72ch}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:18px;overflow:hidden;min-width:0}
+.card .hd{display:flex;justify-content:space-between;align-items:baseline;gap:8px 16px;flex-wrap:wrap;padding:16px 20px 0}
+.card .hd h3{font-size:1.05rem}
+.tag{font:500 11.5px var(--mono);color:var(--accent)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px 20px 0}
+@media(max-width:520px){.pair{grid-template-columns:1fr}}
+.stage{display:grid;place-items:center;min-height:180px;border-radius:12px;padding:24px;overflow:hidden}
+.dark{background:#07090B;color:#F2F5F4;--mint:#3DDCA8;--on:#07090B}
+.light{background:#F4F6F5;color:#0C1210;--mint:#0E7A5C;--on:#FFFFFF;border:1px solid var(--rule)}
+.card p.note{padding:14px 20px 20px;font-size:14px}
+/* marca */
+.sym{display:block;flex:none}
+.m{fill:var(--mint)}
+.word{font:700 2.4rem/1 var(--f);letter-spacing:-.045em;white-space:nowrap}
+.word .ai{color:var(--mint)}
+.lk-h{display:flex;align-items:center;gap:.32em;font-size:1rem}
+.lk-h .sym{width:2.9em;height:2.9em}
+.lk-v{display:flex;flex-direction:column;align-items:center;gap:.25em}
+.lk-v .sym{width:3.6em;height:3.6em}
+.lk-v .word{font-size:2.1rem}
+.pills{display:grid;gap:.18em;font:700 2rem/1 var(--f);letter-spacing:-.04em}
+.pills span{display:inline-flex;align-items:center;height:1.45em;padding:0 .55em .06em;border-radius:999px;width:max-content}
+.pills .p1{background:currentColor}
+.pills .p1 b{color:var(--on);font-weight:700}
+.pills .p2{background:var(--mint);margin-left:1.05em}
+.pills .p2 b{color:var(--on);font-weight:700}
+.dl{position:relative;display:inline-block}
+.dl::after{content:"";position:absolute;left:50%;top:-.05em;width:.34em;height:.15em;border-radius:999px;background:var(--mint);transform:translateX(-50%)}
+.only .word{font-size:2.9rem;letter-spacing:-.055em}
+/* aplicações */
+.app-row{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;padding:16px 20px 20px}
+.ico{display:grid;place-items:center;border-radius:22%;background:#0F2A21;color:#F2F5F4;--mint:#3DDCA8}
+.ico svg{width:62%;height:62%}
+.i96{width:96px;height:96px}.i48{width:48px;height:48px}.i32{width:32px;height:32px}.i16{width:16px;height:16px;border-radius:4px}
+.lab{display:grid;gap:6px;justify-items:center;font:500 11px var(--mono);color:var(--muted)}
+.avatar{width:96px;height:96px;border-radius:50%;background:#07090B;color:#F2F5F4;--mint:#3DDCA8;display:grid;place-items:center}
+.avatar svg{width:56%;height:56%}
+.tab{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px 10px 0 0;background:#E8ECEA;color:#1B2420;font:500 13px var(--f);width:max-content;--mint:#0E7A5C}
+.tab svg{width:16px;height:16px}
+.mock{border-radius:12px;overflow:hidden;border:1px solid var(--rule)}
+.mock .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;flex-wrap:wrap}
+.mock .nav{display:flex;gap:18px;font-size:13px;opacity:.85}
+.mock .cta{font:700 12px var(--f);padding:9px 14px;border-radius:999px;background:var(--mint);color:var(--on)}
+.mock .lk-h{font-size:.62rem}
+.mock .hero{padding:26px 20px 30px;font:500 1.6rem/1.05 var(--f);letter-spacing:-.035em}
+.mock .hero i{font-family:Georgia,serif;color:var(--mint)}
+.sig{display:flex;gap:14px;align-items:center;padding:18px 20px;border-top:1px solid var(--rule)}
+.sig .lk-h{font-size:.5rem}
+.sig p{margin:0;font-size:13px;line-height:1.45}
+.sig b{color:var(--ink)}
+@media(prefers-reduced-motion:no-preference){
+ .anim .sym rect{transform-box:fill-box;animation:snap .55s cubic-bezier(.34,1.56,.64,1) both}
+ .anim .sym rect:nth-child(2){animation-delay:.12s}
+ @keyframes snap{from{transform:translateX(-10px);opacity:0}to{transform:none;opacity:1}}
+}
+.play{margin:0 20px 18px;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);font:700 13px var(--f);cursor:pointer}
+.play:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="s20" viewBox="0 0 32 32"><rect x="10" y="8.5" width="18" height="6" rx="3" style="fill:var(--mint)"/><rect x="4" y="17.5" width="18" height="6" rx="3" fill="currentColor"/></symbol>
+</svg>
+
+<div class="w">
+  <h1>Logo "rg ai": a 20 em minúsculas</h1>
+  <p class="lead">O símbolo das Duas camadas (dados embaixo, app em menta em cima) com o nome em minúsculas, em Manrope, a fonte do site. São quatro arranjos possíveis, cada um no escuro e no claro, e depois a marca aplicada no topo do site, no ícone da aba, no avatar e na assinatura de e-mail.</p>
+
+  <h2>Quatro layouts</h2>
+  <div class="grid">
+    <article class="card">
+      <div class="hd"><h3>A · Horizontal</h3><span class="tag">uso principal</span></div>
+      <div class="pair">
+        <div class="stage dark anim"><div class="lk-h"><svg class="sym"><use href="#s20"/></svg><span class="word">rg <span class="ai">ai</span></span></div></div>
+        <div class="stage light"><div class="lk-h"><svg class="sym"><use href="#s20"/></svg><span class="word">rg <span class="ai">ai</span></span></div></div>
+      </div>
+      <p class="note">Símbolo à esquerda e nome ao lado, na altura das letras. É o arranjo do topo do site, de documentos e da assinatura de e-mail.</p>
+      <button class="play" type="button">Reproduzir movimento</button>
+    </article>
+    <article class="card">
+      <div class="hd"><h3>B · Vertical</h3><span class="tag">capas e espaços quadrados</span></div>
+      <div class="pair">
+        <div class="stage dark anim"><div class="lk-v"><svg class="sym"><use href="#s20"/></svg><span class="word">rg <span class="ai">ai</span></span></div></div>
+        <div class="stage light"><div class="lk-v"><svg class="sym"><use href="#s20"/></svg><span class="word">rg <span class="ai">ai</span></span></div></div>
+      </div>
+      <p class="note">Símbolo em cima, nome centralizado embaixo. Para capa de apresentação, banner de LinkedIn, crachá e outros espaços quadrados.</p>
+      <button class="play" type="button">Reproduzir movimento</button>
+    </article>
+    <article class="card">
+      <div class="hd"><h3>C · Nome nas pílulas</h3><span class="tag">o símbolo vira o nome</span></div>
+      <div class="pair">
+        <div class="stage dark"><div class="pills"><span class="p1"><b>rg</b></span><span class="p2"><b>ai</b></span></div></div>
+        <div class="stage light"><div class="pills"><span class="p1"><b>rg</b></span><span class="p2"><b>ai</b></span></div></div>
+      </div>
+      <p class="note">As duas pílulas desencontradas da 20 levam o nome dentro: "rg" na de cima e "ai" na de baixo, em menta. É o layout mais próprio, porque o símbolo e o nome viram uma coisa só. As pílulas ficam na ordem de leitura, então aqui o menta vai embaixo.</p>
+    </article>
+    <article class="card">
+      <div class="hd"><h3>D · Só o nome</h3><span class="tag">pingo em pílula</span></div>
+      <div class="pair">
+        <div class="stage dark only"><span class="word">rga<span class="dl">ı</span></span></div>
+        <div class="stage light only"><span class="word">rga<span class="dl">ı</span></span></div>
+      </div>
+      <p class="note">"rgai" sem símbolo, com o pingo do i trocado por uma pílula menta, o mesmo formato da 20. É o mais discreto, para quando o espaço é só horizontal (rodapé, marca-d'água, documentos).</p>
+    </article>
+  </div>
+
+  <h2>Aplicada</h2>
+  <div class="grid">
+    <article class="card">
+      <div class="hd"><h3>Topo do site</h3><span class="tag">escuro e claro</span></div>
+      <div style="padding:14px 20px;display:grid;gap:10px">
+        <div class="mock dark"><div class="bar"><div class="lk-h"><svg class="sym"><use href="#s20"/></svg><span class="word">rg <span class="ai">ai</span></span></div><div class="nav"><span>Projetos</span><span>Metodologia</span><span>Perguntas</span></div><span class="cta">Agendar uma reunião</span></div><div class="hero">Aplicações sob medida,<br>do requisito à <i>produção.</i></div></div>
+        <div class="mock light"><div class="bar"><div class="lk-h"><svg class="sym"><use href="#s20"/></svg><span class="word">rg <span class="ai">ai</span></span></div><div class="nav"><span>Projetos</span><span>Metodologia</span><span>Perguntas</span></div><span class="cta">Agendar uma reunião</span></div></div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="hd"><h3>Ícones e avatar</h3><span class="tag">96 · 48 · 32 · 16</span></div>
+      <div class="app-row">
+        <div class="lab"><div class="ico i96"><svg><use href="#s20"/></svg></div>app 96</div>
+        <div class="lab"><div class="ico i48"><svg><use href="#s20"/></svg></div>48</div>
+        <div class="lab"><div class="ico i32"><svg><use href="#s20"/></svg></div>32</div>
+        <div class="lab"><div class="ico i16"><svg><use href="#s20"/></svg></div>16</div>
+        <div class="lab"><div class="avatar"><svg><use href="#s20"/></svg></div>avatar</div>
+        <div class="lab"><div class="tab"><svg><use href="#s20"/></svg>rg ai · Aplicações sob medida</div>aba do navegador</div>
+      </div>
+      <div class="sig">
+        <div class="lk-h" style="color:var(--ink);--mint:var(--accent)"><svg class="sym"><use href="#s20"/></svg><span class="word">rg <span class="ai">ai</span></span></div>
+        <p><b>Rafael Gruber Bernstein</b><br>Fundador · rafael@gruberia.com</p>
+      </div>
+    </article>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.play').forEach(function(b){b.addEventListener('click',function(){
+  b.closest('.card').querySelectorAll('.stage.dark').forEach(function(s){s.classList.remove('anim');void s.offsetWidth;s.classList.add('anim')})})});
+</script>
