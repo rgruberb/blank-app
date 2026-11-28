@@ -57,8 +57,8 @@ h1{font-size:clamp(1.8rem,1.3rem + 1.6vw,2.6rem);line-height:1.1}
 .go .stair rect{animation:snap .5s cubic-bezier(.34,1.56,.64,1) both}
 .go .stair rect:nth-child(2){animation-delay:.12s}.go .stair rect:nth-child(3){animation-delay:.24s}
 @keyframes snap{from{transform:translateY(10px);opacity:0}to{transform:none;opacity:1}}
-.draw path,.draw polyline{stroke-dasharray:120;stroke-dashoffset:0}
-.go .draw path,.go .draw polyline{animation:draw 1s cubic-bezier(.65,0,.35,1) both}
+.draw path,.draw polyline,.draw circle{stroke-dasharray:120;stroke-dashoffset:0}
+.go .draw path,.go .draw polyline,.go .draw circle{animation:draw 1s cubic-bezier(.65,0,.35,1) both}
 .go .draw path:nth-child(2){animation-delay:.15s}
 @keyframes draw{from{stroke-dashoffset:120}to{stroke-dashoffset:0}}
 .go .nodes circle{animation:pop .4s cubic-bezier(.34,1.56,.64,1) both}
@@ -75,6 +75,10 @@ h1{font-size:clamp(1.8rem,1.3rem + 1.6vw,2.6rem);line-height:1.1}
 .go .snapg>*:nth-child(2){animation-delay:.1s}.go .snapg>*:nth-child(3){animation-delay:.2s}.go .snapg>*:nth-child(4){animation-delay:.3s}
 .go .growc{animation:pop .5s cubic-bezier(.34,1.56,.64,1) .45s both}
 .word.wide{font-weight:500;letter-spacing:.14em;font-size:1.9rem}
+.word.light{font-weight:500;letter-spacing:-.035em}
+.draw-one{stroke-dasharray:80;stroke-dashoffset:0}
+.go .draw-one{animation:draw1 1s cubic-bezier(.65,0,.35,1) both}
+@keyframes draw1{from{stroke-dashoffset:80}to{stroke-dashoffset:0}}
 .mono-v .word.wide,.light-v .word.wide{font-size:1.05rem}
 @media(prefers-reduced-motion:reduce){.go *{animation:none!important}}
 .sep{grid-column:1/-1;font-size:1.05rem;margin-top:8px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
@@ -85,7 +89,7 @@ h1{font-size:clamp(1.8rem,1.3rem + 1.6vw,2.6rem);line-height:1.1}
 
 <div class="w">
   <h1>Novo logo da RG AI</h1>
-  <p class="lead">As propostas 7 e 9 estão salvas no topo. Abaixo, 6 novas (13 a 18): três variações na linha das salvas e três ideias novas. Cada proposta tem uma ideia só e aparece grande, como ícone de app (64, 32 e 16px), em uma cor e sobre fundo claro. "Reproduzir movimento" mostra a animação sugerida para a marca, de 1 s, como pede a referência de logo das skills. O logo atual está no fim, para comparar.</p>
+  <p class="lead">As propostas 7 e 9 estão salvas no topo. Abaixo, 8 minimalistas (19 a 26): no máximo dois elementos cada, sem detalhes internos. Duas delas são as salvas reduzidas ao mínimo. Cada proposta tem uma ideia só e aparece grande, como ícone de app (64, 32 e 16px), em uma cor e sobre fundo claro. "Reproduzir movimento" mostra a animação sugerida para a marca, de 1 s, como pede a referência de logo das skills. O logo atual está no fim, para comparar.</p>
   <div class="rules"><span>1 ideia</span><span>legível a 16px</span><span>funciona em 1 cor</span><span>claro e escuro</span><span>movimento: calmo, ágil ou amigável</span></div>
   <div class="grid" id="grid"></div>
   <p class="foot">Nenhuma das propostas usa degradê, para não depender de tendência nem de cor. O menta (#3DDCA8 no escuro, #0E7A5C no claro) aparece em um único detalhe de cada símbolo. Antes de registrar no INPI, é preciso fazer uma busca de anterioridade da marca escolhida.</p>
@@ -111,6 +115,14 @@ var S={
  neural:'<g class="draw" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".55"><path d="M6 9L16 6M6 9L16 16M6 9L16 26M6 23L16 6M6 23L16 16M6 23L16 26"/><path d="M16 6L26 16M16 16L26 16M16 26L26 16"/></g><g class="nodes"><circle cx="6" cy="9" r="2.6" fill="currentColor"/><circle cx="6" cy="23" r="2.6" fill="currentColor"/><circle cx="16" cy="6" r="2.6" fill="currentColor"/><circle cx="16" cy="16" r="2.6" fill="currentColor"/><circle cx="16" cy="26" r="2.6" fill="currentColor"/><circle class="m" cx="26" cy="16" r="3.8"/></g>',
  rblock:'<path fill="currentColor" fill-rule="evenodd" d="M5 4h11a8 8 0 0 1 0 16h-5v8H5zM11 9.5h4.5a2.5 2.5 0 0 1 0 5H11z"/><path class="m growc" d="M15 21h6.2l5.3 7h-6.2z"/>',
  cards:'<g class="snapg"><rect x="13" y="3" width="16" height="16" rx="3.5" fill="none" stroke="currentColor" stroke-width="2.4" opacity=".5"/><rect x="8" y="8" width="16" height="16" rx="3.5" fill="none" stroke="currentColor" stroke-width="2.4"/><rect class="m" x="3" y="13" width="16" height="16" rx="3.5"/></g>',
+ dot:'<circle class="m growc" cx="16" cy="16" r="9"/>',
+ bars:'<g class="snapg"><rect class="m" x="10" y="8.5" width="18" height="6" rx="3"/><rect x="4" y="17.5" width="18" height="6" rx="3" fill="currentColor"/></g>',
+ brace1:'<path d="M14 5c-3 0-4 1.5-4 4v3c0 2-1 3.5-3 4 2 .5 3 2 3 4v3c0 2.5 1 4 4 4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle class="m growc" cx="21.5" cy="16" r="3.8"/>',
+ quad:'<rect x="5" y="5" width="22" height="22" rx="5.5" fill="currentColor"/><path class="m growc" d="M16 5h5.5A5.5 5.5 0 0 1 27 10.5V16H16z"/>',
+ rmin:'<path class="draw-one" d="M8 27V5h7a7 7 0 0 1 0 14H8" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><circle class="m growc" cx="22.5" cy="25.5" r="3.4"/>',
+ line:'<g class="draw"><path d="M4 16h16" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round"/></g><circle class="m growc" cx="25" cy="16" r="4.4"/>',
+ slash:'<g class="snapg" fill="none" stroke-width="3.6" stroke-linecap="round"><path d="M8.5 26L16 6" stroke="currentColor"/><path class="ms" d="M16.5 26L24 6"/></g>',
+ ring:'<g class="draw"><circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="3"/></g><circle class="m growc" cx="16" cy="16" r="4.2"/>',
  gauge:'<path d="M5.6 24A12 12 0 1 1 26.4 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" opacity=".35"/><g class="draw" fill="none" stroke-width="2.6" stroke-linecap="round"><path class="ms" d="M5.6 24A12 12 0 0 1 25.83 11.12"/></g><path d="M16 18l6.5-4.6" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="18" r="2.6" fill="currentColor"/>'
 };
 var L=[
@@ -185,15 +197,47 @@ var L=[
  {k:'rblock',n:'R em bloco',t:'Letra da marca',w:'RG <span class="ai">AI</span>',wc:'',
   idea:'Um R sólido e geométrico cuja perna, em menta e destacada, avança: o passo do requisito à produção.',
   why:'Uma letra própria funciona como assinatura e fica forte em qualquer tamanho. É a mais "marca registrada".',
-  mov:'Ágil: a perna do R desliza e se encaixa.'}
+  mov:'Ágil: a perna do R desliza e se encaixa.'},
+ {k:'dot',n:'Ponto',t:'Só o essencial',w:'rg <span class="ai">ai</span>',wc:'light',
+  idea:'Um único ponto menta. O nome em minúsculas faz o resto.',
+  why:'O mais minimalista possível. A marca passa a ser a cor e o nome; o ponto vira assinatura em tudo (ícone, favicon, avatar).',
+  mov:'Amigável: o ponto cresce do centro.'},
+ {k:'bars',n:'Duas camadas',t:'A 9, reduzida',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'Duas barras desencontradas: dados embaixo, app em menta em cima.',
+  why:'Mantém a ideia de camadas da 9 com metade dos elementos. Fica forte até a 16px.',
+  mov:'Ágil: as barras deslizam e se encaixam.'},
+ {k:'brace1',n:'Chave e ponto',t:'A 7, reduzida',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'Uma chave de código aberta e um ponto menta: o código e o que ele entrega.',
+  why:'Mantém a ideia de código da 7 com metade do desenho. Lembra um rosto de perfil, o que dá um toque humano.',
+  mov:'Amigável: a chave aparece e o ponto cresce ao lado.'},
+ {k:'quad',n:'Quadrante',t:'Bloco com destaque',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'Um quadrado sólido com um quarto em menta: a parte que a RG AI resolve.',
+  why:'Muito sólido e reconhecível como ícone de app. Limite: na versão de uma cor o quarto em destaque some, e o símbolo vira só um quadrado.',
+  mov:'Amigável: o quadrante menta acende.'},
+ {k:'rmin',n:'R aberto',t:'Letra mínima',w:'RG <span class="ai">AI</span>',wc:'light',
+  idea:'Um R desenhado em um traço só, com a perna trocada por um ponto menta.',
+  why:'Tem personalidade de letra própria sem pesar. Risco: sem a perna, pode ser lido como "P.".',
+  mov:'Calmo: o traço é desenhado e o ponto aparece.'},
+ {k:'line',n:'Linha e ponto',t:'Do requisito à produção',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'Uma linha que termina num ponto menta: o caminho e a entrega.',
+  why:'Conta a frase do site ("do requisito à produção") com dois elementos. Funciona também como divisor em materiais.',
+  mov:'Calmo: a linha corre até o ponto.'},
+ {k:'slash',n:'Barras',t:'Código, sem enfeite',w:'rg <span class="ai">ai</span>',wc:'light',
+  idea:'Duas barras inclinadas, a segunda em menta, como um comentário de código (//).',
+  why:'Lê como tecnologia sem desenhar nada literal. Fica bem pequeno e em uma cor.',
+  mov:'Ágil: as barras entram uma após a outra.'},
+ {k:'ring',n:'Anel',t:'Foco no centro',w:'RG <span class="ai">AI</span>',wc:'light',
+  idea:'Um anel com um ponto menta no centro: foco no que importa para o cliente.',
+  why:'Forma clássica e equilibrada, que funciona como selo. É a mais "institucional" das minimalistas.',
+  mov:'Calmo: o anel se fecha e o ponto acende.'}
 ];
 function svg(k){return '<svg class="sym" viewBox="0 0 32 32" aria-hidden="true">'+S[k]+'</svg>'}
 var grid=document.getElementById('grid');
 L.forEach(function(o,i){o.num=i+1});
-var SAVED=[7,9],SHOW=L.filter(function(o){return SAVED.indexOf(o.num)>-1||o.num>12});
+var SAVED=[7,9],SHOW=L.filter(function(o){return SAVED.indexOf(o.num)>-1||o.num>18});
 function sep(t){var h=document.createElement('h2');h.className='sep';h.textContent=t;grid.appendChild(h)}
 sep('Salvas');
-SHOW.forEach(function(o,i){if(i===SAVED.length)sep('Novas propostas');var el=document.createElement('article');el.className='card'+(SAVED.indexOf(o.num)>-1?' saved':'');
+SHOW.forEach(function(o,i){if(i===SAVED.length)sep('Minimalistas');var el=document.createElement('article');el.className='card'+(SAVED.indexOf(o.num)>-1?' saved':'');
  el.innerHTML='<div class="hd"><h2>'+o.n+(SAVED.indexOf(o.num)>-1?' <span class="tag-s">Salva</span>':'')+'</h2><span class="num">'+o.num+' · '+o.t+'</span></div>'+
  '<div class="hero" role="img" aria-label="Proposta '+o.num+', '+o.n+', sobre fundo escuro">'+svg(o.k)+'<span class="word '+o.wc+'">'+o.w+'</span></div>'+
  '<div class="strip"><div class="sz"><div class="app a64">'+svg(o.k)+'</div>64</div><div class="sz"><div class="app a32">'+svg(o.k)+'</div>32</div><div class="sz"><div class="app a16">'+svg(o.k)+'</div>16</div>'+
