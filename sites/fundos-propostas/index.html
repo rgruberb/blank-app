@@ -1,0 +1,144 @@
+<title>Fundos das seções</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@500&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: prancha escura (mesmo mundo da landing, que abre no escuro); 7 cartões, cada um com uma mini seção viva no fundo proposto, e uma ficha curta.
+   Escolha deliberada de um tema só, escuro, porque a landing é escura por padrão; todas as cores são explícitas. */
+:root{color-scheme:dark;--bg:#07090B;--bg-2:#0C0F12;--surface:#11151A;--glass:rgba(255,255,255,.045);--glass-b:rgba(255,255,255,.10);
+ --ink:#F2F5F4;--ink-2:#C4CCC9;--muted:#8E9A96;--rule:rgba(255,255,255,.09);--accent:#3DDCA8;--accent-2:#1FA67C;--blue:#4AAAFF;
+ --f:"Manrope",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;--serif:"Instrument Serif",Georgia,serif}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink-2);font:400 15px/1.55 var(--f);margin:0}
+.w{max-width:1240px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 72px}
+h1,h2,h3{color:var(--ink);margin:0;letter-spacing:-.02em}
+h1{font-size:clamp(1.8rem,1.3rem + 1.6vw,2.6rem);line-height:1.1}
+.lead{margin-top:12px;max-width:74ch}
+.grid{margin-top:28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media(max-width:920px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:18px;overflow:hidden;min-width:0;display:flex;flex-direction:column}
+.hd{display:flex;justify-content:space-between;align-items:baseline;gap:8px 16px;flex-wrap:wrap;padding:16px 20px 12px}
+.hd h2{font-size:1.1rem}
+.num{font:500 11.5px var(--mono);color:var(--accent)}
+/* mini seção */
+.mini{position:relative;overflow:hidden;isolation:isolate;margin:0 20px;border-radius:14px;background:var(--bg);min-height:300px;padding:28px 24px;border:1px solid var(--rule)}
+.mini .k{font:500 10.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:8px}
+.mini .k::before{content:"";width:16px;height:1px;background:currentColor}
+.mini h3{margin-top:10px;font:500 1.6rem/1.05 var(--f);letter-spacing:-.035em}
+.mini h3 i{font-family:var(--serif);font-weight:400;color:var(--accent)}
+.cells{margin-top:20px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.cell{border-radius:12px;border:1px solid var(--glass-b);background:rgba(17,21,26,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:14px;min-height:96px;display:grid;gap:6px;align-content:start}
+.cell b{color:var(--ink);font-weight:600;font-size:.92rem}
+.cell span{font-size:.75rem;color:var(--muted)}
+.cell i{width:24px;height:24px;border-radius:7px;background:rgba(61,220,168,.12)}
+@media(max-width:520px){.cells{grid-template-columns:1fr}.cell{min-height:0}}
+.layer{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.info{padding:14px 20px 20px;display:grid;gap:6px;font-size:14px}
+.info dl{margin:0;display:grid;gap:6px}
+.info dl div{display:grid;grid-template-columns:6.5rem minmax(0,1fr);gap:10px}
+.info dt{font:500 11px/1.9 var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.info dd{margin:0}
+@media(max-width:420px){.info dl div{grid-template-columns:1fr;gap:0}}
+.meter{display:inline-flex;gap:3px;vertical-align:middle}.meter s{width:14px;height:6px;border-radius:3px;background:var(--glass-b)}.meter s.on{background:var(--accent)}
+/* 1 aurora */
+.aurora .b{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;mix-blend-mode:screen}
+.aurora .b1{width:60%;aspect-ratio:1;background:#1FA67C;left:-15%;top:-30%;animation:dr1 18s ease-in-out infinite alternate}
+.aurora .b2{width:50%;aspect-ratio:1;background:#2D6FD6;right:-10%;top:10%;opacity:.35;animation:dr2 22s ease-in-out infinite alternate}
+.aurora .b3{width:45%;aspect-ratio:1;background:#3DDCA8;left:30%;bottom:-45%;opacity:.3;animation:dr3 20s ease-in-out infinite alternate}
+@keyframes dr1{to{transform:translate(30%,25%) scale(1.15)}}
+@keyframes dr2{to{transform:translate(-35%,20%) scale(.9)}}
+@keyframes dr3{to{transform:translate(-25%,-30%) scale(1.2)}}
+/* 2 grade de pontos */
+.dots{background-image:radial-gradient(rgba(255,255,255,.16) 1px,transparent 1.4px);background-size:22px 22px;-webkit-mask:radial-gradient(ellipse 80% 70% at 50% 40%,#000 30%,transparent 80%);mask:radial-gradient(ellipse 80% 70% at 50% 40%,#000 30%,transparent 80%);animation:dotdrift 30s linear infinite}
+.dots-hl{background-image:radial-gradient(rgba(61,220,168,.9) 1.2px,transparent 1.6px);background-size:22px 22px;-webkit-mask:radial-gradient(160px circle at var(--mx,70%) var(--my,30%),#000,transparent 70%);mask:radial-gradient(160px circle at var(--mx,70%) var(--my,30%),#000,transparent 70%);animation:dotdrift 30s linear infinite}
+@keyframes dotdrift{to{background-position:22px 220px}}
+/* 3 fio de luz */
+.thread svg{position:absolute;inset:0;width:100%;height:100%}
+.thread .base{stroke:rgba(61,220,168,.22);stroke-width:1.5;fill:none}
+.thread .pulse{stroke:url(#tg);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-dasharray:120 900;animation:run 5s cubic-bezier(.65,0,.35,1) infinite;filter:drop-shadow(0 0 6px rgba(61,220,168,.8))}
+.thread .glow{position:absolute;right:-10%;top:-20%;width:50%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(61,220,168,.16),transparent 65%)}
+@keyframes run{from{stroke-dashoffset:1020}to{stroke-dashoffset:0}}
+/* 4 malha com grão */
+.mesh{background:radial-gradient(60% 80% at 0% 0%,rgba(31,166,124,.32),transparent 60%),radial-gradient(50% 70% at 100% 20%,rgba(45,111,214,.22),transparent 60%),radial-gradient(70% 60% at 60% 110%,rgba(61,220,168,.18),transparent 60%),#07090B;animation:meshhue 24s ease-in-out infinite alternate}
+.grain{opacity:.22;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>")}
+@keyframes meshhue{to{filter:hue-rotate(-18deg) saturate(1.2)}}
+/* 5 faixas de tom */
+.bands{padding:0;min-height:0}
+.band{position:relative;padding:22px 24px}
+.band.t1{background:#07090B}
+.band.t2{background:linear-gradient(180deg,#07090B 0%,#0B1A15 18%,#0B1A15 82%,#07090B 100%)}
+.band.t2::before{content:"";position:absolute;left:10%;right:10%;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(61,220,168,.6),transparent)}
+.band .cells{margin-top:12px}
+.band h3{font-size:1.25rem}
+/* 6 constelação */
+.const canvas{position:absolute;inset:0;width:100%;height:100%}
+/* 7 horizonte */
+.horizon{perspective:420px;overflow:hidden}
+.horizon .floor{position:absolute;left:-50%;right:-50%;bottom:-10%;height:75%;transform-origin:50% 100%;transform:rotateX(68deg);background-image:linear-gradient(rgba(61,220,168,.35) 1px,transparent 1px),linear-gradient(90deg,rgba(61,220,168,.35) 1px,transparent 1px);background-size:44px 44px;-webkit-mask:linear-gradient(to top,#000 10%,transparent 85%);mask:linear-gradient(to top,#000 10%,transparent 85%);animation:floor 4s linear infinite}
+.horizon .sun{position:absolute;left:50%;bottom:30%;width:60%;aspect-ratio:2/1;transform:translateX(-50%);background:radial-gradient(ellipse at 50% 100%,rgba(61,220,168,.28),transparent 65%)}
+@keyframes floor{to{background-position:0 44px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+.foot{margin-top:28px;font-size:13px;color:var(--muted);max-width:84ch}
+</style>
+
+<div class="w">
+  <h1>Fundos para as seções da landing</h1>
+  <p class="lead">O fundo do hero já ficou mais brilhante na landing. Para as seções de baixo, que hoje são quase lisas, aqui estão 7 opções, cada uma numa mini seção real e já animada. Dá para escolher uma para a página toda ou combinar, por exemplo, uma por seção. Todas respeitam quem pede menos movimento no sistema e podem ser pausadas pelo botão da página.</p>
+  <div class="grid" id="grid">
+
+    <article class="card"><div class="hd"><h2>Aurora</h2><span class="num">1 · Luz que se move</span></div>
+      <div class="mini"><div class="layer aurora"><span class="b b1"></span><span class="b b2"></span><span class="b b3"></span></div>
+        <p class="k">Segmentos</p><h3>Segmentos de <i>atuação</i></h3><div class="cells"><div class="cell"><i></i><b>Crédito e finanças</b><span>Especialidade</span></div><div class="cell"><i></i><b>Saúde</b><span>Back-office</span></div><div class="cell"><i></i><b>Agências</b><span>Marca pessoal</span></div></div></div>
+      <div class="info"><dl><div><dt>Como é</dt><dd>Manchas de luz verde e azul, bem desfocadas, que se deslocam devagar (ciclos de ~20 s) atrás do conteúdo.</dd></div><div><dt>Combina com</dt><dd>O fluxo de luz do hero: parece a mesma luz continuando pela página.</dd></div><div><dt>Peso</dt><dd><span class="meter"><s class="on"></s><s></s><s></s></span> leve (só CSS)</dd></div></dl></div></article>
+
+    <article class="card"><div class="hd"><h2>Grade de pontos</h2><span class="num">2 · Precisão técnica</span></div>
+      <div class="mini" data-spot><div class="layer dots"></div><div class="layer dots-hl"></div>
+        <p class="k">Segmentos</p><h3>Segmentos de <i>atuação</i></h3><div class="cells"><div class="cell"><i></i><b>Crédito e finanças</b><span>Especialidade</span></div><div class="cell"><i></i><b>Saúde</b><span>Back-office</span></div><div class="cell"><i></i><b>Agências</b><span>Marca pessoal</span></div></div></div>
+      <div class="info"><dl><div><dt>Como é</dt><dd>Uma grade fina de pontos que desliza devagar. Perto do cursor, os pontos acendem em menta (passe o mouse).</dd></div><div><dt>Combina com</dt><dd>Dados, engenharia e a animação de "tela sendo gerada" em pontos.</dd></div><div><dt>Peso</dt><dd><span class="meter"><s class="on"></s><s></s><s></s></span> leve (só CSS)</dd></div></dl></div></article>
+
+    <article class="card"><div class="hd"><h2>Fio de luz</h2><span class="num">3 · Do requisito à produção</span></div>
+      <div class="mini"><div class="layer thread"><div class="glow"></div><svg viewBox="0 0 600 300" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="tg" x1="0" x2="1"><stop offset="0" stop-color="#4AAAFF"/><stop offset="1" stop-color="#3DDCA8"/></linearGradient></defs><path class="base" d="M560 -10 C 520 80, 600 140, 540 210 S 470 300, 520 320"/><path class="pulse" d="M560 -10 C 520 80, 600 140, 540 210 S 470 300, 520 320"/></svg></div>
+        <p class="k">Segmentos</p><h3>Segmentos de <i>atuação</i></h3><div class="cells"><div class="cell"><i></i><b>Crédito e finanças</b><span>Especialidade</span></div><div class="cell"><i></i><b>Saúde</b><span>Back-office</span></div><div class="cell"><i></i><b>Agências</b><span>Marca pessoal</span></div></div></div>
+      <div class="info"><dl><div><dt>Como é</dt><dd>Um fio fino que desce pela lateral da página, de seção em seção, com um pulso de luz percorrendo o caminho.</dd></div><div><dt>Combina com</dt><dd>A ideia de "do requisito à produção" e com as linhas que acendem nos projetos e na metodologia.</dd></div><div><dt>Peso</dt><dd><span class="meter"><s class="on"></s><s></s><s></s></span> leve (SVG)</dd></div></dl></div></article>
+
+    <article class="card"><div class="hd"><h2>Malha com grão</h2><span class="num">4 · Editorial e calmo</span></div>
+      <div class="mini"><div class="layer mesh"></div><div class="layer grain"></div>
+        <p class="k">Segmentos</p><h3>Segmentos de <i>atuação</i></h3><div class="cells"><div class="cell"><i></i><b>Crédito e finanças</b><span>Especialidade</span></div><div class="cell"><i></i><b>Saúde</b><span>Back-office</span></div><div class="cell"><i></i><b>Agências</b><span>Marca pessoal</span></div></div></div>
+      <div class="info"><dl><div><dt>Como é</dt><dd>Um degradê em malha (verde, azul e menta nos cantos) com textura de grão de filme. Muda de tom bem devagar.</dd></div><div><dt>Combina com</dt><dd>Um visual mais premium e editorial, com pouco movimento. Bom para seções de texto, como o FAQ.</dd></div><div><dt>Peso</dt><dd><span class="meter"><s class="on"></s><s></s><s></s></span> leve (só CSS)</dd></div></dl></div></article>
+
+    <article class="card"><div class="hd"><h2>Faixas de tom</h2><span class="num">5 · Ritmo entre seções</span></div>
+      <div class="mini bands">
+        <div class="band t1"><p class="k">Projetos</p><h3>Projetos <i>desenvolvidos</i></h3></div>
+        <div class="band t2"><p class="k">Segmentos</p><h3>Segmentos de <i>atuação</i></h3><div class="cells"><div class="cell"><i></i><b>Crédito e finanças</b><span>Especialidade</span></div><div class="cell"><i></i><b>Saúde</b><span>Back-office</span></div><div class="cell"><i></i><b>Agências</b><span>Marca pessoal</span></div></div></div>
+        <div class="band t1"><p class="k">Metodologia</p><h3>Metodologia</h3></div>
+      </div>
+      <div class="info"><dl><div><dt>Como é</dt><dd>As seções alternam entre o grafite e um verde bem escuro, com transição suave e um fio de luz no início de cada faixa verde.</dd></div><div><dt>Combina com</dt><dd>Qualquer outra opção: dá ritmo à rolagem sem animação nenhuma. A skill website-ui recomenda alternar fundos para marcar troca de capítulo.</dd></div><div><dt>Peso</dt><dd><span class="meter"><s class="on"></s><s></s><s></s></span> nenhum (estático)</dd></div></dl></div></article>
+
+    <article class="card"><div class="hd"><h2>Constelação de dados</h2><span class="num">6 · IA e conexões</span></div>
+      <div class="mini"><div class="layer const"><canvas></canvas></div>
+        <p class="k">Segmentos</p><h3>Segmentos de <i>atuação</i></h3><div class="cells"><div class="cell"><i></i><b>Crédito e finanças</b><span>Especialidade</span></div><div class="cell"><i></i><b>Saúde</b><span>Back-office</span></div><div class="cell"><i></i><b>Agências</b><span>Marca pessoal</span></div></div></div>
+      <div class="info"><dl><div><dt>Como é</dt><dd>Pontos que flutuam devagar e se ligam por linhas finas quando ficam próximos, como uma rede. Alguns pontos são menta.</dd></div><div><dt>Combina com</dt><dd>Inteligência artificial e dados conectados. É o mais "tecnológico".</dd></div><div><dt>Peso</dt><dd><span class="meter"><s class="on"></s><s class="on"></s><s></s></span> médio (canvas, pausa fora da tela)</dd></div></dl></div></article>
+
+    <article class="card"><div class="hd"><h2>Horizonte</h2><span class="num">7 · Profundidade</span></div>
+      <div class="mini horizon"><div class="layer"><div class="sun"></div><div class="floor"></div></div>
+        <p class="k">Segmentos</p><h3>Segmentos de <i>atuação</i></h3><div class="cells"><div class="cell"><i></i><b>Crédito e finanças</b><span>Especialidade</span></div><div class="cell"><i></i><b>Saúde</b><span>Back-office</span></div><div class="cell"><i></i><b>Agências</b><span>Marca pessoal</span></div></div></div>
+      <div class="info"><dl><div><dt>Como é</dt><dd>Uma grade em perspectiva no pé da seção, avançando em direção a quem vê, com um brilho no horizonte.</dd></div><div><dt>Combina com</dt><dd>Seções de fechamento, como o Contato. Usado na página toda, fica chamativo demais.</dd></div><div><dt>Peso</dt><dd><span class="meter"><s class="on"></s><s></s><s></s></span> leve (só CSS)</dd></div></dl></div></article>
+
+  </div>
+  <p class="foot">Sugestão de combinação: Faixas de tom (5) na página toda para dar ritmo, Aurora (1) ou Fio de luz (3) como fundo vivo contínuo, e Horizonte (7) só no Contato. A Constelação (6) é a mais chamativa e pesa mais no celular.</p>
+</div>
+
+<script>
+document.querySelectorAll('[data-spot]').forEach(function(m){m.addEventListener('pointermove',function(e){var r=m.getBoundingClientRect();m.style.setProperty('--mx',(e.clientX-r.left)+'px');m.style.setProperty('--my',(e.clientY-r.top)+'px')})});
+document.querySelectorAll('.const canvas').forEach(function(c){
+  var x=c.getContext('2d'),P=[],w,h,raf=0,run=false,rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function size(){var d=Math.min(devicePixelRatio||1,2);w=c.clientWidth;h=c.clientHeight;c.width=w*d;c.height=h*d;x.setTransform(d,0,0,d,0,0)}
+  size();addEventListener('resize',size);
+  function seed(){P=[];for(var i=0;i<46;i++)P.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,m:Math.random()<.18})}
+  function draw(){if(!w||!h){size()}if(w&&(!P.length||P._w!==w)){seed();P._w=w}x.clearRect(0,0,w,h);for(var i=0;i<P.length;i++){var p=P[i];if(!rm){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1}
+    for(var j=i+1;j<P.length;j++){var q=P[j],dx=p.x-q.x,dy=p.y-q.y,d=Math.sqrt(dx*dx+dy*dy);if(d<90){x.strokeStyle='rgba(61,220,168,'+(.22*(1-d/90))+')';x.lineWidth=1;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}}
+    P.forEach(function(p){x.fillStyle=p.m?'#3DDCA8':'rgba(255,255,255,.45)';x.beginPath();x.arc(p.x,p.y,p.m?2.2:1.4,0,7);x.fill()});if(run)raf=requestAnimationFrame(draw)}
+  new IntersectionObserver(function(e){if(e[0].isIntersecting&&!rm){if(!run){run=true;raf=requestAnimationFrame(draw)}}else{run=false;cancelAnimationFrame(raf);draw()}}).observe(c);draw();
+});
+</script>

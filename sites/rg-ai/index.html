@@ -689,15 +689,15 @@ function webgl(c){var g=c.getContext('webgl',{premultipliedAlpha:false,antialias
  var fs='precision mediump float;uniform vec2 r;uniform float t;uniform vec3 ca;uniform vec3 cb;uniform float al;uniform float mob;'+
  'void main(){vec2 uv=gl_FragCoord.xy/r;float asp=r.x/r.y;vec3 col=vec3(0.);'+
  'float cx=mix(.62,.5,mob);'+
- 'for(int i=0;i<5;i++){float fi=float(i);float k=fi/4.;'+
+ 'for(int i=0;i<8;i++){float fi=float(i);float k=fi/7.;'+
  'float y=.5+.17*sin(uv.x*2.1+t*.22+fi*.55)+.09*sin(uv.x*4.7-t*.31+fi*1.27)+(k-.5)*.42*(uv.x-.15)+(k-.5)*.08;'+
  'float d=abs(uv.y-y);float w=.0011+.0009*k;'+
  'float core=w/(d+w);float glow=exp(-d*d*700.)*.22;'+
  'float fade=smoothstep(.02,.4,uv.x)*(1.-smoothstep(.92,1.08,uv.x));'+
  'vec3 c=mix(cb,ca,smoothstep(.25,.85,uv.x+.08*sin(t*.2+fi)));'+
  'col+=c*(core*.55+glow)*fade*(.45+.55*sin(fi*1.7+1.));}'+
- 'vec2 q=(uv-vec2(cx,.5))*vec2(asp*.7,1.);col+=ca*exp(-dot(q,q)*4.)*.08;'+
- 'col*=al*.5;gl_FragColor=vec4(col,clamp(max(max(col.r,col.g),col.b)*1.2,0.,1.));}';
+ 'vec2 q=(uv-vec2(cx,.5))*vec2(asp*.7,1.);col+=ca*exp(-dot(q,q)*4.)*.2;'+
+ 'col*=al*1.05;gl_FragColor=vec4(col,clamp(max(max(col.r,col.g),col.b)*1.2,0.,1.));}';
  function sh(t,src){var s=g.createShader(t);g.shaderSource(s,src);g.compileShader(s);return g.getShaderParameter(s,g.COMPILE_STATUS)?s:null}
  var v=sh(g.VERTEX_SHADER,vs),f=sh(g.FRAGMENT_SHADER,fs);if(!v||!f)return null;var pr=g.createProgram();g.attachShader(pr,v);g.attachShader(pr,f);g.linkProgram(pr);
  if(!g.getProgramParameter(pr,g.LINK_STATUS))return null;g.useProgram(pr);
@@ -709,7 +709,7 @@ function webgl(c){var g=c.getContext('webgl',{premultipliedAlpha:false,antialias
  function recolor(){var s=getComputedStyle(r);var a=rgb(s.getPropertyValue('--stream-a')),bb=rgb(s.getPropertyValue('--stream-b'));g.uniform3f(U.ca,a[0],a[1],a[2]);g.uniform3f(U.cb,bb[0],bb[1],bb[2]);g.uniform1f(U.al,(parseFloat(s.getPropertyValue('--stream-alpha'))||1)*(cur()==='dark'?1:1.6));draw()}
  function size(){var dpr=Math.min(devicePixelRatio||1,innerWidth<700?1:1.25);c.width=c.clientWidth*dpr;c.height=c.clientHeight*dpr;g.viewport(0,0,c.width,c.height);g.uniform2f(U.r,c.width,c.height);g.uniform1f(U.mob,innerWidth<980?1:0);draw()}
  function draw(){g.uniform1f(U.t,tt/1000);g.clearColor(0,0,0,0);g.clear(g.COLOR_BUFFER_BIT);g.drawArrays(g.TRIANGLE_STRIP,0,4)}
- var last=0;function loop(ts){if(last)tt+=(ts-last)*.55;last=ts;draw();raf=requestAnimationFrame(loop)}
+ var last=0;function loop(ts){if(last)tt+=(ts-last)*.8;last=ts;draw();raf=requestAnimationFrame(loop)}
  function start(){if(run||RM.matches||paused)return;run=true;last=0;raf=requestAnimationFrame(loop)}
  function stop(){run=false;cancelAnimationFrame(raf)}
  addEventListener('resize',size);
