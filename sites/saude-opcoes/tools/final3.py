@@ -570,22 +570,6 @@ html,body{overflow-x:clip}
 .dg{display:inline-block;height:1em;overflow:hidden;line-height:1em;vertical-align:bottom}
 .dg .col{display:flex;flex-direction:column;transition:transform 1.3s cubic-bezier(.2,.8,.2,1)}
 .dg .col span{height:1em;line-height:1em;text-align:center}
-/* C: rolagem guiada */
-.story{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:start}
-.story-media{position:sticky;top:calc(96px + env(safe-area-inset-top,0px))}
-.story-stage{position:relative;aspect-ratio:1500/938;background:var(--bg-2)}
-.story-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top left;opacity:0;transform:scale(1.02);transition:opacity .6s var(--ease),transform .9s var(--ease)}
-.story-stage img.on{opacity:1;transform:none}
-.story-bar{height:3px;background:var(--rule)}
-.story-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent-2),var(--accent));transform-origin:left;transform:scaleX(var(--sp,.25));transition:transform .5s var(--ease)}
-.story-steps{list-style:none;margin:0;padding:0}
-.sstep{min-height:62vh;display:flex;flex-direction:column;justify-content:center;gap:12px;padding-left:24px;border-left:2px solid var(--rule);transition:border-color .4s var(--ease)}
-.sstep .sn{font:500 .8rem/1 var(--f-mono);color:var(--muted);letter-spacing:.08em}
-.sstep h3{font-size:clamp(1.6rem,1.2rem + 1.4vw,2.4rem);font-weight:500;letter-spacing:-.03em;color:var(--muted);transition:color .4s var(--ease)}
-.sstep p{max-width:38ch;color:var(--muted);transition:color .4s var(--ease)}
-.sstep.on{border-left-color:var(--accent)}.sstep.on h3{color:var(--ink)}.sstep.on p{color:var(--ink-2)}.sstep.on .sn{color:var(--accent)}
-.sstep .sm{display:none}
-@media(max-width:900px){.story{grid-template-columns:1fr}.story-media{display:none}.sstep{min-height:0;padding:20px 0 28px 20px}.sstep .sm{display:block;border-radius:12px;border:1px solid var(--glass-b);margin-top:8px}.sstep h3,.sstep p{color:var(--ink)}}
 /* G: selos e linha do tempo */
 .badges{display:flex;flex-wrap:wrap;gap:8px}
 .badges span{font:600 .8rem/1 var(--f-body);padding:9px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent)}
@@ -864,12 +848,6 @@ setLang(r.getAttribute('data-lang')==='en'?'en':'pt',false);
 (function(){var sp=document.querySelector('.spot');if(!fine.matches||RM.matches)return;var x=0,y=0,q=false;
  addEventListener('pointermove',function(e){x=e.clientX;y=e.clientY;if(!q){q=true;requestAnimationFrame(function(){sp.style.setProperty('--sx',x+'px');sp.style.setProperty('--sy',y+'px');q=false})}sp.classList.add('on')},{passive:true});
  document.addEventListener('pointerleave',function(){sp.classList.remove('on')})})();
-/* ---------- C: rolagem guiada ---------- */
-(function(){var steps=[].slice.call(document.querySelectorAll('.sstep')),imgs=[].slice.call(document.querySelectorAll('.story-stage img')),bar=document.querySelector('.story-bar i');
- function show(i){steps.forEach(function(s,j){s.classList.toggle('on',j===i)});imgs.forEach(function(m,j){m.classList.toggle('on',j===i);if(j===i)m.loading='eager'});bar.style.setProperty('--sp',((i+1)/steps.length).toFixed(3))}
- var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)show(+e.target.getAttribute('data-i'))})},{rootMargin:'-45% 0px -45% 0px'});
- steps.forEach(function(s){io.observe(s)});
- imgs.forEach(function(m){m.loading='eager'})})();
 /* ---------- D: demonstração do LeadScout ---------- */
 (function(){var lead=document.getElementById('lead'),cl=[].slice.call(lead.querySelectorAll('.claim')),sc=document.getElementById('score'),sb=document.getElementById('scorebar'),live=document.getElementById('dmlive');
  var base=40,score=base;
@@ -973,27 +951,6 @@ body = f"""<a class="skip" href="#conteudo" {ti('skip')}>{tx('skip')}</a>
   </div>
 {metrics}
 
-  <section id="por-dentro" class="amb amb-l" aria-labelledby="h-in">
-    <div class="w">
-      <div class="sh rv"><div><p class="lbl" {ti('in_k')}>{tx('in_k')}</p><h2 id="h-in"><span {ti('in_h1')}>{tx('in_h1')}</span> <span class="em" {ti('in_h2')}>{tx('in_h2')}</span></h2></div><p {ti('in_p')}>{tx('in_p')}</p></div>
-      <div class="story">
-        <div class="story-media" aria-hidden="true">
-          <div class="browser"><div class="bar"><i></i><i></i><i></i><span>riskai.app</span></div>
-            <div class="story-stage">
-              <img class="on" src="{IMG}riskai-1.webp" width="1500" height="938" alt="" loading="lazy">
-              <img src="{IMG}riskai-2.webp" width="1500" height="938" alt="" loading="lazy">
-              <img src="{IMG}riskai-4.webp" width="1500" height="938" alt="" loading="lazy">
-              <img src="{IMG}riskai-5.webp" width="1500" height="938" alt="" loading="lazy">
-            </div>
-            <div class="story-bar"><i></i></div>
-          </div>
-        </div>
-        <ol class="story-steps">
-          {''.join(f'<li class="sstep{" on" if i==1 else ""}" data-i="{i-1}"><span class="sn">0{i}</span><h3 {ti(f"in{i}h")}>{tx(f"in{i}h")}</h3><p {ti(f"in{i}")}>{tx(f"in{i}")}</p><img class="sm" src="{IMG}{["riskai-1","riskai-2","riskai-4","riskai-5"][i-1]}.webp" width="1500" height="938" alt="{tx(["ra_a1","ra_a2","ra_a3","ra_a4"][i-1])}" data-i18n-alt="{["ra_a1","ra_a2","ra_a3","ra_a4"][i-1]}" loading="lazy"></li>' for i in range(1,5))}
-        </ol>
-      </div>
-    </div>
-  </section>
   <section id="projetos" class="amb amb-r" aria-labelledby="h-proj">
     <div class="w">
       <div class="sh rv"><div><p class="lbl" {ti('proj_k')}>{tx('proj_k')}</p><h2 id="h-proj"><span {ti('proj_h')}>{tx('proj_h')}</span></h2></div><p {ti('proj_p')}>{tx('proj_p')}</p></div>

@@ -353,22 +353,6 @@ html,body{overflow-x:clip}
 .dg{display:inline-block;height:1em;overflow:hidden;line-height:1em;vertical-align:bottom}
 .dg .col{display:flex;flex-direction:column;transition:transform 1.3s cubic-bezier(.2,.8,.2,1)}
 .dg .col span{height:1em;line-height:1em;text-align:center}
-/* C: rolagem guiada */
-.story{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:start}
-.story-media{position:sticky;top:calc(96px + env(safe-area-inset-top,0px))}
-.story-stage{position:relative;aspect-ratio:1500/938;background:var(--bg-2)}
-.story-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top left;opacity:0;transform:scale(1.02);transition:opacity .6s var(--ease),transform .9s var(--ease)}
-.story-stage img.on{opacity:1;transform:none}
-.story-bar{height:3px;background:var(--rule)}
-.story-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent-2),var(--accent));transform-origin:left;transform:scaleX(var(--sp,.25));transition:transform .5s var(--ease)}
-.story-steps{list-style:none;margin:0;padding:0}
-.sstep{min-height:62vh;display:flex;flex-direction:column;justify-content:center;gap:12px;padding-left:24px;border-left:2px solid var(--rule);transition:border-color .4s var(--ease)}
-.sstep .sn{font:500 .8rem/1 var(--f-mono);color:var(--muted);letter-spacing:.08em}
-.sstep h3{font-size:clamp(1.6rem,1.2rem + 1.4vw,2.4rem);font-weight:500;letter-spacing:-.03em;color:var(--muted);transition:color .4s var(--ease)}
-.sstep p{max-width:38ch;color:var(--muted);transition:color .4s var(--ease)}
-.sstep.on{border-left-color:var(--accent)}.sstep.on h3{color:var(--ink)}.sstep.on p{color:var(--ink-2)}.sstep.on .sn{color:var(--accent)}
-.sstep .sm{display:none}
-@media(max-width:900px){.story{grid-template-columns:1fr}.story-media{display:none}.sstep{min-height:0;padding:20px 0 28px 20px}.sstep .sm{display:block;border-radius:12px;border:1px solid var(--glass-b);margin-top:8px}.sstep h3,.sstep p{color:var(--ink)}}
 /* G: selos e linha do tempo */
 .badges{display:flex;flex-wrap:wrap;gap:8px}
 .badges span{font:600 .8rem/1 var(--f-body);padding:9px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent)}
@@ -492,27 +476,6 @@ html,body{overflow-x:clip}
   </div>
 </div>
 
-  <section id="por-dentro" class="amb amb-l" aria-labelledby="h-in">
-    <div class="w">
-      <div class="sh rv"><div><p class="lbl" data-i18n="in_k">Por dentro</p><h2 id="h-in"><span data-i18n="in_h1">Por dentro de um app</span> <span class="em" data-i18n="in_h2">em produção</span></h2></div><p data-i18n="in_p">Role para ver como o comitê de crédito usa o RiskAI no dia a dia. Telas reais, carteira fictícia.</p></div>
-      <div class="story">
-        <div class="story-media" aria-hidden="true">
-          <div class="browser"><div class="bar"><i></i><i></i><i></i><span>riskai.app</span></div>
-            <div class="story-stage">
-              <img class="on" src="portfolio/img/riskai-1.webp" width="1500" height="938" alt="" loading="lazy">
-              <img src="portfolio/img/riskai-2.webp" width="1500" height="938" alt="" loading="lazy">
-              <img src="portfolio/img/riskai-4.webp" width="1500" height="938" alt="" loading="lazy">
-              <img src="portfolio/img/riskai-5.webp" width="1500" height="938" alt="" loading="lazy">
-            </div>
-            <div class="story-bar"><i></i></div>
-          </div>
-        </div>
-        <ol class="story-steps">
-          <li class="sstep on" data-i="0"><span class="sn">01</span><h3 data-i18n="in1h">O dia começa no resumo</h3><p data-i18n="in1">Grupos por faixa de risco e o que mais mudou desde ontem, numa tela só.</p><img class="sm" src="portfolio/img/riskai-1.webp" width="1500" height="938" alt="Resumo da carteira com grupos por faixa de risco e maiores variações." data-i18n-alt="ra_a1" loading="lazy"></li><li class="sstep" data-i="1"><span class="sn">02</span><h3 data-i18n="in2h">Um clique abre o grupo</h3><p data-i18n="in2">Risco total, uso do limite e os sinais de cada grupo econômico.</p><img class="sm" src="portfolio/img/riskai-2.webp" width="1500" height="938" alt="Ficha de um grupo econômico com risco total, limite e sinais." data-i18n-alt="ra_a2" loading="lazy"></li><li class="sstep" data-i="2"><span class="sn">03</span><h3 data-i18n="in3h">Os sinais aparecem cedo</h3><p data-i18n="in3">Recompras, prorrogações e vencidos aparecem antes de virar perda.</p><img class="sm" src="portfolio/img/riskai-4.webp" width="1500" height="938" alt="Sinais de piora na carteira, com número de grupos e risco de cada sinal." data-i18n-alt="ra_a3" loading="lazy"></li><li class="sstep" data-i="3"><span class="sn">04</span><h3 data-i18n="in4h">A carteira ao lado do mercado</h3><p data-i18n="in4">A PDD do mês comparada com indicadores do Banco Central.</p><img class="sm" src="portfolio/img/riskai-5.webp" width="1500" height="938" alt="PDD lançada mês a mês ao lado da inadimplência PJ do Banco Central." data-i18n-alt="ra_a4" loading="lazy"></li>
-        </ol>
-      </div>
-    </div>
-  </section>
   <section id="projetos" class="amb amb-r" aria-labelledby="h-proj">
     <div class="w">
       <div class="sh rv"><div><p class="lbl" data-i18n="proj_k">Projetos</p><h2 id="h-proj"><span data-i18n="proj_h">Apps que já estão rodando</span></h2></div><p data-i18n="proj_p">Escolha um projeto e navegue pelas telas. Tudo com dados fictícios; nenhum cliente é identificado.</p></div>
@@ -863,12 +826,6 @@ setLang(r.getAttribute('data-lang')==='en'?'en':'pt',false);
 (function(){var sp=document.querySelector('.spot');if(!fine.matches||RM.matches)return;var x=0,y=0,q=false;
  addEventListener('pointermove',function(e){x=e.clientX;y=e.clientY;if(!q){q=true;requestAnimationFrame(function(){sp.style.setProperty('--sx',x+'px');sp.style.setProperty('--sy',y+'px');q=false})}sp.classList.add('on')},{passive:true});
  document.addEventListener('pointerleave',function(){sp.classList.remove('on')})})();
-/* ---------- C: rolagem guiada ---------- */
-(function(){var steps=[].slice.call(document.querySelectorAll('.sstep')),imgs=[].slice.call(document.querySelectorAll('.story-stage img')),bar=document.querySelector('.story-bar i');
- function show(i){steps.forEach(function(s,j){s.classList.toggle('on',j===i)});imgs.forEach(function(m,j){m.classList.toggle('on',j===i);if(j===i)m.loading='eager'});bar.style.setProperty('--sp',((i+1)/steps.length).toFixed(3))}
- var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)show(+e.target.getAttribute('data-i'))})},{rootMargin:'-45% 0px -45% 0px'});
- steps.forEach(function(s){io.observe(s)});
- imgs.forEach(function(m){m.loading='eager'})})();
 /* ---------- D: demonstração do LeadScout ---------- */
 (function(){var lead=document.getElementById('lead'),cl=[].slice.call(lead.querySelectorAll('.claim')),sc=document.getElementById('score'),sb=document.getElementById('scorebar'),live=document.getElementById('dmlive');
  var base=40,score=base;
