@@ -669,6 +669,20 @@ html,body{overflow-x:clip}
 .chips span.lit{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
 .crow .ic{transition:background-color .45s var(--ease),color .45s var(--ease)}
 .crow.lit .ic{background:var(--accent-ink);color:var(--accent)}
+
+/* Aurora (60%): luz verde e azul atrás das seções, depois do herói */
+.aurora{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;--ao:.6}
+.aurora .b{position:absolute;border-radius:50%;opacity:var(--ao);will-change:transform}
+.aurora .b1{width:75vmax;height:75vmax;left:-25vmax;top:-30vmax;background:radial-gradient(circle,rgba(31,166,124,.55),transparent 62%);animation:au1 22s ease-in-out infinite alternate}
+.aurora .b2{width:65vmax;height:65vmax;right:-25vmax;top:5vmax;background:radial-gradient(circle,rgba(45,111,214,.38),transparent 62%);animation:au2 26s ease-in-out infinite alternate}
+.aurora .b3{width:60vmax;height:60vmax;left:20vmax;bottom:-35vmax;background:radial-gradient(circle,rgba(61,220,168,.32),transparent 62%);animation:au3 24s ease-in-out infinite alternate}
+@keyframes au1{to{transform:translate(25vmax,20vmax) scale(1.12)}}
+@keyframes au2{to{transform:translate(-30vmax,18vmax) scale(.9)}}
+@keyframes au3{to{transform:translate(-20vmax,-25vmax) scale(1.15)}}
+:root[data-theme="light"] .aurora{--ao:.35}
+:root.paused .aurora .b{animation-play-state:paused}
+.hero{background:var(--bg)}
+.amb::before{display:none}
 @media(prefers-reduced-transparency:reduce){.browser,.badge,.float,.tablist,.top.scrolled{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--surface)}}
 """
 
@@ -955,7 +969,8 @@ metrics = f"""
   </div>
 </div>"""
 
-body = f"""<a class="skip" href="#conteudo" {ti('skip')}>{tx('skip')}</a>
+body = f"""<div class="aurora" aria-hidden="true"><span class="b b1"></span><span class="b b2"></span><span class="b b3"></span></div>
+<a class="skip" href="#conteudo" {ti('skip')}>{tx('skip')}</a>
 <header class="top">
   <div class="w">
     <a class="brand" href="#conteudo" aria-label="rg ai, início"><span class="mk" aria-hidden="true"><i></i><i></i></span><span class="wm" aria-hidden="true">rg <span class="ai">ai</span></span></a>
