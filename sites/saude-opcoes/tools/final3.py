@@ -964,7 +964,6 @@ head_meta = f"""<title>{tx('title')}</title>
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:image" content="https://gruberia.com/portfolio/img/riskai-1.webp">
 <script type="application/ld+json">{org_ld}</script>
-<script type="application/ld+json">{faq_ld}</script>
 <script>{HEAD_JS}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -992,7 +991,6 @@ body = f"""<div class="aurora" aria-hidden="true"><span class="b b1"></span><spa
     <nav aria-label="Seções">
       <a class="nl" href="#projetos" {ti('nav_proj')}>{tx('nav_proj')}</a>
       <a class="nl" href="#como-funciona" {ti('nav_como')}>{tx('nav_como')}</a>
-      <a class="nl" href="#duvidas" {ti('nav_faq')}>{tx('nav_faq')}</a>
       <div class="tools">
         <div class="seg" role="group" id="langgrp" aria-label="Idioma" data-on="pt"><span class="knob" aria-hidden="true"></span><button type="button" data-setlang="pt" aria-pressed="true" lang="pt-BR">PT</button><button type="button" data-setlang="en" aria-pressed="false" lang="en">EN</button></div>
         <button class="icon-btn" id="theme" type="button" aria-label="Mudar para o tema claro">{MOON}{SUN}</button>
@@ -1058,13 +1056,6 @@ body = f"""<div class="aurora" aria-hidden="true"><span class="b b1"></span><spa
         <div><p class="lbl" {ti('fd_k')}>{tx('fd_k')}</p><h3 id="h-fd" style="margin-top:12px">Rafael Gruber Bernstein</h3><p class="role" {ti('fd_role')}>{tx('fd_role')}</p><p class="bio" {ti('fd_p')}>{tx('fd_p')}</p>
           <div class="chips"><span {ti('fd_c1')}>{tx('fd_c1')}</span><span {ti('fd_c2')}>{tx('fd_c2')}</span><span {ti('fd_c3')}>{tx('fd_c3')}</span></div></div>
       </div>
-    </div>
-  </section>
-
-  <section id="duvidas" class="amb amb-l" aria-labelledby="h-faq">
-    <div class="w">
-      <div class="faqwrap"><div class="sh rv"><div><p class="lbl" {ti('faq_k')}>{tx('faq_k')}</p><h2 id="h-faq" {ti('faq_h')}>{tx('faq_h')}</h2></div></div>
-      <div class="faq">{FAQ}</div></div>
     </div>
   </section>
 
