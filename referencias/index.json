@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-27T23:21:23Z",
+ "gerado_em": "2026-11-28T00:28:02Z",
  "fontes": {
   "scratch": "<scratchpad da sessão>",
   "pastas": [
@@ -105,8 +105,8 @@
     },
     "imagem": "reels/DeoGCPlzKOs/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DeoGCPlzKOs.mp4",
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DeoGCPlzKOs.mp4",
    "video_w": 1440,
    "video_h": 2560
   },
@@ -317,8 +317,8 @@
     },
     "imagem": "reels/DfIaULMIRC-/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfIaULMIRC-.mp4",
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfIaULMIRC-.mp4",
    "video_w": 1440,
    "video_h": 2560
   },
@@ -393,8 +393,8 @@
     },
     "imagem": "reels/DfKxflroHj3/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfKxflroHj3.mp4",
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfKxflroHj3.mp4",
    "video_w": 1440,
    "video_h": 2560
   },
@@ -435,43 +435,43 @@
      {
       "arquivo": "reels/DfSIP2iBuFI/frame-1.jpg",
       "t": 1.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfSIP2iBuFI/frame-2.jpg",
       "t": 9.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfSIP2iBuFI/frame-3.jpg",
       "t": 14.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfSIP2iBuFI/frame-4.jpg",
       "t": 18.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfSIP2iBuFI/loop.webp",
      "inicio": 2.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 310722
+     "bytes": 535550
     },
     "imagem": "reels/DfSIP2iBuFI/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfSIP2iBuFI.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfSIP2iBuFI.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DfVlIwHISSv",
@@ -511,43 +511,43 @@
      {
       "arquivo": "reels/DfVlIwHISSv/frame-1.jpg",
       "t": 1.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfVlIwHISSv/frame-2.jpg",
       "t": 5.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfVlIwHISSv/frame-3.jpg",
       "t": 9.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfVlIwHISSv/frame-4.jpg",
       "t": 13.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfVlIwHISSv/loop.webp",
      "inicio": 3.5,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 488508
+     "bytes": 704924
     },
     "imagem": "reels/DfVlIwHISSv/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfVlIwHISSv.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfVlIwHISSv.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "Dfa860wIQn4",
@@ -618,8 +618,8 @@
     },
     "imagem": "reels/Dfa860wIQn4/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/Dfa860wIQn4.mp4",
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/Dfa860wIQn4.mp4",
    "video_w": 1080,
    "video_h": 1920
   },
@@ -694,8 +694,8 @@
     },
     "imagem": "reels/Dfc-Q-0yy0W/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/Dfc-Q-0yy0W.mp4",
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/Dfc-Q-0yy0W.mp4",
    "video_w": 1080,
    "video_h": 1920
   },
@@ -742,43 +742,43 @@
      {
       "arquivo": "reels/DfyFShTounu/frame-1.jpg",
       "t": 0.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfyFShTounu/frame-2.jpg",
       "t": 5.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfyFShTounu/frame-3.jpg",
       "t": 9.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfyFShTounu/frame-4.jpg",
       "t": 16.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfyFShTounu/loop.webp",
      "inicio": 5.5,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 179108
+     "bytes": 310772
     },
     "imagem": "reels/DfyFShTounu/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfyFShTounu.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfyFShTounu.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DUEjWRukT_2",
@@ -1692,43 +1692,43 @@
      {
       "arquivo": "reels/De4B0UxPXIk/frame-1.jpg",
       "t": 20.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/De4B0UxPXIk/frame-2.jpg",
       "t": 39.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/De4B0UxPXIk/frame-3.jpg",
       "t": 74.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/De4B0UxPXIk/frame-4.jpg",
       "t": 106.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/De4B0UxPXIk/loop.webp",
      "inicio": 1.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 116360
+     "bytes": 235890
     },
     "imagem": "reels/De4B0UxPXIk/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/De4B0UxPXIk.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/De4B0UxPXIk.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DeUr5-AhdvQ",
@@ -1765,44 +1765,44 @@
     "frames": [
      {
       "arquivo": "reels/DeUr5-AhdvQ/frame-1.jpg",
-      "t": 17.75,
-      "w": 360,
-      "h": 640
+      "t": 17.25,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DeUr5-AhdvQ/frame-2.jpg",
       "t": 32.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DeUr5-AhdvQ/frame-3.jpg",
       "t": 60.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DeUr5-AhdvQ/frame-4.jpg",
-      "t": 92.25,
-      "w": 360,
-      "h": 640
+      "t": 91.75,
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DeUr5-AhdvQ/loop.webp",
      "inicio": 43.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 108154
+     "bytes": 192766
     },
     "imagem": "reels/DeUr5-AhdvQ/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DeUr5-AhdvQ.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DeUr5-AhdvQ.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "Del7XTgsuwI",
@@ -1841,44 +1841,44 @@
     "frames": [
      {
       "arquivo": "reels/Del7XTgsuwI/frame-1.jpg",
-      "t": 14.25,
-      "w": 360,
-      "h": 640
+      "t": 15.75,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Del7XTgsuwI/frame-2.jpg",
       "t": 31.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Del7XTgsuwI/frame-3.jpg",
       "t": 60.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Del7XTgsuwI/frame-4.jpg",
       "t": 90.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/Del7XTgsuwI/loop.webp",
      "inicio": 29.5,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 181230
+     "bytes": 305914
     },
     "imagem": "reels/Del7XTgsuwI/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/Del7XTgsuwI.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/Del7XTgsuwI.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "Deoi1WhP83h",
@@ -1955,8 +1955,8 @@
     },
     "imagem": "reels/Deoi1WhP83h/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/Deoi1WhP83h.mp4",
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/Deoi1WhP83h.mp4",
    "video_w": 1440,
    "video_h": 2560
   },
@@ -2097,8 +2097,8 @@
     },
     "imagem": "reels/DfCWtPgPcfP/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfCWtPgPcfP.mp4",
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfCWtPgPcfP.mp4",
    "video_w": 1440,
    "video_h": 2560
   },
@@ -2169,8 +2169,8 @@
     },
     "imagem": "reels/DfHrMboTVDZ/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfHrMboTVDZ.mp4",
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfHrMboTVDZ.mp4",
    "video_w": 1440,
    "video_h": 2560
   },
@@ -2242,8 +2242,8 @@
     },
     "imagem": "reels/DfKPFDwz2aA/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfKPFDwz2aA.mp4",
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfKPFDwz2aA.mp4",
    "video_w": 1440,
    "video_h": 2560
   },
@@ -2311,8 +2311,8 @@
     },
     "imagem": "reels/DfMH6YTTcwx/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfMH6YTTcwx.mp4",
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfMH6YTTcwx.mp4",
    "video_w": 1440,
    "video_h": 2560
   },
@@ -2351,43 +2351,43 @@
      {
       "arquivo": "reels/DfP6EoLBtgg/frame-1.jpg",
       "t": 2.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfP6EoLBtgg/frame-2.jpg",
       "t": 25.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfP6EoLBtgg/frame-3.jpg",
-      "t": 34.25,
-      "w": 360,
-      "h": 640
+      "t": 33.25,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfP6EoLBtgg/frame-4.jpg",
-      "t": 45.75,
-      "w": 360,
-      "h": 640
+      "t": 47.25,
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfP6EoLBtgg/loop.webp",
      "inicio": 20.5,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 148510
+     "bytes": 235454
     },
     "imagem": "reels/DfP6EoLBtgg/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfP6EoLBtgg.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfP6EoLBtgg.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DfPJo9UBJ7D",
@@ -2427,43 +2427,43 @@
      {
       "arquivo": "reels/DfPJo9UBJ7D/frame-1.jpg",
       "t": 3.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfPJo9UBJ7D/frame-2.jpg",
-      "t": 9.75,
-      "w": 360,
-      "h": 640
+      "t": 22.75,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfPJo9UBJ7D/frame-3.jpg",
-      "t": 23.75,
-      "w": 360,
-      "h": 640
+      "t": 29.25,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfPJo9UBJ7D/frame-4.jpg",
-      "t": 44.25,
-      "w": 360,
-      "h": 640
+      "t": 42.75,
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfPJo9UBJ7D/loop.webp",
      "inicio": 21.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 160992
+     "bytes": 334012
     },
     "imagem": "reels/DfPJo9UBJ7D/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfPJo9UBJ7D.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfPJo9UBJ7D.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DfTr-mwhZT3",
@@ -2501,43 +2501,43 @@
      {
       "arquivo": "reels/DfTr-mwhZT3/frame-1.jpg",
       "t": 2.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfTr-mwhZT3/frame-2.jpg",
-      "t": 23.25,
-      "w": 360,
-      "h": 640
+      "t": 22.25,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfTr-mwhZT3/frame-3.jpg",
       "t": 30.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfTr-mwhZT3/frame-4.jpg",
       "t": 41.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfTr-mwhZT3/loop.webp",
      "inicio": 19.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 109914
+     "bytes": 172506
     },
     "imagem": "reels/DfTr-mwhZT3/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfTr-mwhZT3.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfTr-mwhZT3.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DfV39ohhwAC",
@@ -2582,26 +2582,26 @@
      {
       "arquivo": "reels/DfV39ohhwAC/frame-1.jpg",
       "t": 2.75,
-      "w": 720,
-      "h": 720
+      "w": 1080,
+      "h": 1080
      },
      {
       "arquivo": "reels/DfV39ohhwAC/frame-2.jpg",
       "t": 9.75,
-      "w": 720,
-      "h": 720
+      "w": 1080,
+      "h": 1080
      },
      {
       "arquivo": "reels/DfV39ohhwAC/frame-3.jpg",
       "t": 12.75,
-      "w": 720,
-      "h": 720
+      "w": 1080,
+      "h": 1080
      },
      {
       "arquivo": "reels/DfV39ohhwAC/frame-4.jpg",
       "t": 20.75,
-      "w": 720,
-      "h": 720
+      "w": 1080,
+      "h": 1080
      }
     ],
     "loop": {
@@ -2611,14 +2611,14 @@
      "w": 540,
      "h": 540,
      "fps": 12,
-     "bytes": 517746
+     "bytes": 519154
     },
     "imagem": "reels/DfV39ohhwAC/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfV39ohhwAC.mp4",
-   "video_w": 720,
-   "video_h": 720
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfV39ohhwAC.mp4",
+   "video_w": 1080,
+   "video_h": 1080
   },
   {
    "id_post": "DfVOGNnzR_D",
@@ -2656,43 +2656,43 @@
      {
       "arquivo": "reels/DfVOGNnzR_D/frame-1.jpg",
       "t": 5.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfVOGNnzR_D/frame-2.jpg",
       "t": 15.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfVOGNnzR_D/frame-3.jpg",
-      "t": 26.25,
-      "w": 360,
-      "h": 640
+      "t": 25.75,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfVOGNnzR_D/frame-4.jpg",
       "t": 38.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfVOGNnzR_D/loop.webp",
      "inicio": 14.5,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 157502
+     "bytes": 272228
     },
     "imagem": "reels/DfVOGNnzR_D/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfVOGNnzR_D.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfVOGNnzR_D.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DfWjKQPhUbn",
@@ -2728,43 +2728,43 @@
      {
       "arquivo": "reels/DfWjKQPhUbn/frame-1.jpg",
       "t": 2.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfWjKQPhUbn/frame-2.jpg",
-      "t": 22.75,
-      "w": 360,
-      "h": 640
+      "t": 16.25,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfWjKQPhUbn/frame-3.jpg",
-      "t": 33.75,
-      "w": 360,
-      "h": 640
+      "t": 33.25,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfWjKQPhUbn/frame-4.jpg",
       "t": 41.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfWjKQPhUbn/loop.webp",
      "inicio": 19.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 149816
+     "bytes": 225130
     },
     "imagem": "reels/DfWjKQPhUbn/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfWjKQPhUbn.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfWjKQPhUbn.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DfZkZZ4hkuV",
@@ -2802,43 +2802,43 @@
      {
       "arquivo": "reels/DfZkZZ4hkuV/frame-1.jpg",
       "t": 2.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfZkZZ4hkuV/frame-2.jpg",
       "t": 20.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfZkZZ4hkuV/frame-3.jpg",
       "t": 29.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfZkZZ4hkuV/frame-4.jpg",
-      "t": 37.25,
-      "w": 360,
-      "h": 640
+      "t": 36.75,
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfZkZZ4hkuV/loop.webp",
      "inicio": 17.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 147418
+     "bytes": 225126
     },
     "imagem": "reels/DfZkZZ4hkuV/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfZkZZ4hkuV.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfZkZZ4hkuV.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "Dfby7sPgMPU",
@@ -2876,43 +2876,43 @@
      {
       "arquivo": "reels/Dfby7sPgMPU/frame-1.jpg",
       "t": 3.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfby7sPgMPU/frame-2.jpg",
       "t": 19.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfby7sPgMPU/frame-3.jpg",
       "t": 33.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfby7sPgMPU/frame-4.jpg",
       "t": 69.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/Dfby7sPgMPU/loop.webp",
      "inicio": 30.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 376284
+     "bytes": 617058
     },
     "imagem": "reels/Dfby7sPgMPU/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/Dfby7sPgMPU.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/Dfby7sPgMPU.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DfcwOHLh76I",
@@ -2950,43 +2950,43 @@
      {
       "arquivo": "reels/DfcwOHLh76I/frame-1.jpg",
       "t": 2.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfcwOHLh76I/frame-2.jpg",
       "t": 17.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfcwOHLh76I/frame-3.jpg",
-      "t": 31.75,
-      "w": 360,
-      "h": 640
+      "t": 35.75,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfcwOHLh76I/frame-4.jpg",
       "t": 48.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfcwOHLh76I/loop.webp",
-     "inicio": 44.0,
+     "inicio": 19.5,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 166466
+     "bytes": 221632
     },
     "imagem": "reels/DfcwOHLh76I/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfcwOHLh76I.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfcwOHLh76I.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DfemaTCBncA",
@@ -3025,43 +3025,43 @@
      {
       "arquivo": "reels/DfemaTCBncA/frame-1.jpg",
       "t": 2.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfemaTCBncA/frame-2.jpg",
-      "t": 24.75,
-      "w": 360,
-      "h": 640
+      "t": 25.25,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfemaTCBncA/frame-3.jpg",
       "t": 38.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfemaTCBncA/frame-4.jpg",
       "t": 48.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfemaTCBncA/loop.webp",
      "inicio": 2.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 142180
+     "bytes": 271792
     },
     "imagem": "reels/DfemaTCBncA/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfemaTCBncA.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfemaTCBncA.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DffBnb2vlUn",
@@ -3131,8 +3131,8 @@
     },
     "imagem": "reels/DffBnb2vlUn/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DffBnb2vlUn.mp4",
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DffBnb2vlUn.mp4",
    "video_w": 1440,
    "video_h": 2560
   },
@@ -3174,43 +3174,43 @@
      {
       "arquivo": "reels/DfgcqeMBPCU/frame-1.jpg",
       "t": 2.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfgcqeMBPCU/frame-2.jpg",
       "t": 18.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfgcqeMBPCU/frame-3.jpg",
-      "t": 31.75,
-      "w": 360,
-      "h": 640
+      "t": 29.25,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfgcqeMBPCU/frame-4.jpg",
       "t": 46.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfgcqeMBPCU/loop.webp",
      "inicio": 17.5,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 105962
+     "bytes": 182274
     },
     "imagem": "reels/DfgcqeMBPCU/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfgcqeMBPCU.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfgcqeMBPCU.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DfkNvnePItL",
@@ -3252,37 +3252,37 @@
      {
       "arquivo": "reels/DfkNvnePItL/frame-1.jpg",
       "t": 0.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfkNvnePItL/frame-2.jpg",
       "t": 2.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfkNvnePItL/frame-3.jpg",
       "t": 4.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfkNvnePItL/loop.webp",
      "inicio": 0.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 122872
+     "bytes": 211744
     },
     "imagem": "reels/DfkNvnePItL/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfkNvnePItL.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfkNvnePItL.mp4",
+   "video_w": 1440,
+   "video_h": 2560
   },
   {
    "id_post": "Dflzxq5Bqfj",
@@ -3318,43 +3318,43 @@
      {
       "arquivo": "reels/Dflzxq5Bqfj/frame-1.jpg",
       "t": 13.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dflzxq5Bqfj/frame-2.jpg",
       "t": 26.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dflzxq5Bqfj/frame-3.jpg",
       "t": 49.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dflzxq5Bqfj/frame-4.jpg",
       "t": 69.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/Dflzxq5Bqfj/loop.webp",
      "inicio": 11.5,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 391244
+     "bytes": 587696
     },
     "imagem": "reels/Dflzxq5Bqfj/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/Dflzxq5Bqfj.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/Dflzxq5Bqfj.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DfreUkyBNQg",
@@ -3396,43 +3396,43 @@
      {
       "arquivo": "reels/DfreUkyBNQg/frame-1.jpg",
       "t": 12.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfreUkyBNQg/frame-2.jpg",
       "t": 32.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfreUkyBNQg/frame-3.jpg",
       "t": 58.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfreUkyBNQg/frame-4.jpg",
       "t": 70.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfreUkyBNQg/loop.webp",
      "inicio": 22.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 116614
+     "bytes": 209226
     },
     "imagem": "reels/DfreUkyBNQg/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfreUkyBNQg.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfreUkyBNQg.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DfrqAX9v59S",
@@ -3469,37 +3469,37 @@
      {
       "arquivo": "reels/DfrqAX9v59S/frame-1.jpg",
       "t": 0.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfrqAX9v59S/frame-2.jpg",
       "t": 2.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfrqAX9v59S/frame-3.jpg",
       "t": 3.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfrqAX9v59S/loop.webp",
      "inicio": 0.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 130728
+     "bytes": 228532
     },
     "imagem": "reels/DfrqAX9v59S/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfrqAX9v59S.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfrqAX9v59S.mp4",
+   "video_w": 1440,
+   "video_h": 2560
   },
   {
    "id_post": "DfvAY82DSvD",
@@ -3540,43 +3540,43 @@
      {
       "arquivo": "reels/DfvAY82DSvD/frame-1.jpg",
       "t": 0.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfvAY82DSvD/frame-2.jpg",
-      "t": 4.25,
-      "w": 360,
-      "h": 640
+      "t": 5.25,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfvAY82DSvD/frame-3.jpg",
       "t": 7.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfvAY82DSvD/frame-4.jpg",
       "t": 9.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfvAY82DSvD/loop.webp",
      "inicio": 3.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 194676
+     "bytes": 313392
     },
     "imagem": "reels/DfvAY82DSvD/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfvAY82DSvD.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfvAY82DSvD.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "Dfvja0XCyIi",
@@ -3616,43 +3616,43 @@
      {
       "arquivo": "reels/Dfvja0XCyIi/frame-1.jpg",
       "t": 5.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfvja0XCyIi/frame-2.jpg",
       "t": 14.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfvja0XCyIi/frame-3.jpg",
       "t": 20.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfvja0XCyIi/frame-4.jpg",
       "t": 24.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/Dfvja0XCyIi/loop.webp",
      "inicio": 12.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 113492
+     "bytes": 207872
     },
     "imagem": "reels/Dfvja0XCyIi/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/Dfvja0XCyIi.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/Dfvja0XCyIi.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DfwavjimeIa",
@@ -3690,44 +3690,44 @@
     "frames": [
      {
       "arquivo": "reels/DfwavjimeIa/frame-1.jpg",
-      "t": 1.75,
-      "w": 360,
-      "h": 640
+      "t": 0.75,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfwavjimeIa/frame-2.jpg",
       "t": 4.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfwavjimeIa/frame-3.jpg",
       "t": 7.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfwavjimeIa/frame-4.jpg",
       "t": 10.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfwavjimeIa/loop.webp",
-     "inicio": 2.5,
+     "inicio": 6.5,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 242450
+     "bytes": 438272
     },
     "imagem": "reels/DfwavjimeIa/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfwavjimeIa.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfwavjimeIa.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DfwhC1riuuO",
@@ -3798,8 +3798,8 @@
     },
     "imagem": "reels/DfwhC1riuuO/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfwhC1riuuO.mp4",
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfwhC1riuuO.mp4",
    "video_w": 1080,
    "video_h": 1920
   },
@@ -3977,43 +3977,43 @@
      {
       "arquivo": "reels/Dfui4V5BMbz/frame-1.jpg",
       "t": 2.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfui4V5BMbz/frame-2.jpg",
-      "t": 5.75,
-      "w": 360,
-      "h": 640
+      "t": 4.75,
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfui4V5BMbz/frame-3.jpg",
       "t": 9.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfui4V5BMbz/frame-4.jpg",
       "t": 11.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/Dfui4V5BMbz/loop.webp",
      "inicio": 3.5,
-     "duracao": 4.0,
-     "w": 360,
-     "h": 640,
-     "fps": 12,
-     "bytes": 648082
+     "duracao": 3.0,
+     "w": 540,
+     "h": 960,
+     "fps": 10,
+     "bytes": 705284
     },
     "imagem": "reels/Dfui4V5BMbz/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/Dfui4V5BMbz.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/Dfui4V5BMbz.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "DfpCOjIB1Rb",
@@ -4049,43 +4049,43 @@
      {
       "arquivo": "reels/DfpCOjIB1Rb/frame-1.jpg",
       "t": 2.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfpCOjIB1Rb/frame-2.jpg",
       "t": 4.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfpCOjIB1Rb/frame-3.jpg",
       "t": 9.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfpCOjIB1Rb/frame-4.jpg",
       "t": 11.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfpCOjIB1Rb/loop.webp",
      "inicio": 3.5,
-     "duracao": 3.5,
-     "w": 360,
-     "h": 640,
-     "fps": 12,
-     "bytes": 675330
+     "duracao": 3.0,
+     "w": 540,
+     "h": 960,
+     "fps": 10,
+     "bytes": 871782
     },
     "imagem": "reels/DfpCOjIB1Rb/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfpCOjIB1Rb.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfpCOjIB1Rb.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "Dfj_FGsTAVB",
@@ -4156,8 +4156,8 @@
     },
     "imagem": "reels/Dfj_FGsTAVB/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/Dfj_FGsTAVB.mp4",
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/Dfj_FGsTAVB.mp4",
    "video_w": 1440,
    "video_h": 2560
   },
@@ -4266,37 +4266,37 @@
      {
       "arquivo": "reels/DfeT74YvQaD/frame-1.jpg",
       "t": 0.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfeT74YvQaD/frame-2.jpg",
       "t": 2.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/DfeT74YvQaD/frame-3.jpg",
       "t": 4.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/DfeT74YvQaD/loop.webp",
      "inicio": 0.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 121566
+     "bytes": 222346
     },
     "imagem": "reels/DfeT74YvQaD/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/DfeT74YvQaD.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/DfeT74YvQaD.mp4",
+   "video_w": 1440,
+   "video_h": 2560
   },
   {
    "id_post": "Dfr9S5yhlvX",
@@ -4330,43 +4330,43 @@
      {
       "arquivo": "reels/Dfr9S5yhlvX/frame-1.jpg",
       "t": 2.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfr9S5yhlvX/frame-2.jpg",
       "t": 4.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfr9S5yhlvX/frame-3.jpg",
       "t": 8.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfr9S5yhlvX/frame-4.jpg",
       "t": 13.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/Dfr9S5yhlvX/loop.webp",
      "inicio": 3.0,
-     "duracao": 3.5,
-     "w": 360,
-     "h": 640,
-     "fps": 12,
-     "bytes": 643608
+     "duracao": 3.0,
+     "w": 540,
+     "h": 960,
+     "fps": 10,
+     "bytes": 804656
     },
     "imagem": "reels/Dfr9S5yhlvX/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/Dfr9S5yhlvX.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/Dfr9S5yhlvX.mp4",
+   "video_w": 1080,
+   "video_h": 1920
   },
   {
    "id_post": "Dfct0mNvg3f",
@@ -4406,37 +4406,37 @@
      {
       "arquivo": "reels/Dfct0mNvg3f/frame-1.jpg",
       "t": 0.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfct0mNvg3f/frame-2.jpg",
       "t": 2.25,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      },
      {
       "arquivo": "reels/Dfct0mNvg3f/frame-3.jpg",
       "t": 4.75,
-      "w": 360,
-      "h": 640
+      "w": 1080,
+      "h": 1920
      }
     ],
     "loop": {
      "arquivo": "reels/Dfct0mNvg3f/loop.webp",
      "inicio": 0.0,
      "duracao": 4.0,
-     "w": 360,
-     "h": 640,
+     "w": 540,
+     "h": 960,
      "fps": 12,
-     "bytes": 144756
+     "bytes": 219336
     },
     "imagem": "reels/Dfct0mNvg3f/frame-1.jpg"
    },
-   "fonte": "ig/vid",
-   "origem_video": "ig/vid/Dfct0mNvg3f.mp4",
-   "video_w": 360,
-   "video_h": 640
+   "fonte": "ig/vid_hd",
+   "origem_video": "ig/vid_hd/Dfct0mNvg3f.mp4",
+   "video_w": 1440,
+   "video_h": 2560
   },
   {
    "id_post": "Dfr6X8qFPwC",
