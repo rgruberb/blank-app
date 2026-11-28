@@ -683,6 +683,21 @@ html,body{overflow-x:clip}
 :root.paused .aurora .b{animation-play-state:paused}
 .hero{background:var(--bg)}
 .amb::before{display:none}
+
+/* Faixas de tom (alternância entre seções) */
+.band-t{background:linear-gradient(180deg,transparent 0%,rgba(10,30,23,.72) 14%,rgba(10,30,23,.72) 86%,transparent 100%)}
+.band-t::after{content:"";position:absolute;left:12%;right:12%;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(61,220,168,.55),transparent);pointer-events:none}
+:root[data-theme="light"] .band-t{background:linear-gradient(180deg,transparent 0%,rgba(14,122,92,.07) 14%,rgba(14,122,92,.07) 86%,transparent 100%)}
+:root[data-theme="light"] .band-t::after{background:linear-gradient(90deg,transparent,rgba(14,122,92,.45),transparent)}
+/* Horizonte só no Contato */
+.final{overflow:hidden;isolation:isolate;padding-bottom:clamp(140px,16vw,240px)}
+.hz{position:absolute;inset:0;z-index:-1;pointer-events:none;perspective:520px}
+.hz .sun{position:absolute;left:50%;bottom:26%;width:min(1100px,110vw);aspect-ratio:2.4/1;transform:translateX(-50%);background:radial-gradient(ellipse at 50% 100%,rgba(61,220,168,.26),transparent 62%)}
+.hz .floor{position:absolute;left:-50%;right:-50%;bottom:-8%;height:62%;transform-origin:50% 100%;transform:rotateX(70deg);background-image:linear-gradient(rgba(61,220,168,.30) 1px,transparent 1px),linear-gradient(90deg,rgba(61,220,168,.30) 1px,transparent 1px);background-size:56px 56px;-webkit-mask:linear-gradient(to top,#000 5%,transparent 85%);mask:linear-gradient(to top,#000 5%,transparent 85%);animation:floor 5s linear infinite}
+@keyframes floor{to{background-position:0 56px}}
+:root[data-theme="light"] .hz .floor{background-image:linear-gradient(rgba(14,122,92,.22) 1px,transparent 1px),linear-gradient(90deg,rgba(14,122,92,.22) 1px,transparent 1px)}
+:root[data-theme="light"] .hz .sun{background:radial-gradient(ellipse at 50% 100%,rgba(14,122,92,.14),transparent 62%)}
+:root.paused .hz .floor{animation-play-state:paused}
 @media(prefers-reduced-transparency:reduce){.browser,.badge,.float,.tablist,.top.scrolled{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--surface)}}
 """
 
@@ -1022,7 +1037,7 @@ body = f"""<div class="aurora" aria-hidden="true"><span class="b b1"></span><spa
   </section>
 
 
-  <section id="segmentos" class="amb amb-r" aria-labelledby="h-seg">
+  <section id="segmentos" class="amb amb-r band-t" aria-labelledby="h-seg">
     <div class="w">
       <div class="sh rv"><div><p class="lbl" {ti('seg_k')}>{tx('seg_k')}</p><h2 id="h-seg" {ti('seg_h')}>{tx('seg_h')}</h2></div></div>
       <div class="bento">{''.join(f'<article class="cell rv{" main" if i==1 else ""}"><span class="ico">{ICONS[f"g{i}"]}</span><p class="k" {ti(f"g{i}k")}>{tx(f"g{i}k")}</p><h3 {ti(f"g{i}h")}>{tx(f"g{i}h")}</h3><p {ti(f"g{i}p")}>{tx(f"g{i}p")}</p></article>' for i in range(1,4))}</div>
@@ -1036,7 +1051,7 @@ body = f"""<div class="aurora" aria-hidden="true"><span class="b b1"></span><spa
     </div>
   </section>
 
-  <section id="fundador" aria-labelledby="h-fd">
+  <section id="fundador" class="band-t" aria-labelledby="h-fd">
     <div class="w">
       <div class="founder rv">
         <img class="av" src="img/rafael.webp" width="480" height="480" alt="Rafael Gruber Bernstein" loading="lazy">
@@ -1054,6 +1069,7 @@ body = f"""<div class="aurora" aria-hidden="true"><span class="b b1"></span><spa
   </section>
 
   <section class="final" id="contato" aria-labelledby="h-final">
+    <div class="hz" aria-hidden="true"><div class="sun"></div><div class="floor"></div></div>
     <div class="w">
       <div class="cta-card rv">
         <h2 id="h-final" {ti('fin_k')}>{tx('fin_k')}</h2>
