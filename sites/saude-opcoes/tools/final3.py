@@ -468,7 +468,7 @@ section{position:relative;padding-block:clamp(64px,8vw,104px)}
 /* fundador */
 .founder{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:center;border-radius:var(--r-lg);border:1px solid var(--glass-b);background:var(--glass);padding:clamp(24px,4vw,44px)}
 @media(max-width:700px){.founder{grid-template-columns:1fr}}
-.av{width:120px;height:120px;border-radius:50%;display:grid;place-items:center;font:300 2.6rem/1 var(--f-head);letter-spacing:-.03em;color:var(--accent);background:radial-gradient(circle at 30% 25%,var(--accent-soft),transparent 70%),var(--bg-2);border:1px solid var(--glass-b)}
+.av{width:clamp(120px,14vw,168px);height:auto;aspect-ratio:1;border-radius:50%;object-fit:cover;object-position:center 30%;background:#000;border:1px solid var(--glass-b);box-shadow:0 0 0 6px var(--glass),0 20px 50px -20px rgba(61,220,168,.35)}
 .founder h3{font-size:clamp(1.6rem,1.3rem + 1vw,2.2rem);font-weight:600}
 .founder .role{color:var(--accent);margin-top:6px;font-size:.95rem}
 .founder p.bio{margin-top:16px;max-width:62ch}
@@ -965,7 +965,7 @@ body = f"""<a class="skip" href="#conteudo" {ti('skip')}>{tx('skip')}</a>
   <section id="fundador" aria-labelledby="h-fd">
     <div class="w">
       <div class="founder rv">
-        <div class="av" aria-hidden="true">RG</div>
+        <img class="av" src="img/rafael.webp" width="480" height="480" alt="Rafael Gruber Bernstein" loading="lazy">
         <div><p class="lbl" {ti('fd_k')}>{tx('fd_k')}</p><h3 id="h-fd" style="margin-top:12px">Rafael Gruber Bernstein</h3><p class="role" {ti('fd_role')}>{tx('fd_role')}</p><p class="bio" {ti('fd_p')}>{tx('fd_p')}</p>
           <div class="chips"><span {ti('fd_c1')}>{tx('fd_c1')}</span><span {ti('fd_c2')}>{tx('fd_c2')}</span><span {ti('fd_c3')}>{tx('fd_c3')}</span></div></div>
       </div>

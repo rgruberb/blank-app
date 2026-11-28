@@ -1,0 +1,214 @@
+<title>Logos RG AI</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@500;700&family=Manrope:wght@400;500;700;800&display=swap">
+<style>
+/* Layout: prancha de comparação; 6 cartões iguais (símbolo grande + assinatura, ícones 64/32/16, versão 1 cor, fundo claro) e o logo atual como referência.
+   Cores da marca: grafite, verde-escuro e menta. A prancha segue o tema de quem vê; cada amostra tem as próprias cores fixas. */
+:root{--bg:#F3F5F4;--surface:#FFFFFF;--ink:#0C1210;--ink-2:#3A4540;--muted:#5D6A64;--rule:#DCE2DF;--accent:#0E7A5C;
+ --f-head:"Manrope",system-ui,sans-serif;--f-mono:"JetBrains Mono",ui-monospace,monospace;--f-serif:"Instrument Serif",Georgia,serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B0D0F;--surface:#13171A;--ink:#EEF2F0;--ink-2:#C3CCC8;--muted:#8E9A95;--rule:#252B2F;--accent:#3DDCA8;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0B0D0F;--surface:#13171A;--ink:#EEF2F0;--ink-2:#C3CCC8;--muted:#8E9A95;--rule:#252B2F;--accent:#3DDCA8;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink-2);font:400 15px/1.55 var(--f-head)}
+.w{max-width:1240px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 72px}
+h1,h2{color:var(--ink);margin:0;letter-spacing:-.02em}
+h1{font-size:clamp(1.8rem,1.3rem + 1.6vw,2.6rem);line-height:1.1}
+.lead{margin-top:12px;max-width:72ch}
+.rules{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px}
+.rules span{font:500 12px/1 var(--f-mono);padding:8px 10px;border-radius:999px;border:1px solid var(--rule);color:var(--ink)}
+.grid{margin-top:32px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media(max-width:920px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.card.cur{grid-column:1/-1}
+.hd{display:flex;justify-content:space-between;align-items:baseline;gap:8px 16px;flex-wrap:wrap;padding:18px 20px 0}
+.hd h2{font-size:1.15rem}
+.num{font:700 12px var(--f-mono);color:var(--accent)}
+.hero{margin:14px 20px 0;border-radius:14px;background:#07090B;color:#F2F5F4;--mint:#3DDCA8;display:flex;align-items:center;justify-content:center;gap:22px;min-height:190px;padding:24px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-30% -10% auto auto;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(61,220,168,.18),transparent 65%)}
+.hero .sym{width:84px;height:84px;position:relative}
+.word{font:800 2.2rem/1 var(--f-head);letter-spacing:-.03em;position:relative;white-space:nowrap}
+.word .ai{color:var(--mint)}
+.word.serif .ai{font-family:var(--f-serif);font-style:italic;font-weight:400;font-size:1.12em;letter-spacing:0}
+.word.mono{font-family:var(--f-mono);font-weight:700;letter-spacing:-.04em}
+.strip{display:grid;grid-template-columns:auto auto auto 1fr 1fr;gap:14px;align-items:center;padding:16px 20px}
+@media(max-width:560px){.strip{grid-template-columns:repeat(3,auto);}.strip .mono-v,.strip .light-v{grid-column:span 3}}
+.app{display:grid;place-items:center;border-radius:22%;background:#0F2A21;color:#F2F5F4;--mint:#3DDCA8}
+.app svg{width:62%;height:62%}
+.a64{width:64px;height:64px}.a32{width:32px;height:32px}.a16{width:16px;height:16px;border-radius:4px}
+.sz{display:grid;justify-items:center;gap:6px;font:500 11px var(--f-mono);color:var(--muted)}
+.mono-v,.light-v{display:flex;align-items:center;justify-content:center;gap:10px;height:72px;border-radius:12px;padding:0 12px}
+.mono-v{background:#FFFFFF;color:#000;--mint:#000;border:1px solid var(--rule)}
+.light-v{background:#F2F5F4;color:#0C1210;--mint:#0E7A5C;border:1px solid var(--rule)}
+.mono-v svg,.light-v svg{width:34px;height:34px;flex:none}
+.mono-v .word,.light-v .word{font-size:1.2rem}
+.lbl{font:500 10.5px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:0 20px}
+.info{padding:6px 20px 20px;display:grid;gap:8px;border-top:1px solid var(--rule);margin-top:auto}
+.info dl{margin:8px 0 0;display:grid;gap:6px}
+.info dl div{display:grid;grid-template-columns:6.5rem minmax(0,1fr);gap:10px}
+.info dt{font:500 11px/1.9 var(--f-mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.info dd{margin:0}
+.play{justify-self:start;margin-top:6px;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);font:700 13px var(--f-head);cursor:pointer}
+.play:hover{border-color:var(--accent)}
+.play:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.m{fill:var(--mint)}.ms{stroke:var(--mint)}
+/* movimentos (1 s cada, como manda a referência) */
+.go .stair rect{animation:snap .5s cubic-bezier(.34,1.56,.64,1) both}
+.go .stair rect:nth-child(2){animation-delay:.12s}.go .stair rect:nth-child(3){animation-delay:.24s}
+@keyframes snap{from{transform:translateY(10px);opacity:0}to{transform:none;opacity:1}}
+.draw path,.draw polyline{stroke-dasharray:120;stroke-dashoffset:0}
+.go .draw path,.go .draw polyline{animation:draw 1s cubic-bezier(.65,0,.35,1) both}
+.go .draw path:nth-child(2){animation-delay:.15s}
+@keyframes draw{from{stroke-dashoffset:120}to{stroke-dashoffset:0}}
+.go .nodes circle{animation:pop .4s cubic-bezier(.34,1.56,.64,1) both}
+.go .nodes circle:nth-child(1){animation-delay:.1s}.go .nodes circle:nth-child(2){animation-delay:.35s}.go .nodes circle:nth-child(3){animation-delay:.6s}.go .nodes circle:nth-child(4){animation-delay:.85s}
+@keyframes pop{from{transform:scale(0);opacity:0}to{transform:none;opacity:1}}
+.nodes circle,.pix rect,.stair rect{transform-box:fill-box;transform-origin:center}
+.go .chev{animation:slide .35s cubic-bezier(.22,1,.36,1) both}
+.go .cur-b{animation:blink 1s steps(1) 3}
+@keyframes slide{from{transform:translateX(-6px);opacity:0}to{transform:none;opacity:1}}
+@keyframes blink{50%{opacity:0}}
+.go .pix rect{animation:pop .45s cubic-bezier(.34,1.56,.64,1) both;animation-delay:calc(var(--i) * 40ms)}
+.snapg>*,.growc{transform-box:fill-box;transform-origin:center}
+.go .snapg>*{animation:snap .5s cubic-bezier(.34,1.56,.64,1) both}
+.go .snapg>*:nth-child(2){animation-delay:.1s}.go .snapg>*:nth-child(3){animation-delay:.2s}.go .snapg>*:nth-child(4){animation-delay:.3s}
+.go .growc{animation:pop .5s cubic-bezier(.34,1.56,.64,1) .45s both}
+.word.wide{font-weight:500;letter-spacing:.14em;font-size:1.9rem}
+.mono-v .word.wide,.light-v .word.wide{font-size:1.05rem}
+@media(prefers-reduced-motion:reduce){.go *{animation:none!important}}
+.sep{grid-column:1/-1;font-size:1.05rem;margin-top:8px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.card.saved{border-color:var(--accent)}
+.tag-s{display:inline-block;vertical-align:middle;margin-left:8px;font:700 10.5px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;padding:5px 8px;border-radius:999px;background:var(--accent);color:var(--bg)}
+.foot{margin-top:28px;font-size:13px;color:var(--muted);max-width:80ch}
+</style>
+
+<div class="w">
+  <h1>Novo logo da RG AI</h1>
+  <p class="lead">As propostas 7 e 9 estão salvas no topo. Abaixo, 6 novas (13 a 18): três variações na linha das salvas e três ideias novas. Cada proposta tem uma ideia só e aparece grande, como ícone de app (64, 32 e 16px), em uma cor e sobre fundo claro. "Reproduzir movimento" mostra a animação sugerida para a marca, de 1 s, como pede a referência de logo das skills. O logo atual está no fim, para comparar.</p>
+  <div class="rules"><span>1 ideia</span><span>legível a 16px</span><span>funciona em 1 cor</span><span>claro e escuro</span><span>movimento: calmo, ágil ou amigável</span></div>
+  <div class="grid" id="grid"></div>
+  <p class="foot">Nenhuma das propostas usa degradê, para não depender de tendência nem de cor. O menta (#3DDCA8 no escuro, #0E7A5C no claro) aparece em um único detalhe de cada símbolo. Antes de registrar no INPI, é preciso fazer uma busca de anterioridade da marca escolhida.</p>
+</div>
+
+<script>
+var S={
+ stair:'<g class="stair"><rect x="3" y="21" width="8" height="8" rx="2" fill="currentColor"/><rect x="12" y="12" width="8" height="8" rx="2" fill="currentColor"/><rect class="m" x="21" y="3" width="8" height="8" rx="2"/></g>',
+ mono:'<g class="draw" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path stroke="currentColor" d="M4 27V5h6.5a5.5 5.5 0 0 1 0 11H4M10 16l5.5 11"/><path stroke="currentColor" d="M29 9.5A8 8 0 1 0 29 22.5V16h-5"/></g><circle class="m" cx="24" cy="16" r="2.6"/>',
+ graph:'<g class="draw" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="5,25 13,16 19,20 27,7"/></g><g class="nodes"><circle cx="5" cy="25" r="3" fill="currentColor"/><circle cx="13" cy="16" r="3" fill="currentColor"/><circle cx="19" cy="20" r="3" fill="currentColor"/><circle class="m" cx="27" cy="7" r="4"/></g>',
+ prompt:'<path class="chev" d="M5 9l8 7-8 7" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><rect class="m cur-b" x="16" y="20" width="11" height="3.6" rx="1.4"/>',
+ pix:(function(){var g=['01110','10000','10011','10001','01110'],o='<g class="pix">',k=0;for(var r=0;r<5;r++)for(var c=0;c<5;c++)if(g[r][c]==='1'){var mint=(r===2&&c===4);o+='<rect style="--i:'+(k++)+'" '+(mint?'class="m" ':'fill="currentColor" ')+'x="'+(1.5+c*6)+'" y="'+(1.5+r*6)+'" width="5" height="5" rx="1.2"/>'}return o+'</g>'})(),
+ stream:'<g class="draw" fill="none" stroke-width="2.8" stroke-linecap="round"><path stroke="currentColor" d="M3 24C10 24 12 11 18 11s8 6 11-5"/><path class="ms" d="M3 29C11 29 14 16 20 16s7 5 9-3"/></g>',
+ cur:'<path d="M6 19V15h4v4M10 15v-4h4v4M14 11V7h4v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" transform="translate(-1 1) scale(1.18)"/>',
+ braces:'<g class="snapg" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5c-3 0-4 1.5-4 4v3c0 2-1 3.5-3 4 2 .5 3 2 3 4v3c0 2.5 1 4 4 4"/><path d="M21 5c3 0 4 1.5 4 4v3c0 2 1 3.5 3 4-2 .5-3 2-3 4v3c0 2.5-1 4-4 4"/></g><circle class="m growc" cx="16" cy="16" r="3.4"/>',
+ cycle:'<g class="draw" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M21.5 6.47A11 11 0 1 0 27 16"/></g><circle class="m growc" cx="27" cy="16" r="3.4"/>',
+ layers:'<g class="snapg"><path class="m" d="M16 4l12 6-12 6-12-6z"/><path d="M4 16l12 6 12-6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 22l12 6 12-6" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></g>',
+ crop:'<g class="snapg" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11V4h7"/><path d="M21 4h7v7"/><path d="M28 21v7h-7"/><path d="M11 28H4v-7"/></g><rect class="m growc" x="11" y="11" width="10" height="10" rx="2"/>',
+ check:'<g class="draw" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,17 11,24 25,9"/></g><path class="m growc" d="M28 5.5l-1.2 9.4-8.2-8.2z"/>',
+ combo:'<g class="snapg" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5c-3 0-4 1.5-4 4v3c0 2-1 3.5-3 4 2 .5 3 2 3 4v3c0 2.5 1 4 4 4"/><path d="M22 5c3 0 4 1.5 4 4v3c0 2 1 3.5 3 4-2 .5-3 2-3 4v3c0 2.5-1 4-4 4"/></g><rect class="m growc" x="11.5" y="10.5" width="9" height="4" rx="2"/><rect class="growc" x="11.5" y="17.5" width="9" height="4" rx="2" fill="currentColor"/>',
+ cube:'<g class="snapg"><path class="m" d="M16 4.2L25.8 9.2 16 14.2 6.2 9.2z"/><path fill="currentColor" d="M5 10.6l9.9 5.2v11.8L5 22.4z"/><path fill="currentColor" opacity=".6" d="M27 10.6l-9.9 5.2v11.8l9.9-5.2z"/></g>',
+ window:'<g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"><rect x="3" y="5" width="26" height="22" rx="4.5"/><path d="M3 11.5h26"/></g><rect class="m growc" x="8" y="15.5" width="8.5" height="7" rx="1.6"/><g class="snapg"><rect x="19" y="15.5" width="5.5" height="2.6" rx="1.3" fill="currentColor"/><rect x="19" y="19.9" width="5.5" height="2.6" rx="1.3" fill="currentColor"/></g>',
+ neural:'<g class="draw" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".55"><path d="M6 9L16 6M6 9L16 16M6 9L16 26M6 23L16 6M6 23L16 16M6 23L16 26"/><path d="M16 6L26 16M16 16L26 16M16 26L26 16"/></g><g class="nodes"><circle cx="6" cy="9" r="2.6" fill="currentColor"/><circle cx="6" cy="23" r="2.6" fill="currentColor"/><circle cx="16" cy="6" r="2.6" fill="currentColor"/><circle cx="16" cy="16" r="2.6" fill="currentColor"/><circle cx="16" cy="26" r="2.6" fill="currentColor"/><circle class="m" cx="26" cy="16" r="3.8"/></g>',
+ rblock:'<path fill="currentColor" fill-rule="evenodd" d="M5 4h11a8 8 0 0 1 0 16h-5v8H5zM11 9.5h4.5a2.5 2.5 0 0 1 0 5H11z"/><path class="m growc" d="M15 21h6.2l5.3 7h-6.2z"/>',
+ cards:'<g class="snapg"><rect x="13" y="3" width="16" height="16" rx="3.5" fill="none" stroke="currentColor" stroke-width="2.4" opacity=".5"/><rect x="8" y="8" width="16" height="16" rx="3.5" fill="none" stroke="currentColor" stroke-width="2.4"/><rect class="m" x="3" y="13" width="16" height="16" rx="3.5"/></g>',
+ gauge:'<path d="M5.6 24A12 12 0 1 1 26.4 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" opacity=".35"/><g class="draw" fill="none" stroke-width="2.6" stroke-linecap="round"><path class="ms" d="M5.6 24A12 12 0 0 1 25.83 11.12"/></g><path d="M16 18l6.5-4.6" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="18" r="2.6" fill="currentColor"/>'
+};
+var L=[
+ {k:'stair',n:'Degraus',t:'Evolução do logo atual',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'Três degraus sólidos: requisito, protótipo e produção. O último, em menta, é o app no ar.',
+  why:'Mantém a memória do logo atual, mas fica mais limpo e legível a 16px (blocos sólidos em vez de contorno fino).',
+  mov:'Ágil: os degraus se encaixam um após o outro.'},
+ {k:'mono',n:'Monograma RG',t:'Letras em traço único',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'R e G desenhados com o mesmo traço contínuo; o ponto menta no braço do G é a IA.',
+  why:'Tem a cara de assinatura pessoal do fundador e de consultoria, na linha do site do seu tio, mas com desenho próprio.',
+  mov:'Calmo: as letras são desenhadas em uma linha lenta.'},
+ {k:'graph',n:'Gráfico de dados',t:'Crédito e dados',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'Uma linha de dados subindo por quatro pontos; o último, maior e em menta, é o resultado.',
+  why:'Fala direto com crédito e finanças (a especialidade) e com dados. Fácil de entender em 3 segundos.',
+  mov:'Calmo: a linha percorre os pontos, que acendem um a um.'},
+ {k:'prompt',n:'Prompt',t:'Código e IA',w:'rg<span class="ai">.ai</span>',wc:'mono',
+  idea:'Um prompt de terminal (>_) com o cursor em menta: o app sendo construído.',
+  why:'Comunica "construímos com código e IA" e combina com a fonte mono já usada nos rótulos do site.',
+  mov:'Ágil: o sinal desliza e o cursor pisca três vezes.'},
+ {k:'pix',n:'G em pixels',t:'Geração por IA',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'Um G montado em uma grade de pixels; o pixel menta fecha a letra.',
+  why:'Conversa com a animação de "tela sendo gerada" do site e funciona muito bem como ícone pequeno.',
+  mov:'Amigável: os pixels surgem do primeiro ao último.'},
+ {k:'stream',n:'Fluxo',t:'Luz do site',w:'RG <span class="ai">ai</span>',wc:'serif',
+  idea:'Duas fitas que sobem lado a lado, como o fluxo de luz do hero do site.',
+  why:'Une o logo à identidade do site e à palavra em serifa itálica dos títulos. É o mais abstrato.',
+  mov:'Calmo: as fitas são desenhadas da esquerda para a direita.'},
+ {k:'braces',n:'Chaves',t:'Código com um núcleo',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'Chaves de código { } guardando um ponto menta: o dado ou a inteligência no centro do app.',
+  why:'Lê como "software" na hora e tem um desenho simétrico, fácil de reconhecer. Funciona bem como ícone redondo.',
+  mov:'Amigável: as chaves se abrem e o ponto cresce no centro.'},
+ {k:'cycle',n:'Ciclo contínuo',t:'Suporte e retreino',w:'RG <span class="ai">AI</span>',wc:'wide',
+  idea:'Um círculo quase fechado que termina num ponto menta: o app que continua sendo cuidado depois do deploy.',
+  why:'Traduz o diferencial de operação contínua e retreino diário. A assinatura em caixa alta espaçada dá ar mais institucional.',
+  mov:'Calmo: o círculo é desenhado e o ponto acende no fim.'},
+ {k:'layers',n:'Camadas',t:'Dados, modelo e app',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'Três camadas empilhadas: dados e modelo embaixo, o app em menta no topo.',
+  why:'Explica o que a RG AI faz (constrói a pilha inteira) e é muito legível pequeno.',
+  mov:'Ágil: as camadas se empilham de baixo para cima.'},
+ {k:'crop',n:'Marcas de corte',t:'Sob medida',w:'RG <span class="ai">AI</span>',wc:'wide',
+  idea:'Quatro cantos de enquadramento em volta de um quadrado menta: algo feito na medida exata.',
+  why:'Comunica "sob medida" sem palavras e lembra as guias da animação de geração do site.',
+  mov:'Ágil: os cantos se encaixam e o quadrado aparece no centro.'},
+ {k:'check',n:'Entrega aprovada',t:'Do requisito à produção',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'Um sinal de aprovado cujo traço final sobe e vira uma seta menta: o app aprovado e em produção.',
+  why:'Fala de confiança e de resultado ao mesmo tempo, que é o que o comitê de crédito e o cliente querem ver.',
+  mov:'Calmo: o traço é desenhado e a ponta da seta aparece.'},
+ {k:'gauge',n:'Medidor de score',t:'Crédito e risco',w:'RG <span class="ai">AI</span>',wc:'mono',
+  idea:'Um medidor com o ponteiro na faixa alta e o arco percorrido em menta: score e leitura de risco.',
+  why:'É o mais ligado à especialidade (crédito, FIDC, risco). Pode limitar se a marca crescer para outros segmentos.',
+  mov:'Calmo: o arco se preenche até o ponteiro.'},
+ {k:'combo',n:'Chaves com camadas',t:'Mistura da 7 com a 9',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'As chaves de código guardando duas camadas: a de cima, em menta, é o app; a de baixo, os dados.',
+  why:'Junta as duas favoritas: código (7) e pilha completa (9). Continua simples o bastante para 16px.',
+  mov:'Amigável: as chaves se abrem e as camadas surgem dentro.'},
+ {k:'cube',n:'Bloco',t:'Camadas em 3D',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'Um cubo isométrico com a face de cima em menta: um bloco sólido, construído sob medida.',
+  why:'Evolução da 9 com volume. Passa solidez, como "a peça que faltava" na operação do cliente.',
+  mov:'Ágil: as três faces se encaixam e formam o bloco.'},
+ {k:'cards',n:'Pilha de telas',t:'Camadas como telas',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'Três telas empilhadas em diagonal; a da frente, em menta, é o app pronto.',
+  why:'Outra leitura da 9: as camadas viram as telas dos apps, que é o que o site mostra. Muito legível pequeno.',
+  mov:'Ágil: as telas se abrem em leque, como no hero do site.'},
+ {k:'window',n:'Janela de app',t:'O produto',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'Uma janela de aplicativo com um bloco menta de conteúdo: o app em si.',
+  why:'É o mais literal: qualquer pessoa entende "fazemos aplicativos". Combina com a moldura de navegador do site.',
+  mov:'Amigável: o conteúdo aparece dentro da janela.'},
+ {k:'neural',n:'Rede',t:'Inteligência artificial',w:'RG <span class="ai">AI</span>',wc:'wide',
+  idea:'Uma pequena rede neural (2, 3 e 1 nós) cujo nó de saída, em menta, é a resposta.',
+  why:'É o mais direto para "IA". A 16px as linhas finas somem, mas os nós continuam legíveis.',
+  mov:'Calmo: o sinal percorre as conexões e acende a saída.'},
+ {k:'rblock',n:'R em bloco',t:'Letra da marca',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'Um R sólido e geométrico cuja perna, em menta e destacada, avança: o passo do requisito à produção.',
+  why:'Uma letra própria funciona como assinatura e fica forte em qualquer tamanho. É a mais "marca registrada".',
+  mov:'Ágil: a perna do R desliza e se encaixa.'}
+];
+function svg(k){return '<svg class="sym" viewBox="0 0 32 32" aria-hidden="true">'+S[k]+'</svg>'}
+var grid=document.getElementById('grid');
+L.forEach(function(o,i){o.num=i+1});
+var SAVED=[7,9],SHOW=L.filter(function(o){return SAVED.indexOf(o.num)>-1||o.num>12});
+function sep(t){var h=document.createElement('h2');h.className='sep';h.textContent=t;grid.appendChild(h)}
+sep('Salvas');
+SHOW.forEach(function(o,i){if(i===SAVED.length)sep('Novas propostas');var el=document.createElement('article');el.className='card'+(SAVED.indexOf(o.num)>-1?' saved':'');
+ el.innerHTML='<div class="hd"><h2>'+o.n+(SAVED.indexOf(o.num)>-1?' <span class="tag-s">Salva</span>':'')+'</h2><span class="num">'+o.num+' · '+o.t+'</span></div>'+
+ '<div class="hero" role="img" aria-label="Proposta '+o.num+', '+o.n+', sobre fundo escuro">'+svg(o.k)+'<span class="word '+o.wc+'">'+o.w+'</span></div>'+
+ '<div class="strip"><div class="sz"><div class="app a64">'+svg(o.k)+'</div>64</div><div class="sz"><div class="app a32">'+svg(o.k)+'</div>32</div><div class="sz"><div class="app a16">'+svg(o.k)+'</div>16</div>'+
+ '<div class="mono-v" title="1 cor">'+svg(o.k)+'<span class="word '+o.wc+'">'+o.w+'</span></div><div class="light-v" title="Fundo claro">'+svg(o.k)+'<span class="word '+o.wc+'">'+o.w+'</span></div></div>'+
+ '<p class="lbl">Escuro · ícones 64/32/16 · 1 cor · claro</p>'+
+ '<div class="info"><dl><div><dt>Ideia</dt><dd>'+o.idea+'</dd></div><div><dt>Por quê</dt><dd>'+o.why+'</dd></div><div><dt>Movimento</dt><dd>'+o.mov+'</dd></div></dl>'+
+ '<button class="play" type="button">Reproduzir movimento</button></div>';
+ grid.appendChild(el);
+ var hero=el.querySelector('.hero');
+ el.querySelector('.play').addEventListener('click',function(){hero.classList.remove('go');void hero.offsetWidth;hero.classList.add('go')});
+ setTimeout(function(){hero.classList.add('go')},300+i*250);
+});
+var c=document.createElement('article');c.className='card cur';
+c.innerHTML='<div class="hd"><h2>Logo atual</h2><span class="num">Referência</span></div><div class="hero" role="img" aria-label="Logo atual">'+
+ '<svg class="sym" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#0F2A21"/><path d="M8.5 22.5v-4.5h5v4.5M13.5 18v-5h5v5M18.5 13V8h5v5" fill="none" stroke="#3DDCA8" stroke-width="2" stroke-linejoin="round"/></svg><span class="word">RG AI</span></div>'+
+ '<div class="info" style="border-top:0"><p>Degraus em contorno fino dentro de um quadrado verde-escuro. O traço fino perde força em tamanhos pequenos, como o ícone da aba do navegador, e o desenho depende do quadrado de fundo.</p></div>';
+grid.appendChild(c);
+</script>
