@@ -9,31 +9,28 @@ E = lambda s: html.escape(s, quote=True)
 
 T = {
  "title": ("RG AI · Apps sob medida", "RG AI · Custom apps"),
- "desc": ("Apps web de dados e IA sob medida, do requisito à produção. Três em produção desde março de 2026. Especialidade em crédito e finanças.",
-          "Custom data and AI web apps, from requirements to production. Three in production since March 2026. Specialized in credit and finance."),
+ "desc": ("Desenvolvimento de aplicações web sob medida com dados e inteligência artificial, do levantamento de requisitos à produção. Especialidade em crédito e finanças.", "Custom web applications built with data and artificial intelligence, from requirements gathering to production. Specialized in credit and finance."),
  "skip": ("Pular para o conteúdo", "Skip to content"),
- "nav_proj": ("Projetos", "Projects"), "nav_como": ("Como funciona", "How it works"), "nav_planos": ("Planos", "Plans"), "nav_faq": ("Dúvidas", "FAQ"),
- "cta": ("Agendar uma conversa", "Book a call"),
- "see": ("Ver os projetos", "See the projects"),
- "badge": ("3 apps em produção desde mar/2026", "3 apps in production since Mar 2026"),
- "h1a": ("Apps sob medida,", "Custom apps,"),
+ "nav_proj": ("Projetos", "Projects"), "nav_como": ("Metodologia", "Methodology"), "nav_planos": ("Planos", "Plans"), "nav_faq": ("Perguntas frequentes", "FAQ"),
+ "cta": ("Agendar uma reunião", "Schedule a meeting"),
+ "see": ("Conhecer os projetos", "View the projects"),
+ "badge": ("3 aplicações em produção desde mar/2026", "3 applications in production since Mar 2026"),
+ "h1a": ("Aplicações sob medida,", "Custom applications,"),
  "h1b": ("do requisito à", "from requirements to"),
  "h1c": ("produção.", "production."),
- "sub": ("Construímos o app que a sua operação precisa, com dados e IA, e cuidamos dele depois do deploy.",
-         "We build the app your operation needs, with data and AI, and look after it once it's live."),
+ "sub": ("Desenvolvemos aplicações sob medida com dados e inteligência artificial, com suporte contínuo após a implantação.", "We develop custom applications with data and artificial intelligence, with ongoing support after deployment."),
  "fl1": ("Em produção", "In production"), "fl1b": ("Retreino diário", "Daily retraining"),
  "fl2": ("Produtividade", "Productivity"),
  "frame_alt": ("RiskAI FIDC: resumo da carteira com grupos por faixa de risco, dados fictícios.", "RiskAI FIDC: portfolio summary with groups by risk band, fictional data."),
- "m1": ("apps em produção", "apps in production"),
- "m2": ("de produtividade em prospecção e gestão de carteira", "productivity in prospecting and portfolio management"),
- "m3": ("telas reais nesta página, com dados fictícios", "real screens on this page, with fictional data"),
- "m4": ("no ar e em uso diário desde", "live and in daily use since"),
+ "m1": ("aplicações em produção", "applications in production"),
+ "m2": ("de ganho de produtividade em prospecção e gestão de carteira", "productivity gain in prospecting and portfolio management"),
+ "m3": ("telas reais apresentadas, com dados fictícios", "real screens shown, with fictional data"),
+ "m4": ("em produção e em uso diário desde", "in production and in daily use since"),
  "m4v": ("mar/2026", "Mar 2026"),
  "proj_k": ("Projetos", "Projects"),
- "proj_h": ("Apps que já estão rodando", "Apps that are already running"),
- "proj_p": ("Escolha um projeto e navegue pelas telas. Tudo com dados fictícios; nenhum cliente é identificado.",
-            "Pick a project and browse its screens. All with fictional data; no client is identified."),
- "lb_hint": ("Clique na tela para ampliar", "Click the screen to enlarge"),
+ "proj_h": ("Projetos desenvolvidos", "Developed projects"),
+ "proj_p": ("Selecione um projeto para visualizar as telas. Todos os dados são fictícios e nenhum cliente é identificado.", "Select a project to view its screens. All data is fictional and no client is identified."),
+ "lb_hint": ("Clique na tela para ampliá-la", "Click the screen to enlarge it"),
  "dt_prob": ("Problema", "Problem"), "dt_what": ("O que faz", "What it does"), "dt_how": ("Como", "How"), "dt_stat": ("Situação", "Status"), "dt_for": ("Para quem", "For whom"),
  # RiskAI
  "ra_tag": ("Em produção · comitê de crédito", "In production · credit committee"),
@@ -88,24 +85,23 @@ T = {
  "wn_a1": ("Painel da agência e app do médico lado a lado.", "Agency dashboard and doctor's app side by side."),
  "wn_a2": ("App do médico no celular, tela Hoje.", "Doctor's app on the phone, Today screen."),
  # segmentos
- "seg_k": ("Para quem", "Who it's for"), "seg_h": ("Onde já conhecemos o terreno", "Where we already know the ground"),
+ "seg_k": ("Segmentos", "Industries"), "seg_h": ("Segmentos de atuação", "Industries we serve"),
  "g1k": ("Especialidade", "Specialty"), "g1h": ("Crédito e finanças", "Credit and finance"),
  "g1p": ("Risco, prospecção, carteira e relatórios para fundos de recebíveis, financeiras e times comerciais.", "Risk, prospecting, portfolio and reporting for receivables funds, lenders and sales teams."),
  "g2k": ("Também", "Also"), "g2h": ("Saúde", "Healthcare"),
  "g2p": ("Back-office de clínicas: autorizações, guias de convênio, agenda e fila, com dado de saúde tratado como sensível.", "Clinic back-office: authorizations, insurance claims, scheduling and queues, with health data treated as sensitive."),
  "g3k": ("Também", "Also"), "g3h": ("Agências de marca pessoal", "Personal-brand agencies"),
- "g3p": ("Produção, aprovação e mensagens entre agência e cliente no mesmo app.", "Production, approvals and messages between agency and client in one app."),
+ "g3p": ("Gestão de produção, aprovações e mensagens entre a agência e o cliente em uma única aplicação.", "Production management, approvals and messaging between agency and client in a single application."),
  # como funciona
- "como_k": ("Como funciona", "How it works"), "como_h": ("Da conversa ao app no ar, em quatro etapas", "From first call to a live app, in four steps"),
- "st1h": ("Conversa", "Call"), "st1": ("Você conta onde o processo trava hoje. Saímos com o problema escrito.", "You tell us where the process gets stuck. We leave with the problem written down."),
- "st2h": ("Protótipo", "Prototype"), "st2": ("Você clica nas telas principais antes da construção, com estimativa de prazo e custo.", "You click through the main screens before we build, with a time and cost estimate."),
- "st3h": ("Construção", "Build"), "st3": ("Ciclos curtos. A cada entrega, a sua equipe testa e opina.", "Short cycles. At each delivery, your team tests and gives feedback."),
- "st4h": ("Operação", "Operation"), "st4": ("Colocamos no ar, treinamos a equipe e cuidamos de hospedagem, backups e ajustes.", "We go live, train your team and take care of hosting, backups and adjustments."),
+ "como_k": ("Metodologia", "Methodology"), "como_h": ("Metodologia em quatro etapas", "A four-step methodology"),
+ "st1h": ("Levantamento", "Discovery"), "st1": ("Levantamento dos processos atuais e definição formal do problema.", "Review of current processes and formal definition of the problem."),
+ "st2h": ("Protótipo", "Prototype"), "st2": ("Protótipo navegável das telas principais, com estimativa de prazo e custo.", "Clickable prototype of the main screens, with a time and cost estimate."),
+ "st3h": ("Desenvolvimento", "Development"), "st3": ("Desenvolvimento em ciclos curtos, com validação da equipe a cada entrega.", "Development in short cycles, validated by your team at each delivery."),
+ "st4h": ("Implantação e suporte", "Deployment and support"), "st4": ("Implantação, treinamento da equipe e suporte contínuo de hospedagem, backups e ajustes.", "Deployment, team training and ongoing support for hosting, backups and adjustments."),
  # fundador
- "fd_k": ("Quem constrói", "Who builds it"),
+ "fd_k": ("Fundador", "Founder"),
  "fd_role": ("Fundador · Product Owner · Engenheiro mecânico (PUC-Rio e Technion)", "Founder · Product Owner · Mechanical engineer (PUC-Rio and Technion)"),
- "fd_p": ("Há mais de três anos levo produtos de dados e IA do conceito à produção, dois deles de visão computacional na Radix. Desde março de 2026, a RG AI constrói apps sob medida.",
-          "For more than three years I've taken data and AI products from concept to production, two of them computer-vision products at Radix. Since March 2026, RG AI has built custom apps."),
+ "fd_p": ("Mais de três anos de experiência conduzindo produtos de dados e inteligência artificial do conceito à produção, incluindo dois produtos de visão computacional na Radix. Desde março de 2026, à frente da RG AI.", "More than three years of experience taking data and artificial intelligence products from concept to production, including two computer-vision products at Radix. Leading RG AI since March 2026."),
  "fd_c1": ("CSPO", "CSPO"), "fd_c2": ("Inglês fluente", "Fluent English"), "fd_c3": ("Claude Code", "Claude Code"),
  # planos
  "pl_k": ("Preços e planos", "Pricing and plans"), "pl_h": ("Comece pequeno, cresça com o app", "Start small, grow with the app"),
@@ -119,28 +115,25 @@ T = {
  "pl_note": ("Os valores dependem do escopo e são enviados por escrito depois do Diagnóstico. Sem cobrança automática e sem fidelidade escondida.",
              "Prices depend on scope and are sent in writing after the Assessment. No automatic charges and no hidden lock-in."),
  # faq
- "faq_k": ("Dúvidas", "FAQ"), "faq_h": ("Perguntas frequentes", "Frequently asked questions"),
- "q1": ("Que tipo de app vocês fazem?", "What kind of apps do you build?"),
- "a1": ("Aplicações web de dados e IA sob medida: painéis de risco, prospecção e CRM, gestão de carteira, agenda e operação. A especialidade é crédito e finanças; também atendemos saúde e agências de marca pessoal.",
-        "Custom data and AI web apps: risk dashboards, prospecting and CRM, portfolio management, scheduling and operations. Our specialty is credit and finance; we also serve healthcare and personal-brand agencies."),
+ "faq_k": ("Perguntas frequentes", "FAQ"), "faq_h": ("Perguntas frequentes", "Frequently asked questions"),
+ "q1": ("Que tipo de aplicação a RG AI desenvolve?", "What kind of applications does RG AI develop?"),
+ "a1": ("Aplicações web sob medida com dados e inteligência artificial: painéis de risco, prospecção e CRM, gestão de carteira, agenda e operação. A especialidade é crédito e finanças, com atuação também em saúde e em agências de marca pessoal.", "Custom web applications with data and artificial intelligence: risk dashboards, prospecting and CRM, portfolio management, scheduling and operations. Our specialty is credit and finance, and we also serve healthcare and personal-brand agencies."),
  "q2": ("Quanto custa?", "How much does it cost?"),
  "a2": ("Depende do escopo. Depois da primeira conversa, enviamos prazo e valor por escrito.", "It depends on scope. After our first call, we send the timeline and price in writing."),
  "q3": ("Quanto tempo leva?", "How long does it take?"),
  "a3": ("Depende do tamanho do app. Você recebe a estimativa junto com o protótipo, antes de decidir construir.", "It depends on the size of the app. You get the estimate with the prototype, before deciding to build."),
- "q4": ("Como vocês usam IA?", "How do you use AI?"),
- "a4": ("Quando ela ajuda. Comparamos modelos por acurácia, custo e desempenho, escrevemos o critério de aprovação antes de ver o resultado, e um modelo que não passa não vai para a tela.",
-        "Where it helps. We compare models on accuracy, cost and performance, write the approval criterion before seeing results, and a model that fails doesn't reach the screen."),
- "q5": ("Como vocês cuidam dos dados?", "How do you handle data?"),
- "a5": ("Acesso por papéis, senhas com hash, conexão criptografada, backups e monitoramento. Em saúde, todo dado clínico é tratado como sensível, como manda a LGPD.",
-        "Role-based access, hashed passwords, encrypted connections, backups and monitoring. In healthcare, all clinical data is treated as sensitive, as Brazil's LGPD requires."),
- "q6": ("Funciona no celular?", "Does it work on phones?"),
- "a6": ("Sim. Os apps são web e funcionam no navegador do computador e do celular, sem instalar nada.", "Yes. Our apps run in the browser on desktop and phone, with nothing to install."),
- "q7": ("Vocês registram a marca do app?", "Do you register the app's brand?"),
- "a7": ("Sim. Registramos a marca do seu app no INPI.", "Yes. We register your app's brand with the INPI, Brazil's trademark office."),
- "q8": ("Vocês cuidam do app depois de pronto?", "Do you look after the app once it's live?"),
- "a8": ("Sim. Cuidamos de hospedagem, backups, monitoramento, atualizações de segurança e ajustes, todo mês.", "Yes. We take care of hosting, backups, monitoring, security updates and adjustments, every month."),
- "q9": ("Dá para integrar com o que já usamos?", "Can it integrate with what we already use?"),
- "a9": ("Sim. O app pode ler planilhas e exportações do sistema atual ou conversar com ele por API.", "Yes. The app can read spreadsheets and exports from your current system or talk to it through an API."),
+ "q4": ("Como a inteligência artificial é utilizada?", "How is artificial intelligence used?"),
+ "a4": ("Sempre que agrega valor ao processo. Os modelos são comparados por acurácia, custo e desempenho, e o critério de aprovação é definido antes da avaliação dos resultados. Modelos que não atingem o critério não são publicados.", "Wherever it adds value to the process. Models are compared on accuracy, cost and performance, and the approval criterion is set before results are evaluated. Models that do not meet the criterion are not published."),
+ "q5": ("Como os dados são protegidos?", "How is data protected?"),
+ "a5": ("Controle de acesso por perfil, senhas armazenadas com hash, conexões criptografadas, backups e monitoramento. Em saúde, todo dado clínico é tratado como dado sensível, conforme a LGPD.", "Role-based access control, hashed passwords, encrypted connections, backups and monitoring. In healthcare, all clinical data is treated as sensitive data, in accordance with Brazil's LGPD."),
+ "q6": ("As aplicações funcionam em dispositivos móveis?", "Do the applications work on mobile devices?"),
+ "a6": ("Sim. As aplicações são web e funcionam no navegador do computador e do celular, sem necessidade de instalação.", "Yes. The applications are web-based and run in the browser on desktop and mobile, with no installation required."),
+ "q7": ("A RG AI realiza o registro da marca?", "Does RG AI register the brand?"),
+ "a7": ("Sim. Realizamos o registro da marca da aplicação no INPI.", "Yes. We register the application's brand with the INPI, Brazil's trademark office."),
+ "q8": ("Há suporte após a implantação?", "Is there support after deployment?"),
+ "a8": ("Sim. O suporte contínuo inclui hospedagem, backups, monitoramento, atualizações de segurança e ajustes.", "Yes. Ongoing support includes hosting, backups, monitoring, security updates and adjustments."),
+ "q9": ("É possível integrar com os sistemas já utilizados?", "Can it integrate with existing systems?"),
+ "a9": ("Sim. A aplicação pode ler planilhas e exportações do sistema atual ou integrar-se a ele por meio de API.", "Yes. The application can read spreadsheets and exports from your current system or integrate with it through an API."),
  # final
  "in_k": ("Por dentro", "Inside"),
  "in_h1": ("Por dentro de um app", "Inside an app"), "in_h2": ("em produção", "in production"),
@@ -177,7 +170,7 @@ T = {
  "fin_p": ("Mande um e-mail contando onde a sua operação trava. Respondemos com um horário para conversar.", "Email us about where your operation gets stuck. We'll reply with a time to talk."),
  "copy": ("Copiar e-mail", "Copy email"),
  "foot1": ("RG AI Ltda · Rafael Gruber Bernstein", "RG AI Ltda · Rafael Gruber Bernstein"),
- "foot2": ("Telas de demonstração com dados fictícios. Sem promessa de resultado.", "Demo screens with fictional data. No promised results."),
+ "foot2": ("Telas de demonstração com dados fictícios.", "Demo screens with fictional data."),
 }
 UI = {"pt": {"copied": "E-mail copiado", "sel": "E-mail selecionado. Use Ctrl+C ou Cmd+C.", "toLight": "Mudar para o tema claro", "toDark": "Mudar para o tema escuro", "lang": "Idioma", "close": "Fechar", "zoom": "Ampliar tela", "screens": "Telas", "projects": "Projetos", "pause": "Pausar animações", "play": "Retomar animações"},
       "en": {"copied": "Email copied", "sel": "Email selected. Press Ctrl+C or Cmd+C.", "toLight": "Switch to light theme", "toDark": "Switch to dark theme", "lang": "Language", "close": "Close", "zoom": "Enlarge screen", "screens": "Screens", "projects": "Projects", "pause": "Pause animations", "play": "Resume animations"}}
@@ -360,7 +353,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .fB{right:-18px;top:28%;animation:bob 7s var(--ease-io) -2s infinite}
 @keyframes bob{50%{transform:translateY(-10px)}}
 .hero-visual{position:relative}
-@media(min-width:1100px){.hero .scene{width:124%}.fB{right:-22%}}
+@media(min-width:1100px){.hero .scene{width:calc(100% + min(24%, max(8px, (100vw - 1240px) / 2 + 12px)))}.fB{right:-4%}}
 @media(max-width:980px){.fA{left:8px}.fB{right:8px}}
 @media(max-width:560px){.float{display:none}}
 
@@ -458,7 +451,12 @@ section{position:relative;padding-block:clamp(64px,8vw,104px)}
 /* etapas com trilho */
 .steps{position:relative;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
 .steps .rail{position:absolute;left:0;right:0;top:27px;height:2px;background:var(--rule);overflow:hidden}
-.steps .rail i{display:block;height:100%;background:linear-gradient(90deg,var(--accent-2),var(--accent));transform-origin:left;transform:scaleX(var(--p,1))}
+.steps .rail i{display:block;height:100%;background:linear-gradient(90deg,var(--accent-2),var(--accent));transform-origin:left;transform:scaleX(var(--p,.75));transition:transform .8s var(--ease)}
+.steps li.on .num{box-shadow:0 0 0 6px var(--accent-soft),0 0 28px -6px var(--accent)}
+.steps li.cur .num{animation:lit .9s var(--ease)}
+@keyframes lit{40%{transform:scale(1.14)}100%{transform:none}}
+.steps li h3,.steps li p{transition:opacity .45s var(--ease)}
+.js .steps li:not(.on) h3,.js .steps li:not(.on) p{opacity:.4}
 .steps li{position:relative;display:grid;gap:10px;align-content:start}
 .steps .num{position:relative;z-index:1;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font:600 1.15rem/1 var(--f-head);color:var(--muted);background:var(--bg);border:1px solid var(--glass-b);transition:color .3s var(--ease),border-color .3s var(--ease),background-color .3s var(--ease),box-shadow .3s var(--ease)}
 .steps li.on .num{color:var(--accent-ink);background:var(--accent);border-color:var(--accent)}
@@ -651,7 +649,7 @@ def plan(i, items, hl):
 
 CHEV = '<svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 FAQ = "".join(f'<div class="qa rv"><button type="button" aria-expanded="false" aria-controls="qa{i}" id="qb{i}"><span {ti(f"q{i}")}>{tx(f"q{i}")}</span><span class="chev">{CHEV}</span></button>'
-              f'<div class="body" id="qa{i}" role="region" aria-labelledby="qb{i}"><div><p {ti(f"a{i}")}>{tx(f"a{i}")}</p></div></div></div>' for i in range(1, 10))
+              f'<div class="body" id="qa{i}" role="region" aria-labelledby="qb{i}"><div><p {ti(f"a{i}")}>{tx(f"a{i}")}</p></div></div></div>' for i in (1, 4, 5, 6, 7, 8, 9))
 
 TECHS = ["Python","pandas","LightGBM","SQL Server","Power BI","Flask","JavaScript","TypeScript","React","SQLite","APIs REST","Linux","Cloudflare","GitHub","Claude Code","API da Anthropic"]
 TECH = "".join(f'<span>{t}</span>' for t in TECHS)
@@ -670,7 +668,7 @@ LOGO = '<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32"
 
 EN = {k: v[1] for k, v in T.items()}
 faq_ld = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
-    {"@type": "Question", "name": T[f"q{i}"][0], "acceptedAnswer": {"@type": "Answer", "text": T[f"a{i}"][0]}} for i in range(1, 8)]}, ensure_ascii=False)
+    {"@type": "Question", "name": T[f"q{i}"][0], "acceptedAnswer": {"@type": "Answer", "text": T[f"a{i}"][0]}} for i in (1, 4, 5, 6, 7, 8, 9)]}, ensure_ascii=False)
 org_ld = json.dumps({"@context": "https://schema.org", "@type": "Organization", "name": "RG AI Ltda", "url": "https://gruberia.com/", "email": "rafael@gruberia.com",
     "founder": {"@type": "Person", "name": "Rafael Gruber Bernstein"}, "sameAs": ["https://www.linkedin.com/in/rafaelgruberbernstein"]}, ensure_ascii=False)
 
@@ -767,7 +765,7 @@ var stream=window.__s=(function(){var c=document.getElementById('stream'),GL=web
  return {recolor:recolor,setPaused:function(p){paused=p;p?stop():start()},label:function(){}}})();
 var pb=document.getElementById('pause'),allPaused=false;if(RM.matches)pb.hidden=true;
 function pbLabel(){pb.setAttribute('aria-label',allPaused?UI[lang].play:UI[lang].pause)}
-pb.addEventListener('click',function(){allPaused=!allPaused;r.classList.toggle('paused',allPaused);pb.setAttribute('aria-pressed',allPaused?'true':'false');pbLabel();stream.setPaused(allPaused)});
+pb.addEventListener('click',function(){allPaused=!allPaused;r.classList.toggle('paused',allPaused);pb.setAttribute('aria-pressed',allPaused?'true':'false');pbLabel();stream.setPaused(allPaused);if(!allPaused&&typeof tick==='function')tick()});
 /* ---------- inclinação 3D do navegador ---------- */
 var fine=matchMedia('(hover:hover) and (pointer:fine)');
 [].forEach.call(document.querySelectorAll('.scene'),function(sc){var b=sc.querySelector('.browser'),gl=sc.querySelector('.glare');
@@ -831,12 +829,11 @@ function closeLb(lb){lb.classList.remove('on');document.body.style.overflow='';s
  document.body.appendChild(lb);document.body.style.overflow='hidden';requestAnimationFrame(function(){lb.classList.add('on')});x.focus()})});
 /* ---------- FAQ ---------- */
 [].forEach.call(document.querySelectorAll('.qa button'),function(b){b.addEventListener('click',function(){var q=b.parentNode,o=!q.classList.contains('open');q.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false')})});
-/* ---------- etapas: trilho que se preenche ao rolar (GSAP ScrollTrigger quando disponível) ---------- */
-var steps=document.querySelector('.steps'),items=[].slice.call(steps.querySelectorAll('li'));
-function setP(p){steps.style.setProperty('--p',p.toFixed(3));items.forEach(function(li,i){li.classList.toggle('on',p>=(i/(items.length-1))-.001)})}
-if(window.gsap&&window.ScrollTrigger&&!RM.matches){gsap.registerPlugin(ScrollTrigger);
- ScrollTrigger.create({trigger:steps,start:'top 75%',end:'bottom 45%',scrub:.6,onUpdate:function(s){setP(s.progress)}});setP(0)}
-else setP(1);
+/* ---------- etapas: acendem em sequência, em loop ---------- */
+var steps=document.querySelector('.steps'),items=[].slice.call(steps.querySelectorAll('li')),N=items.length,sk=0,stT=0,stIn=false;
+function setP(k){steps.style.setProperty('--p',(k<1?0:(k-1)/N).toFixed(3));items.forEach(function(li,i){li.classList.toggle('on',i<k);li.classList.toggle('cur',i===k-1)})}
+function tick(){clearTimeout(stT);if(!stIn||r.classList.contains('paused')||RM.matches)return;sk=sk>=N?0:sk+1;setP(sk);stT=setTimeout(tick,sk>=N?2000:(sk===0?600:950))}
+if(RM.matches)setP(N);else{setP(0);new IntersectionObserver(function(e){stIn=e[0].isIntersecting;clearTimeout(stT);if(stIn)stT=setTimeout(tick,350)},{threshold:.3}).observe(steps)}
 /* ---------- copiar e-mail ---------- */
 var cb=document.getElementById('copy'),st=document.getElementById('status'),ml=document.getElementById('mail');
 function sel(){try{var x=document.createRange();x.selectNodeContents(ml);var s=getSelection();s.removeAllRanges();s.addRange(x)}catch(z){}}
@@ -848,15 +845,6 @@ setLang(r.getAttribute('data-lang')==='en'?'en':'pt',false);
 (function(){var sp=document.querySelector('.spot');if(!fine.matches||RM.matches)return;var x=0,y=0,q=false;
  addEventListener('pointermove',function(e){x=e.clientX;y=e.clientY;if(!q){q=true;requestAnimationFrame(function(){sp.style.setProperty('--sx',x+'px');sp.style.setProperty('--sy',y+'px');q=false})}sp.classList.add('on')},{passive:true});
  document.addEventListener('pointerleave',function(){sp.classList.remove('on')})})();
-/* ---------- D: demonstração do LeadScout ---------- */
-(function(){var lead=document.getElementById('lead'),cl=[].slice.call(lead.querySelectorAll('.claim')),sc=document.getElementById('score'),sb=document.getElementById('scorebar'),live=document.getElementById('dmlive');
- var base=40,score=base;
- function setScore(v){score=v;sc.textContent=v;sb.style.setProperty('--s',(v/100).toFixed(2))}
- cl.forEach(function(c){var b=c.querySelector('.c-btn');b.addEventListener('click',function(){c.classList.add('busy');b.querySelector('.c-lab').textContent=D().dm_auditing;
-  setTimeout(function(){c.classList.remove('busy');c.classList.add('done');b.querySelector('.c-lab').textContent=D().dm_check;var ok=c.getAttribute('data-ok')==='1';
-   if(ok)setScore(Math.min(100,score+24));
-   live.textContent=c.querySelector('.c-txt p').textContent+': '+(ok?D().dm_ok:D().dm_no)},RM.matches?0:900)})});
- document.getElementById('dmreset').addEventListener('click',function(){cl.forEach(function(c){c.classList.remove('done','busy')});setScore(base);live.textContent=''})})();
 /* ---------- A + H: geração das telas e autoplay da galeria ---------- */
 var genDone={};
 function whenGen(cb){if(window.__gen)cb(window.__gen);else document.addEventListener('gen-ready',function(){cb(window.__gen)},{once:true})}
@@ -915,7 +903,6 @@ body = f"""<a class="skip" href="#conteudo" {ti('skip')}>{tx('skip')}</a>
     <a class="brand" href="#conteudo">{LOGO}RG AI</a>
     <nav aria-label="Seções">
       <a class="nl" href="#projetos" {ti('nav_proj')}>{tx('nav_proj')}</a>
-      <a class="nl" href="#demo" {ti('dm_k')}>{tx('dm_k')}</a>
       <a class="nl" href="#como-funciona" {ti('nav_como')}>{tx('nav_como')}</a>
       <a class="nl" href="#duvidas" {ti('nav_faq')}>{tx('nav_faq')}</a>
       <div class="tools">
@@ -961,39 +948,6 @@ body = f"""<a class="skip" href="#conteudo" {ti('skip')}>{tx('skip')}</a>
   </section>
 
 
-  <section id="demo" class="amb amb-r" aria-labelledby="h-dm">
-    <div class="w demo-grid">
-      <div class="rv">
-        <p class="lbl" {ti('dm_k')}>{tx('dm_k')}</p>
-        <h2 id="h-dm" class="dm-h"><span {ti('dm_h1')}>{tx('dm_h1')}</span> <span class="em" {ti('dm_h2')}>{tx('dm_h2')}</span></h2>
-        <p class="dm-p" {ti('dm_p')}>{tx('dm_p')}</p>
-        <p class="dm-note" {ti('dm_note')}>{tx('dm_note')}</p>
-      </div>
-      <div class="lead rv" id="lead">
-        <div class="lead-top">
-          <div class="lead-av" aria-hidden="true">ME</div>
-          <div><p class="lead-co" {ti('dm_co')}>{tx('dm_co')}</p><p class="lead-meta" {ti('dm_meta')}>{tx('dm_meta')}</p></div>
-          <div class="score"><span class="score-n" id="score">40</span><span class="score-l" {ti('dm_score')}>{tx('dm_score')}</span></div>
-        </div>
-        <div class="score-bar" aria-hidden="true"><i id="scorebar" style="--s:.4"></i></div>
-        <ul class="claims">
-          {''.join(f'<li class="claim" data-ok="{1 if i<3 else 0}"><div class="c-txt"><p {ti(f"dm_c{i}")}>{tx(f"dm_c{i}")}</p><p class="c-src"><span {ti(f"dm_s{i}")}>{tx(f"dm_s{i}")}</span></p></div><button type="button" class="c-btn"><span class="c-lab" {ti("dm_check")}>{tx("dm_check")}</span></button><span class="c-res ok"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span {ti("dm_ok")}>{tx("dm_ok")}</span></span><span class="c-res no"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3.5v5M8 11.5v.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span {ti("dm_no")}>{tx("dm_no")}</span></span></li>' for i in range(1,5))}
-        </ul>
-        <div class="lead-foot"><p class="sr" id="dmlive" role="status" aria-live="polite"></p><button type="button" class="btn sm" id="dmreset" {ti('dm_reset')}>{tx('dm_reset')}</button></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="entrega" class="amb amb-l" aria-labelledby="h-eg">
-    <div class="w">
-      <div class="sh rv"><div><p class="lbl" {ti('eg_k')}>{tx('eg_k')}</p><h2 id="h-eg" {ti('eg_h')}>{tx('eg_h')}</h2></div></div>
-      <div class="dbento">{''.join(f'<article class="cell rv d{i}"><span class="ico">{EG_ICONS[i-1]}</span><h3 {ti(f"eg{i}h")}>{tx(f"eg{i}h")}</h3><p {ti(f"eg{i}")}>{tx(f"eg{i}")}</p></article>' for i in range(1,7))}</div>
-    </div>
-    <div class="marquee" aria-label="{tx('tech_k')}" role="group">
-      <p class="lbl w" {ti('tech_k')}>{tx('tech_k')}</p>
-      <div class="mq"><div class="mq-track">{TECH}{TECH_DUP}</div></div>
-    </div>
-  </section>
   <section id="segmentos" class="amb amb-r" aria-labelledby="h-seg">
     <div class="w">
       <div class="sh rv"><div><p class="lbl" {ti('seg_k')}>{tx('seg_k')}</p><h2 id="h-seg" {ti('seg_h')}>{tx('seg_h')}</h2></div></div>
@@ -1038,8 +992,6 @@ body = f"""<a class="skip" href="#conteudo" {ti('skip')}>{tx('skip')}</a>
 </main>
 <div class="spot" aria-hidden="true"></div><button type="button" class="pause" id="pause" aria-pressed="false" aria-label="Pausar animações"><svg class="pa" viewBox="0 0 14 14" aria-hidden="true"><path d="M4 2.5v9M10 2.5v9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="pl" viewBox="0 0 14 14" aria-hidden="true"><path d="M4 2.5l8 4.5-8 4.5z" fill="currentColor"/></svg></button>
 <footer><div class="w"><span {ti('foot1')}>{tx('foot1')}</span><span {ti('foot2')}>{tx('foot2')}</span></div></footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script type="module">import {{ generate }} from "./vendor/ui-generation.js"; window.__gen = generate; document.dispatchEvent(new Event("gen-ready"));</script>
 <script>{BODY_JS}</script>"""
 
