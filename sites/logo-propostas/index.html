@@ -76,6 +76,9 @@ h1{font-size:clamp(1.8rem,1.3rem + 1.6vw,2.6rem);line-height:1.1}
 .go .growc{animation:pop .5s cubic-bezier(.34,1.56,.64,1) .45s both}
 .word.wide{font-weight:500;letter-spacing:.14em;font-size:1.9rem}
 .word.light{font-weight:500;letter-spacing:-.035em}
+.word.lower{font-weight:800;letter-spacing:-.05em}
+.dl{position:relative;display:inline-block}
+.dl::after{content:"";position:absolute;left:50%;top:-.02em;width:.21em;height:.21em;border-radius:50%;background:var(--mint);transform:translateX(-50%)}
 .draw-one{stroke-dasharray:80;stroke-dashoffset:0}
 .go .draw-one{animation:draw1 1s cubic-bezier(.65,0,.35,1) both}
 @keyframes draw1{from{stroke-dashoffset:80}to{stroke-dashoffset:0}}
@@ -89,7 +92,7 @@ h1{font-size:clamp(1.8rem,1.3rem + 1.6vw,2.6rem);line-height:1.1}
 
 <div class="w">
   <h1>Novo logo da RG AI</h1>
-  <p class="lead">As propostas 7 e 9 estão salvas no topo. Abaixo, 8 minimalistas (19 a 26): no máximo dois elementos cada, sem detalhes internos. Duas delas são as salvas reduzidas ao mínimo. Cada proposta tem uma ideia só e aparece grande, como ícone de app (64, 32 e 16px), em uma cor e sobre fundo claro. "Reproduzir movimento" mostra a animação sugerida para a marca, de 1 s, como pede a referência de logo das skills. O logo atual está no fim, para comparar.</p>
+  <p class="lead">As propostas 7, 9 e 20 estão salvas no topo. Abaixo, 8 propostas (27 a 34) brincando com as letras de RG AI: ligaduras, letras montadas com formas, letras recortadas e a pílula menta da 20 virando parte das letras. Cada proposta tem uma ideia só e aparece grande, como ícone de app (64, 32 e 16px), em uma cor e sobre fundo claro. "Reproduzir movimento" mostra a animação sugerida para a marca, de 1 s, como pede a referência de logo das skills. O logo atual está no fim, para comparar.</p>
   <div class="rules"><span>1 ideia</span><span>legível a 16px</span><span>funciona em 1 cor</span><span>claro e escuro</span><span>movimento: calmo, ágil ou amigável</span></div>
   <div class="grid" id="grid"></div>
   <p class="foot">Nenhuma das propostas usa degradê, para não depender de tendência nem de cor. O menta (#3DDCA8 no escuro, #0E7A5C no claro) aparece em um único detalhe de cada símbolo. Antes de registrar no INPI, é preciso fazer uma busca de anterioridade da marca escolhida.</p>
@@ -123,6 +126,14 @@ var S={
  line:'<g class="draw"><path d="M4 16h16" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round"/></g><circle class="m growc" cx="25" cy="16" r="4.4"/>',
  slash:'<g class="snapg" fill="none" stroke-width="3.6" stroke-linecap="round"><path d="M8.5 26L16 6" stroke="currentColor"/><path class="ms" d="M16.5 26L24 6"/></g>',
  ring:'<g class="draw"><circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="3"/></g><circle class="m growc" cx="16" cy="16" r="4.2"/>',
+ gbar:'<g class="draw"><path d="M26 9.6A9.6 9.6 0 1 0 26 22.4" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round"/></g><rect class="m growc" x="16.5" y="14.2" width="10.5" height="3.6" rx="1.8"/>',
+ lambda:'<g class="draw"><polyline points="4,26 11,6 18,26" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></g><rect class="m growc" x="23" y="6" width="3.8" height="20" rx="1.9"/>',
+ dotless:'<text x="15" y="25" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="800" font-size="21" fill="currentColor" letter-spacing="-1">aı</text><circle class="m growc" cx="22.6" cy="7.6" r="2.7"/>',
+ grid4:'<g font-family="Manrope,sans-serif" font-weight="800" font-size="13.5" text-anchor="middle"><text class="growc" x="9" y="14" fill="currentColor">R</text><text class="growc" x="23" y="14" fill="currentColor">G</text><text class="m growc" x="9" y="29">A</text><text class="m growc" x="23" y="29">I</text></g>',
+ bracerg:'<g class="snapg" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 6c-2.4 0-3 1.2-3 3v3.5c0 1.8-.8 3-2.2 3.5 1.4.5 2.2 1.7 2.2 3.5V23c0 1.8.6 3 3 3"/><path class="ms" d="M25 6c2.4 0 3 1.2 3 3v3.5c0 1.8.8 3 2.2 3.5-1.4.5-2.2 1.7-2.2 3.5V23c0 1.8-.6 3-3 3"/></g><text x="16" y="20.6" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="800" font-size="12" fill="currentColor" letter-spacing="-.4">RG</text>',
+ rbars:'<g class="snapg"><rect x="4" y="4" width="6" height="24" rx="3" fill="currentColor"/><rect class="m" x="12" y="4" width="15" height="6" rx="3"/><rect x="12" y="13" width="11" height="6" rx="3" fill="currentColor"/><path d="M17 21.5l7 5.5" stroke="currentColor" stroke-width="5.6" stroke-linecap="round"/></g>',
+ rgdot:'<text x="14.5" y="21" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="800" font-size="19" fill="currentColor" letter-spacing="-1.2">rg</text><circle class="m growc" cx="27" cy="19.4" r="2.8"/>',
+ badge:'<defs><mask id="rgcut"><rect width="32" height="32" fill="#fff"/><text x="15.2" y="20.8" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="800" font-size="13" fill="#000" letter-spacing="-.5">RG</text></mask></defs><rect x="3" y="3" width="26" height="26" rx="7" fill="currentColor" mask="url(#rgcut)"/><rect class="m growc" x="23" y="23" width="6" height="6" rx="2"/>',
  gauge:'<path d="M5.6 24A12 12 0 1 1 26.4 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" opacity=".35"/><g class="draw" fill="none" stroke-width="2.6" stroke-linecap="round"><path class="ms" d="M5.6 24A12 12 0 0 1 25.83 11.12"/></g><path d="M16 18l6.5-4.6" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="18" r="2.6" fill="currentColor"/>'
 };
 var L=[
@@ -229,15 +240,47 @@ var L=[
  {k:'ring',n:'Anel',t:'Foco no centro',w:'RG <span class="ai">AI</span>',wc:'light',
   idea:'Um anel com um ponto menta no centro: foco no que importa para o cliente.',
   why:'Forma clássica e equilibrada, que funciona como selo. É a mais "institucional" das minimalistas.',
-  mov:'Calmo: o anel se fecha e o ponto acende.'}
+  mov:'Calmo: o anel se fecha e o ponto acende.'},
+ {k:'gbar',n:'G com barra',t:'Letra G',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'Um G geométrico em que a barra horizontal é a pílula menta das Duas camadas.',
+  why:'Une a letra da marca ao detalhe da 20. Simples e forte como ícone.',
+  mov:'Calmo: o arco é desenhado e a barra acende.'},
+ {k:'lambda',n:'ΛI',t:'A e I',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'"AI" com o A sem travessão (como uma seta para cima) e o I em menta.',
+  why:'Lê "AI" e, ao mesmo tempo, "subir". Tem só duas linhas.',
+  mov:'Calmo: o A é desenhado e o I aparece.'},
+ {k:'dotless',n:'Pingo do i',t:'Detalhe na letra',w:'rga<span class="dl">ı</span>',wc:'lower',
+  idea:'O nome em minúsculas, "rgai", com o pingo do i em menta.',
+  why:'É o mais discreto: um logotipo só de letras com um único detalhe de cor. O pingo pode virar o ícone sozinho.',
+  mov:'Amigável: o pingo cai no lugar.'},
+ {k:'grid4',n:'Bloco de letras',t:'RG sobre AI',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'As quatro letras em grade 2×2: RG em cima, AI em menta embaixo.',
+  why:'Vira um selo quadrado, ótimo para avatar de rede social. Em 16px as letras ficam pequenas.',
+  mov:'Amigável: as letras surgem uma a uma.'},
+ {k:'bracerg',n:'{RG}',t:'Letras dentro das chaves',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'As iniciais entre chaves de código, com a chave da direita em menta.',
+  why:'Junta as letras à 7 (Chaves). Bom em tamanhos médios; pequeno demais, as letras se perdem.',
+  mov:'Ágil: as chaves se fecham em volta das letras.'},
+ {k:'rbars',n:'R em camadas',t:'Letra R + a 20',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'Um R montado com as pílulas da 20: a de cima em menta, a perna saindo em diagonal.',
+  why:'É a 20 virando letra: mantém a linguagem das camadas e ganha a inicial da marca. Risco: em tamanho pequeno pode ser lido como "K".',
+  mov:'Ágil: as peças se encaixam formando o R.'},
+ {k:'rgdot',n:'rg.',t:'Iniciais com ponto final',w:'rg<span class="ai">.</span>ai',wc:'lower',
+  idea:'As iniciais em minúsculas seguidas de um ponto menta, como quem fecha uma frase.',
+  why:'Tom direto e confiante ("ponto"). Também lembra um domínio, rg.ai.',
+  mov:'Amigável: o ponto aparece depois das letras.'},
+ {k:'badge',n:'Selo vazado',t:'Letras recortadas',w:'RG <span class="ai">AI</span>',wc:'',
+  idea:'Um bloco sólido com "RG" recortado e um pequeno quadrado menta no canto.',
+  why:'Funciona como carimbo ou selo de qualidade. Fica muito bem como ícone de app.',
+  mov:'Amigável: o canto menta aparece por último.'}
 ];
 function svg(k){return '<svg class="sym" viewBox="0 0 32 32" aria-hidden="true">'+S[k]+'</svg>'}
 var grid=document.getElementById('grid');
 L.forEach(function(o,i){o.num=i+1});
-var SAVED=[7,9],SHOW=L.filter(function(o){return SAVED.indexOf(o.num)>-1||o.num>18});
+var SAVED=[7,9,20],SHOW=L.filter(function(o){return SAVED.indexOf(o.num)>-1||o.num>26});
 function sep(t){var h=document.createElement('h2');h.className='sep';h.textContent=t;grid.appendChild(h)}
 sep('Salvas');
-SHOW.forEach(function(o,i){if(i===SAVED.length)sep('Minimalistas');var el=document.createElement('article');el.className='card'+(SAVED.indexOf(o.num)>-1?' saved':'');
+SHOW.forEach(function(o,i){if(i===SAVED.length)sep('Brincando com as letras');var el=document.createElement('article');el.className='card'+(SAVED.indexOf(o.num)>-1?' saved':'');
  el.innerHTML='<div class="hd"><h2>'+o.n+(SAVED.indexOf(o.num)>-1?' <span class="tag-s">Salva</span>':'')+'</h2><span class="num">'+o.num+' · '+o.t+'</span></div>'+
  '<div class="hero" role="img" aria-label="Proposta '+o.num+', '+o.n+', sobre fundo escuro">'+svg(o.k)+'<span class="word '+o.wc+'">'+o.w+'</span></div>'+
  '<div class="strip"><div class="sz"><div class="app a64">'+svg(o.k)+'</div>64</div><div class="sz"><div class="app a32">'+svg(o.k)+'</div>32</div><div class="sz"><div class="app a16">'+svg(o.k)+'</div>16</div>'+
