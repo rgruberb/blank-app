@@ -124,9 +124,9 @@ T = {
  "a1": ("Aplicações web de dados e IA sob medida: painéis de risco, prospecção e CRM, gestão de carteira, agenda e operação. A especialidade é crédito e finanças; também atendemos saúde e agências de marca pessoal.",
         "Custom data and AI web apps: risk dashboards, prospecting and CRM, portfolio management, scheduling and operations. Our specialty is credit and finance; we also serve healthcare and personal-brand agencies."),
  "q2": ("Quanto custa?", "How much does it cost?"),
- "a2": ("Depende do escopo. O Diagnóstico existe para isso: ao final, você recebe por escrito o prazo e o valor do Projeto e da Operação.", "It depends on scope. That's what the Assessment is for: at the end, you get the time and price of the Project and Operation in writing."),
+ "a2": ("Depende do escopo. Depois da primeira conversa, enviamos prazo e valor por escrito.", "It depends on scope. After our first call, we send the timeline and price in writing."),
  "q3": ("Quanto tempo leva?", "How long does it take?"),
- "a3": ("Depende do tamanho do app. A estimativa vem junto com o protótipo, antes de você decidir construir.", "It depends on the size of the app. The estimate comes with the prototype, before you decide to build."),
+ "a3": ("Depende do tamanho do app. Você recebe a estimativa junto com o protótipo, antes de decidir construir.", "It depends on the size of the app. You get the estimate with the prototype, before deciding to build."),
  "q4": ("Como vocês usam IA?", "How do you use AI?"),
  "a4": ("Quando ela ajuda. Comparamos modelos por acurácia, custo e desempenho, escrevemos o critério de aprovação antes de ver o resultado, e um modelo que não passa não vai para a tela.",
         "Where it helps. We compare models on accuracy, cost and performance, write the approval criterion before seeing results, and a model that fails doesn't reach the screen."),
@@ -136,7 +136,11 @@ T = {
  "q6": ("Funciona no celular?", "Does it work on phones?"),
  "a6": ("Sim. Os apps são web e funcionam no navegador do computador e do celular, sem instalar nada.", "Yes. Our apps run in the browser on desktop and phone, with nothing to install."),
  "q7": ("Vocês registram a marca do app?", "Do you register the app's brand?"),
- "a7": ("Sim. No plano Projeto, registramos a marca do seu app no INPI.", "Yes. In the Project plan, we register your app's brand with the INPI, Brazil's trademark office."),
+ "a7": ("Sim. Registramos a marca do seu app no INPI.", "Yes. We register your app's brand with the INPI, Brazil's trademark office."),
+ "q8": ("Vocês cuidam do app depois de pronto?", "Do you look after the app once it's live?"),
+ "a8": ("Sim. Cuidamos de hospedagem, backups, monitoramento, atualizações de segurança e ajustes, todo mês.", "Yes. We take care of hosting, backups, monitoring, security updates and adjustments, every month."),
+ "q9": ("Dá para integrar com o que já usamos?", "Can it integrate with what we already use?"),
+ "a9": ("Sim. O app pode ler planilhas e exportações do sistema atual ou conversar com ele por API.", "Yes. The app can read spreadsheets and exports from your current system or talk to it through an API."),
  # final
  "fin_k": ("Contato", "Contact"), "fin_h1": ("Qual processo você quer", "Which process do you want"), "fin_h2": ("tirar da planilha?", "out of spreadsheets?"),
  "fin_p": ("Mande um e-mail contando onde a sua operação trava. Respondemos com um horário para conversar.", "Email us about where your operation gets stuck. We'll reply with a time to talk."),
@@ -470,6 +474,17 @@ section{position:relative;padding-block:clamp(64px,8vw,104px)}
 .cta-card h2{margin-top:16px;color:var(--accent-ink);font-size:clamp(2.2rem,1.4rem + 3.4vw,4.4rem);line-height:1;font-weight:500;letter-spacing:-.04em;max-width:16ch}
 .cta-card h2 .em{color:var(--accent-ink)}
 .cta-card p.l{margin-top:20px;max-width:48ch;font-size:1.1rem;opacity:.85}
+.cta-card h2+.crow{margin-top:28px}
+.crow{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;padding:16px 0;border-top:1px solid color-mix(in srgb,var(--accent-ink) 22%,transparent);max-width:760px}
+.crow .ic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1px solid color-mix(in srgb,var(--accent-ink) 30%,transparent);flex:none}
+.crow .ic svg{width:20px;height:20px}
+.crow code{flex:1;min-width:0;font:600 clamp(1rem,.9rem + .6vw,1.35rem)/1.2 var(--f-mono);user-select:all;-webkit-user-select:all;overflow-wrap:anywhere}
+.crow .lnk{flex:1;min-width:0;display:flex;justify-content:space-between;gap:12px;align-items:center;min-height:44px;color:var(--accent-ink);text-decoration:none;font:600 clamp(1rem,.9rem + .5vw,1.25rem)/1.3 var(--f-body);overflow-wrap:anywhere}
+.crow .lnk:hover{text-decoration:underline}
+@media(max-width:600px){.crow code{flex-basis:calc(100% - 60px)}.crow #copy{margin-left:60px}}
+.faqwrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:24px 56px;align-items:start}
+.faqwrap .sh{position:sticky;top:110px;grid-template-columns:1fr;margin:0}
+@media(max-width:900px){.faqwrap{grid-template-columns:1fr}.faqwrap .sh{position:static}}
 .mailrow{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
 .mailbox{display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding:6px 6px 6px 20px;border-radius:999px;background:rgba(0,0,0,.14);max-width:100%}
 .mailbox code{font:600 clamp(.98rem,.9rem + .5vw,1.2rem)/1.2 var(--f-mono);user-select:all;-webkit-user-select:all;overflow-wrap:anywhere;min-width:0}
@@ -505,7 +520,7 @@ def plan(i, items, hl):
 
 CHEV = '<svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 FAQ = "".join(f'<div class="qa rv"><button type="button" aria-expanded="false" aria-controls="qa{i}" id="qb{i}"><span {ti(f"q{i}")}>{tx(f"q{i}")}</span><span class="chev">{CHEV}</span></button>'
-              f'<div class="body" id="qa{i}" role="region" aria-labelledby="qb{i}"><div><p {ti(f"a{i}")}>{tx(f"a{i}")}</p></div></div></div>' for i in range(1, 8))
+              f'<div class="body" id="qa{i}" role="region" aria-labelledby="qb{i}"><div><p {ti(f"a{i}")}>{tx(f"a{i}")}</p></div></div></div>' for i in range(1, 10))
 
 ICONS = {
  "g1": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
@@ -683,7 +698,6 @@ body = f"""<a class="skip" href="#conteudo" {ti('skip')}>{tx('skip')}</a>
     <nav aria-label="Seções">
       <a class="nl" href="#projetos" {ti('nav_proj')}>{tx('nav_proj')}</a>
       <a class="nl" href="#como-funciona" {ti('nav_como')}>{tx('nav_como')}</a>
-      <a class="nl" href="#planos" {ti('nav_planos')}>{tx('nav_planos')}</a>
       <a class="nl" href="#duvidas" {ti('nav_faq')}>{tx('nav_faq')}</a>
       <div class="tools">
         <div class="seg" role="group" id="langgrp" aria-label="Idioma" data-on="pt"><span class="knob" aria-hidden="true"></span><button type="button" data-setlang="pt" aria-pressed="true" lang="pt-BR">PT</button><button type="button" data-setlang="en" aria-pressed="false" lang="en">EN</button></div>
@@ -751,30 +765,19 @@ body = f"""<a class="skip" href="#conteudo" {ti('skip')}>{tx('skip')}</a>
     </div>
   </section>
 
-  <section id="planos" aria-labelledby="h-pl">
-    <div class="w">
-      <div class="sh rv"><div><p class="lbl" {ti('pl_k')}>{tx('pl_k')}</p><h2 id="h-pl" {ti('pl_h')}>{tx('pl_h')}</h2></div><p {ti('pl_note')}>{tx('pl_note')}</p></div>
-      <div class="plans">{plan(1,['p1a','p1b','p1c'],False)}{plan(2,['p2a','p2b','p2c','p2d'],True)}{plan(3,['p3a','p3b','p3c','p3d'],False)}</div>
-    </div>
-  </section>
-
   <section id="duvidas" aria-labelledby="h-faq">
     <div class="w">
-      <div class="sh rv"><div><p class="lbl" {ti('faq_k')}>{tx('faq_k')}</p><h2 id="h-faq" {ti('faq_h')}>{tx('faq_h')}</h2></div></div>
-      <div class="faq">{FAQ}</div>
+      <div class="faqwrap"><div class="sh rv"><div><p class="lbl" {ti('faq_k')}>{tx('faq_k')}</p><h2 id="h-faq" {ti('faq_h')}>{tx('faq_h')}</h2></div></div>
+      <div class="faq">{FAQ}</div></div>
     </div>
   </section>
 
   <section class="final" id="contato" aria-labelledby="h-final">
     <div class="w">
       <div class="cta-card rv">
-        <p class="lbl" {ti('fin_k')}>{tx('fin_k')}</p>
-        <h2 id="h-final"><span {ti('fin_h1')}>{tx('fin_h1')}</span> <span class="em" {ti('fin_h2')}>{tx('fin_h2')}</span></h2>
-        <p class="l" {ti('fin_p')}>{tx('fin_p')}</p>
-        <div class="mailrow">
-          <div class="mailbox"><code id="mail">rafael@gruberia.com</code><button class="btn dark" id="copy" type="button"><svg class="ok-mark" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 10.5l2.8 2.6L14 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span {ti('copy')}>{tx('copy')}</span></button></div>
-          <a class="btn ghost" href="https://www.linkedin.com/in/rafaelgruberbernstein" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
-        </div>
+        <h2 id="h-final" {ti('fin_k')}>{tx('fin_k')}</h2>
+        <div class="crow"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 6.5l8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span><code id="mail">rafael@gruberia.com</code><button class="btn dark" id="copy" type="button"><svg class="ok-mark" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 10.5l2.8 2.6L14 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span {ti('copy')}>{tx('copy')}</span></button></div>
+        <div class="crow"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 10.5v6M8 7.5v.01M11.5 16.5v-3.2c0-1.6 1-2.8 2.4-2.8s2.1 1 2.1 2.6v3.4M11.5 10.5v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><a class="lnk" href="https://www.linkedin.com/in/rafaelgruberbernstein" target="_blank" rel="noopener">linkedin.com/in/rafaelgruberbernstein <span aria-hidden="true">↗</span></a></div>
         <p class="status" id="status" role="status" aria-live="polite"></p>
       </div>
     </div>
