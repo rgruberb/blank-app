@@ -79,8 +79,16 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .top{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);z-index:40;transition:background-color .3s var(--ease),border-color .3s var(--ease),backdrop-filter .3s}
 .top.scrolled{background:color-mix(in srgb,var(--bg) 72%,transparent);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid var(--rule)}
 .top .w{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
-.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font:800 1.1rem/1 var(--f-head);letter-spacing:-.01em}
-.brand svg{width:32px;height:32px}
+.brand{display:inline-block;padding-block:8px;white-space:nowrap;color:var(--ink);text-decoration:none;font:700 1.6rem/1 var(--f-head);letter-spacing:-.045em}
+@media(max-width:600px){.brand{font-size:1.4rem}}
+.brand .ai{color:var(--accent)}
+/* símbolo das duas camadas: altura total = altura das minúsculas (1ex), barra de baixo na linha de base */
+.brand .mk{display:inline-block;position:relative;width:1.6ex;height:1ex;vertical-align:baseline;margin-right:.3em}
+.brand .mk i{position:absolute;height:.4ex;width:75%;border-radius:999px}
+.brand .mk i:first-child{background:var(--accent);top:0;right:0}
+.brand .mk i:last-child{background:var(--ink);bottom:0;left:0}
+@media(prefers-reduced-motion:no-preference){.js .brand .mk i{animation:mkIn .55s cubic-bezier(.34,1.56,.64,1) both}.js .brand .mk i:last-child{animation-delay:.12s}
+ @keyframes mkIn{from{transform:translateX(-.5ex);opacity:0}to{transform:none;opacity:1}}}
 .top nav{display:flex;align-items:center;gap:22px;font-size:.95rem}
 .top nav a.nl{color:var(--ink-2);text-decoration:none;position:relative;padding:8px 0}
 .top nav a.nl::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease)}
@@ -434,7 +442,7 @@ html,body{overflow-x:clip}
 <a class="skip" href="#conteudo" data-i18n="skip">Pular para o conteúdo</a>
 <header class="top">
   <div class="w">
-    <a class="brand" href="#conteudo"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#0F2A21"/><path d="M8.5 22.5v-4.5h5v4.5M13.5 18v-5h5v5M18.5 13V8h5v5" fill="none" stroke="#3DDCA8" stroke-width="2" stroke-linejoin="round"/></svg>RG AI</a>
+    <a class="brand" href="#conteudo" aria-label="rg ai, início"><span class="mk" aria-hidden="true"><i></i><i></i></span><span class="wm" aria-hidden="true">rg <span class="ai">ai</span></span></a>
     <nav aria-label="Seções">
       <a class="nl" href="#projetos" data-i18n="nav_proj">Projetos</a>
       <a class="nl" href="#como-funciona" data-i18n="nav_como">Metodologia</a>
