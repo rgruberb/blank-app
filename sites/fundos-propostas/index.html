@@ -42,7 +42,17 @@ h1{font-size:clamp(1.8rem,1.3rem + 1.6vw,2.6rem);line-height:1.1}
 @media(max-width:420px){.info dl div{grid-template-columns:1fr;gap:0}}
 .meter{display:inline-flex;gap:3px;vertical-align:middle}.meter s{width:14px;height:6px;border-radius:3px;background:var(--glass-b)}.meter s.on{background:var(--accent)}
 /* 1 aurora */
-.aurora .b{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;mix-blend-mode:screen}
+.aurora{--ao:1}
+.aurora .b{position:absolute;border-radius:50%;filter:blur(60px);opacity:calc(.55 * var(--ao));mix-blend-mode:screen}
+.aurora .b2{opacity:calc(.35 * var(--ao))!important}.aurora .b3{opacity:calc(.3 * var(--ao))!important}
+.aurora.soft{--ao:.5}.aurora.softer{--ao:.3}
+.trio{grid-column:1/-1}
+.trio .row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:0 20px}
+@media(max-width:900px){.trio .row{grid-template-columns:1fr}}
+.trio .mini{margin:0;min-height:240px;padding:22px 18px}
+.trio .cells{grid-template-columns:1fr 1fr}
+.trio .cell:nth-child(3){display:none}
+.trio .cap{margin-top:8px;font:500 11px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted);text-align:center}
 .aurora .b1{width:60%;aspect-ratio:1;background:#1FA67C;left:-15%;top:-30%;animation:dr1 18s ease-in-out infinite alternate}
 .aurora .b2{width:50%;aspect-ratio:1;background:#2D6FD6;right:-10%;top:10%;opacity:.35;animation:dr2 22s ease-in-out infinite alternate}
 .aurora .b3{width:45%;aspect-ratio:1;background:#3DDCA8;left:30%;bottom:-45%;opacity:.3;animation:dr3 20s ease-in-out infinite alternate}
@@ -84,8 +94,16 @@ h1{font-size:clamp(1.8rem,1.3rem + 1.6vw,2.6rem);line-height:1.1}
 
 <div class="w">
   <h1>Fundos para as seções da landing</h1>
+  <p class="lead" style="margin-top:8px"><b>Novo:</b> a Aurora em três intensidades, no primeiro cartão.</p>
   <p class="lead">O fundo do hero já ficou mais brilhante na landing. Para as seções de baixo, que hoje são quase lisas, aqui estão 7 opções, cada uma numa mini seção real e já animada. Dá para escolher uma para a página toda ou combinar, por exemplo, uma por seção. Todas respeitam quem pede menos movimento no sistema e podem ser pausadas pelo botão da página.</p>
   <div class="grid" id="grid">
+
+    <article class="card trio" id="aurora-fraca"><div class="hd"><h2>Aurora em três intensidades</h2><span class="num">1 · comparação</span></div>
+      <div class="row"><div><div class="mini"><div class="layer aurora "><span class="b b1"></span><span class="b b2"></span><span class="b b3"></span></div>
+        <p class="k">Segmentos</p><h3>Segmentos de <i>atuação</i></h3><div class="cells"><div class="cell"><i></i><b>Crédito e finanças</b><span>Especialidade</span></div><div class="cell"><i></i><b>Saúde</b><span>Back-office</span></div><div class="cell"><i></i><b>Agências</b><span>Marca pessoal</span></div></div></div><p class="cap">Atual · 100%</p></div><div><div class="mini"><div class="layer aurora soft"><span class="b b1"></span><span class="b b2"></span><span class="b b3"></span></div>
+        <p class="k">Segmentos</p><h3>Segmentos de <i>atuação</i></h3><div class="cells"><div class="cell"><i></i><b>Crédito e finanças</b><span>Especialidade</span></div><div class="cell"><i></i><b>Saúde</b><span>Back-office</span></div><div class="cell"><i></i><b>Agências</b><span>Marca pessoal</span></div></div></div><p class="cap">Suave · 50%</p></div><div><div class="mini"><div class="layer aurora softer"><span class="b b1"></span><span class="b b2"></span><span class="b b3"></span></div>
+        <p class="k">Segmentos</p><h3>Segmentos de <i>atuação</i></h3><div class="cells"><div class="cell"><i></i><b>Crédito e finanças</b><span>Especialidade</span></div><div class="cell"><i></i><b>Saúde</b><span>Back-office</span></div><div class="cell"><i></i><b>Agências</b><span>Marca pessoal</span></div></div></div><p class="cap">Bem suave · 30%</p></div></div>
+      <div class="info"><dl><div><dt>Diferença</dt><dd>Mesmo movimento e mesmas cores; só a força da luz muda. Na suave, a luz aparece como um brilho de fundo sem disputar com os cartões. Na bem suave, ela só tira o "liso" do fundo e quase não se nota parada.</dd></div><div><dt>Sugestão</dt><dd>A suave (50%): ainda dá vida à página, mas deixa o hero como o momento mais luminoso.</dd></div></dl></div></article>
 
     <article class="card"><div class="hd"><h2>Aurora</h2><span class="num">1 · Luz que se move</span></div>
       <div class="mini"><div class="layer aurora"><span class="b b1"></span><span class="b b2"></span><span class="b b3"></span></div>
